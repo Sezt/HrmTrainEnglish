@@ -136,8 +136,8 @@ label waifu:
                         return
         
     return       
-
         
+
 ###
 label school_ended:
     $ page_01 = renpy.random.randint(1, 30)  

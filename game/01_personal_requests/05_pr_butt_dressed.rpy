@@ -210,6 +210,9 @@ label new_request_05:
                                                         m "She made me do this, that brat!"
                                                         m "Acting all wounded now..."
                                                         m "I bet she actually enjoyed the slapping and just won't admit it..."
+                                                        #m "Она подтолкнула меня к этому!"
+                                                        #m "А теперь строит из себя оскробленную..."
+                                                        #m "Я уверен что ей понравились эти шлепка, она просто не хочет признать этого..."
                                                 $ request_05_points += 1
                                                 if daytime:
                                                     $ hermione_takes_classes = True
@@ -222,6 +225,7 @@ label new_request_05:
                 show screen groping_02
                 with d7
                 $her_head_state = 7
+                her_head_main "!!!!!!?"
                 m "What is it, miss Granger?"
                 $her_head_state = 15
                 her_head_main "It's nothing professor..."
@@ -493,6 +497,7 @@ label new_request_05:
                 with d3
                 ">You keep on playing with Hermione's ass..."
                 ">And continue sliding your hands up and down her inner tighs..."
+                #">Ваша рука продолжает скользить по внутренней части ее бедра..."
                 her_head_main "................"
                 label connection_of_rapes_02:
                 menu:

@@ -313,6 +313,7 @@ label new_request_02_b_complete:
                     her "We ended up having a decent conversation for a change." 
                     m "I see... That \"Dark-oh\" guy..."
                     m "Was he looking at your legs at all?"
+                    m "He looked at your feet?"
                     $herView.hideshowQQ( "body_02.png", pos )
                     her "What?"
                     m "Did he stare at your legs or not, girl?"

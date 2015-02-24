@@ -1073,10 +1073,11 @@ label request_25: #LV.7 (Whoring = 18 - 20)
 label request_26: #LV.7 (Whoring = 18 - 20)
     if whoring <=17:
         jump too_much
+    
     "Hermione sits still with her mouth wide open while you jerk off and cum in it. You tell her to only swallow it when she gets to class."
-    "You dismiss Hermione with her mouth full of your cum."   
+    "You dismiss Hermione with her mouth full of your cum."
+    
     $ request_26 = True 
-
     if whoring <= 20:
         $ whoring +=1
     $ gryffindor +=65

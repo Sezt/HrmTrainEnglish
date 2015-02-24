@@ -240,7 +240,6 @@ label howtoplay:
             $ lola_face = "03_hp/22_lola/13.png"
             l "Did you get it this time?"
             
-        
 return
 
 ### ABOUT GAME ####

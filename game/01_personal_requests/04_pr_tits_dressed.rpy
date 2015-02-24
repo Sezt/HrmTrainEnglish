@@ -40,8 +40,9 @@ label new_request_04:
             "\"I'm gonna molest your tits now.\"":
                 $her_head_state = 3
                 her_head_main "What? What do you mean, professor--?"
-                ">You reach out swiftly and grab both of her tits through her uniform..."
-                ">Just reach out and grab her tits.>"
+                ">Hermione slightly departs ago..."
+                ">You reach out swiftly and grab both of her tits through her uniform..." #WARNING_Z What the fuck?
+                "- Just reach out and grab her tits. -"
                 ">You reach out with both of your hands and grab the girl's tits!"
         stop music fadeout 1.0
         with hpunch

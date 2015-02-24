@@ -339,7 +339,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 $herViewHead.hideQ()
                 with hpunch
                 g4 "{size=-4}(Here it comes! Should I warn her?){/size}"
-           
+
             "\"Give my cock a kiss!\"":
                 $herViewHead.showQ( "body_47.png", posHead )
                 her "Excuse me?"

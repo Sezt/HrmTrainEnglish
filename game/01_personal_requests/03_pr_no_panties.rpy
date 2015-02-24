@@ -221,6 +221,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 her "It was quite ordinary really..."
                 her "I spent some time with my classmates..."
                 her "And we had a short \"MRM\" meeting after that..."
+                #translators "Напоминание.\nОЗМП - Общество по Защите Мужских Прав."
                 $herView.hideshowQQ( "body_16.png", pos )
                 her "I gave a short speech on \"Why it is wrong to sell sexual favours in exchange for house points\"..."
                 $herView.hideshowQQ( "body_12.png", pos )

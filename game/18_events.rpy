@@ -79,7 +79,7 @@ label event_00:
 #    sna "I hope we came to an understanding, here, mister silvarius."
 #    sna "Didn't we?"
     
-   
+
     m "{size=-3}(\"Albus\"? Is that supposed to be my name or is that's just how the humans of this world greet one another?){/size}"
     menu:
         m "..."
@@ -441,7 +441,7 @@ label event_04:
     m "Well, it's been three days now..."
     m "I wonder what has become of that two-faced dude?"
     return
-###############################################################################################################################################################   
+###############################################################################################################################################################    
 label event_05: #Snape comes in, has a talk with Genie, then the duel starts.
     
     play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
@@ -574,7 +574,6 @@ label event_05: #Snape comes in, has a talk with Genie, then the duel starts.
     who2 "Well, I just wanted to make sure that you take those rumours about me for what they are..."
     who2 "Nasty lies made up by a bunch of spoiled kids."
     
-    
 
     who2 "Oh.... Before I go..."
     who2 "There is one thing I meant to ask you for a while now..."
@@ -629,7 +628,6 @@ label event_05: #Snape comes in, has a talk with Genie, then the duel starts.
             who2 "!!?"
             m "What kind of question is this, Severus?"
             who2 "Forgive me... I'm just being paranoid I suppose..."
-
 
 
     hide screen snape_main                                                                                                                                  #SNAPE
@@ -1220,7 +1218,7 @@ label event_07: #THE TALK WITH SNAPE THE DAY AFTER THE DUEL.
     with d3                                                                                                                                                                  #SNAPE
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                                                               #SNAPE
     show screen snape_main                                                                                                                                #SNAPE
-    with d3                                                                                                                                                                   #SNAPE
+    with d3                                                                                                                                                                  #SNAPE
     sna "Hm..."
     sna "We'll see..."
     sna "You being our new headmaster sure presents me with interesting possibilities..."
@@ -1514,6 +1512,7 @@ label event_08: # HERMONE SHOWS UP FOR THE FIRST TIME. IN USE.
         g4 "{size=-4}(She said \"hard-on\"!) *Panting*{/size}"
         her "But you could delegate that task to me..."
         her "Just put your faith in me professor." 
+
     if d_flag_01: 
         $herView.hideshowQQ( "body_01.png", pos )
         her "Yes, you can do it! Just put it in me, sir!"
@@ -1685,20 +1684,7 @@ label event_08_02:
         "{size=-4}\"Boys must study in peace. request approved!\"{/size}":
             her "Splendid. I will everyone know."
             her "Thank you professor."
-            hide screen bld1
-            $herView.hideQ()
-            with Dissolve(.3)
-            $ walk_xpos=400 #Animation of walking chibi. (From)
-            $ walk_xpos2=610 #Coordinates of it's movement. (To)
-            $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-            show screen hermione_walk_01_f 
-            pause 2
-            hide screen hermione_walk_01_f 
-            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-            with Dissolve(.3)
-            pause.5
-            m "...................."
-           
+          
 
     hide screen bld1
     $herView.hideQ()
@@ -1712,6 +1698,7 @@ label event_08_02:
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
+    m "..................................."
     m "I'm Starting to enjoy our meetings less and less..."
     return
 #NOT IN USE###############################################################################################################################################################    
@@ -2194,6 +2181,7 @@ label event_10: #Takes place after second special even with Snape where Ginie is
     $herView.showQ( "body_01.png", pos )
     show screen hermione_02
     with Dissolve(.3)    
+    her "Good morning, Professor Dumbledore."
     menu:
         "\"Good morning, child.\"":
             her "{size=-4}(Again with the \"child\"...){/size}"
@@ -2213,7 +2201,7 @@ label event_10: #Takes place after second special even with Snape where Ginie is
 #    m "This doesn't make any sence, girl!"
 #    her "Let me finish, professor!"
 #    her "I'm organizing a \"Men's rights movement\" in our school!"
-#    m "Oh, this is just typical! Blame everything on--"
+#    m "Oh, this is just typical! Blame everything on- -"
 #    m "Wait, did you say {size=+5}MEN'S{/size} rights?"
 #    her "You have no idea how hard it is to be a boy in our school these days..."
 #    menu:
@@ -2905,7 +2893,7 @@ label event_15: # Hermione comes and asks to buy a favour from her.
         "\"Say \"I've been a bad girl\".\"":
             $ d_flag_04 = True
             pass
-   
+
     her "Em..."
     her "How many house points will I get for that...?"
     $ d_flag_05 = False # 20 Points.

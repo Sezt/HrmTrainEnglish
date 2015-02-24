@@ -172,7 +172,6 @@ label snape_dates:  ### HANGING WITH SNAPE ###
         with d3
         
         
-        
 
  
     $ snape_friendship +=1

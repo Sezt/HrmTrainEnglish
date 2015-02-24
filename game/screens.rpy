@@ -278,6 +278,7 @@ screen navigation:
         textbutton _("Main Menu") action MainMenu()
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit()
+
 init -2:
 
     # Make all game menu navigation buttons the same size.

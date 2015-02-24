@@ -808,7 +808,6 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                  # SAME AS PREVIOUS EVENT^^^
                 g4 "Argh! (I'm about to cum!)"
                 menu:
-
                     "-Hold it as promised-":
                         g4 "Oh, alright..."
                         g4 "I'd better stop now I suppose..."
@@ -1083,4 +1082,6 @@ label addAfterSperm:
     
 label loadState_and_could_not_flirt:
     $herView.data().loadState()
-    jump could_not_flirt
+    call could_not_flirt
+    jump finish_daytime_event
+

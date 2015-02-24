@@ -1714,7 +1714,7 @@ label chitchat_event_01: #Snape says: so you tutor her now?". Happens after tuto
     sna_head_main "Now taking private lessons..."
     $sna_head_state = 18
     sna_head_main "And so she had less and less time to bother me!"
-    m "Whell..."
+    m "Well..."
     $sna_head_state = 10
     sna_head_main "And still... You know... but just in case..."
     sna_head_main "Don't tell her anything useful, okay?"

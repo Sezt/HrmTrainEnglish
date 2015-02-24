@@ -236,6 +236,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                     her "And we did hit it off quite well too!"
                     her "He was surprisingly sweet."
                     her "But I don't think he is \"dirty\", sir."
+                    #translators "Filtch - мистер Филч. Filth - грязь."
                     m "Gotcha... Mr.Fil{size=+7}TH{/size} is off the list then."
                     $herView.hideshowQQ( "body_07.png", pos )
                     her "It's \"Mr.Filch\", sir..."

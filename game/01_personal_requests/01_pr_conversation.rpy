@@ -83,6 +83,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
             m "{size=-4}(Yes... ah...){/size}"
         else:
             m "(Professor Sprout... He-he, what a ridiculous name...)"
+            #m "(Профессор Стебль... Хе-хе, забавное имя...)"
         
         $herView.hideshowQQ( "body_07.png", pos )
         her "Did you say something professor?"
@@ -109,6 +110,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
             pass
         else:
             m "Zzzz........"
+            m "huh?"
             
         $herView.hideshowQQ( "body_05.png", pos )
         her "Professor?"

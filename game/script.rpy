@@ -5275,7 +5275,10 @@ label start:
         "Would you like to skip the intro?"
         "Play the intro.":
             jump intro
-        "Skip the intro.":
+        "Skip intro.":
+            jump hp
+        "Skip the morning after a duel.":
+            $this.event_05.SetValue("finish2",4)
             jump hp
     
    

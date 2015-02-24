@@ -71,6 +71,7 @@ label gallery:
                     jump end02_03
                 "-Cancel-":
                     jump after_cam
+
             
         "-Commentaries (on)-" if commentaries:
             $ commentaries = False # In the GALLERY turns commentaries ON and OFF. 
