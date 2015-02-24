@@ -1,33 +1,43 @@
-﻿1.2.2с
-* Исправлен баг предыдущих версий - если сохраниться в момент когда уже прочел одну главу книги и можно бонусом прочесть дополнительную, при чтении этого сейва произойдет сбой в количестве прочитанных глав.
-* Исправлен баг: огонь на Снейпе в сцене стриптиза
-* В результате слияния версий разных разарботчиков одном месте было потеряно условие наступления 3-й концовки. Восстановлено.
-* Существенно отредактирован текст книги "Моя дорогая Вайфу"
-* Многочисленные мелкие правки по тексту: книги, сообщения в почте, надписи в магазине, предметы, болтовня, ивенты, финал, титры...
-* Сделан доступ к читам из меню: добавить золото, добавить очки, турбо-режим
-* Добавлена ссылка на прохождение из меню
-* Добавлена история версий 
+﻿1.2.2 d
+* New: Ability to jump from the beginning of the game immediately on the 5th day (the morning after the duel)
+* New: Added methods to do without modifying the core RenPy (in the previous version of two core file has been modified)
+* Fix: Bugs, leading to a crash (by putting on a skirt, receiving training log)
+* Fix: a Message about reading the books at the end of the event, "Show them to me" 
+* Fix: Points for private handjob was added twice 
+* Fix: Gift anal tube for low depravity improved attitude
+* Fix: fixed "Cannot take off your clothes" 
+* Fix: Hermione goes twice, if you choose "No sexism" 
+* Fix: the Gift of lubricate caused an invalid file name 
+* Fix: the Message "you already have this BOOK" when I try to buy a skirt/stockings 
+* New: Add new bags KEK
+
+1.2.2 with
+* Fixed bug of previous versions - if you remain in the moment have already read one Chapter of the book and you can read additional bonus, when you read this save will fail in the number of read heads.
+* Fixed bug: fire on the Snape scene Striptease
+* The merger of different versions; there is one place was lost condition of occurrence of the 3rd ending. Restored.
+* Significantly edited the text of the book, "My dear Waifu"
+* Numerous minor edits on the text: the book, the message in the mail, labels in the store, items, chatter, events, finals, titles...
+* Made access to Cheatham menu: add gold, add glasses, turbo mode
+* Added a link to the passage from the menu
+* Added version history 
 
 1.2.2
-* Починено несколько багов (вываливание из-за ошибки в названии переменной, огонь на Гермионе и пр.)
-* Полностью переписан код, отвечающий за книги. От магазина приблуд до прочтения. Добавлено сообщение "Эта книга слишком сложна для вас" при попытке читать книгу по тренировке навыков, если предыдущий уровень не оттренирован. Раньше тупо не читалось, что сбивало с толку. 
-* В коде прописан четкий порядок следования ивентов (от начала теперь уже до последнего ивента)
-* Отредактированы тексты книг (кроме Вайфу)
-* Отредактирован текст ивентов (исправлены опечатки, гуглтранслейт)
-* Отредактирован текст болтовни с Гермионой и Снейпом (исправлены опечатки, гуглтранслейт)
+* Fixed a few bugs (the loss due to errors in the variable name, the fire on Hermione, etc)
+* Completely rewritten the code for the book. From store preblud before reading. Added message "This book is too difficult for you" when you try to read a book on the training of skills, if the previous level is not trenirovok. Before stupidly didn't read that was confusing. 
+* The code for clear sequence of events (from the beginning now until the last event)
+* Edited the texts of the books (except Waifu)
+* Edited text events (fixed typos, googletranslate)
+* Edited text of a talk with Hermione and Snape (fixed typos, googletranslate)
 
 1.2.1
-* Исправлен баг - ошибка при попытке просмотра артов по завершению игры
-* Код вызывающий ивенты частично переделан (используются классы вместо большого количества флажков)
+* Fixed error when trying to view the arts upon completion of the game
+* The code calling events partially altered (use classes instead of a large number of check boxes)
 
 1.2
-* Графика сделана через классы
-* Добавлена 3-я концовка
+* Graphics made through classes
+* Added 3rd ending
 
 1.1
-* Добавлен ивент обучения
-* Добавлена возможность перепрыгнуть дуэль
-* Добавлена подсказка на получение ваучера Дахра
-
-1.0.1
-* Перевод на русский
+* Added event training
+* Added the ability to jump duel
+* Added tooltip for a voucher
