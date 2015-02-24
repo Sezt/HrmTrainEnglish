@@ -426,7 +426,7 @@ label giving_lube: # JAR OF Anal lubricant?.
         her "Still, I think you should not give presents like this to your pupils, sir."
         $herView.hideQQ()
         call no_change #Message: Hermione's mood did not change.
-        $herView.addFaceName( "body_79.png ");
+        $herView.hideshowQQ( "body_79.png ", pos);
         
     if whoring >= 18: # Lv 7+  
         $ anal_lube -= 1
@@ -1018,7 +1018,7 @@ label giving_plug:
 
 
     if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 15
+        $ mad += 15
         $herView.showQ( "body_186.png", pos, d5 )
         her "Sir, are those adult toys of some sort?"
         $herView.hideshowQQ( "body_187.png", pos )
