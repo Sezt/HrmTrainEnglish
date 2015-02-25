@@ -868,7 +868,6 @@ label your_whore:
         with vpunch
         show screen ctc
         pause
-        pause
         hide screen ctc
         her "..........................."
         her ".................."
@@ -1584,7 +1583,7 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "Ah! Maybe..."
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Вы ведь сами этого хотите?..."
+            her "You want it?..."
         $ end_u_2_pic =  "03_hp/17_ending/124.png" #<---- SCREEN
         show screen end_u_2                                               #<---- SCREEN
         with d5                                                                         #<---- SCREEN
@@ -2960,7 +2959,7 @@ label your_whore:
         $ posHead = gMakePos( 390, 340 )
         $herViewHead.showQ( "body_162.png", posHead )
         her2 "{size=+5}Ahh!!!{/size}"
-        hide screen h_head2            
+        $herViewHead.hideQ()
         g4 "Oh, yes!"
         
         $ end_u_2_pic =  "03_hp/17_ending/46.png" #<---- SCREEN
@@ -3714,7 +3713,7 @@ label your_whore:
     $ dermo = "ch_sna defend"
     
     show screen credits_chibi
-    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.2.2c (Russian Edition)-{/color}{/size}\n\n\n\
+    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.2.2d (Russian Edition)-{/color}{/size}\n\n\n\
     {color=#e5e297}-\{translation Witch Trainer back to English\}-{/color}\n\n\
     {color=#fff}\
     Khan32{/a}, \n\n\
@@ -3722,11 +3721,11 @@ label your_whore:
     {color=#e5e297}-\{Programming of new events:\}-{/color}\n\n\
     {color=#fff}\
     {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=14141420}Ave_Fletch{/a}, eskelsama,\n\
-    Skazochnik\
+    {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\
     \n\n\n\
     {color=#e5e297}-\{The lyrics of new events:\}-{/color}\n\n\
     {color=#fff}\
-    {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=16733487}Nyarkohotep{/a}, Skazochnik\n\n\
+    {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=16733487}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\n\
     \n\n\n\
     "
 
@@ -3762,7 +3761,7 @@ label your_whore:
     centered "{cps=40}{size=+5}{color=#e5e297}-\{Sound Effects\}-{/color}{/size}\n{color=#cbcbcb}http://www.freesound.org/{/color}\n\n\
     {size=+5}{color=#e5e297}-\{Music provided by\}-{/color}{/size}\n\
     {color=#cbcbcb}http://incompetech.com/{/color}{/cps}\n\n\
-	{cps=40}{size=+5}{color=#e5e297}-\{Музыка\}-{/color}{/size}\n\n\
+	{cps=40}{size=+5}{color=#e5e297}-\{Music\}-{/color}{/size}\n\n\
     {color=#e5e297}\"(Orchestral) Playful Tension\" {/color}{color=#cbcbcb}by Shadow16nh.{/color}\n\
     {color=#e5e297}\"Prologue\" {/color}{color=#cbcbcb}Harry Potter OST.{/color}\n\
     {color=#e5e297}\"Shanghai Honey\"{/color} {color=#cbcbcb}by orange range.{/color}\n\
@@ -3962,12 +3961,12 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         hide screen s_head2     
         dum2 "... best of?"
         show screen s_head2                                                                                                 # SNAPE
-        sna "Ака....?"
+        sna "Aka....?"
         hide screen s_head2     
-        dum2 "А?"
+        dum2 "a?"
         $ s_sprite = "03_hp/10_snape_main/snape_27.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
-        sna "\"Ака....\"?"
+        sna "\"Aka....\"?"
         hide screen s_head2     
         dum2 "It's pointless, Severus."
         $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                         # SNAPE
