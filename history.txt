@@ -12,7 +12,7 @@
 * Fix: In some cases, the event report Hermione was not marked as completed and then repeated every day
 * New: Add new bugs.KEK
 
-1.2.2 with
+1.2.2 c
 * Fixed bug of previous versions - if you remain in the moment have already read one Chapter of the book and you can read additional bonus, when you read this save will fail in the number of read heads.
 * Fixed bug: fire on the Snape scene Striptease
 * The merger of different versions; there is one place was lost condition of occurrence of the 3rd ending. Restored.
