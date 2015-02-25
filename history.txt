@@ -1,15 +1,16 @@
 ﻿1.2.2 d
 * New: Ability to jump from the beginning of the game immediately on the 5th day (the morning after the duel)
-* New: Added methods to do without modifying the core RenPy (in the previous version of two core file has been modified)
-* Fix: Bugs, leading to a crash (by putting on a skirt, receiving training log)
+* New: Added code that allows you to do without modifying the core RenPy (in the previous version of two core file has been modified)
+* Fix: crash when some levels of depravity: by putting on a skirt, receiving training log and. etc.
 * Fix: a Message about reading the books at the end of the event, "Show them to me" 
-* Fix: Points for private handjob was added twice 
 * Fix: Gift anal tube for low depravity improved attitude
-* Fix: fixed "Cannot take off your clothes" 
-* Fix: Hermione goes twice, if you choose "No sexism" 
+* Fix: it was Impossible to remove clothing (for example, short skirt)
+* Fix: Hermione double-escaped (stage care played twice), if you select "No sexism" 
 * Fix: the Gift of lubricate caused an invalid file name 
-* Fix: the Message "you already have this BOOK" when I try to buy a skirt/stockings 
-* New: Add new bags KEK
+* Fix: the Message "you already have this BOOK" when I try to buy a skirt/stockings
+* Fix: For "Touch me" was given double points
+* Fix: In some cases, the event report Hermione was not marked as completed and then repeated every day
+* New: Add new bugs.KEK
 
 1.2.2 with
 * Fixed bug of previous versions - if you remain in the moment have already read one Chapter of the book and you can read additional bonus, when you read this save will fail in the number of read heads.
@@ -24,14 +25,14 @@
 1.2.2
 * Fixed a few bugs (the loss due to errors in the variable name, the fire on Hermione, etc)
 * Completely rewritten the code for the book. From store preblud before reading. Added message "This book is too difficult for you" when you try to read a book on the training of skills, if the previous level is not trenirovok. Before stupidly didn't read that was confusing. 
-* The code for clear sequence of events (from the beginning now until the last event)
+* The code for clear sequence of events (from the beginning now before the last event)
 * Edited the texts of the books (except Waifu)
 * Edited text events (fixed typos, googletranslate)
 * Edited text of a talk with Hermione and Snape (fixed typos, googletranslate)
 
 1.2.1
 * Fixed error when trying to view the arts upon completion of the game
-* The code calling events partially altered (use classes instead of a large number of check boxes)
+* The code calling the events partially converted (use classes instead of a large number of check boxes)
 
 1.2
 * Graphics made through classes
@@ -40,4 +41,4 @@
 1.1
 * Added event training
 * Added the ability to jump duel
-* Added tooltip for a voucher
+* Added tooltip for a Dahr's voucher
