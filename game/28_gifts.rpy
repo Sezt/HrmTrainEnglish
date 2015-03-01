@@ -114,7 +114,7 @@ label mini_on:
                 her "Okay, I'm not against."
             "\"Fine. Forget it\"":
                 $herView.hideshowQQ( "body_13.png", pos )
-                her "Оh..."
+                her "Oh..."
                 $herView.hideshowQQ( None, pos )
                 jump day_time_requests
         
@@ -184,7 +184,7 @@ label badge_put:
 
     $ pos = POS_370
     $herView.showQQ( "body_01.png", pos )
-    her "Конечно, sir..."
+    her "Of course, sir..."
     
     $ herView.data().addItem( G_N_BADGE, CharacterExItem( herView.mClothesFolder, "badge.png", G_Z_DRESS + 1, 'dress' ) )
     
@@ -267,7 +267,7 @@ label nets_put:
                 $herView.hideshowQQ( "body_07.png", pos )
                 her "Hm..."
                 $herView.hideshowQQ( "body_08.png", pos )
-                her "Well, in that case...."
+                her "Well, in that case..."
                 $herView.hideshowQQ( "body_29.png", pos )
                 her "As long as it benefits my house..."
             "\"Fine. Forget it\"":
@@ -293,7 +293,7 @@ label nets_put:
                 $herView.hideshowQQ( "body_07.png", pos )
                 her "Hm..."
                 $herView.hideshowQQ( "body_68.png", pos )
-                her "Alright, I don't mind then."
+                her "Alright. I don't mind then."
             "\"Fine. Forget it\"":
                 $herView.hideshowQQ( "body_13.png", pos )
                 her "oh..."
@@ -543,9 +543,9 @@ label giving_candy: # CANDY.
         $ mad -= 5
         $ candy -= 1
         $herView.showQ( "body_03.png", pos, d5 )
-        her "A lollipop?"
+        her "candy?"
         $herView.hideshowQQ( "body_02.png", pos )
-        her "lollipops is for kids, sir."
+        her "Candy is for kids, sir."
         $herView.hideQQ()
         $ the_gift = "03_hp/18_store/11.png" # CANDY
         show screen gift
@@ -564,7 +564,7 @@ label giving_candy: # CANDY.
         $ mad -= 5
         $ candy -= 1
         $herView.showQ( "body_03.png", pos, d5 )
-        her "A lollipop?"
+        her "candy?"
         $herView.hideQQ()
         $ the_gift = "03_hp/18_store/11.png" # CANDY
         show screen gift
@@ -1249,7 +1249,7 @@ label giving_mag2:
         
         
         
-                  ### Журналы для взрослых ###
+                  ### ADULT MAGAZINES ###
 label giving_mag3: 
     $herView.hideQ( d5 )
     $ pos = POS_140
@@ -1551,7 +1551,7 @@ label giving_owl:
         $ mad -= 10
         $ owl -= 1
         $herView.showQ( "body_11.png", pos, d5 )
-        her "A stuffed owl?"
+        her "A plush toy?"
         $herView.hideshowQQ( "body_06.png", pos )
         her "I like it!"
         $herView.hideQQ()
@@ -1983,7 +1983,7 @@ label giving_badge_01:
         
         
         
-    ### Ажурные чулки ###
+    ### FISHNET STOCKINGS ###
 label giving_nets: 
     $herView.hideQ( d5 )
 

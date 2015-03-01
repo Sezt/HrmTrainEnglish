@@ -30,7 +30,7 @@ label new_personal_request:
                         jump new_request_02
                   
                     ### LEVEL 02 ###
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination == 1:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination == 1:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Panty thief\" {image=heart_00.png}" if not new_request_03_01 and not new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
@@ -42,7 +42,7 @@ label new_personal_request:
                     "Favour: \"Panty thief\" {image=heart_03.png}" if new_request_03_03 and daytime and imagination >= 2:
                         jump new_request_03
                     
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination == 1:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination == 1:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Breast molester\" {image=heart_00.png}" if not new_request_04_01 and not new_request_04_02 and not new_request_04_03 and imagination >= 2: 
@@ -54,7 +54,7 @@ label new_personal_request:
                     "Favour: \"Breast molester\" {image=heart_03.png}" if new_request_04_03 and imagination >= 2: 
                         jump new_request_04
                         
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination == 1:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination == 1:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Butt molester\" {image=heart_00.png}" if not new_request_05_01 and not new_request_05_02 and not new_request_05_03 and imagination >= 2:
@@ -67,7 +67,7 @@ label new_personal_request:
                         jump new_request_05
                         
                     ### LEVEL 03 ### IMAGINATION == 3
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 3:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Show them to me!\" {image=heart_00.png}" if not new_request_08_01 and not new_request_08_02 and not new_request_08_03 and imagination >= 3:
@@ -83,7 +83,7 @@ label new_personal_request:
 #                        jump new_request_09
                     
                     ### LEVEL 04 ### IMAGINATION == 3
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 3:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Dance for me!\" {image=heart_00.png}" if not new_request_11_01 and not new_request_11_02 and not new_request_11_03 and imagination >= 3:
@@ -95,7 +95,7 @@ label new_personal_request:
                     "Favour: \"Dance for me!\" {image=heart_03.png}" if new_request_11_03 and imagination >= 3: 
                         jump new_request_11
                     
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 3:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Let me touch them!\" {image=heart_00.png}" if not new_request_12_01 and not new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
@@ -108,7 +108,7 @@ label new_personal_request:
                         jump new_request_12
                     
                     ### LEVEL 05 ### IMAGINATION == 4
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 4:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 4:
                         call vague_idea
                         jump not_now2
                     "Favour: \"touch me!\" {image=heart_00.png}" if not new_request_16_01 and not new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
@@ -121,7 +121,7 @@ label new_personal_request:
                         jump new_request_16
                        
                     ### LEVEL 06 ### IMAGINATION == 4
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 4:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 4:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Suck it!\" {image=heart_00.png}" if not new_request_22_01 and not new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
@@ -134,7 +134,7 @@ label new_personal_request:
                         jump new_request_22
                     
                     ### LEVEL 07 ### IMAGINATION == 5
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 5:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 5:
                         call vague_idea
                         jump not_now2
                     "Favour: \"Let's have sex!\" {image=heart_00.png}" if not new_request_29_01 and not new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
@@ -147,7 +147,7 @@ label new_personal_request:
                         jump new_request_29
                         
                     ### LEVEL 08 ###
-                    "{color=#858585}--A vogue idea-{/color}-" if imagination < 5:
+                    "{color=#858585}--A vague idea-{/color}-" if imagination < 5:
                         call vague_idea
                         jump not_now2
                     "Favour:  \"Time for anal!\" {image=heart_00.png}" if not new_request_31_01 and not new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
@@ -184,21 +184,21 @@ label new_personal_request:
                             jump new_request_02_b
                             
                         ### LEVEL 02 ### IMAGINATION == 2
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 2:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 2:
                             call vague_idea
                             jump not_now3
                         "Favour: \"She's bait\"" if daytime  and imagination >= 2:
                             jump new_request_02_c
                         
                         ### LEVEL 03 ### IMAGINATION == 3
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 3:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                             call vague_idea
                             jump not_now3
                         "Favour: \"Let a classmate molest you.\"" if imagination >= 3: # LEVEL 3
                             jump new_request_10
                         
                         ### LEVEL 04 ### IMAGINATION == 3
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 3:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                             call vague_idea
                             jump not_now3
                         "Favour: \"Flash your tits to a classmate.\"" if imagination >= 3: # LEVEL 4
@@ -206,28 +206,28 @@ label new_personal_request:
                         
                         
                         ### LEVEL 05 ### IMAGINATION == 4
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 4:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 4:
                             call vague_idea
                             jump not_now3
                         "Favour: \"Kiss a girl.\"" if imagination >= 4: # LEVEL 5
                             jump new_request_20
                             
                         ### LEVEL 06 ### IMAGINATION == 4
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 4:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 4:
                             call vague_idea
                             jump not_now3
                         "Favour: \"Give a handjob to a classmate.\"" if imagination >= 4: # LEVEL 6
                             jump new_request_23
                             
                         ### LEVEL 07 ### IMAGINATION == 5
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 5:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 5:
                             call vague_idea
                             jump not_now3
                         "Favour: \"Give a blowjob to a classmate\"" if imagination >= 5:# LEVEL 7
                             jump new_request_24
                                 
                          ### LEVEL 08 ### IMAGINATION == 5
-                        "{color=#858585}--A vogue idea-{/color}-" if imagination < 5:
+                        "{color=#858585}--A vague idea-{/color}-" if imagination < 5:
                             call vague_idea
                             jump not_now3
                         "Favour: \"Have sex with a classmate\"" if imagination >= 5:# LEVEL 8
@@ -253,13 +253,13 @@ label new_personal_request:
                     
                    
                         
-#                    "...flash your Трусики to a teacher.{image=3_stars_00.png}" if request_07_points == 0:
+#                    "...flash your panties to a teacher.{image=3_stars_00.png}" if request_07_points == 0:
 #                        jump new_request_07
-#                    "...flash your Трусики to a teacher.{image=3_stars_01.png}" if request_07_points == 1:
+#                    "...flash your panties to a teacher.{image=3_stars_01.png}" if request_07_points == 1:
 #                        jump new_request_07
-#                    "...flash your Трусики to a teacher.{image=3_stars_02.png}" if request_07_points == 2:
+#                    "...flash your panties to a teacher.{image=3_stars_02.png}" if request_07_points == 2:
 #                        jump new_request_07
-#                    "...flash your Трусики to a teacher.{image=3_stars.png}" if request_07_points >= 3:
+#                    "...flash your panties to a teacher.{image=3_stars.png}" if request_07_points >= 3:
 #                        jump new_request_07
                         
                     

@@ -80,7 +80,7 @@ label duel:
     with fade
     
     
-    m "Это глупо...ты мне не ровня..."
+    m "This is foolish... You are no match for me..."
     $sna_head_state = 1
     sna_head_main "Amusing..."
     m "{size=-4}(Actually my human body is quite weak...){/size}"

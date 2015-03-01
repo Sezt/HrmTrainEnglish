@@ -81,13 +81,13 @@ label the_oddities:
             menu:
                 #dahr "Gifts that you can gift to that special someone."
                 
-                "- A lolipop (20 g.) -":
+                "-A lollipop candy- (20 g.)":
                     $ the_gift = "03_hp/18_store/11.png" # CANDY.
                     show screen gift
                     with d3
-                    dahr "Lollipop. Adult candy to children or children's candy for adults?"
+                    dahr "A lollipop candy. An adult candy for kids or kids candy for adults?"
                     menu:
-                        "- buy (20 gold) -":
+                        "-Buy the item (20 gold)-":
                             if gold >= 20:
                                 $ gold -=20
                                 $ order_placed = True
@@ -107,7 +107,7 @@ label the_oddities:
                     with d3
                     call choco_text
                     menu:
-                        "- buy (40 gold) -":
+                        "-Buy the item (40 gold)-":
                             if gold >= 40:
                                 $ gold -= 40
                                 $ order_placed = True
@@ -121,13 +121,13 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                             
-                "- plush owl (35 g.) -":
+                "-Stuffed Owl- (35 g.)":
                     $ the_gift = "03_hp/18_store/22.png" # PLUSH OWL
                     show screen gift
                     with d3
                     call owl_text
                     menu:
-                        "- buy (35 gold) -":
+                        "-Buy the item (35 gold)-":
                             if gold >= 35:
                                 $ gold -= 35
                                 $ order_placed = True
@@ -155,7 +155,7 @@ label the_oddities:
                     with d3
                     call beer_text
                     menu:
-                        "- buy (50 gold) -":
+                        "-Buy the item (50 gold)-":
                             if gold >= 50:
                                 $ gold -= 50
                                 $ order_placed = True
@@ -171,13 +171,13 @@ label the_oddities:
 
                     
                     
-                "- scientific magazine (30 g.) -":
+                "-Educational magazines- (30 g.)":
                     $ the_gift = "03_hp/18_store/17.png" # MAGAZINE # 1
                     show screen gift
                     with d3
                     call mag1_text
                     menu:
-                        "- buy (30 gold) -":
+                        "-Buy the item (30 gold)-":
                             if gold >= 30:
                                 $ gold -= 30
                                 $ order_placed = True
@@ -191,13 +191,13 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                 
-                "- women's magazine (45 g.) -":
+                "-Girly magazines- (45 g.)":
                     $ the_gift = "03_hp/18_store/18.png" # MAGAZINE # 2
                     show screen gift
                     with d3
                     call mag2_text
                     menu:
-                        "- buy (45 gold) -":
+                        "-Buy the item (45 gold)-":
                             if gold >= 45:
                                 $ gold -= 45
                                 $ order_placed = True
@@ -233,20 +233,20 @@ label the_oddities:
                             jump gifts_menu
                             
                 
-                "{color=#858585}- This item is not in stock -{/color}" if whoring < 3: # PORN MAGAZINES.
+                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # PORN MAGAZINES.
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
                     hide screen bld1
                     with d3
                     jump gifts_menu
-                "- porn magazine  (80 g.) -" if whoring >= 3: # LEVEL 02.
+                "-Porn magazines- (80 g.)" if whoring >= 3: # LEVEL 02.
                     $ the_gift = "03_hp/18_store/20.png" # MAGAZINE # 4
                     show screen gift
                     with d3
                     call mag4_text
                     menu:
-                        "- buy (80 gold) -":
+                        "-Buy the item (80 gold)-":
                             if gold >= 80:
                                 $ gold -= 80
                                 $ order_placed = True
@@ -261,20 +261,20 @@ label the_oddities:
                             jump gifts_menu
 
 
-                "{color=#858585}- This item is not in stock -{/color}" if whoring < 3: # CONDOMS.
+                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # CONDOMS.
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
                     hide screen bld1
                     with d3
                     jump gifts_menu
-                "- condoms (50 g.) -" if whoring >= 3: # LEVEL 02.
+                "-A pack of condoms- (50 g.)" if whoring >= 3: # LEVEL 02.
                     $ the_gift = "03_hp/18_store/10.png" # CONDOMS
                     show screen gift
                     with d3
                     call con_text
                     menu:
-                        "- buy (50 gold) -":
+                        "-Buy the item (50 gold)-":
                             if gold >= 50:
                                 $ gold -= 50
                                 $ order_placed = True
@@ -288,7 +288,7 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                 
-                "{color=#858585}- This item is not in stock -{/color}" if whoring < 3: # VIBRATOR
+                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # VIBRATOR
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
@@ -301,7 +301,7 @@ label the_oddities:
                     with d3
                     call vib_text
                     menu:
-                        "- buy (55 gold) -":
+                        "-Buy the item (55 gold)-":
                             if gold >= 55:
                                 $ gold -=55
                                 $ order_placed = True
@@ -315,13 +315,13 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                 
-                "- Bank lubricant (60 g.) -":
+                "-A jar of anal lubricant- (60 g.)":
                     $ the_gift = "03_hp/18_store/09.png" # ANAL LUBRICANT
                     show screen gift
                     with d3
                     call lub_text
                     menu:
-                        "- buy (60 gold) -":
+                        "-Buy the item (60 gold)-":
                             if gold >= 60:
                                 $ gold -= 60
                                 $ order_placed = True
@@ -336,13 +336,13 @@ label the_oddities:
                             jump gifts_menu
                 
 
-                "- Gag and handcuffs (70 g.) -":
+                "-Ball gag and cuffs- (70 g.)":
                     $ the_gift = "03_hp/18_store/15.png" # BALL GAG.
                     show screen gift
                     with d3
                     call ball_text
                     menu:
-                        "- buy (70 gold) -":
+                        "-Buy the item (70 gold)-":
                             if gold >= 70:
                                 $ gold -= 70
                                 $ order_placed = True
@@ -356,20 +356,20 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                 
-                "{color=#858585}- This item is not in stock -{/color}" if whoring < 3: # VIBRATOR
+                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # VIBRATOR
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
                     hide screen bld1
                     with d3
                     jump gifts_menu
-                "- Butt plugs (85 g.) -" if whoring >= 3: # LEVEL 02.
+                "-Anal plugs- (85 g.)" if whoring >= 3: # LEVEL 02.
                     $ the_gift = "03_hp/18_store/16.png" # ANAL PLUGS.
                     show screen gift
                     with d3
                     call anal_text
                     menu:
-                        "- buy (85 gold) -":
+                        "-Buy the item (85 gold)-":
                             if gold >= 85:
                                 $ gold -= 85
                                 $ order_placed = True
@@ -383,20 +383,20 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                 
-                "{color=#858585}- This item is not in stock -{/color}" if whoring < 3: # VIBRATOR
+                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # VIBRATOR
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
                     hide screen bld1
                     with d3
                     jump gifts_menu
-                "- Strapon \"Thestral\" (200 g.) -" if whoring >= 3: # LEVEL 02.
+                "- Thestral Strap-on - (200 g.)" if whoring >= 3: # LEVEL 02.
                     $ the_gift = "03_hp/18_store/14.png" # STRAP-ON.
                     show screen gift
                     with d3
                     call str_text
                     menu:
-                        "- buy (200 gold) -":
+                        "-Buy the item (200 gold)-":
                             if gold >= 200:
                                 $ gold -=200
                                 $ order_placed = True
@@ -423,14 +423,14 @@ label the_oddities:
                 
                             
                             
-        "- Clothes -":
+        "-Apparel-":
             label app:
                 pass
             menu:
 
                     
            
-#                "{color=#858585}-This item is not in stock-{/color}"
+#                "{color=#858585}-Item is out of stock-{/color}"
 #                    show screen bld1
 #                    with d3
 #                    call out # Message "Item us out of stock".
@@ -441,9 +441,9 @@ label the_oddities:
                     $ the_gift = "03_hp/18_store/29.png" # SPEW BADGE.
                     show screen gift
                     with d3
-                    dahr "badge \"S.P.E.W.\". simulates the work..."
+                    dahr "A \"S.P.E.W.\" badge. Pretend that you care..."
                     menu:
-                        "- buy (100 gold) -":
+                        "-Buy the item (100 gold)-":
                             if badge_01 == 7 or badge_01 == 1: # == 7 means "gifted already" # badge_01 == 1 because otherwise you could still buy it in the shop, even if you have 1 already.
                                 call do_have_book # "I already own this one."
                                 jump app
@@ -466,20 +466,20 @@ label the_oddities:
                             
                 
                 
-#                "{color=#858585}-This item is not in stock-{/color}" if whoring < 3: # $ level = "02":
+#                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # $ level = "02":
 #                    show screen bld1
 #                    with d3
 #                    call out # Message "Item us out of stock".
 #                    hide screen bld1
 #                    with d3
 #                    jump app
-                "- fishnet stockings (800 gold) -" if not nets == 7:
+                "-Fishnet stokings (800 gold)-" if not nets == 7:
                     $ the_gift = "03_hp/18_store/30.png" # FISHNETS.
                     show screen gift
                     with d3
                     call nets_text
                     menu:
-                        "- buy (800 gold) -":
+                        "-Buy the item (800 gold)-":
                             if nets == 7 or nets == 1: # == 7 means "gifted already"
                                 call do_have_book # "I already own this one."
                                 jump app
@@ -504,7 +504,7 @@ label the_oddities:
 
 
 
-#                "{color=#858585}-This item is not in stock-{/color}" if whoring < 3: # $ level = "02": MINI SKIRT.
+#                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # $ level = "02": MINI SKIRT.
 #                    show screen bld1
 #                    with d3
 #                    call out # Message "Item us out of stock".
@@ -515,9 +515,9 @@ label the_oddities:
                     $ the_gift = "03_hp/18_store/07.png" # MINISKIRT
                     show screen gift
                     with d3
-                    dahr "School miniskirt. Dramatically improves the evaluation."
+                    dahr "School miniskirt. Improves grades drastically."
                     menu:
-                        "- buy miniskirt (---) -":
+                        "-Buy the skirt- (---)":
                             if vouchers >= 1: #Shows the amount of DAHR's vouchers in your possession.
                                 $ vouchers -= 1 #Shows the amount of DAHR's vouchers in your possession.
                                 $ order_placed = True
@@ -525,7 +525,7 @@ label the_oddities:
                                 call thx_4_shoping #Massage that says "Thank you for shopping here!".
                                 jump desk
                             else:
-                                dahr "You can buy this thing only with \" Dahr's voucher\"."
+                                dahr "This item is only redeemable with a \"DAHR's voucher\"."
                                 dahr "Something wrong..."
                                 dahr "damn Russian..."
                                 dahr "Im..."
@@ -553,20 +553,20 @@ label the_oddities:
                 "- Item Sold Out -" if bought_dress_already:
                     "This item has been sold out."
                     jump app
-                "{color=#858585}- This item is not in stock -{/color}" if not sorry_for_hesterics: # NIGHT DRESS.
+                "{color=#858585}-Item is out of stock-{/color}" if not sorry_for_hesterics: # NIGHT DRESS.
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
                     hide screen bld1
                     with d3
                     jump app
-                "- Evening dress (1500 gold) -" if sorry_for_hesterics and not bought_dress_already:
+                "-The Ball Dress- (1500 gold)" if sorry_for_hesterics and not bought_dress_already:
                     $ the_gift = "03_hp/18_store/01.png" # DRESS.
                     show screen gift
                     with d3
-                    dahr "Evening dress for special occasions."
+                    dahr "A nightdress for special occasions."
                     menu:
-                        "- buy (1500 gold) -":
+                        "-Buy the dress (1500 gold)-":
                             if gold >= 1500:
                                 $ gold -=1500
                                 $ order_placed = True
@@ -586,7 +586,7 @@ label the_oddities:
                 "- Never mind -":
                         jump the_oddities
                         
-        "- SACRED SCROLL. Chapter I -":
+        "-Sacred scrolls Volume I-":
             label sscrolls:
             menu:
 
@@ -596,7 +596,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "-Buy the scroll (30 gold)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_01 = True # Turns TRUE if the scroll had been bought.
@@ -618,7 +618,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "-Buy the scroll (30 gold)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_02 = True # Turns TRUE if the scroll had been bought.
@@ -640,7 +640,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "-Buy the scroll (30 gold)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_03 = True # Turns TRUE if the scroll had been bought.
@@ -662,7 +662,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "-Buy the scroll (30 gold)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_04 = True # Turns TRUE if the scroll had been bought.
@@ -684,7 +684,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "-Buy the scroll (30 gold)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_05 = True # Turns TRUE if the scroll had been bought.
@@ -706,7 +706,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_06 = True # Turns TRUE if the scroll had been bought.
@@ -728,7 +728,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_07 = True # Turns TRUE if the scroll had been bought.
@@ -750,7 +750,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_08 = True # Turns TRUE if the scroll had been bought.
@@ -772,7 +772,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_09 = True # Turns TRUE if the scroll had been bought.
@@ -794,7 +794,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_10 = True # Turns TRUE if the scroll had been bought.
@@ -813,7 +813,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_11 = True # Turns TRUE if the scroll had been bought.
@@ -835,7 +835,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_12 = True # Turns TRUE if the scroll had been bought.
@@ -857,7 +857,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_13 = True # Turns TRUE if the scroll had been bought.
@@ -879,7 +879,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_14 = True # Turns TRUE if the scroll had been bought.
@@ -901,7 +901,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_15 = True # Turns TRUE if the scroll had been bought.
@@ -921,7 +921,7 @@ label the_oddities:
                 "- Never mind -":
                     jump the_oddities
                     
-        "- SACRED SCROLL. Chapter II -":
+        "-Sacred scrolls Volume II-":
             label sscrolls2:
             menu:
 
@@ -931,7 +931,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_16 = True # Turns TRUE if the scroll had been bought.
@@ -953,7 +953,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_17 = True # Turns TRUE if the scroll had been bought.
@@ -975,7 +975,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_18 = True # Turns TRUE if the scroll had been bought.
@@ -997,7 +997,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_19 = True # Turns TRUE if the scroll had been bought.
@@ -1019,7 +1019,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_20 = True # Turns TRUE if the scroll had been bought.
@@ -1041,7 +1041,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_21 = True # Turns TRUE if the scroll had been bought.
@@ -1063,7 +1063,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_22 = True # Turns TRUE if the scroll had been bought.
@@ -1085,7 +1085,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_23 = True # Turns TRUE if the scroll had been bought.
@@ -1107,7 +1107,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_24 = True # Turns TRUE if the scroll had been bought.
@@ -1129,7 +1129,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_25 = True # Turns TRUE if the scroll had been bought.
@@ -1151,7 +1151,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_26 = True # Turns TRUE if the scroll had been bought.
@@ -1173,7 +1173,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_27 = True # Turns TRUE if the scroll had been bought.
@@ -1195,7 +1195,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_28 = True # Turns TRUE if the scroll had been bought.
@@ -1217,7 +1217,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_29 = True # Turns TRUE if the scroll had been bought.
@@ -1239,7 +1239,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy scroll (30 gold) -":
+                        "- Buy the scroll (30 gold) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_30 = True # Turns TRUE if the scroll had been bought.
@@ -1269,7 +1269,7 @@ label the_oddities:
 ### ALREADY HAVE THIS BOOK
 label do_have_book:
     show screen bld1
-    m "У меня уже есть эта книга."
+    m "I already own this one."
     hide screen bld1
     hide screen gift
     with d3
@@ -1279,110 +1279,110 @@ label thx_4_shoping:
     $ days_in_delivery2 = one_of_five  #Generating one number out of three for various porpoises.
 
     if one_of_five ==  1:
-        dahr "Спасибо gа покупку в \"Приблудах Дахра\". Ваш gакаg будет доставлен gавтра."
+        dahr "Thank your for shopping at \"Dahr's oddities\". Your order shall be delivered tomorrow."
         hide screen gift
         with d3
         return
     else:
-        dahr "Спасибо gа покупку в \"Приблудах Дахра\". Ваш gакаg будет доставлен в течении 1 - [one_of_five] дней."
+        dahr "Thank your for shopping at \"Dahr's oddities\". Your order shall be delivered in 1 to [one_of_five] days."
         hide screen gift
         with d3
         return
     
 ### THANK YOU FOR shopping here. IMMEDIATE DELIVERY.
 label thx_4_shoping2:
-    dahr "Спасибо gа покупку в \"Приблудах Дахра\"."
+    dahr "Thank your for shopping at \"Dahr's oddities\"."
     hide screen gift
     with d3
     return
 ### NOT ENOUGH GOLD ###
 label no_gold:
-    m "У меня нет столько gold... Это удручает..."
+    m "I don't have enough gold... This is depressing..."
     hide screen gift
     with d3
     return
     
-### This item is not in stock ###
+### ITEM IS OUT OF STOCK ###
 
 label out:
-    dahr "This item is not in stock"
+    dahr "This item is currently out of stock."
     return
 
 ### SACRED SCROLL MASSAGE ###
 label sscroll:
-    dahr "SACRED SCROLL.\n(Может содержать спойлеры)."
+    dahr "A scroll containing sacred knowledge.\n(May also contain spoilers)."
     return
     
 ### BOUGHT SACRED SCROLL MESSAGE ###
 label sscroll_bought:
-    ">Новый свиток был добавлен в вашу коллекцию."
+    ">A New scroll has been added to your sacred scrolls collection."
     hide screen gift
     with d3
     return
     
 ### CHOCOLATE BAR DESCRIPTION ###
 label choco_text:
-    dahr "Рецепт этого восхитительного молочного шоколада держится в секрете. (По слухам, он содержит сушеных фей)."
+    dahr "The recipe for this delicious milk chocolate is kept a secret. (Rumoured to contain dried faeries)."
     return
 
 ### TOY OWL ###
 label owl_text:
-    dahr "Игрушечная сова, набитая перьями настоящей совы. Она такая мягкая!"
+    dahr "a Toy owl stuffed with feathers of an actual owl. It's so cuddly!"
     return
     
 ### BUTTERBEER ###
 label beer_text:
-    dahr "Девушки не могут устоять перед этим вкусом. Поэтому всегда польgуются большим спросом среди мальчиков. \n {size=-4}. Предупреждение: употребление алкоголя не допускается несовершеннолетними, беg присмотра вgрослых {/size}"
+    dahr "Girls can't resist this beverage's buttery texture. Therefore it's always in high demand among the boys. \n{size=-4}Warning: no underage drinking is allowed without adults present.{/size}"
     return
           
 ### MAGAZINES ###
 label mag1_text:
-    dahr "Обраgовательный журнал. \nВерный спутник каждого иgгоя."
+    dahr "Educational magazines. \nthe Trusty companions of every social outcast."
     return
           
 label mag2_text:
-    dahr "Женский журнал. \nВсе крутые девчонки читают их."
+    dahr "Girly magazines. \nAll cool girls are reading these."
     return
     
 label mag3_text:
-    dahr "Ваш парень превращается в хорошего мальчика? \nВаш муж больше не испольgует вас по наgначению?\nВсе, что вы ждали о отношениях, любви и сексе. В основном о сексе."
+    dahr "A nice pair of reading glasses that do little to improve vision."
     return
     
 label mag4_text:
-    dahr "Дайте их своей девушке, чтобы проверить ее, своей жене, чтобы постыдить ее и вашей дочери, чтобы иgбежать \"раgговоров\"."
+    dahr "Give these to your girlfriend to test her, to your wife to shame her and to your daughter to avoid \"the talk\"."
     return
     
 ### CONDOMS ###
 label con_text:
-    dahr "\"Преgервативы Роgовый единорог\". \nПокажите всем однорогое существо!\n{size=-4}Может содержать слюну реального единорога.{/size}"
+    dahr "\"Pink unicorn condoms\". \nUnleash the one-horned beast!\n{size=-4}May contain traces of actual unicorn saliva.{/size}"
     return
     
 ### VIBRATOR ###
 label vib_text:
-    dahr "Великолепный, волшебный усиленный вибратор иgготовлен иg лоgы дерева, с ядром жилы дракона."
+    dahr "A magnificent, magically enhanced vibrator made of vine wood, with a dragon heartstring core."
     return
     
 ### ANAL LUBRICANT ###
 label lub_text:
-    dahr "Банка анальной смаgки. Купите это любимому человеку - покажите, что вы gаботитесь о нем/ней."
+    dahr "A Jar of anal lube, Buy this for your loved one - show that you care."
     return
 
 ### BALL GAG AND CUFFS ###
 label ball_text:
-    dahr "Кляп и манжеты, превратите свою вторую половинку в вашего сокамерника."
+    dahr "Ball gag and cuffs, Turn your soulmate into your cellmate."
     return
           
 ### ANAL PLUGS ###
 label anal_text:
-    dahr "Анальные пробки украшены настоящими хвостами. \n Раgные раgмеры, чтобы удовлетворить экспертов, практиков и начинающих."
+    dahr "Anal plugs decorated with actual tails. \nSizes vary to satisfy expert practitioners and beginner alike."
     return
           
 ### STRAP-ON ###
 label str_text:
-    dahr "Cтрапон \"Фестрал\".\nКогда вы его увидите - потеряете дар речи."
+    dahr "Thestral strap-on.\nWhen you see it, you'll shit bricks."
     return
 
 ### FISHNETS ###
 label nets_text:
-    dahr "Ажурные чулки. Вопреки распространенному мнению, они не были иgобретены рыбаком."
+    dahr "Fishnet stockings. Contrary to popular belief they were not invented by a fisherman."
     return

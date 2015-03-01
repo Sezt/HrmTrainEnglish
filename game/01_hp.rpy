@@ -174,7 +174,7 @@ $ waifu_book_completed = False #Turns TRUE when you unlock the harem ending.
 #BOOK 08
 #$ book_08_units = 0 #Monitors progress with this book.
 #$ book_08_complete = False #Turns True when you finish reading book #4.
-#$ book08 = "\"Скорочтение для чайников\"" #1/6 chance to complete an extra chapter during reading.
+#$ book08 = "\"Speed reading for dummies\"" #1/6 chance to complete an extra chapter during reading.
 $ s_reading_lvl = 0 #+1 When complete first book on speed reading. +1 again when complete the second book.
 
 

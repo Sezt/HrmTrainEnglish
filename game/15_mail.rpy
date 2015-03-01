@@ -4,11 +4,11 @@ label mail:
         $ got_paycheck = False #When TRUE the paycheck is in the mail. Can't do paper work.
         hide screen owl
         show screen owl_02
-        ">You read the message."
+        ">You read your mail."
         play sound "sounds/money.mp3"  #Quiet...
 
         $dgold=([40, 70, 90, 110, 150, 200][finished_report-1])*turbo
-        $ letter_text = "{size=-7} FROM: Ministry of Magic\n To: Professor Dumbledore \n \n \n {/ size} {size=-2} Thank you for reports sent this week. \n Your payment: {/size} \n {size=+4} [dgold] gold coins. {/size} \n \n \n {size=-3} - With respect - {/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing two reports this week.\nHere is your payment:{/size} \n{size=+4}70 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
         $ gold += dgold
 
         
@@ -27,7 +27,7 @@ label mail:
     
 ### MAIL FROM HERMIONE ###
 if day == 1:
-    #$ letter_text = "{size=-4}-Для профессора Дамблдора-\n\nЯ пишу Вам, что бы довести до Вашего внимания текущию ситуацию в нашей школе .\n Я боюсь мне будет нужна Ваша помощь, чтобы разобраться в этом.\n\n\n-С уважениям Ваша Гермиона Грейнджер-{/size}"
+    #$ letter_text = "{size=-4}-To professor Dumbledore-\n\nI am writing you to bring the current situation in our school to your attention.\n I'm afraid I'll need your help to sort this out.\n\n\n-Sincerely yours Hermione Granger-{/size}"
     $ letter_text = "{size=-7}From: Hermione Granger\nTo: Professor Dumbledore\n\n{/size}{size=-4}I am sure that you remember the reason why I'm writing you this letter from my last one, sir.\n\nI beg of you, please hear my plea this time. This injustice simply cannot go on...\nNot in this day and age, not in our school.\n\nPlease take action.\n\n{size=-3}With deepest respect,\nHermione Granger{/size}"    
     hide screen owl
     show screen owl_02
@@ -62,7 +62,7 @@ if day == 1:
 
 if letter_from_hermione_02: #Letter from Hermione #02.
     $ letter_from_hermione_02 = False
-    #$ letter_text = "{size=-4}-Для профессора Дамблдора-\n\nЯ пишу Вам, что бы довести до Вашего внимания текущию ситуацию в нашей школе.\n Я боюсь мне будет нужна Ваша помощь, чтобы разобраться в этом.\n\n\n-С уважениям Ваша Гермиона Грейнджер--{/size}"
+    #$ letter_text = "{size=-4}-To professor Dumbledore-\n\nI am writing you to bring the current situation in our school to your attention.\n I'm afraid I'll need your help to sort this out.\n\n\n-Sincerely yours Hermione Granger--{/size}"
     $ letter_text = "{size=-7}From: Hermione Granger\nTo: Professor Dumbledore\n\n{/size}{size=-4}I am sorry to disturb you again, professor. I just want to make sure that you take this problem seriously.\n\nLast night another classmate confided inme... I gave my word to keep it a secret, so I cannot go into any details.\n\nAll I can say is that one of the Professors was involved.\n\nPlease take action soon.\n\n{size=-3}With deepest respect,\nHermione Granger.{/size}"
     hide screen owl
     show screen owl_02

@@ -68,7 +68,7 @@ label event_00:
 #    hide screen emo
 #    show screen snape_main
 #    with d3
-#    sna "I will be with you in a moment, мисс Грейнджер..."
+#    sna "I will be with you in a moment, miss Granger..."
 #    hide screen snape_main
 #    with d3
 #    show screen emo
@@ -551,7 +551,7 @@ label event_05: #Snape comes in, has a talk with Genie, then the duel starts.
     $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                                                               #SNAPE
     show screen snape_main                                                                                                                                #SNAPE
     with d3                                                                                                                                                                  #SNAPE
-    who2 "Tsk... Noisy little witch..."
+    who2 "Tsk... Noisy little...... witch."
     hide screen snape_main                                                                                                                                  #SNAPE
     with d3                                                                                                                                                                  #SNAPE
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                                                               #SNAPE
@@ -845,7 +845,7 @@ label event_06: #THE TALK AFTER THE DUEL ENDS.
             m "Yes, yes, I know..."
             m "Well, off I go then. Sorry for the ruckus."
             $sna_head_state = 1
-            sna_head_main "Хорошо, что никто не пострадал..."
+            sna_head_main "No harm done..."
         "\"But I like it here! Can't I stay?\"":
              sna_head_main "Absolutely not."
              sna_head_main "Whoever you are, you are not from this plane of existence."
@@ -2796,11 +2796,11 @@ label event_15: # Hermione comes and asks to buy a favour from her.
                     her "Alright... I will come back tomorrow then..."
                     $event.NotFinished()
                     return 
-                "\"Ofcorse, come.\"":
+                "\"Of course. Come on in.\"":
                     pass
-        "\"im busy today.\"":
+        "\"I'm busy. Come back later.\"":
             her "But..."
-            her "Ok..."
+            her "Well, alright..."
             $event.NotFinished()
             return
         "\"Yes, come in.\"":
@@ -2867,10 +2867,10 @@ label event_15: # Hermione comes and asks to buy a favour from her.
             pass
         "\"Я так не думаю, мисс Грейнджер.\"":
             $herView.hideshowQQ( "body_31.png", pos )
-            her "B-but... We need points..."
-            her "Professor, please, I'm in a hopeless situation..."
-            m "In a desperate, you say..?"
-            m "Alright..."
+            her "B-but... We need the points..."
+            her "Professor, please, I am really desperate..."
+            m "Desperate you say..?"
+            m "Well alright..."
     $herView.hideshowQQ( "body_01.png", pos )
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
     her "Thank you, professor..."
