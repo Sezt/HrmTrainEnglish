@@ -218,7 +218,7 @@ label event_00:
 #    who2 "No! You sniveling maggot! we hate that name!"
 #    who2 "We want to be called Lord Voldemort!"
 #    who2 "Forgive me, master..."
-#    m "Эм... mr. Lord- -"
+#    m "Ehm... mr. Lord--"
 #    with hpunch
 #    who2 "No! No! \"lord\" is not master's name, \"lord\" is master's title, you idiot!"
 #    who2 "Watch your tone, worm! That is an immortal being before you."
@@ -962,7 +962,7 @@ label event_06: #THE TALK AFTER THE DUEL ENDS.
     m "Oh, yes."
     sna_head_main "Unbelievable..."
     sna_head_main "Well, I'll see you tomorrow.... genie."
-    m "Я буду здесь..."
+    m "I'll be here..."
 
     $sna_head_state = 7
     sna_head_main "(A genie? Now that's new...)"
@@ -1473,7 +1473,7 @@ label event_08: # HERMONE SHOWS UP FOR THE FIRST TIME. IN USE.
         $ herView.showQQ( "body_03.png", pos )
     her "Of course you agree with me on this, professor, do you not?"
     if d_flag_01:
-        g4 "{size=-4}*Тяжело дыша*{/size}"
+        g4 "{size=-4}*Panting heavily*{/size}"
         $herView.hideshowQQ( "body_07.png", pos )
         her "Professor...?"
         g4 "{size=-4}(Crap. What does she want now?){/size}"
@@ -1649,7 +1649,7 @@ label event_08_02:
     show screen ctc
     pause
     her "..."
-    m "Seriosly?"
+    m "Seriously?"
     hide screen ctc
     her "Yes, professor, I assure you, we are very serious."
     her "The way you force our poor girls to dress is unacceptable..."
@@ -1883,7 +1883,7 @@ label event_09: #Second visit from Hermione. Says she sent a letter to the Mines
     pause
     $herView.hideshowQQ( "body_04.png", pos )
 
-    her "Доброе утро, профессор Дамблдор."
+    her "Good morning, professor Dumbledore."
     hide screen ctc
     menu:
 
@@ -2705,7 +2705,7 @@ label event_14: # Hermione comes after her breakdown (when she failed the test).
         $herView.hideshowQQ( "body_09.png", pos )
         her "do You think you could tutor me a little, sir?"
         menu:
-            "\"Я уверен, что это возможно.\"":
+            "\"I suppose that is possible\"":
                 pass
             "\"Hm... I'm quite busy actually.\"":
                 $herView.hideshowQQ( "body_11.png", pos )
@@ -2865,7 +2865,7 @@ label event_15: # Hermione comes and asks to buy a favour from her.
             m "Well, alright then, I think we can figure something out."
         "\"Well, if you insist...\"":
             pass
-        "\"Я так не думаю, мисс Грейнджер.\"":
+        "\"I don't think so, miss Granger.\"":
             $herView.hideshowQQ( "body_31.png", pos )
             her "B-but... We need the points..."
             her "Professor, please, I am really desperate..."
