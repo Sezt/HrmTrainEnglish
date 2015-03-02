@@ -1031,7 +1031,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
         $her_head_state = 6
         her_head_main "{size=-5}(That was so humiliating...){/size}"
         $her_head_state = 24
-        her_head_main "No, Hermione, you silly girl!){/size}"
+        her_head_main "{size=-5}No, Hermione, you silly girl!){/size}"
         her_head_main "{size=-5}(We are doing this to protect the honour of our house!){/size}"
         $her_head_state = 19
         her_head_main "................................."
