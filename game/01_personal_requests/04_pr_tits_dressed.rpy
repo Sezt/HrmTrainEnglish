@@ -49,11 +49,11 @@ label new_request_04:
         $her_head_state = 7
         her_head_main "!!!?"
         $her_head_state = 8
-        her_08 "Professor Dumbledore?!"
+        her_head_main "Professor Dumbledore?!"
         ">Hermione tries to pull away from you, but you hold her firmly by her breasts..."
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
         $her_head_state = 9
-        her_09 "Professor, what are you--?"
+        her_head_main "Professor, what are you--?"
         ">She tries to pull away again."
         ">You squeeze her tits like a vice."
         $her_head_state = 10

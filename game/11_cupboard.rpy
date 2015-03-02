@@ -266,6 +266,18 @@ label cupboard:
                             hide screen points
                             $gold+=100
                             show screen points
+                        "Ticket":
+                            $ vouchers += 1
+                            "Obtained Voucher."
+                            jump cheat_help   
+                "Imagination":
+                    menu:
+                        "Have you used this cheat already today? (Using it more than once can break the game)"
+                        "Yes":
+                            jump cheat_help 
+                        "No":
+                            $ imagination += 1
+                            jump cheat_help                         
                         "Guide":
                             "The passage and answers frequently asked questions can be found {a=http://wtrus.ixbb.ru/viewtopic.php?id=3}there{/a}. "
 
