@@ -3727,6 +3727,10 @@ label your_whore:
     {color=#fff}\
     {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=16733487}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\n\
     \n\n\n\
+    {color=#e5e297}-\{Beta testing English version}-{/color}\n\n\
+    {color=#fff}\
+    megablue5{/a}\n\n\
+    \n\n\n\
     "
 
     centered "{cps=20}{size=+5}{color=#ea91b0}-Witch Trainer-{/color}{/size}\n\n\
