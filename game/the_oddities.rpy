@@ -87,7 +87,7 @@ label the_oddities:
                     with d3
                     dahr "A lollipop candy. An adult candy for kids or kids candy for adults?"
                     menu:
-                        "-Buy the item (20 gold)-":
+                        "-Buy the item (20 galleons)-":
                             if gold >= 20:
                                 $ gold -=20
                                 $ order_placed = True
@@ -107,7 +107,7 @@ label the_oddities:
                     with d3
                     call choco_text
                     menu:
-                        "-Buy the item (40 gold)-":
+                        "-Buy the item (40 galleons)-":
                             if gold >= 40:
                                 $ gold -= 40
                                 $ order_placed = True
@@ -127,7 +127,7 @@ label the_oddities:
                     with d3
                     call owl_text
                     menu:
-                        "-Buy the item (35 gold)-":
+                        "-Buy the item (35 galleons)-":
                             if gold >= 35:
                                 $ gold -= 35
                                 $ order_placed = True
@@ -142,7 +142,7 @@ label the_oddities:
                             jump gifts_menu
                             
                 
-                "{color=#858585}- Item us out of stock -{/color}" if whoring < 3: # BUTTERBEER.
+                "{color=#858585}-Item is out of stock-{/color}" if whoring < 3: # BUTTERBEER.
                     show screen bld1
                     with d3
                     call out # Message "Item us out of stock".
@@ -155,7 +155,7 @@ label the_oddities:
                     with d3
                     call beer_text
                     menu:
-                        "-Buy the item (50 gold)-":
+                        "-Buy the item (50 galleons)-":
                             if gold >= 50:
                                 $ gold -= 50
                                 $ order_placed = True
@@ -177,7 +177,7 @@ label the_oddities:
                     with d3
                     call mag1_text
                     menu:
-                        "-Buy the item (30 gold)-":
+                        "-Buy the item (30 galleons)-":
                             if gold >= 30:
                                 $ gold -= 30
                                 $ order_placed = True
@@ -197,7 +197,7 @@ label the_oddities:
                     with d3
                     call mag2_text
                     menu:
-                        "-Buy the item (45 gold)-":
+                        "-Buy the item (45 galleons)-":
                             if gold >= 45:
                                 $ gold -= 45
                                 $ order_placed = True
@@ -246,7 +246,7 @@ label the_oddities:
                     with d3
                     call mag4_text
                     menu:
-                        "-Buy the item (80 gold)-":
+                        "-Buy the item (80 galleons)-":
                             if gold >= 80:
                                 $ gold -= 80
                                 $ order_placed = True
@@ -274,7 +274,7 @@ label the_oddities:
                     with d3
                     call con_text
                     menu:
-                        "-Buy the item (50 gold)-":
+                        "-Buy the item (50 galleons)-":
                             if gold >= 50:
                                 $ gold -= 50
                                 $ order_placed = True
@@ -301,7 +301,7 @@ label the_oddities:
                     with d3
                     call vib_text
                     menu:
-                        "-Buy the item (55 gold)-":
+                        "-Buy the item (55 galleons)-":
                             if gold >= 55:
                                 $ gold -=55
                                 $ order_placed = True
@@ -321,7 +321,7 @@ label the_oddities:
                     with d3
                     call lub_text
                     menu:
-                        "-Buy the item (60 gold)-":
+                        "-Buy the item (60 galleons)-":
                             if gold >= 60:
                                 $ gold -= 60
                                 $ order_placed = True
@@ -342,7 +342,7 @@ label the_oddities:
                     with d3
                     call ball_text
                     menu:
-                        "-Buy the item (70 gold)-":
+                        "-Buy the item (70 galleons)-":
                             if gold >= 70:
                                 $ gold -= 70
                                 $ order_placed = True
@@ -369,7 +369,7 @@ label the_oddities:
                     with d3
                     call anal_text
                     menu:
-                        "-Buy the item (85 gold)-":
+                        "-Buy the item (85 galleons)-":
                             if gold >= 85:
                                 $ gold -= 85
                                 $ order_placed = True
@@ -396,7 +396,7 @@ label the_oddities:
                     with d3
                     call str_text
                     menu:
-                        "-Buy the item (200 gold)-":
+                        "-Buy the item (200 galleons)-":
                             if gold >= 200:
                                 $ gold -=200
                                 $ order_placed = True
@@ -437,13 +437,13 @@ label the_oddities:
 #                    hide screen bld1
 #                    with d3
 #                    jump app
-                "- \"S.P.E.W.\" badge (100 gold) -" if not badge_01 == 7:
+                "-\"S.P.E.W.\" badge (100 galleons)-" if not badge_01 == 7:
                     $ the_gift = "03_hp/18_store/29.png" # SPEW BADGE.
                     show screen gift
                     with d3
                     dahr "A \"S.P.E.W.\" badge. Pretend that you care..."
                     menu:
-                        "-Buy the item (100 gold)-":
+                        "-Buy the item (100 galleons)-":
                             if badge_01 == 7 or badge_01 == 1: # == 7 means "gifted already" # badge_01 == 1 because otherwise you could still buy it in the shop, even if you have 1 already.
                                 call do_have_book # "I already own this one."
                                 jump app
@@ -473,13 +473,13 @@ label the_oddities:
 #                    hide screen bld1
 #                    with d3
 #                    jump app
-                "-Fishnet stokings (800 gold)-" if not nets == 7:
+                "-Fishnet stokings (800 galleons)-" if not nets == 7:
                     $ the_gift = "03_hp/18_store/30.png" # FISHNETS.
                     show screen gift
                     with d3
                     call nets_text
                     menu:
-                        "-Buy the item (800 gold)-":
+                        "-Buy the item (800 galleons)-":
                             if nets == 7 or nets == 1: # == 7 means "gifted already"
                                 call do_have_book # "I already own this one."
                                 jump app
@@ -560,13 +560,13 @@ label the_oddities:
                     hide screen bld1
                     with d3
                     jump app
-                "-The Ball Dress- (1500 gold)" if sorry_for_hesterics and not bought_dress_already:
+                "-The Ball Dress- (1500 galleons)" if sorry_for_hesterics and not bought_dress_already:
                     $ the_gift = "03_hp/18_store/01.png" # DRESS.
                     show screen gift
                     with d3
                     dahr "A nightdress for special occasions."
                     menu:
-                        "-Buy the dress (1500 gold)-":
+                        "-Buy the dress (1500 galleons)-":
                             if gold >= 1500:
                                 $ gold -=1500
                                 $ order_placed = True
@@ -596,7 +596,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "-Buy the scroll (30 gold)-":
+                        "-Buy the scroll (30 galleons)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_01 = True # Turns TRUE if the scroll had been bought.
@@ -618,7 +618,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "-Buy the scroll (30 gold)-":
+                        "-Buy the scroll (30 galleons)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_02 = True # Turns TRUE if the scroll had been bought.
@@ -640,7 +640,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "-Buy the scroll (30 gold)-":
+                        "-Buy the scroll (30 galleons)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_03 = True # Turns TRUE if the scroll had been bought.
@@ -662,7 +662,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "-Buy the scroll (30 gold)-":
+                        "-Buy the scroll (30 galleons)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_04 = True # Turns TRUE if the scroll had been bought.
@@ -684,7 +684,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "-Buy the scroll (30 gold)-":
+                        "-Buy the scroll (30 galleons)-":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_05 = True # Turns TRUE if the scroll had been bought.
@@ -706,7 +706,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_06 = True # Turns TRUE if the scroll had been bought.
@@ -728,7 +728,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_07 = True # Turns TRUE if the scroll had been bought.
@@ -750,7 +750,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_08 = True # Turns TRUE if the scroll had been bought.
@@ -772,7 +772,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_09 = True # Turns TRUE if the scroll had been bought.
@@ -794,7 +794,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_10 = True # Turns TRUE if the scroll had been bought.
@@ -813,7 +813,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_11 = True # Turns TRUE if the scroll had been bought.
@@ -835,7 +835,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_12 = True # Turns TRUE if the scroll had been bought.
@@ -857,7 +857,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_13 = True # Turns TRUE if the scroll had been bought.
@@ -879,7 +879,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_14 = True # Turns TRUE if the scroll had been bought.
@@ -901,7 +901,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_15 = True # Turns TRUE if the scroll had been bought.
@@ -931,7 +931,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_16 = True # Turns TRUE if the scroll had been bought.
@@ -953,7 +953,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_17 = True # Turns TRUE if the scroll had been bought.
@@ -975,7 +975,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_18 = True # Turns TRUE if the scroll had been bought.
@@ -997,7 +997,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_19 = True # Turns TRUE if the scroll had been bought.
@@ -1019,7 +1019,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_20 = True # Turns TRUE if the scroll had been bought.
@@ -1041,7 +1041,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_21 = True # Turns TRUE if the scroll had been bought.
@@ -1063,7 +1063,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_22 = True # Turns TRUE if the scroll had been bought.
@@ -1085,7 +1085,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_23 = True # Turns TRUE if the scroll had been bought.
@@ -1107,7 +1107,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_24 = True # Turns TRUE if the scroll had been bought.
@@ -1129,7 +1129,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_25 = True # Turns TRUE if the scroll had been bought.
@@ -1151,7 +1151,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_26 = True # Turns TRUE if the scroll had been bought.
@@ -1173,7 +1173,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_27 = True # Turns TRUE if the scroll had been bought.
@@ -1195,7 +1195,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_28 = True # Turns TRUE if the scroll had been bought.
@@ -1217,7 +1217,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_29 = True # Turns TRUE if the scroll had been bought.
@@ -1239,7 +1239,7 @@ label the_oddities:
                     with d3
                     call sscroll
                     menu:
-                        "- Buy the scroll (30 gold) -":
+                        "- Buy the scroll (30 galleons) -":
                             if gold >= 30:
                                 $ gold -=30
                                 $ sscroll_30 = True # Turns TRUE if the scroll had been bought.
@@ -1297,7 +1297,7 @@ label thx_4_shoping2:
     return
 ### NOT ENOUGH GOLD ###
 label no_gold:
-    m "I don't have enough gold... This is depressing..."
+    m "I don't have enough money... This is depressing..."
     hide screen gift
     with d3
     return

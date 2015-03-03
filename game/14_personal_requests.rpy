@@ -388,7 +388,7 @@ label new_request_07:
             "Hermione reluctantly agrees."
             
         elif request_07_points == 1: #Two stars.
-            her "Если только..."
+            her "if only..."
             "Hermione agreed."
             
         elif request_07_points == 2: #Three stars.

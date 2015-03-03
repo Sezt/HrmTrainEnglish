@@ -343,7 +343,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                     
-                "-S.06: [scroll_06_name]--" if sscroll_06 or persistent.ss_06:
+                "-S.06: [scroll_06_name]-" if sscroll_06 or persistent.ss_06:
                     $ the_gift = "03_hp/19_extras/06.png" # SACRED SCROLL 06.
                     show screen gift
                     show screen ctc
@@ -365,7 +365,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                     
-                "-S.08: [scroll_08_name]--" if sscroll_08 or persistent.ss_08:
+                "-S.08: [scroll_08_name]-" if sscroll_08 or persistent.ss_08:
                     $ the_gift = "03_hp/19_extras/08.png" # SACRED SCROLL 08.
                     show screen gift
                     show screen ctc
@@ -399,7 +399,7 @@ label cupboard:
                     jump sc_col_men_1
                 
                 "-S.11: [scroll_11_name]-" if sscroll_11 or persistent.ss_11:
-                    $ the_gift = "03_hp/19_extras/11.png" # SACRED SCROLL 10.
+                    $ the_gift = "03_hp/19_extras/11.png" # SACRED SCROLL 11.
                     show screen gift
                     show screen ctc
                     with d3
@@ -410,7 +410,7 @@ label cupboard:
                     jump sc_col_men_1
                 
                 "-S.12: [scroll_12_name]-" if sscroll_12 or persistent.ss_12:
-                    $ the_gift = "03_hp/19_extras/12.png" # SACRED SCROLL 10.
+                    $ the_gift = "03_hp/19_extras/12.png" # SACRED SCROLL 12.
                     show screen gift
                     show screen ctc
                     with d3
@@ -420,8 +420,8 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                 
-                "-S.13: [scroll_13_name]-" if sscroll_13 or persistent.ss_10:
-                    $ the_gift = "03_hp/19_extras/10.png" # SACRED SCROLL 10.
+                "-S.13: [scroll_13_name]-" if sscroll_13 or persistent.ss_13:
+                    $ the_gift = "03_hp/19_extras/13.png" # SACRED SCROLL 13.
                     show screen gift
                     show screen ctc
                     with d3
@@ -714,7 +714,7 @@ label rummaging:
                 $ the_gift = "03_hp/18_store/28.png" # GOLD.
                 show screen gift
                 with d3
-                ">You found [gold1] gold..." 
+                ">You found [gold1] galleons..." 
                 $ gold = gold + gold1
                 hide screen gift
                 with d3
@@ -772,7 +772,7 @@ label rummaging:
                 $ the_gift = "03_hp/18_store/28.png" # GOLD.
                 show screen gift
                 with d3
-                ">You found [gold2] gold..." 
+                ">You found [gold2] galleons..." 
                 $ gold = gold + gold2
                 hide screen gift
                 with d3
@@ -850,7 +850,7 @@ label rummaging:
                 $ the_gift = "03_hp/18_store/28.png" # GOLD.
                 show screen gift
                 with d3
-                ">You found [gold3] gold..." 
+                ">You found [gold3] galleons..." 
                 $ gold = gold + gold3
                 hide screen gift
                 with d3
@@ -907,7 +907,7 @@ label rummaging:
                 $ the_gift = "03_hp/18_store/28.png" # GOLD.
                 show screen gift
                 with d3
-                ">You found [gold4] gold..." 
+                ">You found [gold4] galleons..." 
                 $ gold = gold + gold4
                 hide screen gift
                 with d3
