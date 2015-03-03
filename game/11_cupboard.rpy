@@ -409,7 +409,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                 
-                "-S.02: [scroll_12_name]-" if sscroll_12 or persistent.ss_12:
+                "-S.12: [scroll_12_name]-" if sscroll_12 or persistent.ss_12:
                     $ the_gift = "03_hp/19_extras/12.png" # SACRED SCROLL 10.
                     show screen gift
                     show screen ctc
@@ -420,7 +420,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                 
-                "-S.03: [scroll_13_name]-" if sscroll_13 or persistent.ss_10:
+                "-S.13: [scroll_13_name]-" if sscroll_13 or persistent.ss_10:
                     $ the_gift = "03_hp/19_extras/10.png" # SACRED SCROLL 10.
                     show screen gift
                     show screen ctc
@@ -431,7 +431,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                 
-                "-S.04: [scroll_14_name]-" if sscroll_14 or persistent.ss_14:
+                "-S.14: [scroll_14_name]-" if sscroll_14 or persistent.ss_14:
                     $ the_gift = "03_hp/19_extras/14.png" # SACRED SCROLL 10.
                     show screen gift
                     show screen ctc
@@ -442,7 +442,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_1
                 
-                "-S.05: [scroll_15_name]-" if sscroll_15 or persistent.ss_15:
+                "-S.15: [scroll_15_name]-" if sscroll_15 or persistent.ss_15:
                     $ the_gift = "03_hp/19_extras/15.png" # SACRED SCROLL 15.
                     show screen gift
                     show screen ctc
@@ -614,7 +614,7 @@ label cupboard:
                     with d3
                     jump sc_col_men_2
                 
-                "-S.05: [scroll_30_name]-" if sscroll_30 or persistent.ss_30:
+                "-S.30: [scroll_30_name]-" if sscroll_30 or persistent.ss_30:
                     $ the_gift = "03_hp/19_extras/30.png" # SACRED SCROLL 30.
                     show screen gift
                     show screen ctc
