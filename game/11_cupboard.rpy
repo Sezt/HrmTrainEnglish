@@ -254,10 +254,10 @@ label cupboard:
                     menu:
                         "Enable TURBO mode" if turbo==1: 
                             $turbo=2
-                            "TURBO mode is enabled. Now your actions will bring you twice as much money and points the faculty slitherine."                    
+                            "TURBO mode is enabled. Now your actions will bring you twice as much money and points the faculty slitherine.\n the Chance to read additional chapters twice."                    
                         "Disable TURBO mode" if turbo==2: 
                             $turbo=1
-                            "TURBO mode is off. Now your actions will bring you the usual amount of money and points the faculty slitherine."                    
+                            "TURBO mode is off. Now your actions will bring you the usual amount of money and points the faculty slitherine.\n The chance to read additional chapters standard"                    
                         "CHEAT: +100 points for Slytherin":
                             hide screen points
                             $slytherin+=100

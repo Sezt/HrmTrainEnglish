@@ -94,7 +94,9 @@ init:
 
             ("book_08::\"Speedreading  for dummies\"",     50, "03_hp/18_store/08.png", "This book contains a few basic techniques that will help you improve the skill of speed reading.",
                 "a great chance to read an extra Chapter, while reading."),
-            ("book_09::\"Speedreading  for experts\"",    90, "03_hp/18_store/08.png", "This book contains several of the expert techniques that will help you improve the skill of speed reading.",
+            ("book_09::\"Speedreading  for amateurs\"",    90, "03_hp/18_store/08.png", "This book contains several of the expert techniques that will help you improve the skill of speed reading.",
+                "a great chance to read an extra Chapter, while reading."),
+            ("book_10::\"Speedreading  for experts\"",    150, "03_hp/18_store/08.png", "This book contains several of the expert techniques that will help you improve the skill of speed reading.",
                 "a great chance to read an extra Chapter, while reading."),
 
             ("book_06::\"Game of Chairs\"",                 100, "03_hp/18_store/02.png", "The epic story of betrayal, murder and rape, and then several more murders, a little more betrayal and even more rape.",
@@ -4728,7 +4730,7 @@ init-2:
     $ her2 = Character('GErmione', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
     $ sna = Character('Severus Snape', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ sna2 = Character('Severus snape', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed")  #Text box used for "head only" speech. (Because it has padding).
-    $ vol = Character('Лорд Волдеморт', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ vol = Character('Lord Voldemort', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ l = Character('Lola', color="#402313", window_right_padding=230, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
     
     
