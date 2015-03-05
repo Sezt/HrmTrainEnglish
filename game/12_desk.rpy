@@ -223,7 +223,7 @@ label reading_book_xx:
     ">There are still a few chapters."       
     
 #===### SPEED READING FOR DUMMIES BONUS CHECK ###
-     if s_reading_lvl == 1 and turbo==2: #First book (book_08) on speed reading completed.
+    if s_reading_lvl == 1 and turbo==2: #First book (book_08) on speed reading completed.
         $ speed_dummies = renpy.random.randint(1, 3) 
         #$ speed_dummies = 1 #Here for testing porpoise only.
         if speed_dummies == 1: #Success.
