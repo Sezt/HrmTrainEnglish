@@ -1,4 +1,5 @@
 *.rpyc
+*.pyo
 /log.txt
 /errors.txt
 /traceback.txt
