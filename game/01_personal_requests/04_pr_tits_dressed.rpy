@@ -21,9 +21,9 @@ label new_request_04:
 
         hide bld1
         with d3
-        m "Подойди, девочка..."
+        m "Come on, girl..."
         $her_head_state = 2
-        her_head_main "Эм... Ладно..."
+        her_head_main "Uh... Okay..."
         hide screen bld1
         with d3
         
