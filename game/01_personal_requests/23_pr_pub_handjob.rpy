@@ -25,7 +25,7 @@ label new_request_23: #LV.6 (Whoring = 15 - 17)
             her "...?"
             m "I want you to give a handjob to one of your classmates."
             jump too_much
-        m "Мисс Грейнджер, я хочу, чтобы сегодня вы сделали кое-что новенькое..."
+        m "Miss Granger, I want today, you did something different..."
         $herView.hideshowQQ( "body_15.png", pos )
         her "..........."
         m "I want you to go out there and have sex with one of your classmates."

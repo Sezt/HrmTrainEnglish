@@ -363,7 +363,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                                     pause
                                     hide screen ctc
                                     $ mad += 18
-                        "\"FIne... Here are your points.\"":
+                        "\"Fine... Here are your points.\"":
                             $herView.hideshowQQ( "body_74.png", pos )
                             her "Thank you for understanding, Professor."
                             
@@ -479,8 +479,8 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                 elif one_out_of_three == 2: ### EVENT (B)
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     $herView.hideshowQQ( "body_76.png", pos )
-                    her "Профессор Снейп!"
-                    m "Эм... Ага, Я, вообще-то, Дамблдор, вроде как..."
+                    her "Professor Snape!"
+                    m "Uh... yeah, I am, in fact, Dumbledore, such as..."
                     $herView.hideQQ()
                     
                     g4 "{size=-5}(Wait, did {size=+7}he{/size} just put me under another disguise?){/size}"
@@ -542,8 +542,8 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                     her "But he..."
                     her "He just..."
                     $herView.hideshowQQ( "body_20.png", pos )
-                    her "Как это возможно?"
-                    her "Я не могу поверить в это..."
+                    her "How is this possible?"
+                    her "I can't believe it..."
                     $herView.hideQQ()
                     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
                     m "{size=-4}(Agh! The suspense is killing me!){/size}" 

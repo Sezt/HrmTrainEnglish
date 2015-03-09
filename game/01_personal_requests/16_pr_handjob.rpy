@@ -64,7 +64,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
             "\"You will get 45 house points.\"":
                 $herView.hideshowQQ( "body_69.png", pos )
                 her "....."
-                $herView.showQQ( "body_87.png", pos )
+                $herView.hideshowQQ( "body_87.png", pos )
                 her "45 house points...?"
                 her "This could put \"Gryffindor\" back in the lead..."
                 m "Is that a \"yes\"?"
@@ -561,7 +561,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 m "Just put it in your mouth next time."
                 $herViewHead.showQ( "body_79.png", posHead )
                 her "I... don't think so, sir."
-                her "I really need to go. Can I just get paid now?"
+                her2 "I really need to go. Can I just get paid now?"
                 $herViewHead.hideQ()
                 
                 
@@ -700,7 +700,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                         her "...I would like to get paid now."
                         $herView.hideQQ()
                         $herViewHead.data().addItem( 'sperm_after', CharacterExItem( herViewHead.mMiscFolder, "sperm_00_after.png", G_Z_FACE + 1 ) )
-        #her "Могу я получить свои очки?"
+        #her "Can I get my points?"
 
     elif IsRunNumber(2): # SECOND EVENT <============================================================== EVENT 02
 #    elif request_16_points == 1: # SECOND EVENT <============================================================== EVENT 02
@@ -764,14 +764,14 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
 #        $ new_request_16_03 = True #  Hearts
         
         m "Miss Granger?"
-        $herView.showQQ( "body_01.png", pos )
+        $herView.hideshowQQ( "body_01.png", pos )
         her "Sir?"
         m "You don't mind giving me another handjob, do you?"
         $herView.hideshowQQ( "body_68.png", pos )
         her "As long as I am getting paid..."
         m "Well, come here then. Time to earn those points."
         
-        
+        label new_request_16_jerkonly:
         $herView.hideQ()
         hide screen bld1
         with d3
@@ -1401,7 +1401,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 with fade  
     
     label done_with_handjob:
-                
+
 #    $ gryffindor += current_payout #35 Дважды суммировалось
     hide screen h_c_u
     hide screen g_c_u
@@ -1418,7 +1418,6 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
     hide screen blkfade
     with d3
     
-    $herViewHead.data().delItem( 'sperm')
 
     m "Yes, miss Granger. [current_payout] to \"Gryffindor\"." 
     $ gryffindor +=current_payout
@@ -1427,6 +1426,10 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
     hide screen hermione_01_f #Hermione stands still.
     with d3
     her "Thank you, sir..."
+
+    $herViewHead.data().delItem( 'sperm')
+    if event.Name=="new_request_02": 
+        jump new_request_16_jerkonly_to_02
 
     if whoring <= 14:
         $ whoring +=1
@@ -1548,9 +1551,9 @@ label kiss_suck: #Jumps here after event #03 and if WHORING >= LEVEL 07
     her "At one point I thought I was going to choke..."
     her2 "There was so much of it..."
     $herViewHead.hideQ()
-    her2 "Yes! I know! It's So much easier this way!"
+    m "Well, the deed is done and your form perfectly clean."
     $herView.hideshowQQ( "body_124.png", pos )
-    her "I can just go to classes now as if nothing ever happened."
+    her2 "I can just go to classes now as if nothing ever happened."
     if daytime:
         $herView.hideshowQQ( "body_122.png", pos )
         her "I'd rather just go to class, as if nothing had happened."
