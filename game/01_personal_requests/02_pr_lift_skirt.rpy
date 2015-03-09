@@ -8,20 +8,25 @@ label new_request_02: #SHOW ME YOUR Трусики
         "\"(Yes, let's do it!)\"":
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
     $herView.showQQ( "body_01.png", pos )
     her "So, what will it be sir?"
     m "Nothing drastic, really..."
     m "I just want you to show me your panties."               
-    if request_02 == 0 and whoring <= 5: #First time this event taking place. and LEVEL 02.  
-        $ new_request_02_01 =  True #Hearts.
+
+    if IsFirstRun() and whoring <= 5: #First time this event taking place. and LEVEL 02.  
+#    if request_02 == 0 and whoring <= 5: #First time this event taking place. and LEVEL 02.  
+#        $ new_request_02_01 =  True #Hearts.
+        $SetHearts(1)
+
         $herView.hideshowQQ( "body_14.png", pos )
         her "My... panties...?"
         $herView.hideshowQQ( "body_47.png", pos )
         her  "Professor Dumbledore!"
         m "I know, I know, this a little weird..."
         $herView.hideshowQQ( "body_48.png", pos )
-        her  " {size=+7}Немного !?{/size}"
+        her  " {size=+7}A little !?{/size}"
         her "This is completely inappropriate!"
         m "Listen, we need to go through this phase before we get to the good stuff, alright?"
         $herView.hideshowQQ( "body_31.png", pos )
@@ -34,7 +39,8 @@ label new_request_02: #SHOW ME YOUR Трусики
         $herView.hideshowQQ( "body_47.png", pos )
         her "............."
     else:
-        if request_02 >= 1: #Not the first time
+        if IsNextRun(): #First time this event taking place. and LEVEL 02.  
+#        if request_02 >= 1: #Not the first time
             $herView.hideshowQQ( "body_29.png", pos )
             her "Oh... again?"
             m "Just do it..."
@@ -80,7 +86,9 @@ label new_request_02: #SHOW ME YOUR Трусики
     $ pos = POS_120
     
     if whoring >= 0 and whoring <= 2: #LEVEL 01   <============================= Fist event.
-        $ new_request_02_01 =  True #Hearts.
+#        $ new_request_02_01 =  True #Hearts.
+#        SetHearts(1)
+
         show screen bld1
         with d3
         show screen blktone
@@ -107,7 +115,9 @@ label new_request_02: #SHOW ME YOUR Трусики
                
 
     elif whoring >= 3 and whoring <= 5: #LEVEL 02  <====================================================================== SECOND EVENT!
-        $ new_request_02_02 =  True #Hearts.
+#        $ new_request_02_02 =  True #Hearts.
+        $SetHearts(2)
+
         show screen bld1
         with d3
         show screen blktone
@@ -139,7 +149,9 @@ label new_request_02: #SHOW ME YOUR Трусики
                 
 
     elif whoring >= 6: #LEVEL 04 and up. <====================================================================== FINAL EVENT! (No Трусики).
-        $ new_request_02_03 =  True #Hearts.
+#        $ new_request_02_03 =  True #Hearts.
+        $SetHearts(3)
+
         show screen bld1
         with d3
         show screen blktone
@@ -165,7 +177,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                     "\"Absolutely!\"":
                         m "Absolutely!"
                         $ gryffindor +=10
-                        m "Десять очков \"Гриффиндору\"!" 
+                        m "Ten points to \"Gryffindor\"!" 
                         $herView.hideshowQQ( "body_60.png", pos )
                         her "Thank you, sir!"
                     "\"Absolutely not!\"":
@@ -203,7 +215,8 @@ label new_request_02: #SHOW ME YOUR Трусики
     her "will this be all then?"
     m "Yes, you can go now."
 
-    if request_02 == 0: #First time.
+    if IsFirstRun():
+#    if request_02 == 0: #First time.
         $herView.hideQQ()
         $ pos.xpos = 300
         $herView.showQQ( "body_13.png", pos )
@@ -245,7 +258,7 @@ label new_request_02: #SHOW ME YOUR Трусики
 
     if whoring <= 2:
         $ whoring +=1
-    $ request_02 += 1
+#    $ request_02 += 1
     if daytime:
         $ hermione_takes_classes = True
         jump day_main_menu

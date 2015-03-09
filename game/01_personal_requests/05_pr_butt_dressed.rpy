@@ -8,21 +8,25 @@ label new_request_05:
         "\"(Yes, let's do it!)\"":
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
 
     
     if whoring <=2:
         jump too_much
         
-    if whoring >= 3 and whoring <= 5:
-        $ level = "02"
-        $ new_request_05_01 = True # HEARTS.
-    elif whoring >= 6 and whoring <= 8:
-        $ level = "03"
-        $ new_request_05_02 = True # HEARTS.
-    elif whoring >= 9:
-        $ level = "04"
-        $ new_request_05_03 = True # HEARTS.
+#    if whoring >= 3 and whoring <= 5:
+#        $ level = "02"
+#        $ new_request_05_01 = True # HEARTS.
+#    elif whoring >= 6 and whoring <= 8:
+#        $ level = "03"
+#        $ new_request_05_02 = True # HEARTS.
+#    elif whoring >= 9:
+#        $ level = "04"
+#        $ new_request_05_03 = True # HEARTS.
+
+    $SetHearts(GetStage(whoring, 3, 3, 3))
+
         
         
     if whoring >= 3 and whoring <= 5: # LEVEL 02 # Hermione is hesitant. <=================================================================================== FIRST EVENT.
@@ -30,7 +34,8 @@ label new_request_05:
         hide bld1
         with d3
         m "Come closer, child. Let me molest your butt a little."
-        if request_05_points == 0 and whoring <= 5: #First time
+        if IsFirstRun() and whoring <= 5: #First time
+#        if request_05_points == 0 and whoring <= 5: #First time
             stop music fadeout 5.0
             $her_head_state = 7
             her_head_main "Professor Dumbledore!?"
@@ -96,7 +101,8 @@ label new_request_05:
                         her_head_main "Professor!!?"
                         menu:
                             "\"Fine, fine... I just couldn't resist....\"":
-                                her_25 "......................."
+                                $her_head_state = 25
+                                her_head_main "......................."
                                 pass
                             "-Give her butt another slap-":
                                 $ renpy.play('sounds/slap_02.mp3') #SLAP!
@@ -164,7 +170,7 @@ label new_request_05:
                                                 with Dissolve(.3)
                                                 pause.5
                                                 g4 "Tsk! (You little brat!)"
-                                                $ request_05_points += 1
+#                                                $ request_05_points += 1
                                                 if daytime:
                                                     $ hermione_takes_classes = True
                                                     jump day_main_menu
@@ -205,15 +211,17 @@ label new_request_05:
                                                         $ mad -= 5
                                                         m "Dammit... Now I feel like crap..."
                                                         m "But who could resist slapping that little behind of her's?"
+                                                        #m "Но кто бы смог устоять и не шлепнуть ее великолепную попку?"
                                                     "\"She made me do this, that brat!\"":
+                                                    #"\"Эта девица, все из-за нее!\"":
                                                         $ mad += 9
                                                         m "She made me do this, that brat!"
                                                         m "Acting all wounded now..."
                                                         m "I bet she actually enjoyed the slapping and just won't admit it..."
                                                         #m "Она подтолкнула меня к этому!"
                                                         #m "А теперь строит из себя оскробленную..."
-                                                        #m "Я уверен что ей понравились эти шлепка, она просто не хочет признать этого..."
-                                                $ request_05_points += 1
+                                                        #m "Я уверен что ей понравились эти шлепки, она просто не хочет в этом признаться..."
+#                                                $ request_05_points += 1
                                                 if daytime:
                                                     $ hermione_takes_classes = True
                                                     jump day_main_menu
@@ -232,7 +240,7 @@ label new_request_05:
                 her_head_main "It's just... "
                 her_head_main "I can't believe this is really happening..."
                 her_head_main "This is so... inappropriate..."
-                #m "Расслабься, девочка. It's not like you are enjoying this..."
+                #m "Relax, girl. It's not like you are enjoying this..."
                 m "Relax, girl. It's not like you are enjoying this..."
                 $her_head_state = 19
                 her_head_main "What? Of course not! This is depraved..."
@@ -271,8 +279,8 @@ label new_request_05:
                         her_head_main "(Shall I just be quiet then.....?)"
                 show screen blktone8
                 with d3
-                ">Вы продолжаете играть с ягодицами Гермионы..."
-                ">Вы проводите руками вниз..."
+                ">You continue to play with Hermione's buttocks..."
+                ">You spend your hands down..."
                 $her_head_state = 15
                 her_head_main "................"
                 label connection_of_rapes:
@@ -399,7 +407,7 @@ label new_request_05:
     
         
     elif whoring >= 6: # LEVEL 04 # Hermione is hesitant. <=================================================================================== SECOND EVENT.
-        $ new_request_05_02 = True # HEARTS.
+#        $ new_request_05_02 = True # HEARTS.
         hide screen bld1
         with d3
         m "Come closer, girl. Let me molest your butt a little."
@@ -649,7 +657,7 @@ label ending_of_screams_of_pleasure:
     $ gryffindor +=15
     m "The \"Gryffindors\" get 15 points!"
     
-    $ request_05_points += 1
+#    $ request_05_points += 1
    
    
     $ hermione_chibi_xpos = 400 #Near the desk.
@@ -777,6 +785,7 @@ label screams_of_rapings:
         $her_head_state = 12
         her_head_main "..........................."
         
+
         
     hide screen hermione_01_f #Hermione stands still.
     with Dissolve(.3)

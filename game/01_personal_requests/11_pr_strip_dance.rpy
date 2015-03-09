@@ -14,6 +14,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
             with d3
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
 
     $ current_payout = 35 #Because will have option to pay extra.
@@ -21,7 +22,8 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
     $ herView.data().saveState()
     $ herView.data().addItem( 'sweat', CharacterExItemSweat( herView.mMiscFolder, "sweat.png", G_Z_POSE - 1 ) )
 
-    if request_11_points == 0: #<==============================EVENT 01
+    if IsFirstRun(): 
+#    if request_11_points == 0: #<==============================EVENT 01
         
         m "Miss Granger, I need you to dance for me a little."
         $herView.hideQQ()
@@ -182,8 +184,8 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                 ">Finally the last button is undone and she has no choice but to take the shirt off..."
                 hide screen blktone
                 with d3
-                her_head_main "{size=-5}(Ладно, снимаю...){/size}"
-                her_head_main "{size=-5}(За честь \"Гриффиндора\"!){/size}"
+                her_head_main "{size=-5}(Okay, take off...){/size}"
+                her_head_main "{size=-5}(For honor of \"Gryffindor\"!){/size}"
                 show screen blktone
                 with d3
                 ">Hermione takes off her shirt..."
@@ -287,8 +289,9 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
 
     # SECOND PART #
 
-    if request_11_points == 1: #<====================================================================================================================EVENT 02 
-        $ new_request_11_02 = True # HEARTS
+    if IsRunNumber(2): #<====================================================================================================================EVENT 02 
+#    if request_11_points == 1: #<====================================================================================================================EVENT 02 
+#        $ new_request_11_02 = True # HEARTS
         m "Miss Granger, I need you to dance for me."
         $herView.hideQQ()
         $ pos = POS_140
@@ -430,7 +433,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
         $herView.showQ( "body_66.png", pos )
         her "My shirt?!!"
         $herView.addFaceName( "body_86.png" )
-        her "{size=+9}Мне она не нужна!{/size}"
+        her "{size=+9}I don't need it!{/size}"
         $herView.hideQ()
         pause.1
         show screen blktone8
@@ -670,8 +673,9 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
             
     # THIRD PART #
             
-    if request_11_points >= 2: #<====================================================================================================================EVENT 03
-        $ new_request_11_03 = True # HEARTS
+    if IsRunNumberOrMore(3): #<====================================================================================================================EVENT 03
+#    if request_11_points >= 2: #<====================================================================================================================EVENT 03
+#        $ new_request_11_03 = True # HEARTS
         if snape_invated_to_watch: #Turns TRUE when Hermione is stripping and Snape walks in on you. Allows to invite him to watch her strip next time.
             m "(Hm... Should I invite that Professor Snape guy to watch as well?)"
             menu:
@@ -1076,7 +1080,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                             m "Are they still causing you trouble?"
                             $ s_sprite = "03_hp/10_snape_main/snape_09.png" #SNAPE
                             show screen s_head2                                                          #SNAPE
-                            sna "Да... Даже большей, чем раньше."
+                            sna "Yes... Even more than before."
                             hide screen s_head2
                             sna "Yes... More than ever."
                             m "You seem surprisingly indifferent about that..."
@@ -2256,7 +2260,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                             $herViewHead.showQ( "body_98.png", posHead )
                                             her "You went back on your word, sir!"
                                             $herViewHead.hideQ()
-                                            m "А? О чем ты говоришь?"
+                                            m "Ah? What are you talking about?"
                                             $herViewHead.showQ( "body_113.png", posHead )
                                             her "How could you do this to me, sir?"
                                             $herViewHead.hideQ()
@@ -2289,7 +2293,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                             her "You came all over me..."
                                             her "I am your pupil and..."
                                             $herViewHead.showQ( "body_106.png", posHead )
-                                            her "Вы просто кончили на меня..."
+                                            her "You just cum at me..."
                                             $herViewHead.hideQ()
                                             her "You just came on me..."
                                             $herViewHead.showQ( "body_107.png", posHead )
@@ -2414,7 +2418,6 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                                 "\"You're not getting shit!\"":
                                                     stop music fadeout 1.0
                                                     $herViewHead.showQ( "body_104.png", posHead )
-                                                    
                                                     her "What? Not even my usual pay?"
                                                     $herViewHead.hideQ()
                                                     menu:
@@ -2652,7 +2655,8 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
     if whoring <= 11:
         $ whoring +=1
 
-    $ request_11_points += 1
+#    $ request_11_points += 1
+    $SetHearts(SetStage(event._finishCount,1,1,1))
     
 
 

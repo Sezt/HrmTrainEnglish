@@ -11,74 +11,89 @@ label new_personal_request:
                 label not_now2:
                 ### LEVEL 01 ###
                 menu:
-                    "Favour: \"Talk to me\" {image=heart_00.png}" if not new_request_01_01 and not new_request_01_02 and not new_request_01_03:
-                        jump new_request_01
-                    "Favour: \"Talk to me\" {image=heart_01.png}" if new_request_01_01 and not new_request_01_02 and not new_request_01_03:
-                        jump new_request_01
-                    "Favour: \"Talk to me\" {image=heart_02.png}" if new_request_01_02 and not new_request_01_03:
-                        jump new_request_01
-                    "Favour: \"Talk to me\" {image=heart_03.png}" if new_request_01_03:
+#                    "Favour: \"Talk to me\" {image=heart_00.png}" if not new_request_01_01 and not new_request_01_02 and not new_request_01_03:
+#                        jump new_request_01
+#                    "Favour: \"Talk to me\" {image=heart_01.png}" if new_request_01_01 and not new_request_01_02 and not new_request_01_03:
+#                        jump new_request_01
+#                    "Favour: \"Talk to me\" {image=heart_02.png}" if new_request_01_02 and not new_request_01_03:
+#                        jump new_request_01
+#                    "Favour: \"Talk to me\" {image=heart_03.png}" if new_request_01_03:
+#                        jump new_request_01
+                    "Favour: [this.new_request_01._caption] {image=heart_4[this.new_request_01._heartCount].png}":
                         jump new_request_01
 
-                    "Favour: \"Nice panties\" {image=heart_00.png}" if not new_request_02_01 and not new_request_02_02 and not new_request_02_03: # LEVEL 1
-                        jump new_request_02
-                    "Favour: \"Nice panties\" {image=heart_01.png}" if new_request_02_01 and not new_request_02_02 and not new_request_02_03: # LEVEL 1
-                        jump new_request_02
-                    "Favour: \"Nice panties\" {image=heart_02.png}" if new_request_02_02 and not new_request_02_03: # LEVEL 1
-                        jump new_request_02
-                    "Favour: \"Nice panties\" {image=heart_03.png}" if new_request_02_03: # LEVEL 1
+#                    "Favour: \"Nice panties\" {image=heart_00.png}" if not new_request_02_01 and not new_request_02_02 and not new_request_02_03: # LEVEL 1
+#                        jump new_request_02
+#                    "Favour: \"Nice panties\" {image=heart_01.png}" if new_request_02_01 and not new_request_02_02 and not new_request_02_03: # LEVEL 1
+#                        jump new_request_02
+#                    "Favour: \"Nice panties\" {image=heart_02.png}" if new_request_02_02 and not new_request_02_03: # LEVEL 1
+#                        jump new_request_02
+#                    "Favour: \"Nice panties\" {image=heart_03.png}" if new_request_02_03: # LEVEL 1
+#                        jump new_request_02
+                    "Favour: [this.new_request_02._caption] {image=heart_0[this.new_request_02._heartCount].png}":
                         jump new_request_02
                   
                     ### LEVEL 02 ###
                     "{color=#858585}--A vague idea-{/color}-" if imagination == 1:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Panty thief\" {image=heart_00.png}" if not new_request_03_01 and not new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
+#                    "Favour: \"Panty thief\" {image=heart_00.png}" if not new_request_03_01 and not new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
+#                        jump new_request_03
+#                    "Favour: \"Panty thief\" {image=heart_01.png}" if new_request_03_01 and not new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
+#                        jump new_request_03
+#                    "Favour: \"Panty thief\" {image=heart_02.png}" if new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
+#                        jump new_request_03
+#                    "Favour: \"Panty thief\" {image=heart_03.png}" if new_request_03_03 and daytime and imagination >= 2:
+#                        jump new_request_03
+                    "Favour: [this.new_request_03._caption] {image=heart_0[this.new_request_03._heartCount].png}" if daytime and imagination >= 2:
                         jump new_request_03
-                    "Favour: \"Panty thief\" {image=heart_01.png}" if new_request_03_01 and not new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
-                        jump new_request_03
-                    "Favour: \"Panty thief\" {image=heart_02.png}" if new_request_03_02 and not new_request_03_03 and daytime and imagination >= 2:
-                        jump new_request_03
-                    "Favour: \"Panty thief\" {image=heart_03.png}" if new_request_03_03 and daytime and imagination >= 2:
-                        jump new_request_03
+
+
                     
                     "{color=#858585}--A vague idea-{/color}-" if imagination == 1:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Breast molester\" {image=heart_00.png}" if not new_request_04_01 and not new_request_04_02 and not new_request_04_03 and imagination >= 2: 
-                        jump new_request_04
-                    "Favour: \"Breast molester\" {image=heart_01.png}" if new_request_04_01 and not new_request_04_02 and not new_request_04_03 and imagination >= 2: 
-                        jump new_request_04
-                    "Favour: \"Breast molester\" {image=heart_02.png}" if new_request_04_02 and not new_request_04_03 and imagination >= 2: 
-                        jump new_request_04
-                    "Favour: \"Breast molester\" {image=heart_03.png}" if new_request_04_03 and imagination >= 2: 
+#                    "Favour: \"Breast molester\" {image=heart_00.png}" if not new_request_04_01 and not new_request_04_02 and not new_request_04_03 and imagination >= 2: 
+#                        jump new_request_04
+#                    "Favour: \"Breast molester\" {image=heart_01.png}" if new_request_04_01 and not new_request_04_02 and not new_request_04_03 and imagination >= 2: 
+#                        jump new_request_04
+#                    "Favour: \"Breast molester\" {image=heart_02.png}" if new_request_04_02 and not new_request_04_03 and imagination >= 2: 
+#                        jump new_request_04
+#                    "Favour: \"Breast molester\" {image=heart_03.png}" if new_request_04_03 and imagination >= 2: 
+#                        jump new_request_04
+                    "Favour: [this.new_request_04._caption] {image=heart_0[this.new_request_04._heartCount].png}" if imagination >= 2:
                         jump new_request_04
                         
                     "{color=#858585}--A vague idea-{/color}-" if imagination == 1:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Butt molester\" {image=heart_00.png}" if not new_request_05_01 and not new_request_05_02 and not new_request_05_03 and imagination >= 2:
-                        jump new_request_05
-                    "Favour: \"Butt molester\" {image=heart_01.png}" if new_request_05_01 and not new_request_05_02 and not new_request_05_03 and imagination >= 2: 
-                        jump new_request_05
-                    "Favour: \"Butt molester\" {image=heart_02.png}" if new_request_05_02 and not new_request_05_03 and imagination >= 2: 
-                        jump new_request_05
-                    "Favour: \"Butt molester\" {image=heart_03.png}" if new_request_05_03 and imagination >= 2: 
+#                    "Favour: \"Butt molester\" {image=heart_00.png}" if not new_request_05_01 and not new_request_05_02 and not new_request_05_03 and imagination >= 2:
+#                        jump new_request_05
+#                    "Favour: \"Butt molester\" {image=heart_01.png}" if new_request_05_01 and not new_request_05_02 and not new_request_05_03 and imagination >= 2: 
+#                        jump new_request_05
+#                    "Favour: \"Butt molester\" {image=heart_02.png}" if new_request_05_02 and not new_request_05_03 and imagination >= 2: 
+#                        jump new_request_05
+#                    "Favour: \"Butt molester\" {image=heart_03.png}" if new_request_05_03 and imagination >= 2: 
+#                        jump new_request_05
+                    "Favour: [this.new_request_05._caption] {image=heart_0[this.new_request_05._heartCount].png}" if imagination >= 2:
                         jump new_request_05
                         
                     ### LEVEL 03 ### IMAGINATION == 3
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Show them to me!\" {image=heart_00.png}" if not new_request_08_01 and not new_request_08_02 and not new_request_08_03 and imagination >= 3:
+#                    "Favour: \"Show them to me!\" {image=heart_00.png}" if not new_request_08_01 and not new_request_08_02 and not new_request_08_03 and imagination >= 3:
+#                        jump new_request_08
+#                    "Favour: \"Show them to me!\" {image=heart_01.png}" if new_request_08_01 and not new_request_08_02 and not new_request_08_03 and imagination >= 3: 
+#                        jump new_request_08
+#                    "Favour: \"Show them to me!\" {image=heart_02.png}" if new_request_08_02 and not new_request_08_03 and imagination >= 3: 
+#                        jump new_request_08
+#                    "Favour: \"Show them to me!\" {image=heart_03.png}" if new_request_08_03 and imagination >= 3: 
+#                        jump new_request_08 
+                    "Favour: [this.new_request_08._caption] {image=heart_0[this.new_request_08._heartCount].png}" if imagination >= 3:
                         jump new_request_08
-                    "Favour: \"Show them to me!\" {image=heart_01.png}" if new_request_08_01 and not new_request_08_02 and not new_request_08_03 and imagination >= 3: 
-                        jump new_request_08
-                    "Favour: \"Show them to me!\" {image=heart_02.png}" if new_request_08_02 and not new_request_08_03 and imagination >= 3: 
-                        jump new_request_08
-                    "Favour: \"Show them to me!\" {image=heart_03.png}" if new_request_08_03 and imagination >= 3: 
-                        jump new_request_08 
-                    
+ 
+
 #                    "Favour: \"Show {size=+5}it{/size} to me! (NOT FINISHED YET)":
 #                        jump new_request_09
                     
@@ -86,80 +101,97 @@ label new_personal_request:
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Dance for me!\" {image=heart_00.png}" if not new_request_11_01 and not new_request_11_02 and not new_request_11_03 and imagination >= 3:
+#                    "Favour: \"Dance for me!\" {image=heart_00.png}" if not new_request_11_01 and not new_request_11_02 and not new_request_11_03 and imagination >= 3:
+#                        jump new_request_11
+#                    "Favour: \"Dance for me!\" {image=heart_01.png}" if new_request_11_01 and not new_request_11_02 and not new_request_11_03 and imagination >= 3: 
+#                        jump new_request_11
+#                    "Favour: \"Dance for me!\" {image=heart_02.png}" if new_request_11_02 and not new_request_11_03 and imagination >= 3:
+#                        jump new_request_11
+#                    "Favour: \"Dance for me!\" {image=heart_03.png}" if new_request_11_03 and imagination >= 3: 
+#                        jump new_request_11
+                    "Favour: [this.new_request_11._caption] {image=heart_0[this.new_request_11._heartCount].png}" if imagination >= 3:
                         jump new_request_11
-                    "Favour: \"Dance for me!\" {image=heart_01.png}" if new_request_11_01 and not new_request_11_02 and not new_request_11_03 and imagination >= 3: 
-                        jump new_request_11
-                    "Favour: \"Dance for me!\" {image=heart_02.png}" if new_request_11_02 and not new_request_11_03 and imagination >= 3:
-                        jump new_request_11
-                    "Favour: \"Dance for me!\" {image=heart_03.png}" if new_request_11_03 and imagination >= 3: 
-                        jump new_request_11
+
                     
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 3:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Let me touch them!\" {image=heart_00.png}" if not new_request_12_01 and not new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
+#                    "Favour: \"Let me touch them!\" {image=heart_00.png}" if not new_request_12_01 and not new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
+#                        jump new_request_12
+#                    "Favour: \"Let me touch them!\" {image=heart_01.png}" if new_request_12_01 and not new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
+#                        jump new_request_12
+#                    "Favour: \"Let me touch them!\" {image=heart_02.png}" if new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
+#                        jump new_request_12
+#                    "Favour: \"Let me touch them!\" {image=heart_03.png}" if new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
+#                        jump new_request_12
+                    "Favour: [this.new_request_12._caption] {image=heart_0[this.new_request_12._heartCount].png}" if imagination >= 3:
                         jump new_request_12
-                    "Favour: \"Let me touch them!\" {image=heart_01.png}" if new_request_12_01 and not new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
-                        jump new_request_12
-                    "Favour: \"Let me touch them!\" {image=heart_02.png}" if new_request_12_02 and not new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
-                        jump new_request_12
-                    "Favour: \"Let me touch them!\" {image=heart_03.png}" if new_request_12_03 and daytime and imagination >= 3: # LEVEL 4
-                        jump new_request_12
+
                     
                     ### LEVEL 05 ### IMAGINATION == 4
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 4:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"touch me!\" {image=heart_00.png}" if not new_request_16_01 and not new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
+#                    "Favour: \"touch me!\" {image=heart_00.png}" if not new_request_16_01 and not new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
+#                        jump new_request_16
+#                    "Favour: \"touch me!\" {image=heart_01.png}" if new_request_16_01 and not new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
+#                        jump new_request_16
+#                    "Favour: \"touch me!\" {image=heart_02.png}" if new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
+#                        jump new_request_16
+#                    "Favour: \"touch me!\" {image=heart_03.png}" if new_request_16_03 and imagination >= 4:  # LEVEL 5
+#                        jump new_request_16
+                    "Favour: [this.new_request_16._caption] {image=heart_0[this.new_request_16._heartCount].png}" if imagination >= 4:
                         jump new_request_16
-                    "Favour: \"touch me!\" {image=heart_01.png}" if new_request_16_01 and not new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
-                        jump new_request_16
-                    "Favour: \"touch me!\" {image=heart_02.png}" if new_request_16_02 and not new_request_16_03 and imagination >= 4: # LEVEL 5
-                        jump new_request_16
-                    "Favour: \"touch me!\" {image=heart_03.png}" if new_request_16_03 and imagination >= 4:  # LEVEL 5
-                        jump new_request_16
+
                        
                     ### LEVEL 06 ### IMAGINATION == 4
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 4:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Suck it!\" {image=heart_00.png}" if not new_request_22_01 and not new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
+#                    "Favour: \"Suck it!\" {image=heart_00.png}" if not new_request_22_01 and not new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
+#                        jump new_request_22
+#                    "Favour: \"Suck it!\" {image=heart_01.png}" if new_request_22_01 and not new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
+#                        jump new_request_22
+#                    "Favour: \"Suck it!\" {image=heart_02.png}" if new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
+#                        jump new_request_22
+#                    "Favour: \"Suck it!\" {image=heart_03.png}" if new_request_22_03 and imagination >= 4: # LEVEL 6
+#                        jump new_request_22
+                    "Favour: [this.new_request_22._caption] {image=heart_0[this.new_request_22._heartCount].png}" if imagination >= 4:
                         jump new_request_22
-                    "Favour: \"Suck it!\" {image=heart_01.png}" if new_request_22_01 and not new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
-                        jump new_request_22
-                    "Favour: \"Suck it!\" {image=heart_02.png}" if new_request_22_02 and not new_request_22_03 and imagination >= 4: # LEVEL 6
-                        jump new_request_22
-                    "Favour: \"Suck it!\" {image=heart_03.png}" if new_request_22_03 and imagination >= 4: # LEVEL 6
-                        jump new_request_22
+
                     
                     ### LEVEL 07 ### IMAGINATION == 5
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 5:
                         call vague_idea
                         jump not_now2
-                    "Favour: \"Let's have sex!\" {image=heart_00.png}" if not new_request_29_01 and not new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
-                        jump new_request_29
-                    "Favour: \"Let's have sex!\" {image=heart_01.png}" if new_request_29_01 and not new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
-                        jump new_request_29
-                    "Favour: \"Let's have sex!\" {image=heart_02.png}" if new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
-                        jump new_request_29
-                    "Favour: \"Let's have sex!\" {image=heart_03.png}" if new_request_29_03 and imagination >= 5: # LEVEL 7
+#                    "Favour: \"Let's have sex!\" {image=heart_00.png}" if not new_request_29_01 and not new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
+#                        jump new_request_29
+#                    "Favour: \"Let's have sex!\" {image=heart_01.png}" if new_request_29_01 and not new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
+#                        jump new_request_29
+#                    "Favour: \"Let's have sex!\" {image=heart_02.png}" if new_request_29_02 and not new_request_29_03 and imagination >= 5: # LEVEL 7
+#                        jump new_request_29
+#                    "Favour: \"Let's have sex!\" {image=heart_03.png}" if new_request_29_03 and imagination >= 5: # LEVEL 7
+#                        jump new_request_29
+                    "Favour: [this.new_request_29._caption] {image=heart_0[this.new_request_29._heartCount].png}" if imagination >= 5:
                         jump new_request_29
                         
                     ### LEVEL 08 ###
                     "{color=#858585}--A vague idea-{/color}-" if imagination < 5:
                         call vague_idea
                         jump not_now2
-                    "Favour:  \"Time for anal!\" {image=heart_00.png}" if not new_request_31_01 and not new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
+#                    "Favour:  \"Time for anal!\" {image=heart_00.png}" if not new_request_31_01 and not new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
+#                        jump new_request_31
+#                    "Favour:  \"Time for anal!\" {image=heart_01.png}" if new_request_31_01 and not new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
+#                        jump new_request_31
+#                    "Favour:  \"Time for anal!\" {image=heart_02.png}" if new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
+#                        jump new_request_31
+#                    "Favour:  \"Time for anal!\" {image=heart_03.png}" if new_request_31_03 and imagination >= 5: # LEVEL 8
+#                        jump new_request_31
+                    "Favour: [this.new_request_31._caption] {image=heart_0[this.new_request_31._heartCount].png}" if imagination >= 5:
                         jump new_request_31
-                    "Favour:  \"Time for anal!\" {image=heart_01.png}" if new_request_31_01 and not new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
-                        jump new_request_31
-                    "Favour:  \"Time for anal!\" {image=heart_02.png}" if new_request_31_02 and not new_request_31_03 and imagination >= 5: # LEVEL 8
-                        jump new_request_31
-                    "Favour:  \"Time for anal!\" {image=heart_03.png}" if new_request_31_03 and imagination >= 5: # LEVEL 8
-                        jump new_request_31
+
                             
-                    "-Cancel-":
+                    "- Cancel -":
                         jump new_personal_request
                 
             "{color=#858585}-Public favours-{/color}" if not daytime:
@@ -237,7 +269,7 @@ label new_personal_request:
                             jump new_personal_request
                 
                 
-            "-Never mind-":
+            "- Never mind -":
                 jump day_time_requests
     
         
@@ -349,10 +381,10 @@ label new_request_06:
             
         if request_05_points <= 2:
             $ gryffindor +=15
-            "Gryffindorу +15 points."
+            "Gryffindor gets +15 points."
         else:
             $ gryffindor +=5
-            "Gryffindorу  +5 points."
+            "Gryffindor gets +5 points."
 
         jump day_main_menu
        
@@ -488,7 +520,7 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
         her ".............."
         m "All I want to do is quickly see..."
         her "But why? Why should I do it, sir?"
-        m "Мminute of your time and \"Gryffindor\" receives 25 points..."
+        m "minute of your time and \"Gryffindor\" receives 25 points..."
         m "Very good deal, do not you agree?"
         her "I think..."
     else:
@@ -810,7 +842,7 @@ label new_request_21_complete:
     
     $ request_21 = False 
     $ hermione_sleeping = True
-    her "Oh, okay. I just go back to bed."
+    her "Oh, okay. Then I go to sleep."
     return        
         
         
@@ -951,12 +983,12 @@ label new_request_26_complete:
         her "LVL3"
     elif request_26_points >= 3: #Three stars.
         her "LVL4"
-        her "Это было чудесно!"
+        her "It was wonderful!"
     
     $ request_26_points += 1 
     $ request_26 = False 
     $ hermione_sleeping = True
-    her "oh, okay, then I'll go to bed."
+    her "Oh, okay. Then I go to sleep."
     return
     
 ###################REQUEST_27 (Level 07) (65 pt.) (Blow two classmates). (Available during daytime only).
@@ -1060,12 +1092,12 @@ label new_request_28_complete:
         her "LVL3"
     elif request_28_points >= 3: #Three stars.
         her "LVL4"
-        her "Это было чудесно!"
+        her "It was wonderful!"
     
     $ request_28_points += 1 
     $ request_28 = False 
     $ hermione_sleeping = True
-    her "oh, ладно. Я тогда пойду спать."
+    her "Oh, okay. Then I go to sleep."
     return
     
 

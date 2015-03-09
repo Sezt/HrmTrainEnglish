@@ -1,7 +1,8 @@
 ###################REQUEST_22 (Level 06) (55 pt.) (Blowjob). 
 label new_request_22: #LV.6 (Whoring = 15 - 17)
     $herView.hideQQ()
-    if request_22_points == 0:
+    if IsFirstRun():
+#    if request_22_points == 0:
         m "{size=-4}(Ask a girl to give me a Blowjob?){/size}"
     else:
         m "{size=-4}(Ask a girl to give me another Blowjob?){/size}"
@@ -12,13 +13,15 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
             with d3
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
             
  
     $ pos = POS_140
     $ herView.data().saveState()
 
-    if request_22_points == 0: # FIRST EVENT <============================================================== EVENT 01
+    if IsFirstRun(): # FIRST EVENT <============================================================== EVENT 01
+#    if request_22_points == 0: # FIRST EVENT <============================================================== EVENT 01
         m "Miss Granger?"
         $herView.hideshowQQ( "body_01.png", pos )
         her "Yes, professor?"
@@ -544,7 +547,8 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
 
         
         
-    elif request_22_points == 1: #  <============================================================== EVENT 02
+    elif IsRunNumber(2): #  <============================================================== EVENT 02
+#    elif request_22_points == 1: #  <============================================================== EVENT 02
         m "Miss Granger?"
         $herView.hideshowQQ( "body_01.png", pos )
         her "Sir?"
@@ -561,22 +565,18 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
             m "???"
             "\"Fine. No points to you then! Leave!\"":
                 play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-                $herView.hideQQ()
-                $herView.showQQ( "body_24.png", pos )
+                $herView.hideshowQQ( "body_24.png", pos )
                 her "Sir, calm down, please."
                 m "You are dismissed, miss Granger."
-                $herView.hideQQ()
-                $herView.showQQ( "body_24.png", pos )
+                $herView.hideshowQQ( "body_24.png", pos )
                 her "Sir, please, I didn't mean any of the things I said."
                 m "What?"
             "\"Ehm... I am sorry?\"":
                 stop music fadeout 1.0
-                $herView.hideQQ()
-                $herView.showQQ( "body_06.png", pos )
+                $herView.hideshowQQ( "body_06.png", pos )
                 her "*Giggle*"
                 m "Huh?"
-                $herView.hideQQ()
-                $herView.showQQ( "body_24.png", pos )
+                $herView.hideshowQQ( "body_24.png", pos )
                 play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                 her "I got you... sir."
                 m "What?"
@@ -595,7 +595,9 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
 
         jump blowjob_jumping
   
-    elif request_22_points >= 2: # <============================================================== EVENT 03
+  
+    elif IsRunNumberOrMore(3): # <============================================================== EVENT 03
+#    elif request_22_points >= 2: # <============================================================== EVENT 03
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
         m "Suck my dick, girl."
         $herView.hideshowQQ( "body_45.png", pos )
@@ -648,7 +650,7 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
         sna "Albus? Are you there? I need to talk to you."
         $herViewHead.showQ( "body_117.png", posHead )
         her "(It's professor Snape!)"
-        her "(Sir, please, send him away, I beg you!)"
+        her2 "(Sir, please, send him away, I beg you!)"
         $herViewHead.hideQ()
         menu:
             m "..."
@@ -850,7 +852,7 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
                         $herViewHead.hideQ()
                         m "Why do you ask?"
                         $herViewHead.showQ( "body_121.png", posHead )
-                        her "Well, I am trying to watch my calorie-intake..."
+                        her2 "Well, I am trying to watch my calorie-intake..."
                         her2 "I just wonder how much calories your load contains, sir."
                         her2 "Maybe I should skip my next meal..."
                         $herViewHead.hideQ()
@@ -977,7 +979,7 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
                 pause .1
                 hide screen white
                 with hpunch
-                g4 "{size=+7}ARGH!{/size}"
+                her "{size=+7}Gulp!!{/size}"
                 g4 "Eat my cum, slut!"
                 #Cumming.
                 her "*Gulp!-Gulp!-Gulp!*"
@@ -1008,10 +1010,10 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
                 $herViewHead.showQ( "body_115.png", posHead )
                 her "Gua-ha..."
                 $herViewHead.hideQ()
-                m "Ты в порядке?"
+                m "Are you okay?"
                 $herViewHead.showQ( "body_123.png", posHead )
                 play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-                m "You alright?"
+                her "Yes, Professor..."
                 $herViewHead.hideQ()
                 m "Going to skip your next meal?"
                 $herViewHead.showQ( "body_123.png", posHead )
@@ -1146,14 +1148,15 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
 
     
     
-    if request_22_points == 0:
-        $ new_request_22_01 = True #  HEARTS
-    if request_22_points == 1:
-        $ new_request_22_02 = True #  HEARTS
-    if request_22_points >= 2:
-        $ new_request_22_03 = True #  HEARTS
+#    if request_22_points == 0:
+#        $ new_request_22_01 = True #  HEARTS
+#    if request_22_points == 1:
+#        $ new_request_22_02 = True #  HEARTS
+#    if request_22_points >= 2:
+#        $ new_request_22_03 = True #  HEARTS
 
-    $ request_22_points += 1
+#    $ request_22_points += 1
+    $SetHearts(SetStage(event._finishCount,1,1,1))
 
     hide screen bld1
     $herView.hideQ()

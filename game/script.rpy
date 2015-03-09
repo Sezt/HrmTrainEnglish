@@ -14,6 +14,11 @@ init:
         this=This()
         global event
 
+#    python:
+#        global debug
+#    $debug=Debug()
+#    $debug.SaveHeader()
+
 
 
 # Описание сценария от начала до открытия покупки сексуальных услуг
@@ -37,21 +42,30 @@ init:
         this.Where({"NIGHT"})   .AddStep("event_15:her_wants_buy",   ready = lambda e: e.prev.IsAgo(7))
 
 
+        li={"01":"\"Talk to me\"", "02": "\"Nice panties\"", "04":"\"Breast molester\"", "05":"Butt molester", "08":"\"Show them to me!\"", 
+            "11":"\"Dance for me!\"", "12":"\"Let me touch them!\"", "16":"\"touch me!\"", "22":"\"Suck it!\"", "29":"\"Let's have sex!\"", "31":"\"Time for anal!\""}
+        for s in li:
+            this.AddEvent("new_request_"+s+"::"+li[s], points={"private"}, defVals={"heartCount": 0}) 
+
+#Where({"hearts"},s)
 
 # Отчеты Гермионы о публичных ивентах (за исключением 30_a, он - днем). Публичные ивенты состоят из 2-х частей. Днем - задание (обычный вызов из пункта меню) и отчет вечером 
 # Можно избавиться и от десятка переменных первоначальной версии, а прогресс хранить в специальном поле объекта Event, но это приведет к довольно серьезной правке кода, что чревато ошибками. 
 # Так что только убираем флажки можно/нельзя выполнять, а прогресс пусть остается во внешних переменных, как был
         tu=["02_b", "02_c", "03", "10", "15", "20", "23", "24", "30"]
         for s in tu:
-            fn=lambda e, subKey, oldVal, newVal: Execute(e,"one_out_of_three=RandFromSet(_e._availChoices)", subKey=="startCount") 
-            if s=="30":
-                fn=lambda e, subKey, oldVal, newVal: Execute(e,"one_out_of_three=RandFromSet(_e._availChoices,{1})", subKey=="startCount")   #GetValue('availChoices')
-
             s="new_request_"+s
-            this.AddEvent(s) 
+            # 3-й ивент добавляем здесь, он должен по порядку идти перед завершающим
+            if s=="new_request_03": 
+                this.AddEvent(s+"::\"Вор трусиков\"", points={"private"}, defVals={"heartCount": 0}, 
+                OnChange=lambda e, subKey, oldVal, newVal: OnValueChange(e, subKey, oldVal, newVal))
+            else:
+                this.AddEvent(s, points={"public"}) 
             s+="_complete"
-            this.Where({"NIGHT"}, s).AddStep(s,  done = lambda e: e._finishCount==e.prevInList._finishCount, defVals={"availChoices":{1,2,3}},
-                OnChange=fn  ) # После срабатывания предыдущего это условие done нарушается и ивент готов к запуску. Нет ограничений по кол-ву запусков
+            #Поменял условие e._finishCount==e.prevInList._finishCount на e._finish2==e.prevInList._finish2 
+            #Почему-то раньше сбивался счетчик и завершение ивента начинало вызваться каждую ночь. В новой логике, сбитый счетчик к таким последствиям не приведет
+            this.Where({"NIGHT"}, s).AddStep(s,  done = lambda e: e._finish2==e.prevInList._finish2, defVals={"availChoices":{1,2,3}},
+                OnChange=lambda e, subKey, oldVal, newVal: OnValueChange(e, subKey, oldVal, newVal)  ) # После срабатывания предыдущего это условие done нарушается и ивент готов к запуску. Нет ограничений по кол-ву запусков
 
 
 # Следующее событие (первый раз трахнуться с одноклассниками) НЕ помещено в главный сценарий. 
@@ -98,7 +112,6 @@ init:
                 "a great chance to read an extra Chapter, while reading."),
             ("book_10::\"Speedreading  for experts\"",    150, "03_hp/18_store/08.png", "This book contains several of the expert techniques that will help you improve the skill of speed reading.",
                 "a great chance to read an extra Chapter, while reading."),
-
             ("book_06::\"Game of Chairs\"",                 100, "03_hp/18_store/02.png", "The epic story of betrayal, murder and rape, and then several more murders, a little more betrayal and even more rape.",
                 "My imagination has improved.\nBut more I'm not going to read this crap!"),
             ("book_07::\"My dear waifu\"",           300, "03_hp/18_store/03.png", "Relive the glory days at your school. Your sister Shi, the teacher, Miss Stevens or the mysterious girl from the library? Who will be your final \"waifu\"?",
@@ -4714,7 +4727,7 @@ init-2:
     $ fem = Character('female student', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ mal = Character('student # 1', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ mal2 = Character('student # 2', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ ann = Character('Диктор', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ ann = Character('narrator', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ sly1 = Character('student of Slytherin', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ sly2 = Character('Another student Slytherine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ aa = Character('Akabur', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
@@ -4957,53 +4970,53 @@ label start:
 
 ### HEARTS ###
 
-    $  new_request_01_01 = False # Talk to me.
-    $  new_request_01_02 = False
-    $  new_request_01_03 = False
+#    $  new_request_01_01 = False # Talk to me.
+#    $  new_request_01_02 = False
+#    $  new_request_01_03 = False
     
-    $ new_request_02_01 = False #SHOW ME YOUR PANTIES
-    $ new_request_02_02 = False #SHOW ME YOUR PANTIES
-    $ new_request_02_03 = False #SHOW ME YOUR PANTIES
+#    $ new_request_02_01 = False #SHOW ME YOUR PANTIES
+#    $ new_request_02_02 = False #SHOW ME YOUR PANTIES
+#    $ new_request_02_03 = False #SHOW ME YOUR PANTIES
     
-    $ new_request_03_01 = False # "Give me your panties" 
-    $ new_request_03_02 = False # "Give me your panties" 
-    $ new_request_03_03 = False # "Give me your panties" 
+#    $ new_request_03_01 = False # "Give me your panties" 
+#    $ new_request_03_02 = False # "Give me your panties" 
+#    $ new_request_03_03 = False # "Give me your panties" 
     
-    $ new_request_04_01 = False # (Touch tits's through fabric.)
-    $ new_request_04_02 = False # (Touch tits's through fabric.)
-    $ new_request_04_03 = False # (Touch tits's through fabric.)
+#    $ new_request_04_01 = False # (Touch tits's through fabric.)
+#    $ new_request_04_02 = False # (Touch tits's through fabric.)
+#    $ new_request_04_03 = False # (Touch tits's through fabric.)
     
-    $ new_request_05_01 = False # (BUTT MOLESTER).
-    $ new_request_05_02 = False # (BUTT MOLESTER).
-    $ new_request_05_03 = False # (BUTT MOLESTER).
+#    $ new_request_05_01 = False # (BUTT MOLESTER).
+#    $ new_request_05_02 = False # (BUTT MOLESTER).
+#    $ new_request_05_03 = False # (BUTT MOLESTER).
     
-    $ new_request_08_01 = False # (Show me tits).
-    $ new_request_08_02 = False # (Show me tits).
-    $ new_request_08_03 = False # (Show me tits).
+#    $ new_request_08_01 = False # (Show me tits).
+#    $ new_request_08_02 = False # (Show me tits).
+#    $ new_request_08_03 = False # (Show me tits).
 
-    $ new_request_11_01 = False # (Dance for me.)
-    $ new_request_11_02 = False # (Dance for me.)
-    $ new_request_11_03 = False # (Dance for me.)
+#    $ new_request_11_01 = False # (Dance for me.)
+#    $ new_request_11_02 = False # (Dance for me.)
+#    $ new_request_11_03 = False # (Dance for me.)
     
-    $ new_request_12_01 = False # (Play with her tits.)
-    $ new_request_12_02 = False # (Play with her tits.)
-    $ new_request_12_03 = False # (Play with her tits.)
+#    $ new_request_12_01 = False # (Play with her tits.)
+#    $ new_request_12_02 = False # (Play with her tits.)
+#    $ new_request_12_03 = False # (Play with her tits.)
     
-    $ new_request_16_01 = False #  (HANDJOB)
-    $ new_request_16_02 = False #  (HANDJOB)
-    $ new_request_16_03 = False #  (HANDJOB)
+#    $ new_request_16_01 = False #  (HANDJOB)
+#    $ new_request_16_02 = False #  (HANDJOB)
+#    $ new_request_16_03 = False #  (HANDJOB)
     
-    $ new_request_22_01 = False #  (BLOWJOB)
-    $ new_request_22_02 = False #  (BLOWJOB)
-    $ new_request_22_03 = False #  (BLOWJOB)
+#    $ new_request_22_01 = False #  (BLOWJOB)
+#    $ new_request_22_02 = False #  (BLOWJOB)
+#    $ new_request_22_03 = False #  (BLOWJOB)
     
-    $ new_request_29_01 = False #  (SEX)
-    $ new_request_29_02 = False #  (SEX)
-    $ new_request_29_03 = False #  (SEX)
+#    $ new_request_29_01 = False #  (SEX)
+#    $ new_request_29_02 = False #  (SEX)
+#    $ new_request_29_03 = False #  (SEX)
     
-    $ new_request_31_01 = False #  (ANAL)
-    $ new_request_31_02 = False #  (ANAL)
-    $ new_request_31_03 = False #  (ANAL)
+#    $ new_request_31_01 = False #  (ANAL)
+#    $ new_request_31_02 = False #  (ANAL)
+#    $ new_request_31_03 = False #  (ANAL)
     
 
 ### MISC FLAGS ###

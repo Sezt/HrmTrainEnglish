@@ -14,6 +14,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
             with d3
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
             
     
@@ -21,7 +22,8 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
     $ posHead = gMakePos( 390, 340 )
     $herView.data().saveState()
 
-    if request_29_points == 0: # FIRST EVENT <============================================================== EVENT 01
+    if IsFirstRun(): # FIRST EVENT <============================================================== EVENT 01
+#    if request_29_points == 0: # FIRST EVENT <============================================================== EVENT 01
         m "Miss Granger?"
         $herView.hideshowQQ( "body_01.png", pos )
         her "Sir?"
@@ -154,7 +156,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
                 $herViewHead.hideQ()
                 m "Stubborn girl..."
                 $herViewHead.showQ( "body_131.png", posHead )
-                her "Ааа...{image=textheart.png}" 
+                her "Аааh...{image=textheart.png}" 
                 $herViewHead.hideQ()
             "\"So... What's new in your life?\"":
                 $herViewHead.showQ( "body_31.png", posHead )
@@ -168,7 +170,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
                 $herViewHead.showQ( "body_34.png", posHead )
                 her "My parents?"
                 $herViewHead.showQ( "body_131.png", posHead )
-                her "Professor, please, I cannot talk..."
+                her2 "Professor, please, I cannot talk..."
                 $herViewHead.hideQ()
                 m "Why not? Enjoying this too much?"
                 $herViewHead.showQ( "body_131.png", posHead )
@@ -314,7 +316,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
         her "No...{image=textheart.png} ah...{image=textheart.png}"
         her "I think I will...{image=textheart.png} pass out...{image=textheart.png}"
         $herViewHead.hideQ()
-        g4 "ОООО ДА! ШЛЮХА!"
+        g4 "OOOOH YES! WHORE!"
         menu:
             "-Cum all over Hermione-":
                 with hpunch
@@ -382,7 +384,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
                 m "Good."
                 m "Did you enjoy getting fucked by your professor?"
                 $herViewHead.showQ( "body_136.png", posHead )
-                her "Sir, I am only doing this for my house."
+                her2 "Sir, I am only doing this for my house."
                 $herViewHead.hideQ()
                 m "Seriously? Still?"
                 $herViewHead.showQ( "body_131.png", posHead )
@@ -462,7 +464,8 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
                 her "Can I please just get paid now...?"
                 $herViewHead.hideQ()
 
-    elif request_29_points == 1: # SECOND EVENT <============================================================== EVENT 02
+    elif IsRunNumber(2): # SECOND EVENT <============================================================== EVENT 02
+#    elif request_29_points == 1: # SECOND EVENT <============================================================== EVENT 02
         m "Miss Granger, are you keeping your pussy wet and ready for me?"
         $herView.hideshowQQ( "body_30.png", pos )
         her "Professor!"
@@ -474,7 +477,8 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
         $herView.hideQ()
         jump your_ass
 
-    elif request_29_points >= 2: # THIRD EVENT <============================================================== EVENT 03
+    elif IsRunNumberOrMore(3): # THIRD EVENT <============================================================== EVENT 03
+#    elif request_29_points >= 2: # THIRD EVENT <============================================================== EVENT 03
         m "Miss Granger..."
         m "Last night I had a dream..."
         g9 "You were lying on my desk and I was fucking your tight pussy like a madman..."
@@ -646,7 +650,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
                 $herViewHead.showQ( "body_118.png", posHead )
                 her "......................."
                 her "{size=-5}I am a whore...{/size}"
-                her "{size=-5}I am a whore... ah...{\size}"
+                her "{size=-5}I am a whore... ah...{/size}"
                 $herViewHead.hideQ()
         
         m "Yes! That's exactly what you are!"
@@ -949,16 +953,18 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
 
 
 
-    if request_29_points == 0:
-        $ new_request_29_01 = True # HEARTS
-    if request_29_points == 1:
-        $ new_request_29_02 = True # HEARTS
-    if request_29_points >= 2:
-        $ new_request_29_03 = True # HEARTS
+#    if request_29_points == 0:
+#        $ new_request_29_01 = True # HEARTS
+#    if request_29_points == 1:
+#        $ new_request_29_02 = True # HEARTS
+#    if request_29_points >= 2:
+#        $ new_request_29_03 = True # HEARTS
+    
 
 
+#    $ request_29_points += 1
+    $SetHearts(SetStage(event._finishCount,1,1,1))
 
-    $ request_29_points += 1
 
     hide screen bld1
     $herView.hideQ()

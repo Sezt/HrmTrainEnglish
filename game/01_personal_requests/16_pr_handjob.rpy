@@ -3,7 +3,8 @@
 ###################REQUEST_16 (Level 05) (HANDJOB) (Day/Night) #####################################################
 label new_request_16: #LV.5 (Whoring = 12 - 14)
     $herView.hideQQ()
-    if request_16_points == 0:
+    if IsFirstRun():
+#    if request_16_points == 0:
         m "{size=-4}(Should I ask her for a handjob?){/size}"
     else:
         m "{size=-4}(Should I ask the girl to give me another handjob?){/size}"
@@ -14,6 +15,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
             with d3
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
             
     
@@ -21,79 +23,65 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
     $herView.data().saveState()
 
     $ current_payout = 45 #Used when haggling about price of th favor.  
-    if request_16_points == 0: # FIRST EVENT <============================================================== EVENT 01
+#    if request_16_points == 0: # FIRST EVENT <============================================================== EVENT 01
+    if IsFirstRun(): # FIRST EVENT <============================================================== EVENT 01
         m "Miss Granger."
-        $herView.hideQQ()
-        $herView.showQQ( "body_01.png", pos )
+        $herView.hideshowQQ( "body_01.png", pos )
         her "Yes, professor?"
         m "Do you know what a \"handjob\" is?"
         if whoring <=11:
             jump too_much
-        $herView.hideQQ()
-        $herView.showQQ( "body_79.png", pos )
+        $herView.hideshowQQ( "body_79.png", pos )
         her "Why?"
         m "I feel like getting one..."
-        $herView.hideQQ()
-        $herView.showQQ( "body_47.png", pos )
+        $herView.hideshowQQ( "body_47.png", pos )
         her "Professor!"
         m "Just another favour. No big deal, right?"
-        $herView.hideQQ()
-        $herView.showQQ( "body_66.png", pos )
+        $herView.hideshowQQ( "body_66.png", pos )
         her "......"
-        $herView.hideQQ()
-        $herView.showQQ( "body_34.png", pos )
+        $herView.hideshowQQ( "body_34.png", pos )
         her "{size=-7}I want 100 house points for this...{/size}"
         m "Huh? What was that?"
-        $herView.hideQQ()
-        $herView.showQQ( "body_32.png", pos )
+        $herView.hideshowQQ( "body_32.png", pos )
         her "I want 100 house points for this!!!"
         m "100 house points, huh?"
         m "And you will stroke my cock and everything?"
-        $herView.hideQQ()
-        $herView.showQQ( "body_66.png", pos )
+        $herView.hideshowQQ( "body_66.png", pos )
         her "{size=-7}Yes...{/size}"
         m "Sorry, I couldn't hear you..."
-        $herView.hideQQ()
-        $herView.showQQ( "body_32.png", pos )
+        $herView.hideshowQQ( "body_32.png", pos )
         her "Yes, I said yes! I will stroke your cock, sir!"
         label back_to_handjob_choices:
         menu:
             m "..."
             "\"You will get 15 house points.\"":
                 $ mad +=7
-                $herView.hideQQ()
-                $herView.showQQ( "body_69.png", pos )
+                $herView.hideshowQQ( "body_69.png", pos )
                 her "For 15 house points I suppose I could let you molest me a little, but that is all you'll be getting, sir."
                 her "I will not stoop as low as to sell handjobs for 15 house points."
                 her "That is just insulting, sir."
                 jump back_to_handjob_choices
-            "\"you will get 45 house points.\"":
-                $herView.hideQQ()
-                $herView.showQQ( "body_69.png", pos )
+            "\"You will get 45 house points.\"":
+                $herView.hideshowQQ( "body_69.png", pos )
                 her "....."
-                $herView.hideQQ()
                 $herView.showQQ( "body_87.png", pos )
                 her "45 house points...?"
                 her "This could put \"Gryffindor\" back in the lead..."
                 m "Is that a \"yes\"?"
-                $herView.hideQQ()
-                $herView.showQQ( "body_79.png", pos )
+                $herView.hideshowQQ( "body_79.png", pos )
                 her "Yes, it is a yes, sir."
                 m "Great!"
             "\"you will get 100 house points.\"":
                 play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                 $ current_payout = 100 #Used when haggling about price of th favor.
                 $ mad = 0
-                $herView.hideQQ()
-                $herView.showQQ( "body_72.png", pos )
+                $herView.hideshowQQ( "body_72.png", pos )
                 her "100 house points?!"
                 her "This will definitely put \"Gryffindor\" in the lead!"
                 m "Is that a \"yes\" then?"
-                $herView.hideQQ()
-                $herView.showQQ( "body_75.png", pos )
+                $herView.hideshowQQ( "body_75.png", pos )
                 her "Of course!"
-                $herView.hideQQ()
-                $herView.showQQ( "body_80.png", pos )
+                $herView.hideshowQQ( "body_80.png", pos )
                 her "If it will bring \"Gryffindor\" 100 house points, I don't mind touching your... thing a little."
         # GENIE STANDS WITH HIS COCK OUT
        
@@ -153,7 +141,8 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
         show screen bld1
         with d3
         g9 "Nice..."
-        if request_16_points == 0:
+#        if request_16_points == 0:
+        if IsFirstRun():
             $herViewHead.showQ( "body_48.png", posHead )
             her "!!!"
             her "Are you about to finish, sir?!"
@@ -713,42 +702,36 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                         $herViewHead.data().addItem( 'sperm_after', CharacterExItem( herViewHead.mMiscFolder, "sperm_00_after.png", G_Z_FACE + 1 ) )
         #her "Могу я получить свои очки?"
 
-    elif request_16_points == 1: # SECOND EVENT <============================================================== EVENT 02
+    elif IsRunNumber(2): # SECOND EVENT <============================================================== EVENT 02
+#    elif request_16_points == 1: # SECOND EVENT <============================================================== EVENT 02
         m "Miss Granger?"
         $herView.hideQQ()
         $ pos = POS_140
         $herView.showQQ( "body_01.png", pos )
         her "Yes, sir?"
         m "Do you know what a \"handjob\" is?"
-        $herView.hideQQ()
-        $herView.showQQ( "body_66.png", pos )
+        $herView.hideshowQQ( "body_66.png", pos )
         her "You have asked me that already, sir."
         m "Ah, that's right."
         m "Well, I want you to play with my cock again."
-        $herView.hideQQ()
-        $herView.showQQ( "body_120.png", pos )
+        $herView.hideshowQQ( "body_120.png", pos )
         her "Sir, you are being vulgar again..."
         m "Fine, fine."
         m "Miss Granger, I would like to buy another favour from you today."
-        $herView.hideQQ()
-        $herView.showQQ( "body_69.png", pos )
+        $herView.hideshowQQ( "body_69.png", pos )
         her "Of course, sir."
         g9 "The favour being you playing with my cock!"
-        $herView.hideQQ()
-        $herView.showQQ( "body_66.png", pos )
+        $herView.hideshowQQ( "body_66.png", pos )
         her ".............."
         m "Oh, come on. For the honour of the \"Gryffindors\"?"
-        $herView.hideQQ()
-        $herView.showQQ( "body_47.png", pos )
+        $herView.hideshowQQ( "body_47.png", pos )
         her "............."
         g9 "Play with my cock for the honour of the \"Gryffindors\", girl!"
-        $herView.hideQQ()
-        $herView.showQQ( "body_86.png", pos )
+        $herView.hideshowQQ( "body_86.png", pos )
         her "Stop saying that, sir..."
         #Genie with his cock out
         m "Come on girl, it's not like I'm asking you to do this for free."
-        $herView.hideQQ()
-        $herView.showQQ( "body_69.png", pos )
+        $herView.hideshowQQ( "body_69.png", pos )
         her "......."
         stop music fadeout 4.0
         
@@ -776,17 +759,15 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
         jump event_01_round_02
 
 
-    elif request_16_points >= 2: # THIRD EVENT <========================================================================================================= EVENT 03
-
-        $ new_request_16_03 = True #  Hearts
+    elif IsRunNumberOrMore(3): # THIRD EVENT <========================================================================================================= EVENT 03
+#    elif request_16_points >= 2: # THIRD EVENT <========================================================================================================= EVENT 03
+#        $ new_request_16_03 = True #  Hearts
         
         m "Miss Granger?"
-        $herView.hideQQ()
         $herView.showQQ( "body_01.png", pos )
         her "Sir?"
         m "You don't mind giving me another handjob, do you?"
-        $herView.hideQQ()
-        $herView.showQQ( "body_68.png", pos )
+        $herView.hideshowQQ( "body_68.png", pos )
         her "As long as I am getting paid..."
         m "Well, come here then. Time to earn those points."
         
@@ -1128,9 +1109,9 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 $herViewHead.showQ( "body_08.png", posHead )
                 her "Sometimes I get lonely and let my dog mount me."
                 $herViewHead.hideQ()
-                m "Звучит не очень..."
-                $herViewHead.showQ( "body_07.png", posHead )
                 m "That sounded so fake..."
+                $herViewHead.showQ( "body_07.png", posHead )
+                m "Because we have not even dogs!"
                 $herViewHead.hideQ()
                 m "Fine, whatever, let's just move on then..."
             "{size=-4}\"-Manual user input-\"{/size}":
@@ -1398,30 +1379,23 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 her "Professor! What have you done?"
                 play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                 m "What?"
-                $herView.hideQQ()
-                $herView.showQQ( "body_32.png", pos )
+                $herView.hideshowQQ( "body_32.png", pos )
                 her "You came all over me sir..."
-                $herView.hideQQ()
-                $herView.showQQ( "body_118.png", pos )
+                $herView.hideshowQQ( "body_118.png", pos )
                 her "What a mess..."
-                $herView.hideQQ()
-                $herView.showQQ( "body_120.png", pos )
+                $herView.hideshowQQ( "body_120.png", pos )
                 her2 "Professor, you should have warned me."
                 m "It's your fault, girl!"
-                $herView.hideQQ()
-                $herView.showQQ( "body_117.png", pos )
+                $herView.hideshowQQ( "body_117.png", pos )
                 her2 "My fault?"
                 m "Yes! You got me going too well..."
                 m "I forgot about everything else..."      
-                $herView.hideQQ()
-                $herView.showQQ( "body_122.png", pos )
+                $herView.hideshowQQ( "body_122.png", pos )
                 her2 "Oh..."
                 her2 "Well, what's done is done..."
-                $herView.hideQQ()
-                $herView.showQQ( "body_123.png", pos )
+                $herView.hideshowQQ( "body_123.png", pos )
                 her "I will just wipe it off and hope that nobody will notice..."
-                $herView.hideQQ()
-                $herView.showQQ( "body_122.png", pos )
+                $herView.hideshowQQ( "body_122.png", pos )
                 her2 "Can I get my payment now?"
                 $herView.hideQ()
                 with fade  
@@ -1459,15 +1433,20 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
 
     
     
-    if whoring >= 12 and whoring <= 14:
-        $ level = "05"
-        $ new_request_16_01 = True #  Hearts
-    if whoring >= 15 and whoring <= 17:
-        $ level = "06"
-        $ new_request_16_02 = True #  Hearts
+#    if whoring >= 12 and whoring <= 14:
+#        $ level = "05"
+#        $ new_request_16_01 = True #  Hearts
+#    if whoring >= 15 and whoring <= 17:
+#        $ level = "06"
+#        $ new_request_16_02 = True #  Hearts
     
+    if IsRunNumberOrMore(3): 
+        $SetHearts(3)
+    else:
+        $SetHearts(SetStage(whoring,12,3,2))
 
-    $ request_16_points += 1
+
+#    $ request_16_points += 1
 
     hide screen bld1
     $herView.hideQ()
@@ -1573,12 +1552,10 @@ label kiss_suck: #Jumps here after event #03 and if WHORING >= LEVEL 07
     $herView.hideshowQQ( "body_124.png", pos )
     her "I can just go to classes now as if nothing ever happened."
     if daytime:
-        $herView.hideQQ()
-        $herView.showQQ( "body_122.png", pos )
-        her "Я лучше просто пойду в класс, как будто бы ничего и не было."
+        $herView.hideshowQQ( "body_122.png", pos )
+        her "I'd rather just go to class, as if nothing had happened."
     else:
-        $herView.hideQQ()
-        $herView.showQQ( "body_124.png", pos )
+        $herView.hideshowQQ( "body_124.png", pos )
         her "I can just go and spend some time with the guys in the common room now and nobody will know..."
     $herViewHead.hideQ()
     m "Yes... With your belly full of semen..."

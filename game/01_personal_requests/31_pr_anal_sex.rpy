@@ -12,13 +12,15 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
             with d3
             pass
         "\"(Not right now.)\"":
+            $event.NotFinished()
             jump new_personal_request
  
     $ pos = POS_140
     $ posHead = gMakePos( 390, 340 )
     $ herView.data().saveState()
  
-    if request_31_points == 0: # FIRST EVENT <============================================================== EVENT 01
+    if IsFirstRun(): # FIRST EVENT <============================================================== EVENT 01
+#    if request_31_points == 0: # FIRST EVENT <============================================================== EVENT 01
         m "Miss Granger..."
         $herView.hideshowQQ( "body_17.png", pos )
         her "Sir..?"
@@ -79,7 +81,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 $herViewHead.showQ( "body_32.png", posHead )
                 her "Eeeeeew!"
                 $herViewHead.showQ( "body_31.png", posHead )
-                her "No, sir, wait! Maybe if I just relax--"
+                her2 "No, sir, wait! Maybe if I just relax--"
                 $herViewHead.hideQ()
                 m "No need, here I come!"
                 with hpunch
@@ -485,7 +487,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 $herViewHead.showQ( "body_145.png", posHead )
                 her "*SOB!* I HATE YOU..."
                 $herViewHead.showQ( "body_148.png", posHead )
-                her "{size=+5}I HATE YOU AND YOUR NASTY OLD COCK?{/size}"
+                her2 "{size=+5}I HATE YOU AND YOUR NASTY OLD COCK?{/size}"
                 her "{size=+5}I HATE YOU! YOU HEAR ME?!{/size}"
                 $herViewHead.hideQ()
                 g4 "Agh...Shut it, whore!"
@@ -627,7 +629,8 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 $herViewHead.hideQ()
 
         
-    elif request_31_points == 1: # FIRST EVENT <============================================================== EVENT 02
+    elif IsRunNumber(2): # FIRST EVENT <============================================================== EVENT 02
+#    elif request_31_points == 1: # FIRST EVENT <============================================================== EVENT 02
         m "Girl?"
         $herView.hideshowQQ( "body_15.png", pos )
         her "Professor?"
@@ -652,7 +655,8 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
         
         
         
-    elif request_31_points >= 2: # FIRST EVENT <============================================================== EVENT 03
+    elif IsRunNumberOrMore(3): # FIRST EVENT <============================================================== EVENT 03
+#    elif request_31_points >= 2: # FIRST EVENT <============================================================== EVENT 03
         m "How about another assfuck, girl?"
         $herView.hideshowQQ( "body_17.png", pos )
         her "How about another 90 house points, sir?"
@@ -759,7 +763,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
         $herViewHead.hideQ()
         m "hm?"
         $herViewHead.showQ( "body_118.png", posHead )
-        her "I mean, with all that was happening lately... ah{image=textheart.png}..."
+        her2 "I mean, with all that was happening lately... ah{image=textheart.png}..."
         her "I can't help but feel unclean... damaged even."
         her "And in a no way innocent..."
         $herViewHead.showQ( "body_117.png", posHead )
@@ -789,7 +793,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 m "You will make some lucky guy a very happy man one day, whore."
                 m "Ehm, I mean, miss Granger."
                 $herViewHead.showQ( "body_134.png", posHead )
-                her "No, \"whore\" is good. Call me that, sir."
+                her2 "No, \"whore\" is good. Call me that, sir."
                 $herViewHead.hideQ()
                 m "There, you see? You are a great catch, I'm telling you, whore."
                 $herViewHead.showQ( "body_134.png", posHead )
@@ -1007,15 +1011,17 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
     if whoring <= 23: # Level 08 <
         $ whoring +=1
 
-    if request_31_points == 0:
-        $ new_request_31_01 = True # HEARTS.
-    if request_31_points == 1:
-        $ new_request_31_02 = True # HEARTS.
-    if request_31_points >= 2:
-        $ new_request_31_03 = True # HEARTS.
+#    if request_31_points == 0:
+#        $ new_request_31_01 = True # HEARTS.
+#    if request_31_points == 1:
+#        $ new_request_31_02 = True # HEARTS.
+#    if request_31_points >= 2:
+#        $ new_request_31_03 = True # HEARTS.
 
 
-    $ request_31_points += 1
+#    $ request_31_points += 1
+    $SetHearts(SetStage(event._finishCount,1,1,1))
+
 
     hide screen bld1
     $herView.hideQ()

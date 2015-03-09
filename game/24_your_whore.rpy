@@ -1486,7 +1486,8 @@ label your_whore:
         $herViewHead.showQ( "body_164.png", posHead )
         her "Sir?!"
         $herViewHead.hideQ()
-        g4 "I want to fuck you so badly! Come over here!"
+        label tttest:
+        g4 "I want to fuck you so badly! GET OVER HERE!"
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
         $herViewHead.showQ( "body_181.png", posHead )
         her "Of course, sir..."
@@ -2479,6 +2480,9 @@ label your_whore:
         m "Although I suppose in a way I am..."
         
         if end.IsEnding(const_ENDING_STRONG_GIRL):
+            stop music fadeout 2.0
+            play music "music/Reamonn-Supergirl.mp3" fadein 1 fadeout 1 
+            $ renpy.music.set_volume(0.3) #.....установить громкость музыки на 30% 
             sly1 "And anyway, fucking've used the whore."
             sly2 "Hmm, I think we've used? I'm not sure..."
             sly1 "What are you talking about, bro?"
@@ -2618,6 +2622,7 @@ label your_whore:
             $herViewHead.showQ( "body_179.png", posHead )
             #$ h_body = "03_hp/13_hermione_main/body_176.png" # HERMIONE
             her "Счастливого пути, сэр..."
+            $MusicStop()
         else:
             her "I... I... What?"
             her "I don't understand... I..."
@@ -3305,6 +3310,7 @@ label your_whore:
         g4 "I can't fucking move it anymore!"
         her "{size=+10}I'm CUMMING!{/size}"
         
+
         
         g4 "My cock is stuck in your asshole, slut!"
         her "{size=+10}I'm a whooore!!!{/size}"
@@ -3597,7 +3603,7 @@ label your_whore:
     
     #FINAL SCENE. GENIE IS LEAVING.
     
-    
+label test:    
     
     show screen blkfade
     with d7
@@ -3713,7 +3719,7 @@ label your_whore:
     $ dermo = "ch_sna defend"
     
     show screen credits_chibi
-    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.2.2d (Russian Edition)-{/color}{/size}\n\n\n\
+    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.3 (Russian Edition)-{/color}{/size}\n\n\n\
     {color=#e5e297}-\{translation Witch Trainer back to English\}-{/color}\n\n\
     {color=#fff}\
     Khan32{/a}, \n\n\
@@ -3725,7 +3731,7 @@ label your_whore:
     \n\n\n\
     {color=#e5e297}-\{The lyrics of new events:\}-{/color}\n\n\
     {color=#fff}\
-    {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=16733487}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\n\
+    {a=http://wtrus.ixbb.ru/profile.php?id=4}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\n\
     \n\n\n\
     {color=#e5e297}-\{Beta testing English version}-{/color}\n\n\
     {color=#fff}\

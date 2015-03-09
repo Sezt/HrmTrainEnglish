@@ -220,63 +220,15 @@ label reading_book_xx:
     
     call chapter_check_book_xx #Checks if the chapter just finished was the last one.
     
-    ">There are still a few chapters."       
     
 #===### SPEED READING FOR DUMMIES BONUS CHECK ###
-    if s_reading_lvl == 1 and turbo==2: #First book (book_08) on speed reading completed.
-        $ speed_dummies = renpy.random.randint(1, 3) 
-        #$ speed_dummies = 1 #Here for testing porpoise only.
-        if speed_dummies == 1: #Success.
+    if s_reading_lvl>0:
+        $ speed_dummies = Rand([60,30,20][s_reading_lvl-1]//turbo)  # Массив содержит размер интервала для расчета вероятности. Первая книга 10/60 шансов прочитать доп. главу, вторая 10/30, 3-я 10/20 . В режиме турбо интервал уменьшается вдвое
+        if speed_dummies <= 10: #Success.
             ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
             call chap_finished_xx
             call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
-    elif s_reading_lvl == 1: #Second book(book_08) on speed reading completed.
-        $ speed_dummies = renpy.random.randint(1, 6) 
-
-        #$ speed_dummies = 1 #Here for testing porpoise only.
-        if speed_dummies == 1: #Success.chapter_check_book_xx
-            ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
-            call chap_finished_xx
-            call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
-
-    if s_reading_lvl == 2 and turbo==2: #First book (book_09) on speed reading completed.
-        $ speed_dummies = renpy.random.randint(1, 2) 
-        #$ speed_dummies = 1 #Here for testing porpoise only.
-        if speed_dummies == 1: #Success.
-            ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
-
-
-
-            call chap_finished_xx
-            call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
-    elif s_reading_lvl == 2: #Second book(book_09) on speed reading completed.
-        $ speed_dummies = renpy.random.randint(1, 4) 
-        #$ speed_dummies = 1 #Here for testing porpoise only.
-        if speed_dummies == 1: #Success.chapter_check_book_xx
-            ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
-            call chap_finished_xx
-            call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
-
-    if s_reading_lvl == 3 and turbo==2: #First book (book_10) on speed reading completed.
-        $ speed_dummies = renpy.random.randint(1, 1) 
-        #$ speed_dummies = 1 #Here for testing porpoise only.
-        if speed_dummies == 1: #Success.
-            ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
-            call chap_finished_xx
-            call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
-    elif s_reading_lvl == 3: #Second book(book_10) on speed reading completed.
-        $ speed_dummies = renpy.random.randint(1, 2) 
-        #$ speed_dummies = 1 #Here for testing porpoise only.
-        if speed_dummies == 1: #Success.chapter_check_book_xx
-            ">Using advanced techniques you learned speed reading, you rationally use time and keep reading."
-            call chap_finished_xx
-            call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
+#            ">There are still a few chapters."
 
 #===#############################################       
 
@@ -288,7 +240,10 @@ label reading_book_xx:
             ">Rain outside the window calms you and you feel great reading ..."
             call chap_finished_xx
             call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-            ">There are still a few chapters."
+#            ">There are still a few chapters."
+
+    ">There are still a few chapters."       
+
 
     if fire_in_fireplace:
         hide screen reading_near_fire
@@ -444,7 +399,7 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
                     g9 "Well, about her and her anal virginity..."
                     $ complited_shea_already = True
                 else: #Finished with Shea for the second time.
-                    m "Зthen at the end I'm back with Shea?"
+                    m "then at the end I'm back with Shea?"
                     m "Hmm ... Maybe I should try and choose other options next time ...?"
             elif victoria_waifu and victoria >= 7:
                 if not complited_stevens_already: #Finished with Ms.Stevens for the first time.

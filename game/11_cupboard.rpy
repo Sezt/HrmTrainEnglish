@@ -262,6 +262,11 @@ label cupboard:
                             hide screen points
                             $slytherin+=100
                             show screen points
+                        "CHEAT: Hermione no longer angry at you":
+                            hide screen points
+                            $mad=0
+                            show screen points
+                            "Ready"
                         "CHEAT: +100 gold":
                             hide screen points
                             $gold+=100

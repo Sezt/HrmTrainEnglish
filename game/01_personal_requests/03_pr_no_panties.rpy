@@ -28,10 +28,13 @@ label new_request_03: #(Whoring = 3 - 5)
     pause
     
     
-    if request_03_points == 0 and whoring <= 5: #First time this event taking place. and LEVEL 02.   <===================================== ONE TIME EVENT.
+#    if request_03_points == 0 and whoring <= 5: #First time this event taking place. and LEVEL 02.   <===================================== ONE TIME EVENT.
+    if IsFirstRun() and whoring <= 5: #First time this event taking place. and LEVEL 02.   <===================================== ONE TIME EVENT.
         stop music fadeout 10.0
-        $ new_request_03_01 = True # HEARTS.
-        $ request_03 += 1
+#        $ new_request_03_01 = True # HEARTS.
+        $SetHearts(1)
+
+#        $ request_03 += 1
         $herView.hideshowQQ( "body_11.png", pos )
         her "W-what?"
         her "My... panties...?"
@@ -59,6 +62,7 @@ label new_request_03: #(Whoring = 3 - 5)
         $herView.hideshowQQ( "body_66.png", pos )
         her "Huh?"
         m "Beat them at their own game!"
+        $herView.hideshowQQ( "body_14.png", pos )
         her "What?"
         m "Yes! Don't just put the \"Gryffindor\" house back on top..."
         m "But do it by beating them at their own game!"
@@ -97,7 +101,8 @@ label new_request_03: #(Whoring = 3 - 5)
         jump request_03_ends
 
     else: #<========================================================================================== FIRST EVENT!
-        if request_03_points == 0 and whoring < 12:
+#        if request_03_points == 0 and whoring < 12:
+        if IsFirstRun() and whoring < 12:
             her "emm..."
             her " This is a surprise, sir, but..."
         if request_03 >= 1:
@@ -191,7 +196,9 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 m "Of course."
         "\"How was your day, miss Granger?\"":
             if  whoring <= 5: #LEVEL 02. EVENT LEVEL: 01
-                $ new_request_03_01 = True # HEARTS.
+#                $ new_request_03_01 = True # HEARTS.
+#                SetHearts(1)
+
                 $herView.hideQQ()
                 $ pos = POS_120
                 $herView.showQQ( "body_15.png", pos )
@@ -213,7 +220,9 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                     her "And my payment?"
                     m "Yes, yes..."
             elif whoring >= 6 and whoring <= 8: #LEVEL 03. EVENT LEVEL 02.
-                $ new_request_03_02 = True # HEARTS.
+#                $ new_request_03_02 = True # HEARTS.
+                $SetHearts(2)
+
                 $herView.hideQQ()
                 $ pos = POS_120
                 $herView.showQQ( "body_15.png", pos )
@@ -259,7 +268,9 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                         else:
                             her "And my payment."
             elif whoring >= 9: #LEVEL 04. EVENT LEVEL 03.
-                $ new_request_03_03 = True # HEARTS.
+#                $ new_request_03_03 = True # HEARTS.
+                $SetHearts(3)
+
                 $herView.hideQQ()
                 $ pos = POS_120
                 $herView.showQQ( "body_16.png", pos )
@@ -306,7 +317,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
 
 
 
-    $ request_03_points += 1 #Leveling up the event.
+#    $ request_03_points += 1 #Leveling up the event.
     $ request_03 = False #When False - you gave her her Трусики back.
     $ hermione_sleeping = True
 
@@ -416,7 +427,7 @@ label panties_soaked_in_cum:
     if whoring >= 9: #LEVEL 04+ (THIRD EVENT)
         $herView.hideshowQQ( "body_71.png", pos )
         her "My panties..."
-        if request_03 >= 1:
+        if event.IsFinished():
             her "They are covered in something slimy again..."
         else:
             her "They are covered in something slimy..."
