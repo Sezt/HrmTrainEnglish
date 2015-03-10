@@ -3,19 +3,45 @@ label jerk_off:
     $ cum_on_the_floor = False
     $ jerk_zorder = 5
     $ cum_on_panties = False #True when choose to cum on Hermione's panties.
-    m "Hm... Who shall be my target?"
+    ">You decide to unwind a bit by jerking off..."
+    m "Hmm... Who shall I think about today?"
     menu:
-        "- Princess Jasmine! -":
-            m "Yes, the princess... That dirty slut!"
+        "- Princess Jasmine -":
+            m "Yes, Princess... Show how me how much you like being a dirty slut!"
             $ jerking_off_to_jasmine = True #Princess Jasmine has been chosen as a target for a jerk-off session
             pass
         " - Lara Croft - ":
+            m "Why Miss Croft!  What a tight body you have!  I want to see just how adventurous you truly are!"
             $ jerking_off_to_lara = True
             pass
         "- Cancel -":
             jump desk
 
-    m "How should I finish this thing?"   
+
+   ### JERKING OFF ###
+    with d5
+    show screen genie_jerking_off
+    with d8
+    if jerking_off_to_jasmine:
+        ">You fantasize about Princess Jasmine..."
+        $ checked = 'jas'
+        g9 "Uh... she wants it bad... wants to feel my hot juice spurting all over her..."
+        g9 "Yeah, you love my huge cock.  Take it all the way in you whore!"
+        jump random_pics
+    if jerking_off_to_lara:
+        ">You fantasize about Lara Croft..."
+        $ checked = 'lara'
+        g9 "Oh yeah... she really knew how to suck a cock...  and those boots..."
+        g9 "Come on, baby...let me hear you scream when you cum!"
+        # show image "03_hp/22_dreams/lara/1.png" onlayer overlay at Transform(zoom=0.9)# CLEAR WEATHER.
+        with d8 
+        jump random_pics
+       
+
+    label finish_cum:
+        ">You are ready to cum..."
+
+    m "How should I finish?"   
     label how_to_finish:
         menu:
             "- On the floor! -":
@@ -33,49 +59,32 @@ label jerk_off:
             "- Cancel -":
                jump jerk_off
 
-
-   ### JERKING OFF ###
-    with d5
-    ">You decide to spend some time by jerking off..."
-    show screen genie_jerking_off
-    with d8
-    if jerking_off_to_jasmine:
-        ">You fantasize about Princess Jasmine..."
-        $ checked = 'jas'
-        g9 "Uh...Yes, she's still a slut..."
-        jump random_pics
-    if jerking_off_to_lara:
-        ">You fantasize about Lara Croft..."
-        $ checked = 'lara'
-        g9 "Oh yeah... this cocksuck was great..."
-        # show image "03_hp/22_dreams/lara/1.png" onlayer overlay at Transform(zoom=0.9)# CLEAR WEATHER.
-        with d8 
-        jump random_pics
-       
-    label finish_cum:
-        ">You are ready to cum..."
         if one_out_of_three == 1:
             g4 "Argh! Whore!"
         elif one_out_of_three == 2:
             g4 "YES! GET IT SLUT! ARRH!"
-        elif one_out_of_three == 2:
-            g4 "Oh Yes! Wow... Long time since this was not."
+        elif one_out_of_three == 3:
+            g4 "Oh Yes! Wow... It's been way too long since I did that."
         # hide screen genie_jerking_off
         show screen genie_jerking_sperm
         if cum_on_desk:
             ">You cum on the table."
-            g4 "Have here to clean up..."
+            g4 "I better wipe this up so my papers don't stick..."
         if cum_on_the_floor:
             ">You cum on the floor."
+            g4 "Eh, it's probably good for the rug."
         if cum_on_panties:
             $ have_cum_soaced_panties = True #TRUE when you have the panties in your possession (before you return them to Hermione).
             ">You cum all over Hermione's panties, and then use them to wipe the cum off the floor..."
+            g4 "Oh, yeah, girlie!  You are gonna like my spunk rubbing all over your pussy lips!"
             ">You received the item: \"Cum-soaked panties\"."
         hide screen genie_jerking_sperm
-        g7 "Yeah, it was time. I wonder whether they will be able to bring back the good old days?"
-        g7 "With pleasure again pulled this slut... like it there... Lara..."
-        g4 "And the Princess is still the same cocksuck. I remember her wet mouth. Uh..."
-        g4 "Okay, we'll get back to current Affairs."
+        g7 "Yeah, that was great! I wonder if things will ever be like they used to be?"
+        g7 "Banging those hot sluts"
+        g7 "... oooh, Lara ... she had such a wet pussy ..."
+        g7 "And the Princess, I brought her down to being a cock-hungry whore."
+        g7 "That perfect royal mouth, sucking on me... Uh..."
+        g4 "Okay, I better get back to work.  I can do way better than jerking off with all the premium pussy around here!"
    ### SETTING ALL THE FLAGS BACK TO DEFAULT ###
     $ jerking_off_to_jasmine = False #Turns TRUE when Princess Jasmine has been chosen as a target for a jerk-off session.
     $ jerking_off_to_lara = False 
