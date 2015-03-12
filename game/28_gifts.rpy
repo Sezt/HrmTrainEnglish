@@ -111,7 +111,7 @@ label mini_on:
                 $herView.hideshowQQ( "body_07.png", pos )
                 her "hm..."
                 $herView.hideshowQQ( "body_68.png", pos )
-                her "Okay, I'm not against."
+                her "Alright. I don't mind then."
             "\"Fine. Forget it\"":
                 $herView.hideshowQQ( "body_13.png", pos )
                 her "Oh..."
@@ -204,7 +204,7 @@ label badge_take:
     
     $ pos = POS_370
     $herView.showQQ( "body_01.png", pos )
-    her "Of course, sir..."
+    her "As you wish, sir..."
 
     $ herView.data().delItem( G_N_BADGE )
     
@@ -432,7 +432,7 @@ label giving_lube: # JAR OF Anal lubricant?.
         $ anal_lube -= 1
         $ mad -=5
         $herView.showQ( "body_124.png", pos, d5 )
-        her "Anal lubricant?, sir?"
+        her "Anal lubricant, sir?"
         $herView.hideshowQQ( "body_186.png", pos )
         her "I know a couple of girls who would do anything for a commodity like that."
         $herView.hideshowQQ( "body_128.png", pos )

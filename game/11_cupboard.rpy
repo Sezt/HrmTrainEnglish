@@ -113,7 +113,7 @@ label cupboard:
                     jump possessions
 
                 "-Sexy lingerie-([lingerie])" if lingerie >= 1:
-                    $ the_gift = "03_hp/18_store/24.png" # LENGERIE.
+                    $ the_gift = "03_hp/18_store/24.png" # LINGERIE
                     show screen gift
                     with d3
                     ">Sexy lingerie \"Fairy Godmother\". Charm your wizard in bed or empress your sisters at a Sabbath."

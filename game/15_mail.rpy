@@ -197,7 +197,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/09.png" # ANAL LUBRICANT.
         show screen gift
         with d3
-        ">Anal Lubricant has been added to your possessions."
+        ">A jar of anal lubricant has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -293,7 +293,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/11.png" # CANDY.
         show screen gift
         with d3
-        ">A lollipop candy has been added to your possessions."
+        ">A lollipop has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -341,7 +341,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/12.png" # CHOCOLATE.
         show screen gift
         with d3
-        ">Chocolate has been added to your possessions."
+        ">A bar of chocolate has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -388,7 +388,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/13.png" # VIBRATOR.
         show screen gift
         with d3
-        ">Vibrator has been added to your possessions."
+        ">A vibrator has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -436,7 +436,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/14.png" # STRAP-ON.
         show screen gift
         with d3
-        "> Thestral Strap-on has been added to your possessions."
+        ">A Thestral strapon has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -485,7 +485,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/15.png" # BALL GAG.
         show screen gift
         with d3
-        ">Ball gag and cuffs has been added to your possessions."
+        ">A ball gag and a pair of cuffs have been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -532,7 +532,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/16.png" # ANAL PLUG.
         show screen gift
         with d3
-        ">Anal plugs has been added to your possessions."
+        ">An assortment of anal plugs has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -579,7 +579,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/17.png" # MAGAZINE # 1
         show screen gift
         with d3
-        ">Educational magazines has been added to your possessions."
+        ">An assortment of educational magazines has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -626,7 +626,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/18.png" # MAGAZINE # 2
         show screen gift
         with d3
-        ">Girly magazines has been added to your possessions."
+        ">An assortment of rather girly magazines has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -673,7 +673,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/19.png" # MAGAZINE # 3
         show screen gift
         with d3
-        ">Adult magazine has been added to your possessions."
+        ">An assortment of adult magazines has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -720,7 +720,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/20.png" # MAGAZINE # 4
         show screen gift
         with d3
-        ">Porn magazines has been added to your possessions."
+        ">An assortment of porn magazines has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -767,7 +767,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/21.png" # BUTTERBEER.
         show screen gift
         with d3
-        ">butterbeer has been added to your possessions."
+        ">A bottle of butterbeer has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01
@@ -814,7 +814,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = "03_hp/18_store/22.png" # PLUSH OWL.
         show screen gift
         with d3
-        ">An Stuffed Owl has been added to your possessions."
+        ">An owl plushy has been added to your possessions."
         hide screen gift
         with d3
         call screen main_menu_01

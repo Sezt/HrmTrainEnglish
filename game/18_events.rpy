@@ -481,7 +481,7 @@ label event_05: #Snape comes in, has a talk with Genie, then the duel starts.
             show screen snape_main                                                                                                                                #SNAPE
             with d3                                                                                                                                                                  #SNAPE
             who2 "Well, perhaps you are right..."
-        "{size=-2}\"That owl is fetching may mail, man!\"{/size}":
+        "{size=-2}\"That owl is fetching my mail, man!\"{/size}":
             who2 "An owl? What about it?"
             hide screen snape_main                                                                                                                                  #SNAPE
             with d3                                                                                                                                                                  #SNAPE
@@ -551,7 +551,7 @@ label event_05: #Snape comes in, has a talk with Genie, then the duel starts.
     $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                                                               #SNAPE
     show screen snape_main                                                                                                                                #SNAPE
     with d3                                                                                                                                                                  #SNAPE
-    who2 "Tsk... Noisy little...... witch."
+    who2 "Tsk... Noisy little witch..."
     hide screen snape_main                                                                                                                                  #SNAPE
     with d3                                                                                                                                                                  #SNAPE
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                                                               #SNAPE

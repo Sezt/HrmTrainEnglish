@@ -122,11 +122,11 @@ label desk:
                     
                     
         #"- The muggle oddities -" if have_catalogue: #Real thing
-        "- Dahr's Magazin -" if cataloug_found: 
+        "-DAHR's oddities-" if cataloug_found: 
             if order_placed or package_is_here:
                 show screen bld1
                 with d3
-                dahr "Please wait a little bit. Owl is on the way."
+                dahr "Please be patient. The owl has been dispatched."
                 hide screen bld1
                 with d3
                 jump desk
@@ -136,7 +136,7 @@ label desk:
         
         
 
-        # "- Подрочить на трусики Гермионы -" if request_03: #True when Hermione has no panties on.
+        # "- Jerk off on Hernione's panties -" if request_03: #True when Hermione has no panties on.
         #     jump jerk_off
         "- jerk off -" if not day < 5:
             jump jerk_off 
@@ -160,9 +160,9 @@ label desk:
             else:
                 "> Hermione {b} is not angry {/ b} for you"
             jump desk
-        "- Doze -" if daytime and not day == 1:
+        "-Doze off-" if daytime and not day == 1:
             jump night_start
-        "- Sleep -" if not daytime and not day == 1:
+        "-Go to sleep-" if not daytime and not day == 1:
             jump day_start
             
 
@@ -228,7 +228,7 @@ label reading_book_xx:
             ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
             call chap_finished_xx
             call chapter_check_book_xx #Checks if the chapter just finished was the last one.
-#            ">There are still a few chapters."
+#            ">There are still some chapters left."
 
 #===#############################################       
 
@@ -242,7 +242,7 @@ label reading_book_xx:
             call chapter_check_book_xx #Checks if the chapter just finished was the last one.
 #            ">There are still a few chapters."
 
-    ">There are still a few chapters."       
+    ">There are still some chapters left."       
 
 
     if fire_in_fireplace:
@@ -351,7 +351,7 @@ label chap_finished_xx:
     if event._block=="books_edu": 
 #        $event._status=this.GetCall(event.Name).SetValue("status", event._status+1)  #event.SetValue("status", event._status+1)  #+=1
         $event.IncValue("status", 1)    
-    ">you finished \"chapter [event._status]\" this book."
+    ">You've completed \"chapter [event._status]\" of the book."
     return
     
 ###
@@ -376,17 +376,17 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
 
         if event.Name=="book_07":
             if complited_leena_already and complited_shea_already and complited_stevens_already and victoria >= 1 and shea >= 1 and leena >= 1: #Harem ending. The DAHR's ticket.
-                m "Wow! Excellent book! It was pretty good!"
+                m "Wow! What a great book! That was intense!"
                 
                 #m "No, I mean it! What a great peace of fiction! That Akabur dude must be a genius!"
                 if not found_dahrs_ticket_once:
-                    m "Hmm ...?"
-                    m "It is ...? Bookmark?"
+                    m "Hm...?"
+                    m "What is that...? A bookmark?"
                     $ the_gift = "03_hp/18_store/06.png" # The DAHR's ticket.
                     show screen gift
                     with d3
                     $ renpy.play('sounds/win2.mp3') #Sound of finding an item.
-                    ">You've found a Dahr's voucher."
+                    ">You found a DAHR's voucher."
                     hide screen gift
                     with d3
                     m "Hm..."
@@ -395,30 +395,30 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
                     $ waifu_book_completed = True
             elif shea_waifu and shea >= 8: 
                 if not complited_shea_already: #Finished with Shea for the first time.
-                    m "Not Bad. I'm really ready to take care of Shea ..."
-                    g9 "Well, about her and her anal virginity..."
+                    m "Not bad. I really grew to care about that Shea girl..."
+                    g9 "Well, her and her anal virginity..."
                     $ complited_shea_already = True
                 else: #Finished with Shea for the second time.
-                    m "then at the end I'm back with Shea?"
-                    m "Hmm ... Maybe I should try and choose other options next time ...?"
+                    m "So I ended up with Shea again, huh?"
+                    m "Hm... Maybe I should try and make different choices next time...?"
             elif victoria_waifu and victoria >= 7:
                 if not complited_stevens_already: #Finished with Ms.Stevens for the first time.
-                    m "Not bad, not bad. Mrs. Stevens was one more whore ..."
+                    m "Not bad, not bad. That Miss Stevens Lady turned out to be one dirty slut..."
                     $ complited_stevens_already = True
                 else: #Finished with Shea for the second time.
-                    m "So in the end I am again with Mrs. Stevens?"
-                    m "Hmm ... Maybe I should try and choose other options next time ...?"
+                    m "So I ended up with Miss Stevens again?"
+                    m "Hm... Maybe I should try and make different choices next time?"
             elif leena_waifu and leena >= 8:
                 if not complited_leena_already: #Finished with Leena for the first time.
-                    g9 "Great! I love happy endings!"
+                    g9 "Sweet! I love happy endings!"
                     $ complited_leena_already = True
                 else: #Finished with Shea for the second time.
-                    m "So, in the end I am again with  girl?"
-                    m "Hmm ... Maybe I should try and choose other options next time ...?"
+                    m "So I ended up with that blond chick again?"
+                    m "Hm... Maybe I should try and make different choices next time?"
 
             else:
-                m "Hmm ... The end is very disappointed ..."
-                m "Maybe I should read it again someday..."
+                m "Hm... What an anticlimactic ending..."
+                m "Maybe I should read it again sometime."
             
             $ book_07_units = 0 #RESTING THE BOOK FOR ANOTHER PLAYTHORUGH.
             $ shea = 0 #RESETING SHEA'S POINTS FOR THE NEXT PLAYTHOURGH.
@@ -505,7 +505,7 @@ label paperwork:
     hide screen genie
     show screen paperwork
     with Dissolve(0.3)
-    ">You make a paperwork."
+    ">You do some paperwork."
     
     call finished_working_chapter #Chapter finished. $ report_chapters += 1
     
@@ -584,7 +584,7 @@ label paperwork:
 ### 
 label report_chapters_check:
     if report_chapters >= 7:
-        ">You have completed a paperwork."
+        ">You've completed a report."
         $ report_chapters = 0
         $ finished_report += 1
     return
@@ -594,7 +594,7 @@ label f_moon_bonus:
     hide screen notes
     show screen notes
     $ report_chapters += 1
-    ">The full moon will make you more productive.\n>you finished [report_chapters] chapter."
+    ">The Full moon makes you feel more productive.\n>You finished [report_chapters] chapters so far."
     return
 ###
 label finished_working_chapter:
@@ -602,7 +602,7 @@ label finished_working_chapter:
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
     hide screen notes
     show screen notes
-    ">you finished [report_chapters] chapter."
+    ">You finished [report_chapters] chapters so far."
     return
 ### CONCENTRATION
 label concentration_label:
@@ -610,7 +610,7 @@ label concentration_label:
     hide screen notes
     show screen notes
     $ report_chapters += 1
-    ">During the work you perfectly centered.\n>And ends with an additional chapter.\n>you finished [report_chapters] chapter."
+    ">You maintain perfect concentration during your work.\n>And finish another chapter of the report.\n>You finished [report_chapters] chapters so far."
     return
 ### SPEEDWRITING
 label speedwriting_label:
@@ -618,13 +618,13 @@ label speedwriting_label:
     hide screen notes
     show screen notes
     $ report_chapters += 1
-    ">You use your skill speedwriting.\n>And ends with an additional chapter.\n>you finished [report_chapters] chapter."
+    ">You use your speedwriting skills.\n>And finish another chapter of the report.\n>You finished [report_chapters] chapters so far."
     return
     
     
 ### READING GALADRIEL BOOKS IN PROPER ORDER ###
 label gal_proper:
-    m "Reading books does not give me anything."
+    m "Reading books out of order won't do me any good."
     hide screen gift
     return
     

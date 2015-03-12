@@ -1711,7 +1711,7 @@ label mag2_text:
     return
     
 label mag3_text:
-    dahr "A nice pair of reading glasses that do little to improve vision."
+    dahr "Your boyfriend is turning into a nice guy? \nYour husband won't abuse you anymore? \nAll you wanted to know about relationships, love and sex. Mostly about sex."
     return
     
 label mag4_text:

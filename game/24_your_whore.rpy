@@ -229,8 +229,8 @@ label your_whore:
     show screen blktone8
     with d3
     stop music fadeout 3.0
-    m "Here it is, my chance!"
-    m "(Pss! Girl!)"
+    m "Here is my chance!"
+    m "(Pst! Girl!)"
     $herViewHead.showQ( "body_162.png", posHead )
     her "???"
     $herViewHead.hideQ()
@@ -1451,7 +1451,7 @@ label your_whore:
         show screen blkfade
         with d7
         $ renpy.play('sounds/applause01.ogg') # APPLAUSE
-        ">Wild whistling, shouts and applause accompany Hermione, as she descends the stairs..."
+        ">Wild whisting and cheering persists as Hermione descends off the stage..."
         pause 1
         stop music fadeout 3.0
         ">.......................{w}....................{w}......................."
@@ -1954,7 +1954,7 @@ label your_whore:
         with d5
 
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Парень, ты мой герой. Давай, не останавливайся!"
+            her "Boy, you're my hero. Come on, don't stop!"
             sly1 "Bitch, you'll shut up ever?! You got your barking!"
         else:
             her "That's because I didn't expect it... That's just a reflex!"
@@ -2431,7 +2431,7 @@ label your_whore:
         $ end_u_1_pic =  "03_hp/17_ending/168.png" #<---- SCREEN
         show screen end_u_1                                            #<---- SCREEN
         #with d3                                                                        #<---- SCREEN
-        her "{size=+8}I'm losing my mind!{/size}"
+        her "{size=+8}I'll go insane!{/size}"
         
         # SPIT!
         
@@ -2746,7 +2746,7 @@ label your_whore:
         show screen end_u_2                                            #<---- SCREEN
         with d3                                                                        #<---- SCREEN
         her "...................................."
-        her "Hello everuone..." #Misspelled on purpose.
+        her "Helwo eweruone..." #Misspelled on purpose.
         $ end_u_1_pic =  "03_hp/17_ending/40.png" #<---- SCREEN
         show screen end_u_1                                            #<---- SCREEN
         with d3                                                                        #<---- SCREEN
@@ -3433,7 +3433,7 @@ label your_whore:
                 her "Professor! My dress!"
                 g4 "What?"
                 her "Make sure you don't get any on my dress!"
-                g4 "Shut up about your dress, whore! You are ruining the momment!"
+                g4 "Shut up about your dress, whore! You are ruining the moment!"
                 $ end_u_1_pic =  "03_hp/17_ending/87.png" #<---- SCREEN
                 show screen end_u_1                                             #<---- SCREEN
                 with d5                                                                        #<---- SCREEN
@@ -3643,7 +3643,7 @@ label test:
     pause.5
     
     
-    m "Good bye world of bizzare magic..."
+    m "Good bye world of bizarre magic..."
     m "Good bye my who--......"
     m "Good bye, Hermione..."
     m "............"
@@ -3856,7 +3856,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     stop music fadeout 3.0
     ">................................{w}...........................{w}................................."
     pause.5
-    centered "{size=+7}{color=#cbcbcb}The next morning...{/color}{/size}"
+    centered "{size=+7}{color=#cbcbcb}The morning after...{/color}{/size}"
     
     hide screen end_u_1                                           #<---- SCREEN
     hide screen end_u_2                                           #<---- SCREEN
@@ -3942,43 +3942,43 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         show screen s_head2                                                                                                 # SNAPE
         sna "......................................."
         hide screen s_head2              
-        dum " want to share with you a very unusual story, old friend."
+        dum "I have the most extraordinary tale to share with you, old friend."
         $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "......................................"
         hide screen s_head2     
-        dum "But first..."
+        dum "But before I do..."
         $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "........................................"
         hide screen s_head2     
-        dum2 "Em... Severus?"
+        dum2 "Ehm... Severus?"
         $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "........................................."
         $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
-        sna "Who is the best?"
+        sna "Who rules?"
         hide screen s_head2     
-        dum2 "I'm sorry?"
+        dum2 "I beg your pardon?"
         $ s_sprite = "03_hp/10_snape_main/snape_26.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
-        sna "Who ... the best?" # T_T
+        sna "Who rules?" # T_T
         hide screen s_head2     
         dum2 "?!?..."
         show screen s_head2                                                                                                 # SNAPE
         sna "Who is the best?"
         hide screen s_head2     
-        dum2 "... best of?"
+        dum2 "...who rules what?"
         show screen s_head2                                                                                                 # SNAPE
-        sna "Aka....?"
+        sna "A...?"
         hide screen s_head2     
         dum2 "a?"
         $ s_sprite = "03_hp/10_snape_main/snape_27.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
-        sna "\"Aka....\"?"
+        sna "Aka-a....?"
         hide screen s_head2     
-        dum2 "It's pointless, Severus."
+        dum2 "You don't make any sense, Severus."
         $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "Ah, damn it..................."
@@ -4045,23 +4045,23 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $herViewHead.hideQ()
         dum "Good morning, miss Granger."
         $herViewHead.showQ( "body_79.png", posHead )
-        her2 "Actually, I'm not so liked..."
+        her2 "It's not like I actually enjoyed it or anything, you know..."
         $herViewHead.hideQ()
-        dum "Miss Granger, I found this on your Desk..."
-        dum "This is addressed to you..."
+        dum "Miss Granger, I found this letter on my desk..."
+        dum "It's addressed to you..."
         $herViewHead.showQ( "body_15.png", posHead )
-        her "The letter, sir?"
+        her "A letter, sir?"
         $herViewHead.showQ( "body_24.png", posHead )
-        her "Oh, of course! It's you I wrote it."
+        her "Oh, of course! The one you wrote for me, sir."
         $herViewHead.hideQ()
         dum "This letter is not from me, miss Granger."
         $herViewHead.showQ( "body_17.png", posHead )
-        her "Really?"
+        her "It is not?"
         $herViewHead.showQ( "body_24.png", posHead )
-        her "Oh, of course..."
-        her2 "You should not be ashamed of, sir. All right."
+        her "Oh, I see..."
+        her2 "There is no need to be so shy about this, sir. It's alright."
         $herViewHead.hideQ()
-        dum "*em*... here."
+        dum "*ahem*... here it is."
         $herViewHead.showQ( "body_06.png", posHead )
         her2 "Thank you, sir."
         $herViewHead.showQ( "body_73.png", posHead )
@@ -4071,7 +4071,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         pause.1
         
         
-        $ letter_text = "{size=-7}Who: Hermione Granger\n\n{/size}{size=-4}Dear [word_01]. \nI'm not who you think... not Even a man, to be honest. Within a few months I pretended to Professor Dumbledore. But now I need to go back [word_02]. By the time you get the letter, I will already be far away. We will never meet, but I will cherish the memories of this time in your world.\n\nFarewell, my little [word_03]. {size=-3}\n\n-[word_04]-{/size}"
+        $ letter_text = "{size=-7}To: Hermione Granger\n\n{/size}{size=-4}Dear [word_01]. \nI am not who you think I am... Not even human so to speak. For months now I have been posing as a person known to you as Professor Dumbledore. But it is time for me to go back [word_02]. By the time you will receive this letter I shall be long gone. We shall never cross paths again, but I promise you that I will cherish the memories of my brief time in your strange world. \n\nFarewell, my little [word_03]. {size=-3}\n\n-[word_04]-{/size}"
 
         label last_letter:
         show screen letter
@@ -4080,9 +4080,9 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         with Dissolve(.3)
         pause
         menu:
-            "- finish reading -":
+            "- Done reading -":
                 pass    
-            "- Continue reading -":
+            "- Not yet -":
                 jump last_letter
         hide screen letter
         hide screen ctc
@@ -4101,14 +4101,14 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $herViewHead.showQ( None, posHead )
         her "............................................................................................................................................................."
         $herViewHead.hideQ()
-        dum "I think the author of this is a Genie?"
-        dum "The one who gave himself for me all this time?"
+        dum "I assume the sender of this letter is that Genie fellow?"
+        dum "The one who has been impersonating me for the past several months?"
         # here was body_197, but it replaced with pose                                                                                                # HERMIONE
         $herViewHead.showQ( None, posHead )
         her "............................................................................................................................................................."
         $herViewHead.hideQ()
-        dum "Well, I'm back now..."
-        dum "And I will put an end to your \"business exchange points\", of course."
+        dum "Well, now that I am back..."
+        dum "I will be putting an end to all that \"favour-selling-business\" of course."
         $herView.hideQQ()
         $ pos = POS_370
 
@@ -4122,16 +4122,16 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         her "{size=+7}what?!!{/size}"
         $herView.hideQQ()
         $herView.showQQ( "body_66.png", pos )
-        her "How do I get extra points?"
-        dum "There are other ways, miss Granger."
+        her "How am I supposed to win any points then?"
+        dum "The same way you always did, miss Granger."
         $herView.hideQQ()
         $herView.showQQ( "body_186.png", pos )
-        her "what...?"
-        dum "Hard work."
+        her "Huh...?"
+        dum "With hard work."
         $herView.hideQQ()
         $herView.showQQ( "body_187.png", pos )
-        her "This is so stupid!"
-        dum2 "Miss Granger, you should watch your tongue--"
+        her "That's just stupid!"
+        dum2 "Miss Granger, would you mind to guard your tongue when--"
         ### TITS ###
         #$ only_upper = True
         $herView.hideQ()
@@ -4154,7 +4154,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         with d5                                                                                                                                                                                                                        #HERMIONE
         $herView.showQ( "body_86.png", pos )
         with d5                                                                                                                                                                                                                       #HERMIONE
-        her "Or you want to see my pussy, sir?"
+        her "Or would you rather see my pussy, sir?"
         $herView.hideQQ()
 
         # Pussy!
@@ -4166,10 +4166,10 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         hide screen ctc
 
         with hpunch
-        dum5 "{size=+7}Argh!!!{/size}"
+        dum5 "{size=+7}GHT!!!{/size}"
         
         
-        her "I am ready on all for the sake of points, sir!"
+        her "I am willing to do anything to get those points, sir!"
         $herView.hideQ()
         with d5      
         $herView.data().delPose()
@@ -4177,7 +4177,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $herView.showQ( "body_86.png", pos )
         with d5                                                                                                                                                                                                                       #HERMIONE
         with hpunch
-        her "That is - {size=+9}ABSOLUTELY EVERYTHING!!!{/size}"
+        her "And I mean {size=+9}ANYTHING!!!{/size}"
  
         
         
@@ -4202,7 +4202,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         pause 1
         
     $ renpy.play('sounds/win2.mp3')   #Not loud.
-    centered "{size=+7}{color=#cbcbcb}-\{Thank yoy for playing!\}-{/color}{/size}\n\n\
+    centered "{size=+7}{color=#cbcbcb}-\{Thank you for playing!\}-{/color}{/size}\n\n
               {size=+1}{color=#cbcbcb}-AKABUR 2014-{/color}{/size}"
     
     pause 2

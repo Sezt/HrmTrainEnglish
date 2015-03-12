@@ -17,7 +17,7 @@ label howtoplay:
         show screen l_head
         l "Hello, pervs of the internet!"
         hide screen l_head
-        a5 "Whach it, brat!"
+        a5 "Watch it, brat!"
         $ l_things = False
         $ lola_face = "03_hp/22_lola/02.png"
         show screen l_head
@@ -126,7 +126,7 @@ label howtoplay:
     with hpunch
     $ end_u_1_pic =  "03_hp/22_lola/tut_01.png" #<---- SCREEN
     $ renpy.play('sounds/boing02.mp3')   
-    l "Making friends with professor Snape will make him trust you more, and will increase the rate at which slytherin house get's the points."
+    l "Making friends with professor Snape will make him trust you more, and will increase the rate at which slytherin house gets the points."
     with hpunch
     $ end_u_1_pic =  "03_hp/22_lola/tut_03.png" #<---- SCREEN
     $ renpy.play('sounds/boing02.mp3') 
@@ -194,7 +194,7 @@ label howtoplay:
         $ lola_face = "03_hp/22_lola/01.png"
         l "Can we have a rape scene with me in the \"Gold Edition\"?"
         hide screen l_head
-        a6 "Don't taste my patience, girl."
+        a6 "Don't test my patience, girl."
         $ l_exclamation = False
         $ l_drop = True
         $ lola_face = "03_hp/22_lola/04.png"
@@ -316,7 +316,7 @@ label faq2:
         "Who helped you create this game?":
             a1 "Nobody helped me! I did everything myself!"
             a1 "I wrote all the scripts, created all the art, and composed all the music!"
-            a7 "Me! {size=+3}Me! {size=+3}I cerated everything! {size=+3}me!{/size}"
+            a7 "Me! {size=+3}Me! I created everything! Me!{/size}"
             a2 "Heh..."
             a1 "Well, in truth I did most of the work. But I had a lot of help also."
             a1 "My friend and colleague Dahr provided me graciously (and free of charge) with a lot sorts of additional art (among other things)."

@@ -154,7 +154,7 @@ label snape_chitchat:
             $ s_sprite = "03_hp/10_snape_main/snape_10.png"                                                                            #SNAPE
             show screen snape_main                                                                                                                  #SNAPE
             with d3                                                                                                                                                   #SNAPE
-            sna "What a waste of time and ressources!"
+            sna "What a waste of time and resources!"
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
             $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                                                            #SNAPE
@@ -653,25 +653,25 @@ label snape_chitchat:
             $ s_sprite = "03_hp/10_snape_main/24.png"                                                                            #SNAPE
             show screen snape_main                                                                                                                  #SNAPE
             with d3                                                                                                                                                   #SNAPE
-            her "Do You have a few condoms to spare?"
+            sna "Do You have a few condoms to spare?"
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
             $ s_sprite = "03_hp/10_snape_main/snape_25.png"                                                                            #SNAPE
             show screen snape_main                                                                                                                  #SNAPE
             with d3                                                                                                                                                   #SNAPE
-            her "I have a whole pack but..."
+            sna "I have a whole pack but..."
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
             $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                                                            #SNAPE
             show screen snape_main                                                                                                                  #SNAPE
             with d3                                                                                                                                                   #SNAPE
-            her "...they've expired years ago..."
+            sna "...they've expired years ago..."
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
             $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                                                            #SNAPE
             show screen snape_main                                                                                                                  #SNAPE
             with d3                                                                                                                                                   #SNAPE
-            her "The changes you brought into my life, mate."
+            sna "The changes you brought into my life, mate."
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
             $ s_sprite = "03_hp/10_snape_main/23.png"                                                                            #SNAPE
@@ -1703,24 +1703,24 @@ label chitchat_event_01: #Snape says: so you tutor her now?". Happens after tuto
     hide screen snape_main
     with d3
     $sna_head_state = 1
-    sna_head_main "Whell..."
-    sna_head_main "I heard that miss Granger started with you alone?"
-    m "Yes, it is..."
-    m "Although not sure if this is part of our plan."
+    sna_head_main "So..."
+    sna_head_main "I hear miss Granger is taking private lessons from you now?"
+    m "Yeah, I suppose she does..."
+    m "Not sure where this fits into our plan though."
     $sna_head_state = 9
-    sna_head_main "What are you? Everything is going great."
-    sna_head_main "I personally and a couple of teachers do her lessons unbearable!"
-    sna_head_main "And as a result, she became involved in more..."
-    sna_head_main "Now taking private lessons..."
+    sna_head_main "What do you mean? It fits perfectly."
+    sna_head_main "I myself and a couple of other teachers are failing the crap out of that girl!"
+    sna_head_main "As a result she spends more time studying..."
+    sna_head_main "Even taking private lessons now..."
     $sna_head_state = 18
-    sna_head_main "And so she had less and less time to bother me!"
-    m "Well..."
+    sna_head_main "This way she has very little time left to be noisy and cause me headaches"
+    m "I see..."
     $sna_head_state = 10
-    sna_head_main "And still... You know... but just in case..."
-    sna_head_main "Don't tell her anything useful, okay?"
-    m "I will try."
+    sna_head_main "Yes, yes... just, so you know..."
+    sna_head_main "Don't actually teach her anything useful, alright?"
+    m "I'll do my best."
     $sna_head_state = 1
-    sna_head_main "Okay, that's all for today..."
+    sna_head_main "Well, if that's all..."
     
     
     
@@ -1764,7 +1764,7 @@ label chit_chat:
         if one_of_ten == 1:
             $herView.hideQQ()
             $herView.showQQ( "body_04.png", pos )
-            her "Maybe, if I'd work harder, I could squeeze a few more classes into my schedule..."
+            her "Maybe if I worked harder, I could squeeze a few more classes into my schedule..."
             $herView.hideQQ()
             $herView.showQQ( "body_03.png", pos )
         
@@ -1793,7 +1793,7 @@ label chit_chat:
             her "If my body wouldn't require sleep..."
             $herView.hideQQ()
             $herView.showQQ( "body_18.png", pos )
-            her "I would be able to spend twice as much time with studying!?"
+            her "I would be able to spend twice as much time studying!?"
             $herView.hideQQ()
             $herView.showQQ( "body_14.png", pos )
             her "I wonder if there's a spell for that..."
@@ -1803,7 +1803,7 @@ label chit_chat:
         elif one_of_ten == 5:
             $herView.hideQQ()
             $herView.showQQ( "body_04.png", pos )
-            her "So far professor Trelawney did not taught me a single piece of any actual knowledge, sir."
+            her "So far professor Trelawney hasn't taught me a single piece of any actual knowledge, sir."
             $herView.hideQQ()
             $herView.showQQ( "body_03.png", pos )
        
@@ -1842,7 +1842,7 @@ label chit_chat:
         elif one_of_ten == 10:
             $herView.hideQQ()
             $herView.showQQ( "body_06.png", pos )
-            her "I am sorry sir, but I don't really have time for idle chat chats..."
+            her "I am sorry sir, but I don't really have time for idle chit chat..."
             $herView.hideQQ()
             $herView.showQQ( "body_03.png", pos )
 
@@ -1894,7 +1894,7 @@ label chit_chat:
             $herView.hideQQ()
             $herView.showQQ( "body_04.png", pos )
             her "The \"Men's Rights Movement\" is steadily gaining popularity."
-            her "It's very fulfilling to know that you are helping to improve our society."
+            her "It's very fulfilling to know that we are helping to improve our society."
             $herView.hideQQ()
             $herView.showQQ( "body_03.png", pos )
             
@@ -1961,7 +1961,7 @@ label chit_chat:
         elif one_of_ten == 2:
             $herView.hideQQ()
             $herView.showQQ( "body_04.png", pos )
-            her "The rate at which the Slytherin house has been gaining points lately is simply ridiculous."
+            her "The rate at which  Slytherin house has been gaining points lately is simply ridiculous."
             $herView.hideQQ()
             $herView.showQQ( "body_05.png", pos )
             her "I think professor Snape might be behind it."
@@ -1983,7 +1983,7 @@ label chit_chat:
             her "I apologize..."
             $herView.hideQQ()
             $herView.showQQ( "body_13.png", pos )
-            her "It's just that we have another test soon..."
+            her "It's just that I have another Potions test soon..."
 
         elif one_of_ten == 4:
             $herView.hideQQ()
@@ -2032,7 +2032,7 @@ label chit_chat:
         elif one_of_ten == 9:
             $herView.hideQQ()
             $herView.showQQ( "body_04.png", pos )
-            her "Some of the less traveled school corridors are not very well lit and rather dusty..."
+            her "Some of the less travelled school corridors are not very well lit and rather dusty..."
             her "Please take care of this, sir..."
             $herView.hideQQ()
             $herView.showQQ( "body_03.png", pos )
@@ -2040,7 +2040,7 @@ label chit_chat:
         elif one_of_ten == 10:
             $herView.hideQQ()
             $herView.showQQ( "body_14.png", pos )
-            her "I've read about this thing called \"Time-Turner\"."
+            her "I've read about this thing called a \"Time-Turner\"."
             her "It allows the user to control the flow of time..."
             $herView.hideQQ()
             $herView.showQQ( "body_16.png", pos )
@@ -2406,7 +2406,7 @@ label chit_chat:
         elif one_of_ten == 4:
             $herView.hideQQ()
             $herView.showQQ( "body_06.png", pos )
-            her "What is it sir? Do you have another present for me?"
+            her "What is it, sir? Do you have another present for me?"
             $herView.hideQQ()
             $herView.showQQ( "body_12.png", pos )
             her "Oh... I see..."
@@ -2438,7 +2438,7 @@ label chit_chat:
             $herView.hideQQ()
             $herView.showQQ( "body_04.png", pos )
             her "Add ashwinder egg to cauldron..."
-            her "Then add horseshoe reddish and heat..."
+            her "Then add horseradish and heat..."
             her "Then juice a squill bulb..."
             $herView.hideQQ()
             $herView.showQQ( "body_10.png", pos )
@@ -2547,7 +2547,7 @@ label chit_chat:
         elif one_of_ten == 9:
             $herView.hideQQ()
             $herView.showQQ( "body_127.png", pos )
-            her "A read this one article about the positive effects of semen on a woman's skin..."
+            her "I read this one article about the positive effects of semen on a woman's skin..."
             $herView.hideQQ()
             $herView.showQQ( "body_128.png", pos )
             her "I wonder where their information is coming from..."

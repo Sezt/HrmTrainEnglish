@@ -165,8 +165,8 @@ label want_to_rule:
                 m "And only {size=+5}YOU{/size} can give them that!"
                 $herView.hideQQ()
                 $herView.showQQ( "body_118.png", pos )
-                her "...ну да, это так."
-                m "Люди надеются на тебя, девочка!"
+                her "...that is true actually."
+                m "People depend on you, girl!"
                 if d_flag_01:
                     m "So I suggest that you stop being selfish and show me your tits!"
                 elif d_flag_02:
@@ -987,7 +987,7 @@ label sorry_about_hesterics:
     with d3
     
     m "......................................."
-    m "Хм..."
+    m "Hm..."
     $ hermione_takes_classes = True
     hide screen bld1
     with d3
@@ -1428,17 +1428,17 @@ label good_bye_snape:
         menu:
             m "Dear..."
             "\"Miss Granger\"":
-                 $ word_01 = "Miss Granger" 
-            "\"Dirty whore\"":
-                $ word_01 = "Dirty whore"
+                 $ word_01 = "Hermione Granger"
+            "\"Nasty whore\"":
+                $ word_01 = "nasty whore"
             "\"slut\"":
                 $ word_01 = "slut"
-            "\"Cum Throat\"":
-                $ word_01 = "Cum Throat"
+            "\"Cumbucket\"":
+                $ word_01 = "cumbucket"
             "\"human female\"":
                 $ word_01 = "human female"
-            "\"girlfriend\"":
-                $ word_01 = "girlfriend"
+            "\"friend\"":
+                $ word_01 = "friend"
         hide screen genie
         show screen paperwork
         with Dissolve(0.3)

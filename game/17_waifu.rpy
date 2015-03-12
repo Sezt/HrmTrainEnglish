@@ -63,14 +63,14 @@ label waifu:
         if complited_leena_already and complited_shea_already and complited_stevens_already and victoria >= 1 and shea >= 1 and leena >= 1:
             "\"Chapter [book_07_units]\"" "{size=-2}You decide to go to the prom and you're surprised to see the \"library girl\" there. She invites you to a dance and kisses you. You notice Shea staring at you incredulously.{/size}"
             "\"Chapter [book_07_units]\"" "{size=-2}The \"library girl\" leads you outside. She kisses you, takes your dick out and starts jerking it. Shea appears from behind the corner of the building.{/size}"
-            "\"Chapter [book_07_units]\"" "{size=-2}Shea gets mad and starts yelling at the girl who continues to jerk you off. Alarmed by all the yelling Ms.Stevens shows up and You still have your pants down.{/size}"
-            "\"Chapter [book_07_units]\"" "{size=-2}You pull your pants up, completely embarrassed. Ms.Stevens stays calm and simply leaves to bring her car around. Afterwards She orders all of you in the car and takes you to a motel.{/size}"
+            "\"Chapter [book_07_units]\"" "{size=-2}Shea gets mad and starts yelling at the girl who continues to jerk you off. Alarmed by all the yelling Miss Stevens shows up and You still have your pants down.{/size}"
+            "\"Chapter [book_07_units]\"" "{size=-2}You pull your pants up, completely embarrassed. Miss Stevens stays calm and simply leaves to bring her car around. Afterwards She orders all of you in the car and takes you to a motel.{/size}"
             "\"Chapter [book_07_units]\"" "{size=-2}In the motel room she grabs your crotch, takes your cock out and starts jerking it off. Shea is in shock but the \"library girl\" is already kissing you.{/size}"
-            "\"Chapter [book_07_units]\"" "{size=-2}Reluctantly Shea joins the girls. You fuck your step sister first, up her butt of course. The \"library girl\" is next in line, Then Ms.Stevens.{/size}"
-            "\"Chapter [book_07_units]\"" "{size=-2}When you wake up everyone but Shea is gone. Your stepsister is asleep, You spread her butt cheeks and slide your morning wood up her little asshole. -The End-{/size}"
-            "\"Epilogue\"" "{size=-2}It's been a year. Ms.Stevens is still working at your school and in regards to the dark haired girl... you have no idea what has become of her.{/size}"
+            "\"Chapter [book_07_units]\"" "{size=-2}Reluctantly Shea joins the girls. You fuck your step sister first, up her butt of course. The \"library girl\" is next in line, Then Miss Stevens.{/size}"
+            "\"Chapter [book_07_units]\"" "{size=-2}When you wake up everyone but Shea is gone. Your stepsister is asleep, You spread her butt cheeks and slide your morning wood up her tight asshole. -The End-{/size}"
+            "\"Epilogue\"" "{size=-2}It's been a year. Miss Stevens is still working at your school and in regards to the dark haired girl... you have no idea what has become of her.{/size}"
             "\"Epilogue\"" "{size=-2}Both you and Shea are students at the same university...{/size}"
-            "\"Epilogue\"" "{size=-2}You've been together since that night in the motel, but you still keep it a secret from everyone. Your only worry these days is Shea's insane appetite for the anal sex. -THE END-{/size}"
+            "\"Epilogue\"" "{size=-2}You've been together since that night in the motel, but you still keep it a secret from everyone. Your only worry these days is Shea's insane appetite for the anal sex.\n -THE END-{/size}"
             "\"Epilogue\"" "{size=-2}-Ending 05 of 05-{/size}" #HAREM IS ENDING # 5.
             return
         else:
@@ -78,13 +78,13 @@ label waifu:
                 "What would you like to do for the rest of the day?"
                 "-Hang around the school building (Page 78)-":
                     if victoria >= 7:
-                        "\"Chapter [book_07_units]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Ms.Stevens is the head of the decorating committee, she seems very busy.{/size}" 
-                        "\"Chapter [book_07_units]\"" "{size=-2}You tell ms.Stevens about your plan to skip the prom. She gets mad, then grabs your crotch and whispers that she will let you cum on her face if you change your mind.{/size}"
-                        "\"Chapter [book_07_units]\"" "{size=-2}Later that night you show up for the prom. You dance with Ms.Stevens, she then takes you to the janitor's closet and let's you jerk off on her face. You plaster it with cum.{/size}"
-                        $ victoria_waifu = True #Completed the book with ms.Stevens.
-                        "\"Epilogue\"" "{size=-2}It's been a year... You tried to stay in touch with ms.Stevens, but it seems like the moment you stopped being one of her pupils she lost all of her interest in you.{/size}"
+                        "\"Chapter [book_07_units]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Miss Stevens is the head of the decorating committee, she seems very busy.{/size}" 
+                        "\"Chapter [book_07_units]\"" "{size=-2}You tell Miss Stevens about your plan to skip the prom. She gets mad, then grabs your crotch and whispers that she will let you cum on her face if you change your mind.{/size}"
+                        "\"Chapter [book_07_units]\"" "{size=-2}Later that night you show up for the prom. You dance with Miss Stevens, she then takes you to the janitor's closet and let's you jerk off on her face. You plaster it with cum.{/size}"
+                        $ victoria_waifu = True #Completed the book with Miss Stevens.
+                        "\"Epilogue\"" "{size=-2}It's been a year... You tried to stay in touch with Miss Stevens, but it seems like the moment you stopped being one of her pupils she lost all of her interest in you.{/size}"
                         "\"Epilogue\"" "{size=-2}But your experience with her motivated you to follow your dream of becoming an adult comics artist. Now you attend a prestigious art-school and are actually quite happy.{/size}"
-                        "\"Epilogue\"" "{size=-2}-Ending 03 of 05-{/size}" #Ms.Stevens IS ENDING # 3.
+                        "\"Epilogue\"" "{size=-2}-Ending 03 of 05-{/size}" #Miss Stevens IS ENDING # 3.
                         return
                     if victoria >= 4:
                         "\"Chapter [book_07_units]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Ms.Stevens is the head of the decorating committee, she seems very busy.{/size}" 
@@ -122,7 +122,7 @@ label waifu:
                         "\"Chapter [book_07_units]\"" "{size=-2}The girl shows up at your doorstep Early on the next morning. She says that she's in the witness protection program, and that her cover has now been compromised because of you...{/size}"
                         $ leena_waifu = True #Completed the book with Leena.
                         "\"Epilogue\"" "{size=-2}It's been two years now. You and the \"library girl\" got married. You live in a beach-house at a secret location with new names.{/size}" 
-                        "\"Epilogue\"" "{size=-2}You are very much in love with her and left your past behind for her. she's so grateful that, more often than not, you find your cock deep down her throat. -The End-{/size}"
+                        "\"Epilogue\"" "{size=-2}You are very much in love with her and left your past behind for her. she's so grateful that, more often than not, you find your cock deep down her throat.\n -The End-{/size}"
                         "\"Epilogue\"" "{size=-2}-Ending 04 of 05-{/size}" #LEENA IS ENDING # 4.
                         return
                     if leena >= 4:
@@ -306,23 +306,23 @@ label home_shea:
 ### DATES ###
 label home_victoria:
     if victoria == 0: #1
-        "\"Chapter [book_07_units]\"" "{size=-2}You decide to roam around the school for a while. Ms.Stevens is sitting behind a desk in one of the classrooms, working and you end up secretly watching her.{/size}"
+        "\"Chapter [book_07_units]\"" "{size=-2}You decide to roam around the school for a while. Miss Stevens is sitting behind a desk in one of the classrooms, working and you end up secretly watching her.{/size}"
     if victoria == 1: #2
-        "\"Chapter [book_07_units]\"" "{size=-2}You find Ms.Stevens working in one of the empty classrooms again. This time She notices you and You have to lie your way out of it. She gives you a big home assignment.{/size}"
+        "\"Chapter [book_07_units]\"" "{size=-2}You find Miss Stevens working in one of the empty classrooms again. This time She notices you and You have to lie your way out of it. She gives you a big home assignment.{/size}"
     if victoria == 2: #3
-        "\"Chapter [book_07_units]\"" "{size=-2}Ms.Stevens finds you roaming around in some deserted school corridors. You haven't completed the assignment she gave you yet. She treats you with contempt for some reason.{/size}"
+        "\"Chapter [book_07_units]\"" "{size=-2}Miss Stevens finds you roaming around in some deserted school corridors. You haven't completed the assignment she gave you yet. She treats you with contempt for some reason.{/size}"
     if victoria == 3: #4
-        "\"Chapter [book_07_units]\"" "{size=-2}You bump into your teacher Ms.Stevens again. Is she stalking your or something? It's the assignment thing again. You start to really dislike the woman.{/size}"
+        "\"Chapter [book_07_units]\"" "{size=-2}You bump into your teacher Miss Stevens again. Is she stalking your or something? It's the assignment thing again. You start to really dislike the woman.{/size}"
     if victoria == 4: #5
-        "\"Chapter [book_07_units]\"" "{size=-2}You try to avoid Ms.Stevens but fail. Your assignment is not completed yet and You grow tired of her droning on about \"how terrible pupils like you fail at life\".{/size}"
+        "\"Chapter [book_07_units]\"" "{size=-2}You try to avoid Miss Stevens but fail. Your assignment is not completed yet and You grow tired of her droning on about \"how terrible pupils like you fail at life\".{/size}"
     if victoria == 5: #6
-        "\"Chapter [book_07_units]\"" "{size=-2}Ms.Stevens lectures you again. While doing so she Accidentally spills her tea on your lap. Afterwards She uses a tissue to rub it off, even though You get aroused by that she pretends not to notice.{/size}" 
+        "\"Chapter [book_07_units]\"" "{size=-2}Miss Stevens lectures you again. While doing so she Accidentally spills her tea on your lap. Afterwards She uses a tissue to rub it off, even though You get aroused by that she pretends not to notice.{/size}" 
     if victoria == 6: #7
-        "\"Chapter [book_07_units]\"" "{size=-2}Ms.Stevens lectures you once again. Suddenly she kisses your lips, apologizes and asks you to keep this a secret. You return home very confused.{/size}" 
+        "\"Chapter [book_07_units]\"" "{size=-2}Miss Stevens lectures you once again. Suddenly she kisses your lips, apologizes and asks you to keep this a secret. You return home very confused.{/size}" 
     if victoria == 7: #8
         "\"Chapter [book_07_units]\"" "{size=-2}You decide to roam the school after your classes again in hopes of running into Ms.Stevens, but you can't find her anywhere...{/size}"  
     if victoria == 8: #9
-        "\"Chapter [book_07_units]\"" "{size=-2}Ms.Stevens invites you to her office. She grabs your crotch and fondles your hard cock for a while, but then just sends you on your way. You return home in a daze.{/size}"   
+        "\"Chapter [book_07_units]\"" "{size=-2}Miss Stevens invites you to her office. She grabs your crotch and fondles your hard cock for a while, but then just sends you on your way. You return home in a daze.{/size}"   
     $ victoria += 1            
     return
 
@@ -332,7 +332,7 @@ label home_leena:
     if leena == 0: #1
         "\"Chapter [book_07_units]\"" "{size=-2}You go to the school library. Apart from an unfamiliar dark haired girl in the corner you are the only visitor. You spend some time with reading a sci-fi novel.{/size}"
     if leena == 1: #2
-        "\"Chapter [book_07_units]\"" "{size=-2}You're at the library. There is that girl with the glasses again. You read your sci-fi book and catch the girl staring at you A couple of timesng. What's her problem?{/size}"
+        "\"Chapter [book_07_units]\"" "{size=-2}You're at the library. There is that girl with the glasses again. You read your sci-fi book and catch the girl staring at you several times. What's her problem?{/size}"
     if leena == 2: #3
         "\"Chapter [book_07_units]\"" "{size=-2}Seems like the girl is always here. You look at her properly for the first time: long dark hair, glasses, with a well-formed body. She is sort of cute, but this time she catches you staring.{/size}"       
     if leena == 3: #4

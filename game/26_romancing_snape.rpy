@@ -21,7 +21,7 @@ label date_with_snape_01:
     pause.1
     show screen blktone
     with d3
-    ">You spend the evening by discussing all sorts of inappropriate things with Porfessor Snape."
+    ">You spend the evening by discussing all sorts of inappropriate things with Professor Snape."
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
     hide screen notes
     show screen notes

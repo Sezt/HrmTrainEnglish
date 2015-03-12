@@ -4710,12 +4710,12 @@ init-2:
     $ j = Character('Jasmine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ bj = Character('Evil Jasmine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ gj = Character('Good Jasmine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ cr1 = Character('Someone from the crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ cr1 = Character('Somebody from the crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ cr2 = Character('Another voice from the crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ cr3 = Character('female voice', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ cr4 = Character('somebody named mustafa', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ cr5 = Character('crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ cr6 = Character('Several voices at once', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ cr5 = Character('the crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ cr6 = Character('many voices at once', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ ej = Character('Evil Jasmine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ gj = Character('Good Jasmine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ a = Character('Aladdin', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
@@ -4725,11 +4725,11 @@ init-2:
     $ who2 = Character('???', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ jaf1 = Character('Jafar', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ fem = Character('female student', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ mal = Character('student # 1', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ mal2 = Character('student # 2', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ ann = Character('narrator', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ sly1 = Character('student of Slytherin', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ sly2 = Character('Another student Slytherine', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ mal = Character('Male Student # 1', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ mal2 = Character('Male Student # 2', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ ann = Character('The Announcer', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ sly1 = Character('Slytherin student', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ sly2 = Character('Another Slytherin student', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ aa = Character('Akabur', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     
     
@@ -4739,8 +4739,8 @@ init-2:
     
     ###HARRY POTTER CHARACTERS###
     $ translators = Character('Translator', color="#0089BE", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ her = Character('GErmione', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    $ her2 = Character('GErmione', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
+    $ her = Character('Hermione', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ her2 = Character('Hermione', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
     $ sna = Character('Severus Snape', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ sna2 = Character('Severus snape', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed")  #Text box used for "head only" speech. (Because it has padding).
     $ vol = Character('Lord Voldemort', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
@@ -5274,11 +5274,11 @@ label start:
                     $ dress_code = True # Turns TRUE when you gift the miniskirt. Unlocks the "dress code" button.
                     $ gave_miniskirt = True #Turns True when Hermione has the miniskirt.
                     ">School miniskirt has been added to Hermione's wardrobe."
-            "\"Never mind.\"":
+            "\"No need.\"":
                 pass
 
 #    menu:         
-#        "Отлаживать":
+#        "debugging":
 #            $ end.SetEndingValue(const_ENDING_PUBLIC_WHORE,2)
 #            $ hermione_main_zorder = 5  
 #            $ hermione_chibi_ypos = 250
