@@ -318,7 +318,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
 
 
 #    $ request_03_points += 1 #Leveling up the event.
-    $ request_03 = False #When False - you gave her her Трусики back.
+    $ request_03 = False #When False - you gave her her panties back.
     $ hermione_sleeping = True
 
     play music "music/Music for Manatees.mp3" fadein 1 fadeout 1 # NIGHT MUSIC
@@ -327,9 +327,9 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
     
     
     
-### Трусики SOAKED IN CUM ###
+### PANTIES SOAKED IN CUM ###
 label panties_soaked_in_cum:
-    $ have_cum_soaced_panties = False #TRUE when you have the Трусики in your possession (before you return them to Hermione).
+    $ have_cum_soaced_panties = False #TRUE when you have the panties in your possession (before you return them to Hermione).
     $ she_knows_about_cum = False
     $ pos = POS_120
     
@@ -423,7 +423,7 @@ label panties_soaked_in_cum:
         $herView.hideshowQQ( "body_34.png", pos )
         her "Will this be all, sir?"
         $herView.hideshowQQ( "body_44.png", pos )
-        her "Это все, сэр?"
+        her "(It doesn't feel that bad...)"
     if whoring >= 9: #LEVEL 04+ (THIRD EVENT)
         $herView.hideshowQQ( "body_71.png", pos )
         her "My panties..."
@@ -454,18 +454,20 @@ label panties_soaked_in_cum:
                 her "They reek of semen!"
         $herView.hideshowQQ( "body_68.png", pos )
         her "Hm..."
-        her "Seems like these will require some serious cleaning before I can put them on..."
+        her "Seems like these will require some serious cleaning before I can put them on again..."
         $herView.hideshowQQ( "body_64.png", pos )
         her "Unless you want me to put them on now, sir...?"
         menu: 
             "\"Yes! Put them on now, girl!\"":
                 her "Well, if I must..."
             "\"I don't care. Do what you want.\"":
-                her "Why not put them on one more time?"
+                her "I think I shall wear them, then..."
         
         $herView.hideshowQQ( "body_74.png", pos )
-        her "I am only doing this to give my house a fair chance at winning the cup this year..."
+        her "You see, I am only doing this to give my house a fair chance at winning the cup this year..."
         m "Right..."
+        her "It isn't as though I enjoy the thought of someone's cum smeared all over my pussy, you know."
+        m "I would never have considered such a thing."
         
         $herView.hideQQ()
         
@@ -484,10 +486,10 @@ label panties_soaked_in_cum:
             $herView.hideQQ()
             
             $herView.showQQ( "body_58.png", pos )
-            her "One friend told me that guys like all kinds of perversions."
+            her "A girl I know told me that guys like all kinds of...perversions."
             $herView.hideshowQQ( "body_129.png", pos )
-            her "That's right, sir?"
-            m "Hmm, well, if you ask..."
+            her "Is that so, sir?"
+            m "Hmm, well, I thin it depends on what you consider a \"perversion\"..."
             m "What specifically are you talking about?"
             $herView.hideshowQQ( "body_84.png", pos )
             her "Well, for example..."
@@ -498,30 +500,30 @@ label panties_soaked_in_cum:
             $herView.data().addItem( 'panties_cum', CharacterExItem( herView.mMiscFolder, 'panties_soaked.png', G_Z_PANTIES + 1, 'panties' ) )
             
             $herView.showQQ( "185.png", pos )
-            her "...if the girl will be in panties soaked in cum?"
+            her "...if they were to see a girl wearing panties soaked in their cum?"
             pause
             menu:
-                "\"Of course, guys are in awe of this!\"":
+                "\"Of course! Any man would be excited by that!\"":
                     $herView.hideshowQQ( "body_128.png", pos )
                     her "I thought so, Professor."
                     $herView.hideQQ()
                     $herView.data().loadState()
                     $herView.showQQ( "body_52.png", pos )
                     her "Then I will go?"
-                    m "Hmm, Yes, miss Granger..."
+                    m "Yes, Miss Granger..."
                     $herView.hideshowQQ( "body_64.png", pos )
                     her "You have not forgotten anything, sir?"
                     m "Оh..."
                     $herView.hideshowQQ( "body_45.png", pos )
 
-                "\"I think it's dirty!\"":
+                "\"I think they would be a sick pervert!\"":
                     $mad += 15
                     $herView.hideQQ()
                     $herView.data().loadState()
                     $herView.showQQ( "body_51.png", pos )
-                    her "tsk!"
+                    her "Hmmph!"
                     $herView.hideshowQQ( "body_191.png", pos )
-                    her "My points, sir!"
+                    her "I would like my points, then!"
                     
                     
 
