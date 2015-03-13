@@ -450,7 +450,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                     $herView.hideshowQQ( "body_58.png", pos )
                                     her "In wooden partitions make a hole below the belt, where several girls expose their..."
                                     her "Charms, sir. And if the guy guessed who it is..."
-                                    m "{size=-4}(Oh, yeah ... yeah ... I have ... already!) * Argh! *{/size}"
+                                    m "{size=-4}(Oh, yeah ... yeah ... I have ... already!){/size}{size=+2} * Argh! *{/size}"
                                     $herView.hideQQ()
                                     show screen white 
                                     pause.1
@@ -469,7 +469,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                     #pause 3
                                     pause
                                     
-                                    $MusicStart("music/Reamonn-Supergirl.mp3")                                   
+                                    $MusicStart("Supergirl")                                   
                                     show screen bld1
                                     with d3
                                     $herView.showQQ( "body_64.png", pos )
@@ -509,7 +509,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                             her "Yes, sir. The girls take him to his bedroom and he has to do everything for them."
                                             m "?!..."
                                             $herView.hideshowQQ( "body_122.png", pos )
-                                            her "Absolutely everything that each of them will say, sir!"
+                                            her "{size=+4}Absolutely{/size} everything that each of them will say, sir!"
                                             m "Oh shit!"
                                             her "Professor, I think you once again rises. If you want to continue, then only 15 Pts ..."
                                             m "No !!! Enough for today!"

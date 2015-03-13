@@ -224,7 +224,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                 m "Are you kidding?"
                 $herView.hideshowQQ( "body_53.png", pos )
                 her "Sir?"
-                m "I expect to see the underwear that on you!"
+                m "I expect to see the underwear that on {size=+4}you!{/size}"
                 $herView.hideshowQQ( "body_68.png", pos )
                 her "Ah! So it is not, sir. Today I go without panties."
                 m "Well, then show me!"
@@ -270,7 +270,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                         hide screen bld1
 
                         $herView.data().delPanties()
-                        $herView.data().saveState()
+#                        $herView.data().saveState()
                         $herView.data().addPose( CharacterExItemSkirtLifted( herView.mPoseFolder, 'pose_skirt_up.png', G_Z_POSE ) )
                         $ pos = POS_120
 
@@ -391,7 +391,7 @@ label new_request_02: #SHOW ME YOUR Трусики
         $herView.hideQQ()
         $ pos.xpos = 300
         $herView.showQQ( "body_13.png", pos )
-        her "Another 5 points..."
+        her "Another [current_payout] points..."
         her "Can't wait to tell the guys!"
         $herView.hideshowQQ( "body_12.png", pos )
         her "Only that I can't actually tell them about any of this..."
@@ -402,6 +402,7 @@ label new_request_02: #SHOW ME YOUR Трусики
         her "It's getting pretty late, Sir... I should go..."
 
     label new_request_16_jerkonly_to_02:
+        hide screen hermione_02 #Hermione stands still.
         $herView.data().loadState()
 
     

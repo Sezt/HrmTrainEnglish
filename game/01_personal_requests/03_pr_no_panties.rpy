@@ -111,7 +111,7 @@ label new_request_03: #(Whoring = 3 - 5)
         if IsFirstRun() and whoring < 12:
             her "emm..."
             her " This is a surprise, sir, but..."
-        if request_03 >= 1:
+        if not IsFirstRun():
             her "Again, sir?"
             m "Yes again..."
         her "Here..."
@@ -283,11 +283,18 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 $ pos = POS_120
                 $herView.showQQ( "body_16.png", pos )
                 her "Another ordinary day at Hogwarts..."
-                her "I flirted with some boys, went to classes, spent time in the library ..."
-                $herView.hideshowQQ( "body_29.png", pos )
-                her "Although I have to admit, it was oddly empowering to have no underwear on.."
-                her "...especially since the boys didn't suspect..."
-                her "And it's much cooler.  I wonder why more girls don't choose do go without..."
+                her "Nothing remarkable..."
+                if whoring>=15:
+                    $SetHearts(4)
+                    m "No more linen does not deliver you inconvenience, miss Granger?"
+                    $herView.hideshowQQ( "body_29.png", pos )
+                    her "Inconvenience, sir? What are you... Oh, that!"
+                    her "Well, we are grown people, Professor. If a girl doesn't wear underwear, so what?..."
+                    m "Hmm... Really."
+                else:
+                    $herView.hideshowQQ( "body_29.png", pos )
+                    her "Although I must admit..."
+                    her "I was oddly free without underwear..."
                 her "Hm..."
                 $herView.hideshowQQ( "body_45.png", pos )
                 her "Can I have my panties back now please?"
@@ -300,6 +307,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                     $herView.hideshowQQ( "body_45.png", pos )
                     her "And my payment?"
                     m "Yes, yes..."
+
     label back_from_panties:
     $ gryffindor +=15
     m "Fifteen points to Gryffindor, Miss Granger. Well deserved." 
@@ -436,7 +444,7 @@ label panties_soaked_in_cum:
     if whoring >= 9: #LEVEL 04+ (THIRD EVENT)
         $herView.hideshowQQ( "body_71.png", pos )
         her "My panties..."
-        if event.IsFinished():
+        if not IsFirstRun():
             her "They are covered in something slimy again..."
         else:
             her "They are covered in something slimy..."
@@ -477,7 +485,7 @@ label panties_soaked_in_cum:
         m "Right..."
         her "It isn't as though I enjoy the thought of someone's cum smeared all over my pussy, you know."
         m "I would never have considered such a thing."
-         
+        
         $herView.hideQQ()
         
         show screen blktone8
