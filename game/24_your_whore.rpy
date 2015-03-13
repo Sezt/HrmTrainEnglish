@@ -1473,7 +1473,7 @@ label your_whore:
         $herViewHead.showQ( "body_165.png", posHead )
         her "Professor Dumbledore..."
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her2 "Вам понравилось? Это было достойным ответным подарком?"
+            her2 "Did you like it? It was worthy of a return gift?"
             $herViewHead.hideQ()
             g4 "Well, bitch!"
             her2 "I have you to thank?"
@@ -3732,6 +3732,10 @@ label test:
     {color=#e5e297}-\{The lyrics of new events:\}-{/color}\n\n\
     {color=#fff}\
     {a=http://wtrus.ixbb.ru/profile.php?id=4}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\n\
+    \n\n\n\
+    {color=#e5e297}-\{Verification of translation and additions to the event}-{/color}\n\n\
+    {color=#fff}\
+    JJ{/a}\n\n\
     \n\n\n\
     {color=#e5e297}-\{Beta testing English version}-{/color}\n\n\
     {color=#fff}\

@@ -9,7 +9,7 @@ label sexy_tutoring:
 #            "Touch her thigh."
 #            "Touch yourself."
 #            "Touch her tits."
-    "You teach Hermione."
+    "You tutor Hermione."
     jump day_start 
     
 ###DATE - 1#######

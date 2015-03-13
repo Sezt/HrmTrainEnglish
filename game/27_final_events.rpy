@@ -1654,7 +1654,7 @@ label good_bye_snape:
         {size=+5}{color=#e5e297}-Artwork-{/color}{/size}\n     {color=#cbcbcb}AKABUR{/color}\n\n\
         {size=+5}{color=#e5e297}-Additional Artwork-{/color}{/size}\n     {color=#cbcbcb}DAHR{/color}\n\n\
         {size=+5}{color=#e5e297}-Sound Effects-{/color}{/size}\n    {color=#cbcbcb}http://www.freesound.org/{/color}\n\n"
-    #    {size=+5}{color=#e5e297}-МУЗЫКА-{/color}{/size}\n\n
+    #    {size=+5}{color=#e5e297}-MUSIC-{/color}{/size}\n\n
 
     #    {color=#e5e297}(From \"NEWGROUNDS\")\n
     #    {color=#e5e297}\"Eastern Journey\" {/color}{color=#cbcbcb}by Pike270.{/color}\n

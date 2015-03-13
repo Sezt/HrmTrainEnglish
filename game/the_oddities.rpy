@@ -129,7 +129,7 @@ label the_oddities:
                             hide screen gift
                             jump gifts_menu
                             
-                "- CHOCOLATE (40 g.) -":
+                "- Chocolate (40 g.) -":
                     $ the_gift = "03_hp/18_store/12.png" # CHOCOLATE.
                     show screen gift
                     with d3
@@ -229,7 +229,7 @@ label the_oddities:
                     hide screen bld1
                     with d3
                     jump gifts_menu
-                "- butterbeer (50 g.) -" if whoring >= 3: # LEVEL 02.
+                "- Butterbeer (50 g.) -" if whoring >= 3: # LEVEL 02.
                     $ the_gift = "03_hp/18_store/21.png" # BUTTERBEER
                     show screen gift
                     with d3
@@ -370,7 +370,7 @@ label the_oddities:
                             jump gifts_menu
 
 
-                "- Adult magazine (60 g.) -":
+                "- Adult magazines (60 g.) -":
                     $ the_gift = "03_hp/18_store/19.png" # MAGAZINE # 3
                     show screen gift
                     with d3
@@ -531,7 +531,7 @@ label the_oddities:
                     hide screen bld1
                     with d3
                     jump gifts_menu
-                "- vibrator (55 g.) -" if whoring >= 3: # LEVEL 02.
+                "- Vibrator (55 g.) -" if whoring >= 3: # LEVEL 02.
                     $ the_gift = "03_hp/18_store/13.png" # VIBRATOR.
                     show screen gift
                     with d3

@@ -448,7 +448,7 @@ label special_date_with_snape_02: #TAKES PLACE AFTER SECOND VISIT FROM HERMIONE.
             $sna_head_state = 18
             sna_head_main "You are a Genius!"
             m "Yes, I am a genius genie. What are the odds of that..."
-            translators "По-английски 'джинн' (genie), звучит сходно с 'гений' (genius)."
+#            translators "По-английски 'джинн' (genie), звучит сходно с 'гений' (genius)."
             if d_flag_01 and d_flag_02 and d_flag_03:
                 pass
             else:

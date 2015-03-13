@@ -39,53 +39,59 @@ label new_request_03: #(Whoring = 3 - 5)
         her "W-what?"
         her "My... panties...?"
         her "Professor Dumbledore, this is..."
-        m "This is the favour I will be buying from you today, miss Granger..."
-        m "If you are not interested you are more than welcome to leave."
+        m "This is the favour I will be buying from you today, Miss Granger..."
+        m "It is a small thing.  Something I'm sure you won't even miss not having."
+        m "But if you are not interested you are more than welcome to leave."
         her "No, I am interested. I am.... it's just..."
-        her "You need my...."
+        her "You want my...."
         play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
         $herView.hideshowQQ( "body_47.png", pos )
         her "...panties, sir?"
         m "Yes I do..."
         $herView.hideshowQQ( "body_66.png", pos )
         her "May I ask what you are planning to do with them...?"
-        m "Ehm...I'm conducting research..."
+        m "Let's just say I am conducting an experiment."
         her "But this is kind of inappropriate, don't you think?"
-        m "But don't you hate it that some of the girls from \"Slytherin\"..."
-        m "Are selling favours for house points, miss Granger?"
+        m "I'm not sure that it is.  You give your clothing to the house elves to launder or mend regularly, I'm sure."
+        m "As I said, you are in no way obligated to do any favour I ask.  I will not hold it against you."
+        m "But if it is as you say and some of the girls from Slytherin are selling favours for house points..."
+        m "...that would put Gryffindor at a disadvantage, wouldn't it, Miss Granger?"
+        m "And you claim that many of them are doing things far worse so they may be getting even more points..."
         $herView.hideshowQQ( "body_47.png", pos )
-        her "Yes I do!"
+        her "Then...then I shall!"
         $herView.hideshowQQ( "body_12.png", pos )
-        her "(Those \"Slythering\" tramps have no dignity.)"
+        her "(Those Slytherin tramps have no dignity.)"
         $herView.hideQQ()
-        m "Well, there you go then!"
+        m "Well, then you {i}have{/i} shown them, haven't you!"
         $herView.hideshowQQ( "body_66.png", pos )
         her "Huh?"
-        m "Beat them at their own game!"
+        m "Gave them a taste of their own medicine, so to speak!"
         $herView.hideshowQQ( "body_14.png", pos )
         her "What?"
-        m "Yes! Don't just put the \"Gryffindor\" house back on top..."
-        m "But do it by beating them at their own game!"
+        m "Yes! You see it now, do you not?  Don't just put Gryffindor house back on top..."
+        m "...but do it by beating them at their own game!"
         $herView.hideshowQQ( "body_11.png", pos )
-        her "Professor..."
-        m "A headmaster cannot play favourites, but you know how I feel about \"Gryffindor\"..."
-        m "I wish I could give you the points but that would ruin the system..."
+        her "Professor...if there is another way..."
+        m "A headmaster cannot play favourites, as you know, but Gryffindor House has always been a shining beacon..."
+        m "I wish I could merely give you the points but that would hardly be fair to Hufflpuff and Ravenclaw..."
         show screen blktone8
         $herView.hideQQ()
-        ">Suddenly Hermione extends her arm to you..."
-        ">You see that she is clutching a little piece of fabric in her fist..."
-        ">Her panties? You can't help but wonder when she managed to take them off..."
-        m "??!"
-        ">You acquired Hermione's panties..."
+        ">Hermione thinks for a moment, then bends down in front of your desk..."
+        ">She stands and suddenly Hermione extends her arm to you..."
+        ">You see that she is clutching a small ball of fabric in her fist..."
+        ">Her panties? You can't help but wonder how she managed to take them off so quickly..."
+        m "Ah!"
         hide screen blktone8
         with d3
         $herView.hideshowQQ( "body_67.png", pos )
         
         her "Just take them sir..."
-        m "What? When did you?"
+        m "And you do so of your own volition?"
         her "Your speech was so moving..."
         her "You are so right, sir! I shall beat them at their own game!"
+        her "Any small discomfort I may have...well, Gryffindor is worth it!"
         her "My classes are about to start, so I should probably go now..."
+        ">You acquired Hermione's panties..."
         $herView.hideQQ()
 
         $ pos = POS_370
@@ -94,10 +100,10 @@ label new_request_03: #(Whoring = 3 - 5)
         $herView.hideshowQQ( "body_29.png", pos )
         her "...I hope nobody will notice that I have no underwear on today..."
         $herView.hideshowQQ( "body_31.png", pos )
-        her "Oh, and I will be back tonight to pick them up, sir."
+        her "Oh, Professor, I will be back tonight to get them."
         m "Of course. Your panties will be right here on my desk, waiting for you..."
         $herView.hideshowQQ( "body_34.png", pos )
-        her "............."
+        her "(I wish he would not leave them out on his desk like that.  Someone might see!)"
         jump request_03_ends
 
     else: #<========================================================================================== FIRST EVENT!
@@ -117,14 +123,14 @@ label new_request_03: #(Whoring = 3 - 5)
             her "Yes, I had a feeling that you might ask for these today, sir."
             m "A feeling?"
             $herView.hideshowQQ( "body_68.png", pos )
-            her "Well, to be completely honest I just do not bother to wear them much anymore..."
+            her "To be completely honest I find it more comfortable not to wear them much anymore..."
         else:
             $herView.hideQQ()
             ">Hermione takes off her panties and hands them over to you..."
         $herView.hideQQ()
         ">Hermione's panties acquired."
         $herView.showQQ( "body_15.png", pos )
-        her "Well, the classes are about to start, so I'd better go now..."
+        her "Well, my classes are about to start, so I'd better go now..."
 
         
     label request_03_ends:
@@ -194,7 +200,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 her "Thank you, sir."
                 her "And my payment?"
                 m "Of course."
-        "\"How was your day, miss Granger?\"":
+        "\"How was your day, Miss Granger?\"":
             if  whoring <= 5: #LEVEL 02. EVENT LEVEL: 01
 #                $ new_request_03_01 = True # HEARTS.
 #                SetHearts(1)
@@ -206,6 +212,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 her "Quite ordinary actually..."
                 $herView.hideshowQQ( "body_13.png", pos )
                 her "Although I could not help but worry that somebody would notice somehow..."
+                her "I had to be careful climbing the stairs...so no boys would be behind me...I was almost late to some classes."
                 $herView.hideshowQQ( "body_29.png", pos )
                 her "....."
                 $herView.hideshowQQ( "body_31.png", pos )
@@ -228,23 +235,23 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 $herView.showQQ( "body_15.png", pos )
                 her "Oh..."
                 her "It was quite ordinary really..."
-                her "I spent some time with my classmates..."
-                her "And we had a short \"MRM\" meeting after that..."
+                her "I spent some time with my classmates and went to classes, of course..."
+                her "And we had a short MRM meeting after that..."
                 #translators "Напоминание.\nОЗМП - Общество по Защите Мужских Прав."
                 $herView.hideshowQQ( "body_16.png", pos )
-                her "I gave a short speech on \"Why it is wrong to sell sexual favours in exchange for house points\"..."
+                her "I gave a short speech on why it is wrong to sell sexual favours in exchange for House points..."
                 $herView.hideshowQQ( "body_12.png", pos )
-                her "I felt bad that I had to give the speech without any underwear on..."
+                her "I felt odd that I had to give the speech without any underwear on..."
                 menu:
                     "\"You little hypocrite!\"":
                         $ mad +=5
                         $herView.hideshowQQ( "body_14.png", pos )
-                        her "Professor?"
+                        her "Professor?!  How dare you call me that!"
                         m "You sold your panties to me this morning..."
-                        m "And a couple of hours later you already publicly condemned that exact behavior..."
-                        m "What would you call this?"
+                        m "And a few hours later you publicly condemned that exact behavior..."
+                        m "What would you call that?"
                         $herView.hideshowQQ( "body_69.png", pos )
-                        her "I know you are right, professor..."
+                        her "It seems you are right, Professor..."
                         her "(But we need the points...)"
                         $herView.hideshowQQ( "body_66.png", pos )
                         her "Can I have my payment now please?"
@@ -255,14 +262,15 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                             jump panties_soaked_in_cum
                         else:
                             pass
-                    "\"It's for the grater good...\"":
+                    "\"It's for the greater good...\"":
                         her "Exactly!"
-                        her "We need those points badly..."
+                        her "Gryffindor deserves those points, if only to offset those gotten immorally..."
                         her "It is not my fault that the system is so corrupted..."
                         $herView.hideshowQQ( "body_16.png", pos )
                         her "I shall remain a symbol of righteousness to my peers, no matter what!"
+                        her "(no matter what I have to do sometimes...)"
                         $herView.hideshowQQ( "body_31.png", pos )
-                        her "Can I have my panties back now, please?"
+                        her "Can...can I just have my panties back now, please?"
                         if have_cum_soaced_panties:
                             jump panties_soaked_in_cum
                         else:
@@ -274,11 +282,12 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 $herView.hideQQ()
                 $ pos = POS_120
                 $herView.showQQ( "body_16.png", pos )
-                her "Another ordinary day at hogwarts..."
-                her "Nothing worth mentioning happened today..."
+                her "Another ordinary day at Hogwarts..."
+                her "I flirted with some boys, went to classes, spent time in the library ..."
                 $herView.hideshowQQ( "body_29.png", pos )
-                her "Although I have to admit..."
-                her "It was oddly empowering to have no underwear on..."
+                her "Although I have to admit, it was oddly empowering to have no underwear on.."
+                her "...especially since the boys didn't suspect..."
+                her "And it's much cooler.  I wonder why more girls don't choose do go without..."
                 her "Hm..."
                 $herView.hideshowQQ( "body_45.png", pos )
                 her "Can I have my panties back now please?"
@@ -293,7 +302,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                     m "Yes, yes..."
     label back_from_panties:
     $ gryffindor +=15
-    m "Fifteen points to \"Gryffindor\" miss Granger. Well deserved." 
+    m "Fifteen points to Gryffindor, Miss Granger. Well deserved." 
     her "Thank you, sir..."
     m "You can go now."
     her "Good night, sir."
@@ -345,14 +354,14 @@ label panties_soaked_in_cum:
             "\"An experiment went wrong\"":
                 $herView.hideshowQQ( "body_02.png", pos )
                 her "An experiment went wrong, sir?"
-                m "Yes... Or maybe I should rather say..."
+                m "Yes... Or should I say..."
                 g9 "\"An experiment went very right\"? He-he..."
                 $herView.hideshowQQ( "body_07.png", pos )
                 her ".....................?"
                 her "What kind of experiment was it?"
                 m "What? Oh..."
-                m "Some top secret research I'm conducting."
-                m "I can't discuss it with a student."
+                m "Something having to do with ectoplasm.  It required a small personal item..."
+                m "It's a bit advanced to discuss with a student."
                 $herView.hideshowQQ( "body_05.png", pos )
                 her "................................"
             "\"You gave them to me like this!\"":
@@ -360,7 +369,7 @@ label panties_soaked_in_cum:
                 her ".........................."
         $herView.hideshowQQ( "body_71.png", pos )
         her "Well, these will require some serious cleaning before I can put them on again..."
-        m "Or you could put them on now."
+        m "Or you could put them on now.  They aren't that bad."
         $herView.hideshowQQ( "body_14.png", pos )
         her "What?"
         $herView.hideshowQQ( "body_13.png", pos )
@@ -371,22 +380,22 @@ label panties_soaked_in_cum:
                 $herView.hideshowQQ( "body_72.png", pos )
                 her "What?"
                 her "Professor, you are joking, right?"
-                m "I am not..."
+                m "I am not.  There is nothing wrong with them."
                 $herView.hideshowQQ( "body_31.png", pos )
                 her "B-but..."
                 $herView.hideshowQQ( "body_33.png", pos )
                 her "........................................"
                 $herView.hideshowQQ( "body_47.png", pos )
                 her "(Must you always have your way, sir?)"
-                m "What was that, miss Granger?"
+                m "What was that, Miss Granger?"
                 $herView.hideshowQQ( "body_30.png", pos )
                 her "It's nothing, sir."
-                her "Putting my panties back on!"
+                her "(Imagine! Making me put my panties on when I don't want to wear them!)"
                 $herView.hideQQ()
                 show screen blktone8
                 with d3
                 ">Hermione hesitantly puts on her panties..."
-                ">A tiny stream of cum trickles down one of her legs..."
+                ">They leave a tiny smear of cum sliding down one of her legs..."
                 ">Hermione looks very uncomfortable..."
                 hide screen blktone8
                 with d3
@@ -409,15 +418,15 @@ label panties_soaked_in_cum:
         ">Hermione gives her cum-soaked underwear a quizzical look..."
         $herView.hideshowQQ( "body_71.png", pos )
         her "Seems like these will require some serious cleaning before I can put them on again..."
-        m "Why not put them on now?"
+        m "Why not wear them now?"
         $herView.hideshowQQ( "body_17.png", pos )
         her "Hm....?"
         $herView.hideshowQQ( "body_71.png", pos )
-        her "Well, I suppose I could wear them one more time before putting them into laundry..."
+        her "Well, I suppose I could wear them one more time before putting them into the laundry..."
         $herView.hideQQ()
         show screen blktone8
         with d3
-        ">Hermione puts the panties on..."
+        ">Hermione puts her panties on..."
         hide screen blktone8
         with d3
         $herView.hideshowQQ( "body_34.png", pos )
@@ -454,21 +463,21 @@ label panties_soaked_in_cum:
                 her "They reek of semen!"
         $herView.hideshowQQ( "body_68.png", pos )
         her "Hm..."
-        her "Seems like these will require some serious cleaning before I can put them on again..."
+        her "Seems like these will require some serious cleaning before I can put them on..."
         $herView.hideshowQQ( "body_64.png", pos )
         her "Unless you want me to put them on now, sir...?"
         menu: 
             "\"Yes! Put them on now, girl!\"":
-                her "Well, if I must..."
+                her "Well, if you like..."
             "\"I don't care. Do what you want.\"":
-                her "I think I shall wear them, then..."
+                her "Why not put them on one more time?"
         
         $herView.hideshowQQ( "body_74.png", pos )
-        her "You see, I am only doing this to give my house a fair chance at winning the cup this year..."
+        her "I am only doing this to give my house a fair chance at winning the cup this year..."
         m "Right..."
         her "It isn't as though I enjoy the thought of someone's cum smeared all over my pussy, you know."
         m "I would never have considered such a thing."
-        
+         
         $herView.hideQQ()
         
         show screen blktone8
@@ -482,7 +491,7 @@ label panties_soaked_in_cum:
         if she_knows_about_cum == True and whoring >= 12:
             $herView.showQQ( "body_58.png", pos )
             her "...sir?"
-            m "yes?"
+            m "Yes?"
             $herView.hideQQ()
             
             $herView.showQQ( "body_58.png", pos )
@@ -509,8 +518,8 @@ label panties_soaked_in_cum:
                     $herView.hideQQ()
                     $herView.data().loadState()
                     $herView.showQQ( "body_52.png", pos )
-                    her "Then I will go?"
-                    m "Yes, Miss Granger..."
+                    her "Then I may go?"
+                    m "Hmm, Yes, Miss Granger..."
                     $herView.hideshowQQ( "body_64.png", pos )
                     her "You have not forgotten anything, sir?"
                     m "Оh..."

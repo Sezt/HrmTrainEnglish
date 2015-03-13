@@ -264,7 +264,7 @@ if this.event_05._finish2==4:
 screen statistics: #более подробно см. здесь http://www.renpy.org/doc/html/screens.html
     hbox: #горизонтальный «контейнер», где будет изображение золота и его количество
         spacing 10 xpos 630 ypos 20#отступ для текста, если надо прямо в левом углу — убираем его        
-        text "{size=-3}day: [day]\nwhoring [whoring]\nlevel: [level]\nknowledge: [knowledge]\nslytherin: [slytherin]\ngryffindor: [gryffindor]\nfriendship with spape: [snape_friendship]\nday of week: [day_of_week]\nconcentration: [concentration]\nspeedwriting: [speedwriting]{/size}" #сумма текстом
+        text "{size=-3}Day: [day]\nWhoring: [whoring]\nLevel: [level]\nKnowledge: [knowledge]\nSlytherin [slytherin]\nGryffindor [gryffindor]\nS.Freind: [snape_friendship]\nDay of week: [day_of_week]\nConcentration: [concentration]\nSpeedwriting: [speedwriting]{/size}" #сумма текстом
 
 
 
@@ -761,39 +761,39 @@ init -2:
     $ sscroll_28 = False
     $ sscroll_29 = False
     $ sscroll_30 = False
-    #
-    $ scroll_01_name = "scroll #1"
-    $ scroll_02_name = "scroll #2"
-    $ scroll_03_name = "scroll #3"
-    $ scroll_04_name = "scroll #4"
-    $ scroll_05_name = "scroll #5"
-    $ scroll_06_name = "scroll #6"
-    $ scroll_07_name = "scroll #7"
-    $ scroll_08_name = "scroll #8"
-    $ scroll_09_name = "scroll #9"
-    $ scroll_10_name = "scroll #10"
-    #
-    $ scroll_11_name = "scroll #11"
-    $ scroll_12_name = "scroll #12"
-    $ scroll_13_name = "scroll #13"
-    $ scroll_14_name = "scroll #14"
-    $ scroll_15_name = "scroll #15"
-    $ scroll_16_name = "scroll #16"
-    $ scroll_17_name = "scroll #17"
-    $ scroll_18_name = "scroll #18"
-    $ scroll_19_name = "scroll #19"
-    $ scroll_20_name = "scroll #20"
-    #
-    $ scroll_21_name = "scroll #21"
-    $ scroll_22_name = "scroll #22"
-    $ scroll_23_name = "scroll #23"
-    $ scroll_24_name = "scroll #24"
-    $ scroll_25_name = "scroll #25"
-    $ scroll_26_name = "scroll #26"
-    $ scroll_27_name = "scroll #27"
-    $ scroll_28_name = "scroll #28"
-    $ scroll_29_name = "scroll #29"
-    $ scroll_30_name = "scroll #30"
+#
+    $ scroll_01_name = "The room"
+    $ scroll_02_name = "The calendar"
+    $ scroll_03_name = "The girl"
+    $ scroll_04_name = "Deeptroating"
+    $ scroll_05_name = "Poster 01"
+    $ scroll_06_name = "Poster 02"
+    $ scroll_07_name = "Chibi-dancing"
+    $ scroll_08_name = "Game items"
+    $ scroll_09_name = "Panties no panties"
+    $ scroll_10_name = "A lot of pegs"
+#
+    $ scroll_11_name = "House-elf brothel"
+    $ scroll_12_name = "Me and Lola"
+    $ scroll_13_name = "Hard training"
+    $ scroll_14_name = "Wizard's Chess"
+    $ scroll_15_name = "Tutoring books"
+    $ scroll_16_name = "Extra gifts 01"
+    $ scroll_17_name = "Extra gifts 02"
+    $ scroll_18_name = "Fiction books"
+    $ scroll_19_name = "Singer whore"
+    $ scroll_20_name = "Casting"
+#    
+    $ scroll_21_name = "Witch robe 01"
+    $ scroll_22_name = "Witch robe 02"
+    $ scroll_23_name = "Witch robe 03"
+    $ scroll_24_name = "Witch robe 04"
+    $ scroll_25_name = "The walk"
+    $ scroll_26_name = "Durmstrang"
+    $ scroll_27_name = "Gag ball"
+    $ scroll_28_name = "New clothes 01"
+    $ scroll_29_name = "New clothes 02"
+    $ scroll_30_name = "The gang"
     
     
     
