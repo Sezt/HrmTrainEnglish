@@ -57,7 +57,7 @@ init:
             s="new_request_"+s
             # 3-й ивент добавляем здесь, он должен по порядку идти перед завершающим
             if s=="new_request_03": 
-                this.AddEvent(s+"::\"Вор трусиков\"", points={"private"}, defVals={"heartCount": 0}, 
+                this.AddEvent(s+"::\"Panty thief\"", points={"private"}, defVals={"heartCount": 0}, 
                 OnChange=lambda e, subKey, oldVal, newVal: OnValueChange(e, subKey, oldVal, newVal))
             else:
                 this.AddEvent(s, points={"public"}) 

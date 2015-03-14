@@ -1,4 +1,4 @@
-################### REQUEST_03 (Level 02) (Available during daytime only). "Give me your Трусики" ###############################
+################### REQUEST_03 (Level 02) (Available during daytime only). "Give me your panties" ###############################
 label new_request_03: #(Whoring = 3 - 5)
     if whoring <= 2:
         jump too_much
@@ -81,6 +81,7 @@ label new_request_03: #(Whoring = 3 - 5)
         ">You see that she is clutching a small ball of fabric in her fist..."
         ">Her panties? You can't help but wonder how she managed to take them off so quickly..."
         m "Ah!"
+        ">You got Hermiones panties..."
         hide screen blktone8
         with d3
         $herView.hideshowQQ( "body_67.png", pos )
