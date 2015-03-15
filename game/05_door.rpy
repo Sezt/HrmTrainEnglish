@@ -279,10 +279,10 @@ label door:
                                 jump day_time_requests
                 
                     
-                    # "-Ending \"Your whore\"- ":
+                    # "- Ending \"Your whore\"- ":
                         #jump your_whore
                         
-                    # "-Ending \"Public whore\"- ":
+                    # "- Ending \"Public whore\"- ":
                         # $ public_whore_ending = True #If TRUE the game will end with "Public Whore Ending".
                         # jump your_whore
                         
@@ -309,22 +309,22 @@ label door:
                             pass
                         menu:
                             
-                            "-Put the badge on-" if (herView.data().getItem( G_N_BADGE )==None) and  badge_01 == 7: #not ba_01 and badge_01 == 7:
+                            "-Put the badge on-" if (herView.data().getItemKey( G_N_BADGE )==None) and  badge_01 == 7: #not ba_01 and badge_01 == 7:
                                 jump badge_put
                             
-                            "-Take the badge off-" if (herView.data().getItem( G_N_BADGE )!=None) and  badge_01 == 7: #ba_01 and badge_01 == 7:
+                            "-Take the badge off-" if (herView.data().getItemKey( G_N_BADGE )!=None) and  badge_01 == 7: #ba_01 and badge_01 == 7:
                                 jump badge_take
                             
-                            "-Put the fishnets on-" if (herView.data().getItem( G_N_NETS )==None) and  nets == 7: #not ne_01 and nets == 7: # Не перевел
+                            "-Put the fishnets on-" if (herView.data().getItemKey( G_N_NETS )==None) and  nets == 7: #not ne_01 and nets == 7: # Не перевел
                                 jump nets_put
                             
-                            "-Take the fishnets off-" if (herView.data().getItem( G_N_NETS )!=None) and  nets == 7: #ne_01 and nets == 7:
+                            "-Take the fishnets off-" if (herView.data().getItemKey( G_N_NETS )!=None) and  nets == 7: #ne_01 and nets == 7:
                                 jump nets_take
                             
-                            "-Put the miniskirt on-" if herView.data().checkItem( G_N_SKIRT, 'skirt_normal.png' ) and gave_miniskirt: #not legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.:
+                            "-Put the miniskirt on-" if herView.data().checkItemKeyStyle( G_N_SKIRT, 'default' ) and gave_miniskirt: #not legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.:
                                 jump mini_on #28_gifts.rpy
 
-                            "-Put the long skirt on-" if herView.data().checkItem( G_N_SKIRT, 'skirt_short.png' ) and gave_miniskirt: #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
+                            "-Put the long skirt on-" if herView.data().checkItemKeyStyle( G_N_SKIRT, 'short' ) and gave_miniskirt: #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
                                 jump mini_off #28_gifts.rpy
                             
                            

@@ -28,7 +28,7 @@ label giving_skirt:
     $herView.hideQQ()
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
     show screen notes
-    ">\"Dresscode\" option unlocked. From now on you can affect Hermione's attire choices."
+    #">\"Dresscode\" option unlocked. From now on you can affect Hermione's attire choices."
     $ pos = POS_370
     $herView.showQ( "body_01.png", pos )
     jump day_time_requests
@@ -129,7 +129,8 @@ label mini_on:
                                                                                                                                                                                                                           #HERMIONE
     
     
-    $ herView.data().addSkirt( CharacterExItem( herView.mClothesFolder, "skirt_short.png", G_Z_SKIRT ) )
+    $herView.data().setStyleKey( 'skirt', 'short' )
+    #$ herView.data().addSkirt( CharacterExItem( herView.mClothesFolder, "skirt_short.png", G_Z_SKIRT ) )
     
     show screen blkfade
     with d3
@@ -165,7 +166,8 @@ label mini_off:
         her "That boring thing again?"
     
     
-    $ herView.data().addSkirt( CharacterExItem( herView.mClothesFolder, "skirt_normal.png", G_Z_SKIRT ) )
+    #$ herView.data().addSkirt( CharacterExItem( herView.mClothesFolder, "skirt_normal.png", G_Z_SKIRT ) )
+    $herView.data().setStyleKey( 'skirt', 'default' )
     
     show screen blkfade
     with d3
@@ -186,7 +188,8 @@ label badge_put:
     $herView.showQQ( "body_01.png", pos )
     her "Of course, sir..."
     
-    $ herView.data().addItem( G_N_BADGE, CharacterExItem( herView.mClothesFolder, "badge.png", G_Z_DRESS + 1, 'dress' ) )
+    #$ herView.data().addItemKey( G_N_BADGE, CharacterExItem( herView.mClothesFolder, "badge.png", G_Z_DRESS + 1, 'dress' ) )
+    $herView.data().addItem( 'item_badge' )
     
     show screen blkfade
     with d3
@@ -206,7 +209,7 @@ label badge_take:
     $herView.showQQ( "body_01.png", pos )
     her "As you wish, sir..."
 
-    $ herView.data().delItem( G_N_BADGE )
+    $ herView.data().delItem( 'item_badge' )
     
     show screen blkfade
     with d3
@@ -310,7 +313,8 @@ label nets_put:
                                                                                                                                                                                                                           #HERMIONE
     
      
-    $ herView.data().addItem( G_N_NETS, CharacterExItem( herView.mClothesFolder, "nets.png", G_Z_LEGS + 1, 'legs' ) )
+    #$ herView.data().addItemKey( G_N_NETS, CharacterExItem( herView.mClothesFolder, "nets.png", G_Z_LEGS + 1, 'legs' ) )
+    $herView.data().addItem( 'item_nets' )
     
     #$ legs_02 = True
     
@@ -348,7 +352,7 @@ label nets_take:
         her "Really? Aw..."
     
     
-    $ herView.data().delItem( G_N_NETS )
+    $ herView.data().delItem( 'item_nets' )
     #$ legs_02 = False
     
     show screen blkfade
