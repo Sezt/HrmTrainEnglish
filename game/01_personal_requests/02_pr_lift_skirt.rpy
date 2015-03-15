@@ -257,6 +257,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                         her "Not lost, sir. You see, as I blush."
                         m "Really ... Ahem!"
                         m "Well, what are you waiting for? For 25 points I want to see something special."
+                        $herView.hideQQ()
 #                        show screen bld1
 #                        with d3
 #                        show screen blktone
@@ -272,7 +273,8 @@ label new_request_02: #SHOW ME YOUR Трусики
 
                         $herView.data().delPanties()
 #                        $herView.data().saveState()
-                        $herView.data().addPose( CharacterExItemSkirtLifted( herView.mPoseFolder, 'pose_skirt_up.png', G_Z_POSE ) )
+                        #$herView.data().addPose( CharacterExItemSkirtLifted( herView.mPoseFolder, 'pose_skirt_up.png', G_Z_POSE ) )
+                        $herView.data().addItem( 'item_pose_lifted_skirt' )
                         $ pos = POS_120
 
 #                        her "test"
@@ -314,7 +316,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                                     her "... if they Gryffindor."               
                                     m "Well, Miss Granger."
                                 else:
-                                    $MusicStart("music/Reamonn-Supergirl.mp3",0.1)
+                                    $MusicStart("Supergirl",0.1)
                                     $herView.hideshowQQ( "body_64.png", pos )
                                     "> Hermione cheeky looks into your eyes and you feel you are getting excited."
                                     "> Bitch, as if by chance, licks his lips."
