@@ -5288,11 +5288,11 @@ label start:
 
     menu:         
         "Would you like to skip the intro?"
-        "Play the intro.":
+        "Play the intro":
             jump intro
-        "Skip intro.":
+        "Skip intro":
             jump hp
-        "Skip the morning after a duel.":
+        "Skip the morning after a duel":
             $this.event_05.SetValue("finish2",4)
             jump hp
     
