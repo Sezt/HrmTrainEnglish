@@ -80,7 +80,7 @@ label event_00:
 #    sna "Didn't we?"
     
 
-    m "{size=-3}(\"Albus\"? Is that supposed to be my name or is it just how the humans of this world greet each another?){/size}"
+    m "{size=-3}(\"Albus\"? Is that supposed to be my name or is it just how the humans of this world greet each other?){/size}"
     menu:
         m "..."
         "\"Actually I'm a bit busy.\"":
