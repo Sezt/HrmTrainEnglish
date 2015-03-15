@@ -46,7 +46,7 @@ label event_00:
     show screen ctc
     with Dissolve(.3)
     pause
-    sna "Albus... Do you have a moment?"
+    who2 "Albus... Do you have a moment?"
     hide screen snape_main
     hide screen ctc
     
@@ -80,100 +80,100 @@ label event_00:
 #    sna "Didn't we?"
     
 
-    m "{size=-3}(\"Albus\"? Is that supposed to be my name or is that's just how the humans of this world greet one another?){/size}"
+    m "{size=-3}(\"Albus\"? Is that supposed to be my name or is it just how the humans of this world greet each another?){/size}"
     menu:
         m "..."
         "\"Actually I'm a bit busy.\"":
             $ s_sprite = "03_hp/10_snape_main/snape_04.png"
             show screen snape_main
             with d3
-            sna "Well, aren't you always, Albus?"                            
+            who2 "Well, aren't you always, Albus?"                            
         "\"Of course. What is it?\"":
             pass                       
         "\"And Albus to you too.\"":
             $ s_sprite = "03_hp/10_snape_main/snape_05.png"
             show screen snape_main
             with d3
-            sna "What?"
+            who2 "What?"
             $ s_sprite = "03_hp/10_snape_main/snape_04.png"
-            sna "Albus I'm not in the mood for your... shenanigans."
+            who2 "Albus, I'm not in the mood for your... shenanigans."
         "\"Take me to your leader.\"":
             $ s_sprite = "03_hp/10_snape_main/snape_01.png"
             show screen snape_main
             with d3
-            sna "What?"
+            who2"What?"
             hide screen snape_main
             with d3
             $ s_sprite = "03_hp/10_snape_main/snape_01.png"
             show screen snape_main
             with d3
-            sna "Hm...?"
-            sna "You mean the minster of magic?"
+            who2 "Hm...?"
+            who2 "You mean the minster of magic?"
             hide screen snape_main
             with d3
             $ s_sprite = "03_hp/10_snape_main/snape_03.png"
             show screen snape_main
             with d3
-            sna "I would rather avoid having to deal with that bureaucrat..."
+            who2 "I would rather avoid having to deal with that bureaucrat..."
             m "Fine, never mind... How can I be of help?"
             
     $ s_sprite = "03_hp/10_snape_main/snape_06.png"
-    sna "I have something important I need to discuss with you..."
-    sna "I think we need to revise our admittance policy." 
+    who2 "I have something important I need to discuss with you..."
+    who2 "I think we need to revise our admittance policy." 
     hide screen snape_main
     with d2
     m "................?"
     $ s_sprite = "03_hp/10_snape_main/snape_03.png"
     show screen snape_main
     with d2
-    sna "Half of my... so-called \"pupils\" are nothing but annoying maggots that make my life miserable on a daily basis."
+    who2 "Half of my... so-called \"pupils\" are nothing but annoying maggots that make my life miserable on a daily basis."
     hide screen snape_main
     with d2
     m "................"
     $ s_sprite = "03_hp/10_snape_main/snape_07.png"
     show screen snape_main
-    sna "Most of them belong to your precious \"gryffindor\" house of course..."
+    who2 "Most of them belong to your precious \"gryffindor\" house of course..."
     hide screen snape_main
     with d2
     m "......?"
     show screen snape_main
-    sna "The wretched Weasley family, that noisy Granger girl and of course the hero of all the juvenile delinquents around the globe...."
+    who2 "The wretched Weasley family, that noisy Granger girl, and of course, the hero of all the juvenile delinquents around the wizarding globe...."
     $ s_sprite = "03_hp/10_snape_main/snape_08.png"
-    sna "{size=+3}The Potter boy!{/size}"
+    who2 "{size=+3}The Potter boy!{/size}"
     $ s_sprite = "03_hp/10_snape_main/snape_01.png"
-    sna "Mark my words, Albus. The \"gryffindor house\" will become this school's undoing!"
+    who2 "Mark my words, Albus. The \"gryffindor house\" will become this school's undoing!"
     hide screen snape_main
     m "...................."
     show screen snape_main
-    sna "Nothing but annoying maggots, the lot of them!"
+    who2 "Nothing but annoying maggots, the lot of them!"
     $ s_sprite = "03_hp/10_snape_main/snape_06.png"
-    sna "And if that wasn't enough, now they spread all sorts of nasty rumours about the teachers!"
-    sna "Particularly about yours truly..."
+    who2 "And if that wasn't enough, now they spread all sorts of nasty rumours about the teachers!"
+    who2 "Particularly about yours truly..."
     hide screen snape_main
     m "......................"
     $ s_sprite = "03_hp/10_snape_main/snape_05.png"
     show screen snape_main
-    sna "You don't believe those rumours, do you Albus?"
+    who2 "You don't believe those rumours, do you Albus?"
     hide screen snape_main
     menu:
         m ".............."
         "\"Well, of course not!\"":
             $ s_sprite = "03_hp/10_snape_main/snape_09.png"
             show screen snape_main
-            sna "Good..."
-            sna "You know me better than that. I wouldn't care for such things..."
+            who2 "Good..."
+            who2 "You know me better than that. You know I wouldn't care for such things..."
         "\"Where there's smoke, there's fire.\"":
             $ s_sprite = "03_hp/10_snape_main/snape_10.png"
             show screen snape_main
-            sna "Albus?! You can't be serious!"
-            sna "Those are nothing but filthy lies, I'm telling you!"
+            who2 "Albus?! You can't be serious!"
+            who2 "Those are nothing but filthy lies, I'm telling you!"
     hide screen snape_main
     m "........................."
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"
     show screen snape_main
-    sna "Well, those wretched kids left me completely exhausted, I think I will retire for today."
+    who2 "But speaking of them... those wretched kids left me completely exhausted. I think I will retire for today."
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"
-    sna "................"
+    who2 "................"
     
     stop music fadeout 1.0
     

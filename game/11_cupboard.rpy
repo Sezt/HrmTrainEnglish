@@ -11,7 +11,8 @@ label cupboard:
             with Dissolve(0.5)
             m "Hm....."
             m "A cupboard..."
-            m "Maybe I should rummage through this one later..."
+            m "...that seems full of old junk!"
+            m "Maybe I should rummage through this a bit later anyway."
             show screen genie
             hide screen genie_stands_f
             hide screen chair_02 #Empty chair near the desk.

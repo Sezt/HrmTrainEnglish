@@ -84,36 +84,36 @@ label menu_reading_book:
 
 label desk:
     menu:
-        "- inspect -" if not desk_examined:
+        "-Examine the desk-" if not desk_examined:
             $ desk_examined = True
             m "ordinary table..."
             jump day_main_menu
-        "- Do paperwork -" if finished_report < 6 and not got_paycheck and not day == 1 and work_unlock2:
+        "-Do paperwork-" if finished_report < 6 and not got_paycheck and not day == 1 and work_unlock2:
             jump paperwork
-        "{color=#858585}- Do paperwork -{/color}" if finished_report >= 6 and not got_paycheck:
+        "{color=#858585}-Do paperwork-{/color}" if finished_report >= 6 and not got_paycheck:
             m "I have already completed six reports this week."
             jump desk
-        "{color=#858585}- Do paperwork -{/color}" if got_paycheck: # When TRUE paycheck is in the mail.
+        "{color=#858585}-Do paperwork-{/color}" if got_paycheck: # When TRUE paycheck is in the mail.
             m "First, I need to get paid."
             jump desk
          
-        "- Book Collection -" if not day == 1 and cataloug_found: 
+        "-Book Collection-" if not day == 1 and cataloug_found: 
             label books_list:
                 $choose=None
                 menu:
-                    "- Educational books -":
+                    "-Educational books-":
                         label books_on_improvement:
                             $_label="books_on_improvement"
                             $_block="books_edu"
                             jump menu_reading_book
 
-                    "- fiction books -":
+                    "-Novels-":
                         label fiction_books:
                             $_label="fiction_books"
                             $_block="books_fict"
                             jump menu_reading_book
 
-                    "- Never mind -":
+                    "-Never mind-":
                         jump desk
 
           
@@ -138,9 +138,9 @@ label desk:
 
         # "- Jerk off on Hernione's panties -" if request_03: #True when Hermione has no panties on.
         #     jump jerk_off
-        "- jerk off -" if not day < 5:
+        "-Jerk off-" if not day < 5:
             jump jerk_off 
-        "- Hermione's status -" if this.Has("her_wants_buy"): #summoning_hermione_unlocked and buying_favors_from_hermione_unlocked: 
+        "-Hermione's status-" if this.Has("her_wants_buy"): #summoning_hermione_unlocked and buying_favors_from_hermione_unlocked: 
             "> Whoring: {color=#B40000}{size=+4}{b}[whoring]{/b}{/size}{/color}- degree."
             "> Mad: {color=#B40000}{size=+4}{b}[mad]{/b}{/size}{/color}- degree"
             if mad >=1 and mad < 3:
@@ -166,7 +166,7 @@ label desk:
             jump day_start
             
 
-        "- Never mind -":
+        "-Never mind-":
             call screen main_menu_01
             
             

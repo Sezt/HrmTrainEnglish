@@ -144,9 +144,9 @@ label howtoplay:
     $ end_u_1_pic =  "03_hp/22_lola/tut_07.png" #<---- SCREEN
     l "All favors are organized into two groups: \"personal favors\" and \"public favors\"."
     l "Personal favors take place in the office and don't affect Hermione's reputation much."
-    l "Public favors take place off-screen during classes."
+    l "Public favors take place off-screen, during classes."
     l "Every public favor, except for the last one, has nine different outcomes."
-    l "Also buying personal favors is esential for Hermione's training, but public favors are optional."
+    l "Also, buying personal favors is essential for Hermione's training, but public favors are optional."
 
     with hpunch
     $ end_u_1_pic =  "03_hp/22_lola/tut_05.png" #<---- SCREEN

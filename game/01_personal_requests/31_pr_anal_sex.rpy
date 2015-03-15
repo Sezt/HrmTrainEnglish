@@ -15,6 +15,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
             $event.NotFinished()
             jump new_personal_request
  
+    label new_request_31_start:
     $ pos = POS_140
     $ posHead = gMakePos( 390, 340 )
     $ herView.data().saveState()
@@ -1001,6 +1002,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
     hide screen blkfade
     with d3
  
+    jump new_request_08_finish
     m "Yes, miss Granger. 90 points to \"Gryffindor\"." 
     $ gryffindor +=90
     $herView.showQ( "body_141.png", pos )

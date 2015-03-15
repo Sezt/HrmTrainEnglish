@@ -59,7 +59,7 @@ label door:
             
        
             
-        "{color=#858585}- Summon Hermione -{/color}" if this.Has("her_summon")  and hermione_takes_classes or hermione_sleeping:#summoning_hermione_unlocked
+        "{color=#858585}-Summon Hermione-{/color}" if this.Has("her_summon")  and hermione_takes_classes or hermione_sleeping:#summoning_hermione_unlocked
             if hermione_takes_classes:
                 show screen bld1
                 with d3
@@ -75,7 +75,7 @@ label door:
                 with d3
                 jump night_main_menu
         
-        "- Summon Hermione -" if this.Has("her_summon") and not hermione_takes_classes and not hermione_sleeping: #summoning_hermione_unlocked 
+        "-Summon Hermione-" if this.Has("her_summon") and not hermione_takes_classes and not hermione_sleeping: #summoning_hermione_unlocked 
      
             if hermione_takes_classes:
                 show screen bld1
@@ -131,14 +131,14 @@ label door:
                 
                 label day_time_requests:
                 menu:
-                    "- Chit chat -" if not chitchated_with_her:
+                    "-Chit chat-" if not chitchated_with_her:
                         $ chitchated_with_her = True #Prevents you from chitchatting with Hermione more then once per time of day. Turns back to False every night. (And every day).
                         if mad <= 7:
                             jump chit_chat
                         else:
                             her "I have nothing to say to you sir..."    
                             jump day_time_requests
-                    "- Tutoring -" if not daytime and not tut_happened and whoring <= 12:
+                    "-Tutoring-" if not daytime and not tut_happened and whoring <= 12:
                         if mad >=1 and mad < 3:
                             her "I'm sorry, maybe tomorrow..."
                             jump day_time_requests
@@ -151,7 +151,7 @@ label door:
                             jump day_time_requests
                         else:
                             jump tutoring
-                    "- Buy \"sexual\" favours -" if this.Has("her_wants_buy"):#buying_favors_from_hermione_unlocked:
+                    "-Buy \"sexual\" favours-" if this.Has("her_wants_buy"):#buying_favors_from_hermione_unlocked:
                         if mad >=1 and mad < 3:
                             her "I'm sorry, professor, Maybe some other time..."
                         elif mad >=3 and mad < 10:
@@ -237,15 +237,15 @@ label door:
                                 $ gifted = True 
                                 jump giving_plug #28_gifts.rpy
                                 
-                            "- A Thestral strap-on -([strapon])" if strapon >= 1:
+                            "-A Thestral strap-on-([strapon])" if strapon >= 1:
                                 $ gifted = True 
                                 jump giving_strapon #28_gifts.rpy
                             
-                            "- Lady Speed Stick-2000 -([broom])" if broom >= 1:
+                            "-Lady Speed Stick-2000-([broom])" if broom >= 1:
                                 $ gifted = True 
                                 jump giving_broom #28_gifts.rpy
                                 
-                            "- Sex doll \"Joanne\" -([sexdoll])" if sexdoll >= 1:
+                            "-Sex doll \"Joanne\"-([sexdoll])" if sexdoll >= 1:
                                 $ gifted = True 
                                 jump giving_sexdoll #28_gifts.rpy
                             
@@ -264,7 +264,7 @@ label door:
                                 
                                 
                                 
-                            "- The Ball Dress -" if "ball_dress" in gifts12 and not gave_the_dress:
+                            "-The Ball Dress-" if "ball_dress" in gifts12 and not gave_the_dress:
                                 show screen  blktone
                                 with d3
                                 m "(I have the feeling that there will be no turning back for me after I give her this dress...)"
@@ -275,18 +275,18 @@ label door:
                                         jump giving_thre_dress #27_final_events.rpy
                                     "\"No, not yet...\"":
                                         jump day_time_requests
-                            "- Never mind -":
+                            "-Never mind-":
                                 jump day_time_requests
                 
                     
-                    # "- Ending \"Your whore\"- ":
+                    # "-Ending \"Your whore\"- ":
                         #jump your_whore
                         
-                    # "- Ending \"Public whore\"- ":
+                    # "-Ending \"Public whore\"- ":
                         # $ public_whore_ending = True #If TRUE the game will end with "Public Whore Ending".
                         # jump your_whore
                         
-                    "- Wardrobe -" if dress_code:
+                    "-Wardrobe-" if dress_code:
                         if mad >=1 and mad < 3:
                             her "I'm sorry, professor. Maybe some other time..."
                             jump day_time_requests
@@ -309,27 +309,27 @@ label door:
                             pass
                         menu:
                             
-                            "- Put the badge on -" if (herView.data().getItem( G_N_BADGE )==None) and  badge_01 == 7: #not ba_01 and badge_01 == 7:
+                            "-Put the badge on-" if (herView.data().getItem( G_N_BADGE )==None) and  badge_01 == 7: #not ba_01 and badge_01 == 7:
                                 jump badge_put
                             
-                            "- Take the badge off -" if (herView.data().getItem( G_N_BADGE )!=None) and  badge_01 == 7: #ba_01 and badge_01 == 7:
+                            "-Take the badge off-" if (herView.data().getItem( G_N_BADGE )!=None) and  badge_01 == 7: #ba_01 and badge_01 == 7:
                                 jump badge_take
                             
-                            "- Put the fishnets on -" if (herView.data().getItem( G_N_NETS )==None) and  nets == 7: #not ne_01 and nets == 7: # Не перевел
+                            "-Put the fishnets on-" if (herView.data().getItem( G_N_NETS )==None) and  nets == 7: #not ne_01 and nets == 7: # Не перевел
                                 jump nets_put
                             
-                            "- Take the fishnets off -" if (herView.data().getItem( G_N_NETS )!=None) and  nets == 7: #ne_01 and nets == 7:
+                            "-Take the fishnets off-" if (herView.data().getItem( G_N_NETS )!=None) and  nets == 7: #ne_01 and nets == 7:
                                 jump nets_take
                             
-                            "- Put the miniskirt on -" if herView.data().checkItem( G_N_SKIRT, 'skirt_normal.png' ) and gave_miniskirt: #not legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.:
+                            "-Put the miniskirt on-" if herView.data().checkItem( G_N_SKIRT, 'skirt_normal.png' ) and gave_miniskirt: #not legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.:
                                 jump mini_on #28_gifts.rpy
 
-                            "- Put the long skirt on -" if herView.data().checkItem( G_N_SKIRT, 'skirt_short.png' ) and gave_miniskirt: #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
+                            "-Put the long skirt on-" if herView.data().checkItem( G_N_SKIRT, 'skirt_short.png' ) and gave_miniskirt: #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
                                 jump mini_off #28_gifts.rpy
                             
                            
   
-                            "- Never mind -":
+                            "-Never mind-":
                                 jump day_time_requests
                     
                         
@@ -540,17 +540,17 @@ label door:
                             
                             
             
-        "{color=#858585}- Summon Snape -{/color}" if this.Has("snape_summon") and snape_busy:#hanging_with_snape
+        "{color=#858585}-Summon Snape-{/color}" if this.Has("snape_summon") and snape_busy:#hanging_with_snape
             ">Professor Snape is unavailable."
             if daytime:
                 jump day_main_menu
             else: 
                 jump night_main_menu
             
-        "- Summon Snape -" if this.Has("snape_summon") and not snape_busy:#hanging_with_snape
+        "-Summon Snape-" if this.Has("snape_summon") and not snape_busy:#hanging_with_snape
             play music "music/Dark Fog.mp3" fadein 1 fadeout 1 # SNAPE'S THEME
             jump summon_snape
-        "- Never mind -":
+        "-Never mind-":
             jump day_main_menu
     
     

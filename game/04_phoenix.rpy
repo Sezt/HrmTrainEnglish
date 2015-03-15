@@ -20,7 +20,7 @@ label phoenix:
         jump day_main_menu
     
     menu:
-        "-Examine-" if not bird_examined:
+        "-Examine the bird-" if not bird_examined:
             $ bird_examined = True
             hide screen genie
             $ tt_xpos=270
@@ -31,6 +31,7 @@ label phoenix:
             with Dissolve(0.5)
             m "Hm....."
             m "Even this weird looking bird radiates magic..."
+            m "Weird."
             show screen genie
             hide screen genie_stands
             hide screen chair_02 #Empty chair near the desk.

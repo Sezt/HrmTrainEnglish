@@ -80,10 +80,65 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
         
         her "*Slurp!* *Gulp!* *Slurp!*"
         m "Yes..."
-        m "Try to take it deeper now..."
+        if (event.Name=="new_request_08") and end.IsEnding(const_ENDING_STRONG_GIRL):
+            $MusicStart("Supergirl",0.3)                                   
+            $ hermione_chibi_xpos = -150 #-185 behind the desk. (Also 5 is something).
+            $ hermione_chibi_ypos = 10
+            $ h_c_u_pic = "hand_ani"
+            show screen h_c_u
+            hide screen g_c_u
+            with d3
+            g4 "Oh, fuck, what are you doing?!... You I'll tear your balls off, girl!"
+            $ posHead = gMakePos( 390, 235 )
+            $herViewHead.showQ( "body_100.png", posHead )
+            her2 "I take pleasure in, sir, as you ordered."
+            $herViewHead.hideQ()
+            m "What fun is? OUCH!"
+            $herViewHead.showQ( "body_47.png", posHead )
+            her2 "Oh, for me to hold you by the balls it's much more fun, sir!"
+            $herViewHead.hideQ()
+            m "Let go!"
+            $herViewHead.showQ( "body_47.png", posHead )
+            her "The punishment has ended, Professor?"
+            $herViewHead.hideQ()
+            g4 "You forget, girl! Do you have any idea with whom you talk?!"
+            $herViewHead.showQ( "body_206.png", posHead )
+            her2 "I was talking with a guy whose eggs in my hand..."
+            her2 "Oh, Professor, when I realize that my favorite house will deduct points..."
+            her2 "I involuntarily everything starts to shake... and shrink too."
+            $herViewHead.hideQ()
+            g4 "Oh-Oh! Stop it, stop it now!"
+            $herViewHead.showQ( "body_47.png", posHead )
+            her2 "From disorder I just want to rant and tear ... and then hurl, sir!"
+            $herViewHead.hideQ()
+            g4 "Let go, your mother! I was not going to deduct points from you, just wanted to scare you to always remember!"
+            $current_payout=0
+            $herViewHead.showQ( "body_68.png", posHead )
+            her "Oh, sir... You are so kind... And I thought..."
+            $herViewHead.hideQ()
+            "> Hermione stops to compress your eggs and begins gently to massage them."
+            $herViewHead.showQ( "body_122.png", posHead )
+            her2 "Please forgive me, I'm just very upset." 
+            her2 "I'm all correct, you will get the best Blowjob in you life!"
+            $herViewHead.hideQ()
+            m "Doubt! You're little..."
+            hide screen h_c_u   # SUCKING
+            show screen g_c_u # SUCKING
+            with d3
+            her "*Slurp!* *Gulp!* *Slurp!*"
+            m "Oh, yeah..."
+            her "*Slurp!* *Slurp!* *Gulp!*"
+            $herViewHead.showQ( "body_55.png", posHead )
+            her "How are you, sir?"
+            $herViewHead.hideQ()
+            m "For a start, nice girl..."
+            $MusicStop()
+            play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
+
+        m "Now, try deeper..."
         her "*Gulp!* *Gobble!* *Gobble!*"
         m "Yes, like that. Good."
-        her "*Slurp!* *Gltch!* *Gulp!*"
+        her "**Slurp!* *Gltch!* *Gulp!**"
         m "Yes, that's a good girl."
 
         $ posHead = gMakePos( 390, 235 )
@@ -1135,6 +1190,8 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
     hide screen blkfade
     with d3
     
+    if event.Name=="new_request_08":
+        jump new_request_08_finish
     
     m "Yes, miss Granger. 55 points to \"Gryffindor\"."
     $ gryffindor +=55

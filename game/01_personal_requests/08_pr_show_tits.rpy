@@ -225,6 +225,109 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             $her_head_state = 15
             her_head_main "Are you only going to watch, sir?"
             m "Of course..."
+            if whoring >= 15:
+                $herView.hideshowQQ( "body_09.png", pos )
+                her "Sir, we both know that you play, not just watch, and do something else..."
+                m "Maybe it {size=+4}YOU{/size} interesting, miss Granger, that I was doing something else?"
+                $herView.hideshowQQ( "body_17.png", pos )
+                her "Sir, let us not play games. I need glasses for faculty, you need sex."
+                her "I don't get any pleasure, but if you need it, ready to go on more in order to earn."
+                m "You now have part-time jobs that, miss Granger?"
+                $herView.hideshowQQ( "body_47.png", pos )
+                her "What?.. SIR! I'm talking about how to earn points!"
+                m "Oh, excuse me, but I thought..."
+                $herView.hideshowQQ( "body_51.png", pos )
+                her "You thought wrong! I will never stoop to this!"
+                m "Well, miss, if we are talking about how to earn more points..."
+                $herView.hideshowQQ( "body_47.png", pos )
+                her "Only about this and goes, sir!"
+                m "Then let us take care of your ass."
+                if whoring<21:
+                    $herView.hideshowQQ( "body_95.png", pos )
+                    her "Ass, sir? In a sense, you touch..." 
+                    m "I mean, I will touch her with my dick..."
+                    $herView.hideshowQQ( "body_48.png", pos )
+                    her "But, sir! What are you... I didn't mean..." 
+                    m "Didn't mean? And what do you think I should give you more points? For a Christmas song?"
+                    $herView.hideshowQQ( "body_32.png", pos )
+                    her "But I'm not ready for it too!!!"
+                    m "Why you messing with me head, miss, telling what you want to earn more points?"
+                    $herView.hideshowQQ( "body_120.png", pos )
+                    her "I want, sir, but not at this price!"
+                    m "That is, you now tell me girl what you pay for?"
+                    m "You know, miss, I'm partial to Gryffindor..." 
+                    m "But because of your whims begin seriously to think, not whether I was mistaken in you?"
+                    m "Can I call someone from Slytherin girls? Surely, they are more loyal to the Faculty."
+                    m "Yes! Great idea. Miss Granger, please invite professors Snape." 
+                    m "Surely he would recommend me {size=+4}DECENT{/size} candidate."
+                    $herView.hideshowQQ( "body_117.png", pos )
+                    her "Professor, please..."
+                    m "What, miss Granger? You not able to do?"
+                    $herView.hideshowQQ( "body_67.png", pos )
+                    her "Professor, I was wrong... I was wrong... please forgive me."
+                    m "And what will happen tomorrow?"
+                    m "You will again be little points?"
+                    her "No, sir, I understood."
+                    $herView.hideshowQQ( "body_55.png", pos )
+                    her "If you want to see my Boobs, so I must show you Tits and not to bargain for points."
+                    m "..............................."
+                    her "............................."
+                    menu:
+                        "Forgive":
+                            m "It seems you don't understand, miss Granger that I find you all possible job."
+                            m "You should be grateful."
+                            $herView.hideshowQQ( "body_29.png", pos )
+                            her "I am grateful, sir, the truth."
+                            m "And thank you today show their Boobs for free. Isn't it?"
+                            $herView.hideshowQQ( "body_103.png", pos )
+                            her "Uh... Y-Yes, sir."
+                            $current_payout=0
+                        "Punish":
+                            $herView.hideshowQQ( "body_61.png", pos )
+                            m "You understand, miss, that was guilty and should be punished?"
+                            her "P-probably..."
+                            m "That is, you are not sure?"
+                            $herView.hideshowQQ( "body_103.png", pos )
+                            her "No, I'm sure... probably."
+                            m "I'm not going to bother you, complex sentences, you just suck me. It is you love..."
+                            $herView.hideshowQQ( "body_47.png", pos )
+                            her "Nothing like..."
+                            m "I heard? Or should choose a punishment worse?"
+                            $herView.hideshowQQ( "body_34.png", pos )
+                            her "Umm... Well, sir. Yes, I love."
+                            m "Tell fully, be kind!"
+                            $herView.hideshowQQ( "body_47.png", pos )
+                            her "I love... to suck, sir."
+                            m "Wonderful. But that punishment has not turned you into a pleasure, this time I'm not going to pay you."
+                            her "Yes, sir."
+                            m "But, on the contrary, you will pay me for the pleasure I victu the cost of the points Gryffindor."
+                            $herView.hideshowQQ( "body_130.png", pos )
+                            her "But, sir!"
+                            m "You think this is unfair, young lady?"
+                            $herView.hideshowQQ( "body_47.png", pos )
+                            her "....................................."
+                            m "I can't hear!"
+                            $herView.hideshowQQ( "body_120.png", pos )
+                            her "Well, if you say so..."
+                            m "Excellent! Then treat yourself."
+                            her "You mean, should I?..."
+                            g9 "Must-have, miss. Enjoy sucking my dick."
+                            $current_payout=-55
+                            jump blowjob_jumping
+                else:
+                    her "Thank you, sir."
+                    menu:
+                        "Change my mind":
+                            m "However, I changed my mind, miss Granger." 
+                            m "Today we will restrict ourselves to the view of your Boobs!"
+                            $herView.hideshowQQ( "body_50.png", pos )
+
+                            her "................"
+                            m "Lets start."
+                        "\"Then let's get started!\"":
+                            m "Well..."
+                            $current_payout=95
+                            jump new_request_31_start
             hide screen blktone
             with d3
             hide screen bld1
@@ -972,6 +1075,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
     hide screen blkfade
     with d3
 
+    label new_request_08_finish:
     $ gryffindor +=current_payout
     m "The \"Gryffindor\" house gets [current_payout] points!"
     stop music fadeout 10.0
@@ -1006,7 +1110,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
 #        $ level = "05"
 #        $ new_request_08_03 = True # HEARTS.
 
-    $SetHearts(GetStage(whoring, 6, 3, 3))
+    $SetHearts(GetStage(whoring, 6, 3, 4))
 
 
     hide screen bld1
