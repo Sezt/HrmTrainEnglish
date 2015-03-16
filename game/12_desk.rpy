@@ -86,7 +86,8 @@ label desk:
     menu:
         "-Examine the desk-" if not desk_examined:
             $ desk_examined = True
-            m "ordinary table..."
+            m "Seems like an ordinary enough desk..."
+            m "Somewhat cluttered."
             jump day_main_menu
         "-Do paperwork-" if finished_report < 6 and not got_paycheck and not day == 1 and work_unlock2:
             jump paperwork
