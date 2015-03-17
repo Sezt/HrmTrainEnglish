@@ -2201,7 +2201,7 @@ label event_10: #Takes place after second special even with Snape where Ginie is
 #    m "This doesn't make any sence, girl!"
 #    her "Let me finish, professor!"
 #    her "I'm organizing a \"Men's rights movement\" in our school!"
-#    m "Oh, this is just typical! Blame everything on- -"
+#    m "Oh, this is just typical! Blame everything on-"
 #    m "Wait, did you say {size=+5}MEN'S{/size} rights?"
 #    her "You have no idea how hard it is to be a boy in our school these days..."
 #    menu:
