@@ -369,8 +369,8 @@ $ daytime = True #True when it is daytime. Turns False during nighttime.
 $ hermione_sleeping = False
 $ hermione_takes_classes = False
 $ snape_busy = False
-$ fire_in_fireplace = False
-hide screen fireplace_fire
+#$ fire_in_fireplace = False # Remove comment to proffer everyday Fireplace
+#hide screen fireplace_fire
 
 ### EVENTS RELATED FLAGS ###
 $ days_without_an_event +=1
@@ -761,7 +761,23 @@ init -2:
     $ sscroll_28 = False
     $ sscroll_29 = False
     $ sscroll_30 = False
-#
+    #
+    $ sscroll_31 = False # Turns TRUE if the scroll had been bought.
+    $ sscroll_32 = False
+    $ sscroll_33 = False
+    $ sscroll_34 = False
+    $ sscroll_35 = False
+    $ sscroll_36 = False
+    $ sscroll_37 = False
+    $ sscroll_38 = False
+    $ sscroll_39 = False
+    $ sscroll_40 = False
+    $ sscroll_41 = False
+    $ sscroll_42 = False
+    $ sscroll_43 = False
+    $ sscroll_44 = False
+    $ sscroll_45 = False
+    #
     $ scroll_01_name = "The room"
     $ scroll_02_name = "The calendar"
     $ scroll_03_name = "The girl"
@@ -772,7 +788,7 @@ init -2:
     $ scroll_08_name = "Game items"
     $ scroll_09_name = "Panties no panties"
     $ scroll_10_name = "A lot of pegs"
-#
+    #
     $ scroll_11_name = "House-elf brothel"
     $ scroll_12_name = "Me and Lola"
     $ scroll_13_name = "Hard training"
@@ -783,7 +799,7 @@ init -2:
     $ scroll_18_name = "Fiction books"
     $ scroll_19_name = "Singer whore"
     $ scroll_20_name = "Casting"
-#    
+    #
     $ scroll_21_name = "Witch robe 01"
     $ scroll_22_name = "Witch robe 02"
     $ scroll_23_name = "Witch robe 03"
@@ -794,6 +810,22 @@ init -2:
     $ scroll_28_name = "New clothes 01"
     $ scroll_29_name = "New clothes 02"
     $ scroll_30_name = "The gang"
+    #
+    $ scroll_31_name = "Scroll #31"
+    $ scroll_32_name = "Scroll #32"
+    $ scroll_33_name = "Scroll #33"
+    $ scroll_34_name = "Scroll #34"
+    $ scroll_35_name = "Scroll #35"
+    $ scroll_36_name = "Scroll #36"
+    $ scroll_37_name = "Scroll #37"
+    $ scroll_38_name = "Scroll #38"
+    $ scroll_39_name = "Scroll #39"
+    $ scroll_40_name = "Scroll #40"
+    $ scroll_41_name = "Scroll #41"
+    $ scroll_42_name = "Scroll #42"
+    $ scroll_43_name = "Scroll #43"
+    $ scroll_44_name = "Scroll #44"
+    $ scroll_45_name = "Scroll #45"
     
     
     
