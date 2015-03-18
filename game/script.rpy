@@ -14,7 +14,7 @@ init python:
 
     # initing creator
     global Hermione_ItemCreator
-    Hermione_ItemCreator = CharacterExItemCreator( Hermione_IB, Hermione_SB, WTXmlLinker.gerHermioneLinkerKey() )
+    Hermione_ItemCreator = CharacterExItemCreator( Hermione_IB, Hermione_SB, WTXmlLinker.getHermioneLinkerKey() )
 
     # fill variables
     Hermione_FB.read( '00_ex/00_hermione_hxml/folders.hxml' )
@@ -4782,7 +4782,7 @@ init python:
     
 ### SNAPE HEAD ###
 define sna_head_state = 1
-define sna_head_main = Character('Severus SNAPE',
+define sna_head_main = Character('Severus Snape',
     color="#402313",
     window_right_padding=270,
     show_side_image=conditional_portrait( "sna_head_state", "03_hp/12_snape_head/head_", 1, 26, xalign=1.0, yalign=0.0 ),
@@ -4794,7 +4794,7 @@ define sna_head_main = Character('Severus SNAPE',
 
 ### HERMIONE HEAD ###
 define her_head_state = 1
-define her_head_main = Character('GErmione',
+define her_head_main = Character('Hermione',
     color="#402313",
     window_right_padding=270,
     show_side_image=conditional_portrait( "her_head_state", "03_hp/15_hermione_head/", 1, 45, xalign=1.0, yalign=0.0 ),
@@ -4858,7 +4858,7 @@ label start:
         # dialogue-face view
         global herViewHead     
         
-    $ herData = CharacterExData( WTXmlLinker.gerHermioneLinkerKey() )
+    $ herData = CharacterExData( WTXmlLinker.getHermioneLinkerKey() )
     $ herData.clearState()
     
     $ herView = CharacterExView( 5, her, 'hermione' )
