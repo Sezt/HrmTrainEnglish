@@ -53,29 +53,29 @@ label cupboard:
                    
                 label cheat_help:
                 menu:
-                    "Включить ТУРБО-режим" if turbo==1: 
+                    "Enable TURBO mode" if turbo==1: 
                         $turbo=2
-                        "ТУРБО-режим включен. Теперь ваши действия будут приносить вам вдвое больше денег и очков факультету Слизерина.\n Шанс на прочтение дополнительной главы вдвое больше."                    
-                    "Выключить ТУРБО-режим" if turbo==2: 
+                        "TURBO mode is enabled. Now your actions will bring you twice as much money and points the faculty slitherine.\n the Chance to read additional chapters twice."                    
+                    "Disable TURBO mode" if turbo==2: 
                         $turbo=1
-                        "ТУРБО-режим выключен. Теперь ваши действия будут приносить вам обычное количество денег и очков факультету Слизерина.\n Шанс на прочтение дополнительной главы стандартный."                    
-                    "ЧИТ: +100 очков Слизерину":
+                        "TURBO mode is off. Now your actions will bring you the usual amount of money and points the faculty slitherine.\n The chance to read additional chapters standard."                    
+                    "CHEAT: +100 points for Slytherin":
                         hide screen points
                         $slytherin+=100
                         show screen points
-                    "ЧИТ: Гермиона больше не злиться на вас":
+                    "CHEAT: Hermione no longer angry at you":
                         hide screen points
                         $mad=0
                         show screen points
-                        "Готово можете проверить"
-                    "ЧИТ: +100 золотых":
+                        "Ready"
+                    "CHEAT: +100 gold":
                         hide screen points
                         $gold+=100
                         show screen points
-                    "Прохождение":
-                        "Прохождение и ответы часто встречающиеся вопросы можно найти {a=http://wtrus.ixbb.ru/viewtopic.php?id=3}ЗДЕСЬ{/a}. "
+                    "Passage":
+                        "Passage and answers frequently asked questions can be found {a=http://wtrus.ixbb.ru/viewtopic.php?id=19}HERE{/a}. "
 
-                    "- Ничего -":
+                    "-Never mind-":
                         jump cupboard
                 jump cheat_help
 
@@ -85,10 +85,14 @@ label cupboard:
                 $_scrollSection=0
                 jump sc_col
 
-
         "-Sacred scrolls volume II-" if not day == 1 and cataloug_found:
             label sc_col_men_2:
                 $_scrollSection=1
+                jump sc_col
+
+        "-Sacred scrolls volume III-" if not day == 1 and cataloug_found:
+            label sc_col_men_2:
+                $_scrollSection=2
                 jump sc_col
 
 
