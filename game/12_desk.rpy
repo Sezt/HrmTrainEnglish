@@ -9,8 +9,8 @@ label menu_reading_book:
         for e in this.List:
             if e.GetValue("block")==_block and e._status>=0: # Нужно ставить GetValue("block")  а не _block - у ивента такого объекта может не быть
                 choose.AddItem("- Book: "+e._caption+" - "+("{image=check_08.png}" if e.IsDone() else ""), 
-                    "reading_book_done" if e.IsDone() else "menu_reading_book_2", True, e)
-        choose.AddItem("- Never mind -", "books_list", True, event)
+                    "reading_book_done" if e.IsDone() else "menu_reading_book_2", True, e.Name)
+        choose.AddItem("- Never mind -", "books_list", True, "")
 
     $ choose.Show()
 
@@ -117,6 +117,9 @@ label desk:
                     "-Never mind-":
                         jump desk
 
+        "- Continue reading -" if currentBook!=None:
+            $event=this(currentBook)
+            jump reading_book_xx 
           
         
                     
@@ -369,6 +372,7 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
         hide screen notes
         show screen notes
         ">This was the last chapter. You have finished this book."
+        $currentBook=None
 
         if event.Name=="book_06":
             g4 "What kind of garbage! I hate the person who wrote it!"

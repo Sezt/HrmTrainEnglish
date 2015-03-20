@@ -11,10 +11,12 @@ label gallery:
             jump music_room
         
         "-Sacred scrolls volume I-":
-            jump volone
+            $_scrollSection=0
+            jump volone 
         
         "-Sacred scrolls volume II-":
-            jump voltwo
+            $_scrollSection=1
+            jump volone 
             
 #        "- Gallery volume 02 -":
 #            jump volumetwo
@@ -25,7 +27,7 @@ label gallery:
         "-Outskirts of Hogwarts-":
             jump out_hog
         
-#        "{color=#858585}- Концовка 01 -{/color}" if not persistent.ending_01:
+#        "{color=#858585}- Ending 01 -{/color}" if not persistent.ending_01:
         "{color=#858585}- Ending 01 -{/color}" if not (1 in persistent.endings): #end.IsPersistent(1):
             jump after_cam
 #        "- Концовка 01 -" if persistent.ending_01:
@@ -41,10 +43,10 @@ label gallery:
                 "-Cancel-":
                     jump after_cam
         
-#        "{color=#858585}- Концовка 02 -{/color}" if not persistent.ending_02:
+#        "{color=#858585}- Ending 02 -{/color}" if not persistent.ending_02:
         "{color=#858585}- Ending 02 -{/color}" if not (2 in persistent.endings):# end.IsPersistent(2):
             jump after_cam
-#        "- Концовка 02 -" if persistent.ending_02:
+#        "- Ending 02 -" if persistent.ending_02:
         "- Ending 02 -" if (2 in persistent.endings):#end.IsPersistent(2):
             label end_02_men:
             menu:
@@ -86,382 +88,73 @@ label gallery:
             
             
 label volone:
-    menu:
-        "- С.01: [scroll_01_name] -" if persistent.ss_01:
-            show image "03_hp/19_extras/01.png" with d3
-            if commentaries:
-                a1 "This is a first ever draft of the Dumbledore's office."
-                a1 "Not a very exciting thing to look at, sure. But holds great historical value."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/01.png" with d3
-            pass
-        "- С.02: [scroll_02_name] -" if persistent.ss_02:
-            show image "03_hp/19_extras/02.png" with d3
-            if commentaries:
-                a1 "The calendar..."
-                a1 "On the early stages of development I toyed with an idea of implementing an actual in-game calendar into the gameplay..."
-                a1 "I soon realized how much more difficult it would be to create a game like that..."
-                a1 "And since I personally believe that any time limits in any game always work against the fun factor I decided to abandon the idea..."
-                a1 "Later on I used this drawing as a parchment paper for letters to be written on..."
+    $ choose = RunMenu()
+    python:
+        _itemCount=0
+        if persistent.itemSet!=None:
+            _itemCount=persistent.itemSet.get("scroll")
+            _itemCount=0 if _itemCount==None else _itemCount
+        for i in range(_scrollSection*15+1, _scrollSection*15+15):
+            if i<=_itemCount:
+                choose.AddItem("- C."+str(i)+": Sacred scroll #"+str(i)+" -", 
+                    "vol_description" , True, i)
+        choose.AddItem("- Ничего -", "after_cam", True, "")
+    $ choose.Show()
 
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/02.png" with d3
-            pass
-        "- С.03: [scroll_03_name] -" if persistent.ss_03:
-            show image "03_hp/19_extras/03.png" with d3
-            if commentaries:
-                a1 "A couple of very early drawings of Hermione..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/03.png" with d3
-            pass
-            
-        "- С.04: [scroll_04_name] -" if persistent.ss_04:
-            show image "03_hp/19_extras/04.png" with d3
-            if commentaries:
-                a1 "The deepthroating scene..."
-                a1 "My first attempt."
-                a1 "Been deemed unworthy and ended up here."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/04.png" with d3
-            pass
-            
-        "- С.05: [scroll_05_name] -" if persistent.ss_05:
-            show image "03_hp/19_extras/05.png" with d3
-            if commentaries:
-                a1 "The game poster..."
-                a1 "Hermione is Dahr's work. The rest is me..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/05.png" with d3
-            pass
-            
-        "-S.06: [scroll_06_name]-" if persistent.ss_06:
-            show image "03_hp/19_extras/06.png" with d3
-            if commentaries:
-                a1 "Alternative game poster."
-                a1 "This one has never been released."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/06.png" with d3
-            pass
-            
-        "- С.07: [scroll_07_name] -" if persistent.ss_07:
-            show image "03_hp/19_extras/07.png" with d3
-            if commentaries:
-                a1 "Some chibi closeups."
-                a1 "The one on the left never made it into the final game..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/07.png" with d3
-            pass
-            
-        "- С.08: [scroll_08_name] -" if persistent.ss_08:
-            show image "03_hp/19_extras/08.png" with d3
-            if commentaries:
-                a1 "A banch of items that I ended up not using..."
-                a1 "I blame dahr and his awesome artwork."
+label vol_description:
 
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/08.png" with d3
-            pass
-            
-        "- С.09: [scroll_09_name] -" if persistent.ss_09:
-            show image "03_hp/19_extras/09.png" with d3
-            if commentaries:
-                a1 "The drawing of Hermione from the poster. (by Dahr)"
-                a1 "I like one on the right with her panties still on."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/09.png" with d3
-            pass
-            
-        "- С.10: [scroll_10_name] -" if persistent.ss_10:
-            show image "03_hp/19_extras/10.png" with d3
-            if commentaries:
-                a1 "Another ithing that never made it into the final game..."
-                a1 "The idea here was that the more you level up Hermione the more pegs she would let you to put on her..."
-                a1 "And the nipple chain was supposed to be worn to class under the uniform."
+    $_descrs=[
+    ["This is a first ever draft of the Dumbledore's office.", "Not a very exciting thing to look at, sure. But holds great historical value."],
+    ["The calendar...", "On the early stages of development I toyed with an idea of implementing an actual in-game calendar into the gameplay...","I soon realized how much more difficult it would be to create a game like that...",
+        "And since I personally believe that any time limits in any game always work against the fun factor I decided to abandon the idea...", "Later on I used this drawing as a parchment paper for letters to be written on..."],
+    ["A couple of very early drawings of Hermione..."],
+    ["The deepthroating scene...", "My first attempt.", "Been deemed unworthy and ended up here."],
+    ["The game poster...", "Hermione is Dahr's work. The rest is me..."],
+    ["Alternative game poster.", "This one has never been released."],
+    ["Some chibi closeups.", "The one on the left never made it into the final game..."],
+    ["A banch of items that I ended up not using...", "I blame dahr and his awesome artwork."],
+    ["The drawing of Hermione from the poster. (by Dahr)", "I like one on the right with her panties still on."],
+    ["Another ithing that never made it into the final game...", "The idea here was that the more you level up Hermione the more pegs she would let you to put on her...","And the nipple chain was supposed to be worn to class under the uniform."],
+    ["The house-elf brothel... Just another thing that never happened."],
+    ["A drawing featuring yours truly as a Durmstrung mage and Lola as a student...", "The drawing itself is by Dahr of course."],
+    ["Another one of those side-quests that never happened...", "This one was about-","No, I better not. Who knows, maybe we will get to adding those quests eventually."],
+    ["Another sub-quest...", "This one involving the school's wizard chess club."],
+    ["There is more then one way for a pretty girl to carry her books around.", "I thought it would be cool to change the way Hermione carries the books as she progresses with her training.","Since the whole tutoring arc got canceled I am showing it here..."],
+
+
+    ["A couple of items that didn't make it into the final game...", "The one on the left is an actual live house-elf to give as a present.","The one on the right is a portrait of a pervy but wise wizard. Supposed to be helping with studying..."],
+    ["Few more items...", "A newspaper, a bottle of perfume and a magical hat that says things you want to hear..."],
+    ["The fiction books...", "The top row are my sketches, the bottom row are finalized drawings by dahr."],
+    ["A drawing of a famous singer.", "Has no connection to this game and is here for no reason whatsoever."],
+    ["It took me a while to come up with a proper look for Hermione...", "Version \"A\" was my first attempt. And I liked it up until the moment when I started to hate it...",
+        "Version \"B\" was my second attempt. And it's good. But her confident and semi-aggressive facial features didn't fit the character well...","Version \C\" is the one that got the role. The Hermione that we all grew to care for by now, I'm sure."],
+    ["Sub-quests that never happened.", "You are allowed to feel bad for rushing me.","If you did not rush me you are allowed to feel angry at people who did."],
+    ["Hermione presenting her body to Genie...", "This would have been a quite memorable scene..."],
+    ["Didn't expect this one, did you?", "In case you're wondering this is still Hermione."],
+    [".................................", "Sub-quests of course..."],
+    ["Another sub-quest...", "We had a rather lengthy discussion with Dahr about this one...","I was sort of against it, but then Dahr sent me this picture and it made me shut up."],
+    ["One the very early stages of development I had an idea of representing outcomes of your failed or successfully completed sub quests with a simplistic plates, or photographs...", 
+        "At first many of the sub-quests involved deciding on how to spend the Hogwarts budget...",
+        "Spend your money to finance the school quiddich team, or to hire new teachers and such..."],
+    ["Isn't she adorable?"],
+    ["Another (rather lengthy) sub-quest..."],
+    [".........."],
+    ["One of the very early sketches related to the quiddich sub-quests..."]
+    ]
+
     
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/10.png" with d3
-            pass
-            
-        "- С.11: [scroll_11_name] -" if persistent.ss_11:
-            show image "03_hp/19_extras/11.png" with d3
-            if commentaries:
-                a1 "The house-elf brothel... Just another thing that never happened."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/11.png" with d3
-            pass
-            
-        "- С.12: [scroll_12_name] -" if persistent.ss_12:
-            show image "03_hp/19_extras/12.png" with d3
-            if commentaries:
-                a1 "A drawing featuring yours truly as a Durmstrung mage and Lola as a student..."
-                a2 "The drawing itself is by Dahr of course."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/12.png" with d3
-            pass
-        
-        
-        "- С.13: [scroll_13_name] -" if persistent.ss_13:
-            show image "03_hp/19_extras/13.png" with d3
-            if commentaries:
-                a1 "Another one of those side-quests that never happened..."
-                a1 "This one was about--"
-                a1 "No, I better not. Who knows, maybe we will get to adding those quests eventually."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/13.png" with d3
-            pass
-        
-        "- С.14: [scroll_14_name] -" if persistent.ss_14:
-            show image "03_hp/19_extras/14.png" with d3
-            if commentaries:
-                a1 "Another sub-quest..."
-                a1 "This one involving the school's wizard chess club."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/14.png" with d3
-            pass
-        
-        "- С.15: [scroll_15_name] -" if persistent.ss_15:
-            show image "03_hp/19_extras/15.png" with d3
-            if commentaries:
-                a1 "There is more then one way for a pretty girl to carry her books around."
-                a1 "I thought it would be cool to change the way Hermione carries the books as she progresses with her training."
-                a1 "Since the whole tutoring arc got canceled I am showing it here..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/15.png" with d3
-            pass
-        
-        "\"Never mind\"":
-            jump after_cam
-        
+    show image "03_hp/19_extras/"+str(choose.choice).zfill(2)+".png" with d3
+    if commentaries:
+        python:
+            for i in range(len(_descrs[choose.choice-1])):
+                renpy.say(a1,_descrs[choose.choice-1][i])
+    show screen ctc
+    pause
+    hide screen ctc
+    hide image "03_hp/19_extras/"+str(choose.choice).zfill(2)+".png" with d3
     jump volone
         
-        
-        
-        
-label voltwo:
-    menu:
-        "- С.16: [scroll_16_name] -" if persistent.ss_16:
-            show image "03_hp/19_extras/16.png" with d3
-            if commentaries:
-                a1 "A couple of items that didn't make it into the final game..."
-                a1 "The one on the left is an actual live house-elf to give as a present."
-                a1 "The one on the right is a portrait of a pervy but wise wizard. Supposed to be helping with studying..."
 
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/16.png" with d3
-            pass
-        "- С.17: [scroll_17_name] -" if persistent.ss_17:
-            show image "03_hp/19_extras/17.png" with d3
-            if commentaries:
-                #17.
-                a1 "Few more items..."
-                a1 "A newspaper, a bottle of perfume and a magical hat that says things you want to hear..."
-
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/17.png" with d3
-            pass
-        "- С.18: [scroll_18_name] -" if persistent.ss_18:
-            show image "03_hp/19_extras/18.png" with d3
-            if commentaries:
-                 #18.
-                a1 "The fiction books..."
-                a1 "The top row are my sketches, the bottom row are finalized drawings by dahr."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/18.png" with d3
-            pass
-            
-        "- С.19: [scroll_19_name] -" if persistent.ss_19:
-            show image "03_hp/19_extras/19.png" with d3
-            if commentaries:
-                #19.
-                a1 "A drawing of a famous singer."
-                a1 "Has no connection to this game and is here for no reason whatsoever."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/19.png" with d3
-            pass
-            
-        "- С.20: [scroll_20_name] -" if persistent.ss_20:
-            show image "03_hp/19_extras/20.png" with d3
-            if commentaries:
-                #20.
-                a1 "It took me a while to come up with a proper look for Hermione..."
-                a1 "Version \"A\" was my first attempt. And I liked it up until the moment when I started to hate it..."
-                a2 "Version \"B\" was my second attempt. And it's good. But her confident and semi-aggressive facial features didn't fit the character well..."
-                a1 "Version \C\" is the one that got the role. The Hermione that we all grew to care for by now, I'm sure."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/20.png" with d3
-            pass
-            
-        "- С.21: [scroll_21_name] -" if persistent.ss_21:
-            show image "03_hp/19_extras/21.png" with d3
-            if commentaries:
-                #21 
-                a1 "Sub-quests that never happened."
-                a1 "You are allowed to feel bad for rushing me."
-                a1 "If you did not rush me you are allowed to feel angry at people who did."
-
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/21.png" with d3
-            pass
-            
-        "- С.22: [scroll_22_name] -" if persistent.ss_22:
-            show image "03_hp/19_extras/22.png" with d3
-            if commentaries:
-                #22
-                a1 "Hermione presenting her body to Genie..."
-                a1 "This would have been a quite memorable scene..."
-
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/22.png" with d3
-            pass
-            
-        "- С.23: [scroll_23_name] -" if persistent.ss_23:
-            show image "03_hp/19_extras/23.png" with d3
-            if commentaries:
-                #23. 
-                a1 "Didn't expect this one, did you?"
-                a1 "In case you're wondering this is still Hermione."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/23.png" with d3
-            pass
-            
-        "- С.24: [scroll_24_name] -" if persistent.ss_24:
-            show image "03_hp/19_extras/24.png" with d3
-            if commentaries:
-                #24.
-                a1 "................................."
-                a1 "Sub-quests of course..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/24.png" with d3
-            pass
-            
-        "- С.25: [scroll_25_name] -" if persistent.ss_25:
-            show image "03_hp/19_extras/25.png" with d3
-            if commentaries:
-                #25.
-                a1 "Another sub-quest..."
-                a1 "We had a rather lengthy discussion with Dahr about this one..."
-                a1 "I was sort of against it, but then Dahr sent me this picture and it made me shut up."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/25.png" with d3
-            pass
-            
-        "- С.26: [scroll_26_name] -" if persistent.ss_26:
-            show image "03_hp/19_extras/26.png" with d3
-            if commentaries:
-                #26.
-                a1 "One the very early stages of development I had an idea of representing outcomes of your failed or successfully completed sub quests with a simplistic plates, or photographs..."
-                a1 "At first many of the sub-quests involved deciding on how to spend the Hogwarts budget..."
-                a1 "Spend your money to finance the school quiddich team, or to hire new teachers and such..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/26.png" with d3
-            pass
-            
-        "- С.27: [scroll_27_name] -" if persistent.ss_27:
-            show image "03_hp/19_extras/27.png" with d3
-            if commentaries:
-                #27.
-                a1 "Isn't she adorable?"
-
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/27.png" with d3
-            pass
-
-        
-        "- С.28: [scroll_28_name] -" if persistent.ss_28:
-            show image "03_hp/19_extras/28.png" with d3
-            if commentaries:
-                #28.
-                a1 "Another (rather lengthy) sub-quest..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/28.png" with d3
-            pass
-        
-        "- С.29: [scroll_29_name] -" if persistent.ss_29:
-            show image "03_hp/19_extras/29.png" with d3
-            if commentaries:
-                #29.
-                a1 ".........."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/29.png" with d3
-            pass
-        
-        "- С.30: [scroll_30_name] -" if persistent.ss_30:
-            show image "03_hp/19_extras/30.png" with d3
-            if commentaries:
-                #30.
-                a1 "One of the very early sketches related to the quiddich sub-quests..."
-            show screen ctc
-            pause
-            hide screen ctc
-            hide image "03_hp/19_extras/30.png" with d3
-            pass
-        
-        "\"Never mind\"":
-            jump after_cam
-        
-    jump voltwo
-    
-        
-        
-        
         
         
     
@@ -1835,7 +1528,7 @@ label music_room:
             
             
             
-        "-No music-":
+        "-Stop music-":
             stop music fadeout 1.0
             jump music_room
         "-Keep the current tune-":

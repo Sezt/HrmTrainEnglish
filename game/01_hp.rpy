@@ -90,6 +90,8 @@ $ teachers_pet = 0
 $ classmates_pet = 0
 $ being_mean = 0 #+1 every time you are being mean to hermione.
 
+$currentBook=None
+$item=None
 
 
 $ dates = 0 #Tracks how many times Hermione been tutored.
@@ -369,8 +371,8 @@ $ daytime = True #True when it is daytime. Turns False during nighttime.
 $ hermione_sleeping = False
 $ hermione_takes_classes = False
 $ snape_busy = False
-#$ fire_in_fireplace = False # Remove comment to proffer everyday Fireplace
-#hide screen fireplace_fire
+$ fire_in_fireplace = False
+hide screen fireplace_fire
 
 ### EVENTS RELATED FLAGS ###
 $ days_without_an_event +=1
@@ -509,7 +511,6 @@ with fade
 $ day +=1
 
 ### DAY EVENTS ###<============================================================================================================================================================
-
 
 
 
@@ -727,108 +728,7 @@ init -2:
     
     $ config.autoreload = False
     
-     ### SACRED SCROLLS ###
-    #
-    $ sscroll_01 = False # Turns TRUE if the scroll had been bought.
-    $ sscroll_02 = False
-    $ sscroll_03 = False
-    $ sscroll_04 = False
-    $ sscroll_05 = False
-    $ sscroll_06 = False
-    $ sscroll_07 = False
-    $ sscroll_08 = False
-    $ sscroll_09 = False
-    $ sscroll_10 = False
-    #
-    $ sscroll_11 = False # Turns TRUE if the scroll had been bought.
-    $ sscroll_12 = False
-    $ sscroll_13 = False
-    $ sscroll_14 = False
-    $ sscroll_15 = False
-    $ sscroll_16 = False
-    $ sscroll_17 = False
-    $ sscroll_18 = False
-    $ sscroll_19 = False
-    $ sscroll_20 = False
-    #
-    $ sscroll_21 = False # Turns TRUE if the scroll had been bought.
-    $ sscroll_22 = False
-    $ sscroll_23 = False
-    $ sscroll_24 = False
-    $ sscroll_25 = False
-    $ sscroll_26 = False
-    $ sscroll_27 = False
-    $ sscroll_28 = False
-    $ sscroll_29 = False
-    $ sscroll_30 = False
-    #
-    $ sscroll_31 = False # Turns TRUE if the scroll had been bought.
-    $ sscroll_32 = False
-    $ sscroll_33 = False
-    $ sscroll_34 = False
-    $ sscroll_35 = False
-    $ sscroll_36 = False
-    $ sscroll_37 = False
-    $ sscroll_38 = False
-    $ sscroll_39 = False
-    $ sscroll_40 = False
-    $ sscroll_41 = False
-    $ sscroll_42 = False
-    $ sscroll_43 = False
-    $ sscroll_44 = False
-    $ sscroll_45 = False
-    #
-    $ scroll_01_name = "The room"
-    $ scroll_02_name = "The calendar"
-    $ scroll_03_name = "The girl"
-    $ scroll_04_name = "Deeptroating"
-    $ scroll_05_name = "Poster 01"
-    $ scroll_06_name = "Poster 02"
-    $ scroll_07_name = "Chibi-dancing"
-    $ scroll_08_name = "Game items"
-    $ scroll_09_name = "Panties no panties"
-    $ scroll_10_name = "A lot of pegs"
-    #
-    $ scroll_11_name = "House-elf brothel"
-    $ scroll_12_name = "Me and Lola"
-    $ scroll_13_name = "Hard training"
-    $ scroll_14_name = "Wizard's Chess"
-    $ scroll_15_name = "Tutoring books"
-    $ scroll_16_name = "Extra gifts 01"
-    $ scroll_17_name = "Extra gifts 02"
-    $ scroll_18_name = "Fiction books"
-    $ scroll_19_name = "Singer whore"
-    $ scroll_20_name = "Casting"
-    #
-    $ scroll_21_name = "Witch robe 01"
-    $ scroll_22_name = "Witch robe 02"
-    $ scroll_23_name = "Witch robe 03"
-    $ scroll_24_name = "Witch robe 04"
-    $ scroll_25_name = "The walk"
-    $ scroll_26_name = "Durmstrang"
-    $ scroll_27_name = "Gag ball"
-    $ scroll_28_name = "New clothes 01"
-    $ scroll_29_name = "New clothes 02"
-    $ scroll_30_name = "The gang"
-    #
-    $ scroll_31_name = "Scroll #31"
-    $ scroll_32_name = "Scroll #32"
-    $ scroll_33_name = "Scroll #33"
-    $ scroll_34_name = "Scroll #34"
-    $ scroll_35_name = "Scroll #35"
-    $ scroll_36_name = "Scroll #36"
-    $ scroll_37_name = "Scroll #37"
-    $ scroll_38_name = "Scroll #38"
-    $ scroll_39_name = "Scroll #39"
-    $ scroll_40_name = "Scroll #40"
-    $ scroll_41_name = "Scroll #41"
-    $ scroll_42_name = "Scroll #42"
-    $ scroll_43_name = "Scroll #43"
-    $ scroll_44_name = "Scroll #44"
-    $ scroll_45_name = "Scroll #45"
-    
-    
-    
+
     
     
     

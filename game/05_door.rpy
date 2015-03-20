@@ -176,108 +176,16 @@ label door:
                     
                     
                     "-Give her a present-" if not gifted:
-                        menu:
-                            "-A lollipop candy-([candy])" if candy >= 1:
-                                $ gifted = True 
-                                jump giving_candy #28_gifts.rpy
+                        $ choose = RunMenu()
+                        python:
+                            for o in hero.Items():
+                                choose.AddItem("- "+o._caption+" -", 
+                                    "menu_gifts_actions" , True, o.Name)
+
+                        $ choose.Show("day_time_requests")
+
+
                                 
-                            "-Chocolate-([chocolate])" if chocolate >= 1:
-                                $ gifted = True 
-                                jump giving_chocolate #28_gifts.rpy
-                            
-                            "-Stuffed Owl-([owl])" if owl >= 1:
-                                $ gifted = True 
-                                jump giving_owl #28_gifts.rpy
-                                
-                            "-Butterbeer-([beer])" if beer >= 1:
-                                $ gifted = True 
-                                jump giving_beer #28_gifts.rpy
-                                
-                            "-Educational magazines-([mag1])" if mag1 >= 1:
-                                $ gifted = True 
-                                jump giving_mag1 #28_gifts.rpy
-                                
-                            "-Girly magazines-([mag2])" if mag2 >= 1:
-                                $ gifted = True 
-                                jump giving_mag2 #28_gifts.rpy
-                                
-                            "-Adult magazines-([mag3])" if mag3 >= 1:
-                                $ gifted = True 
-                                jump giving_mag3 #28_gifts.rpy
-                                
-                            "-Porn magazines-([mag4])" if mag4 >= 1:
-                                $ gifted = True 
-                                jump giving_mag4 #28_gifts.rpy
-                            
-                            "-Viktor Krum Poster-([krum])" if krum >= 1:
-                                $ gifted = True 
-                                jump giving_krum #28_gifts.rpy
-                            
-                            "-Sexy lingerie-([lingerie])" if lingerie >= 1:
-                                $ gifted = True 
-                                jump giving_lingerie #28_gifts.rpy
-                            
-                            "-A pack of condoms-([condoms])" if condoms >= 1:
-                                $ gifted = True 
-                                jump giving_condoms #28_gifts.rpy
-                                
-                            "-A jar of anal lubricant-([anal_lube])" if anal_lube >= 1:
-                                $ gifted = True 
-                                jump giving_lube #28_gifts.rpy
-                            
-                            "-A vibrator-([vibrator])" if vibrator >= 1:
-                                $ gifted = True 
-                                jump giving_vibrator #28_gifts.rpy
-                            
-                            "-Ball gag and cuffs -([ballgag])" if ballgag >= 1:
-                                $ gifted = True 
-                                jump giving_ballgag #28_gifts.rpy
-                                
-                            "-Anal plugs -([plug])" if plug >= 1:
-                                $ gifted = True 
-                                jump giving_plug #28_gifts.rpy
-                                
-                            "-A Thestral strap-on-([strapon])" if strapon >= 1:
-                                $ gifted = True 
-                                jump giving_strapon #28_gifts.rpy
-                            
-                            "-Lady Speed Stick-2000-([broom])" if broom >= 1:
-                                $ gifted = True 
-                                jump giving_broom #28_gifts.rpy
-                                
-                            "-Sex doll \"Joanne\"-([sexdoll])" if sexdoll >= 1:
-                                $ gifted = True 
-                                jump giving_sexdoll #28_gifts.rpy
-                            
-                            "-School miniskirt-" if have_miniskirt: # Turns TRUE when you have the skirt in your possession.
-                                $ gifted = True
-                                jump giving_skirt #28_gifts.rpy
-                            
-                            "-\"S.P.E.W.\" badge-" if badge_01 == 1:
-                                $ gifted = True
-                                jump giving_badge_01 #28_gifts.rpy
-                            
-                            "-Fishnet stockings-" if nets == 1:
-                                $ gifted = True
-                                jump giving_nets #28_gifts.rpy
-                                
-                                
-                                
-                                
-                            "-The Ball Dress-" if "ball_dress" in gifts12 and not gave_the_dress:
-                                show screen  blktone
-                                with d3
-                                m "(I have the feeling that there will be no turning back for me after I give her this dress...)"
-                                m "(Am I ready for this?)"
-                                hide screen blktone
-                                menu:
-                                    "\"Yes, I am...\"":
-                                        jump giving_thre_dress #27_final_events.rpy
-                                    "\"No, not yet...\"":
-                                        jump day_time_requests
-                            "-Never mind-":
-                                jump day_time_requests
-                
                     
                     # "- Ending \"Your whore\"- ":
                         #jump your_whore
