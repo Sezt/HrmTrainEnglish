@@ -210,7 +210,7 @@ label thx_4_shoping:
     if gold >= _price*itemCount//2:
         menu:
             dahr "You ordered [itemCount] items \"[_caption]\". You pay for Express delivery?"
-            "Express-delivery (+50% for urgency)":
+            "Express-delivery (+50%% for urgency)":
                 $days_in_delivery2=1
                 $gold -= _price*itemCount//2
             "Typical delivery":
