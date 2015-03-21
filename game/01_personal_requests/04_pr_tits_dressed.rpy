@@ -334,7 +334,7 @@ label new_request_04:
                         "Out!":
                             m "Get out of here! Points will not be!"
                             $herView.showQQ( "body_05.png", pos )
-                            her "As you not keep your word, sir, I won't be able to come to you."
+                            her2 "As you not keep your word, sir, I won't be able to come to you."
                             $hermi.liking -=50
                             jump new_request_04_nopoints
                         "Well, here you are!":
@@ -343,10 +343,10 @@ label new_request_04:
                             m "I am available to present?"
                             $herView.showQQ( "body_58.png", pos )
                             her "Quite, sir."
-                            her "But if so, Professor, I have to be silent, like a fish on ice. I'm afraid the extra word to say."
+                            her2 "But if so, Professor, I have to be silent, like a fish on ice. I'm afraid the extra word to say."
                             m "It's for the best, miss Granger."
                             $herView.showQQ( "body_129.png", pos )
-                            her "How am I going to report you, Professor?.. But of course, I will do as you say."
+                            her2 "How am I going to report you, Professor?.. But of course, I will do as you say."
                             "> Hermione is going to leave."
                             m "Well, miss Granger, this time I forgive you. But I warn you - keep your tongue!"
                             $herView.showQQ( "body_84.png", pos )

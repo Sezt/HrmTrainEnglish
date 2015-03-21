@@ -195,6 +195,7 @@ label tutoring:
                 call hermione_leave_tutoring
              
             "Finch eats this crap!":
+                $ zyablik_switch = 1
                 g4 "He plunges his razor-sharp beak into the carcass of a poor creature!"
                 $herView.hideQQ()
                 $herView.showQQ( "body_18.png", pos )
@@ -292,6 +293,7 @@ label tutoring:
         m "..."
         m "It is unlikely that I will be able to train her, he did not really know about the world..."
         m "I think I should talk about it with Snape."
+        $ teacher_jinn_quest = 1
 
         $herView.data().loadState()
         jump day_start    

@@ -270,7 +270,7 @@ label new_personal_request:
                 
                 
             "- Never mind -":
-                jump day_time_requests
+                jump hermione_main_menu
     
         
         
@@ -342,7 +342,7 @@ label new_personal_request:
 
     else:
         her "The Gryffindors are in the lead. I don't need to do this."
-        jump day_time_requests
+        jump hermione_main_menu
                 
 
 

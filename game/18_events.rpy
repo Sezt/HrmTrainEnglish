@@ -46,9 +46,9 @@ label event_00:
     show screen ctc
     with Dissolve(.3)
     pause
-    hide screen ctc
+    hide screen ctc 
     who2 "Albus... Do you have a moment?"
-    hide screen snape_main
+    hide screen snape_main 
     
 #    show screen ctc
 #    pause
@@ -3219,8 +3219,421 @@ label event_15: # Hermione comes and asks to buy a favour from her.
 
 
 
-
-
+label event_16: #Учебники доставлены
+    $ teacher_jinn_quest = 6
+    m "..."
+    m "Is there a point in your life?"
+    m "..."
+    g4 "Who does porn games in which the protagonists have time to be distracted by such crap?"
+    #стук-перестук, заходит гермиона
+    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+    $ hermione_chibi_xpos = 400 #Near the desk.
+    show screen hermione_02 #Hermione stands still.
+    show screen bld1
+    with d3
+    $herView.hideshowQQ( "body_01.png", pos )
+    her "Good evening, Professor Dumbledore."
+    her "Your textbooks profit."
+    m "Three days, Yes..?"
+    m "Why is everyone so often use the number 3 in the fictional stories?"
+    g4 "Figure 29 also stylish looks!"
+    $herView.hideshowQQ( "body_09.png", pos )
+    her "Um... Professor?"
+    m "... something I digress."
+    m "Philosophical mood, you know."
+    m "You said something about the textbooks?"
+    $herView.hideshowQQ( "body_11.png", pos )
+    her "Uh, yeah... Your books delivered."
+    g9 "Perfect! And where are they?"
+    $herView.hideshowQQ( "body_15.png", pos )
+    her "Lie behind the door. So many of them that Harry and Ron took a half hour to move them all out of the Gryffindor tower."
+    g4 "(And she even said something about equality of the sexes... Hypocritical bitch!)"
+    m "Excellent! Bring them here!"
+    $herView.hideshowQQ( "body_11.png", pos )
+    her "I'm afraid that Harry and Ron had already left, and this room is too small."
+    m "Too small? How many books are there?"
+    her "438, not including brochures Harry Thompson of taming the Kraken."
+    m "(This is definitely a hot night...)"
+    m "Thank you, will not help to bring them here?"
+    $herView.hideshowQQ( "body_10.png", pos )
+    her "But where we..."
+    m "Don't worry, I have an idea where they can be put..."
+    show screen blkfade 
+    "..."
+    hide screen blkfade
+    $herView.hideshowQQ( "body_13.png", pos )
+    her "I never thought that such a wizard as you have a magic wardrobe?"
+    g9 "Well, it's rather a magical wine cellar. Although it fits perfect and other stuff."
+    $herView.hideshowQQ( "body_184.png", pos )
+    her "..."
+    m "Anyway, thank you very much, you have given me and science a great service!"
+    m "Now, if you'll allow me, I need to start the research."
+    $herView.hideshowQQ( "body_14.png", pos )
+    her "But sir, I've helped you, right?"
+    $herView.hideshowQQ( "body_13.png", pos )
+    her "And Harry and Ron tried very hard..."
+    m "... and?"
+    $herView.hideshowQQ( "body_06.png", pos )
+    her "It would be fair to award the points Gryffindor faculty, right?"
+    m "Hm..."
+    menu:
+        "Give 5 points":
+            m "Okay, okay..."
+            m "Five points to Gryffindor!"
+            $ gryffindor +=5
+            $herView.hideshowQQ( "body_16.png", pos )
+            her "How?! Five measly points?!"
+            $herView.hideshowQQ( "body_28.png", pos )
+            her "I spent two hours of his life working as a loader and received five points?!"
+            $herView.hideshowQQ( "body_110.png", pos )
+            her "Miser!"
+            hide screen bld1
+            $herView.hideQ( Dissolve(.3) )
+            $ walk_xpos=400 #Animation of walking chibi. (From)
+            $ walk_xpos2=610 #Coordinates of it's movement. (To)
+            $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
+            show screen hermione_walk_01_f 
+            pause 2
+            hide screen hermione_walk_01_f 
+            $ hermione_chibi_xpos = 610 #Near the desk.
+            show screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+            hide screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            $hermi.liking -= 15 #Потом возможно добавить больше?
+            m "You've had enough of those ten thousand that I'm investing in this quest."
+        "Give 15 points":
+            m "Well, I think you deserve."
+            m "Fifteen points to Gryffindor!"
+            $ gryffindor +=15
+            $herView.hideshowQQ( "body_01.png", pos )
+            her "Thank you, sir."
+            her "Good night."
+            hide screen bld1
+            $herView.hideQ( Dissolve(.3) )
+            $ walk_xpos=400 #Animation of walking chibi. (From)
+            $ walk_xpos2=610 #Coordinates of it's movement. (To)
+            $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
+            show screen hermione_walk_01_f 
+            pause 2
+            hide screen hermione_walk_01_f 
+            $ hermione_chibi_xpos = 610 #Near the desk.
+            show screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+            hide screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+        "Give 100 points":
+            m "Sure, why not?"
+            m "A hundred points to Gryffindor!"
+            $ gryffindor +=100
+            $herView.hideshowQQ( "body_72.png", pos )
+            her "A hundred points?!"
+            $herView.hideshowQQ( "body_15.png", pos )
+            her "But we had only brought books..."
+            m "Not satisfied with something? I can always take them back..."
+            $herView.hideshowQQ( "body_75.png", pos )
+            her "No... of Course not!"
+            $herView.hideshowQQ( "body_15.png", pos )
+            her "Thank you very much, sir."
+            $herView.hideshowQQ( "body_16.png", pos )
+            her "If you ever need anything, just call, Gryffindor is always ready to help!"
+            $herView.hideshowQQ( "body_06.png", pos )
+            her "Good night."
+            hide screen bld1
+            $herView.hideQ( Dissolve(.3) )
+            $ walk_xpos=400 #Animation of walking chibi. (From)
+            $ walk_xpos2=610 #Coordinates of it's movement. (To)
+            $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
+            show screen hermione_walk_01_f 
+            pause 2
+            hide screen hermione_walk_01_f 
+            $ hermione_chibi_xpos = 610 #Near the desk.
+            show screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+            hide screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            show screen bld1
+            with d3
+            m "Ten thousand coins and a hundred points of the faculty..."
+            m "My budget for a long time to recover from this."
+        "Cost!":
+            m "Of course not, that's silly."
+            $herView.hideshowQQ( "body_18.png", pos )
+            her "What..?"
+            $herView.hideshowQQ( "body_76.png", pos )
+            her "But..."
+            m "After all, you did it for the good of science, and not for selfish motives, right?"
+            m "That is why I entrusted it to you, the students proud Gryffindor!"
+            m "I thought you didn't want the reward."
+            $herView.hideshowQQ( "body_16.png", pos )
+            her "But the scoring system was invented in order to pokerati for students..."
+            m "You are absolutely right. But, judging by your words, I was wrong. I was wrong about you. You can pick up your glasses and get out of my office."
+            $herView.hideshowQQ( "body_77.png", pos )
+            her "..."
+            $herView.hideshowQQ( "body_73.png", pos )
+            her "..."
+            her "{size=-4}Sorry...{/size}" #мелким шрифтом
+            m "Excuse me, what?"
+            $herView.hideshowQQ( "body_07.png", pos )
+            her "You... You are absolutely right..."
+            $herView.hideshowQQ( "body_01.png", pos )
+            her "In the pursuit of victory, we began to forget about something important."
+            $herView.hideshowQQ( "body_11.png", pos )
+            her "I need to think about it..."
+            $herView.hideshowQQ( "body_07.png", pos )
+            her "I'm sorry." #Возможно после этого Гермиона перестанет продавать очки обучения? На будущее 
+            hide screen bld1
+            $herView.hideQ( Dissolve(.3) )
+            $ walk_xpos=400 #Animation of walking chibi. (From)
+            $ walk_xpos2=610 #Coordinates of it's movement. (To)
+            $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
+            show screen hermione_walk_01_f 
+            pause 2
+            hide screen hermione_walk_01_f 
+            $ hermione_chibi_xpos = 610 #Near the desk.
+            show screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+            hide screen hermione_01_f #Hermione stands still.
+            with Dissolve(.3)
+            show screen bld1
+            with d3
+            m "I hope I haven't overdone...?"
+            m "However, what's the difference? My job is inaccessible to turn girls to whores and not to worry about their feelings."
+    m "Well, it's time to call Snape."
+    m "Hmm... Interesting how the system works call people in this room?"
+    m "Like I'm not doing anything, and they..."
+    #входит Снейп
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
+    
+    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+    $ snapes_speed = 02.0 #The speed of moving the walking animation across the screen.
+    $ walk_xpos=470 #Animation of walking chibi. (From)
+    $ walk_xpos2=360 #Coordinates of it's movement. (To)
+    show screen snape_walk_01 
+    with d3
+    pause 1.5
+    show screen snape_02 #Snape stands still.
+    show screen bld1
+    with Dissolve(.3)
+    $ tt_xpos=300 #Defines position of the Snape's full length sprite.
+    $ tt_ypos=0
+    $ s_sprite = "03_hp/10_snape_main/snape_01.png"                                                                            #SNAPE
+    show screen snape_main
+    with Dissolve(.3)                                                                                                               #SNAPE
+    with d3  
+    sna "You called, Ginny?"
+    m "..."
+    m "How do you do it?"
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_05.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3  
+    sna "What do you mean?"
+    m "How you show up in this room, I just have to think about it?"
+    sna "Unless your magic Secretary with a spell of gromkogovorya does not shout it to the whole school the name of the person you want to call?"
+    m "Hmm... Sounds about right..."
+    stop music 
+    $ renpy.play('sounds/scratch.wav')
+    m "..!"
+    m "I..."
+    m "have..."
+    g4 "{size=+4}FUCKING THE SECRETARY??!{/size}"
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_11.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3  
+    sna "Well, yeah... didn't you know?"
+    "{size=+4}WHERE?!{/size}"
+    "{size=+4}HOW COULD YOU HIDE FROM ME A FEMALE CHARACTER??!!{/size}"
+    "{size=+4}BRING HER HERE!!!{/size}"
+    sna"..."
+    "{size=+4}WHAT UP?!! QUICKLY GET HER IN HERE!!!{/size}"
+    sna "..."
+    "{size=+4}ARE YOU DEAF?!{/size}"
+    sna "..."
+    "Hmm... Snape?"
+    sna "..."
+    m "..."
+    sna "..."
+    m "Come on, it's not funny!"
+    sna "..."
+    g9 "Okay, we can fuck her together!"
+    sna"..."
+    m "Well, he hung."
+    g4  "Who did the optimization and testing, huh?!"
+    "Mystical voice" "would you stop?" #мистический голос
+    "Mystical voice" "already got All the jokes about the fact that you know that you are in the game!"
+    m "But.."
+    "Mystical voice" "And forget about the Secretary. At least not yet."#мистический голос
+    m "Right..."
+    "Mystical voice" "Will argue - your Secretary will become the owner of the brothel from Agraba." #мистический голос
+    "Mystical voice" "And she'll be a nympho."
+    m  "*gulp*"
+    g9 "Okay, I think I can do without a Secretary..."
+    g4 "*Oh* And how can you work in such conditions?"
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_05.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3  
+    sna "You said something, Ginny?" #snape
+    m "Ahem, Yes, I asked her if tincture?"
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3  
+    sna "\"Potion\", Ginny."
+    #Шутки про "зелье" возможно допишу позже
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3  
+    sna "Yes, I just finished cooking it."
+    sna "You seems to be working quite well for the moment."
+    g4 "{size=-4}Well, how not to joke about the developers?{/size}" #мелкий шрифт
+    m "Okay... let's get started Then?"
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_05.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3  
+    sna "Of course, you can start. Here's your balanoidea potion, and I should Clean boilers Botanic...."
+    hide screen snape_main
+    hide screen bld1
+    with d3
+    hide screen snape_01_f
+    hide screen bld1
+    hide screen snape_main
+    hide screen snape_02 #Snape stands still. 
+    #hide screen genie
+    show screen blkfade
+    with d3
+    $ renpy.play('sounds/07_run.mp3') 
+    pause 2
+    $ renpy.play('sounds/door.mp3')
+    show screen bld1
+    g4 "{size=+4}WHAT DID YOU CALL ME??!!{/size}"
+    g4 "Grrr, I will remember him..."
+    "A new quest! To Take Revenge On Snape."
+    m "I hope this potion would calm me down."
+    #желательно-звук открывающийся бутылки
+    "*ping!*"
+    g4 "Wow, what a smell..."
+    m "I doubt that after a bottle of this stuff in the morning I'll be something to remember..."
+    m "Well, at least this thing is expensive."
+    #звук того, как кто-то пьет :D
+    m "Hmm... I feel nothing."
+    g4 "Did Snape just fucked me?"
+    m "Yes, and these jokes with the name..."
+    m "Okay, I think he stands a chance..."
+    if $ zyablik_switch == 1:
+        m "Let's start with the biggest books."
+        m "It's called... \"Mythological biology for dummies\"."
+        "\"Chapter 1 - The Manticore\"..."
+        #найти звук удара по клавишам
+        g4 "{size=+4}Seriously?!{/size}"
+        m "Here also pictures there..."
+        m "..."
+        m "..."
+        m "Fuck it."
+        "After a night filled with learning and... Well, you know what."
+        $ renpy.play('sounds/door.mp3')                                                                                                                                                  #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_28.png"                                         # SNAPE
+        show screen s_head2                                                                                                                  #SNAPE  
+        sna2 "Hey, how's our..."
+        hide screen s_head2                                                                                                                  #SNAPE                                                                                                                                                  #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_11.png"                                         # SNAPE
+        show screen s_head2
+        sna2 "!!!"
+        sna2 "{size=+4}WHAT THE HELL IS GOING ON HERE??!!{/size}"
+        hide screen s_head2
+        m "{size=-4}Oh, Snape, buddy...{/size}" #хорошо бы нарисовать измотанного Джина, но это уже на совести художников
+        m "{size=-4}How are you doing, friend?{/size}"
+        $ s_sprite = "03_hp/10_snape_main/snape_15.png" 
+        sna2"{size=+4}IT'S YOU I HAVE TO ASK!!!{/size}"
+        hide screen s_head2                                                                                                                   #SNAPE                                                                                                                                                #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_16.png"                                                                            #SNAPE
+        show screen s_head2                                                                                              #SNAPE
+        sna2 "The room looks as if it was a herd of Minotaurs in the mating season."
+        hide screen s_head2                                                                                                                   #SNAPE                                                                                                                                                #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                                                            #SNAPE
+        show screen s_head2                                                                                                                  #SNAPE
+        sna2 "Don't tell me that..."
+        m "Don't worry, tincture worked."
+        g9 "I have studied the whole school program Thoroughly...."
+        hide screen s_head2                                                                                               #SNAPE                                          #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_08.png"                                                                            #SNAPE
+        show screen s_head2                                                                                                                  #SNAPE
+        sna2 "Then, what the hell..."
+        hide screen s_head2                                                                                                                   #SNAPE                                                                                                                                                 #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                                                            #SNAPE
+        show screen s_head2                                                                                                                  #SNAPE
+        sna2 "Though, forget it. I definitely don't want to know."
+        hide screen s_head2                                                                                                                  #SNAPE                                                                                                                                                 #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                                                            #SNAPE
+        show screen s_head2                                                                                                                  #SNAPE
+        sna2 "See you later."
+        sna2 "..."
+        hide screen s_head2                                                                                                                   #SNAPE                                                                                                                                               #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                                                            #SNAPE
+        show screen s_head2                                                                                                                 #SNAPE
+        sna "And here's another, clean it up."
+        hide screen s_head2 
+        $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                                                            #SNAPE
+        show screen s_head2
+        sna2 "I don't want to slip on... and crack your skull."
+        m "Of course, no problem."
+        $ renpy.play('sounds/door.mp3')
+        m "..."
+        m "I get the feeling that the plot is going in the wrong direction."
+        m "Okay, we gotta get organized here..."
+        "Quest completed! Ginny gets +50 to intelligence and the ability to teach Hermione! (in future updates, of course)"
+        "Bonus reward! Genie receives a strange fetish!"
+        g4 "Not true! This is the last time!"
+    else:
+        m "Perhaps I'll start with this strange books..."
+        stop music
+        m "..!"
+        # тут должна быть эпичная музыка
+        g4 "{size=+4}I feel... the POWER!{/size}"
+        "{size=+4}RACED!!!!{/size}"
+        "{size=+4}GIGA-GINNIE-BREEEEKAAAAAR!!!!!{/size}"
+        "{size=+4}After a night full of studying and pathetic cries.{/size}"
+        $ renpy.play('sounds/door.mp3')                                                                                                                 #SNAPE                                                                                                                                               #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_17.png"                                                                            #SNAPE
+        show screen s_head2                                                                                                                 #SNAPE
+        sna2 "How is our Bo... hard-working student?"
+        hide screen s_head2
+        m "{size=-4}... Snape...{/size}" #again, Picchu tired Jinnah would not have prevented
+        m "{size=-4}... tincture working...{/size}"
+        m "{size=-4}... even too much.{/size}"
+        m "{size=-4}There is something a hangover..?{/size}"                                                                                                                   #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                                                            #SNAPE
+        show screen s_head2  
+        sna2 "..."
+        hide screen s_head2                                                                                                                                                #SNAPE
+        $ s_sprite = "03_hp/10_snape_main/snape_17.png"                                                                            #SNAPE
+        sna2 "Happy day, Genie."
+        $ renpy.play('sounds/door.mp3')
+        g4 "{size=-4}Come back...{/size}"
+        g4 "{size=-4}Traitor...{/size}"
+        "A new quest! Cruel revenge on Snape!"
+        m "... stinker."
+        m "At least I can start training girls..."
+        "Quest completed! Genie gets +50 to intelligence and the ability to teach Hermione! (in future updates, of course)"
+        g4 "Future updates? Then it was all in vain?"
+        m "...fuck it..."
+        
+    jump day_main_menu
 
 
 
