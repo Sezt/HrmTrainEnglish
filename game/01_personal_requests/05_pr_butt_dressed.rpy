@@ -12,7 +12,7 @@ label new_request_05:
             jump new_personal_request
 
     
-    if whoring <=2:
+    if hermi.whoring <=2:
         jump too_much
         
 #    if whoring >= 3 and whoring <= 5:
@@ -29,12 +29,12 @@ label new_request_05:
 
         
         
-    if whoring >= 3 and whoring <= 5: # LEVEL 02 # Hermione is hesitant. <=================================================================================== FIRST EVENT.
+    if hermi.whoring >= 3 and hermi.whoring <= 5: # LEVEL 02 # Hermione is hesitant. <=================================================================================== FIRST EVENT.
         
         hide bld1
         with d3
         m "Come closer, child. Let me molest your butt a little."
-        if IsFirstRun() and whoring <= 5: #First time
+        if IsFirstRun() and hermi.whoring <= 5: #First time
 #        if request_05_points == 0 and whoring <= 5: #First time
             stop music fadeout 5.0
             $her_head_state = 7
@@ -178,7 +178,7 @@ label new_request_05:
                                                     $ hermione_sleeping = True
                                                     jump night_main_menu
                                             "\"I'm subtracting points from you then!\"":
-                                                $ mad += 20
+                                                $ hermi.liking -= 20
                                                 $her_head_state = 22
                                                 her_head_main "You can't be serious!?"
                                                 $ gryffindor -=10
@@ -208,13 +208,13 @@ label new_request_05:
                                                 m ".............."
                                                 menu:
                                                     "\"Dammit. Now I feel like crap...\"":
-                                                        $ mad -= 5
+                                                        $ hermi.liking += 5
                                                         m "Dammit... Now I feel like crap..."
                                                         m "But who could resist slapping that little behind of her's?"
                                                         #m "Но кто бы смог устоять и не шлепнуть ее великолепную попку?"
                                                     "\"She made me do this, that brat!\"":
                                                     #"\"Эта девица, все из-за нее!\"":
-                                                        $ mad += 9
+                                                        $ hermi.liking -= 9
                                                         m "She made me do this, that brat!"
                                                         m "Acting all wounded now..."
                                                         m "I bet she actually enjoyed the slapping and just won't admit it..."
@@ -382,7 +382,7 @@ label new_request_05:
                         ">Then you give Hermione's butt one last squeeze."
                         her_head_main "....................."
                     "\"Open your eyes, or lose the points!\"":
-                        $ mad += 7
+                        $ hermi.liking -= 7
                         her_head_main "Tsk! {size=-5}(You perverted old--{/size}"
                         m "Did you say something, Miss Granger?"
                         $her_head_state = 8
@@ -406,7 +406,7 @@ label new_request_05:
                         jump connection_of_rapes
     
         
-    elif whoring >= 6: # LEVEL 04 # Hermione is hesitant. <=================================================================================== SECOND EVENT.
+    elif hermi.whoring >= 6: # LEVEL 04 # Hermione is hesitant. <=================================================================================== SECOND EVENT.
 #        $ new_request_05_02 = True # HEARTS.
         hide screen bld1
         with d3
@@ -603,7 +603,7 @@ label new_request_05:
                         ">Then You give Hermione's butt one last squeeze."
                         her_head_main "....................."
                     "\"Open your eyes, or you'll lose the points!\"":
-                        $ mad += 20
+                        $ hermi.liking -= 20
                         her_head_main "Tsk! {size=-5}(You perverted old--{/size}"
                         m "Did you say something, Miss Granger?"
                         $her_head_state = 8
@@ -633,8 +633,8 @@ label new_request_05:
     
         
 label ending_of_screams_of_pleasure:
-    if whoring <= 5:
-        $ whoring +=1
+    if hermi.whoring <= 5:
+        $ hermi.whoring +=1
     show screen blkfade 
     with d5
     
@@ -688,7 +688,7 @@ label ending_of_screams_of_pleasure:
     show screen hermione_01_f #Hermione stands still.
     with Dissolve(.3)
     
-    if whoring >= 3 and whoring <= 5: #First level. Not happy.
+    if hermi.whoring >= 3 and hermi.whoring <= 5: #First level. Not happy.
         $her_head_state = 12
         her_head_main "..........................."
         
@@ -751,7 +751,7 @@ label screams_of_rapings:
             her_head_main "Oh... right..."
             $her_head_state = 33
             her_head_main "But I hate you! I hate you professor!"
-            $ mad +=30
+            $ hermi.liking -=30
 
         "\"You're bluffing, girl!\"":
             $her_head_state = 29
@@ -759,7 +759,7 @@ label screams_of_rapings:
             g4 "By all means, go ahead..."
             g4 "There was no rape!"
             her_head_main "I hate you, professor!"
-            $ mad +=50
+            $ hermi.liking -=50
 
 
     hide screen bld1
@@ -781,7 +781,7 @@ label screams_of_rapings:
     show screen hermione_01_f #Hermione stands still.
     with Dissolve(.3)
 
-    if whoring >= 3 and whoring <= 5: #First level. Not happy.
+    if hermi.whoring >= 3 and hermi.whoring <= 5: #First level. Not happy.
         $her_head_state = 12
         her_head_main "..........................."
         

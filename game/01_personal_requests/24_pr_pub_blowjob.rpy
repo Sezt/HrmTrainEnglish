@@ -25,7 +25,7 @@ label new_request_24: #LV.7 (Whoring = 18 - 20)
         stop music fadeout 1.0
         her "!!!"
         her "...with my mouth?"
-        if whoring <=17 or request_23_points <= 1: # Counts how many times you sent Hermione to give a handjob to a boy.
+        if hermi.whoring <=17 or request_23_points <= 1: # Counts how many times you sent Hermione to give a handjob to a boy.
             jump too_much
         play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
         m "Yes, that's how it's usually done..."
@@ -60,14 +60,14 @@ label new_request_24: #LV.7 (Whoring = 18 - 20)
         her "........."
         
     else: # <================================================================================ NOT FIRST TIME
-        if whoring >= 18 and whoring <= 20: # LEVEL 07 FIRST EVENT.
+        if hermi.whoring >= 18 and hermi.whoring <= 20: # LEVEL 07 FIRST EVENT.
             m "Go give some lucky boy another blowjob, girl."
             $herView.hideshowQQ( "body_66.png", pos )
             her "......Again?"
             m "Yes, again."
             $herView.hideshowQQ( "body_79.png", pos )
             her ".........."
-        elif whoring >= 21: # LEVEL 08+ SECOND EVENT.
+        elif hermi.whoring >= 21: # LEVEL 08+ SECOND EVENT.
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "Miss Granger..."
             m "Do you believe in horoscopes?"
@@ -142,7 +142,7 @@ label new_request_24_complete:  # <=============================================
     $ pos = POS_370
     $ herView.data().saveState()
 
-    if whoring >= 18 and whoring <= 20: # LEVEL 07                    
+    if hermi.whoring >= 18 and hermi.whoring <= 20: # LEVEL 07                    
         if one_out_of_three == 1: ### EVENT (A)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "You know the drill, girl. Start talking."
@@ -249,7 +249,7 @@ label new_request_24_complete:  # <=============================================
             her "The least I could do for someone who treated me with respect for a change..."
             m "Well, in that case."
             
-    if whoring >= 21: # LEVEL 08 =+               
+    if hermi.whoring >= 21: # LEVEL 08 =+               
         if one_out_of_three == 1: ### EVENT (A)
             stop music fadeout 1.0
             # HERMIONE ALL MESSED UP, WITH RUNNING MASCARA.

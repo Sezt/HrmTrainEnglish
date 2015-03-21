@@ -19,7 +19,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             $event.NotFinished()
             jump new_personal_request
     
-    if whoring <=5:
+    if hermi.whoring <=5:
         jump too_much
         
     
@@ -31,7 +31,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
     # we'll undress her, so save the state
     $herView.data().saveState()
 
-    if IsFirstRun() and whoring <= 11: # LEVEL 04 # FIRST TIME.
+    if IsFirstRun() and hermi.whoring <= 11: # LEVEL 04 # FIRST TIME.
         m "Miss Granger?"
         $herView.hideQQ()
         $ pos = POS_370
@@ -92,7 +92,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         her "..............."
                         her "Well, so be it..."
             "\"Fine, leave. I don't care...\"":
-                $mad = +12
+                $hermi.liking -= 12
                 her "argh!"
                 call music_block
                 
@@ -162,7 +162,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
         
         
     else:
-        if whoring >= 6 and whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT. (HERMIONE IS UNWILLING).
+        if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT. (HERMIONE IS UNWILLING).
             m "Miss Granger?"
             $her_head_state = 2
             her_head_main "Yes, professor?"
@@ -220,12 +220,12 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             
             
             
-        elif whoring >= 9: # LEVEL 04 and higher# <=================================================================================== SECOND EVENT and THIRD EVENT. (HERMIONE IS INDIFFERENT) 
+        elif hermi.whoring >= 9: # LEVEL 04 and higher# <=================================================================================== SECOND EVENT and THIRD EVENT. (HERMIONE IS INDIFFERENT) 
             m "I need to see your tits, miss Granger."
             $her_head_state = 15
             her_head_main "Are you only going to watch, sir?"
             m "Of course..."
-            if whoring >= 15:
+            if hermi.whoring >= 15:
                 $herView.hideshowQQ( "body_09.png", pos )
                 her "Sir, we both know that you play, not just watch, and do something else..."
                 m "Maybe it {size=+4}YOU{/size} interesting, miss Granger, that I was doing something else?"
@@ -379,7 +379,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
 
     menu:
         "\"Break your promise. Grab the tits!\"":
-            if whoring >= 6 and whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT. HERMIONE OUTRAGED.
+            if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT. HERMIONE OUTRAGED.
                 $herView.hideQQ()
                 show screen blkfade
                 with d3
@@ -433,10 +433,10 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                 $her_head_state = 19
                 her_head_main "Gr.................."
                 her_head_main "{size=-5}(Burn in hell, you wretched old---{/size}"
-                $ mad += 22
+                $ hermi.liking -= 22
                 call music_block
                 jump loadState_and_could_not_flirt
-            elif whoring >= 9 and whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT. A BIT ANGRY.
+            elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT. A BIT ANGRY.
                 $herView.hideQQ()
                 $ only_upper = False #No lower body displayed. 
                 show screen blkfade
@@ -490,8 +490,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                 $her_head_state = 9
                 her_head_main "Can I get paid now please?"
                 m "Sure..."
-                $ mad += 9
-            elif whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT. ENJOYS A LITTLE.
+                $ hermi.liking -= 9
+            elif hermi.whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT. ENJOYS A LITTLE.
                 $herView.hideQQ()
                 show screen blkfade
                 with d3
@@ -577,11 +577,11 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                 show screen bld1
                 $her_head_state = 35
                 her_head_main "Can I have my payment now?"
-                $ mad +=7
+                $ hermi.liking -=7
    
         "\"Keep promise. Admire visually.\"":
             ">You take a long look at Hermione's naked tits..."
-            if whoring >= 6 and whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT.
+            if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT.
                 pause
                 menu:
                     "-Nod your head in approval-":
@@ -591,7 +591,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         $ mad += 3
                         ">You Look at the girl's tits for a while and then shake your head in dissapointment..."
                         her ".....................?"
-            elif whoring >= 9 and whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
+            elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
                 pause
                 menu:
                     "\"A Nice set of tits you got there.\"":
@@ -605,12 +605,12 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         her "You are being inappropriate, professor."
                         
                     "\"Hm... I've seen better.\"":
-                        $ mad += 7
+                        $ hermi.liking -= 7
                         $herView.hideshowQQ( "body_83.png", pos );
                         her "Tsk..."
                         her "Are we done then?"
 
-            elif whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT.
+            elif hermi.whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT.
                 pause
                 menu:
                     "\"You have great tits, girl.\"":
@@ -644,8 +644,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             with d5
 
         "\"Start jerking off.\"":
-            if whoring >= 6 and whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT.
-                $ mad += 2
+            if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT.
+                $ hermi.liking -= 2
                 $herView.hideQQ()
                 ">You take your cock out and start stroking it..."
                 show screen blkfade
@@ -700,14 +700,14 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         g4 "Come on, now. Just say something dirty! I'm almost there!"
                         $her_head_state = 27
                         her_head_main "You are a horrible person, sir..."
-                        $ mad += 30
+                        $ hermi.liking -= 30
                         call music_block
                         jump loadState_and_could_not_flirt
                     "\"Alright, alright. That's enough for now.\"":
-                        $ mad +=9
+                        $ hermi.liking -=9
                         pass
                     "-Start jerking your cock faster-":
-                        $ mad += 35
+                        $ hermi.liking -= 35
                         ">You start jerking your cock furiously!"
                         $her_head_state = 23
                         her_head_main "No, professor, stop!"
@@ -722,7 +722,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         her_head_main "I'm leaving!"
                         call music_block
                         jump loadState_and_could_not_flirt
-            elif whoring >= 9 and whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
+            elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
                 $herView.hideQQ()
                 ">You take your cock out and start stroking it..."
                 show screen blkfade
@@ -857,8 +857,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         her "How could you do this to mr, sir?!"
                         her "You gave me your word!"
                         $herView.hideQQ()
-                        $ mad += 45
-            elif whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT.
+                        $ hermi.liking -= 45
+            elif hermi.whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT.
                 $herView.hideQQ()
                 ">You take your cock out and start stroking it..."
                 show screen blkfade
@@ -1125,18 +1125,18 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
     show screen hermione_01_f #Hermione stands still.
     with Dissolve(.3)    
         
-    if whoring >= 6 and whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT.    
+    if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 # <=================================================================================== FIRST EVENT.    
         $her_head_state = 12
         her_head_main "(How humiliating... What have I become...?)"
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
         hide screen hermione_01_f #Hermione stands still.
         with Dissolve(.3)
-    elif whoring >= 9 and whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
+    elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
         her_head_main "........................"
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
         hide screen hermione_01_f #Hermione stands still.
         with Dissolve(.3)  
-    elif whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT.
+    elif hermi.whoring >= 12: # LEVEL 05 # <=================================================================================== THIRD EVENT.
         $her_head_state = 6
         her_head_main "{size=-5}(That was so humiliating...){/size}"
         $her_head_state = 24
@@ -1154,8 +1154,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
 
 
         
-    if whoring <= 8:
-        $ whoring +=1
+    if hermi.whoring <= 8:
+        $ hermi.whoring +=1
         
 
 #    $ request_08_points += 1

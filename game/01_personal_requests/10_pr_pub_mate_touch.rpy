@@ -33,7 +33,7 @@ label new_request_10:
         $herView.hideshowQQ( "body_31.png", pos )
         her ".......?"
         m "And let him touch you..."
-        if whoring <=5 or request_02_c_points <= 1: # Counts how many times Hermione been sent to flirt with teachers.
+        if hermi.whoring <=5 or request_02_c_points <= 1: # Counts how many times Hermione been sent to flirt with teachers.
             jump too_much
         $herView.hideshowQQ( "body_31.png", pos )
         her "Let him... touch me, sir?"
@@ -71,7 +71,7 @@ label new_request_10:
         her "I'd better go now. The classes are about to start..."
         $herView.hideQ()
     else:
-        if whoring >= 6 and whoring <= 8: # LEVEL 03 
+        if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 
             m "Miss Granger?"
             $herView.showQQ( "body_01.png", pos )
             her "Sir?"
@@ -93,14 +93,14 @@ label new_request_10:
             $herView.hideshowQQ( "body_66.png", pos )
             her "I don't know... Maybe..."
             $herView.hideQ()
-        elif whoring >= 9 and whoring <= 11: # LEVEL 04
+        elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04
             m "Miss Granger, I need you to go out there, and make one of your classmates molest you a little."
             $herView.showQQ( "body_01.png", pos )
             her "I understand, sir..."
             m "Off you go then."
             her "..........."
             $herView.hideQ()
-        elif whoring >= 12: # LEVEL 05+
+        elif hermi.whoring >= 12: # LEVEL 05+
             m "Miss Granger, I need you to go out there..."
             m "Find a handsome guy and force yourself on him!"
             $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). 140 - center.
@@ -182,7 +182,7 @@ label new_request_10_complete: #<===============================================
             show screen blktone
             with d3
             
-            if whoring >= 6 and whoring <= 8: # LEVEL 03 # EVENT LEVEL 01.
+            if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 # EVENT LEVEL 01.
                 stop music fadeout 3.0
                 $herView.hideshowQQ( "body_12.png", pos )
                 her "......"
@@ -285,7 +285,7 @@ label new_request_10_complete: #<===============================================
                     her "Thank you sir..."
                     m "And the rest of your payment..."
             
-            elif whoring >= 9 and whoring <= 11: # LEVEL 04
+            elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04
                 if one_out_of_three == 1: ### EVENT (A)
                     $herView.hideshowQQ( "body_16.png", pos )
                     her "Well... There is not much to tell..."
@@ -408,7 +408,7 @@ label new_request_10_complete: #<===============================================
         
         
         
-            elif whoring >= 12: # LEVEL 05+
+            elif hermi.whoring >= 12: # LEVEL 05+
                 if one_out_of_three == 1: ### EVENT (A)
                     stop music fadeout 1.0
                     $herView.hideshowQQ( "body_29.png", pos )

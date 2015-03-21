@@ -1,6 +1,6 @@
 ################### REQUEST_03 (Level 02) (Available during daytime only). "Give me your panties" ###############################
 label new_request_03: #(Whoring = 3 - 5)
-    if whoring <= 2:
+    if hermi.whoring <= 2:
         jump too_much
     $herView.hideQQ()
     
@@ -29,7 +29,7 @@ label new_request_03: #(Whoring = 3 - 5)
     
     
 #    if request_03_points == 0 and whoring <= 5: #First time this event taking place. and LEVEL 02.   <===================================== ONE TIME EVENT.
-    if IsFirstRun() and whoring <= 5: #First time this event taking place. and LEVEL 02.   <===================================== ONE TIME EVENT.
+    if IsFirstRun() and hermi.whoring <= 5: #First time this event taking place. and LEVEL 02.   <===================================== ONE TIME EVENT.
         stop music fadeout 10.0
 #        $ new_request_03_01 = True # HEARTS.
         $SetHearts(1)
@@ -109,7 +109,7 @@ label new_request_03: #(Whoring = 3 - 5)
 
     else: #<========================================================================================== FIRST EVENT!
 #        if request_03_points == 0 and whoring < 12:
-        if IsFirstRun() and whoring < 12:
+        if IsFirstRun() and hermi.whoring < 12:
             her "emm..."
             her " This is a surprise, sir, but..."
         if not IsFirstRun():
@@ -136,8 +136,8 @@ label new_request_03: #(Whoring = 3 - 5)
         
     label request_03_ends:
     $ request_03 = True #True when Hermione has no Трусики on.
-    if whoring <= 5:
-        $ whoring +=1
+    if hermi.whoring <= 5:
+        $ hermi.whoring +=1
         
     hide screen bld1
     $herView.hideQ()
@@ -227,7 +227,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                     $herView.hideshowQQ( "body_31.png", pos )
                     her "And my payment?"
                     m "Yes, yes..."
-            elif whoring >= 6 and whoring <= 8: #LEVEL 03. EVENT LEVEL 02.
+            elif hermi.whoring >= 6 and hermi.whoring <= 8: #LEVEL 03. EVENT LEVEL 02.
 #                $ new_request_03_02 = True # HEARTS.
                 $SetHearts(2)
 
@@ -276,7 +276,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                             jump panties_soaked_in_cum
                         else:
                             her "And my payment."
-            elif whoring >= 9: #LEVEL 04. EVENT LEVEL 03.
+            elif hermi.whoring >= 9: #LEVEL 04. EVENT LEVEL 03.
 #                $ new_request_03_03 = True # HEARTS.
                 $SetHearts(3)
 
@@ -351,7 +351,7 @@ label panties_soaked_in_cum:
     $ she_knows_about_cum = False
     $ pos = POS_120
     
-    if whoring >= 3 and whoring <= 5: # LEVEL 02
+    if hermi.whoring >= 3 and hermi.whoring <= 5: # LEVEL 02
         $herView.hideshowQQ( "body_71.png", pos )
         her "Hm....?"
         $herView.hideshowQQ( "body_05.png", pos )
@@ -412,7 +412,7 @@ label panties_soaked_in_cum:
                 her "......................"
             "\"Well, suit yourself...\"":
                 pass
-    if whoring >= 6 and whoring <= 8: # LEVEL 03 (SECOND EVENT)
+    if hermi.whoring >= 6 and hermi.whoring <= 8: # LEVEL 03 (SECOND EVENT)
         $herView.hideshowQQ( "body_71.png", pos )
         her "My panties..."
         $herView.hideshowQQ( "body_73.png", pos )
@@ -442,7 +442,7 @@ label panties_soaked_in_cum:
         her "Will this be all, sir?"
         $herView.hideshowQQ( "body_44.png", pos )
         her "(It doesn't feel that bad...)"
-    if whoring >= 9: #LEVEL 04+ (THIRD EVENT)
+    if hermi.whoring >= 9: #LEVEL 04+ (THIRD EVENT)
         $herView.hideshowQQ( "body_71.png", pos )
         her "My panties..."
         if not IsFirstRun():
@@ -497,7 +497,7 @@ label panties_soaked_in_cum:
         
         # NEW Branch :)
         $pos = POS_120
-        if she_knows_about_cum == True and whoring >= 12:
+        if she_knows_about_cum == True and hermi.whoring >= 12:
             $herView.showQQ( "body_58.png", pos )
             her "...sir?"
             m "Yes?"

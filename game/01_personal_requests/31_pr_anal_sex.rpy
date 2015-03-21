@@ -26,7 +26,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
         $herView.hideshowQQ( "body_17.png", pos )
         her "Sir..?"
         m "How familiar you are with the term \"Anal Sex\"?"
-        if whoring <=20:
+        if hermi.whoring <=20:
             jump too_much
         $herView.hideshowQQ( "body_79.png", pos )
         her "90 house points..."
@@ -406,7 +406,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 $herViewHead.showQ( "body_142.png", posHead )
                 her "Really? *Sob!*"
                 $herViewHead.showQ( "body_139.png", posHead )
-                her "*Sob!* It hurts! *Sob!* It hurts so much! *Sob!*"
+                her2 "*Sob!* It hurts! *Sob!* It hurts so much! *Sob!*"
                 $herViewHead.hideQ()
                 m "Yes, yes..."
                 $herViewHead.showQ( "body_145.png", posHead )
@@ -466,7 +466,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 g4 "Shut up!"
                 with hpunch
                 $herViewHead.showQ( "body_149.png", posHead )
-                her "No, I am already full! Stop cumming, you bastard!"
+                her2 "No, I am already full! Stop cumming, you bastard!"
                 $herViewHead.hideQ()
                 g4 "Shut the fuck up, slut! I am not done yet!"
                 $herViewHead.showQ( "body_146.png", posHead )
@@ -1014,8 +1014,8 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
     with d3
     her "Thank you, sir..."
 
-    if whoring <= 23: # Level 08 <
-        $ whoring +=1
+    if hermi.whoring <= 23: # Level 08 <
+        $ hermi.whoring +=1
 
 #    if request_31_points == 0:
 #        $ new_request_31_01 = True # HEARTS.

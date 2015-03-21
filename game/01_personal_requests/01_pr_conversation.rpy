@@ -38,8 +38,8 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
     
     $pos = POS_140
     m "Well?"
-    if IsFirstRun() and whoring <=5: #First time this event taking place.
-#    if request_01 == 0 and whoring <=5: #First time this event taking place.
+    if IsFirstRun() and hermi.whoring <=5: #First time this event taking place.
+#    if request_01 == 0 and hermi.whoring <=5: #First time this event taking place.
 #        $  new_request_01_01 = True #Hearts on menu buttons.
         $SetHearts(1)
         $herView.hideshowQQ( "body_11.png", pos )
@@ -47,8 +47,8 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
         ">Hermione is feeling confused..."
         $herView.hideshowQQ( "body_12.png", pos )
         her "..................."
-    if whoring >= 0 and  whoring <= 5: #LEVEL 01 and LEVEL 02
-        if whoring >= 3 and whoring <= 5:
+    if hermi.whoring >= 0 and  hermi.whoring <= 5: #LEVEL 01 and LEVEL 02
+        if hermi.whoring >= 3 and hermi.whoring <= 5:
 #            $ level = "02"
 #            $ new_request_01_02 = True #Hearts on menu buttons.
             $SetHearts(2)
@@ -128,7 +128,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
         $herView.hideshowQQ( "body_07.png", pos )
         her ".........................."
   
-    elif whoring >= 6 and whoring<=11: #LEVEL 03
+    elif hermi.whoring >= 6 and hermi.whoring<=11: #LEVEL 03
 #        $  new_request_01_03 = True #Hearts on menu buttons.
         $ SetHearts(3)
         $herView.hideshowQQ( "body_12.png", pos )
@@ -224,7 +224,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
             #pause 3
             pause
             
-            $ mad = +7
+            $ hermi.liking -= 7
             
             show screen bld1
             with d3
@@ -261,7 +261,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
             her "I'm so glad that you understand my concerns, Sir."
             m "Yes, yes, sure..."
 
-    elif whoring >= 13: #Хотя бы один раз дрочила
+    elif hermi.whoring >= 13: #Хотя бы один раз дрочила
         her "Sir, you really called me here because these poor 5 points?"
         her "I am sorry to spend time talking, which is almost nothing will bring."
         $herView.hideshowQQ( "body_10.png", pos )
@@ -423,7 +423,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                     m "No points!"
                                     $herView.hideshowQQ( "body_05.png", pos )
                                     her "Very well, Professor! In this case, do not expect that I will continue to meet your every whim!"
-                                    $mad = +30
+                                    $hermi.liking -= 30
                                     jump request_01_done
                                 "\"Fair Enough. That's all...\"":
                                     m "Argh! Well, all ... Enough."
@@ -536,7 +536,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
     hide screen hermione_01_f #Hermione stands still.
     with d3
     her "Will this be all then?"
-    if whoring >= 0 and whoring <= 2: #LEVEL 01
+    if hermi.whoring >= 0 and hermi.whoring <= 2: #LEVEL 01
         her "*sigh of relief*"
     m "Yes, you can go now."
     if IsFirstRun():
@@ -546,8 +546,8 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
         her "Thank you, professor."
 
     label request_01_done:
-    if whoring <= 2:
-            $ whoring +=1
+    if hermi.whoring <= 2:
+            $ hermi.whoring +=1
  
 #    $ request_01 += 1
     

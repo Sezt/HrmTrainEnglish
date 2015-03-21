@@ -5,7 +5,7 @@ label snape_chitchat:
     $ one_of_ten = renpy.random.randint(1, 10) #Generating one number out of three for various porpoises.
     
     ### CHIT CHATS WITH SNAPE ###
-    if whoring >= 0 and whoring <= 2: # WHORING LEVEL 01.
+    if hermi.whoring >= 0 and hermi.whoring <= 2: # WHORING LEVEL 01.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -165,7 +165,7 @@ label snape_chitchat:
         
         
     
-    if whoring >= 3 and whoring <= 5: # WHORING LEVEL 02.
+    if hermi.whoring >= 3 and hermi.whoring <= 5: # WHORING LEVEL 02.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -350,7 +350,7 @@ label snape_chitchat:
         
         
     
-    if whoring >= 6 and whoring <= 8: # WHORING LEVEL 03.
+    if hermi.whoring >= 6 and hermi.whoring <= 8: # WHORING LEVEL 03.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -551,7 +551,7 @@ label snape_chitchat:
         
         
        
-    if whoring >= 9 and whoring <= 11: # WHORING LEVEL 04.
+    if hermi.whoring >= 9 and hermi.whoring <= 11: # WHORING LEVEL 04.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -765,7 +765,7 @@ label snape_chitchat:
         
         
     
-    if whoring >= 12 and whoring <= 14: # WHORING LEVEL 05.
+    if hermi.whoring >= 12 and hermi.whoring <= 14: # WHORING LEVEL 05.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -982,7 +982,7 @@ label snape_chitchat:
         
         
 
-    if whoring >= 15 and whoring <= 17: # WHORING LEVEL 06.
+    if hermi.whoring >= 15 and hermi.whoring <= 17: # WHORING LEVEL 06.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -1176,7 +1176,7 @@ label snape_chitchat:
         
    
         
-    if whoring >= 18 and whoring <= 20: # WHORING LEVEL 07.
+    if hermi.whoring >= 18 and hermi.whoring <= 20: # WHORING LEVEL 07.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -1434,7 +1434,7 @@ label snape_chitchat:
             with d3                                                                                                                                                   #SNAPE
         
         
-    if whoring >= 21: # WHORING LEVEL 08+.
+    if hermi.whoring >= 21: # hermi.whoring LEVEL 08+.
         if one_of_ten == 1:
             hide screen snape_main                                                                                                                   #SNAPE
             with d3                                                                                                                                                  #SNAPE
@@ -1760,485 +1760,353 @@ label chit_chat:
     $ one_of_ten = renpy.random.randint(1, 10) #Generating one number out of three for various porpoises.
     $ pos = POS_410
     
-    if whoring >= 0 and whoring <= 2: # WHORING LEVEL 01.
+    if hermi.whoring >= 0 and hermi.whoring <= 2: # WHORING LEVEL 01.
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Maybe if I worked harder, I could squeeze a few more classes into my schedule..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
         
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Actually I don't mind it to be called a \"know-it-all\"."
             her "I think it's rather flattering..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "The basilisk, also known as the king of serpents."
             her "Herpo the Foul was the first to breed a Basilisk."
             her "He accomplished that by--"
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Oh, I'm sorry, professor, we have another test tomorrow..."
             her "I Just want to make sure that I'm ready..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_01.png", pos )
+            $herView.hideshowQQ( "body_01.png", pos )
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "If my body wouldn't require sleep..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_18.png", pos )
+            $herView.hideshowQQ( "body_18.png", pos )
             her "I would be able to spend twice as much time studying!?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I wonder if there's a spell for that..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
         
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "So far professor Trelawney hasn't taught me a single piece of any actual knowledge, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
        
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "If only more students were honest, responsible and diligent like me."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
       
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "How can some people be so ignorant to the world's problems?"
             her "Personally, I think that every single one of us should work harder to make our world a better place."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "It's been raining quite a lot lately..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_01.png", pos )
+            $herView.hideshowQQ( "body_01.png", pos )
     
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Very few people know this..."  
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "...But I really like chocolate."
-            $herView.hideQQ()
-            $herView.showQQ( "body_01.png", pos )
+            $herView.hideshowQQ( "body_01.png", pos )
        
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "I am sorry sir, but I don't really have time for idle chit chat..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
 
 
-    if whoring >= 3 and whoring <= 5: # WHORING LEVEL 02
+    if hermi.whoring >= 3 and hermi.whoring <= 5: # WHORING LEVEL 02
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "I read somewhere that a full moon often makes it easier to concentrate at a task at hand..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "I love nothing more than to curl up by a fireplace during a rainstorm with a good book..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_01.png", pos )
+            $herView.hideshowQQ( "body_01.png", pos )
             
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "A peculiar rumour concerning professor Snape has been circulating in the school lately..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_15.png", pos )
+            $herView.hideshowQQ( "body_15.png", pos )
             her "Well its probably shouldn't..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Despite the questionable nature of the favours you have been buying from me lately, sir..."
             her "I am grateful to you for your help..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_09.png", pos )
+            $herView.hideshowQQ( "body_09.png", pos )
             her "Gryffindor needs those points now more than ever..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Why Quidditch is so popular among the girls is simply beyond me..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "The \"Men's Rights Movement\" is steadily gaining popularity."
             her "It's very fulfilling to know that we are helping to improve our society."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "The Hogwarts school library is considered to be quite extensive..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_08.png", pos )
+            $herView.hideshowQQ( "body_08.png", pos )
             her "Still, I can't help but wish that it'd be bigger..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "As one of the top students in this school I have a reputation to keep..."
             her "People look up to me..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_31.png", pos )
+            $herView.hideshowQQ( "body_31.png", pos )
             her "...So, your discretion is very appreciated, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_29.png", pos )
+            $herView.hideshowQQ( "body_29.png", pos )
             
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "That favour I sold you the other say, sir..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_33.png", pos )
+            $herView.hideshowQQ( "body_33.png", pos )
             her "......."
-            $herView.hideQQ()
-            $herView.showQQ( "body_87.png", pos )
+            $herView.hideshowQQ( "body_87.png", pos )
             her "I only agreed to it because the needs of my house always come first."
-            $herView.hideQQ()
-            $herView.showQQ( "body_120.png", pos )
+            $herView.hideshowQQ( "body_120.png", pos )
             her "I just wanted you to know that, sir..."
             
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "The \"Autumn Ball\" is still several months away..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "But some girls are already discussing what kind of dress they are going to wear..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_185.png", pos )
+            $herView.hideshowQQ( "body_185.png", pos )
 
   
-    if whoring >= 6 and whoring <= 8: # WHORING LEVEL 03.
+    if hermi.whoring >= 6 and hermi.whoring <= 8: # WHORING LEVEL 03.
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Do you remember when you asked me to show you my panties for the first time sir?"
             her "I was so furious with you then..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_09.png", pos )
+            $herView.hideshowQQ( "body_09.png", pos )
             her "Now I see that I was just being selfish..."
             her "After all, the honour of my house is at stake here..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_07.png", pos )
+            $herView.hideshowQQ( "body_07.png", pos )
             her "And that shall be my one and only concern!"
             
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "The rate at which  Slytherin house has been gaining points lately is simply ridiculous."
-            $herView.hideQQ()
-            $herView.showQQ( "body_05.png", pos )
+            $herView.hideshowQQ( "body_05.png", pos )
             her "I think professor Snape might be behind it."
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "You should look into this, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
             
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Ashwinder eggs, rose thorns, moonstone..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "Huh? Am I thinking out loud again?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_24.png", pos )
+            $herView.hideshowQQ( "body_24.png", pos )
             her "I apologize..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             her "It's just that I have another Potions test soon..."
 
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_77.png", pos )
+            $herView.hideshowQQ( "body_77.png", pos )
             her "I dislike the entire house of Slytherin with all my heart, sir."
             
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_16.png", pos )
+            $herView.hideshowQQ( "body_16.png", pos )
             her "Hogwarts has really become a second home to me lately..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_71.png", pos )
+            $herView.hideshowQQ( "body_71.png", pos )
             her "I don't even miss my parents nearly as much anymore..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_18.png", pos )
+            $herView.hideshowQQ( "body_18.png", pos )
             her "Come to think of it I don't miss them at all..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_118.png", pos )
+            $herView.hideshowQQ( "body_118.png", pos )
             her "I'm an awful daughter..."
 
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_70.png", pos )
+            $herView.hideshowQQ( "body_70.png", pos )
             her "*Yawn!* I read about this technique that supposedly allows you to cut your sleep time in half..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_73.png", pos )
+            $herView.hideshowQQ( "body_73.png", pos )
             her "It don't think it's working though.... *Yawn!*"
 
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Even after I graduate from Hogwarts I plan to keep on working hard."
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "If I give it my all I can make this world a better place, I know it!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
            
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "Somehow I have the feeling that this year will become a pivotal turning point in my life..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
   
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Some of the less travelled school corridors are not very well lit and rather dusty..."
             her "Please take care of this, sir..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
        
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I've read about this thing called a \"Time-Turner\"."
             her "It allows the user to control the flow of time..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_16.png", pos )
+            $herView.hideshowQQ( "body_16.png", pos )
             her "Having a device like that would do wonders for my schedule..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_17.png", pos )
+            $herView.hideshowQQ( "body_17.png", pos )
         
 
-    if whoring >= 9 and whoring <= 11: # WHORING LEVEL 04.
+    if hermi.whoring >= 9 and hermi.whoring <= 11: # WHORING LEVEL 04.
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "My \"men's rights movement\" has been losing its popularity lately..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_12.png", pos )
+            $herView.hideshowQQ( "body_12.png", pos )
             her "It's as if people don't even care!"
 
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Thank you for buying all those favours from me, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_07.png", pos )
+            $herView.hideshowQQ( "body_07.png", pos )
             her "Some of them were borderline inappropriate, sure..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "But I don't mind sacrificing my dignity if it will allow Gryffindor to compete with Slytherin on equal ground."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
 
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_77.png", pos )
+            $herView.hideshowQQ( "body_77.png", pos )
             her "Quidditch is stupid!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_17.png", pos )
+            $herView.hideshowQQ( "body_17.png", pos )
             her "There. I said it."
             
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "Sir, there is something about professor Snape that I think you should know..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "................."
-            $herView.hideQQ()
-            $herView.showQQ( "body_09.png", pos )
+            $herView.hideshowQQ( "body_09.png", pos )
             her "........................."
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "uhm... Never mind..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
  
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Some of the Slytherin girls sell sexual favours almost openly these days..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "You need to put an end to such practices, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_69.png", pos )
+            $herView.hideshowQQ( "body_69.png", pos )
             her "(I can barely keep up...)"
 
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Life works in mysterious ways..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_08.png", pos )
+            $herView.hideshowQQ( "body_08.png", pos )
             her "Wouldn't you agree, sir?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
 
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_76.png", pos )
+            $herView.hideshowQQ( "body_76.png", pos )
             her "Slytherins..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_77.png", pos )
+            $herView.hideshowQQ( "body_77.png", pos )
             
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "I've been spending so much time in your office lately, sir..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "If I'm not careful some people may think that I have become your pet..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_34.png", pos )
+            $herView.hideshowQQ( "body_34.png", pos )
             her "I meant to say the teacher's pet..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_33.png", pos )
+            $herView.hideshowQQ( "body_33.png", pos )
 
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "My favourite colours?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "scarlet and gold of course!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
        
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Is it weird that my best friends are boys?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_01.png", pos )
+            $herView.hideshowQQ( "body_01.png", pos )
         
 
         
-    if whoring >= 12 and whoring <= 14: # WHORING LEVEL 05.
+    if hermi.whoring >= 12 and hermi.whoring <= 14: # WHORING LEVEL 05.
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_07.png", pos )
+            $herView.hideshowQQ( "body_07.png", pos )
             her "Sir, with all due respect..."
             her "Professor Snape's debauchery is getting out of hand!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "You must do something, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
 
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "I am willing to go to great lengths to insure the superiority of my house..."
             her "But that does not mean that I take pleasure in selling myself out to you in exchange for house points, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_118.png", pos )
+            $herView.hideshowQQ( "body_118.png", pos )
             her "{size=-4}(Like some sort of prostitute-witch...){/size}"
 
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_79.png", pos )
+            $herView.hideshowQQ( "body_79.png", pos )
             her "What will it be today, sir?"
             
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "lately I have not been studying nearly as much as I used to..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Am I losing my motivation?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_08.png", pos )
+            $herView.hideshowQQ( "body_08.png", pos )
             her "My least favourite subject?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_09.png", pos )
+            $herView.hideshowQQ( "body_09.png", pos )
             her "Divination." 
             
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "My father used to say: \"Magic is just science we don't understand yet\"."
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "He could't be more wrong of course..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Despite everything..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "I am thankful that you keep on buying favours from me, sir..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "It's quite cold outside today, isn't it?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_15.png", pos )
+            $herView.hideshowQQ( "body_15.png", pos )
             
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "The \"Autumn Ball\" will be soon..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_15.png", pos )
+            $herView.hideshowQQ( "body_15.png", pos )
             
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "People hardly show up for my \"men's rights movement\" meetings at all anymore..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
     
     
     
@@ -2246,120 +2114,88 @@ label chit_chat:
     
     
         
-    if whoring >= 15 and whoring <= 17:  # WHORING LEVEL 06.
+    if hermi.whoring >= 15 and hermi.whoring <= 17:  # WHORING LEVEL 06.
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_87.png", pos )
+            $herView.hideshowQQ( "body_87.png", pos )
             her "Would you like me to show you my breasts today, sir?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_78.png", pos )
+            $herView.hideshowQQ( "body_78.png", pos )
             her "Yes... I would willingly expose myself to you, professor..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_79.png", pos )
+            $herView.hideshowQQ( "body_79.png", pos )
             her "That's how selfless I am!"
            
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I can't help but feel bad for the house elves who do my laundry..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_87.png", pos )
+            $herView.hideshowQQ( "body_87.png", pos )
             her "I mean, all those dreadful semen stains..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_118.png", pos )
+            $herView.hideshowQQ( "body_118.png", pos )
 
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "it Doesn't matter how many times you ask me this, sir..."
             her "The answer shall remain the same..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_47.png", pos )
+            $herView.hideshowQQ( "body_47.png", pos )
             her "I have nothing but resentment for the \"Slytherins\"!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_69.png", pos )
+            $herView.hideshowQQ( "body_69.png", pos )
         
         
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_02.png", pos )
+            $herView.hideshowQQ( "body_02.png", pos )
             her "When I think about all the favours I sold you over these last months, sir..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_87.png", pos )
+            $herView.hideshowQQ( "body_87.png", pos )
             her "Although I do feel a little bit embarrassed..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_120.png", pos )
+            $herView.hideshowQQ( "body_120.png", pos )
             her "I also feel very proud of myself."
             
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I still dedicate a lot of my time to studying..."
             her "But not nearly as much of it as I used to..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "Somehow I just don't enjoy studying at all anymore..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
         
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Gryffindor shall get the house cup this year!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_118.png", pos )
+            $herView.hideshowQQ( "body_118.png", pos )
             her "{size=-4}(Even if it should cost me my dignity...){/size}"
-            $herView.hideQQ()
-            $herView.showQQ( "body_120.png", pos )
+            $herView.hideshowQQ( "body_120.png", pos )
            
            
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I don't mind the autumn weather..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_16.png", pos )
+            $herView.hideshowQQ( "body_16.png", pos )
             her "But my favourite season is winter."
-            $herView.hideQQ()
-            $herView.showQQ( "body_15.png", pos )
+            $herView.hideshowQQ( "body_15.png", pos )
         
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I used to look down on girls who spend too much time with worrying about the way they look..."
             her "But I was wrong to do so..."
             her "I am starting to understand how important it really is for a girl to look pretty."
-            $herView.hideQQ()
-            $herView.showQQ( "body_29.png", pos )
+            $herView.hideshowQQ( "body_29.png", pos )
             her "..............."
-            $herView.hideQQ()
-            $herView.showQQ( "body_122.png", pos )
+            $herView.hideshowQQ( "body_122.png", pos )
             her "I've been on a diet lately..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_34.png", pos )
-            $herView.hideQQ()
-            $herView.showQQ( "body_33.png", pos )
+            $herView.hideshowQQ( "body_34.png", pos )
+            $herView.hideshowQQ( "body_33.png", pos )
        
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "Lately I've been feeling rather confident around the boys..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "I think I have you to thank for that, sir."
             
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "My favourite subject?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             her "Hm..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "I suppose that would be \"charms\"..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_15.png", pos )
+            $herView.hideshowQQ( "body_15.png", pos )
   
   
   
@@ -2379,194 +2215,144 @@ label chit_chat:
   
   
   
-    if whoring >= 18 and whoring <= 20: # WHORING LEVEL 07.
+    if hermi.whoring >= 18 and hermi.whoring <= 20: # WHORING LEVEL 07.
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Just let me know what will be required of me today, sir."
-            $herView.hideQQ()
-            $herView.showQQ( "body_03.png", pos )
+            $herView.hideshowQQ( "body_03.png", pos )
            
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "I barely study at all anymore..."
             her "Despite that my popularity among the other students seems to be growing..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             her "Hm..."
                  
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_64.png", pos )
+            $herView.hideshowQQ( "body_64.png", pos )
             her "I wouldn't say \"no\" to a bottle of butterbeer right about now..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_68.png", pos )
+            $herView.hideshowQQ( "body_68.png", pos )
         
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "What is it, sir? Do you have another present for me?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_12.png", pos )
+            $herView.hideshowQQ( "body_12.png", pos )
             her "Oh... I see..."
 
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "I am doing well, thank you for asking."
 
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "Do I look fat to you sir?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_29.png", pos )
+            $herView.hideshowQQ( "body_29.png", pos )
             her "I wonder if the diet is working..."
            
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_16.png", pos )
+            $herView.hideshowQQ( "body_16.png", pos )
             her "I remember that I used to say that books were my friends..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_24.png", pos )
+            $herView.hideshowQQ( "body_24.png", pos )
             her "Now that sounds so lame."
-            $herView.hideQQ()
-            $herView.showQQ( "body_15.png", pos )
+            $herView.hideshowQQ( "body_15.png", pos )
         
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_04.png", pos )
+            $herView.hideshowQQ( "body_04.png", pos )
             her "Add ashwinder egg to cauldron..."
             her "Then add horseradish and heat..."
             her "Then juice a squill bulb..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "Or was it a dash of thyme first?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             her ".............."
-            $herView.hideQQ()
-            $herView.showQQ( "body_24.png", pos )
+            $herView.hideshowQQ( "body_24.png", pos )
             her "Oh, who cares?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
        
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "Do You think I am wearing enough makeup, sir?" 
             her "Wearing too much would look vulgar..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
             her "But wearing too little would make me look plain..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_12.png", pos )
+            $herView.hideshowQQ( "body_12.png", pos )
             her "I don't want to look plain!"
             
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_64.png", pos )
+            $herView.hideshowQQ( "body_64.png", pos )
             her "Would you like to see my tits today, sir?" 
-            $herView.hideQQ()
-            $herView.showQQ( "body_111.png", pos )
+            $herView.hideshowQQ( "body_111.png", pos )
             her "25 house points, please."
-            $herView.hideQQ()
-            $herView.showQQ( "body_120.png", pos )
+            $herView.hideshowQQ( "body_120.png", pos )
     
    
-    if whoring >= 21: # WHORING LEVEL 08+.
+    if hermi.whoring >= 21: # hermi.whoring LEVEL 08+.
         
         if one_of_ten == 1:
-            $herView.hideQQ()
-            $herView.showQQ( "body_189.png", pos )
+            $herView.hideshowQQ( "body_189.png", pos )
             her "Do You have any adult magazines you don't need, sir?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_188.png", pos )
+            $herView.hideshowQQ( "body_188.png", pos )
 
         elif one_of_ten == 2:
-            $herView.hideQQ()
-            $herView.showQQ( "body_31.png", pos )
+            $herView.hideshowQQ( "body_31.png", pos )
             her "I am sorry to bother you with this, sir..."
             her "But do you have any condoms?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_34.png", pos )
+            $herView.hideshowQQ( "body_34.png", pos )
             her "This is not for me of course... I'm asking for a friend..."
                  
         elif one_of_ten == 3:
-            $herView.hideQQ()
-            $herView.showQQ( "body_14.png", pos )
+            $herView.hideshowQQ( "body_14.png", pos )
             her "It's been getting so cold lately..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
-            her "I hope it's going to start snowing soon..."
+            $herView.hideshowQQ( "body_06.png", pos )
+            her "Я надеюсь, что скоро выпадет снег..."
         
         elif one_of_ten == 4:
-            $herView.hideQQ()
-            $herView.showQQ( "body_127.png", pos )
+            $herView.hideshowQQ( "body_127.png", pos )
             her "Jump and scream for the Gryffindor team!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_80.png", pos )
+            $herView.hideshowQQ( "body_80.png", pos )
             her "So daring and bold, sporting red and gold!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
 
         elif one_of_ten == 5:
-            $herView.hideQQ()
-            $herView.showQQ( "body_10.png", pos )
+            $herView.hideshowQQ( "body_10.png", pos )
             her "I hope the ball goes smoothly..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_13.png", pos )
+            $herView.hideshowQQ( "body_13.png", pos )
 
         elif one_of_ten == 6:
-            $herView.hideQQ()
-            $herView.showQQ( "body_06.png", pos )
+            $herView.hideshowQQ( "body_06.png", pos )
             her "I wonder what Ginny is going to wear for the ball..."
         
         elif one_of_ten == 7:
-            $herView.hideQQ()
-            $herView.showQQ( "body_16.png", pos )
+            $herView.hideshowQQ( "body_16.png", pos )
             her "Considering the nature of the favours you keep buying from me sir..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_11.png", pos )
+            $herView.hideshowQQ( "body_11.png", pos )
             her "I seldom bother to put on underwear at all anymore..."
         
         elif one_of_ten == 8:
-            $herView.hideQQ()
-            $herView.showQQ( "body_117.png", pos )
+            $herView.hideshowQQ( "body_117.png", pos )
             her "Sir, could you put your penis in my mouth?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_135.png", pos )
+            $herView.hideshowQQ( "body_135.png", pos )
             her "Sir, I am begging you..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_111.png", pos )
+            $herView.hideshowQQ( "body_111.png", pos )
             her "Fifty five points, please!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_122.png", pos )
+            $herView.hideshowQQ( "body_122.png", pos )
 
         elif one_of_ten == 9:
-            $herView.hideQQ()
-            $herView.showQQ( "body_127.png", pos )
+            $herView.hideshowQQ( "body_127.png", pos )
             her "I read this one article about the positive effects of semen on a woman's skin..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_128.png", pos )
+            $herView.hideshowQQ( "body_128.png", pos )
             her "I wonder where their information is coming from..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_122.png", pos )
+            $herView.hideshowQQ( "body_122.png", pos )
             her "Did the magazine conduct research of some sort?"
-            $herView.hideQQ()
-            $herView.showQQ( "body_128.png", pos )
+            $herView.hideshowQQ( "body_128.png", pos )
 
         elif one_of_ten == 10:
-            $herView.hideQQ()
-            $herView.showQQ( "body_127.png", pos )
+            $herView.hideshowQQ( "body_127.png", pos )
             her "It goes like this..."
             her "First Gryffindor, then Ravenclaw, then Hufflepuff..."
-            $herView.hideQQ()
-            $herView.showQQ( "body_186.png", pos )
+            $herView.hideshowQQ( "body_186.png", pos )
             her "And Slytherin is not even on the list!"
-            $herView.hideQQ()
-            $herView.showQQ( "body_120.png", pos )
+            $herView.hideshowQQ( "body_120.png", pos )
 
     jump day_time_requests
 

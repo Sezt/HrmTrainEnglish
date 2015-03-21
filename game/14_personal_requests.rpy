@@ -352,9 +352,9 @@ label new_personal_request:
 
 ###################REQUEST_06 (Level 02) (Flash Трусики to classmate.) #################################################################################
 label new_request_06:
-    if whoring <=2:
+    if hermi.whoring <=2:
         jump too_much
-    if whoring >= 3: #Level 02
+    if hermi.whoring >= 3: #Level 02
         m "I want you now to do something in class, show her panties to one of his classmates."
         if request_06_points == 0: #One star.
             her "Ohh..."
@@ -376,8 +376,8 @@ label new_request_06:
         $ request_05 = True
         $ hermione_takes_classes = True
         
-        if whoring <= 5:
-            $ whoring +=1
+        if hermi.whoring <= 5:
+            $ hermi.whoring +=1
             
         if request_05_points <= 2:
             $ gryffindor +=15
@@ -411,9 +411,9 @@ label new_request_05_complete:
 
 ###################REQUEST_07 (Level 02) (Flash Трусики to a teacher).(Daytime only). #######################################################################
 label new_request_07:
-    if whoring <=2:
+    if hermi.whoring <=2:
         jump too_much
-    if whoring >= 3: #Level 02
+    if hermi.whoring >= 3: #Level 02
         m "I want you now to do something in class, show her panties to one of his teachers."
         if request_07_points == 0: #One star.
             her "Ohh..."
@@ -434,8 +434,8 @@ label new_request_07:
 
         "You let go of Hermione."
         $ request_06 = True
-        if whoring <= 5:
-            $ whoring +=1
+        if hermi.whoring <= 5:
+            $ hermi.whoring +=1
         
         if request_05_points <= 2:
             $ gryffindor +=15
@@ -483,7 +483,7 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
             jump new_personal_request
     
     
-    if request_09_points == 0 and whoring <= 11: # LEVEL 04 # FIRST TIME.
+    if request_09_points == 0 and hermi.whoring <= 11: # LEVEL 04 # FIRST TIME.
         m "Miss Granger..."
         m "Today's award for  \"Gryffindor\" 25 points."
         $herView.hideQQ()
@@ -527,14 +527,14 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
         m "Miss Granger?"
         her "Yes..."
         m "I need to see your pussy..."
-        if whoring >= 6 and whoring <= 8: #LEVEL 03 <=========================================================================================== FIRST EVENT
+        if hermi.whoring >= 6 and hermi.whoring <= 8: #LEVEL 03 <=========================================================================================== FIRST EVENT
             her "Argh ... Not again, sir..."
             her "{size=-5}...so ashamed...{/size}"
             m "25 points, Miss Granger..."
             her ".............."
-        if whoring >= 9 and whoring <= 11: #LEVEL 04 <=========================================================================================== SECOND EVENT
+        if hermi.whoring >= 9 and hermi.whoring <= 11: #LEVEL 04 <=========================================================================================== SECOND EVENT
             her "*Huh*... provided that..."      
-        if whoring >= 12 and whoring <= 14: # LEVEL 05 <=========================================================================================== THIRD EVENT
+        if hermi.whoring >= 12 and hermi.whoring <= 14: # LEVEL 05 <=========================================================================================== THIRD EVENT
             her "Really?"
             her "Ok..."
 
@@ -551,7 +551,7 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
     
     
     
-    if whoring <=5:
+    if hermi.whoring <=5:
         jump too_much
         
 
@@ -603,8 +603,8 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
     
     "You let go of Hermione."
         
-    if whoring <= 8:
-        $ whoring +=1
+    if hermi.whoring <= 8:
+        $ hermi.whoring +=1
 
     if request_09_points <= 2:
         $ gryffindor +=25
@@ -650,8 +650,8 @@ label new_request_17: #LV.5 (Whoring = 12 - 14)
         
     "You let Hermione."
         
-    if whoring <= 14:
-        $ whoring +=1
+    if hermi.whoring <= 14:
+        $ hermi.whoring +=1
 
     if request_17_points <= 2:
         $ gryffindor +=45
@@ -672,7 +672,7 @@ label new_request_17: #LV.5 (Whoring = 12 - 14)
         
 ###################REQUEST_18 (Level 05) (Handjob) (Day/Night)
 label new_request_18: #LV.5 (Whoring = 12 - 14)
-    if whoring <=11:
+    if hermi.whoring <=11:
         jump too_much
         
     m "Come and touch my dick."
@@ -690,8 +690,8 @@ label new_request_18: #LV.5 (Whoring = 12 - 14)
         
     "You let go of Hermione."
         
-    if whoring <= 14:
-        $ whoring +=1
+    if hermi.whoring <= 14:
+        $ hermi.whoring +=1
 
     if request_18_points <= 2:
         $ gryffindor +=45
@@ -713,7 +713,7 @@ label new_request_18: #LV.5 (Whoring = 12 - 14)
     
 ###################REQUEST_19 (Level 05) (Rub her dick against her cheeks.) (Day/Night)
 label new_request_19: #LV.5 (Whoring = 12 - 14)
-    if whoring <=11:
+    if hermi.whoring <=11:
         jump too_much
     
     m "Come here and rub my cock on her cute cheeks."
@@ -731,8 +731,8 @@ label new_request_19: #LV.5 (Whoring = 12 - 14)
         
     "You ask Hermione leave."
         
-    if whoring <= 14:
-        $ whoring +=1
+    if hermi.whoring <= 14:
+        $ hermi.whoring +=1
 
     if request_19_points <= 2:
         $ gryffindor +=45
@@ -761,7 +761,7 @@ label new_request_19: #LV.5 (Whoring = 12 - 14)
 #As this request levels up, there are an option appears to offer some extra points if Hermione will put her clothes
 #on top of her sperm covered tits and go to classes like that.
 label new_request_21: #LV.6 (Whoring = 15 - 17)
-    if whoring <=14:
+    if hermi.whoring <=14:
         jump too_much
     
     m "Come here and give your boobs masturbate."
@@ -809,8 +809,8 @@ label new_request_21: #LV.6 (Whoring = 15 - 17)
             
     "You let go of Hermione."
         
-    if whoring <= 14:
-        $ whoring +=1
+    if hermi.whoring <= 14:
+        $ hermi.whoring +=1
 
     if request_21_points <= 2:
         $ gryffindor +=55
@@ -856,7 +856,7 @@ label new_request_21_complete:
     
 ###################REQUEST_25 (Level 07) (65 pt.) (Cum on face). 
 label new_request_25: #LV.7 (Whoring = 18 - 20)
-    if whoring <=17:
+    if hermi.whoring <=17:
         jump too_much
     
     m "Come here and let me cum on your face."
@@ -884,7 +884,7 @@ label new_request_25: #LV.7 (Whoring = 18 - 20)
         "\"Go so.\"":
             m "Go to the lessons covered with cum face."
             
-            if whoring <=26:
+            if hermi.whoring <=26:
                 her "What? No, I can not, please give me a towel!."
                 ">You give Hermione a towel and she wipes your sperm."
            
@@ -899,13 +899,13 @@ label new_request_25: #LV.7 (Whoring = 18 - 20)
                         $ gryffindor +=30
                         "Gryffindor gets 30 points."
                         $ request_25 = True
-                    "- forget It -":
+                    "- Forget It -":
                         ">You give Hermione a towel and she wipes your sperm."
             
     "You let go of Hermione."
         
-    if whoring <= 20:
-        $ whoring +=1
+    if hermi.whoring <= 20:
+        $ hermi.whoring +=1
 
     if request_21_points <= 2:
         $ gryffindor +=65
@@ -939,7 +939,7 @@ label new_request_25_complete:
 
 ###################REQUEST_26 (Level 07) (65 pt.) (Cum in open mouth before class). (Available during daytime only).
 label new_request_26: #LV.7 (Whoring = 18 - 20)
-    if whoring <=17:
+    if hermi.whoring <=17:
         jump too_much
     m "I want to cum in your face before you go to class."
     if request_26_points == 0: #One star.
@@ -958,8 +958,8 @@ label new_request_26: #LV.7 (Whoring = 18 - 20)
     "You let go of Hermione."
     
     $ request_26 = True 
-    if whoring <= 20:
-        $ whoring +=1
+    if hermi.whoring <= 20:
+        $ hermi.whoring +=1
         
     if request_26_points <= 2:
         $ gryffindor +=65
@@ -993,7 +993,7 @@ label new_request_26_complete:
     
 ###################REQUEST_27 (Level 07) (65 pt.) (Blow two classmates). (Available during daytime only).
 label new_request_27: #LV.7 (Whoring = 18 - 20)
-    if whoring <=17:
+    if hermi.whoring <=17:
         jump too_much
     m "I want you to do something for me today: aspirate two classmates"
     if request_27_points == 0: #One star.
@@ -1012,8 +1012,8 @@ label new_request_27: #LV.7 (Whoring = 18 - 20)
     "You let go of Hermione."
     
     $ request_27 = True 
-    if whoring <= 20:
-        $ whoring +=1
+    if hermi.whoring <= 20:
+        $ hermi.whoring +=1
         
     if request_27_points <= 2:
         $ gryffindor +=65
@@ -1048,7 +1048,7 @@ label new_request_27_complete:
     
 ###################REQUEST_28 (Level 07) (65 pt.) (Give handjob to a teacher). (Available during daytime only).
 label new_request_28: #LV.7 (Whoring = 18 - 20)
-    if whoring <=17:
+    if hermi.whoring <=17:
         jump too_much
     m "I want you to masturbate his teacher"
     if request_28_points == 0: #One star.
@@ -1067,8 +1067,8 @@ label new_request_28: #LV.7 (Whoring = 18 - 20)
     "You let go of Hermione."
     
     $ request_28 = True 
-    if whoring <= 20:
-        $ whoring +=1
+    if hermi.whoring <= 20:
+        $ hermi.whoring +=1
         
     if request_28_points <= 2:
         $ gryffindor +=65
@@ -1112,7 +1112,7 @@ label new_request_28_complete:
 ### LEVEL 10 ##################################################################################################################################
 ###################REQUEST_32 (Level 10) (100 pt.) (Wear a very revealing outfit to class). (Daytime only) ####################################
 label new_request_32: #LV.10 (Whoring = 27 - 29)
-    if whoring <=26:
+    if hermi.whoring <=26:
         jump too_much
     m "I want you to wear it."
     if request_32_points == 0: #One star.
@@ -1131,8 +1131,8 @@ label new_request_32: #LV.10 (Whoring = 27 - 29)
     "Hermione puts on a very rakish outfit and goes to school."
     
     $ request_32 = True 
-    if whoring <= 29:
-        $ whoring +=1
+    if hermi.whoring <= 29:
+        $ hermi.whoring +=1
         
     if request_32_points <= 2:
         $ gryffindor +=100

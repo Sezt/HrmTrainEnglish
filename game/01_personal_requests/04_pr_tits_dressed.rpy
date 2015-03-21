@@ -14,10 +14,10 @@ label new_request_04:
     
     
     $ current_payout = 15 #Used when haggling about price of th favor.
-    if whoring <=2: # LEVEL 01 # Hermione refuses.
+    if hermi.whoring <=2: # LEVEL 01 # Hermione refuses.
         jump too_much
         
-    elif whoring >= 3 and whoring <= 5: # LEVEL 02 # Hermione is hesitant. 
+    elif hermi.whoring >= 3 and hermi.whoring <= 5: # LEVEL 02 # Hermione is hesitant. 
 #        $ new_request_04_01 = True # Hearts.
 
         hide bld1
@@ -145,7 +145,7 @@ label new_request_04:
                 $her_head_state = 12
                 her_head_main "Aw........."
 
-    if whoring >= 6: # LEVEL 03 and higher # Hermione doesn't mind. <============================================================================EVENT LEVEL: 03
+    if hermi.whoring >= 6: # LEVEL 03 and higher # Hermione doesn't mind. <============================================================================EVENT LEVEL: 03
 #        $ new_request_04_02 = True # Hearts.
 
 #        if whoring > 8: # LEVEL 03.
@@ -220,7 +220,7 @@ label new_request_04:
                 her_head_main "You don't need to be so rough with me....{image=textheart.png}"
                 hide screen blktone8
 
-        if whoring>=12: # Если уже играл с ее голыми сиськами
+        if hermi.whoring>=12: # Если уже играл с ее голыми сиськами
             her "Umm... Professor, maybe you'll do it for real?"
             m "Really?"
             her "Yes, I want you to... that is, that I earned more points. Maybe I'll make a form?"
@@ -277,7 +277,7 @@ label new_request_04:
                     $herView.showQQ( "body_55.png", pos )
                     m "That's all for tonight, girl."
                     m "However, if you are ready to lie down and spread legs..."
-                    if whoring<18: # Если не готова к сексу
+                    if hermi.whoring<18: # Если не готова к сексу
                         $herView.showQQ( "body_05.png", pos )
                         her "Argh! Sir... as you can!... I!..."
                         m "Hush, dear, hush. I was just kidding."
@@ -295,7 +295,7 @@ label new_request_04:
                     if not end.IsEnding(const_ENDING_STRONG_GIRL):
                         $herView.showQQ( "body_120.png", pos )
                         her "GRR!... Pay me and I'll go!"
-                        $mad=+30
+                        $hermi.liking -=30
                         jump new_request_04_finish
                     else:
                         $MusicStart("Supergirl",0.3)                                   
@@ -312,7 +312,7 @@ label new_request_04:
                         $herView.showQQ( "body_56.png", pos )
                         her "Maybe I could..."
                         m "Could what?"
-                    if whoring<18: # Если не готова к сексу
+                    if hermi.whoring<18: # Если не готова к сексу
                         $herView.showQQ( "body_123.png", pos )
                         her "Well, as you said, to push... If this is how it should be paid, of course!"
                         g9 "Of course, it will. Of course!" 
@@ -335,7 +335,7 @@ label new_request_04:
                             m "Get out of here! Points will not be!"
                             $herView.showQQ( "body_05.png", pos )
                             her "As you not keep your word, sir, I won't be able to come to you."
-                            $mad+=50
+                            $hermi.liking -=50
                             jump new_request_04_nopoints
                         "Well, here you are!":
                             m "Well, miss Granger, get your points."
@@ -357,8 +357,8 @@ label new_request_04:
     label new_request_04_finish:
     $SetHearts(GetStage(whoring, 3, 3, 3))
 
-    if whoring <= 5:
-        $ whoring +=1
+    if hermi.whoring <= 5:
+        $ hermi.whoring +=1
         
     show screen blkfade 
     with d3
@@ -375,7 +375,7 @@ label new_request_04:
 
 
     stop music fadeout 1.0
-    if whoring<12: # Если еще не играл с ее голыми сиськами
+    if hermi.whoring<12: # Если еще не играл с ее голыми сиськами
         ">You let go of Hermione's breasts..."
         m "This will do for now."
         $her_head_state = 4
@@ -422,7 +422,7 @@ label new_request_04:
         m "Whatever it is, miss Granger, the decision is final. 35 points and no point anymore!" 
         $herView.showQQ( "body_86.png", pos )
         her "It's not fair, sir!"
-        $mad+=15
+        $hermi.liking -=15
     else:
         $herView.showQQ( "body_29.png", pos )
         her ".................."

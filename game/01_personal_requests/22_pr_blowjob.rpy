@@ -27,7 +27,7 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
         her "Yes, professor?"
         m "I plan to grant \"Gryffindor\" 55 house points today..."
         m "If you suck me off..."
-        if whoring <=14: # LEVEL 05
+        if hermi.whoring <=14: # LEVEL 05
             jump too_much
         $herView.hideshowQQ( "body_87.png", pos )
         her "Oh..."
@@ -712,7 +712,7 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
         menu:
             m "..."
             "\"Please, come on in, Severus.\"":
-                $ mad = 30
+                $ hermi.liking -= 30
                 $herViewHead.showQ( "body_76.png", posHead )
                 stop music fadeout 1.0
                 her "(Sir, no!)"
@@ -1204,8 +1204,8 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
     with d3
     her "Thank you, sir..."
 
-    if whoring <= 17:
-        $ whoring +=1
+    if hermi.whoring <= 17:
+        $ hermi.whoring +=1
 
     
     

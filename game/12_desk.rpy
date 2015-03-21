@@ -1,6 +1,5 @@
 label menu_reading_book:
     $choose=None
-    $RunMenu.event=None
     if choose==None:
         $ choose = RunMenu()
     else:
@@ -144,25 +143,25 @@ label desk:
         #     jump jerk_off
         "-Jerk off-" if not day < 5:
             jump jerk_off 
-        "-Hermione's status-" if this.Has("her_wants_buy"): #summoning_hermione_unlocked and buying_favors_from_hermione_unlocked: 
-            "> Whoring: {color=#B40000}{size=+4}{b}[whoring]{/b}{/size}{/color}- degree."
-            "> Mad: {color=#B40000}{size=+4}{b}[mad]{/b}{/size}{/color}- degree"
-            if mad >=1 and mad < 3:
-                "> Hermione still {b} a little upset {/ b} you ..."
-            elif mad >=3 and mad < 10:
-                "> You {b} upset {/ b} Hermione."
-            elif mad >=10 and mad < 20:
-                "> Hermione {b} very upset {/ b} you."
-            elif mad >=20 and mad < 40:
-                "> Hermione is angry {b} {/ b} for you."
-            elif mad >=40 and mad < 50:
-                "> Hermione {b} very angry {/ b} for you."
-            elif mad >=50 and mad < 60:
-                "> Hermione {b} in anger {/ b} for you."
-            elif mad >=60:
-                "> Hermione hates {b} {/ b} you."
-            else:
-                "> Hermione {b} is not angry {/ b} for you"
+#        "-Hermione's status-" if this.Has("her_wants_buy"): #summoning_hermione_unlocked and buying_favors_from_hermione_unlocked: 
+#           "> Whoring: {color=#B40000}{size=+4}{b}[whoring]{/b}{/size}{/color}- degree."
+#            "> Mad: {color=#B40000}{size=+4}{b}[mad]{/b}{/size}{/color}- degree"
+#            if mad >=1 and mad < 3:
+#                "> Hermione still {b} a little upset {/ b} you ..."
+#            elif mad >=3 and mad < 10:
+#                "> You {b} upset {/ b} Hermione."
+#            elif mad >=10 and mad < 20:
+#                "> Hermione {b} very upset {/ b} you."
+#            elif mad >=20 and mad < 40:
+#                "> Hermione is angry {b} {/ b} for you."
+#            elif mad >=40 and mad < 50:
+#                "> Hermione {b} very angry {/ b} for you."
+#            elif mad >=50 and mad < 60:
+#                "> Hermione {b} in anger {/ b} for you."
+#            elif mad >=60:
+#                "> Hermione hates {b} {/ b} you."
+#            else:
+#                "> Hermione {b} is not angry {/ b} for you"
             jump desk
         "-Doze off-" if daytime and not day == 1:
             jump night_start
@@ -440,7 +439,7 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
         show screen notes
         if event._conclusion!="":
             if event._block=="books_edu":
-                m "new skill: [event._conclusion]"
+                m "New skill: [event._conclusion]"
             else:
                 m "[event._conclusion]"
 

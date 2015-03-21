@@ -33,9 +33,9 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
         her "You want me to..."
         $herView.hideshowQQ( "body_10.png", pos )
         her "...dance for you, sir?"
-        if whoring <= 8:
+        if hermi.whoring <= 8:
             jump too_much
-        $ new_request_11_01 = True # HEARTS
+#        $ new_request_11_01 = True # HEARTS
         m "Yes... You think you could manage that?"
         her "Ehm... I suppose so..."
         $herView.hideshowQQ( "body_11.png", pos )
@@ -284,7 +284,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                 pause.2 #Otherwise a bug occurs. 
                 $herView.setZOrder( 5 )
                 $ pos = gMakePos( 390, 0 )
-                $ mad += 35
+                $ hermi.liking -= 35
                 call music_block
                 jump restore_state_could_not_flirt
 
@@ -607,7 +607,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                 her ".........................................."
                 $herViewHead.hideQ()
             "\"Severus! Please, come join us.\"":
-                $ mad += 37
+                $ hermi.liking -= 37
                 $ snape_invated_to_watch = True #Turns TRUE when Hermione is stripping and Snape walks in on you. Allows to invite him to watch her strip next time.
                 $ s_sprite = "03_hp/10_snape_main/snape_14.png"
                 show screen s_head
@@ -954,7 +954,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                     menu:
                         m "..."
                         "\"Miss Granger, show some respect!\"":
-                            $ mad += 9
+                            $ hermi.liking -= 9
                             $herViewHead.showQ( "body_61.png", posHead )
                             her "What?"
                             her "But professor!"
@@ -1085,7 +1085,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                             show screen s_head2                                                          #SNAPE
                             sna "Yes... Even more than before."
                             hide screen s_head2
-                            sna "Yes... More than ever."
+                            m "Hm...?"
                             m "You seem surprisingly indifferent about that..."
                             $ s_sprite = "03_hp/10_snape_main/snape_05.png" #SNAPE
                             show screen s_head2                                                          #SNAPE
@@ -1223,7 +1223,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                             with d3
                             $herViewHead.showQ( "body_95.png", posHead )
   
-                            her "No, guys... err I mean, sirs... Ehm, professors!"
+                            her2 "No, guys... err I mean, sirs... Ehm, professors!"
                             $herViewHead.hideQ()
                             m "Don't you mind us girl, just keep on doing your thing."
                             $herViewHead.showQ( None, posHead )
@@ -1261,7 +1261,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                     jump civil_with_snape
                                     
                                 "\"(Pst! Remember why we are doing this!)\"":
-                                    if whoring >= 15: #LEVEL 06. You jerk off your cock and Hermione is OK with it.
+                                    if hermi.whoring >= 15: #LEVEL 06. You jerk off your cock and Hermione is OK with it.
                                         $herViewHead.showQ( "body_104.png", posHead )
                                         her "Oh, right..."
                                         $ s_sprite = "03_hp/10_snape_main/snape_05.png" #SNAPE
@@ -1596,7 +1596,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                         menu:
                                             m "..."
                                             "\"Huh? What mission?\"":
-                                                $ mad += 7
+                                                $ hermi.liking -= 7
                                                 $herView.hideshowQQ( "body_32.png", pos )
                                                 her "I only agreed to this so that you could catch professor Snape in the act, sir!"
                                                 $herView.hideshowQQ( "body_33.png", pos )
@@ -2126,7 +2126,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                             menu:
                                 m "..."
                                 "\"I said, keep on dancing, girl!\"":
-                                    if whoring >= 15: #LEVEL 06. You jerk off your cock and Hermione is OK with it.
+                                    if hermi.whoring >= 15: #LEVEL 06. You jerk off your cock and Hermione is OK with it.
                                         $herViewHead.showQ( "body_99.png", posHead )
                                         her "But..."
                                         her "............................."
@@ -2145,7 +2145,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                                 m "\"Not to finish\"? That would be like torture!"
                                                 m "Please keep your sadistic urges to yourself, miss granger."
                                                 $herViewHead.showQ( "body_103.png", posHead )
-                                                her "I don't have any... sadistic urges, sir!"
+                                                her2 "I don't have any... sadistic urges, sir!"
                                                 her "I just don't want to..."
                                                 $herViewHead.hideQ()
                                                 g9 "Yes... Those are some nice tits you have..."
@@ -2277,7 +2277,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                             $herViewHead.showQ( "body_114.png", posHead )
                                             her "*sob!*........................"
                                             $herViewHead.hideQ()
-                                            $ mad += 50
+                                            $ hermi.liking -= 50
                                             show screen blkfade 
                                             with d3
                                             
@@ -2303,7 +2303,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                             $herViewHead.showQ( "body_106.png", posHead )
                                             her "You just cum at me..."
                                             $herViewHead.hideQ()
-                                            her "You just came on me..."
+                                            g9 "I know! Pretty cool, huh?!"
                                             $herViewHead.showQ( "body_107.png", posHead )
                                             her "Nothing of that sort!"
                                             #her "You should not have done this, sir!"
@@ -2317,7 +2317,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                             her "Still, you should not have..."
                                             $herViewHead.showQ( "body_102.png", posHead )
                                             her "I agreed to perform a striptease for you..."
-                                            her "But I didn't agree to be defiled like this."
+                                            her2 "But I didn't agree to be defiled like this."
                                             $herViewHead.hideQ()
                                             m "I think I know where this is going..."
                                             $herViewHead.showQ( "body_100.png", posHead )
@@ -2341,7 +2341,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                                     $herViewHead.addFaceName( "body_101.png" )
                                                     her "I'll take it."
                                                     $herViewHead.hideQ()
-                                                    $ mad += 30
+                                                    $ hermi.liking -= 30
                                                     $ current_payout = 36
                                                     hide screen bld1
                                                     with d3
@@ -2365,7 +2365,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                                     $herViewHead.showQ( "body_101.png", posHead )
                                                     her "Well, alright... Better than nothing I suppose..."
                                                     $herViewHead.hideQ()
-                                                    $ mad += 11
+                                                    $ hermi.liking -= 11
                                                     hide screen bld1
                                                     with d3
                                                     pause
@@ -2469,7 +2469,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                                                             m "I said you are dismissed."
                                                             $herViewHead.showQ( "body_110.png", posHead )
                                                             her "*GROAN!*"
-                                                            $ mad += 90
+                                                            $ hermi.liking -= 90
                                                             $herViewHead.hideQ()
                                                             hide screen bld1
                                                             with d3
@@ -2665,8 +2665,8 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
     
     her "Thank you, sir..."
 
-    if whoring <= 11:
-        $ whoring +=1
+    if hermi.whoring <= 11:
+        $ hermi.whoring +=1
 
 #    $ request_11_points += 1
     $SetHearts(GetStage(event._finishCount,1,1,1))

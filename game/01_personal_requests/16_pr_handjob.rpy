@@ -29,7 +29,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
         $herView.hideshowQQ( "body_01.png", pos )
         her "Yes, professor?"
         m "Do you know what a \"handjob\" is?"
-        if whoring <=11:
+        if hermi.whoring <=11:
             jump too_much
         $herView.hideshowQQ( "body_79.png", pos )
         her "Why?"
@@ -55,7 +55,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
         menu:
             m "..."
             "\"You will get 15 house points.\"":
-                $ mad +=7
+                $ hermi.liking -=7
                 $herView.hideshowQQ( "body_69.png", pos )
                 her "For 15 house points I suppose I could let you molest me a little, but that is all you'll be getting, sir."
                 her "I will not stoop as low as to sell handjobs for 15 house points."
@@ -1112,7 +1112,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 $herViewHead.showQ( "body_03.png", posHead )
                 her "Fine!"
                 $herViewHead.showQ( "body_08.png", posHead )
-                her "Sometimes I get lonely and let my dog mount me."
+                her2 "Sometimes I get lonely and let my dog mount me."
                 $herViewHead.hideQ()
                 m "That sounded so fake..."
                 $herViewHead.showQ( "body_07.png", posHead )
@@ -1312,7 +1312,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
 
             "\"(Nah... no need).\"":
                 g4 "Here! Take this, whore!"
-                if whoring >= 18: # LEVEL 07
+                if hermi.whoring >= 18: # LEVEL 07
                     jump kiss_suck
                 else:
                     pass
@@ -1369,7 +1369,8 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 pause
                 $ g_c_u_pic = "03_hp/08_animation_02/15_cum_21.png"
                 
-                $herViewHead.data().addItem( 'sperm', CharacterExItem( herViewHead.mMiscFolder, "sperm_03_blowjob.png", G_Z_FACE + 1 ) )
+                #$herViewHead.data().addItem( 'sperm', CharacterExItem( herViewHead.mMiscFolder, "sperm_03_blowjob.png", G_Z_FACE + 1 ) )
+                $herViewHead.data().addItem( 'item_sperm', '03' )
                 $ pos.xpos = 130
                 $herView.showQ( "body_19.png", pos, d5 )
                 pause
@@ -1439,8 +1440,8 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
 
     $herViewHead.data().delItem( 'item_sperm' )
 
-    if whoring <= 14:
-        $ whoring +=1
+    if hermi.whoring <= 14:
+        $ hermi.whoring +=1
 
     
     

@@ -15,12 +15,12 @@ label new_request_02_c:
             jump new_personal_request
 
     m "Miss granger, I want you to be especially flirtatious with your teachers today."
-    if whoring <=2 or request_02_b_points <= 1: # request_02_b_points - counts how many times Hermione was sent to flirt with boys. 
+    if hermi.whoring <=2 or request_02_b_points <= 1: # request_02_b_points - counts how many times Hermione was sent to flirt with boys. 
         jump too_much
    
     $ pos = POS_140
 
-    if request_02_c_points == 0 and whoring <= 8: ### up to LEVEL 03
+    if request_02_c_points == 0 and hermi.whoring <= 8: ### up to LEVEL 03
     ### LEVEL 03 ### <===============================================================FIRST EVENT!
         $herView.showQQ( "body_01.png", pos )
         her "I will do my best, sir!"
@@ -97,7 +97,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
             show screen blktone
             with d3
     
-            if  whoring >= 3 and whoring <= 5: ### LEVEL 02 <===================================================================== EVENT LEVEL 01
+            if  hermi.whoring >= 3 and hermi.whoring <= 5: ### LEVEL 02 <===================================================================== EVENT LEVEL 01
                 if one_out_of_three == 1: ### EVENT (A)
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     $herView.hideshowQQ( "body_10.png", pos )
@@ -145,7 +145,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                             m "You are dismissed, miss Granger."
                             $herView.hideshowQQ( "body_76.png", pos )
                             her "Tsk!"
-                            $ mad += 18
+                            $ hermi.liking -= 18
                             call music_block
                             jump could_not_flirt_02
                         "\"Here are your point's though.\"":
@@ -243,7 +243,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                     m "What did I say?"
                     
                     
-            elif whoring >= 6 and whoring <= 8: ### LEVEL 03 <=======================================================================================EVENT LEVEL 02
+            elif hermi.whoring >= 6 and hermi.whoring <= 8: ### LEVEL 03 <=======================================================================================EVENT LEVEL 02
                 if one_out_of_three == 1: ### EVENT (A)
                     stop music fadeout 1.0
                     $herView.hideQQ()
@@ -364,7 +364,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                                     $herView.showQ( "body_47.png", pos, fade )
                                     pause
                                     hide screen ctc
-                                    $ mad += 18
+                                    $ hermi.liking -= 18
                         "\"Fine... Here are your points.\"":
                             $herView.hideshowQQ( "body_74.png", pos )
                             her "Thank you for understanding, Professor."
@@ -405,7 +405,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                             $herView.hideshowQQ( "body_03.png", pos )
                             her "........................."
                         "\"Favour failed! No points for you!\"":
-                            $ mad +=15
+                            $ hermi.liking -=15
                             $herView.hideshowQQ( "body_07.png", pos )
                             her "But professor?"
                             m "You are dismissed, miss Granger."
@@ -414,7 +414,7 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                             jump could_not_flirt_02
 
 
-            elif whoring >= 9: # LEVEL 04 and higher.
+            elif hermi.whoring >= 9: # LEVEL 04 and higher.
                 if one_out_of_three == 1: ### EVENT (A) LEVEL04 <============================================================================
                     stop music fadeout 1.0
                     $herView.hideshowQQ( "body_33.png", pos )
@@ -630,8 +630,8 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
     $ p_level_03_active = True #When turns TRUE public favors of level 03 become available. 
 
     
-    if whoring <= 5:  # (if whoring >= 3 and whoring <= 5) - LEVEL 02
-        $ whoring +=1
+    if hermi.whoring <= 5:  # (if whoring >= 3 and whoring <= 5) - LEVEL 02
+        $ hermi.whoring +=1
 
     $ request_02_c_points += 1 #Leveling up the event.
 #    $ request_02_c = False 

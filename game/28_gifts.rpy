@@ -29,7 +29,7 @@ label giving_skirt:
     $herView.hideQ( d5 )
     $hermi.Items.AddItem("miniskirt")
     
-    $ mad = 0
+    $ hermi.liking = 0
     m "Here... This is for you..."
     $ the_gift = "03_hp/18_store/07.png" # Miniskirt.
     show screen gift
@@ -60,7 +60,7 @@ label giving_skirt:
 ### DRESS CODE ###
 label mini_on:
     $pos = POS_370
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $herView.hideshowQQ( "body_04.png", pos )
         her "You cannot be serious, sir!"
         her "A skirt this short?!"
@@ -82,12 +82,12 @@ label mini_on:
                 $herView.hideshowQQ( "body_66.png", pos )
                 her "well, alright..."
                 $herView.hideQQ()
-                $ mad += 10
+                $ hermi.liking -= 10
                 call upset
         
         
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
         $herView.hideshowQQ( "body_15.png", pos )
         her "Hm...?"
         $herView.hideshowQQ( "body_17.png", pos )
@@ -100,7 +100,7 @@ label mini_on:
                 $herView.hideshowQQ( "body_09.png", pos )
                 her "I refuse!"
                 $herView.hideQQ()
-                $ mad += 5
+                $ hermi.liking -= 5
                 call upset                                                                                                                                                                                                                #HERMIONE
                 $herView.showQQ( None, pos )
                 jump day_time_requests
@@ -118,7 +118,7 @@ label mini_on:
                 $herView.hideshowQQ( None, pos )
                 jump day_time_requests
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $herView.hideshowQQ( "body_15.png", pos )
         her "Hm...?"
         $herView.hideshowQQ( "body_17.png", pos )
@@ -143,7 +143,7 @@ label mini_on:
 
 
     
-    if whoring >= 18: # Lv 7+
+    if hermi.whoring >= 18: # Lv 7+
         $herView.hideshowQQ( "body_118.png", pos )
         her "Yes, sir..."
         $herView.hideQQ()
@@ -169,21 +169,21 @@ label mini_on:
     
 label mini_off:
     $ pos = POS_370
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $herView.hideshowQQ( "body_04.png", pos )
         her "I'm glad that you came to your senses, sir. "
         $herView.hideQQ()
         $herView.addFaceName( "body_03.png")
         
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
         $herView.hideshowQQ( "body_01.png", pos )
         her "Gladly, sir."
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $herView.hideshowQQ( "body_13.png", pos )
         her "Alright..."
     
-    if whoring >= 18: # Lv 7+
+    if hermi.whoring >= 18: # Lv 7+
         $herView.hideshowQQ( "body_28.png", pos )
         her "That boring thing again?"
     
@@ -247,7 +247,7 @@ label badge_take:
 ### FISHNETS ###
 label nets_put:
     $ pos = POS_370
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $herView.hideshowQQ( "body_11.png", pos )
         her "fishnet stockings...?"
         $herView.hideshowQQ( "body_31.png", pos )
@@ -266,10 +266,10 @@ label nets_put:
                 $herView.hideshowQQ( "body_66.png", pos )
                 her "well, alright..."
                 $herView.hideQQ()
-                $ mad += 5
+                $ hermi.liking -= 5
                 call upset
         
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
         $herView.hideshowQQ( "body_15.png", pos )
         her "Hm...?"
         $herView.hideshowQQ( "body_17.png", pos )
@@ -283,7 +283,7 @@ label nets_put:
                 $herView.hideshowQQ( "body_09.png", pos )
                 her "I refuse!"
                 $herView.hideQQ()
-                $ mad += 5
+                $ hermi.liking -= 5
                 call upset                                                                                                                                                                                                                #HERMIONE
                 $herView.showQQ( None, pos )
                 jump day_time_requests
@@ -301,7 +301,7 @@ label nets_put:
                 $herView.hideshowQQ( None, pos )
                 jump day_time_requests
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $herView.hideshowQQ( "body_15.png", pos )
         her "Hm...?"
         $herView.hideshowQQ( "body_17.png", pos )
@@ -327,7 +327,7 @@ label nets_put:
         
 
     
-    if whoring >= 18: # Lv 7+
+    if hermi.whoring >= 18: # Lv 7+
         $herView.hideshowQQ( "body_118.png", pos )
         her "If you insist, sir..."
         $herView.hideQQ()
@@ -355,21 +355,21 @@ label nets_put:
     
 label nets_take:
     $ pos = POS_370
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $herView.hideshowQQ( "body_04.png", pos )
         her "I'm glad that you came to your senses, sir."
         $herView.hideQQ()
         $herView.addFaceName( "body_03.png" )
         
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
         $herView.hideshowQQ( "body_01.png", pos )
         her "Gladly, sir."
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $herView.hideshowQQ( "body_12.png", pos )
         her "As you wish, sir."
     
-    if whoring >= 18: # Lv 7+
+    if hermi.whoring >= 18: # Lv 7+
         $herView.hideshowQQ( "body_28.png", pos )
         her "Really? Aw..."
     
@@ -407,8 +407,8 @@ label giving_lube: # JAR OF Anal lubricant?.
     $herView.hideQ( d5 )                                                                                                                                                                                                           #HERMIONE
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 6
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 6
         $herView.showQ( "body_02.png", pos, d5 )                                                                                                                                                                                         #HERMIONE
         her "I don't know what this is..."
         $herView.hideshowQQ( "body_05.png", pos )
@@ -420,8 +420,8 @@ label giving_lube: # JAR OF Anal lubricant?.
        
         
         
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 2
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 2
         $herView.showQ( "body_73.png", pos, d5 )                                                                                                                                                                                                                      #HERMIONE
         her "Hm..."
         $herView.hideshowQQ( "body_66.png", pos )
@@ -433,7 +433,7 @@ label giving_lube: # JAR OF Anal lubricant?.
         call upset #Message saying that Hermione became upset with you.
    
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #$ anal_lube -= 1
         $herView.showQ( "body_118.png", pos, d5 )
         her "Anal lubricant??"
@@ -454,9 +454,9 @@ label giving_lube: # JAR OF Anal lubricant?.
         call no_change #Message: Hermione's mood did not change.
         $herView.hideshowQQ( "body_79.png ", pos);
         
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #$ anal_lube -= 1
-        $ mad -=5
+        $ hermi.liking +=5
         $herView.showQ( "body_124.png", pos, d5 )
         her "Anal lubricant, sir?"
         $herView.hideshowQQ( "body_186.png", pos )
@@ -477,8 +477,8 @@ label giving_condoms: # A PACK OF CONDOMS
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 6
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 6
         $herView.showQ( "body_18.png", pos, d5 )
         her "Condoms?!"
         $herView.hideshowQQ( "body_30.png", pos )
@@ -488,7 +488,7 @@ label giving_condoms: # A PACK OF CONDOMS
         $herView.addFaceName( "body_03.png" )
         
         
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
         $herView.showQ( "body_07.png", pos, d5 )
         her "...Condoms?"
         $herView.hideshowQQ( "body_04.png", pos )
@@ -499,9 +499,9 @@ label giving_condoms: # A PACK OF CONDOMS
         call no_change 
    
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #$ condoms -= 1
-        $ mad -= 3
+        $ hermi.liking += 3
         $herView.showQ( "body_03.png", pos, d5 )
         her "A pack of condoms?"
         her "Sir, what possible use could I have for those?"
@@ -519,9 +519,9 @@ label giving_condoms: # A PACK OF CONDOMS
         
 
         
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #$ anal_lube -= 1
-        $ mad -=4
+        $ hermi.liking +=4
         $herView.showQ( "body_08.png", pos, d5 )
         her "A pack of condoms?"
         $herView.hideshowQQ( "body_128.png", pos )
@@ -549,8 +549,8 @@ label giving_candy: # CANDY.
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad -= 5
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking += 5
         $hermi.Items.Receive(hero.Items,item.Name) # $ candy -= 1
         $herView.showQ( "body_01.png", pos, d5 )
         her "A lollipop?"
@@ -565,8 +565,8 @@ label giving_candy: # CANDY.
         her "Thank you, sir."
         call happy #Message that says that Hermione's mood has improved.
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 5
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 5
         $hermi.Items.Receive(hero.Items,item.Name) #$ candy -= 1
         $herView.showQ( "body_03.png", pos, d5 )
         her "candy?"
@@ -586,8 +586,8 @@ label giving_candy: # CANDY.
         
 
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 5
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 5
         $hermi.Items.Receive(hero.Items,item.Name) #$ candy -= 1
         $herView.showQ( "body_03.png", pos, d5 )
         her "candy?"
@@ -603,9 +603,9 @@ label giving_candy: # CANDY.
         call happy #Message that says that Hermione's mood has improved.
         $herView.addFaceName( "body_06.png" )
         
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #$ candy -= 1
-        $ mad -=5
+        $ hermi.liking +=5
         $herView.showQ( "body_06.png", pos, d5 )
         her "A lollipop?"
         $herView.hideshowQQ( "body_46.png", pos )
@@ -635,8 +635,8 @@ label giving_chocolate: # CHOCOLATE.
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad -= 10
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) 
         $herView.showQ( "body_01.png", pos, d5 )
         her "A chocolate bar?"
@@ -651,8 +651,8 @@ label giving_chocolate: # CHOCOLATE.
         her "Thank you, sir."
         call happy #Message that says that Hermione's mood has improved.
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 10
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_03.png", pos, d5 )
         her "A chocolate bar?"
@@ -674,8 +674,8 @@ label giving_chocolate: # CHOCOLATE.
         
 
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 10
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_03.png", pos, d5 )
         her "A chocolate bar?"
@@ -694,7 +694,7 @@ label giving_chocolate: # CHOCOLATE.
        
  
         
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $ mad -= 10
         $herView.showQ( "body_06.png", pos, d5 )
@@ -723,8 +723,8 @@ label giving_vibrator: # VIBRATOR.
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad+= 10
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 10
         $herView.showQ( "body_01.png", pos, d5 )
         her "A magic wand?"
         $herView.hideshowQQ( "body_15.png", pos )
@@ -739,8 +739,8 @@ label giving_vibrator: # VIBRATOR.
         call upset
         $herView.addFaceName( "body_120.png" )
     
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 10
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 10
         $herView.showQ( "body_118.png", pos, d5 )
         her "Is this what I think it is?"
         $herView.hideshowQQ( "body_186.png", pos )
@@ -749,7 +749,7 @@ label giving_vibrator: # VIBRATOR.
         her "A present like that would be appropriate for a girl from \"Slytherin\", sir."
         call upset
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_118.png", pos, d5 )
         her "Is that a... vibrator?"
@@ -771,9 +771,9 @@ label giving_vibrator: # VIBRATOR.
         call no_change
         
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 10
+        $ hermi.liking += 10
         $herView.showQ( "body_11.png", pos, d5 )
         her "This vibrator..."
         $herView.hideshowQQ( "body_10.png", pos )
@@ -815,8 +815,8 @@ label giving_vibrator: # VIBRATOR.
 label giving_strapon: # STRAP-ON.
     $herView.hideQ( d5 )
     $ pos = POS_140
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad -= 20
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking += 20
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_18.png", pos, d5 )
         her "What is that?"
@@ -840,8 +840,8 @@ label giving_strapon: # STRAP-ON.
         $herView.addFaceName( "body_15.png" )
     
     
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 15
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 15
         $herView.showQ( "body_18.png", pos, d5 )
         her "!!!"
         $herView.hideshowQQ( "body_118.png", pos )
@@ -859,7 +859,7 @@ label giving_strapon: # STRAP-ON.
         $herView.hideQQ()
         call upset
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $ mad -= 10
         $herView.showQ( "body_118.png", pos, d5 )
@@ -886,9 +886,9 @@ label giving_strapon: # STRAP-ON.
         call happy
 
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 30
+        $ hermi.liking += 30
         $herView.showQ( "body_48.png", pos, d5 )
         her "It's... It's magnificent, sir..."     
         $herView.hideshowQQ( "body_189.png", pos )
@@ -930,8 +930,8 @@ label giving_ballgag: # BALL GAG.
     $herView.hideQ( d5 )
     $ pos = POS_140
         
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 10
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 10
         $herView.showQ( "body_118.png", pos, d5 )
         her "What is this?"
         $herView.hideshowQQ( "body_141.png", pos )
@@ -944,8 +944,8 @@ label giving_ballgag: # BALL GAG.
         her "This is just insulting, sir..."                                                                                                                                                                                                                
         call upset
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 5
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 5
         $herView.showQ( "body_186.png", pos, d5 )
         her "Sir, do you not realize how inappropriate it would be for me to accept a present like that?"
         $herView.hideshowQQ( "body_189.png", pos )
@@ -959,7 +959,7 @@ label giving_ballgag: # BALL GAG.
         call upset
 
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $ mad -= 9
         $herView.showQ( "body_120.png", pos, d5 )
@@ -982,9 +982,9 @@ label giving_ballgag: # BALL GAG.
         with d3
         call happy
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 15
+        $ hermi.liking += 15
         $herView.showQ( "body_190.png", pos, d5 )
         her "A ball gag and handcuffs?"
         $herView.hideshowQQ( "body_122.png", pos )
@@ -1024,8 +1024,8 @@ label giving_plug:
     $herView.hideQ( d5 )
     $ pos = POS_140
 
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad -= 8
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking += 8
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "Hm...?"
@@ -1043,8 +1043,8 @@ label giving_plug:
         call happy
 
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 15
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 15
         $herView.showQ( "body_186.png", pos, d5 )
         her "Sir, are those adult toys of some sort?"
         $herView.hideshowQQ( "body_187.png", pos )
@@ -1055,7 +1055,7 @@ label giving_plug:
         call upset
 
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $herView.showQ( "body_120.png", pos, d5 )
         her "Yes, I know that some girls have uhm..."
         $herView.hideshowQQ( "body_186.png", pos )
@@ -1065,9 +1065,9 @@ label giving_plug:
         her "No, thank you."
         call no_change
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 10
+        $ hermi.liking += 10
         $herView.showQ( "body_118.png", pos, d5 )
         her "Anal plugs?"
         $herView.hideshowQQ( "body_117.png", pos )
@@ -1108,8 +1108,8 @@ label giving_mag1:
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad -= 15
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking += 15
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "\"Popular magic\" magazines?"
@@ -1125,8 +1125,8 @@ label giving_mag1:
         her "I will use them for my research!"
         call happy
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 10
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "Sometimes I find information in magazines that I could never find in a book..."
@@ -1142,8 +1142,8 @@ label giving_mag1:
         her "I will use them for my research!"
         call happy
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 3 
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 3 
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_02.png", pos, d5 )
         her "oh..."
@@ -1163,7 +1163,7 @@ label giving_mag1:
         call happy
      
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_10.png", pos, d5 )
         her "Ehm..."
@@ -1196,7 +1196,7 @@ label giving_mag2:
     $herView.hideQ( d5 )
     $ pos = POS_140
 
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $herView.showQ( "body_15.png", pos, d5 )
         her "Hm?"
         $herView.hideshowQQ( "body_17.png", pos )
@@ -1208,8 +1208,8 @@ label giving_mag2:
         
         
       
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 5
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 5
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_04.png", pos, d5 )
         her "I don't read magazines of that nature, sir..."
@@ -1229,8 +1229,8 @@ label giving_mag2:
         call happy
         $herView.addFaceName( "body_06.png" )
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 15 
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 15 
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_10.png", pos, d5 )
         her "I ashamed to admit this, but..."
@@ -1249,9 +1249,9 @@ label giving_mag2:
         $herView.addFaceName( "body_06.png" )
         
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 15
+        $ hermi.liking += 15
         $herView.showQ( "body_18.png", pos, d5 )
         her "The Latest edition of \"Girlz\"?!"
         $herView.hideshowQQ( "body_24.png", pos )
@@ -1280,8 +1280,8 @@ label giving_mag3:
     $herView.hideQ( d5 )
     $ pos = POS_140
 
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 7
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 7
         $herView.showQ( "body_02.png", pos, d5 )
         her "Are that...?"
         $herView.hideshowQQ( "body_31.png", pos )
@@ -1295,8 +1295,8 @@ label giving_mag3:
         call upset
         
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 3
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 3
         $herView.showQ( "body_05.png", pos, d5 )
         her "Adult magazines?"
         $herView.hideshowQQ( "body_69.png", pos )
@@ -1307,8 +1307,8 @@ label giving_mag3:
         $herView.addFaceName( "body_29.png" )
 
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 8 
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 8 
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_31.png", pos, d5 )
         her "Adult magazines?"
@@ -1327,9 +1327,9 @@ label giving_mag3:
         $herView.addFaceName( "body_120.png" ) 
 
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 15
+        $ hermi.liking += 15
         $herView.showQ( "body_75.png", pos, d5 )
         her "The New edition of \"L.o.v.e.\"!!!"
         $herView.hideshowQQ( "body_122.png", pos )
@@ -1363,8 +1363,8 @@ label giving_mag4:
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 15
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 15
         $herView.showQ( "body_01.png", pos, d5 )                                                                                                                                                                                       #HERMIONE
         her "Hm... What is this?"
         $herView.hideshowQQ( "body_130.png", pos )
@@ -1375,8 +1375,8 @@ label giving_mag4:
         
 
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 8
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 8
         $herView.showQ( "body_48.png", pos, d5 )
         her "Porn magazines?"
         $herView.hideshowQQ( "body_87.png", pos )
@@ -1389,7 +1389,7 @@ label giving_mag4:
         $herView.addFaceName( "body_120.png" )
         
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_31.png", pos, d5 )
         her "That's hardcore porn, sir."
@@ -1411,9 +1411,9 @@ label giving_mag4:
         call no_change
         $herView.addFaceName( "body_120.png" )
 
-    if whoring >= 18: # Lv 7+  
+    if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 15
+        $ hermi.liking += 15
         $herView.showQ( "body_48.png", pos, d5 )
         her "Pornography?"
         $herView.hideshowQQ( "body_118.png", pos )
@@ -1450,9 +1450,9 @@ label giving_beer:
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 3
+        $ hermi.liking += 3
         $herView.showQ( "body_01.png", pos, d5 )
         her "Butterbeer?"
         $herView.hideshowQQ( "body_08.png", pos )
@@ -1472,8 +1472,8 @@ label giving_beer:
         
 
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 10
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_11.png", pos, d5 )
         her "Butterbeer, sir?"
@@ -1497,8 +1497,8 @@ label giving_beer:
 
         
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 15
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 15
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "Butterbeer?"
@@ -1516,8 +1516,8 @@ label giving_beer:
         call happy
         
 
-    if whoring >= 18: # Lv 7+  
-        $ mad -= 20
+    if hermi.whoring >= 18: # Lv 7+  
+        $ hermi.liking += 20
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_06.png", pos, d5 )
         her "Butterbeer...?"
@@ -1553,9 +1553,9 @@ label giving_owl:
 
     $ pos = POS_140
 
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 7
+        $ hermi.liking += 7
         $herView.showQ( "body_01.png", pos, d5 )
         her "A stuffed owl?"
         $herView.hideshowQQ( "body_06.png", pos )
@@ -1573,8 +1573,8 @@ label giving_owl:
         
       
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 10
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_11.png", pos, d5 )
         her "A plush toy?"
@@ -1591,8 +1591,8 @@ label giving_owl:
         her "Thank you, sir."
         call happy
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 15
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 15
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "A toy?"
@@ -1614,8 +1614,8 @@ label giving_owl:
         
         
       
-    if whoring >= 18: # Lv 7+  
-        $ mad -= 4
+    if hermi.whoring >= 18: # Lv 7+  
+        $ hermi.liking += 4
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_66.png", pos, d5 )
         her "This is one of those adult toys isn't it?"
@@ -1653,8 +1653,8 @@ label giving_sexdoll:
    
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 20
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 20
         $herView.showQ( "body_48.png", pos, d5 )
         her "Is this..."
         $herView.hideshowQQ( "body_34.png", pos )
@@ -1664,16 +1664,16 @@ label giving_sexdoll:
         call upset
         $herView.addFaceName( "body_33.png" )
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad += 20
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking -= 20
         $herView.showQ( "body_48.png", pos, d5 )
         her "A sex doll?"
         $herView.hideshowQQ( "body_120.png", pos )
         her "This is just so unbecoming for an esteemed wizard such as yourself, sir..."
         call upset
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 10
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 10
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_118.png", pos, d5 )
         her "A sex doll..."
@@ -1692,8 +1692,8 @@ label giving_sexdoll:
         her "Thank you, sir."
         call happy
         
-    if whoring >= 18: # Lv 7+  
-        $ mad -= 30
+    if hermi.whoring >= 18: # Lv 7+  
+        $ hermi.liking += 30
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_73.png", pos, d5 )
         her "the Joanne sex doll?"
@@ -1725,8 +1725,8 @@ label giving_lingerie:
 
     $ pos = POS_140
 
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad += 10
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking -= 10
         $herView.showQ( "body_118.png", pos, d5 )
         her "lingerie?"
         $herView.hideshowQQ( "body_120.png", pos )
@@ -1735,7 +1735,7 @@ label giving_lingerie:
        
       
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
         $herView.showQ( "body_118.png", pos, d5 )
         her "sexy lingerie?"
         $herView.hideshowQQ( "body_117.png", pos )
@@ -1744,8 +1744,8 @@ label giving_lingerie:
         her "(It's pretty though)........."
         call no_change
 
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 7
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 7
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_124.png", pos, d5 )
         her "sexy lingerie?"
@@ -1763,8 +1763,8 @@ label giving_lingerie:
         call happy
 
         
-    if whoring >= 18: # Lv 7+  
-        $ mad -= 15
+    if hermi.whoring >= 18: # Lv 7+  
+        $ hermi.liking += 15
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_124.png", pos, d5 )
         her "sexy lingerie?"
@@ -1792,8 +1792,8 @@ label giving_broom:
     
     $ pos = POS_140
 
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
-        $ mad -= 20
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
+        $ hermi.liking += 20
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "A broom...?"
@@ -1817,8 +1817,8 @@ label giving_broom:
        
       
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 20
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 20
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_01.png", pos, d5 )
         her "A broom...?"
@@ -1840,8 +1840,8 @@ label giving_broom:
         call happy
         
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 30
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 30
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_118.png", pos, d5 )
         her "A broom...?"
@@ -1862,8 +1862,8 @@ label giving_broom:
         her "Thank you, sir."
         call happy
 
-    if whoring >= 18: # Lv 7+  
-        $ mad -= 30
+    if hermi.whoring >= 18: # Lv 7+  
+        $ hermi.liking += 30
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_124.png", pos, d5 )
         her "A broom..."
@@ -1897,7 +1897,7 @@ label giving_krum:
     $herView.hideQ( d5 )
     $ pos = POS_140
     
-    if whoring >= 0 and whoring <= 5: # Lv 1-2.
+    if hermi.whoring >= 0 and hermi.whoring <= 5: # Lv 1-2.
         $herView.showQ( "body_73.png", pos, d5 )
         her "A Quidditch poster?"
         $herView.hideshowQQ( "body_185.png", pos )
@@ -1908,8 +1908,8 @@ label giving_krum:
         $herView.addFaceName( "body_71.png" )
 
 
-    if whoring >= 6 and whoring <= 11: # Lv 3-4.
-        $ mad -= 1
+    if hermi.whoring >= 6 and hermi.whoring <= 11: # Lv 3-4.
+        $ hermi.liking += 1
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_73.png", pos, d5 )
         her "A Quidditch poster?"
@@ -1930,8 +1930,8 @@ label giving_krum:
         
 
         
-    if whoring >= 12 and whoring <= 17: # Lv 5-6.
-        $ mad -= 15
+    if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
+        $ hermi.liking += 15
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_73.png", pos, d5 )
         her "A Viktor Krum poster, sir?"
@@ -1950,8 +1950,8 @@ label giving_krum:
         
         
        
-    if whoring >= 18: # Lv 7+  
-        $ mad -= 25
+    if hermi.whoring >= 18: # Lv 7+  
+        $ hermi.liking += 25
         $hermi.Items.Receive(hero.Items,item.Name) #        
         $herView.showQ( "body_72.png", pos, d5 )
         her "A Viktor Krum poster?!"
@@ -1984,7 +1984,7 @@ label giving_badge_01:
 
     $ pos = POS_140
 
-    $ mad -= 30
+    $ hermi.liking += 30
     $hermi.Items.Receive(hero.Items,item.Name) #        
     $herView.showQ( "body_01.png", pos, d5 )
     her "A badge?"
@@ -2015,7 +2015,7 @@ label giving_nets:
 
     $ pos = POS_140
 
-    $ mad -= 30
+    $ hermi.liking += 30
     $hermi.Items.Receive(hero.Items,item.Name) #        
     $herView.showQ( "body_03.png", pos, d5 )
     her "A pair of stockings?"
@@ -2045,9 +2045,9 @@ label giving_nets:
         
     label happy:
         $herView.hideQQ()
-        if mad <= 0:
-            $ mad = 0
-        if mad == 0:
+#        if mad <= 0:
+#            $ mad = 0
+        if hermi.liking == 0:
             ">Hermione's mood has improved...\n>Hermione is {size=+5}not upset{/size} with you..."
         else:
             ">Hermione's mood has improved...\n>Hermione is {size=+5}still upset{/size} with you..."

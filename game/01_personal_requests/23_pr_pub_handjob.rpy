@@ -19,7 +19,7 @@ label new_request_23: #LV.6 (Whoring = 15 - 17)
     $ pos = POS_140
     
     if request_23_points == 0: # <================================================================================ FIRST TIME
-        if whoring <=14 or request_20_points <= 1: # Counts how many times you sent Hermione to kiss a girl.
+        if hermi.whoring <=14 or request_20_points <= 1: # Counts how many times you sent Hermione to kiss a girl.
             m "Miss Granger, I want you to do something different today..."
             $herView.hideshowQQ( "body_07.png", pos )
             her "...?"
@@ -77,7 +77,7 @@ label new_request_23: #LV.6 (Whoring = 15 - 17)
         m "Splendid... See you tonight then."
 
     else: # <================================================================================ NOT FIRST TIME
-        if whoring >= 15 and whoring <= 17: # LEVEL 06 FIRST EVENT.
+        if hermi.whoring >= 15 and hermi.whoring <= 17: # LEVEL 06 FIRST EVENT.
             m "Today's favour shall be..."
             $herView.hideshowQQ( "body_117.png", pos )
             her "........."
@@ -91,9 +91,9 @@ label new_request_23: #LV.6 (Whoring = 15 - 17)
             m "So... Are you up for that, girl?"
             $herView.hideshowQQ( "body_69.png", pos )
             her "I will see what I can do..."
-            m "Splendid!"
+            m "Sweeeet!"
         
-        elif whoring >= 18 and whoring <= 20: # LEVEL 07
+        elif hermi.whoring >= 18 and hermi.whoring <= 20: # LEVEL 07
             m "Ready to go have sex with one of your classmates yet?"
             $herView.hideshowQQ( "body_72.png", pos )
             stop music fadeout 1.0
@@ -111,7 +111,7 @@ label new_request_23: #LV.6 (Whoring = 15 - 17)
             $herView.hideshowQQ( "body_118.png", pos )
             her "Well, alright... I'll see what I can do..."
 
-        elif whoring >= 21: # LEVEL 08+
+        elif hermi.whoring >= 21: # LEVEL 08+
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "Miss Granger..."
             m "What do you think about giving one of your classmates another handjob?"
@@ -172,7 +172,7 @@ label new_request_23_complete: # <==============================================
     $ pos = POS_370
     $ herView.data().saveState()
 
-    if whoring >= 15 and whoring <= 17: # LEVEL 06                    
+    if hermi.whoring >= 15 and hermi.whoring <= 17: # LEVEL 06                    
         if one_out_of_three == 1: ### EVENT (A)
             m "Miss Granger, how was it?"
             show screen blktone
@@ -228,7 +228,7 @@ label new_request_23_complete: # <==============================================
                     m "You are free to go, girl."
                     $herView.hideshowQQ( "body_69.png", pos )
                     her "........."
-                    $ mad +=9
+                    $ hermi.liking -=9
                     $ request_23_points += 1 
                     $ request_23 = False 
                     $ hermione_sleeping = True
@@ -310,7 +310,7 @@ label new_request_23_complete: # <==============================================
             show screen blkfade 
             with d3
             pause.5
-            $herView.data().delItem( 'sperm' )
+            $herView.data().delItem( 'item_sperm' )
             $herView.addFaceName( "body_120.png" )
             hide screen blkfade
             with d3
@@ -336,7 +336,7 @@ label new_request_23_complete: # <==============================================
             m "Well, I'd say a job well done."
             
 
-    elif whoring >= 18 and whoring <= 20: # LEVEL 07                    
+    elif hermi.whoring >= 18 and hermi.whoring <= 20: # LEVEL 07                    
         if one_out_of_three == 1: ### EVENT (A)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "Miss Granger, did you complete your task?"
@@ -393,7 +393,7 @@ label new_request_23_complete: # <==============================================
                     her "......"
                     $herView.hideshowQQ( "body_32.png", pos )
                     her "This is just not fair!"
-                    $ mad +=20
+                    $ hermi.liking -=20
                     $ request_23 = False 
                     call music_block
                     jump could_not_flirt #Sent here when choose "Favor failed! No points for you!" (Hermione is leaving without getting any points).
@@ -475,7 +475,7 @@ label new_request_23_complete: # <==============================================
                     her "You of all people should understand that I take no pleasure in this..."
                     $herView.hideshowQQ( "body_23.png", pos )
                     her "I just do what needs to be done..."
-                    $ mad += 10
+                    $ hermi.liking -= 10
                     
             $herView.hideshowQQ( "body_13.png", pos )
             her "Sir, can I just get paid now, please?"
@@ -566,10 +566,10 @@ label new_request_23_complete: # <==============================================
                     m "All goes according to keik-... I mean, the plan..."
                     $herView.hideshowQQ( "body_120.png", pos )
                     her "Hm..."
-                    $ mad += 11
+                    $ hermi.liking -= 11
 
             
-    elif whoring >= 21: # LEVEL 08+                    
+    elif hermi.whoring >= 21: # LEVEL 08+                    
         if one_out_of_three == 1: ### EVENT (A)
             if sucked_off_ron: #In public events. Give a handjob to classmate. Event level 03. Event # 1. "Jerked of and suked of Ron Weasley". Turns True after that.
                 jump blowjob_ron
