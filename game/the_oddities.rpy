@@ -95,13 +95,13 @@ label menu_dahr_gift_order:
 
     if itsDAHR.Count(item.Name)>0:
         if item._block=="gears":
-                menu:
-                    dahr "[item._description]"
-                    "- Buy for ([item._price] galleons) -":
-                        $itemCount=1
-                    "- Never mind -":
-                        hide screen gift
-                        jump the_oddities
+            menu:
+                dahr "[item._description]"
+                "- Buy for ([item._price] galleons) -":
+                    $itemCount=1
+                "- Never mind -":
+                    hide screen gift
+                    jump the_oddities
         else:
             $_price2=item._price*2
             $_price3=item._price*3
@@ -117,25 +117,26 @@ label menu_dahr_gift_order:
                     "- Never mind -":
                         hide screen gift
                         jump the_oddities
+
+
+        if gold >= item._price*itemCount:
+            hide screen points
+            $ gold -=item._price*itemCount
+            show screen points
+            $ order_placed = True
+            $itsOWL.AddItem(item.Name,itemCount)
+            if item.Name in {"scroll", "ball_dress"}:
+                $itsDAHR.AddItem(item.Name,-itemCount)
+    #        $ bought_candy = True #Affects 15_mail.rpy
+            call thx_4_shoping #Massage that says "Thank you for shopping here!".
+            jump desk
+        else:
+            call no_gold #Massage: m "I don't have enough gold".
+            jump the_oddities
+
     else:
         ">Sorry, this item has ended"
-
-
-    if gold >= item._price*itemCount:
-        hide screen points
-        $ gold -=item._price*itemCount
-        show screen points
-        $ order_placed = True
-        $itsOWL.AddItem(item.Name,itemCount)
-        if item.Name in {"scroll", "ball_dress"}:
-            $itsDAHR.AddItem(item.Name,-itemCount)
-#        $ bought_candy = True #Affects 15_mail.rpy
-        call thx_4_shoping #Massage that says "Thank you for shopping here!".
-        jump desk
-    else:
-        call no_gold #Massage: m "I don't have enough gold".
-        jump the_oddities
-
+        hide screen gift
 
 
 
@@ -236,5 +237,6 @@ label no_gold:
 
 label out:
     dahr "This item is currently out of stock."
-    return
+    jump the_oddities
+#    return
 

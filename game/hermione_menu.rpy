@@ -52,6 +52,7 @@ label hermione_approaching:
                     (_val, _text)=t
                     if hermi.liking>=_val:
                         renpy.say(her, _text)
+                        break
             jump hermione_main_menu
 
         "-Buy \"sexual\" favours-" if this.Has("her_wants_buy"):#buying_favors_from_hermione_unlocked:
@@ -69,6 +70,7 @@ label hermione_approaching:
                         (_val, _text)=t
                         if hermi.liking>=_val:
                             renpy.say(her, _text)
+                            break
                 jump hermione_main_menu
        
         
@@ -88,7 +90,7 @@ label hermione_approaching:
 
             
         "-Wardrobe-" if dress_code:
-            if $hermi.liking==0:
+            if hermi.liking==0:
                 menu:
                     
                     "-Put the badge on-" if (herView.data().getItemKey( G_N_BADGE )==None) and  hermi.Items.Any("badge_01"): #not ba_01 and badge_01 == 7:
@@ -106,7 +108,7 @@ label hermione_approaching:
                     "-Put the miniskirt on-" if herView.data().checkItemKeyStyle( G_N_SKIRT, 'default' ) and hermi.Items.Any("miniskirt"): #not legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.:
                         jump mini_on #28_gifts.rpy
 
-                    "-Put the long skirt on-" if herView.data().checkItemKeyStyle( G_N_SKIRT, 'short' ) and and hermi.Items.Any("miniskirt"): #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
+                    "-Put the long skirt on-" if herView.data().checkItemKeyStyle( G_N_SKIRT, 'short' ) and hermi.Items.Any("miniskirt"): #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
                         jump mini_off #28_gifts.rpy
                 
 
@@ -125,6 +127,7 @@ label hermione_approaching:
                         (_val, _text)=t
                         if hermi.liking>=_val:
                             renpy.say(her, _text)
+                            break
                 jump hermione_main_menu
        
         
