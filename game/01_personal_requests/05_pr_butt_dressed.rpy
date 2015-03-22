@@ -25,7 +25,7 @@ label new_request_05:
 #        $ level = "04"
 #        $ new_request_05_03 = True # HEARTS.
 
-    $SetHearts(GetStage(whoring, 3, 3, 3))
+    $SetHearts(GetStage(hermi.whoring, 3, 3, 3))
 
         
         
@@ -152,7 +152,7 @@ label new_request_05:
                                                 her_head_main "Just don't do this anymore, sir..."
                                                 pass
                                             "\"You are not getting any points for this!\"":
-                                                $ mad += 30
+                                                $ hermi.liking -= 30
                                                 $her_head_state = 20
                                                 her_head_main "Ha! See if I care, sir!"
                                                 ### Takes place aftre you refuse to pay her the очков.
@@ -793,6 +793,7 @@ label screams_of_rapings:
     with Dissolve(.3)
     pause.5
 
+    $event.Finalize()    
     if daytime:
         $ hermione_takes_classes = True
         jump day_main_menu

@@ -299,6 +299,7 @@ label special_date_with_snape: #TAKES PLACE AFTER FIRST VISIT FROM HERMIONE.
 
     
 #    $ hermione_is_waiting_01 = True #Triggers another visit from Hermione. (Event_09)
+    $this.special_date_with_snape.Finalize()
     jump day_start
     
 #######################################################################################################################    
@@ -509,6 +510,7 @@ label special_date_with_snape_02: #TAKES PLACE AFTER SECOND VISIT FROM HERMIONE.
     hide screen bld1
     with d3
     $ days_without_an_event = 0 #Making sure next even will not start right away.
+    $this.special_date_with_snape_02.Finalize()
     jump day_start
    
    
@@ -750,3 +752,4 @@ label not_today:
         sna "Sorry, I have other plans. Maybe some other time?"
     
     jump snape_ready
+

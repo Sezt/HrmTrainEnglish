@@ -101,6 +101,9 @@ label new_request_02_b:
 
 
     $ hermione_takes_classes = True
+
+    $event.Finalize()    
+
     jump day_main_menu
    
         
@@ -223,7 +226,7 @@ label new_request_02_b_complete:
                         "\"Favour failed! No points of you!\"":
                             stop music fadeout 1.0
                             $herView.hideshowQQ( "body_11.png", pos )
-                            $ mad +=15
+                            $ hermi.liking -=15
                             her "You are not going to pay me, sir?"
                             $herView.hideshowQQ( "body_21.png", pos )
                             her "But, you promised!"
@@ -499,7 +502,7 @@ label new_request_02_b_complete:
                             $herView.hideshowQQ( "body_74.png", pos )
 
                         "\"Tell me now, or lose the points!\"":
-                            $ mad +=10
+                            $ hermi.liking -=10
                             $herView.hideshowQQ( "body_66.png", pos )
                             her "Sir, please, I don't want to discuss this with you, sir."
                             m "No one is forcing you, miss Granger."
@@ -538,6 +541,8 @@ label new_request_02_b_complete:
     $ hermione_sleeping = True
     
     $ p_level_02_active = True #When turns TRUE public favors of level 02 become available. 
+
+    $event.Finalize()    
     
     if hermi.whoring <= 2:
         $ hermi.whoring +=1

@@ -117,7 +117,9 @@ label new_request_20: #LV.5 (Whoring = 12 - 14)
     $ hermione_takes_classes = True
     
     call music_block 
-    
+
+    $event.Finalize()    
+
     jump day_main_menu
     
     
@@ -184,7 +186,7 @@ label new_request_20_complete: # <==============================================
             m "You are not getting paid, you know that, right?"
             $herView.hideshowQQ( "body_30.png", pos )
             her "I don't care..."
-            $ mad +=25
+            $ hermi.liking -=25
             jump could_not_flirt #Sent here when choose "Favor failed! No points for you!" (Hermione is leaving without getting any points).
             
         elif one_out_of_three == 2: ### EVENT (B)
@@ -707,6 +709,8 @@ label new_request_20_complete: # <==============================================
     $ hermione_sleeping = True
 
     call music_block
+    
+    $event.Finalize()    
     
     return
     

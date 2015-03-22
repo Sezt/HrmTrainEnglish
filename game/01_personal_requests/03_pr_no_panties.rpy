@@ -116,7 +116,7 @@ label new_request_03: #(Whoring = 3 - 5)
             her "Again, sir?"
             m "Yes again..."
         her "Here..."
-        if whoring >= 12: #LEVEL 05
+        if hermi.whoring >= 12: #LEVEL 05
             $herView.hideQQ()
             ">Hermione pulls her panties out of her pocket..."
             m "What?"
@@ -164,7 +164,7 @@ label new_request_03: #(Whoring = 3 - 5)
     else:
         play music "music/Music for Manatees.mp3" fadein 1 fadeout 1 # NIGHT MUSIC
     ### END OF BLOCK ###
-
+    $event.Finalize()
     jump day_main_menu
     
     
@@ -202,7 +202,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 her "And my payment?"
                 m "Of course."
         "\"How was your day, Miss Granger?\"":
-            if  whoring <= 5: #LEVEL 02. EVENT LEVEL: 01
+            if  hermi.whoring <= 5: #LEVEL 02. EVENT LEVEL: 01
 #                $ new_request_03_01 = True # HEARTS.
 #                SetHearts(1)
 
@@ -245,7 +245,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 her "I felt odd that I had to give the speech without any underwear on..."
                 menu:
                     "\"You little hypocrite!\"":
-                        $ mad +=5
+                        $ hermi.liking -=5
                         $herView.hideshowQQ( "body_14.png", pos )
                         her "Professor?!  How dare you call me that!"
                         m "You sold your panties to me this morning..."
@@ -285,7 +285,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 $herView.showQQ( "body_16.png", pos )
                 her "Another ordinary day at Hogwarts..."
                 her "Nothing remarkable..."
-                if whoring>=15:
+                if hermi.whoring>=15:
                     $SetHearts(4)
                     m "No more linen does not deliver you inconvenience, miss Granger?"
                     $herView.hideshowQQ( "body_29.png", pos )
@@ -385,7 +385,7 @@ label panties_soaked_in_cum:
         her "I really would rather not, sir..."
         menu:
             "\"Put them on or lose the points!\"":
-                $ mad +=7
+                $ hermi.liking -=7
                 $herView.hideshowQQ( "body_72.png", pos )
                 her "What?"
                 her "Professor, you are joking, right?"
@@ -537,7 +537,7 @@ label panties_soaked_in_cum:
                     $herView.hideshowQQ( "body_45.png", pos )
 
                 "\"I think they would be a sick pervert!\"":
-                    $mad += 15
+                    $hermi.liking -= 15
                     $herView.hideQQ()
                     $herView.data().loadState()
                     $herView.showQQ( "body_51.png", pos )
@@ -546,5 +546,6 @@ label panties_soaked_in_cum:
                     her "I would like my points, then!"
                     
                     
+    $event.Finalize()    
 
     jump back_from_panties

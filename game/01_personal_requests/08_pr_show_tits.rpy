@@ -242,7 +242,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                 $herView.hideshowQQ( "body_47.png", pos )
                 her "Only about this and goes, sir!"
                 m "Then let us take care of your ass."
-                if whoring<21:
+                if hermi.whoring<21:
                     $herView.hideshowQQ( "body_95.png", pos )
                     her "Ass, sir? In a sense, you touch..." 
                     m "I mean, I will touch her with my dick..."
@@ -588,7 +588,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
                         ">You Look at the girl's tits for a while and then nod in approval..."
                         her "......................"
                     "-Shake your head in disapproval-":
-                        $ mad += 3
+                        $ hermi.liking -= 3
                         ">You Look at the girl's tits for a while and then shake your head in dissapointment..."
                         her ".....................?"
             elif hermi.whoring >= 9 and hermi.whoring <= 11: # LEVEL 04 # <=================================================================================== SECOND EVENT.
@@ -1110,7 +1110,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
 #        $ level = "05"
 #        $ new_request_08_03 = True # HEARTS.
 
-    $SetHearts(GetStage(whoring, 6, 3, 4))
+    $SetHearts(GetStage(hermi.whoring, 6, 3, 4))
 
 
     hide screen bld1
@@ -1164,6 +1164,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
     # load from pose with tits and that sperm!
     $herView.data().loadState()
     
+    $event.Finalize()    
     jump finish_daytime_event
 
 

@@ -391,7 +391,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
                 m "Why are you being so quiet girl?"
                 $herViewHead.showQ( "body_140.png", posHead )
                 her "Because this is painful..."
-                her "And I just want you to cum sooner, sir..."
+                her2 "And I just want you to cum sooner, sir..."
                 $herViewHead.hideQ()
                 m "So you stifle your cries of pain?"
                 $herViewHead.showQ( "body_142.png", posHead )
@@ -748,7 +748,7 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
         g4 "{size=+9} WHAT?!{/size}"
         g4 "Don't tell me you're pregnant, girl!"
         $herViewHead.showQ( "body_122.png", posHead )
-        her "I Couldn't get pregnant the way we are doing it, sir..."
+        her2 "I Couldn't get pregnant the way we are doing it, sir..."
         $herViewHead.hideQ()
         m "What is this talk of marriage then?"
         $herViewHead.showQ( "body_117.png", posHead )
@@ -1026,7 +1026,6 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
 
 
 #    $ request_31_points += 1
-    $SetHearts(GetStage(event._finishCount,1,1,1))
 
 
     hide screen bld1
@@ -1048,6 +1047,8 @@ label new_request_31: #LV.8 (Whoring = 21 - 23)
 
     call music_block
     
+    $event.Finalize()    
+    $SetHearts(GetStage(event._finishCount,1,1,1))
     if daytime:
         $ hermione_takes_classes = True
         jump night_main_menu

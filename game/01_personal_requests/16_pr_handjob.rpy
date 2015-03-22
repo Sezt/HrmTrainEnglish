@@ -74,7 +74,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
             "\"you will get 100 house points.\"":
                 play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                 $ current_payout = 100 #Used when haggling about price of th favor.
-                $ mad = 0
+                $ hermi.liking = 0
                 $herView.hideshowQQ( "body_72.png", pos )
                 her "100 house points?!"
                 her "This will definitely put \"Gryffindor\" in the lead!"
@@ -161,7 +161,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
             $herViewHead.hideQ()
             m "What is it?"
             $herViewHead.showQ( "body_34.png", posHead )
-            her "Will you warn me before... uhm... you now..."
+            her2 "Will you warn me before... uhm... you now..."
             $herViewHead.hideQ()
         $ d_flag_01 = False #If TRUE Genie promised to warn her.
         menu:
@@ -863,7 +863,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 $herViewHead.showQ( "body_30.png", posHead )
                 her "There is more!"
                 $herViewHead.hideQ()
-                m "By all means..."
+                her "By all means..."
                 $herViewHead.showQ( "body_30.png", posHead )
                 her2 "I think your magnificent cock is a blessing to this world!"
                 $herViewHead.hideQ()
@@ -1030,7 +1030,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
         menu:
             m "..."
             "{size=-4}\"I fantasize about being raped by my father.\"{/size}":
-                $ mad += 11
+                $ hermi.liking -= 11
                 $herViewHead.showQ( "body_77.png", posHead )
                 her "I do not!"
                 $herViewHead.hideQ()
@@ -1071,7 +1071,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 her "I cry \"No, daddy, please, I'm still a virgin!\""
                 $herViewHead.showQ( "body_123.png", posHead )
                 $ g_c_u_pic= "03_hp/08_animation_02/12_handjob_01.png"
-                her "But He doesn't listen! He ripps my panties off!"
+                her2 "But He doesn't listen! He ripps my panties off!"
                 $herViewHead.showQ( "body_22.png", posHead )
                 her "I beg him to stop! I scream and I scream!"
                 $herViewHead.hideQ()
@@ -1116,7 +1116,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 $herViewHead.hideQ()
                 m "That sounded so fake..."
                 $herViewHead.showQ( "body_07.png", posHead )
-                m "Because we have not even dogs!"
+                her "Because you have not even dogs!"
                 $herViewHead.hideQ()
                 m "Fine, whatever, let's just move on then..."
             "{size=-4}\"-Manual user input-\"{/size}":
@@ -1191,7 +1191,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
             m "..."
             "\"(Yes, I must warn her).\"":
                 g4 "I think I'm about to--"
-                if whoring >= 18: # LEVEL 07
+                if hermi.whoring >= 18: # LEVEL 07
                     jump kiss_suck
                 else:
                     pass
@@ -1455,7 +1455,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
     if IsRunNumberOrMore(3): 
         $SetHearts(3)
     else:
-        $SetHearts(GetStage(whoring,12,3,2))
+        $SetHearts(GetStage(hermi.whoring,12,3,2))
 
 
 #    $ request_16_points += 1
@@ -1478,6 +1478,9 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
     $herView.data().loadState()
 
     call music_block
+
+    $event.Finalize()    
+
     if daytime:
         $ hermione_takes_classes = True
         jump night_main_menu

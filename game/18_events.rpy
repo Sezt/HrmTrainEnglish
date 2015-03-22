@@ -254,6 +254,7 @@ label event_00:
     
     $ days_without_an_event = 0
     
+    $this.event_02.Finalize() # Сюда попадаем из ивента event_02
     jump day_start
 
 
@@ -286,6 +287,7 @@ label event_01: #First event in the game. Gennie finds himself at the desk.
     m "I think I will stick around for a little bit..."
     hide screen bld1
     with d3
+    $this.event_01.Finalize()
     return
 ###############################################################################################################################################################
 label event_02:
@@ -435,6 +437,7 @@ label event_03:
     hide screen snape_01_f #Snape stands still. (Mirrored).
     with Dissolve(.3)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+    $this.event_03.Finalize()
     jump day_start
 ###############################################################################################################################################################
 label event_04:
@@ -966,6 +969,7 @@ label event_06: #THE TALK AFTER THE DUEL ENDS.
 
     $sna_head_state = 7
     sna_head_main "(A genie? Now that's new...)"
+    $this.event_05.Finalize()
     jump day_start
 ###############################################################################################################################################################        
 label event_07: #THE TALK WITH SNAPE THE DAY AFTER THE DUEL.
@@ -1275,7 +1279,7 @@ label event_07: #THE TALK WITH SNAPE THE DAY AFTER THE DUEL.
     hide screen blktone
     with d3
 #    $ hanging_with_snape = True
-    
+    $this.event_07.Finalize()
     jump day_start
 
 ###############################################################################################################################################################
@@ -1585,6 +1589,7 @@ label event_08: # HERMONE SHOWS UP FOR THE FIRST TIME. IN USE.
 #    $ snape_against_hermione = True #Turns True after event_08. Activates special date with Snape # 01.
 #    $ event08_happened = True
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
+    $this.event_08.Finalize()
     return
 
 ### FOLLOWING EVENT IS NOT IN USE ANYMORE ###
@@ -1700,6 +1705,7 @@ label event_08_02:
     pause.5
     m "..................................."
     m "I'm Starting to enjoy our meetings less and less..."
+    $this.event_08_02.Finalize()
     return
 #NOT IN USE###############################################################################################################################################################    
 label event_08_03:
@@ -1817,7 +1823,7 @@ label event_08_03:
     
 #    $ snape_against_hermione = True #Turns True after event_08_03. Activates event_09 when hanging out with Snape next time.
 
-#    $ cEvent_08_03.IncPassed()
+    $this.event_08_03.Finalize()
     return
 
             
@@ -1979,6 +1985,7 @@ label event_09: #Second visit from Hermione. Says she sent a letter to the Mines
 #    $ snape_against_hermione_02 = True #Turns True after event_09. Activates second event when hanging out with Snape.
     
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
+    $this.event_09.Finalize()
     return
 
 
@@ -2387,7 +2394,7 @@ label event_11: #Third visit, after second special date with Snape. Hermione com
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
     
     play music "music/Music for Manatees.mp3" fadein 1 fadeout 1
-
+    $this.event_11.Finalize()
     return
 
 
@@ -2498,7 +2505,7 @@ label event_12: # Hermione complains that she did failed a test. (EVENING EVENT!
 
     $ event12_happened = True #Allows next event to start.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
+    $this.event_12.Finalize()
     return
 
 
@@ -2614,7 +2621,7 @@ label event_13: # Hermione complains that she almost failed a test. (EVENING EVE
 
     $ event13_happened = True #Allows next event to start.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
+    $this.event_13.Finalize()
     return
 
 
@@ -2767,7 +2774,7 @@ label event_14: # Hermione comes after her breakdown (when she failed the test).
     
     
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
-
+    $this.event_14.Finalize()
     return
 
 
@@ -3215,6 +3222,7 @@ label event_15: # Hermione comes and asks to buy a favour from her.
     $ buying_favors_from_hermione_unlocked = True 
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
     $ event15_happened = True #Turns TRUE after event_15
+    $this.event_15.Finalize()
     return
 
 
@@ -3535,7 +3543,7 @@ label event_16: #Учебники доставлены
     g4 "Did Snape just fucked me?"
     m "Yes, and these jokes with the name..."
     m "Okay, I think he stands a chance..."
-    if $ zyablik_switch == 1:
+    if zyablik_switch == 1:
         m "Let's start with the biggest books."
         m "It's called... \"Mythological biology for dummies\"."
         "\"Chapter 1 - The Manticore\"..."
@@ -3632,8 +3640,10 @@ label event_16: #Учебники доставлены
         "Quest completed! Genie gets +50 to intelligence and the ability to teach Hermione! (in future updates, of course)"
         g4 "Future updates? Then it was all in vain?"
         m "...fuck it..."
-        
-    jump day_main_menu
+    if daytime:
+        jump night_start
+    else: 
+        jump day_start
 
 
 
