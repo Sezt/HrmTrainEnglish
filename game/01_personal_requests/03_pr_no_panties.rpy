@@ -341,6 +341,8 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
 
     play music "music/Music for Manatees.mp3" fadein 1 fadeout 1 # NIGHT MUSIC
 
+    $event.Finalize()    
+
     return 
     
     
@@ -546,6 +548,4 @@ label panties_soaked_in_cum:
                     her "I would like my points, then!"
                     
                     
-    $event.Finalize()    
-
     jump back_from_panties
