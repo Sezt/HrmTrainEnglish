@@ -246,7 +246,7 @@ label reading_book_xx:
 #            ">There are still a few chapters."
 
     ">There are still some chapters left."       
-
+    $currentBook=event.Name
 
     if fire_in_fireplace:
         hide screen reading_near_fire
