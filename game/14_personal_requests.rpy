@@ -498,7 +498,7 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
         m "Drain panties..."
         her "?!!"
         m "And show her pussy!"
-        if whoring <=5:
+        if hermi.whoring <=5:
             jump too_much
         her "professor Dumbledore!"
         her "This is a whole new level inappropriate, even for you, sir!"
@@ -632,7 +632,7 @@ label new_request_09: #LV.3 (Whoring = 6 - 8)
      
 ###################REQUEST_17 (Level 05) (Stick a finger up her butthole.) (Day/Night)
 label new_request_17: #LV.5 (Whoring = 12 - 14)
-    if whoring <=11:
+    if hermi.whoring <=11:
         jump too_much
         
     m "Come here and let me poke a finger in your ass."

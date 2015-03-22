@@ -669,7 +669,7 @@ label new_request_16: #LV.5 (Whoring = 12 - 14)
                 m "What?"
                 if d_flag_01: #If TRUE Genie promised to warn her.
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-                    $ mad += 11
+                    $ hermi.liking -= 11
                     $herView.hideQQ()
                     $herView.showQQ( "body_47.png", pos )
                     her "You promised to give me a warning, sir!"

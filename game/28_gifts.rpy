@@ -695,7 +695,7 @@ label giving_chocolate: # CHOCOLATE.
         
     if hermi.whoring >= 18: # Lv 7+  
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 10
+        $ hermi.liking += 10
         $herView.showQ( "body_06.png", pos, d5 )
         her "A chocolate bar?"
         $herView.hideshowQQ( "body_111.png", pos )
@@ -860,7 +860,7 @@ label giving_strapon: # STRAP-ON.
 
     if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 10
+        $ hermi.liking += 10
         $herView.showQ( "body_118.png", pos, d5 )
         her "That thing..."
         $herView.hideshowQQ( "body_117.png", pos )
@@ -960,7 +960,7 @@ label giving_ballgag: # BALL GAG.
 
     if hermi.whoring >= 12 and hermi.whoring <= 17: # Lv 5-6.
         $hermi.Items.Receive(hero.Items,item.Name) #        
-        $ mad -= 9
+        $ hermi.liking += 9
         $herView.showQ( "body_120.png", pos, d5 )
         her "A month ago I would've felt insulted to receive a gift like this..."
         $herView.hideshowQQ( "body_118.png", pos )
