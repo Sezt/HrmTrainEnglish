@@ -261,7 +261,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
             her "I'm so glad that you understand my concerns, Sir."
             m "Yes, yes, sure..."
 
-    elif hermi.whoring >= 13: #Хотя бы один раз дрочила
+    elif hermi.whoring >= 12: 
         her "Sir, you really called me here because these poor 5 points?"
         her "I am sorry to spend time talking, which is almost nothing will bring."
         $herView.hideshowQQ( "body_10.png", pos )
