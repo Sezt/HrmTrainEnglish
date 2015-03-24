@@ -124,6 +124,12 @@ label new_request_03: #(Whoring = 3 - 5)
             m "A feeling?"
             $herView.hideshowQQ( "body_68.png", pos )
             her "To be completely honest I find it more comfortable not to wear them much anymore..."
+            if hermi.whoring >= 15: #LEVEL 05
+                $herView.hideshowQQ( "body_78.png", pos )
+                her "There can be different circumstances and panties will only hinder."
+                m "Hinder?.."
+                $herView.hideshowQQ( "body_68.png", pos )
+                her "Ah, it doesn't matter, sir."
         else:
             $herView.hideQQ()
             ">Hermione takes off her panties and hands them over to you..."
@@ -281,8 +287,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
                 her "Another ordinary day at Hogwarts..."
                 her "Nothing remarkable..."
                 if hermi.whoring>=15:
-                    $SetHearts(4)
-                    m "No more linen does not deliver you inconvenience, miss Granger?"
+                    m m "No more linen does not deliver you inconvenience, miss Granger?"
                     $herView.hideshowQQ( "body_29.png", pos )
                     her "Inconvenience, sir? What are you... Oh, that!"
                     her "Well, we are grown people, Professor. If a girl doesn't wear underwear, so what?..."
@@ -336,8 +341,12 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
 
     play music "music/Music for Manatees.mp3" fadein 1 fadeout 1 # NIGHT MUSIC
 
+    if hermi.whoring<15:
+        $SetHearts(GetStage(hermi.whoring, 3, 3, 3), this.new_request_03)
+    else:
+        $SetHearts(4, this.new_request_03)
+
     $event.Finalize()    
-    $SetHearts(GetStage(hermi.whoring, 3, 3, 3), this.new_request_03)
     return 
     
     
