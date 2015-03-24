@@ -110,7 +110,7 @@ label cupboard:
 
                 label menu_cupboard_scroll_show:
 
-                    $ the_gift = "03_hp/19_extras/"+str(choose.choice).zfill(2)+".png"
+                    $ the_gift = "03_hp/19_extras/"+str(choose.choice+1).zfill(2)+".png"
  # SACRED SCROLL 01.
                     show screen gift
                     show screen ctc
