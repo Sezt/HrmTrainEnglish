@@ -3260,7 +3260,7 @@ label event_16: #Учебники доставлены
     $herView.hideshowQQ( "body_11.png", pos )
     her "I'm afraid that Harry and Ron had already left, and this room is too small."
     m "Too small? How many books are there?"
-    her "438, not including brochures Harry Thompson of taming the Kraken."
+    her "438, Not including brochures Harry Thompson of taming the Kraken."
     m "(This is definitely a hot night...)"
     m "Thank you, will not help to bring them here?"
     $herView.hideshowQQ( "body_10.png", pos )

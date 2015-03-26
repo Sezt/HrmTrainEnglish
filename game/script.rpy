@@ -62,7 +62,7 @@ init:
         ("lingerie", "Sexy lingerie", 0, "03_hp/18_store/24.png", 
             "Sexy lingerie \"Fairy Godmother\". Charm your wizard in bed or empress your sisters at a Sabbath.", "cupboard", None ),
         ("broom", "Lady Speed Stick-2000", 0, "03_hp/18_store/25.png", 
-            "\"Lady Speed Stick-2000\", элегантный способ передвижения для страстных ведьм. Торговой маркой гарантируется полное удовлетворение от эффекта. Закажите одну штуку для вашей ведьмы, и она больше не будет использовать ее скучную старую метлу!", "cupboard", None ),
+            "\"Lady Speed Stick-2000\", elegant way to travel for the passionate witch. A trademark is guaranteed complete satisfaction to the effect. Order one for your witch, and she's not going to use her boring old broom!", "cupboard", None ),
         ("sexdoll", "Sex doll \"Joanne\"", 0, "03_hp/18_store/23.png", 
             "Sex doll \"Joanne\"... It's so realistic. Almost looks like a real human under the influence of a spell of some sort.", "cupboard", None ),
         ("ball_dress", "The Ball Dress", 1500, "03_hp/18_store/01.png", 

@@ -482,7 +482,7 @@ label request_18: #LV.5 (Whoring = 12 - 14)
     if hermi.whoring <= 14:
         $ hermi.whoring +=1
     $ gryffindor +=45
-    "gryffindor got +45 points."
+    "Gryffindor got +45 points."
     if daytime:
         $ hermione_takes_classes = True
         jump day_main_menu

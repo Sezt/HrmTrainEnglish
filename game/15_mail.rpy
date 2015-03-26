@@ -158,7 +158,7 @@ label mail_02: #Packages only. <================================================
         $ the_gift = item._img 
         show screen gift
         with d3
-        ">A School miniskirt has been added to your possessions."
+        ">[item._caption], [_count] has been added to your possessions. "
         hide screen gift
         with d3
         call screen main_menu_01

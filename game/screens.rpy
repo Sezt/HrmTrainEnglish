@@ -203,7 +203,7 @@ screen main_menu:
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
         textbutton _("Extras") action ShowMenu("extras")
-        textbutton _("Quit") action Quit(confirm=False)
+        textbutton _("Quit") action Quit(confirm=True)
 
 init -2:
 

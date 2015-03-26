@@ -2937,7 +2937,7 @@ label your_whore:
         $herViewHead.showQ( "body_164.png", posHead )
         her "It's fine, sir. Really."
         $herViewHead.showQ( "body_165.png", posHead )
-        her "Let me just pull my panties down a little..."
+        her2 "Let me just pull my panties down a little..."
         $herViewHead.hideQ()
         g4 "Damn you girl! Will you let me finish!?"
         $herViewHead.showQ( "body_164.png", posHead )
@@ -2945,7 +2945,7 @@ label your_whore:
         $herViewHead.hideQ()
         m "Huh?"
         $herViewHead.showQ( "body_167.png", posHead )
-        her "Just make sure you don't hit my dress, alright?"
+        her2 "Just make sure you don't hit my dress, alright?"
         $herViewHead.hideQ()
         g4 "*Low growl!*"
         g4 "Come here, whore!"

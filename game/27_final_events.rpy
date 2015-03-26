@@ -971,7 +971,7 @@ label sorry_about_hesterics:
     her "I worked so hard... and..."
     
     $herView.hideQQ()
-    $herView.data().delItem( 'tears' )
+    $herView.data().delItem( 'item_tears' )
     $herView.showQQ( "body_139.png", pos )
     her "And now I will not even be able to... to... *Sob!*"
     $herView.hideshowQQ( "body_143.png", pos )

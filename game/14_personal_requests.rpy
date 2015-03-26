@@ -1052,7 +1052,7 @@ label new_request_28: #LV.7 (Whoring = 18 - 20)
         jump too_much
     m "I want you to masturbate his teacher"
     if request_28_points == 0: #One star.
-        her "oh..."
+        her "Oh..."
         "Hermione reluctantly agrees"
     elif request_28_points == 1: #Two stars.
         her "Если так нужно..."
@@ -1061,7 +1061,7 @@ label new_request_28: #LV.7 (Whoring = 18 - 20)
         her "of course, professor."
         "Hermione agrees. She longs for it."    
     elif request_28_points >= 3: #Master.
-        her "of course master..."
+        her "Of course master..."
         ">Hermione gladly accepts."
     
     "You let go of Hermione."
@@ -1116,7 +1116,7 @@ label new_request_32: #LV.10 (Whoring = 27 - 29)
         jump too_much
     m "I want you to wear it."
     if request_32_points == 0: #One star.
-        her "oh..."
+        her "Oh..."
         "Hermione reluctantly agrees."
     elif request_32_points == 1: #Two stars.
         her "If so you need to..."

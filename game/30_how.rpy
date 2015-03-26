@@ -328,7 +328,7 @@ label faq2:
         "Is it OK to hack and translate this game?":
             a1 "..."
             a1 "..."
-            a1 "no."
+            a5 "no."
             define nyor = Character('Khan32', color="#9F42AB")
             nyor "Strange question, do not you?"
             nyor "And this is after I messed around all day to bring the game back to English!"
