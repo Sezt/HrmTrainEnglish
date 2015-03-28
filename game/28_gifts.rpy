@@ -402,7 +402,7 @@ label nets_take:
     
     
        
-label giving_lube: # JAR OF Anal lubricant?.
+label giving_lubricant: # JAR OF Anal lubricant.
     $herView.hideQ( d5 )                                                                                                                                                                                                           #HERMIONE
     $ pos = POS_140
     
