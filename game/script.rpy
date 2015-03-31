@@ -5150,7 +5150,7 @@ label start:
             "NEW GAME +" ">Would you like to carry over your gold and possessions from your previous playthrough into this one?"
             "\"Yes, please.\"":
                 $ gold = gold + persistent.gold
-                ">[persistent.gold] gold has been added to your founds."
+                ">[persistent.gold] galleons has been added to your founds."
                 python:
                     if persistent.itemSet!=None:
                         for o in persistent.itemSet:

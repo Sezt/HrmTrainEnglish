@@ -8,7 +8,7 @@ label mail:
         play sound "sounds/money.mp3"  #Quiet...
 
         $dgold=([40, 70, 90, 110, 150, 200][finished_report-1])*turbo
-        $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing two reports this week.\nHere is your payment:{/size} \n{size=+4}[dgold] coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+        $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing two reports this week.\nHere is your payment:{/size} \n{size=+4}[dgold] galleons.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
         $ gold += dgold
 
         

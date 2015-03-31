@@ -196,7 +196,7 @@ label snape_tutor_1:
     sna2 "Seven thousand. My last word." #snape
     hide screen s_head2
     g9 "Gorgeous! Agreed."
-    "Job updated! To get seven thousand gold coins for Snape."
+    "Job updated! To get seven thousand galleons for Snape."
     m "Only it's still pretty damn healthy heap of gold."
     g9 "I think I need to look for a job on the side."
     g9 "Rumor has it that gigolo is well earned..."
@@ -226,7 +226,7 @@ label snape_tutor_2:
     g9 "Here the gold for textbooks."
     $ renpy.play('sounds/money.mp3')
     $gold -=7000
-    "You gave Snape 7000 gold."
+    "You gave Snape 7000 galleons."
     hide screen snape_main                                                                                                                   #SNAPE
     with d3
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                         # SNAPE

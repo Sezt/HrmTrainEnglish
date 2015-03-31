@@ -68,7 +68,7 @@ label cupboard:
                         $hermi.liking=0
                         show screen points
                         "Ready"
-                    "CHEAT: +100 gold":
+                    "CHEAT: +100 galleons":
                         hide screen points
                         $gold+=100
                         show screen points
