@@ -4,76 +4,76 @@
 label daphna_pre_01: #LV.1 (Whoring = 0 - 2)
     $daphne.chibi.State("door", speed=20.0).Trans("walk neardesk", "blink")
     $snape.viewMode=3
-#    $snape("~snape_01", "Хелло!")
-    $snape("~01", "Хелло!")
+#    $snape("~snape_01", "Hello!")
+    $snape("~01", "Hello")
 
 
 label test_daphna: #LV.1 (Whoring = 0 - 2)
     $daphne.chibi.State("door", speed=20.0).Trans("walk neardesk", "blink")
 
     $snape.viewMode=3
-#    $snape("~snape_01", "Хелло!")
-    $snape("~01", "Хелло!")
+#    $snape("~snape_01", "Hello")
+    $snape("~01", "Hello")
 
     $screens.Show(["blktone"], d3)
     $daphne.viewMode=2
-    $daphne("~55 00 3 opT",  "Добрый день, профессор Дамблдор.")
-    $hero  (m,              "#(О, девица вполне товарного вида. Сиськи, правда, маловаты. Интересно, есть ли заклинание, чтобы их подрастить?..)",
-                            "#(Нет, джинни, остановись, ты уже подрастил сиськи принцессе... мда)",
-                            "Добрый день э-э… #(Великие пески, почему он не сказал как ее зовут?).")
-    $daphne("~55 00 3 opT", "Профессор Снейп сказал, ЧТО вы ХОТЕЛИ МЕНЯ видеть.")
-    $hero  (                "Эм, да. Но, он же сказал зачем я хотел тебя видеть. ")
-    $daphne("~55 00 3 opT", "Нет, сэр. Он не сказал.")
+    $daphne("~55 00 3 opT",  "Good day, Professor Dumbledore.")
+    $hero  (m,              "#(Oh, the girl is quite the presentation. Tits, however, is small. I wonder is there a spell to grow up?..)",
+                            "#(No, Ginie, stop, you've grown Tits Princess... hmm)",
+                            "Good day uh… #(Great Sands, why didn't he tell her name?).")
+    $daphne("~55 00 3 opT", "Professor Snape said you WANTED to see ME.")
+    $hero  (                "Uh, yeah. But, he told you why I wanted you to see. ")
+    $daphne("~55 00 3 opT", "No, sir. He didn't say.")
 
     menu:
-        "Поговорить насчет учебы":
-            $hero  (                "Что ж, мисс, я хотел поговорить насчет вашей учебы.")
-            $daphne("55 00 3 opT",  "Учеба не то, что меня волнует, сэр.",
-                                    "Меня гораздо больше волнует, почему в Хогвартсе обучается грязнокровое мугродье.",
-                                    "Вы же чистокровный волшебник, сэр?")
-            $hero  (                "Я? А, ну да. Вроде того.")
-            $daphne("55 00 3 opT",  "Да, вы правильно смущаетесь.",
-                                    "По древности рода с Гринграссами никто не сравнится, так что вы должны чувствовать себя неловко.",)
-            $hero  (                "(Гринграссы? Что это еще за хрень?)")
-            $daphne("55 00 3 opT",  "Но как бы то ни было, сэр. Вы должны проследить, чтобы  мугродье не чувствовало себя здесь вольготно.",
-                                    "А вы вместо этого приглашаете новых. И чистокровные девочки должны испытывать сложности.")
-            $hero  (                "Чистокровные девочки?")
-            $daphne("55 00 3 opT",  "Да, сэр! Почему это грязнокровка считается лучшей на курсе?",
-                                    "Как это мугродье вообще может дышать одним воздухом с истинными волшебниками?",
-                    "55 00 3 opT",  "Я могу еще быть рядом со всякими Малфоями или …",
-                                    "Семейки так себе, второй сорт. Но какие-никакие чистокровки, а эта девица!!")
-        "Поговорить насчет факультета":
-            $hero  (                "Что ж, мисс, я хотел поговорить об обстановке на факультете.")
-            $daphne("55 00 3 opT",  "Обстановка на факультете, сэр? Она отвратительна!",
-                                    "Грязнокровое мугродье заполонило Хогвартс.")
-            $hero  (                "#(Что это за?..)")
-            $daphne("55 00 3 opT",  "И вы делаете вид, что этого не знаете. Хотя ваш отец…",
-                                    "Он не посрамил своей колдовской чести и прикончил троих маглов, за что его и упрятали в Азкабан.")
-            $hero  (                "Неужели? #(Что за висельники в родстве с местным директором..)")
-            $daphne("55 00 3 opT",  "Не притворяйтесь, что вы этого не знаете, сэр.",
-                                    "А если бы не знали, это не делало бы вам чести!",
-                                    "Гринграссы всегда стояли за чистоту крови и когда видишь волшебника, который предает наши идеалы…")
+        "Talk about studies":
+            $hero  (                "Well, miss, I wanted to talk to you about your studies.")
+            $daphne("55 00 3 opT",  "Learning is not what worries me, sir.",
+                                    "I am much more interested why study at Hogwarts the Mudblood.",
+                                    "You're a pureblood wizard, sir?")
+            $hero  (                "I? Ah, Yes. Something.")
+            $daphne("55 00 3 opT",  "Yes, you are right to hesitate.",
+                                    "On the antiquity of the genus with Greengrass nothing compares, so you should feel embarrassed.",)
+            $hero  (                "(Greengrass? What the hell is that?)")
+            $daphne("55 00 3 opT",  "But whatever it was, sir. You must ensure that the Mudblood not feel at ease.",
+                                    "And you are instead invited new. And pureblood girls should experience difficulty.")
+            $hero  (                "Thoroughbred girls?")
+            $daphne("55 00 3 opT",  "Yes, sir! Why is it a Mudblood is considered the best on the course?",
+                                    "How can it ever breathe the same air as the true wizards?",
+                    "55 00 3 opT",  "I can still be there with all sorts of Malfoys or ...",
+                                    "Family is so-so, second grade. But some no christocracy, and this girl!!!")
+        "Talk about the faculty":
+            $hero  (                "Well, miss, I wanted to talk about the situation at the faculty.")
+            $daphne("55 00 3 opT",  "The situation at the faculty, sir? She is disgusting!",
+                                    "Mudbloods invaded Hogwarts.")
+            $hero  (                "#(What a?..)")
+            $daphne("55 00 3 opT",  "And you pretend to not know. Although your father...",
+                                    "He didn't shame his voodoo honor and killed three Muggles, for what it is and put him in Azkaban.")
+            $hero  (                "Really? #(What a gallows in a relationship with a local Director..)")
+            $daphne("55 00 3 opT",  "Don't pretend you don't know, sir.",
+                                    "And if I didn't know that it would not do you the honor!",
+                                    "Greengrass always stood for the purity of blood and when you see a wizard who betrayed our ideals...")
 
-    $hero  (                "#(Хм, какая экспрессия! Интересно трахается она так же энергично?)",
-                            "Постойте, мисс, это все очень увлекательно, но, может, уже завершим прелюдию и приступим?")
-    $daphne("55 00 3 opT",  "Приступим к чему, сэр?")
-    $hero  (                "Ну, к этому самому… чпоки-чпоки, тити-мити, а?")
-    $daphne("55 00 3 opT",  "\"Чпоки-чпоки\", сэр?")
-    $hero  (                "Ну я не знаю, как это у вас, девушек, называется.",
-                            "В общем то, что вы постоянно делаете с профессором и зачем он вас сюда прислал.")
-    $daphne("55 00 3 opT",  "Я не понимаю, сэр.")
-    $hero  (                "О, великие пески пустыни!",
-                            "#(Она небыстро шевелит мозгами. Надеюсь, что бедрами шевелит быстрее.)",
-                            "Я говорю, заняться тем, чем обычно занимаются шлю… девчонки вроде вас.")
-    $daphne("55 00 3 opT",  "На что это вы намекаете?!")
-    $hero  (                "Я намекаю? Да я прямо говорю!...")
-    $daphne("55 00 3 opT",  "Если вы смеете намекать на то, чем занимаются некоторые особы с преподавателями, то это омерзительно!")
-    $hero  (                "#(Э-э, Снейп, это что, шутка?)")
-    $daphne("55 00 3 opT",  "Я сегодня же пошлю сову родителям и сообщу о грязных предложениях, которые вы мне тут делаете.",
-                            "А уж они донесут об этом в министерство, будьте уверены.")
-    $hero  (g4,             "#(Не могу поверить... Чертов Снейп!!!)",
-                            "Эм, постойте, мисс, вы неправильно поняли!")
-    $daphne("55 00 3 opT",  "Я все правильно поняла! Вам недолго осталось сидеть в этом кресле!")
+    $hero  (                "#(Hmm, what an expression! Interestingly she Fucks this much energy?)",
+                            "Wait, miss, it's all very exciting, but if we can finish the foreplay and get down?")
+    $daphne("55 00 3 opT",  "Let's happening, sir?")
+    $hero  (                "Well, to this most… fap-fap, squeeze-squeeze huh?")
+    $daphne("55 00 3 opT",  "\"Squeeze-squeeze\", sir?")
+    $hero  (                "Well I don't know how you girls called.",
+                            "In General what you do with the Professor and why he sent you here.")
+    $daphne("55 00 3 opT",  "I don't understand, sir.")
+    $hero  (                "Oh, great Sands of the desert!",
+                            "#(She slowly moves his brains. Hope moves his hips faster.)",
+                            "I say, do what you usually do whor... girls like you.")
+    $daphne("55 00 3 opT",  "What did you say?!")
+    $hero  (                "I'm referring to? Yes, I just say!...")
+    $daphne("55 00 3 opT",  "If you dare to hint at what you do some people with the teachers, it is disgusting!")
+    $hero  (                "#(Er, Snape, is that a joke?)")
+    $daphne("55 00 3 opT",  "Today I'll send an owl to parents and report on the dirty suggestions, I doing here.",
+                            "And they will convey information to the Ministry, to be sure.")
+    $hero  (g4,             "#(Can't believe it... Damn Snape!!!)",
+                            "Um, wait, miss, you misunderstood!")
+    $daphne("55 00 3 opT",  "I understood everything correctly! You won't have to sit in this chair!")
 
     $daphne.viewMode=0
     $daphne.chibi.Trans("walk door").Hide()
@@ -99,16 +99,16 @@ label test_daphna: #LV.1 (Whoring = 0 - 2)
 
     jump night_start
     $herView.hideQQ()
-    m "{size=-4}(Я просто поговорю с ней...){/size}"
+    m "{size=-4}(I just talk to her...){/size}"
     menu:
-        "\"(Да, сделаем это.)\"":
+        "\"(Yes, let's do this.)\"":
             pass
-        "\"(Не сейчас.)\"":
+        "\"(Not now.)\"":
             $event.NotFinished()
             jump new_personal_request
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
-    m "Ладно..."
-    m "Просто расскажи что нового у тебя."
+    m "Whell..."
+    m "Just tell me what's new with you."
     $herView.hideQQ()
     $ pos = POS_140
     $herView.showQQ( "body_08.png", pos )
