@@ -3741,7 +3741,7 @@ label test:
     {color=#fff}\
     {a=http://wtrus.ixbb.ru/profile.php?id=3}Khan{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\
     \n\n\
-    {size=-3}{color=#e5e297}-\{Additionally:\}-{/color}{/size}\n\
+    {size=-3}{color=#e5e297}-\{Additionally:\}-{/color}\n\
     {color=#fff}\
     {size=-3}{a=http://wtrus.ixbb.ru/profile.php?id=46}Dimon_Tools{/a} - proofreading, technical support; {a=http://wtrus.ixbb.ru/profile.php?id=65}i11idan{/a} - programming; {a=http://wtrus.ixbb.ru/profile.php?id=42}appo{/a} - programming{/size}\n\n\
     \n\n\ 
@@ -3749,9 +3749,9 @@ label test:
     {color=#fff}\
     JJ, TG{/a}\n\
     \n\n\
-    {color=#e5e297}-\{Beta testing English version}-{/color}\n\
+    {size=-5}{color=#e5e297}-\{{Beta testing English version:\}-{/color}\n\
     {color=#fff}\
-    megablue5{/a}\n\n\
+    megablue5, K. Yeezus{/color}{/size}\n\
     \n\n\n\
     "
 
@@ -3989,7 +3989,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         show screen s_head2                                                                                                 # SNAPE
         sna "A...?"
         hide screen s_head2     
-        dum2 "a?"
+        dum2 "A?"
         $ s_sprite = "03_hp/10_snape_main/snape_27.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "Aka-a....?"
@@ -4077,7 +4077,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         her "Oh, I see..."
         her2 "There is no need to be so shy about this, sir. It's alright."
         $herViewHead.hideQ()
-        dum "*ahem*... here it is."
+        dum "*Ahem*... here it is."
         $herViewHead.showQ( "body_06.png", posHead )
         her2 "Thank you, sir."
         $herViewHead.showQ( "body_73.png", posHead )
@@ -4136,7 +4136,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         pause.1
         with hpunch
         play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-        her "{size=+7}what?!!{/size}"
+        her "{size=+7}What?!!{/size}"
         $herView.hideQQ()
         $herView.showQQ( "body_66.png", pos )
         her "How am I supposed to win any points then?"
