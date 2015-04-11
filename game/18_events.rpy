@@ -1,257 +1,91 @@
 label event_00:
     
     play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
+   
     
-    
-    #show screen snape_01 #OWL SITTING ON A PACKAGE.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen snape_01 #Snape stands still.
-    with Dissolve(.5)
-    pause.3
-    show screen bld1
-    with d3
-    g4 "{size=-3}(An Indigenous life form!?){/size}"
-    hide screen bld1
-    with d3
-    $ tt_xpos=650
-    $ tt_ypos=180
-    show screen thought 
-    with Dissolve(.3)
-    pause 1
-    show screen bld1
-    with d3
-    m "{size=-3}(looks human enough...){/size}"
-    m "{size=-3}(Maybe if I just act cool he'll leave...?){/size}"
-    hide screen bld1
-    with d3
-    hide screen thought 
-    with Dissolve(.3)
-    
-    $ walk_xpos=610 #Animation of walking chibi. (From) 610
-    $ walk_xpos2=360 #Coordinates of it's movement. (To) 360
-    
-    
-    
-    $ snapes_speed = 04.0 #The speed of moving the walking animation across the screen.
-    show screen snape_walk_01 
-    pause 4
-    show screen snape_02 #Snape stands still.
-    pause.5
-    show screen bld1
-    with Dissolve(.3)
-    $ tt_xpos=300 #Defines position of the Snape's full length sprite.
-    $ tt_ypos=0
-    $ s_sprite = "03_hp/10_snape_main/snape_01.png"
-    show screen snape_main
-    show screen ctc
-    with Dissolve(.3)
-    pause
-    hide screen ctc 
-    who2 "Albus... Do you have a moment?"
-    hide screen snape_main 
-    
-#    show screen ctc
-#    pause
-#    pat "I hate to ask but its been bugging me for awhile."
-#    pat "What is your Guesstimated time of completion for the game?"
-#    pat "No pressure to give an answer if you don't want to."
-#    show screen snape_main
-#    with d3
-#    sna "Mister silvarius..."
-#    sna "This is your first strike..."
-#    sna "If I hear this question from you again, then it will cost your house 100 points."
-    
-#    hide screen snape_main
-#    with d3
-#    show screen emo
-#    her "Professor... *gulp!* I-- I can't breathe!"
-#    hide screen emo
-#    show screen snape_main
-#    with d3
-#    sna "I will be with you in a moment, miss Granger..."
-#    hide screen snape_main
-#    with d3
-#    show screen emo
-#    her "!!!"
-#    hide screen emo
-#    show screen snape_main
-#    with d3
-#    sna "I hope we came to an understanding, here, mister silvarius."
-#    sna "Didn't we?"
-    
 
-    m "{size=-3}(\"Albus\"? Is that supposed to be my name or is it just how the humans of this world greet each other?){/size}"
+    $snape.chibi.State("door", speed="go").Trans(d3, "blink")
+    pause.3
+    $screens.ShowD3("bld1")
+
+    $hero(g4, "#(An Indigenous life form!?)")
+
+    $screens.HideD3("bld1").ShowPos(d3, "thought", gMakePos( 650, 180 )).Pause(1).ShowD3("bld1")
+
+    $hero(m,    "#(Looks human enough...)// #(Maybe if I just act cool he'll leave...?)")
+
+    $screens.HideD3("bld1", "thought")
+
+    $snape.LoadDefItemSets() # Эта функция просто перечитывает значения из xml. Актуальна, если что-то поменялось в наборах xml при отладке
+
+    $snape.chibi.Trans("go center", "blink")
+    $screens.ShowD3("bld1")
+    $snape.State("doorleft").Visibility("body", transition=Dissolve(.5))
+    $screens.ShowHide(d3, "ctc", 0.0)
+
+    $snape("~01",    who2, "Альбус... есть минута?")
+    $hero("#(\"Albus\"? Is that supposed to be my name or is it just how the humans of this world greet each other?)")
+
     menu:
         m "..."
         "\"Actually I'm a bit busy.\"":
-            $ s_sprite = "03_hp/10_snape_main/snape_04.png"
-            show screen snape_main
-            with d3
-            who2 "Well, aren't you always, Albus?"                            
+            $snape("~04", who2, "Well, aren't you always, Albus?")                            
         "\"Of course. What is it?\"":
             pass                       
         "\"And Albus to you too.\"":
-            $ s_sprite = "03_hp/10_snape_main/snape_05.png"
-            show screen snape_main
-            with d3
-            who2 "What?"
-            $ s_sprite = "03_hp/10_snape_main/snape_04.png"
-            who2 "Albus, I'm not in the mood for your... shenanigans."
+            $snape("~05", who2, "What?",
+                   "~04", who2, "Albus, I'm not in the mood for your... shenanigans.") 
         "\"Take me to your leader.\"":
-            $ s_sprite = "03_hp/10_snape_main/snape_01.png"
-            show screen snape_main
-            with d3
-            who2"What?"
-            hide screen snape_main
-            with d3
-            $ s_sprite = "03_hp/10_snape_main/snape_01.png"
-            show screen snape_main
-            with d3
-            who2 "Hm...?"
-            who2 "You mean the minster of magic?"
-            hide screen snape_main
-            with d3
-            $ s_sprite = "03_hp/10_snape_main/snape_03.png"
-            show screen snape_main
-            with d3
-            who2 "I would rather avoid having to deal with that bureaucrat..."
-            m "Fine, never mind... How can I be of help?"
+            $snape("~01", who2, "What?// Hm...// You mean the minster of magic?",
+                   "~03", who2, "I would rather avoid having to deal with that bureaucrat...")
+            $hero("Fine, never mind... How can I be of help?")
+
             
-    $ s_sprite = "03_hp/10_snape_main/snape_06.png"
-    who2 "I have something important I need to discuss with you..."
-    who2 "I think we need to revise our admittance policy." 
-    hide screen snape_main
-    with d2
-    m "................?"
-    $ s_sprite = "03_hp/10_snape_main/snape_03.png"
-    show screen snape_main
-    with d2
-    who2 "Half of my... so-called \"pupils\" are nothing but annoying maggots that make my life miserable on a daily basis."
-    hide screen snape_main
-    with d2
-    m "................"
-    $ s_sprite = "03_hp/10_snape_main/snape_07.png"
-    show screen snape_main
-    who2 "Most of them belong to your precious \"gryffindor\" house of course..."
-    hide screen snape_main
-    with d2
-    m "......?"
-    show screen snape_main
-    who2 "The wretched Weasley family, that noisy Granger girl, and of course, the hero of all the juvenile delinquents around the wizarding globe...."
-    $ s_sprite = "03_hp/10_snape_main/snape_08.png"
-    who2 "{size=+3}The Potter boy!{/size}"
-    $ s_sprite = "03_hp/10_snape_main/snape_01.png"
-    who2 "Mark my words, Albus. The \"gryffindor house\" will become this school's undoing!"
-    hide screen snape_main
-    m "...................."
-    show screen snape_main
-    who2 "Nothing but annoying maggots, the lot of them!"
-    $ s_sprite = "03_hp/10_snape_main/snape_06.png"
-    who2 "And if that wasn't enough, now they spread all sorts of nasty rumours about the teachers!"
-    who2 "Particularly about yours truly..."
-    hide screen snape_main
-    m "......................"
-    $ s_sprite = "03_hp/10_snape_main/snape_05.png"
-    show screen snape_main
-    who2 "You don't believe those rumours, do you Albus?"
-    hide screen snape_main
+    $snape("~06", who2, "I have something important I need to discuss with you...// I think we need to revise our admittance policy.")
+    $hero(              "................?")
+    $snape("~03", who2, "Half of my... so-called \"pupils\" are nothing but annoying maggots that make my life miserable on a daily basis.")
+    $hero(              "................")
+    $snape("~07", who2, "Most of them belong to your precious \"Gryffindor\" house of course...")
+    $hero(              "......?")
+    $snape( "~07", who2,"The wretched Weasley family, that noisy Granger girl, and of course, the hero of all the juvenile delinquents around the wizarding globe....",
+            "~08", who2,"The Potter boy!",
+            "~01", who2,"Mark my words, Albus. The \"gryffindor house\" will become this school's undoing!")
+    $hero(              "......................")
+
+    $snape( "~01", who2,"Nothing but annoying maggots, the lot of them!",
+            "~06", who2,"And if that wasn't enough, now they spread all sorts of nasty rumours about the teachers!// Particularly about yours truly...")
+    $hero(              "......................")
+    $snape("~05", who2,"You don't believe those rumours, do you Albus?")
+
     menu:
         m ".............."
         "\"Well, of course not!\"":
-            $ s_sprite = "03_hp/10_snape_main/snape_09.png"
-            show screen snape_main
-            who2 "Good..."
-            who2 "You know me better than that. You know I wouldn't care for such things..."
+            $snape( "~09", who2,"Good...// You know me better than that. You know I wouldn't care for such things...")
         "\"Where there's smoke, there's fire.\"":
-            $ s_sprite = "03_hp/10_snape_main/snape_10.png"
-            show screen snape_main
-            who2 "Albus?! You can't be serious!"
-            who2 "Those are nothing but filthy lies, I'm telling you!"
-    hide screen snape_main
-    m "........................."
-    $ s_sprite = "03_hp/10_snape_main/snape_04.png"
-    show screen snape_main
-    who2 "But speaking of them... those wretched kids left me completely exhausted. I think I will retire for today."
-    $ s_sprite = "03_hp/10_snape_main/snape_09.png"
-    who2 "................"
+            $snape( "~10", who2,"Albus?! You can't be serious!?// Those are nothing but filthy lies, I'm telling you!")
+
     
+    $hero(".........................")
+    $snape( "~04", who2,"But speaking of them... those wretched kids left me completely exhausted. I think I will retire for today.",
+            "~09", who2,"................")
+    
+    $snape.Visibility("body", False, Dissolve(.5))
+
+
     stop music fadeout 1.0
-    
-    hide screen snape_main
-    hide screen bld1
-    with d3
-    $ walk_xpos=360 #Animation of walking chibi. (From desk) 360 
-    $ walk_xpos2=610 #Coordinates of it's movement. (To the door) 610
-    $ snapes_speed = 03.0 #The speed of moving the walking animation across the screen. Default - .03
-    show screen snape_walk_01_f 
-    pause 3
+    $screens.HideD3("bld1")
+    $snape.chibi.Trans("goout door")
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    hide screen snape_walk_01_f 
-    with d4
+    $snape.chibi.Hide(d4)
     pause.5
-    show screen bld1
-    with d3
-    m "Hm..."
-    m "So that tall, broody dude mistook me for someone else...?"
-    m "Which means I must be shrouded in a concealment spell..."
-    m "........."
-    m "So basically, I'm a genie disguised as a human, who is in turn disguised as another human..."
-    m "No, that's not stupid at all..."
-    a4 "Shut it! Nobody understands a true genius."
-    
-#    who2 "Professor Dumbldore, do you have a minute?"
-#    m "{size=-3}(What? Another one?){/size}"
-#    who2 "Let me speak to him!"
-#    m "Excuse me?"
-#    who2 "Y-yes master..."
-#    who2 "Greetings to you, oh almighty genie..."
-#    with hpunch
-#    g4 "{size=+7}What the hell?!{/size}"
-#    g4 "{size=+7}Stay away from me, you demon!!!{/size}"
-#    g4 "{size=+7}Body snatchers are among us!\nI'm outta here!{/size}"
-#    m "...wait a second."
-#    m "How did you just call me?"
-#    who2 "An almighty genie. That is what you are, is it not?"
-#    g4 "How did you... Who the hell are you?"
-#    who2 "Oh, but of course. Forgive me my poor manners..."
-#    who2 "Master's name is Tom Riddle..."
-#    who2 "No! You sniveling maggot! we hate that name!"
-#    who2 "We want to be called Lord Voldemort!"
-#    who2 "Forgive me, master..."
-#    m "Ehm... mr. Lord--"
-#    with hpunch
-#    who2 "No! No! \"lord\" is not master's name, \"lord\" is master's title, you idiot!"
-#    who2 "Watch your tone, worm! That is an immortal being before you."
-#    who2 "He may look human, but his powers topple mine by far."
-#    who2 "Please take no offense, oh almighty one. My servant is quite dim."
-#    menu:
-#        m "..."
-#        "\"Does the sun take offense from an ant?\"":
-#            who2 "And yet it is prudent for an ant to know it's place, wouldn't you agree?"
-#        "\"Watch it, mortal! I'll smite you!\"":
-#            who2 "My humble apologies. The worthless servant shall be punished properly."
-#            who2 "M-master...?"
-#        "\"Apology accepted. What do you want?\"":
-#            who2 "You are unusually forgiving for a genie. But we shall not test your patience anymore..."
-            
-#    vol "Correct me if we are wrong, but you came to our world due to an accident..."
-#    m ".................."
-#    vol "And you find our world intriguing, do you not?"
-#    m "You have two faces growing out of your head. So yeah, colour me curious."
-#    who2 "Splendid..."
-#    who2 "In that case we want to make you an offer..."
-#    who2 "We...."
-#    who2 "We...."
-#    m "???"
-#    who2 "We are tired... Cover us..."
-#    who2 "Of course, master."
-#    m "What? What's going on?"
-#    vol "My apologies, oh immortal one. My master needs to rest now."
-#    vol "We will visit you again soon..."
-#    m "..................."
-#    g4 "What the....?"
-#    m "Ah, hell. May as well stay for one more day..."
-    
+    $screens.ShowD3("bld1")
+
+    $hero("Hm...// So that tall, broody dude mistook me for someone else...?// Which means I must be shrouded in a concealment spell...",
+            ".........",
+            "So basically, I'm a genie disguised as a human, who is in turn disguised as another human...// No, that's not stupid at all...",
+        a4, "Shut it! Nobody understands a true genius.", m)
+
     $ days_without_an_event = 0
     
     $this.event_02.Finalize() # Сюда попадаем из ивента event_02
@@ -263,30 +97,14 @@ label event_00:
 ###############################################################################################################################################################
 
 label event_01: #First event in the game. Gennie finds himself at the desk.
-    
-    
-    show screen bld1
-    with d3
-    m "..................?"
-    m "Your majesty?"
-    m "......................................................."
-    g4 "I did it again, didn't I?"
-    g4 "Teleported myself to who knows where..."
-    m "What's with those ingredients?"
-    m "They seem to be way more potent that I thought."
-    m "Well, whatever this place is I have no business here..."
-    m "Better undo the spell and return to the shop before the princess gets angry with me again..."
-    m "....................."
-    m "Although..."
-    m "There is something odd about this place... it's..."
-    m "It's almost brimming with...."
-    g4 "{size=+5}MAGIC?!{/size}"
-    m "Yes... magic, I can feel it. So powerful and yet somehow..."
-    m "....alien."
-    m "Interesting..."
-    m "I think I will stick around for a little bit..."
-    hide screen bld1
-    with d3
+    $screens.ShowD3("bld1")
+    $hero(  m,  "..................?// Your majesty?// .......................................................",
+            g4, "I did it again, didn't I?// Teleported myself to who knows where...",
+            m,  "What's with those ingredients?// They seem to be way more potent that I thought.// Well, whatever this place is I have no business here...// Лучше обернуть заклинание вспять, иначе принцесса будет снова злиться на меня...//"
+                ".....................// Although...// There is something odd about this place... it's...// It's almost brimming with.... // MAGIC?!//"
+                " Yes... magic, I can feel it. So powerful and yet somehow...// ...alien.// Interesting...// I think I will stick around for a little bit...")
+
+    $screens.HideD3("bld1")
     $this.event_01.Finalize()
     return
 ###############################################################################################################################################################
@@ -294,12 +112,9 @@ label event_02:
     $ letters += 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
     #$ mail_from_her = True #Comented out because replaced with $ letters += 1 
     play sound "sounds/owl.mp3"  #Quiet...
-    show screen owl
-    show screen bld1
-    with d3
-    m "What? An owl?"
-    hide screen bld1
-    with d3
+    $screens.ShowD3("owl", "bld1")
+    $hero("What? An owl?")
+    $screens.HideD3("bld1")
     return
     
 ###############################################################################################################################################################
@@ -1289,110 +1104,102 @@ label event_08: # HERMONE SHOWS UP FOR THE FIRST TIME. IN USE.
     pause 1
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock*"
-    m "Huh?"
+    $hero("Huh?")
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock*"
     pause.7
-    m "Somebody is knocking on the door..."
-    m "Crap... I'm supposed to avoid any human contact!"
+
+    $hero("Somebody is knocking on the door...// Crap... I'm supposed to avoid any human contact!// Hm... What are the chances that the thing knocking on my door is not human?// Yeah, quite slim...")
     m "Hm... What are the chances that the thing knocking on my door is not human?"
     m "Yeah, quite slim..."
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock*"
-    m "Persistent little bastard..."
+
+    $hero("Persistent little bastard...")
     $ d_flag_01 = False #When False Genie doesn't know Hermione's name.
     $ d_flag_02 = False #When TRUE Genie knows it's a girl knocking on the door.
+    $hermi.Visibility()
     menu:
         m "..."
         "\"Who is it?\"":
             $ d_flag_01 = True
-            who "It's me, professor..."
-            who "Hermione Granger. Can I come in?"
-            m "{size=-4}(It's that wretched woman who's been harassing me with her letters lately...){/size}"
+            $hermi(who, "It's me, professor...// Hermione Granger. Can I come in?")
+            $hero("#(It's that wretched woman who's been harassing me with her letters lately...)")
+            $hermi(her)
             menu: 
                 m "..."
                 "\"Go away, please. I'm busy.\"":
-                    her "But, professor, I really need to talk to you..."
-                    m "..........................................."
-                    her "Professor? I'm coming in!"
-                    m "{size=-4}(Crap...){/size}"
+                    jump event_08_saygoout
                 "\"Yes, yes, you can come in.\"":
                     pass          
         "\"Come in!\"":
             pass
         "\"Go away!\"":
+            label event_08_saygoout:
             $ d_flag_02 = True #When TRUE Genie knows it's a girl knocking on the door.
-            who "But, professor, I really need to talk to you..."
-            m "..........................................."
-            who "Professor? I'm coming in!"
-            m "{size=-4}(Crap...){/size}"
+            $hermi(who, "But, professor, I really need to talk to you...")
+            $hero("...........................................")
+            $hermi("Professor? I'm coming in")
+            $hero("#(Crap...)")
         "\"................\"":
-            $ d_flag_02 = True #When TRUE Genie knows it's a girl knocking on the door.
-            who "Professor, are you there?"
-            m "{size=-4}(Go away...){/size}"
-            who "Professor, I really need to talk to you..."
-            m "..........................................."
-            her "Professor? I'm coming in!"
-            m "{size=-4}(Crap...){/size}"
+            $hermi(who, "Professor, are you there?")
+            $hero("#(Go away...)")
+            jump event_08_saygoout
 
 
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    $ hermione_chibi_xpos = 610
+
+# Нельзя комментировать, переменные должны быть инициированы, используются в старом коде
+    $ hermione_chibi_xpos = 610  
     $ hermione_chibi_ypos = 250
-    show screen hermione_02 #Hermione stands still.
-    with Dissolve(.5)
+    $ walk_xpos=610 #Animation of walking chibi. (From)
+    $ walk_xpos2=400 #Coordinates of it's movement. (To)
+    $ pos = POS_370  # Присвоение не комментировать, будет использовать дальше в старом коде
+                        #    $herView.showQ( "body_01.png", pos )
+                        #    $herView.hideQ( )
+    $ posHead = gMakePos( 390, 235 )
+
+    $hermi.chibi.State("door", speed="go").Trans(Dissolve(.5), "blink")
+    
+
     pause.3
     if not d_flag_01:
         m "?!!"
     if not d_flag_02: #When TRUE Genie knows it's a girl knocking on the door.
         m "{size=-3}(A girl?){/size}"
         
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
-    $ walk_xpos=610 #Animation of walking chibi. (From)
-    $ walk_xpos2=400 #Coordinates of it's movement. (To)
-    $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
-    show screen hermione_walk_01 
-    pause 3
-    $ hermione_chibi_xpos = 400 #Near the desk.
-    show screen hermione_02 #Hermione stands still.
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
+
+    $hermi.chibi.Trans("go center", "blink")
     pause.5
-    show screen bld1
-    with Dissolve(.3)
-    
-    $ pos = POS_370
-    $herView.showQ( "body_01.png", pos )
-    show screen hermione_02
-    show screen ctc
-    with Dissolve(.3)
-    pause
-    $herView.hideshowQQ( "body_03.png", pos )
-    her "Good morning professor."
-    hide screen ctc
+    $screens.ShowD3("bld1" )
+
+    $hermi.Visibility("body+", transition=d3)
+
+    $screens.ShowD3("ctc").Pause()
+    $hermi("Good morning professor.","~body_03.png")
+    $screens.HideD3("ctc")
     menu:
         "\"Good morning... girl.\"":
-            her "{size=-4}(\"Girl\"?){/size}"
-            pass
+            $hermi("#(\"Girl\"?)")
         "\"Good morning, Hermione.\"" if d_flag_01:
             pass
         "\"Good morning, Child.\"":
-            her "{size=-4}(\"Child\"...?){/size}"
+            $hermi("#(\"Child\"?)")
         "\"................................\"":
             pass
-    her "I am very busy with my class schedule, but I kept my morning free today so that I could see you, professor."
-    her "You probably know why I am here too."
-    $herView.hideshowQQ( "body_04.png", pos )
-    her "The issue I have been fruitlessly trying to bring to your attention lately."
-    her "I cannot understand why you are not acting to stop that nonsense, professor!"
-    her "This simply cannot continue like that!"
-    $herView.hideshowQQ( "body_02.png", pos )
-    her "The inequality is starting to affect all of the houses..."
-    her "Simply because we have more integrity than the rest..."
-    her "Do you think it's fair that the people who deserve to be in the lead are being pushed back instead?"
-    her "Do you think that's fair, professor? Do you?"
-    $herView.hideshowQQ( "body_03.png", pos )
-    m "{size=-4}(Would you look at that pretty, little thing?){/size}"
-    m "{size=-4}(Look at her going on and on about something... She's adorable.){/size}"
-    m "{size=-4}(Damn, I haven't seen a woman in weeks.){/size}"
+    $hermi(                 "I am very busy with my class schedule, but I kept my morning free today so that I could see you, professor.",
+                            "You probably know why I am here too.",
+            "~body_04.png", "The issue I have been fruitlessly trying to bring to your attention lately...",
+                            "I cannot understand why you are not acting to stop that nonsense, professor!",
+            "~body_02.png", "The inequality is starting to affect all of the houses...",
+                            "Simply because we have more integrity than the rest...",
+                            "Do you think it's fair that the people who deserve to be in the lead are being pushed back instead?",
+                            "Do you think that's fair, professor? Do you?", 
+            "~body_03.png")
+
+    $hero("#(Would you look at that pretty, little thing?)// #(Look at her going on and on about something... She's adorable!)// #(Damn, I haven't seen a woman in weeks!)")
+
     menu:
         "\"(I will jerk off a little while she talks.)\"":
             $ jerk_off_session = True #Affects next conversation with Snape.
@@ -1401,193 +1208,132 @@ label event_08: # HERMONE SHOWS UP FOR THE FIRST TIME. IN USE.
             $ d_flag_01 = False #NOT JERKING OFF.
             pass
     if d_flag_01:
-        $herView.hideQ()
-        hide screen bld1
-        with d3
-        show screen blktone8
-        with d3
+        $hermi.Visibility()
+        $screens.HideD3("bld1").ShowD3( "blktone8" )
         ">You reach under the desk and grab your cock..."
-        hide screen blktone8
-        with d3
-        hide screen genie
-        show screen genie_jerking_off
-        with d3
-    m "Yes, keep on going, dear."
-    $herView.showQ( "body_05.png", pos )
-    show screen bld1
-    with d3
-    her "\"Yes\"?! So you think it's fair?"
-    m "Oh, of course not, I meant \"no\". But Keep on going anyway..."
-    $herView.hideshowQQ( "body_03.png", pos )
-    her "That's a relief. I'm glad that you agree with me, professor..."
-    $herView.hideshowQQ( "body_04.png", pos )
-    her "As I was saying, the whole issue is simply ridiculous and I cannot believe that it is taking place in our day and age!"
+        $screens.HideD3( "blktone8", None, "genie" ).ShowD3( "genie_jerking_off")
+
+    $hero("Yes, keep on going, dear.")
+    $screens.ShowD3( "bld1" )
+
+    $hermi.Visibility("body+")("~body_05.png",  "\"Yes\"?! So you think it's fair?")
+    $hero(                  "Oh, of course not, I meant \"no\". But Keep on going anyway...")
+    $hermi("~body_03.png",  "That's a relief. I'm glad that you agree with me, professor...",
+           "~body_04.png",  "As I was saying, the whole issue is simply ridiculous and I cannot believe that it is taking place in our day and age!")
+
     if d_flag_01:
-        $herView.hideQ()
-        hide screen bld1
-        show screen blktone8
-        with d3
-        ">*Fap!* *Fap!* *Fap!*"
-        ">You keep on stroking you cock..."
-        hide screen blktone8
-        with d3
-        $ herView.showQ( None, pos )
-        show screen bld1
-        with d3
+        $hermi.Visibility()
+        $screens.HideD3("bld1").ShowD3( "blktone8").Say(">*Fap!* *Fap!* *Fap!*// >You keep on stroking you cock...").HideD3( "blktone8").ShowD3( "bld1")
+        $hermi.Visibility("body+")
     else:
         m "I see..."
-    her "I mean, I would understand if something like this were to occur during the middle ages..."
-    her "But we left the middle ages behind a long time ago, did we not?"
+
+    $hermi("I mean, I would understand if something like this were to occur during the middle ages...// But we left the middle ages behind a long time ago, did we not?")
+
     if d_flag_01:
-        g9 "{size=-4}(Would you look at those rosy cheeks? I want to poke'em with my cock.){/size}"
-        $herView.hideQ()
-        show screen blktone8
-        with d3
-        ">You keep stroking your cock..."
-        hide screen blktone8
-        $ herView.showQ( None, pos )
-        with d3
+        $hero(g9, "#(Would you look at those rosy cheeks? I want to poke'em with my cock.)",m)
+        $hermi.Visibility()
+        $screens.ShowD3( "blktone8").Say(">You continue stroke your cock...").HideD3( "blktone8")
+        $hermi.Visibility("body+")
     else:
-        m "Ehm... I suppose you did. I mean, we did."
-    her "So it hurts the whole house-point-distribution system."
-    her "But it even doesn't stop there!"
-    her "It hurts our entire educational system as well..."
-    her "And more importantly the motivation among students is steadily decreasing due to it!"
+        $hero("Ehm... I suppose you did. I mean, we did.")
+
+    $hermi("So it hurts the whole house-point-distribution system.// It hurts our entire educational system as well// And more importantly the motivation among students is steadily decreasing due to it!!")
+
     if d_flag_01:
-        m "{size=-4}(Look at those huge knockers on you, girl!){/size}"
-        m "{size=-4}(Yes... I want to squeeze my dick between them...){/size}"
-    her "As you can see the situation is dire..."
-    $herView.hideshowQQ( "body_02.png", pos )
-    her "But we can still set everything right..."
-    her "As the representative of our school's Student Representative Body..."
-    her "I have a few suggestions on how to do that more efficiently."
+        $hero(  "#(Look at those huge knockers on you, girl!)// #(Yes... I want to squeeze my dick between them...)")
+
+    $hermi("As you can see the situation is dire...// ~body_02.png// But we can still set everything right...// As the representative of our school's Student Representative Body...// I have a few suggestions on how to do that more efficiently.")
+
+
     if not d_flag_01:
-        m ".............."
-    her "First of all the house point system needs to be reinforced!"
-    $herView.hideshowQQ( "body_03.png", pos )
-    her "You need to control the point distribution better, sir."
+        $hero ("..............")
+
+    $hermi("First of all the house point system needs to be reinforced!// ~body_03.png// You need to control the point distribution better, sir.")        
     if d_flag_01:
-        g4 "{size=-4}(Yes, you are a whore... A nasty little whore... I bet you love to suck cocks... Don't you? Yes, I bet you do...){/size}"
-        $herView.hideQQ()
-        show screen blktone8
-        with d4
-        ">You stroke you diamond-hard cock ferociously!"
-        hide screen blktone8 
-        with d4
-        $ herView.showQQ( "body_03.png", pos )
-    her "Of course you agree with me on this, professor, do you not?"
+        $hero (g4, "#(Yes, you are a whore... A nasty little whore... I bet you love to suck cocks... Don't you? Yes, I bet you do...)")
+        $hermi.Visibility()
+        $screens.Show(d4, "blktone8").Say(">You stroke you diamond-hard cock ferociously!").Hide(d4, "blktone8")
+        $hermi.Visibility("body+")
+    $hermi("Of course you agree with me on this, professor, do you not?")
     if d_flag_01:
-        g4 "{size=-4}*Panting heavily*{/size}"
-        $herView.hideshowQQ( "body_07.png", pos )
-        her "Professor...?"
-        g4 "{size=-4}(Crap. What does she want now?){/size}"
-        g4 "Yes, it's all true. Please keep going..."
-        her "Ehm... So, as I was saying..."
-        $herView.hideQQ()
-        m "{size=-4}(Oh... That was a good jerkoff session, but I'm getting dangerously close to the \"grand finale\".){/size}" 
-        m "{size=-4}(Maybe I should stop before I get myself into trouble.){/size}"
+        $hero(g4,               "{size=-4}*Panting heavily*{/size}")
+        $hermi("~body_07.png// Professor...?")
+        $hero("#(Crap. What does she want now?)// Yes, it's all true. Please keep going...")
+        $hermi(                 "Ehm... So, as I was saying...")
+        $hermi.Visibility()
+        $hero(m,"#(Oh... That was a good jerkoff session, but I'm getting dangerously close to the \"grand finale\".)// #(Maybe I should stop before I get myself into trouble?)")
         menu:
             "\"(Yes, time to actually listen to her.)\"":
-                show screen genie
-                with d3
+                $screens.ShowD3("genie")
                 $ d_flag_01 = False #NOT JERKING OFF ANY MORE.
-                pass
             "\"(No! I want to keep on jerking off!)\"":
                 pass
+        $hermi.Visibility("body+")
     else:
-        m "{size=-4}(Do I? I honestly don't give a damn...){/size}"
-        m "Uhm... I suppose I do..."
-        her "{size=-4}(\"Suppose\"?){/size}"
-        her "{size=-4}(When did Professor Dumbledore become so... apathetic.){/size}"
-    $herView.hideshowQQ( "body_04.png", pos )
-    her "Another measure you could take in consideration is tightening the control over your staff..."
-    her "Especially the teachers..."
-    $herView.hideshowQQ( "body_03.png", pos )
-    her "I hope I'm not stepping out of line here, sir, but some of the teachers really do require supervision..."
+        $hero("#(Do I? I honestly don't give a damn...)// Uhm... I suppose I do...")
+        $hermi("#(Suppose?)// #(When did Professor Dumbledore become so... apathetic?...)")
+
+    $hermi("~body_04.png// Another measure you could take in consideration is tightening the control over your staff...// Especially the teachers...",
+           "~body_03.png// I hope I'm not stepping out of line here, sir, but some of the teachers really do require supervision...")
+
     if d_flag_01:
-        g4 "{size=-4}(Yes! You little whore! You fucking little whore!) *Panting*{/size}"
+        $hero(g4,            "{size=-4}(Yes! You little whore! You fucking little whore!) *Panting*{/size}")
     else:
-        m "......................."
-    $herView.hideshowQQ( "body_04.png", pos )
-    her "I understand that you may not have time for this, professor, After all you are the headmaster of our school and a very busy and important man."
-    her "being a top student is hard on me as well sometimes..."
+        $hero(m,            ".......................")
+    $hermi("~body_04.png",  "I understand that you may not have time for this, professor, After all you are the headmaster of our school and a very busy and important man.",
+                            "Being a top student is hard on me as well sometimes...")
+
     if d_flag_01:
 #        translators "{size=-4}(Здесь была игра слов \"hard on(тяжело)\" и \"hard-on(стояк)\") которую мы не смогли перевести. \nПростите нас :({/size}"
-        g4 "{size=-4}(She said \"hard-on\"!) *Panting*{/size}"
-        her "But you could delegate that task to me..."
-        her "Just put your faith in me professor." 
+        $hero(g4, "{size=-4}(She said \"hard-on\"!?) *задыхаясь*{/size}")
+    $hermi("But you could delegate that task to me...// Just put your faith in me professor!" )
 
     if d_flag_01: 
-        $herView.hideshowQQ( "body_01.png", pos )
-        her "Yes, you can do it! Just put it in me, sir!"
-        stop music fadeout 1.0
-        show screen white 
-        pause.1
-        hide screen white
-        pause.2
-        show screen white 
-        pause .1
-        hide screen white
-        with hpunch
-        g4 "{size=-4}(Oh crap, that did it!) *Argh!*{/size}"
-        $herView.hideQQ()
-        hide screen bld1
-        with d3
-        show screen genie_jerking_sperm
-        with d3
-        pause 3
-        
-        show screen bld1
-        with d3
-        $ herView.showQQ( "body_18.png", pos )
-        her "Professor?! What is going on...?"
-        show screen genie_jerking_sperm_02
-        with d3
-        g4 "Ah... YESSSSS.....!"
-        her "???"
-        g4 "*breathing heavily* Yes! yes...."
-        show screen genie
-        #show screen genie_jerking_off
-        with d3
-        m "Yes, girl. It's all exactly as you say and I will.... take care of it all."
-    else:
-        m "Alright... I will think about your proposal, I promise."
-    $herView.hideshowQQ( "body_07.png", pos )
-    her "Really?"
-    her "hm..........."
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
-    $herView.hideshowQQ( "body_04.png", pos )
-    her "That's a relief! Thank you, professor."
-    if d_flag_01:
-        m "No, no, thank you..."
-        $herView.hideshowQQ( "body_07.png", pos )
-        her "Hm..."
-    $herView.hideshowQQ( "body_04.png", pos )
-    her "My classes are about to start so I'd better go now."
-    her "Thank you for your time..."
+        $hermi("~body_01.png", "Yes, you can do it! Just put it in me, sir!")
 
-    hide screen bld1
-    $herView.hideQ()
-    with Dissolve(.3)
-    $ walk_xpos=400 #Animation of walking chibi. (From)
-    $ walk_xpos2=610 #Coordinates of it's movement. (To)
-    $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-    show screen hermione_walk_01_f 
-    pause 2
-    hide screen hermione_walk_01_f 
-    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    with Dissolve(.3)
-    pause.5
-    if d_flag_01:
-        m "{size=-4}(This was awesome...) *Panting*{/size}"
-        m "{size=-4}(My pants are ruined though...){/size}"
+        stop music fadeout 1.0
+        $screens.ShowHide("white", 0.1).Pause(0.2).Show("white").Pause(0.1).Hide(hpunch,"white")
+
+        $hero(g4, "{size=-4}(Oh crap, that did it!) *Argh!*{/size}")
+        $hermi.Visibility()
+
+        $screens.HideD3("bld1").ShowD3("genie_jerking_sperm").Pause(3.0).ShowD3("bld1")
+
+        $hermi.Visibility("body+")("~body_18.png", "Professor?! What is going on...?")
+        $screens.ShowD3("genie_jerking_sperm_02")
+        $hero(g4, "Ah... YESSSSS.....!")
+        $hermi("???")
+        $hero(g4, "*Breathing heavily* Yes! yes....")
+        $screens.ShowD3("genie")
+        $hero(g4, "Yes, girl. It's all exactly as you say and I will.... take care of it all.", m)
     else:
-        m "................."
-        m "(She is cute, but quite a piece of work...)"
-    hide screen genie_jerking_sperm_02
-    with d3
-#    $ snape_against_hermione = True #Turns True after event_08. Activates special date with Snape # 01.
-#    $ event08_happened = True
+        $hero(m,       "Alright... I will think about your proposal, I promise.")   
+
+    $hermi("~body_07.png// Really?// Hm...........")
+
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+    $hermi("~body_04.png",  "That's a relief! Thank you, professor.")
+
+    if d_flag_01:
+        $hero("No, no, thank you...")
+        $hermi("~body_07.png// Hm...")
+
+    $hermi("~body_04.png// My classes are about to start so I'd better go now.// Thank you for your time...")
+
+    $screens.HideD3("bld1")
+    $hermi.Visibility(transition=d3)
+    $hermi.chibi.Trans("goout door").Hide(d3)    
+    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+    pause.5
+
+    if d_flag_01:
+        $hero("#(This was awesome...) *Panting*// #(My pants are ruined though...)")  
+    else: 
+        $hero(".................// #(She is cute, but quite a piece of work...)")
+
+    $screens.HideD3("bld1").HideD3("genie_jerking_sperm_02")
+
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
     $this.event_08.Finalize()
     return
@@ -1600,111 +1346,80 @@ label event_08_02:
     "*Knock-knock-knock!*"
     menu:
         "\"Who is it?\"":
-            her "It's me, Hermione Granger." 
-            m "(It's that young witch again...)" 
-            her "Professor, I'm coming in..."
-            m "{size=-4}(Crap!){/size}"
+            $hermi("It's me, Hermione Granger.")
+            $hero("#(It's that young witch again...)")
+            jump event_08_02_inmenu
         "\"Yes, come in...\"":
             pass
         "\"...................................\"":
             $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
             "*Knock-knock-knock!*"
-            m "............................."
-            her "Professor, I'm coming in..."
-            m "{size=-4}(Crap!){/size}"
+#            m "............................."
+            label event_08_02_inmenu:
+            $hermi("Professor, I'm coming in...")
+            $hero("#(Crap!)")
     
-    
-    $ walk_xpos=610 #Animation of walking chibi. (From)
-    $ walk_xpos2=400 #Coordinates of it's movement. (To)
-    $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen hermione_walk_01 
-    with d4
-    pause 2.5
-    $ hermione_chibi_xpos = 400 #Near the desk.
-    show screen hermione_02 #Hermione stands still.
+    $hermi.chibi.State("door", speed="go").Trans(d4, "go center", "blink")
     pause.5
-    show screen bld1
-    with Dissolve(.3)
-    
-    $ pos = POS_370
-    $herView.showQ( "body_01.png", pos )
-    show screen hermione_02
-    with Dissolve(.3)
+    $screens.ShowD3("bld1")
 
-    her "Good morning, professor Dumbledore."
+    $hermi("~body_01.png").Visibility("body+", transition=d3)("Good morning, professor Dumbledore.")
     menu:
         "\"Good morning, miss Granger.\"":
             pass
         "\"Good morning, child.\"":
-            her "{size=-5}(\"Child\"? Must you be so condescending all the time?){/size}"
-            m "What was that?"
-            her "It's nothing sir..."
+            $hermi("~body_07.png// #(\"Child\"? Must you be so condescending all the time?)")
+            $hero("What was that?")
+            $hermi("~body_202.png// It's nothing sir...")
         "\"Good morning, whore.\"":
-            her "Em... What?"
-            g4 "{size=-4}(OK, that was stupid. Damage control, damage control!){/size}"
-            m "*Khem* Excuse me, something stuck in my throat... Good morning, miss Granger."
-            her "{size=-5}(Did he just called me a.... no, no way.){/size}"
+            $hermi("~body_18.png// Em... What?")
+            $hero(g4, "#OK, that was stupid. Damage control, damage control!.",
+                    m, "*Khem* Excuse me, something stuck in my throat... Good morning, miss Granger.")
+            $hermi("~body_202.png// #(Did he just called me a.... no, no way.)")
             
-    her "Professor Dumbledore, I am here to talk to you as the \"MRM\" president..."
-    m "............."
-    her "We held an emergency assembly yesterday..."
-    her "The matter in question was the \"Hogwarts\" uniform for girls..."
-    her "We came to the conclusion that the currently employed dress-code is highly inappropriate for an educational institution..." 
-    show screen ctc
-    pause
-    her "..."
-    m "Seriously?"
-    hide screen ctc
-    her "Yes, professor, I assure you, we are very serious."
-    her "The way you force our poor girls to dress is unacceptable..."
-    her "Such frivolous attire distracts male students from studying, putting them at a disadvantage..."
-    her "All those distractions they have to deal with..."
-    her "The poor souls..."
-    m "Did any of the boys actually complain about this?"
-    her "We won't wait for the issue to manifest, sir! We'll prevent it!"
-    her "No individual shall be at a disadvantage based on his or her gender."
-    her "This is what they call \"Sexism\" in the muggle world, sir."
-    m "Your explanations are getting way too convoluted for my liking, miss Granger."
-    m "Tell me what you are proposing exactly, to Put every woman in the school in a burqa?"
-    her "Officially doubling the length of the girls' skirts in the school regulations would suffice..."
+    $hermi("~body_02.png// Professor Dumbledore, I am here to talk to you as the \"MRM\" president...")
+    $hero(".............")
+    $hermi("We held an emergency assembly yesterday...// The matter in question was the \"Hogwarts\" uniform for girls...//"
+        " We came to the conclusion that the currently employed dress-code is highly inappropriate for an educational institution...")
+
+    $screens.Show("ctc").Pause()
+
+    $hermi("...")
+    $hero("Seriously?")
+
+    $screens.Hide("ctc")
+
+    $hermi("~body_04.png//Yes, professor, I assure you, we are very serious.// The way you force our poor girls to dress is unacceptable  ...//"
+        "Such frivolous attire distracts male students from studying, putting them at a disadvantage...// ~body_07.png// All those distractions they have to deal with...// The poor souls...")
+    $hero("Did any of the boys actually complain about this?")
+    $hermi("~body_04.png//We won't wait for the issue to manifest, sir! We'll prevent it!!//"
+        "~body_07.png//No individual shall be at a disadvantage based on his or her gender.// This is what they call \"Sexism\" in the muggle world, sir.")
+    $hero("Your explanations are getting way too convoluted for my liking, miss Granger.// Tell me what you are proposing exactly, to Put every woman in the school in a burqa?")
+    $hermi("~body_207.png//Officially doubling the length of the girls' skirts in the school regulations would suffice...")
+
     menu:
 
         "{size=-4}\"That is laughable. Request refused!\"{/size}":
             $ d_flag_05 = True #Notion refused. Will take affect in the next event.
-            her "What... B-but? We made a decision..."
-            m "Miss Granger, I'm sorry to break this to you, but I am still the headmaster of this school..."
-            m "And the only decisions that matter are mine!"
-            her "So you ignore the voice of the people, sir?"
-            m "The only voice I hear is yours, miss Granger."
-            her "Don't You know what happens to tyrants who underestimate the power of the masses?"
-            her "They get overthrown!"
-            m "Careful, now. Your words smell of treason, young lady."
-            m "Don't You know what happens to traitors?"
-            m "The get hung!"
-            her "!!!"
-            her "Tsk!"
-            her "I will make you take me seriously, professor!"
+            $hermi("~body_05.png//What... B-but? We made a decision...")
+            $hero("Miss Granger, I'm sorry to break this to you, but I am still the headmaster of this school...// And the only decisions that matter are mine!")
+            $hermi("~body_07.png//So you ignore the voice of the people, sir?")
+            $hero("The only voice I hear is yours, miss Granger.")
+            $hermi("~body_05.png//Don't You know what happens to tyrants who underestimate the power of the masses?// They get overthrown!")
+            $hero("Careful, now. Your words smell of treason, young lady.// Don't You know what happens to traitors?// The get hung!")
+            $hermi("~body_47.png//!!!// Tsk!// I will make you take me seriously, professor!")
         
         "{size=-4}\"Boys must study in peace. request approved!\"{/size}":
-            her "Splendid. I will everyone know."
-            her "Thank you professor."
+            $hermi("~body_01.png//Splendid. I will everyone know.// Thank you professor.")
           
-
-    hide screen bld1
-    $herView.hideQ()
-    with Dissolve(.3)
-    $ walk_xpos=400 #Animation of walking chibi. (From)
-    $ walk_xpos2=610 #Coordinates of it's movement. (To)
-    $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-    show screen hermione_walk_01_f 
-    pause 2
-    hide screen hermione_walk_01_f 
+    $screens.HideD3("bld1")
+    $hermi.Visibility(transition=d3).chibi.Trans("goout door").Hide(d3)    
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    with Dissolve(.3)
     pause.5
-    m "..................................."
-    m "I'm Starting to enjoy our meetings less and less..."
+
+    $hero("...................................// I'm Starting to enjoy our meetings less and less...")
+
     $this.event_08_02.Finalize()
     return
 #NOT IN USE###############################################################################################################################################################    
@@ -1712,116 +1427,77 @@ label event_08_03:
 #    "EVENT_08_03"
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock!*"
-    m "Who is--"
-    her "Professor, I'm coming in..."
-    $ walk_xpos=610 #Animation of walking chibi. (From)
-    $ walk_xpos2=400 #Coordinates of it's movement. (To)
-    $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
+    $hero("Who is...")
+    $hermi("Professor, I'm coming in...")
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen hermione_walk_01 
-    with d4
-    pause 2.5
-    $ hermione_chibi_xpos = 400 #Near the desk.
-    show screen hermione_02 #Hermione stands still.
+
+    $hermi.chibi.State("door", speed="go").Trans(d4, "go center", "blink")
     pause.5
-    her "Good morning, professor Dumbledore."
-    show screen bld1
-    with Dissolve(.3)
-    
-    $ pos = POS_370
-    $herView.showQ( "body_01.png", pos )
-    show screen hermione_02
-    with Dissolve(.3)
-    
+    $screens.ShowD3("bld1")
+
+    $hermi("~body_01.png").Visibility("body+")("Good morning, professor Dumbledore.")
+
     menu:
         "\"Good morning, miss Granger.\"":
             pass
         "\"Good morning, child.\"":
-            her "{size=-5}(\"Child\"? Must you be so condescending all the time? Nasty old prick!){/size}"
-            m "What was that?"
-            her "nothing sir..."
+            $hermi("~body_07.png// (\"Child\"? Must you be so condescending all the time? Nasty old prick!)")
+            $hero("What was that?")
+            $hermi("~body_202.png// Nothing sir....")
         "\"Good morning, miss president.\"":
-            her "{size=-4}(Is he being sarcastic?){/size}"
+            $hermi("~body_202.png// #(Is he being sarcastic?...)")
             
-
     if not d_flag_05:
-        her "You promised me to take action, professor..."
-        her "But nothing changed since our last conversation..."
+        $hermi("~body_07.png// You promised me to take action, professor...// But nothing changed since our last conversation...")
+
         menu:
-
             "\"I lied...\"":
-                her "B-but..."
-                her "But you are the headmaster, sir. You word should mean something..."
-
+                $hermi("~body_203.png// B-but...// But you are the headmaster, sir. You word should mean something...")
             "\"I forgot\"":
-                her "You forgot, sir?"
-                her "Did you really?"
-                her "Or Maybe you just didn't care enough to remember?"
+                $hermi("~body_05.png// You forgot, sir?// Did you really?// Or Maybe you just didn't care enough to remember?")
             "\"I just don't care.\"":
-                her "B-but....?"
-                her "Professor Dumbledore, this is a serious matter!"
+                $hermi("~body_203.png// B-but....?// Professor Dumbledore, this is a serious matter!")
 
     else:
-        her "Professor Dumbledore, you rejected the offer I made you last time we met..."
-        her "And now we reap the results..."
-    her "The boys are still having a hard time concentrating on their studies..."
-    m "Oh, I do have a cure for that!"
-    m "Lets put a paper bag over every girl's head!"
-    her "That would be mistreatment of a human being based on her gender..."
-    her "Another example of sexism..."
-    her "Or better yet \"Misogyny\"."
-    m "\"Misogyny\" is a general dislike towards women, miss Granger."
-    m "A healthy male is biologically incapable of disliking all the females of his kind..."
-    m "Otherwise humanity would've gone extinct a long time ago already..."
-    her "Professor, we have no time for semantics."
-    her "The entire school is in peril!"
-    m "Is it...?"
-    her "The \"MRM\" had another meeting yesterday, and--"
-    m "No, not again..."
-    m "are there are any male members in your little \"Men's rights movement\"?"
-    her "That is beside the point..."
-    m "Right..."
-    her "That is irrelevant..."
-    m "How is it irrelavant? That's the only thing that {size=+7}IS{/size} relevant!"
-    her "Let me finish my sentence, please."
-    her "I am officially addressing you as the \"MRM\" president now..."
-    her "And as a representative of this school's student body..."
-    her "We demand these new regulations to be enforced..."
-    her "Number one..."
-    her "No teacher is allowed to raise a voice towards a student or call the said student an unflattering name..."
-    m "What?"
-    her "Number two..."
-    her "All the school ghosts have to be confined to the abandoned tower in the north wing of the school."
-    m "You have school ghosts? That's pretty cool!"
-    her "Number three..."
-    her "Every teacher, and especially Professor Severus Snape need to take a qualification test every three months..."
-    m "Is that all?"
-    her "That is all, sir."
+         $hermi("~body_07.png// Professor Dumbledore, you rejected the offer I made you last time we met...// And now we reap the results...")
+
+    $hermi("The boys are still having a hard time concentrating on their studies...")
+    $hero("Oh, I do have a cure for that!// Lets put a paper bag over every girl's head!")
+    $hermi("That would be mistreatment of a human being based on her gender...// Another example of sexism...// Or better yet \"Misogyny\".")
+    $hero("\"Misogyny\" is a general dislike towards women, miss Granger.// A healthy male is biologically incapable of disliking all the females of his kind...// Otherwise humanity would've gone extinct a long time ago already...")
+    $hermi("~body_202.png// Professor, we have no time for semantics.// The entire school is in peril!")
+    $hero("Is it...?")
+    $hermi("~body_04.png// The \"MRM\" had another meeting yesterday, and--")
+    $hero("No, not again...// Are there are any male members in your little \"Men's rights movement\"?")
+    $hermi("~body_50.png// That is beside the point.")
+    $hero("Right...")
+    $hermi("~body_191.png// That is irrelevant...")
+    $hero("How is it irrelavant? That's the only thing that {size=+7}IS{/size} relevant!")
+    $hermi("~body_206.png// Let me finish my sentence, please.// I am officially addressing you as the \"MRM\" president now...// And as a representative of this school's student body ...//"
+        "We demand these new regulations to be enforced...// ~body_120.png// Number one...// No teacher is allowed to raise a voice towards a student or call the said student an unflattering name...")
+    $hero("What?")
+    $hermi("Number two...// All the school ghosts have to be confined to the abandoned tower in the north wing of the school.")
+    $hero("You have school ghosts? That's pretty cool!")
+    $hermi("Number three...// ~body_186.png// Every teacher, and especially Professor Severus Snape need to take a qualification test every three months...")
+    $hero("Is that all?")
+    $hermi("That is all, sir.")
+
     menu:
         m "..."
         "\"Fine. Your demands shall be satisfied.\"":
-            her "Thank you, professor."
-            her "I, as a representative of the student's will, thank you for your cooperation."
-        "\"Sounds like bullshit. You're dismissed.\"":
-            her "What? I..."
-            her "But this is... you can't..."
-            m "Dismissed!"
-            her "Tsk..."          
-    hide screen bld1
-    $herView.hideQ()
-    with Dissolve(.3)
-    $ walk_xpos=400 #Animation of walking chibi. (From)
-    $ walk_xpos2=610 #Coordinates of it's movement. (To)
-    $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-    show screen hermione_walk_01_f 
-    pause 2
-    hide screen hermione_walk_01_f 
+            $hermi("~body_03.png// Thank you, professor.// I, as a representative of the student's will, thank you for your cooperation.")
+        "\"Sounds like bullshit. You're dismissed\"":
+            $hermi("~body_47.png// What? I...// But this is... you can't...")
+            $hero("Dismissed!")
+            $hermi("~body_51.png// Tsk!")
+
+    $screens.HideD3("bld1")
+    $hermi.Visibility(transition=d3).chibi.Trans("goout door").Hide(d3)    
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    with Dissolve(.3)
     pause.5
-    m "...................."
-    
-#    $ snape_against_hermione = True #Turns True after event_08_03. Activates event_09 when hanging out with Snape next time.
+
+    $hero("....................")
 
     $this.event_08_03.Finalize()
     return

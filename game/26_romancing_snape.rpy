@@ -447,6 +447,16 @@ label date_with_snape_09:
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "I woke up..."
+    sna "And felt..."
+    $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
+    sna2 "...infantile ungrateful asshole."
+    g4 "Uh... are you sure? About \"asshole\"?"
+    sna2 "How to call a man who happily takes the society, the country and watering the crap this society, country and others?"
+    m "Um, really."
+    m " But... um, why infantile?"
+    sna2 "Well, if you don't like it and you underfunded, in a way, go there, where will doda. Change your life as an adult. But you're sitting on their butts and just try to fight shit...."
+    m "......."
+    sna2 "And then I woke up finally."
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "...................."

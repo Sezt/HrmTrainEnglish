@@ -46,7 +46,7 @@ init python:
 #            renpy.say("","in1")
             if escLabel!=None:
                 if escText==None:
-                    escText="- Never mind -"
+                    escText="- Ничего -"
 #                renpy.say("","in2")
                 self.AddItem(escText, escLabel, True, "")
  #           renpy.say("","in3")
