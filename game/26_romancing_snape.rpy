@@ -827,7 +827,7 @@ label date_with_snape_15:
     hide screen s_head2
     m "Hm...?"
     $ s_sprite = "03_hp/10_snape_main/24.png"                                         # SNAPE
-    show screen s_head2                                                                                               # SNAPE
+    show screen s_head2                                                                                                 # SNAPE
     sna "This time of the year is usually pretty busy..."
     sna2 "Even more so now when I need to constantly cover up for Albus' absence."
     hide screen s_head2

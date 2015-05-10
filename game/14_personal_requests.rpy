@@ -364,7 +364,7 @@ label new_request_06:
             "Hermione agreed."
             
         elif request_06_points == 2: #Three stars.
-            her "of course..."
+            her "Of course..."
             "Hermione agreed. willingly."
             
         elif request_06_points >= 3: #Master.
@@ -637,7 +637,7 @@ label new_request_17: #LV.5 (Whoring = 12 - 14)
         
     m "Come here and let me poke a finger in your ass."
     if request_17_points == 0: #One star.
-        her "oh... "
+        her "Oh... "
         ">Hermione reluctantly agrees."
     elif request_17_points == 1: #Two stars.
         her "...Yes, Professor."
@@ -677,7 +677,7 @@ label new_request_18: #LV.5 (Whoring = 12 - 14)
         
     m "Come and touch my dick."
     if request_18_points == 0: #One star.
-        her "oh... "
+        her "Oh... "
         ">Hermione reluctantly agrees."
     elif request_18_points == 1: #Two stars.
         her "...Yes, Professor."
@@ -718,7 +718,7 @@ label new_request_19: #LV.5 (Whoring = 12 - 14)
     
     m "Come here and rub my cock on her cute cheeks."
     if request_19_points == 0: #One star.
-        her "oh... "
+        her "Oh... "
         ">Hermione reluctantly agrees."
     elif request_19_points == 1: #Two stars.
         her "...Yes, Professor."
@@ -1174,6 +1174,7 @@ label new_request_32_complete:
     
 ### MUSIC BLOCK ###
 label music_block:
+    $music()
     if daytime:
         play music "music/Brittle Rille.mp3" fadein 1 fadeout 1 # DAY MUSIC
     else:

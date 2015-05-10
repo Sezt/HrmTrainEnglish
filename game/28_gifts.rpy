@@ -394,7 +394,7 @@ label nets_take:
     
     
     
-    
+   
     
     
     
@@ -541,6 +541,43 @@ label giving_condoms: # A PACK OF CONDOMS
         
         
      
+label giving_perfume: # perfume
+    if hero._perfumeused!=time.stamp:
+        $Say("> You are going to give Hermione the spirits, but they miraculously not be given into the hands.//"
+            "> You are going to give Hermione the spirits, but they miraculously not be given into the hands.")
+    else:
+        $hermi.Visibility("body+")
+        $hermi("~body_15.png// Sir This smell... ...")
+        $hero("What smell?")
+        $hermi("~body_13.png// You have the tower... it smells like... it reminds me of the times when I was little.")
+        if hermi.Items("perfume")._count==0:
+            $hero("Really?")
+            $hermi("~body_75.png// It's the smell of a dental office!")
+            $hero("Oh, poor child, looks like you had a hard time.")
+            $hermi("~body_06.png// No, sir, I liked the smell and the memories!")
+            $hero("Uh Girl, I knew you were a bit of a masochist, but that is so...")
+            $hermi("~body_04.png// SIR! My parents are dentists!")
+            $hero("But!.. Oh!.. Well, if so, ...")
+        else:
+            $hero("Yeah, I just remembered that dental office smell.")
+        menu:
+            "\"Take this perfume as a gift\"":
+                "> You are giving Hermione perfume."
+                $hermi.Items.Receive(hero.Items,"perfume")
+                $hermi("~body_01.png// Спасибо, сэр!")
+                $hermi.IncValue("liking",9-hermi.whoring//3) # от 9 до 1 балла (падает с повышение развращенности), при этом отношение может стать положительным
+                call happy #Message that says that Hermione's mood has improved.
+
+
+            "\"I'm glad you liked it\"":
+                pass
+        $hermi.Visibility()
+
+    $ pos = POS_370
+    $herView.showQQ( None, pos )
+    jump hermione_main_menu
+
+
      
      
 ### CANDY ###
@@ -2046,10 +2083,9 @@ label giving_nets:
         $herView.hideQQ()
 #        if mad <= 0:
 #            $ mad = 0
-        if hermi.liking == 0:
-            ">Hermione's mood has improved...\n>Hermione is {size=+5}not upset{/size} with you..."
-        else:
-            ">Hermione's mood has improved...\n>Hermione is {size=+5}still upset{/size} with you..."
+        $Say([">The Hermione's mood improved...\n>Hermione {size=+5}upset you{/size}...", 
+              ">The Hermione's mood improved...\n>Hermione {size=+5}not mad{/size} on you...",
+              ">The Hermione's mood improved...\n>Hermione {size=+5}you pleasant{/size}..."][Sign(hermi.liking)+1])
         return
 
 

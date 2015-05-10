@@ -316,7 +316,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                                     her "... if they Gryffindor."               
                                     m "Well, Miss Granger."
                                 else:
-                                    $MusicStart("Supergirl",0.1)
+                                    $music.Start("Supergirl")
                                     $herView.hideshowQQ( "body_64.png", pos )
                                     "> Hermione cheeky looks into your eyes and you feel you are getting excited."
                                     "> Bitch, as if by chance, licks his lips."
@@ -354,7 +354,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                                                     her "Yes, sir. Plus 45 points?"
                                                     m "Yes girl, Yes. Plus 45."
                                                     $current_payout+=45
-                                                    $MusicStop()
+                                                    $music()
                                                     $ hermione_chibi_xpos = 400 #Near the desk.
                                                     $ pos = POS_120
                                                     hide screen ctc

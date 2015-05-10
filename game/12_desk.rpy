@@ -1,17 +1,13 @@
 label menu_reading_book:
-    $choose=None
-    if choose==None:
-        $ choose = RunMenu()
-    else:
-        $choose.Clear()
+
+    $ choose = RunMenu()
     python:
         for e in this.List:
             if e.GetValue("block")==_block and e._status>=0: # Нужно ставить GetValue("block")  а не _block - у ивента такого объекта может не быть
                 choose.AddItem("- Book: "+e._caption+" - "+("{image=check_08.png}" if e.IsDone() else ""), 
-                    "reading_book_done" if e.IsDone() else "menu_reading_book_2", True, e.Name)
-        choose.AddItem("- Never mind -", "books_list", True, "")
+                    "reading_book_done" if e.IsDone() else "menu_reading_book_2", e.Name)
 
-    $ choose.Show()
+    $ choose.Show("books_list")
 
     label menu_reading_book_2:
         $ the_gift = event._img#"03_hp/18_store/08.png" # Copper book of spirit.
@@ -82,6 +78,7 @@ label menu_reading_book:
         jump expression _label
 
 label desk:
+    $ menu_x = 0.5 
     menu:
         "-Examine the desk-" if not desk_examined:
             $ desk_examined = True
@@ -143,27 +140,7 @@ label desk:
         #     jump jerk_off
         "-Jerk off-" if not day < 5:
             jump jerk_off 
-#        "-Hermione's status-" if this.Has("her_wants_buy"): #summoning_hermione_unlocked and buying_favors_from_hermione_unlocked: 
-#           "> Whoring: {color=#B40000}{size=+4}{b}[whoring]{/b}{/size}{/color}- degree."
-#            "> Mad: {color=#B40000}{size=+4}{b}[mad]{/b}{/size}{/color}- degree"
-#            if mad >=1 and mad < 3:
-#                "> Hermione still {b} a little upset {/ b} you ..."
-#            elif mad >=3 and mad < 10:
-#                "> You {b} upset {/ b} Hermione."
-#            elif mad >=10 and mad < 20:
-#                "> Hermione {b} very upset {/ b} you."
-#            elif mad >=20 and mad < 40:
-#                "> Hermione is angry {b} {/ b} for you."
-#            elif mad >=40 and mad < 50:
-#                "> Hermione {b} very angry {/ b} for you."
-#            elif mad >=50 and mad < 60:
-#                "> Hermione {b} in anger {/ b} for you."
-#            elif mad >=60:
-#                "> Hermione hates {b} {/ b} you."
-#            else:
-#                "> Hermione {b} is not angry {/ b} for you"
-            jump desk
-        "-Doze off-" if daytime and not day == 1:
+        "- Дремать -" if daytime and not day == 1:
             jump night_start
         "-Go to sleep-" if not daytime and not day == 1:
             jump day_start

@@ -1,4 +1,6 @@
 label cupboard:
+    $ menu_x = 0.5 
+
     menu:
         "-Examine the cupboard-" if not cupboard_examined:
             $ cupboard_examined = True
@@ -32,11 +34,10 @@ label cupboard:
                 $ choose = RunMenu()
                 python:
                     for o in hero.Items():
-                            choose.AddItem("- "+o._caption+" ("+str(hero.Items.Count(o.Name))+") -", 
-                                "menu_cupboard_description" , True, o.Name)
-                    if  day>1: 
-                        choose.AddItem("Помощь", "cheat_help", True, "")
-#                    choose.AddItem("- Ничего -", "cupboard", True, "")
+                            choose.AddItem("- "+o._caption+" ("+str(hero.Items.Count(o.Name))+") -", "menu_cupboard_description" , o.Name)
+                    if  day>4: 
+                        choose.AddItem("Help", "cheat_help", "")
+#                    choose.AddItem("- Never mind -", "cupboard", True, "")
 
                 $ choose.Show("cupboard")
 
@@ -46,6 +47,11 @@ label cupboard:
                 show screen gift
                 with d3
                 ">[item._description]"
+                if item.Name=="perfume":
+                    "> Have you tried to smell this perfume when received, and found them disgusting."
+                    "> But maybe you are wrong? You shrieked out of the bubble..."
+                    "> What a mess! Your first impression was correct..."
+                    $hero.SetValue("perfumeused", time.stamp)
                 hide screen gift
                 with d3
                 jump possessions                
@@ -102,10 +108,8 @@ label cupboard:
                         _itemCount=hero.Items.Count("scroll")
                         for i in range(_scrollSection*15, _scrollSection*15+15):
                             if i<_itemCount:
-                                choose.AddItem("- C."+str(i+1)+": Sacred scroll #"+str(i+1)+" -", 
-                                    "menu_cupboard_scroll_show" , True, i)
-                        choose.AddItem("-Never mind-", "cupboard", True, "")
-                    $ choose.Show()
+                                choose.AddItem("- C."+str(i+1)+": Sacred scroll #"+str(i+1)+" -", "menu_cupboard_scroll_show" , i)
+                    $ choose.Show("cupboard")
 
 
                 label menu_cupboard_scroll_show:

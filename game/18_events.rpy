@@ -3275,6 +3275,7 @@ label event_16: #Учебники доставлены
         $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                                                            #SNAPE
         show screen s_head2
         sna2 "I don't want to slip on... and crack your skull."
+        hide screen s_head2 
         m "Of course, no problem."
         $ renpy.play('sounds/door.mp3')
         m "..."

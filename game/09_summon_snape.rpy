@@ -69,6 +69,7 @@ label summon_snape:
                 $snape("~06//Um... if that's all, good night.")
                 play music "music/Music for Manatees.mp3" fadein 1 fadeout 1
 
+            label snape_nothing_exit:
             $ snape_busy = True
 #            hide screen snape_02 #Snape stands still.
 #            hide screen bld1
@@ -359,7 +360,7 @@ label special_date_with_snape_02: #TAKES PLACE AFTER SECOND VISIT FROM HERMIONE.
     if jerk_off_session:
         $sna_head_state = 17
         sna_head_main "Really? I thought you didn't give a fuck..."
-        m "to a certain degree..."
+        m "To a certain degree..."
         $sna_head_state = 7
         sna_head_main "............."
     $sna_head_state = 2
@@ -784,5 +785,5 @@ label not_today:
     elif one_out_of_three == 3:
         sna "Sorry, I have other plans. Maybe some other time?"
     
-    jump snape_ready
+    jump snape_nothing
 

@@ -1,4 +1,11 @@
-﻿1.3
+﻿1.4
+* New: Added a part of the storyline with a new character (a half dozen events of different duration, a new character, chibis)
+* New: Gifts, chat with a new character.
+* New: the Music for a new character.
+* New: a New item in  Dahrs Magazine
+* New: Changed the display of statistics (statistics can be displayed several characters)
+* Fix: Removed not used music, pictures (archive volume decreased by approx. 10%)
+1.3
 * New: Added new events at high levels of depravity in several private services (events on the 4th star) 
 * New: Added quest learning Genie
 * New: Rewritten module working with displaying characters
