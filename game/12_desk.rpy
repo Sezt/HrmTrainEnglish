@@ -22,7 +22,7 @@ label menu_reading_book:
                     if event.prevInList.GetValue("block")!=event.GetValue("block") or event.prevInList.IsDone():
                         jump reading_book_xx
                     else:
-                        m "This book is still too strong for me."
+                        m "This book is still too hard for me."
                         hide screen gift
                         jump books_list
                 else:
@@ -140,7 +140,7 @@ label desk:
         #     jump jerk_off
         "-Jerk off-" if not day < 5:
             jump jerk_off 
-        "- Дремать -" if daytime and not day == 1:
+        "-Take a nap-" if daytime and not day == 1:
             jump night_start
         "-Go to sleep-" if not daytime and not day == 1:
             jump day_start
@@ -205,7 +205,7 @@ label reading_book_xx:
     if s_reading_lvl>0:
         $ speed_dummies = Rand([60,30,20][s_reading_lvl-1]//turbo)  # Массив содержит размер интервала для расчета вероятности. Первая книга 10/60 шансов прочитать доп. главу, вторая 10/30, 3-я 10/20 . В режиме турбо интервал уменьшается вдвое
         if speed_dummies <= 10: #Success.
-            ">Using techniques learned your initial speed reading, you rationally use time and continue to read."
+            ">Using speed reading techniques, you rationally use your time and continue to read."
             call chap_finished_xx
             call chapter_check_book_xx #Checks if the chapter just finished was the last one.
 #            ">There are still some chapters left."
@@ -352,7 +352,7 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
 
         if event.Name=="book_06":
             g4 "What kind of garbage! I hate the person who wrote it!"
-            m "However, all these rape led me to a couple of ideas..."
+            m "However, all the rape led me to a couple of ideas..."
 
 
         if event.Name=="book_07":
