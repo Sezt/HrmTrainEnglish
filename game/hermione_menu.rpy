@@ -795,31 +795,31 @@ label hermione_bookbuying:
         her "Excuse me?"
         m "I need your textbooks."
         $herView.hideshowQQ( "body_14.png", pos )
-        her"But why would you, Albus Dumbledore, tutorials simple apprentice?"
+        her"But why would you, Albus Dumbledore, need school textbooks?"
         m "Hmm, you know..."
-        m "I spent complicated magic research."
+        m "I am working on complicated magic research."
         m "But recently, they are deadlocked."
         m "And I decided to use a last resort."
         m "I talked to Finch."
         $herView.hideshowQQ( "body_205.png", pos )
         her "What?!"
         m "Yes, with {i}thus{/i}."
-        m "He told me that I should return to the roots."
+        m "He told me that I should return to the basics."
         m "That truth is at the beginning, and similar crap."
         $herView.hideshowQQ( "body_09.png", pos )
         her "..."
-        m "So I want to repeat all the material from the beginning."
-        m "So... lend your books?"
+        m "So I want to relearn all the material from the beginning."
+        m "So... lend me your books?"
         $herView.hideshowQQ( "body_06.png", pos )
         her "Professor..."
         $herView.hideshowQQ( "body_14.png", pos )
-        her "Of course, I would have gladly donated their books to the benefit of science!"
+        her "Of course, I would have gladly donated the books for the benefit of science!"
         $herView.hideshowQQ( "body_07.png", pos )
-        her "But you understand that I need to do now than ever."
+        her "But you understand that I need them now more than ever."
         $herView.hideshowQQ( "body_11.png", pos )
         her "Why don't you order them on osazone?"
         m "Where, sorry?"
-        her "On osazone. Have you never heard of cial store osazone.mag?"
+        her "On osazone. Have you never heard of online store osazone.mag?"
         her "The largest magic store with worldwide delivery?"
         m "That Sounds... Familiar. Even too familiar."
         m "You know, I'm not too familiar with all this, could you make an order for me?"
@@ -827,11 +827,11 @@ label hermione_bookbuying:
         her "Of course. What books are you interested in?"
         m "All the books on all subjects that are taught in this school."
         $herView.hideshowQQ( "body_10.png", pos )
-        her "Well, I think it would cost thousands of not less than three..."
+        her "Well, I think it would cost thousands, if not at least three..."
         m "..."
-        g4 "{size=-4}Expensive as costs me yours \"training\", little bitch...{/size}" #маленький размер
-        g4 "{size=-4}Hell, maybe I might stop on the route, where I'm just doing you a whore, selling your ass for points?{/size}" #маленький размер
-        g9 "Ah, elections..."
+        g4 "{size=-4}Your \"training\" is becoming very expensive, little bitch...{/size}" #маленький размер
+        g4 "{size=-4}Hell, maybe I should stop on the route, where I'm just making you a whore, selling your ass for points?{/size}" #маленький размер
+        g9 "Ah, choices..."
         $herView.hideshowQQ( "body_08.png", pos )
         her "You said something?"
         m "No, I was just pondering over the choice of School policies...."
@@ -846,17 +846,17 @@ label hermione_bookbuying:
         $herView.hideshowQQ( "body_13.png", pos )
         her "What?"
         m "Ahem, no matter."
-        m "In General, thanks for the help. I'll let you know when I will get the correct amount."
+        m "Anyway, thanks for the help. I'll let you know when I got the correct amount."
         $herView.hideshowQQ( "body_06.png", pos )
         her "Always happy to help."
         $ teacher_jinn_quest = 4
         jump hermione_main_menu
         
     elif teacher_jinn_quest == 4 and gold >= 3000:
-        m "I'm about buying textbooks, miss Granger."
+        m "It's about buying textbooks, miss Granger."
         m "I have the correct amount."
         $herView.hideshowQQ( "body_06.png", pos )
-        her "Well, then I will immediately go and order all necessary."
+        her "Well, then I will immediately go and order all you need."
         # гермиона уходит
         hide screen bld1
         $herView.hideQ( Dissolve(.3) )
@@ -880,7 +880,7 @@ label hermione_bookbuying:
         m "..."
         m "I wonder how many hookers you could buy with that money?"
         m "..."
-        m "We should distort."
+        m "We should find out." #Not sure about this one.
                         
         if daytime:
             jump night_main_menu
