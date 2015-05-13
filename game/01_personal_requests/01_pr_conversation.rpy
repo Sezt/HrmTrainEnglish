@@ -345,41 +345,41 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                             m "Damn, how dare you, girl! I will decide when and what I do."
                             $herView.hideshowQQ( "body_13.png", pos )
                             her "Sorry, Professor."
-                            her "Well, I heard two girls talking in the bedroom, as they put in their mouths guys."
+                            her "Well, I heard two girls in the bedroom talking about how they take their boyfriends in their mouths."
                             $herView.hideshowQQ( "body_50.png", pos )
                             her "Of course, they are not from Gryffindor, sir!"
-                            m "Of course. Gryffindor girls take nothing in his mouth."
+                            m "Of course. Gryffindor girls take nothing in their mouth."
                             $herView.hideshowQQ( "body_120.png", pos )
-                            her "All it is, sir. We are too proud for that and ..."
+                            her "You are right, sir. We are too proud for that and ..."
                             m "Miss Granger!"
                             $herView.hideshowQQ( "body_55.png", pos )
                             her "Sir?"
-                            m "This is how you earn 15 points?"
-                            her "Excuse me, sir! .. Well, one of them, blonde, told me that her boyfriend cums so much that she even pours from the nose."
+                            m "Is this how you earn 15 points?"
+                            her "Excuse me, sir! .. Well, one of them, a blonde, talked about how her boyfriend cums so much that it even pours from her nose."
                             $herView.hideshowQQ( "body_55.png", pos )
-                            her "Well, if the truth, sir, it just boasted before the brunette."
-                            her "There are not so many sperm, she just specially stiffened to sperm hit in the nose."
+                            her "Well, to tell you the truth, sir, she must just have boasted to the brunette."
+                            her "There is never that much sperm, she must have taken it directly in the nose."
                             m "How do you know, Miss Granger?"
                             m "You also took part in this?"
                             $herView.hideshowQQ( "body_103.png", pos )
-                            her "No, sir, I do not do this! I just know ... I have my sources."
+                            her "No, sir, I do not do that! I just know ... I have my sources."
                             m "Sources of sperm? Hehe."
                             $herView.hideshowQQ( "body_30.png", pos )
-                            her "Argh! If you have something to say so, sir, I'll just leave."
-                            m "Miss Granger! You promised to tell me something, but so far I have not heard anything."
-                            m "A little more, I finally give up on you, and you do not get points."
+                            her "Argh! If you are going to talk like that, sir, I'll just leave."
+                            m "Miss Granger! You promised to tell me something interesting, but so far I have not heard anything."
+                            m "More of this and I will give up on you and you do not get any points."
                             $herView.hideshowQQ( "body_28.png", pos )
-                            her "Just do not knock me down, sir. Okay?"
+                            her "Give me a chance, sir. Okay?"
                             $herView.hideshowQQ( "body_56.png", pos )
-                            her "Well ... One girl confessed to me that she likes to go without underwear."
-                            her "When she walks down the stairs and guys look below her skirt, she feels ... she is excited, sir."
+                            her "Well ... One girl confessed to me that she likes to walk around without underwear."
+                            her "When she walks down the stairs and guys look up her skirt, she feels ... she is excited, sir."
                             m "{size=-4}(Oh, that's better...){/size}"
 
                             $ d_flag_01 = True #If TRUE genie jerks off under the desk.    
                             $herView.hideQ()
                             hide screen blktone
                             with d3
-                            ">You put your hands under the table and grasped cock..."
+                            ">You put your hands under the table and grasp your cock..."
                             hide screen blktone8
                             with d3
                             hide screen genie
@@ -390,67 +390,67 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                             $ pos = POS_370
 
                             $herView.hideshowQQ( "body_122.png", pos )
-                            her "There is another girl..."
-                            her "When she was in Hogsmeade, she did something with dwarf..."
+                            her "There is this other girl..."
+                            her "When she was in Hogsmeade, she did something with a dwarf..."
                             m "{size=-4}(What a slut ... ah ... yes ...){/size}"
                             her "And two other girls..."
                             $herView.hideshowQQ( "body_187.png", pos )
-                            her "They masturbated each other at recess. And the guys looked at it. It's just disgusting, Professor!"
+                            her "They fingered each other at recess. And the guys watched. It's just disgusting, Professor!"
                             m "{size=-4}(Oh, yeah-e-ah ... I'm sure it was a sight!){/size}"
                             $herView.hideshowQQ( "body_118.png", pos )
-                            her "And then that little girl. They say she goes, put a carrot in his a... well, you understand me."
-                            her "It's like, she develops ... so that it was easier to go..."
-                            m "{size=-4}(Yeah ... that's because ... slut slut diligent ... more!){/size}"
+                            her "And then this little girl. They say, she puts a carrot in her a... well, you know."
+                            her "It's like she practices ... so that it will be easier to get..."
+                            m "{size=-4}(Yeah ... that's it ... a diligent slut ... more!){/size}"
                             $herView.hideshowQQ( "body_68.png", pos )
-                            her "And another girl, she jerk off once the two of..."
+                            her "And another girl, she jerked off two at once..."
                             m "{size=-4}(Yes! Yes!){/size}"
                             $herView.hideshowQQ( "body_56.png", pos )
-                            her "And then knelt down and took in his mouth from a third..."
-                            m "{size=-4}(Oh, whores, I now gonna...){/size}"
+                            her "And then knelt down and took a third in her mouth..."
+                            m "{size=-4}(Oh, whores, I'm gonna...){/size}"
                             $herView.hideshowQQ( "body_122.png", pos )
                             her "That's all, Professor."
                             g4 "What?!"
                             $herView.hideshowQQ( "body_111.png", pos )
                             her "You pay me 15 points for the story. But the end is worth the same amount."
-                            g4 "Small stuff!"
+                            g4 "Little bitch!"
                             menu: 
-                                "\"Get nothing!\"":
+                                "\"You get nothing!\"":
                                     with d3
                                     hide screen genie_jerking_off
                                     show screen genie
                                     with d3
-                                    m "Get nothing!"
+                                    m "You get nothing!"
                                     m "No points!"
                                     $herView.hideshowQQ( "body_05.png", pos )
-                                    her "Very well, Professor! In this case, do not expect that I will continue to meet your every whim!"
+                                    her "Very well, Professor! In that case, do not expect that I will continue to meet your every whim!"
                                     $hermi.liking -= 30
                                     jump request_01_done
-                                "\"Fair Enough. That's all...\"":
-                                    m "Argh! Well, all ... Enough."
+                                "\"Fair. That's good enough...\"":
+                                    m "Argh! Well, allright ... good enough"
                                     with d3
                                     hide screen genie_jerking_off
                                     show screen genie
                                     with d3
                                     $herView.hideshowQQ( "body_04.png", pos )
-                                    her "As you say, sir. I'm ready to get their [current_payout] points."
-                                "\"Go on, will you points!\"":
+                                    her "As you say, sir. I'm ready to get the [current_payout] points."
+                                "\"Go on, you will get your points!\"":
                                     $current_payout+=15
-                                    m "Do not stop, I'll give you points! Go Ahead!"
+                                    m "Do not stop, I'll give you the points! Go Ahead!"
                                     $herView.hideshowQQ( "body_127.png", pos )
-                                    her "Yes, sir. These whores, sir, every day they suck a couple of guys and ask them to put an end to the face."
-                                    her "And go with the face smeared with sperm. They say that it is good for the skin."
-                                    m "{size=-4}(Да, давай,... продолжай!){/size}"
-                                    her "And Slytherin girl promised the guys from the Quidditch team that will wake them blowjob week if they win."
-                                    her "And yet, sir, told one girl wanker one teacher..." 
-                                    her "And then immediately went to another wank..."
+                                    her "Yes, sir. These whores, sir, every day they suck a couple of guys and ask them to cum on their face."
+                                    her "And go around with their face covered in sperm. They say that it is good for the skin."
+                                    m "{size=-4}(Yeah, come on...more!){/size}"
+                                    her "And this Slytherin girl promised the guys from the Quidditch team that she will blow them all if they win."
+                                    her "Also, sir, one girl wanked a teacher..." 
+                                    her "And then immediately went to another and wanked him..."
                                     m "{size=-4}(Oh, yeah-ah ... these whores!){/size}"
                                     $herView.hideshowQQ( "body_78.png", pos )
-                                    her "And then, I heard there was a new game. it is called \"Guess hole\"."
+                                    her "I heard there was a new game. it is called \"Guess a hole\"."
                                     m "{size=-4}(Guess ... Ahh ... yes ....){/size}"
                                     $herView.hideshowQQ( "body_58.png", pos )
-                                    her "In wooden partitions make a hole below the belt, where several girls expose their..."
+                                    her "They make a hole in a wooden partition, where several girls expose their..."
                                     her "Charms, sir. And if the guy guessed who it is..."
-                                    m "{size=-4}(Oh, yeah ... yeah ... I have ... already!){/size}{size=+2} * Argh! *{/size}"
+                                    m "{size=-4}(Oh, yeah ... yeah ... I will ... already!){/size}{size=+2} * Argh! *{/size}"
                                     $herView.hideQQ()
                                     show screen white 
                                     pause.1
@@ -473,7 +473,7 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                     show screen bld1
                                     with d3
                                     $herView.showQQ( "body_64.png", pos )
-                                    her "Oh, you are so powerfully ejaculate, Professor! Did you like it?"
+                                    her "Oh, what a powerfull ejaculate, Professor! Did you like it?"
                                     show screen genie_jerking_sperm_02
                                     with d3
                                     g4 "Oh, shit, it's so... It's incredibly fucking amazing!..."
@@ -481,19 +481,19 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                     #show screen genie_jerking_off
                                     with d3
                                     $herView.hideshowQQ( "body_111.png", pos )
-                                    her "I'm glad the Professor that you commit. And yet, can I get your points? Just [current_payout] points."
+                                    her "I'm glad that you came Professor. But still, can I get my points? Just [current_payout] points."
                                     m "Oh-x... Ufff... Yes, you can but..."
-                                    m "... what's up with the game \"Guess hole\"? You still have not told before."
+                                    m "... what's up with the game \"Guess a hole\"? You did not tell me."
                                     $herView.hideshowQQ( "body_46.png", pos )
-                                    her "You and so finished, sir. But if you want to learn..."
-                                    m "What ?! You again extortion points?"
+                                    her "You already finished, sir. But if you want to learn..."
+                                    m "What?! Are you extorting points again?"
                                     her "A total of 15 points, sir."
-                                    m "You run up, girl!"
+                                    m "You abuse me, girl!"
                                     $herView.hideshowQQ( "body_58.png", pos )
-                                    her "Excuse me, sir, then I'll just get my [current_payout] points and go."
+                                    her "I am sorry, sir, then I'll just get my [current_payout] points and go."
                                     menu: 
                                         "\"Go away!\"":
-                                            m "Go away. And remember me blackmail will not work!"
+                                            m "Go away. And remember blackmail will not work!"
                                             $herView.hideshowQQ( "body_58.png", pos )
                                             her "Yes,sir..."
                                         "\"Fair Enough. 15 points, tell me. But this is the last time!\"":
@@ -502,19 +502,19 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                                             $herView.hideshowQQ( "body_64.png", pos )
                                             her "Of course, I understand."
                                             $herView.hideshowQQ( "body_56.png", pos )
-                                            her "In general, if a guy whose guess is..."
-                                            her "Um ... well, guess whose it is, then she should give him the way he wants."
-                                            her "And if you did not guess, it is becoming common for the whole night."
-                                            m "Commin?"
+                                            her "In general, if a guy guesses..."
+                                            her "Um ... well, guesses whose it is, then she would have to let him have her anyway he wants."
+                                            her "And if he does not guess, he becomes common for the night."
+                                            m "Common?"
                                             her "Yes, sir. The girls take him to his bedroom and he has to do everything for them."
                                             m "?!..."
                                             $herView.hideshowQQ( "body_122.png", pos )
-                                            her "{size=+4}Absolutely{/size} everything that each of them will say, sir!"
+                                            her "{size=+4}Absolutely{/size} everything that each of them wants, sir!"
                                             m "Oh shit!"
-                                            her "Professor, I think you once again rises. If you want to continue, then only 15 Pts ..."
+                                            her "Professor, I think you rise once again. If you want to continue, then only 15 Pts ..."
                                             m "No !!! Enough for today!"
                                             $herView.hideshowQQ( "body_58.png", pos )
-                                            her "Of course, the professor."
+                                            her "Of course, professor."
                                     her "...................."
                                     hide screen genie_jerking_sperm_02
                                     with d3
@@ -569,8 +569,8 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
 
     if current_payout>=35:
         m "................................."
-        m "\"Guess the hole\", wow..." 
-        m "What did not come up with these sluts!"
+        m "\"Guess a hole\", wow..." 
+        m "What can't these sluts come up with!"
         $posHead=gMakePos( 390, 235 )
     
     
