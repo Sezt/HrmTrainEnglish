@@ -82,7 +82,7 @@ init:
         ("ball_dress", "The Ball Dress", 1500, "03_hp/18_store/01.png", 
             "Luxurious evening dress for special occasions", "gears", None ),
         ("badge_01", "\"S.P.E.W.\" Badge", 100, "03_hp/18_store/29.png", 
-            "Значок \"А.В.Н.Э.\". Simulary care...", "gears", None ),
+            "The \"S.P.E.W.\". club badge...", "gears", None ),
         ("nets", "Fishnet stockings", 700, "03_hp/18_store/30.png", 
             "Fishnet stockings. Contrary to popular belief, they were not invented by fisherman.", "gears", None ),
         ("miniskirt", "School miniskirt", 0, "03_hp/18_store/07.png", 
@@ -226,7 +226,7 @@ init:
 # Поскольку точка "DAPHENTER" предваряет вызов меню и ивентов ниже, никаких дополнительных условий в ивентах меню не требуется
         this.Where({"DAPHENTER"},"dap_interlude_02").AddStep("dap_interlude_02", ready=lambda e: this.dap_request_02._finishCount>=1,constVals={"members":{"daphne"}})
 
-        li={"02":["\"Show yourself!\"","#(It's getting hot. Offer her something to remove...)"]}
+        li={"02":["\"Show yourself!\"","#(It's getting hot. Offer her to remove something...)"]}
         for s in li:
                 this.AddEvent("dap_request_"+s+"::"+li[s][0], points={"daphne_private"}, constVals={"eventPlan":li[s][1], "members":{"daphne"}}, defVals={"heartCount": 0}) 
 
@@ -247,37 +247,37 @@ init:
 # и группы разделены книгами другой направленности  (другой block)
         tu=[
         
-            ("book_01::\"Copper book of spirit\"",            40, "03_hp/18_store/08.png", "This book describes the basic tricks to improve their efficiency.",
-                "chance 1 to 6, which I will complete additional Chapter, while working with Paperwork."),
-            ("book_02::\"Bronze book of spirit\"",         80, "03_hp/18_store/08.png", "This book describes the basic tricks to improve their efficiency.",
-                "chance 1 to 4, which I will complete additional Chapter, while working with Paperwork."),
-            ("book_03::\"Silver book of spirit\"",       90, "03_hp/18_store/08.png", "This book describes advanced techniques to improve their effectiveness.",
-                "chance are 1 in 2 that I will complete additional Chapter, while working with Paperwork. "),
-            ("book_04::\"Gold book of spirit\"",          100, "03_hp/18_store/08.png", "This book describes the expert tricks to improve their efficiency.",
+            ("book_01::\"Copper book of spirit\"",            40, "03_hp/18_store/08.png", "This book describes basic tricks to improve your efficiency.",
+                "1 in 6 chance I will complete an additional Chapter, while doing paperwork."),
+            ("book_02::\"Bronze book of spirit\"",         80, "03_hp/18_store/08.png", "This book describes basic tricks to improve your efficiency.",
+                "1 in 4 chance I will complete an additional Chapter, while doing paperwork."),
+            ("book_03::\"Silver book of spirit\"",       90, "03_hp/18_store/08.png", "This book describes advanced tricks to improve your efficiency.",
+                "1 in 2 chance I will complete an additional Chapter, while doing paperwork."),
+            ("book_04::\"Gold book of spirit\"",          100, "03_hp/18_store/08.png", "This book describes expert tricks to improve your efficiency.",
                 ""),
 
-            ("book_05::\"The tale of Galadriel. Book I.\"", 200, "03_hp/18_store/04.png", "This book tells the story of an elven Princess who defies the traditions of his people, and selects the shackles of its own destiny. Or all wrong?",
+            ("book_05::\"The tale of Galadriel. Book I.\"", 200, "03_hp/18_store/04.png", "This book tells the story of an elven Princess who defies the traditions of her people, and selects the shackles of her own destiny. Or something?",
                 "My imagination has improved."),          
-            ("book_05_b::\"The tale of Galadriel. Book II.\"",250, "03_hp/18_store/05.png", "This book tells the story of an elven Princess who defies the traditions of his people, and selects the shackles of its own destiny. Or all wrong?",
+            ("book_05_b::\"The tale of Galadriel. Book II.\"",250, "03_hp/18_store/05.png", "This book tells the story of an elven Princess who defies the traditions of her people, and selects the shackles of her own destiny. Or something?",
                 "My imagination has improved."),
 
             ("book_08::\"Speedreading  for dummies\"",     50, "03_hp/18_store/08.png", "This book contains a few basic techniques that will help you improve the skill of speed reading.",
-                "a great chance to read an extra Chapter, while reading."),
-            ("book_09::\"Speedreading  for amateurs\"",    90, "03_hp/18_store/08.png", "This book contains several of the expert techniques that will help you improve the skill of speed reading.",
-                "a great chance to read an extra Chapter, while reading."),
-            ("book_10::\"Speedreading  for experts\"",    150, "03_hp/18_store/08.png", "This book contains several of the expert techniques that will help you improve the skill of speed reading.",
-                "a great chance to read an extra Chapter, while reading."),
+                "A small chance to read an extra Chapter, while reading."),
+            ("book_09::\"Speedreading  for amateurs\"",    90, "03_hp/18_store/08.png", "This book contains several advanced techniques that will help you improve the skill of speed reading.",
+                "A medium chance to read an extra Chapter, while reading."),
+            ("book_10::\"Speedreading  for experts\"",    150, "03_hp/18_store/08.png", "This book contains several expert techniques that will help you improve the skill of speed reading.",
+                "A great chance to read an extra Chapter, while reading."),
             ("book_06::\"Game of Chairs\"",                 100, "03_hp/18_store/02.png", "The epic story of betrayal, murder and rape, and then several more murders, a little more betrayal and even more rape.",
-                "My imagination has improved.\nBut more I'm not going to read this crap!"),
+                "My imagination has improved.\nBut I'm not going to read more of this crap!"),
             ("book_07::\"My dear waifu\"",           300, "03_hp/18_store/03.png", "Relive the glory days at your school. Your sister Shi, the teacher, Miss Stevens or the mysterious girl from the library? Who will be your final \"waifu\"?",
                 ""),
-            ("book_12::\"Speedwriting for dummies\"",    30, "03_hp/18_store/08.png", "This book contains a few basic techniques that will allow you to quickly write.",
-                "шанс 1 к 6, что я завершу дополнительную главу, во время работы с отчетом. "),
-            ("book_13::\"Speedwriting for beginners\"",  90, "03_hp/18_store/08.png", "This book contains a few basic techniques that will allow you to quickly write.",
-                "шанс 1 к 4, что я завершу дополнительную главу, во время работы с отчетом. "),
-            ("book_14::\"Speedwriting for lovers\"",  100, "03_hp/18_store/08.png", "This book contains a few elementary methods that will allow you to quickly write.",
-                "шанс 1 к 2, что я завершу дополнительную главу, во время работы с отчетом."),
-            ("book_15::\"Speedwriting for advanced\"",130, "03_hp/18_store/08.png", "This book contains several advanced techniques that will allow you to quickly write.",
+            ("book_12::\"Speedwriting for dummies\"",    30, "03_hp/18_store/08.png", "This book contains a few basic techniques that will allow you to write faster.",
+                "1 in 6 chance I will complete an additional Chapter, while doing paperwork."),
+            ("book_13::\"Speedwriting for beginners\"",  90, "03_hp/18_store/08.png", "This book contains a several basic techniques that will allow you to write faster.",
+                "1 in 4 chance I will complete an additional Chapter, while doing paperwork."),
+            ("book_14::\"Speedwriting for lovers\"",  100, "03_hp/18_store/08.png", "This book contains a few advanced techniques that will allow you to write faster.",
+                "1 in 2 chance I will complete an additional Chapter, while doing paperwork."),
+            ("book_15::\"Speedwriting for advanced\"",130, "03_hp/18_store/08.png", "This book contains several advanced techniques that will allow you to write faster.",
                 "Now I'm a real wizard of Speedwriting..."),
            ]
 
