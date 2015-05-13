@@ -288,8 +288,8 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                 her "We will not only defend the rights of men."
                 m "Really?"
                 her" We will consistently speak out against injustice and unrighteousness"
-                if not this.flag_SCUKO_presented:
-                    $this.flag_SCUKO_presented=True
+                if not hermi._SCUKO_presented:
+                    $hermi.SetValue("SCUKO_presented",False)
                     her "We want now to call our society A.n.a.a.l."
                     g4 "What?! \"ANAL\"?!"
                     $herView.hideshowQQ( "body_05.png", pos )
