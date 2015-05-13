@@ -262,28 +262,28 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
             m "Yes, yes, sure..."
 
     elif hermi.whoring >= 12: 
-        her "Sir, you really called me here because these poor 5 points?"
-        her "I am sorry to spend time talking, which is almost nothing will bring."
+        her "Sir, you really called me here because of these measly 5 points?"
+        her "I am sorry to spend time talking, when it will give me almost nothing."
         $herView.hideshowQQ( "body_10.png", pos )
-        her "Maybe we will work with you something....mmm... interesting?"
-        her "In the sense of giving more points?"
+        her "Maybe we could do something more....mmm... interesting?"
+        her "Something that gives more points?"
         menu: 
-            "\"And what you want to do?\"":
-                m "And what you want to do, miss Granger?"
+            "\"And what do you want to do?\"":
+                m "And what do you want to do, miss Granger?"
                 $herView.hideshowQQ( "body_68.png", pos )
                 her "I do not know, sir. There are different options!"
                 jump new_personal_request
-            "\"Since when did you become to choose their assignments, Miss Granger?":
+            "\"Since when do you choose your own assignments, Miss Granger?":
                 $ SetHearts(4)
-                m "Since when did you become to choose their assignments, Miss Granger?\""
-                m "This seems to be here, I decide which service is paid."
-                m "So, today paid your story."
+                m "Since when do you choose your own assignments, Miss Granger?\""
+                m "Here I decide which service I pay you for."
+                m "So today I pay for your story."
                 $herView.hideshowQQ( "body_202.png", pos )
                 her "Excuse me, sir! Of Course."
                 m "And?"
                 $herView.hideshowQQ( "body_93.png", pos )
-                her "Well, I have everything, as always. I study a lot, sit up late in the library, exams coming up..."
-                her "Then meeting \"MRM\"... "
+                her "Well, as always. I study a lot, stay up late in the library, exams are coming up..."
+                her "Then a \"MRM\" meeting... "
                 her "By the way, we decided to extend our work further!" 
                 her "We will not only defend the rights of men."
                 m "Really?"
@@ -294,55 +294,55 @@ label new_request_01: #LV.1 (Whoring = 0 - 2)
                     g4 "What?! \"ANAL\"?!"
                     $herView.hideshowQQ( "body_05.png", pos )
                     her "Not \"anal\", sir!  A.n.a.a.l!"
-                    her "\"Alliance necessary African ants low-spirited!\""
+                    her "\"Alliance necessary African ants low-spirited!\"" #Is this supposed to be this weird
                     $herView.hideshowQQ( "body_12.png", pos )
-                    her "However, with a name yet to be decided..." #Цель
+                    her "However, the name is not yet final..." #Цель
                     g9 "Oh, it's just a wonderful name!"
                     $herView.hideshowQQ( "body_208.png", pos )
-                    her "You think?"
-                    g9 "Don't doubt, girl."
+                    her "You think so?"
+                    g9 "No doubt, girl."
                 else:
-                    g9 "Yes, I remembered you renamed in the alliance ana..."
+                    g9 "Yes, I remembered you renamed the society ana..."
                     $herView.hideshowQQ( "body_30.png", pos )
-                    her "Not in the society ana-, sir! But in A.n.a.a.l!"
+                    her "Not the ana-society, sir! But A.n.a.a.l!"
                     her "Alliance necessary African ants low-spirited!"
                     $herView.hideshowQQ( "body_12.png", pos )
-                    her "However, with a name yet to be decided..."
+                    her "However, the name is not yet final..."
                     her "............................."
                 $herView.hideshowQQ( "body_16.png", pos )
                 her "Well, that's probably all."
                 m "Thats all?"
                 if not end.IsEnding(const_ENDING_STRONG_GIRL):
                     her "Yes, sir. Please pay me and I'll go - I have things to do."
-                    m "Hmm... today you are not in the mood, miss Granger."
+                    m "Hmm... your not in the mood today, miss Granger?"
                     $herView.hideshowQQ( "body_14.png", pos )
-                    her "Well, Professor, you had asked, I told. If you asked other service..."
+                    her "Well, Professor, you asked, I answered. If you had asked for another service..."
                     m "Okay, okay..."
                 else:
                     $herView.hideshowQQ( "body_14.png", pos )
-                    her "Well, five points, I'm sure enough."
-                    m "You again, young lady?"
+                    her "OK, five points, that should do."
+                    m "Come again, young lady?"
                     $herView.hideshowQQ( "body_102.png", pos )
-                    her "Sir, log in my position. I am ready to tell you something about the depraved girls..."
+                    her "Sir, see things from my perspective. I am ready to tell you something about the depraved girls..."
                     $herView.hideshowQQ( "body_189.png", pos )
-                    her "And you touched..." 
+                    her "And you could touch youself..." 
                     $herView.hideshowQQ( "body_101.png", pos )
-                    her "And can even talk to until you rapidly not cum."
+                    her "And I could even talk until you cum slowly."
                     m "But?..."
                     $herView.hideshowQQ( "body_58.png", pos )
                     her "But all of this should be paid fairly!"
-                    m "As you become selfish, miss Granger."
-                    her "Not at all, sir. I just know a price. And an additional 15 points for the story of depraved girls - quite fair fee."
+                    m "Have you become selfish, miss Granger?"
+                    her "Not at all, sir. I just know the price. An additional 15 points for the story of depraved girls - quite a fair fee."
                     menu: 
                         "\"No!\"":
                             m "You're free to go, miss Granger!"
-                            her "As you say, sir. In this case, I would like to receive your payment."
-                        "\"Well, another 15 points. Tell me!":
+                            her "As you say, sir. In this case, I would like to receive my payment."
+                        "\"Alright, another 15 points. Tell me!":
                             $current_payout+=15
                             m "Okay, I'll pay you. Tell me!"
                             $herView.hideshowQQ( "body_102.png", pos )
-                            her "Yes, sir. And you can start fucking around."
-                            m "Damn, you got him off, girl! I will decide when and what do I do."
+                            her "Yes, sir. And you can start touching yourself."
+                            m "Damn, how dare you, girl! I will decide when and what I do."
                             $herView.hideshowQQ( "body_13.png", pos )
                             her "Sorry, Professor."
                             her "Well, I heard two girls talking in the bedroom, as they put in their mouths guys."
