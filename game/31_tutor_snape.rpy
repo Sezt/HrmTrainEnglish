@@ -18,7 +18,7 @@ label snape_tutor_1:
     
     show screen bld1
     with d3
-    m "... speaking of Granger girl..."
+    m "... speaking of the Granger girl..."
     $ s_head_xpos = 330 # x = 330,                                                                              # SNAPE
     $ s_head_ypos = 380 #Right bottom corner: y = 340. y = 380 - no hand.       # SNAPE
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
@@ -26,8 +26,8 @@ label snape_tutor_1:
     sna2 "..."   #snape
     $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                         # SNAPE
     show screen s_head2 
-    sna2 "But the evening promised to be a pleasant..."    #snape
-    sna2 "What she got this time?" #snape
+    sna2 "But the evening promised to be pleasant..."    #snape
+    sna2 "What is she doing this time?" #snape
     hide screen s_head2
     m "I'm afraid I can't teach her."
     $ s_sprite = "03_hp/10_snape_main/snape_10.png"                                         # SNAPE
@@ -36,46 +36,46 @@ label snape_tutor_1:
     sna2 "I bet you did not last ten minutes." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                         # SNAPE
     show screen s_head2
-    sna2"Although I can understand you. And even a little sympathy..." #snape
+    sna2 "Although I do understand you. And even have a little sympathy..." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_08.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Damn, she again tomorrow \"defense against the dark arts\"." #snape
+    sna2 "Damn, she has \"defense against the dark arts\" again tomorrow." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_16.png"                                         # SNAPE
     show screen s_head2
     sna2 "Pour me another." #snape
     hide screen s_head2
-    m "I didn't say give up."
+    m "I didn't say that I give up."
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
     show screen s_head2
     sna2 "Hm?" #snape
     hide screen s_head2
-    m "The problem is that anything I can't teach."
+    m "The problem is that I can't teach anything."
     m "You know, I don't have to teach her anything worthwhile."
     m "But I should at least pretend to have something useful."
-    m "I'm afraid that the trick with Finch won't work twice."
+    m "I'm afraid that Finch Trick won't work twice."
     $ s_sprite = "03_hp/10_snape_main/snape_05.png"                                         # SNAPE
     show screen s_head2
-    sna2 "\"The trick Finch\"?" #snape
+    sna2 "\"The Finch Trick\"?" #snape
     hide screen s_head2
     m "... you don't want to know, trust me."
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Хм." #snape
+    sna2 "Hmm." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                         # SNAPE
     show screen s_head2
-    sna2 "In General, you mean me to be your tutor?" #snape
+    sna2 "You are talking about being able to tutor her?" #snape
     hide screen s_head2
     m "Look, I am not thrilled."
-    m "But if I teach it, it will greatly simplify our task with you."
+    m "But if I could teach something, it would greatly simplify our task with her."
     $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Yes, I get it, got it." #snape
+    sna2 "Yes, I get it." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
     show screen s_head2
     sna2 "Hmm..."
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                         # SNAPE
     show screen s_head2
-    sna2 "However, we can go the other way." #snape
+    sna2 "However, there is an easier route." #snape
     hide screen s_head2
     m "How, I wonder?"
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                         # SNAPE
@@ -85,10 +85,10 @@ label snape_tutor_1:
     m "..."
     g4 "You called me a nerd?"
     g4 "YOU FUCKING CALLED ME A NERD??!"
-    g4 "YES, I WORE GLASSES, AND WAS ALWAYS SITTING BEHIND BOOKS, BUT THAT IS NO REASON TO CALL ME \"THE NERD\"!!!"
-    g4 "AND WHERE ARE NOW THOSE OF PITCHING THAT GRABBED MY GARTER?! I BET LICK ANUS SOME GREASY WIFE OF THE SULTAN!"
+    g4 "YES, I WORE GLASSES, AND WAS ALWAYS SITTING BEHIND BOOKS, BUT THAT IS NO REASON TO CALL ME A \"NERD\"!!!"
+    g4 "AND WHERE ARE THOSE BASTARDS THAT GAVE ME WEDGIES NOW?! I BET THEY LICK THE ANUS OF THE SULTANS GREASY WIFE!"
     g4 "AND EVEN THE SULTAN HIMSELF!"
-    g4 "AND I FUCK IN ALL HOLES FUCKING PRINCESS OF AGRABAH!!!"
+    g4 "AND I FUCKED ALL THE HOLES OF THE FUCKING PRINCESS OF AGRABAH!!!"
     g4 "NOW WHO'S THE LOSER??!"
     $ s_sprite = "03_hp/10_snape_main/snape_11.png"                                         # SNAPE
     show screen s_head2
@@ -99,51 +99,51 @@ label snape_tutor_1:
     show screen s_head2
     sna2 "..." # snape
     hide screen s_head2
-    m ".. You said {i}forbidden word{/i}?"
+    m ".. You said the {i}forbidden word{/i}?"
     $ s_sprite = "03_hp/10_snape_main/snape_11.png"                                         # SNAPE
     show screen s_head2
     sna2 "\"Forbidden word\"?" # snape
     hide screen s_head2
-    m "Yes, the letter \"n\"."
+    m "Yes, the \"n-word\"."
     $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                         # SNAPE
     show screen s_head2
     sna2 "You mean..." # snape
     hide screen s_head2
     g4 "SHUT up!!!"
-    m "There are scars that do not heal even after nine thousand years."
-    m "Just don't mention {i}is{/i} the word aloud, and we should be fine, right?"
+    m "There are scars that never heal even after nine thousand years."
+    m "Just don't mention {i}that{/i} word aloud, and we should be fine, alright?"
     $ s_sprite = "03_hp/10_snape_main/snape_28.png"                                         # SNAPE
     show screen s_head2
     sna2 "You know, it sounds funny." #snape
     hide screen s_head2
-    g4 "Kill." #поставить маленький шрифт, сейчас мне лень
+    g4 "Die." #поставить маленький шрифт, сейчас мне лень
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Okay, 't be offended. Not to say the word with the letter \"n\", okay." #snape
+    sna2 "Okay, don't be offended. I am not going to say the \"n-word\", okay." #snape
     hide screen s_head2
-    m "That's nice. So what were we talking about?"
+    m "Okay then. So what were we talking about?"
     $ s_sprite = "03_hp/10_snape_main/snape_23.png"                                         # SNAPE
     show screen s_head2
-    sna2 "In General, there is... a potion that can help you." #snape
+    sna2 "There is... a potion that can help you." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Just drink it, and you will be able to learn the whole school program for the night" #snape
+    sna2 "Just drink it, and you will be able to learn the whole school program overnight" #snape
     hide screen s_head2
     g9 "Sounds cheat."
-    m "What is a meaning in all this school if all you can learn literally overnight?"
+    m "What is the meaning of this school if you can learn everything literally overnight?"
     $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Well, first of all, most of the ingredients are very rare and they need a lot of damn money." #snape
+    sna2 "Well, first of all, most of the ingredients are very rare and they cost a lot of damn money." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Secondly, the process of cooking a damn complicated." #snape
-    sna2 "Oh, and third, the very famous recipe is not for everyone." #snape
+    sna2 "Secondly, the process of cooking it is damn complicated." #snape
+    sna2 "Oh, and finally, the very powerfull recipe is not for everyone." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_02.png" 
-    sna2 "Judge for yourself - if people find out the recipe, then nobody will need schools, and this sea of lost money." #snape
+    sna2 "Think about it - if people find out about the recipe, then nobody will need schools, and that is a lot of lost money." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"
-    sna2 "In fact, almost the entire economy of the mages kept on magic schools." #snape
+    sna2 "In fact, almost the entire mage economy is kept going by magic schools." #snape
     hide screen s_head2
-    m "Okay, okay, I get it. Big shots don't want this potion has become a popular."
+    m "Okay, okay, I get it. Big shots don't want this potion to become popular."
     $ s_sprite = "03_hp/10_snape_main/snape_02.png"                                         # SNAPE
     show screen s_head2
     sna2 "Exactly." #snape
@@ -153,22 +153,22 @@ label snape_tutor_1:
     show screen s_head2
     sna2 "Exactly." #snape
     hide screen s_head2
-    m "The beauty of it. As if this game had a few issues."
-    m "And how expensive is this joy?"
+    m "Lovely. At last something that is straighforward."
+    m "And how expensive is this wonder?"
     $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Well... Some of prohibited ingredients, so I will have to attract their channels..." #snape
+    sna2 "Well... Some of the ingredients are prohibited, so I will have to use the right channels..." #snape
     $ s_sprite = "03_hp/10_snape_main/snape_23.png"
-    sna2 "So, I think, ten thousand." #snape
+    sna2 "So, I would think, ten thousand." #snape
     show screen s_head2
     m "..."
-    m "You threw yourself a couple of thousand, Yes?"
+    m "You can knock of a couple of thousand, right?"
     $ s_sprite = "03_hp/10_snape_main/snape_30.png"                                         # SNAPE
     show screen s_head2
-    sna "How could you think that?!" #snape
+    sna "Why would you think that?!" #snape
     $ s_sprite = "03_hp/10_snape_main/snape_27.png"                                         # SNAPE
     show screen s_head2
-    sna2 "We're friends..." #snape
+    sna2 "Because we are friends..." #snape
     hide screen s_head2
     m "..."
     $ s_sprite = "03_hp/10_snape_main/snape_27.png"                                         # SNAPE
@@ -183,7 +183,7 @@ label snape_tutor_1:
     m "..."
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
     show screen s_head2
-    sna2 "Look, I can't throw." #snape
+    sna2 "Look, I can't go any lower." #snape
     hide screen s_head2
     m "..."
     $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                         # SNAPE
@@ -195,14 +195,14 @@ label snape_tutor_1:
     show screen s_head2
     sna2 "Seven thousand. My last word." #snape
     hide screen s_head2
-    g9 "Gorgeous! Agreed."
-    "Job updated! To get seven thousand galleons for Snape."
-    m "Only it's still pretty damn healthy heap of gold."
+    g9 "Beautiful! Agreed."
+    "Job updated! Get seven thousand galleons for Snape."
+    m "It's still a pretty damn big heap of gold."
     g9 "I think I need to look for a job on the side."
-    g9 "Rumor has it that gigolo is well earned..."
+    g9 "Rumor has it that gigolos earn pretty well..."
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
     show screen s_head2
-    sna2 "You cannot leave this room and nobody needs to see, remember?" #snape
+    sna2 "You cannot leave this room and nobody can see you, remember?" #snape
     m "..."
     m "Nerd."
     hide screen s_head2
@@ -223,7 +223,7 @@ label snape_tutor_1:
     
 label snape_tutor_2:
     #вступление пределать бы
-    g9 "Here the gold for textbooks."
+    g9 "Here is the money for the potion."
     $ renpy.play('sounds/money.mp3')
     $gold -=7000
     "You gave Snape 7000 galleons."
@@ -238,13 +238,13 @@ label snape_tutor_2:
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
     show screen snape_main
     with d3 
-    sna "Brew potions that level takes a heck of a lot of time and effort..."
+    sna "Brewing potions of that level take a heck of a lot of time and effort..."
     hide screen snape_main                                                                                                                   #SNAPE
     with d3             #snape
     $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                         # SNAPE
     show screen snape_main  
     with d3 
-    sna "And it is very perishable. So keep books at the ready." #snape
+    sna "And it is very perishable. So keep your books at the ready." #snape
     m "... books?"
     hide screen snape_main                                                                                                                   #SNAPE
     with d3
@@ -253,7 +253,7 @@ label snape_tutor_2:
     with d3 
     sna "Well, Yes. Textbooks." #snape
     m "And weren't you going to lend them to me for old time's sake?"
-    sna "What makes you think that I am?" #snape
+    sna "What makes you think that I could do that?" #snape
     m "Uh, well..." #jinnie
     g4 "Dammit." #jinnie
     hide screen snape_main                                                                                                                   #SNAPE
@@ -261,9 +261,9 @@ label snape_tutor_2:
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
     show screen snape_main  
     with d3 
-    sna "Even if I had lying around and a couple of old books on potions, it won't be enough." #snape
-    m "Then any idea where to get them?" #jinnie
-    sna "Well, usually in such cases go to Diagon alley, but..."
+    sna "Even if I didn't need them. I only have a couple of old books on potions, it won't be enough." #snape
+    m "Any idea where I can get them?" #jinnie
+    sna "Well, usually in such cases you go to Diagon alley, but..."
     m "But?"
     hide screen snape_main                                                                                                                   #SNAPE
     with d3
@@ -271,22 +271,22 @@ label snape_tutor_2:
     show screen snape_main
     with d3 
     sna "But I'm too busy, and you're not allowed to leave the tower."
-    m "How about to send miss Granger carry bags with books, while we were sipping wine by the fireplace?"
+    m "How about you send miss Granger to fetch the books, while we are sipping wine by the fireplace?"
     hide screen snape_main                                                                                                                   #SNAPE
     with d3
     $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                         # SNAPE
     show screen snape_main
     with d3 
-    sna "Don't work. Diagon alley far enough, and to transgressively on the territory of Hogwarts impossible."
-    g9 "It's not that bad. Transvection was never a good idea, trust me on this."
+    sna "Won't work. Diagon alley is too far away, and teleportation on the Hogwarts grounds is impossible."
+    g9 "Alright. Teleportation is never a good idea, trust me on this."
     hide screen snape_main                                                                                                                   #SNAPE
     with d3
     $ s_sprite = "03_hp/10_snape_main/snape_05.png"                                         # SNAPE
     show screen snape_main  
     with d3 
     sna "..?"
-    m "In General, I'll try and work something out."
-    "Quest updated: is it necessary to get textbooks"
+    m "I'll try and work something out."
+    "Quest updated: You need to get textbooks"
     sna "Well, good luck."
     $ teacher_jinn_quest = 3
     $ snape_busy = True
