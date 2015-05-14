@@ -114,7 +114,7 @@ label new_request_02: #SHOW ME YOUR Трусики
                 her "......................."
                 pause
             "-Stare at her panties-":
-                ">That's a plain girlish underwear..."
+                ">That's plain girlish underwear..."
                 pause
                 $herView.hideshowQQ( "body_51.png", pos )
                 her "......................."
@@ -191,70 +191,70 @@ label new_request_02: #SHOW ME YOUR Трусики
                         $herView.hideshowQQ( "body_61.png", pos )
                         her ".............................."
                         $herView.hideshowQQ( "body_62.png", pos )
-                        her "Then I don't appreciate you being mean to me, professor."   
+                        her "I don't appreciate you being mean to me, professor."   
             "\"Good! Five points!\"":
                 pass           
     elif hermi.whoring >= 13: #Хотя бы один раз дрочила
         $herView.hideshowQQ( "body_12.png", pos )
-        her "Sir, you really called me here because of these accidents 5 points?"
-        her "I feel sorry for wasting time on such a service. This is for year students, sir!"
+        her "Sir, you really called me here because of these 5 points?"
+        her "I feel sorry for wasting time on such a service. This is for year 1 students, sir!"
         m "Really?"
         her "\"Show panties for 5 points\". It is ridiculous!"
         $herView.hideshowQQ( "body_10.png", pos )
-        her "Maybe we'll go do something .... um ... interesting?"
-        her "In a sense, giving more points?"
+        her "Maybe we could do something .... um ... interesting?"
+        her "Something that would give more points?"
         menu: 
-            "\"And what you want to do?\"":
+            "\"And what do you want to do?\"":
                 m "And what do you want, Miss Granger?"
                 $herView.hideshowQQ( "body_68.png", pos )
                 her "I do not know, sir. There are different options!"
                 jump new_personal_request
-            "\"Since when did you become to choose their assignments, Miss Granger?":
+            "\"Since when did you choose your own assignments, Miss Granger?":
                 $ SetHearts(4)
-                m "Since when did you become to choose their assignments, Miss Granger?"
-                m "This seems to be here, I decide which service is paid."
-                m "So, today paid showing your panties!"
+                m "Since when did you choose your own assignments, Miss Granger?"
+                m "I decide which service I pay for while you are here."
+                m "So, today I pay for you to show me your panties!"
                 $herView.hideshowQQ( "body_202.png", pos )
                 her "Excuse me, sir! Of Course."
                 m "And?"
-                her "Here it is, professor."
+                her "Here they are, professor."
                 $herView.hideshowQQ( "body_111.png", pos )
-                "> Hermione pulled out his pants and shows them to you."
+                "> Hermione pulls out her panties and shows them to you."
                 g4 "What a...?!"
-                her "My panties, sir. I show them to you, as you requested."
-                m "Are you kidding?"
+                her "My panties, sir. I am showing them to you, as you requested."
+                m "Are you kidding me?"
                 $herView.hideshowQQ( "body_53.png", pos )
                 her "Sir?"
-                m "I expect to see the underwear that on {size=+4}you!{/size}"
+                m "I expect to see that underwear on {size=+4}you!{/size}"
                 $herView.hideshowQQ( "body_68.png", pos )
-                her "Ah! So it is not, sir. Today I go without panties."
+                her "Ah! Well they are not, sir. Today I go without panties."
                 m "Well, then show me!"
                 $herView.hideshowQQ( "body_31.png", pos )
-                her "With all due respect, sir, it's an almost striptease. So, it is worth a lot more than five points!"
+                her "With all due respect, sir, it's almost striptease. So, it is worth a lot more than five points!"
                 $herView.hideshowQQ( "body_128.png", pos )
-                her "So, count..."
-                her "Guys want to see pussy girls more than anything else..."
-                her "Let pussy - 2/3 of the total striptease..."
+                her "Lets do the math..."
+                her "Guys want to see a girls pussy more than anything else..."
+                her "The pussy is 2/3 of the total striptease..."
                 $herView.hideshowQQ( "body_101.png", pos )
-                her "2/3 of 35 points is 23 ... and three in the period, sir."
-                her "Only out of respect for you is rounded down."
+                her "2/3 of 35 points is 23 ... and .333 repeating of course, sir."
+                her "Out of respect for you let us round that down."
                 $herView.hideshowQQ( "body_53.png", pos )
-                her "Gets 20 points! Here, it will be fair."
+                her "Total 20 points! That would be fair."
                 menu: 
                     "\"No!\"":
-                        m "You're free, Miss Granger!"
+                        m "You're free to go, Miss Granger!"
                         $herView.hideshowQQ( "body_58.png", pos )
-                        her "As you say, sir. In that case, I would like to receive your payment."
+                        her "As you say, sir. In that case, I would like to receive my payment."
                     "\"Well, another 20 points. Show me!":
                         $current_payout+=20
                         m "Okay, I'll pay you 20 points. Show me!"
                         $herView.hideshowQQ( "body_186.png", pos )
                         her "25 points, sir."
                         g4 "?!"
-                        her "20 for pussy and 5 for the panties, which I have already shown, sir. Total 25."
-                        m "Miss Granger, you are trading on the market, you have lost all sense of shame!"
+                        her "20 for the pussy and 5 for the panties, which I have already shown you, sir. 25 total."
+                        m "Miss Granger, you are bartering yourself, have you lost all sense of shame!"
                         $herView.hideshowQQ( "body_64.png", pos )
-                        her "Not lost, sir. You see, as I blush."
+                        her "Not lost, sir. You see how I blush."
                         m "Really ... Ahem!"
                         m "Well, what are you waiting for? For 25 points I want to see something special."
                         $herView.hideQQ()
@@ -296,60 +296,60 @@ label new_request_02: #SHOW ME YOUR Трусики
 
 
 
-                        her "This is a rather special, sir? I just today Throw."
-                        m "fascinating details."
+                        her "This is a rather special, sir? I just shaved today."
+                        m "Fascinating details."
                         menu:
                             "\"You are not too troubled, Miss ...\"":
                                 $herView.hideshowQQ( "body_53.png", pos )
                                 m "You are not too embarrassed, Miss Granger."
-                                her "Well, if my director wants to see me better, should I mind??..."
+                                her "Well, if my Headmaster wants to see me better, should I mind??..."
                                 $herView.hideshowQQ( "body_54.png", pos )
-                                her "Especially because Gryffindor receive another [current_payout] points."
-                            "- Continue to look her eyes -":
+                                her "Especially because Gryffindor receives another [current_payout] points."
+                            "- Continue to look in her eyes -":
                                 $herView.hideshowQQ( "body_55.png", pos )
                                 her ".............................."
                                 her "...........................?"
                                 $herView.hideshowQQ( "body_56.png", pos )
                                 her "................................"
                                 if not end.IsEnding(const_ENDING_STRONG_GIRL) and hermi.whoring<14:
-                                    her "Sir, I have to go. I now Potions lesson, and Professor Snape is very strict to be late..."               
-                                    her "... if they Gryffindor."               
-                                    m "Well, Miss Granger."
+                                    her "Sir, I have to go. I have a Potions lesson, and Professor Snape is very strict when you are late..."               
+                                    her "... if you are from Gryffindor."               
+                                    m "Alright, Miss Granger."
                                 else:
                                     $music.Start("Supergirl")
                                     $herView.hideshowQQ( "body_64.png", pos )
-                                    "> Hermione cheeky looks into your eyes and you feel you are getting excited."
-                                    "> Bitch, as if by chance, licks his lips."
-                                    her "Sir, soon learned. Maybe I'm in a hurry and go milking you do?"
+                                    "> Hermione looks cheekily into your eyes and you begin to get excited."
+                                    "> Bitch, what a tease, licking your lips."
+                                    her "Sir, I have an idea. Maybe you would like a quick milking?"
                                     menu:
                                         "\"No! Enough for today.\"":
                                             $herView.hideshowQQ( "body_55.png", pos )
-                                            m "Well, Miss Granger."
-                                        "\"What will you do ?!...\"":
+                                            m "Alright, Miss Granger. Thats enough for today."
+                                        "\"What do you mean ?!...\"":
                                             $herView.hideshowQQ( "body_53.png", pos )
-                                            g4 "What will you do ?!"
-                                            her "Milking you. Do not tell me you do not know how the girls call it."
-                                            m "I know how they call. But how do you know it, Miss Granger ?!"
-                                            m "You're not interested in such things?"
+                                            g4 "What do you mean ?!"
+                                            her "Milking? Do not tell me you do not know that is what the girls call it."
+                                            m "I know what they call it. But how do you know, Miss Granger ?!"
+                                            m "Surely, you're not interested in such things?"
                                             $herView.hideshowQQ( "body_84.png", pos )
-                                            her "Well, sir, since you already asked me about this service, I had to prepare for and conduct a little research."
+                                            her "Well, sir, since you already asked me about this service, I had to prepare and conduct a little research."
                                             m "Scientific, of course?"
-                                            her "Of course, sir. And now I know a lot of suitable expressions play a hand, playing the fool, shake purse..."
+                                            her "Of course, sir. And now I know a lot of suitable expressions like handjob, beating the monkey, strangle the snake..."
                                             m "Miss Granger, spare me your linguistic exercises."
                                             $herView.hideshowQQ( "body_75.png", pos )
                                             her "Of course, sir... "
                                             $herView.hideshowQQ( "body_46.png", pos )
-                                            her "So today we will play with cudgel or something?"
+                                            her "So today we will play with your joystick or something?"
                                             menu:
                                                 "\"No!...\"":
                                                     $herView.hideshowQQ( "body_53.png", pos )
-                                                    m "Miss Granger, go away!"
-                                                    her "I can not with cudgel, sir, because \"cudgel\" is a figurative name of your..."
-                                                    m "No matter, miss Granger, just enough for today."
+                                                    m "Miss Granger, stop playing games and leave!"
+                                                    her "I did not mean games, sir, because \"joystick\" is a figurative name of your..."
+                                                    m "I got it, miss Granger, this is enough for today."
                                                     her ".............................."
-                                                "Well, miss Granger...":
+                                                "Alright, miss Granger...":
                                                     $herView.hideshowQQ( "body_56.png", pos )
-                                                    m "Well, miss Granger, proceed. I hope your hands are as skilful as your language."
+                                                    m "Alright, miss Granger, proceed. I hope your hands are as skillful as your use of language."
                                                     $herView.hideshowQQ( "body_53.png", pos )
                                                     her "Yes, sir. Plus 45 points?"
                                                     m "Yes girl, Yes. Plus 45."
@@ -369,7 +369,7 @@ label new_request_02: #SHOW ME YOUR Трусики
     
     label request_02_done:
     $ gryffindor +=current_payout
-    m "[current_payout] to \"Gryffindor\" miss Granger. Well done."
+    m "[current_payout] points to \"Gryffindor\" miss Granger. Well done."
     pause
     
     $ hermione_chibi_xpos = 400 #Near the desk.
