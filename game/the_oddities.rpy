@@ -3,7 +3,7 @@ label menu_dahr_book:
     python:
         for e in this.List:
             if e.GetValue("block")==_block: # Нужно ставить GetValue("block")  а не _block - у ивента такого объекта может не быть
-                choose.AddItem("- Книга: "+e._caption+" - "+("{image=check_08.png}" if e._status>-2 else "{image=check_07.png}"), 
+                choose.AddItem("- Book: "+e._caption+" - "+("{image=check_08.png}" if e._status>-2 else "{image=check_07.png}"), 
                     "menu_dahre_book_2", e.Name)
 
     $ choose.Show("the_oddities")
@@ -80,7 +80,7 @@ label menu_dahr_gift_order:
                     translators "That's better. This moment seemed all rather complicated. I'm on the skirt. Next will be a clue how to get it."
                     menu:
                         "- Look hint -":
-                            translators "{size=14}Tip of the translator:\nYou can find it if right read the book {b}[book07]{/b}{/size}."
+                            translators "{size=14}Tip of the translator:\nYou can find it if you read the right book {b}[book07]{/b}{/size}."
                             translators "{size=14}More details {a=http://wtrus.ixbb.ru/viewtopic.php?id=3#p4}here{/a}{/size}."
                         
                         "-I dont need this -":
