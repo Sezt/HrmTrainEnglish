@@ -4,40 +4,40 @@
 label daphne_pre_01: #Снейп обещает, что пришлет шлюху
 
     $snape.State(pos2=gMakePos( 340, 420 )).Visibility("head", transition=None)
-    $hero("Look, Severus. You have promised to send me a couple slesinski whores.")
-    $snape("~29// Urgh...")
-    $hero("What do you mean «um»?... I know you have a whore!// You told me recently boasted that can do what they want with whomever I want.")
-    $snape("~03// You see, my friend, all is not so simple.//~04// These girls... They're sure that,... that is, the Director is not aware of our little pranks.")
+    $hero("Look, Severus. You promised to send me a couple Slytherin sluts.")
+    $snape("~29// Umm...")
+    $hero("What do you mean «Umm»?... I know you have some sluts!// You recently bragged about being able to do whatever you want with these whores.")
+    $snape("~03// You see, my friend, it is not that simple.//~04// These girls... they're convinced that... well, that the Headmaster is not aware of our small deals.")
     $hero("And?")
-    $snape("~03// And if it turns out that the Director is also no stranger to the pursuit of potas...\n of beauty, it'll destroy all of their worldview...")
-    $hero("Listen, buddy. I don't care about ideology whores, I'm interested in quite other details.") 
-    $snape("~06// Yes, but if they find out about your interest, they may not want to do this anymore.//~16// #(I Hope he will swallow this crap)//"
-        "~29// #Actually I'm not going to send him hookers -//"
-        " #He, his mother, Genie, having steep cosmic power and all that!//~26// #Who knows how good he is in THIS.")
-    $hero("You think I'll swallow this crap?")
-    $snape("~05//The fuck?//~04// My friend! I care about you! They really can stop giving!")
-    $hero("To give someone, buddy?// 't you?// I think you just like to be the only rooster in the henhouse.//"
-        "I don't sleep nights, working hard to train the girl,...// and you ride like cheese in butter and don't want to help me with a little entertainment.")
+    $snape("~03// And if it becomes known that the Headmaster is also no stranger to the pursuit of slu...\nof beauty, it might destroy their worldview...")
+    $hero("Listen, buddy. I don't care about ideological whores, I'm interested in very different things.") 
+    $snape("~06// Yes, but if they find out about your interests, they may not want to do this anymore.//~16// #(I Hope he will believe this bullshit)//"
+        "~29// #Actually I'm not going to send him whores -//"
+        " #Genie, having so much cosmic power and all that!//~26// #Who knows how good he is for them.")
+    $hero("You think I'll believe this bullshit?")
+    $snape("~05//What the fuck?//~04// My friend! I care about you! They really might stop offering their services!")
+    $hero("Offering to who, buddy?// To you?// I think you just like to be the only rooster in the henhouse.//"
+        "I don't sleep nights, working hard to train the girl,...// and you hump like a rabbit and don't want to help me with a little entertainment.")
     $snape("~01// What's wrong with that?!// ~02//I heard you have a very good record with miss Granger.")
-    $hero("Do you want to switch? I'm ready to give you the education that girls in just a couple of whores.") 
+    $hero("Do you want to switch? I'm ready to let you educate that girl for just a couple of whores.") 
     $snape("~29// Em...")
-    $hero("I warn you, Severus, if you will continue to hide from me girls,...// Director may stop hiding in the tower and came out on a quest!")
+    $hero("I warn you, Severus, if you continue to hide girls from me,...// the Headmaster may stop hiding in the tower and came out on a quest!")
     $snape("~01// But you can't!..")
-    $hero("Keep up the spirit and you will see I can or not...")
+    $hero("Keep up the cockblocking and you will see if I can or not...")
     $snape("~06//......")
     $hero("......")
     $snape("~02//............")
     $hero("............")
-    $snape("~23// Okay, okay...// You had me convinced. I'll send you a slut.")
+    $snape("~23// Okay, okay...// You have me convinced. I'll send you a slut.")
     $hero("Two whores, Severus.")
-    $snape("~28// I'm sure THAT you will replace two at once.")
+    $snape("~28// I'm sure she will better then two common whores.")
     $hero("Look, if this is some kind of freak...")
-    $snape("~01// What do you take me!// Pure blood in Merlin knows what generation, was on the cover of the \"Witch\"...//"
-        "~02// #(is extreme in the fifth row)// ~01// ...cheerleader who slitherine, finally!//"
-        "~23// Girl - yum!")
-    $hero("Well, this is her concern... lick...// So what's the catch?")
+    $snape("~01// What do you take me for!// A pure blood descendant of Merlin, who was on the cover of \"Witch\"...//"
+        "~02// #(she is extreme in a lot of ways)// ~01// ...cheerleader for Slitheryn, as well!//"
+        "~23// A petite girl - yum!")
+    $hero("Alright, ...nice...// So what's the catch?")
     $snape("~05// The catch?")
-    $hero("You're too quickly agreed. So I ask: what's the catch? ")
+    $hero("You're agreed too quickly. So I ask: what's the catch? ")
     $snape("~23// No catch, my friend!// ~02//You will see for yourself. Give it a few days. Just a couple of days!")
     $snape.Visibility()
     "> You decide to trust Snape and wait two days."
