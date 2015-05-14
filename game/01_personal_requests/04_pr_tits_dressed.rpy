@@ -44,10 +44,10 @@ label new_request_04:
             "\"I'm gonna molest your tits now.\"":
                 $her_head_state = 3
                 her_head_main "What? What do you mean, professor--?"
-                ">Hermione slightly departs ago..."
+                ">Hermione slightly backs away..."
                 ">You reach out swiftly and grab both of her tits through her uniform..." #WARNING_Z What the fuck?
-                "- Just reach out and grab her tits. -"
-                ">You reach out with both of your hands and grab the girl's tits!"
+                #"- Just reach out and grab her tits. -"
+                #">You reach out with both of your hands and grab the girl's tits!"
         stop music fadeout 1.0
         with hpunch
         $her_head_state = 7
@@ -69,7 +69,7 @@ label new_request_04:
         $her_head_state = 12
         her_head_main "B-but..... this..."
         m "Just stand still..."
-        m "go to your happy place or something..."
+        m "Go to your happy place or something..."
         $her_head_state = 11
         her_head_main "M-my happy place...?"
         ">You feel the girl's shapely breasts in your palms..."
@@ -110,7 +110,7 @@ label new_request_04:
                 $her_head_state = 4
                 her_head_main "........."
 
-            "- Massaging the Breasts -":
+            "- Massage the Breasts -":
                 show screen blktone
                 with d5
                 ">You start massaging Hermione's beasts through her uniform..."
@@ -168,7 +168,7 @@ label new_request_04:
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
         if this.new_request_12.IsFinished(): # Если уже играл с ее голыми сиськами
             ">Hermione is starting to pull her uniform up..."
-            m "No, not worth it. I want to do it while you're fully dressed..."
+            m "No, no need. I want to do it while you're fully dressed..."
             her_head_main "Oh, I see..."
         ">Hermione stands in front of you expectantly..."
         ">You reach out for her ample breasts..."
@@ -220,13 +220,13 @@ label new_request_04:
                 her_head_main "You don't need to be so rough with me....{image=textheart.png}"
                 hide screen blktone8
 
-        if hermi.whoring>=12: # Если уже играл с ее голыми сиськами
+        if hermi.whoring>=12: #If you have already played with her bare breasts
             her "Umm... Professor, maybe you'll do it for real?"
             m "Really?"
-            her "Yes, I want you to... that is, that I earned more points. Maybe I'll make a form?"
+            her "Yes, I want you to... that is, it will earn me more points. You want me to lift my uniform?"
             menu:
-                "Denude, Miss!":
-                    m "Well. Denude, Miss!"
+                "Strip, Miss!":
+                    m "Alright. Strip, Miss!"
                     show screen blkfade
                     with Dissolve(1)
                     pause.5
@@ -234,9 +234,9 @@ label new_request_04:
                     $ posHead = gMakePos( 390, 340 )
 
                     $herViewHead.showQ( "body_120.png", posHead )
-                    her "Hmmph! Sir, you must \nbe so vulgar?"
+                    her "Hmmph! Sir, no need to be so vulgar."
                     $herViewHead.hideQ()
-                    m "You will me to teach, miss Granger, or, still, to earn points?"
+                    m "You want to censor me, miss Granger, or would you rather earn points?"
                     $herViewHead.showQ( "body_66.png", posHead )
                     her "......................."
                     $herViewHead.hideQ()
@@ -251,7 +251,7 @@ label new_request_04:
                     with d1
                     hide screen blkfade
                     with d5
-                    "> Hermione sticks his blouse and shirt."
+                    "> Hermione lifts her blouse and shirt."
                     $current_payout+=20
                     jump new_request_12_mainonly
 
@@ -276,21 +276,21 @@ label new_request_04:
 
                     $herView.showQQ( "body_55.png", pos )
                     m "That's all for tonight, girl."
-                    m "However, if you are ready to lie down and spread legs..."
-                    if hermi.whoring<18: # Если не готова к сексу
+                    m "However, unless you are ready to lie down and spread your legs..."
+                    if hermi.whoring<18: # If she is not ready for sex
                         $herView.showQQ( "body_05.png", pos )
-                        her "Argh! Sir... as you can!... I!..."
+                        her "Argh! Sir... how dare you!... I!..."
                         m "Hush, dear, hush. I was just kidding."
                     else:
                         $herView.showQQ( "body_103.png", pos )
                         her "I... I agree, Professor."
-                        g9 "I do not doubt that you will be only."
+                        g9 "I did not doubt that you would."
                         $herView.showQQ( "body_120.png", pos )
-                        her "Not just a Professor, it points to the faculty, proud \"Gryffindor\"!"
-                        m "Yes, old song."
+                        her "Not just that Professor, its points to the house, proud \"Gryffindor\"!"
+                        m "Yes, the same old song."
                         $herView.showQQ( "body_51.png", pos )
-                        her "Argh! Sir... as you can!... I!..."
-                        m "Okay, miss Granger, I joked about spread legs. No you are not attempts."
+                        her "Argh! Sir... how dare you!... I!..."
+                        m "Alright, miss Granger, I was joking about spreading your legs. No need for your advances."
 
                     if not end.IsEnding(const_ENDING_STRONG_GIRL):
                         $herView.showQQ( "body_120.png", pos )
@@ -300,55 +300,55 @@ label new_request_04:
                     else:
                         $music.Start("Supergirl")                                   
                         $herView.showQQ( "body_50.png", pos )
-                        her "These your jokes, Professor..."
+                        her "These jokes of yours, Professor..."
                         $herView.showQQ( "body_61.png", pos )
                         her "................................"
                         $herView.showQQ( "body_69.png", pos )
                         her "................................"
                         m "What?"
                         $herView.showQQ( "body_29.png", pos )
-                        her "I was thinking that may be..."
+                        her "I was thinking that maybe..."
                         m "Really?"
                         $herView.showQQ( "body_56.png", pos )
                         her "Maybe I could..."
                         m "Could what?"
                     if hermi.whoring<18: # Если не готова к сексу
                         $herView.showQQ( "body_123.png", pos )
-                        her "Well, as you said, to push... If this is how it should be paid, of course!"
-                        g9 "Of course, it will. Of course!" 
+                        her "Well, as you said, advance... If this is it...it should be paid, of course!"
+                        g9 "Of course, it should. Of course!" 
                     else:
                         $herView.showQQ( "body_123.png", pos )
-                        her "Well, as you said, to push free...."
+                        her "Well, as you said, advance...for free...."
                         $herView.showQQ( "body_64.png", pos )
-                        her "Do not think anything, just, you {size=+4} do {/size} great..."
-                        g9 "Well, finally you are taken over your mind, girl!"
+                        her "Don't think about it, just{size=+4} do {/size} it..."
+                        g9 "Well, finally I have taken over your mind, girl!"
 
-                    g9 "Well then, come here, take off panties..."
+                    g9 "Well then, come here, take off your panties..."
                     $herView.showQQ( "body_80.png", pos )
-                    her "Hush, Professor, hush, don't get excited!.. I also {size=+4}JOKED{/size}!"
+                    her "Easy, Professor, easy, don't get excited!.. I was also {size=+4}JOKING{/size}!"
                     g4 "...................."
                     g4 "Oh, you shallow bitch!"
                     $herView.showQQ( "body_100.png", pos )
-                    her "We're, sir! And now I want to get my glasses."
+                    her "Yes, sir! And now I want to get my points."
                     menu:
                         "Out!":
-                            m "Get out of here! Points will not be!"
+                            m "Get out of here! No points for you!"
                             $herView.showQQ( "body_05.png", pos )
-                            her2 "As you not keep your word, sir, I won't be able to come to you."
+                            her2 "As you will not keep your word, sir, I will not come to you."
                             $hermi.liking -=50
                             jump new_request_04_nopoints
                         "Well, here you are!":
-                            m "Well, miss Granger, get your points."
-                            m "But next time for such jokes glasses you will be deducted, not added."
-                            m "I am available to present?"
+                            m "Well, miss Granger, you get your points."
+                            m "But next time a joke like that will deduct points, not add."
+                            m "You can't make a fool of me."
                             $herView.showQQ( "body_58.png", pos )
                             her "Quite, sir."
-                            her2 "But if so, Professor, I have to be silent, like a fish on ice. I'm afraid the extra word to say."
+                            her2 "But if so, Professor, I will have to be silent, like a mouse. Afraid that I might say the wrong thing."
                             m "It's for the best, miss Granger."
                             $herView.showQQ( "body_129.png", pos )
-                            her2 "How am I going to report you, Professor?.. But of course, I will do as you say."
+                            her2 "How am I going to report to you, Professor?.. But of course, I will do as you say."
                             "> Hermione is going to leave."
-                            m "Well, miss Granger, this time I forgive you. But I warn you - keep your tongue!"
+                            m "Well, miss Granger, this time I forgive you. But I warn you - watch your tongue!"
                             $herView.showQQ( "body_84.png", pos )
                             her "Of course, Professor!"
 
@@ -401,24 +401,24 @@ label new_request_04:
     if current_payout==35:
         $herView.showQQ( "body_05.png", pos )
         her "Wait, sir!"
-        her "Why 35 points? 15 and 35 provide a total of 50!"
-        m "No, miss Granger. 35 this and in the amount of 35!"
+        her "Why 35 points? 15 and 35 provide is a total of 50!"
+        m "No, miss Granger. 35 for this service. Total amount is 35!"
         $herView.showQQ( "body_76.png", pos )
-        her "Sir, with all due respect! Touch through the form always worth 15 points, and simply 35!"
-        her "Don't try me to cheat!"
-        m "Miss Granger, I went to meet you and was allowed to bare..."
-        m "...and given 35 points instead of the promised 15. And now listen you claim!"
+        her "Sir, with all due respect! Touching through the uniform is worth 15 points and topless 35!"
+        her "Don't try to cheat me!"
+        m "Miss Granger, I agreed with you and allowed you to go topless..."
+        m "...and giving 35 points instead of the promised 15. And now you want more!"
         m "No wonder they say, good deeds do not go unpunished..."
         her "Good deeds, sir?! We agreed that..."
-        m "Agreed? We have agreed that you sell me two services at a time?"
+        m "Agreed? Did we agree that you would sell me two services at a time?"
         $herView.showQQ( "body_66.png", pos )
         her "No, but..."
-        m "If you have discussed this with me..."
+        m "If you had discussed this with me..."
         her "I wanted to, but..."
         m "That \"but\"? You liked it so much that you forget about everything?" 
         $herView.showQQ( "body_88.png", pos )
         her "No! No way!"
-        m "Whatever it is, miss Granger, the decision is final. 35 points and no point anymore!" 
+        m "Whatever, miss Granger, the decision is final. 35 points and not a point more!" 
         $herView.showQQ( "body_86.png", pos )
         her "It's not fair, sir!"
         $hermi.liking -=15
