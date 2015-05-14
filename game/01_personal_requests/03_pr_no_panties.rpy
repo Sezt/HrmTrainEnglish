@@ -512,8 +512,8 @@ label panties_soaked_in_cum:
             $herView.showQQ( "body_58.png", pos )
             her "A girl I know told me that guys like all kinds of...perversions."
             $herView.hideshowQQ( "body_129.png", pos )
-            her "Is that so, sir?"
-            m "Hmm, well, I thin it depends on what you consider a \"perversion\"..."
+            her "Is that right, sir?"
+            m "Hmm, well, I think it depends on what you consider a \"perversion\"..."
             m "What specifically are you talking about?"
             $herView.hideshowQQ( "body_84.png", pos )
             her "Well, for example..."
@@ -542,7 +542,7 @@ label panties_soaked_in_cum:
                     m "Оh..."
                     $herView.hideshowQQ( "body_45.png", pos )
 
-                "\"I think they would be a sick pervert!\"":
+                "\"I think that would be a sick pervert!\"":
                     $hermi.liking -= 15
                     $herView.hideQQ()
                     $herView.data().loadState()
