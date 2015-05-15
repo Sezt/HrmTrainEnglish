@@ -9,15 +9,15 @@ label daphne_pre_01: #Снейп обещает, что пришлет шлюх�
     $hero("What do you mean «Umm»?... I know you have some sluts!// You recently bragged about being able to do whatever you want with these whores.")
     $snape("~03// You see, my friend, it is not that simple.//~04// These girls... they're convinced that... well, that the Headmaster is not aware of our small deals.")
     $hero("And?")
-    $snape("~03// And if it becomes known that the Headmaster is also no stranger to the pursuit of slu...\nof beauty, it might destroy their worldview...")
+    $snape("~03// And if it becomes known that the Headmaster is no stranger to the pursuit of slu...\nof beauty, it might destroy their worldview...")
     $hero("Listen, buddy. I don't care about ideological whores, I'm interested in very different things.") 
     $snape("~06// Yes, but if they find out about your interests, they may not want to do this anymore.//~16// #(I Hope he will believe this bullshit)//"
         "~29// #Actually I'm not going to send him whores -//"
-        " #Genie, having so much cosmic power and all that!//~26// #Who knows how good he is for them.")
+        " #Genie, having so much cosmic power and all!//~26// #Who knows how that would affect them.")
     $hero("You think I'll believe this bullshit?")
     $snape("~05//What the fuck?//~04// My friend! I care about you! They really might stop offering their services!")
     $hero("Offering to who, buddy?// To you?// I think you just like to be the only rooster in the henhouse.//"
-        "I don't sleep nights, working hard to train the girl,...// and you hump like a rabbit and don't want to help me with a little entertainment.")
+        "I don't sleep at night, working so hard to train the girl,...// and you hump like a rabbit and don't want to help me with a little entertainment.")
     $snape("~01// What's wrong with that?!// ~02//I heard you have a very good record with miss Granger.")
     $hero("Do you want to switch? I'm ready to let you educate that girl for just a couple of whores.") 
     $snape("~29// Em...")
@@ -53,8 +53,8 @@ label daphne_pre_02: #LV.1 (Whoring = 0 - 2)
     $daphne.Visibility()
     menu:
         "\"Who?\"":
-            $daphne(who, "Sir, I sent Professor Snape...")
-            $hero("#(Excellent! Whore has arrived!)// #(Hopefully, it's nothing. However, after so many days of abstinence I'm not very picky.)// Yes, come in!")
+            $daphne(who, "Sir, Professor Snape sent me...")
+            $hero("#(Excellent! The slut has arrived!)// #(Hopefully, she is great. However, after so many days of abstinence I'm not that picky.)// Yes, come in!")
         "\"Yes, come in...\"":
             pass
 
@@ -71,59 +71,59 @@ label daphne_pre_02: #LV.1 (Whoring = 0 - 2)
 
 
 
-    $daphne.State(pos="door").Visibility("body+")("~55 00 1 smi// Добрый день, профессор Дамблдор.") 
+    $daphne.State(pos="door").Visibility("body+")("~55 00 1 smi// Good afternoon, Professor Dumbledore.") 
 #    $hermi.Visibility("body+")(".....")
 
     $screens.Show("ctc").Pause().Hide("ctc")
 
-    $hero (m, "#(Oh, what a slut! I love leggy blondes!...)",g9,"#(...and also brunettes, brunette and redheads. I can cum from one of their kind!)",m," #(That's just Tits are too small. Maybe they grow up spell?..)", 
-        g4, "#(No, Ginny, curb your fantasies. Remember what happened when you raised Tits Princess... hmm)", 
-        m, "Hello, miss uh...// #(Great Sands, why didn't he say her name?).") 
+    $hero (m, "#(Oh, what a specimen! I love leggy blondes!...)",g9,"#(...and also brunettes and redheads. I could cum with her help!)",m," #(The tits might be too small. Maybe I could use a grow spell?..)", 
+        g4, "#(No, Ginny, curb your fantasies. Remember what happened when you enlarged the tits of the Princess....hmm)", 
+        m, "Hello, miss uh...// #(Great Sands, he didn't mention her name?).") 
     $daphne("~55 00 1 def// Professor Snape said that you wanted to see me.") 
-    $hero ("Oh yeah, girl! No doubt, no doubt wanted to see, yeah.// But, he said, why are you sent?") 
+    $hero ("Oh yeah, girl! Off course, I wanted to see you.// But, did he say, why he sent you?") 
     $daphne("~55 00 1 smi", "No, sir. He didn't say.") 
-    $hero ("#(I Think, have a little chat. Just to warm up.)") 
+    $hero ("#(I think we need to start with a little chat. Just to warm up.)") 
 
     menu: 
         "Talk about education": 
             $hero ("well, miss, I wanted to talk to you about your studies.") 
-            $daphne("Education is not what worries me, sir.// ~37 n0 1 def// I am much more interested why enrolls at Hogwarts Granarolo mugridge.//" 
-                "You're a pureblood wizard, sir?") 
-            $hero (g4, "Who? I?.. Ah, Yes. Sort of.") 
-            $daphne("~37 00 1 pur", "Hmm. You really confused.// On the antiquity of the genus with Greengrassi nobody is equal, and you should feel embarrassed.") 
-            $hero (m,"#(What is this... greengrassi?)// #As bawdy rhymes... Probably means some crap.)") 
-            $daphne("~37 00 1 pri", "But be that as it may, sir. Mom said you were supposed to make sure that mugrage not feel at ease.", 
-                "And you instead, every year new.//~46 neu 01 1// pureblood girls must feel the pinch.") 
+            $daphne("My education is not what worries me, sir.// ~37 n0 1 def// I am much more interested in why Hogwarts enrolls mudbloods.//" 
+                "Are you a pureblood wizard, sir?") 
+            $hero (g4, "Who? Me?.. Ah, Yes. Sort of.") 
+            $daphne("~37 00 1 pur", "Hmm. You seem confused.// The Greengrass linage is without historical equal and you should feel embarrassed.") 
+            $hero (m,"#(What is she talking about... greengrass?)// #Rhymes with ass... probably not important.)") 
+            $daphne("~37 00 1 pri", "But be that as it may, sir. Mom said you were supposed to make sure that mudbloods didn't have it too easy.", 
+                "And instead, every new year, //~46 neu 01 1// pureblood girls must work with them.") 
             $hero ("Pureblood girls?") 
-            $daphne("~26 00 1 neu", "Yes, sir! Why is this called a Mudblood best on the course?//"
-                "Why mugatu allowed to learn close to the true wizards?//" 
-                "~55 00 1 pri// I can still be around with all sorts of Malfoy or Parkinson.//" 
-                "Family is so-so, second grade. But some no christocracy, and this girl!!!") 
-        "To talk about the faculty": 
-            $hero ("well, miss, I wanted to talk about the situation in the Department.") 
-            $daphne("~37 00 1 def", "the Atmosphere at the Department, sir? She is disgusting!// Granarolo mugridge invaded Hogwarts.") 
-            $hero ("#(What's this?..)") 
-            $daphne("~55 n0 1 ope", "And you pretend not to notice. Although your father...// Mother told me that he was a true pureblood wizard and was not afraid to kill three Muggles. Him and put him in Azkaban.") 
-            $hero  ("Really? #(Well, and the gallows in a relationship with a local Director!)") 
-            $daphne("~55 00 1 dis", "don't pretend you don't remember it, sir!// But if forgotten, it does you no credit!", 
-                "~55 00 1 pou// Greengrassi always stood for purity of blood and when you see a wizard who betrays our ideals...")  
+            $daphne("~26 00 1 neu", "Yes, sir! Why has this Mudblood girl the best grades?//"
+                "Why are mudbloods allowed to learn together with the true wizards?//" 
+                "~55 00 1 pri// I can tolerate being around Malfoys or Parkinsons.//" 
+                "Their family is so-so, second grade linage. But these commoners, and that girl!!!") 
+        "Talk about your house": 
+            $hero ("well, miss, I wanted to talk about your house.") 
+            $daphne("~37 00 1 def", "The situation in my house, sir? It is disgusting!// Damned mudbloods invade Hogwarts.") 
+            $hero ("#(What's going on?..)") 
+            $daphne("~55 n0 1 ope", "And you pretend not to notice. Your father on the other hand...// Mother told me that he was a true pureblood wizard and not afraid to kill three Muggles. And they put him in Azkaban.") 
+            $hero  ("Really? #(It seems the Headmaster is related to a murderer!)") 
+            $daphne("~55 00 1 dis", "Don't pretend you don't remember, sir!// Forgetting that would not improve my opinion of you!", 
+                "~55 00 1 pou// Greengrass always stood for purity of blood and when I see a wizard who betrays our ideals...")  
 
-    $hero ("#(Um, great expression! Interestingly, she Fucks just as vigorously?)// Wait, miss, it's all very exciting, but can we finish the foreplay and get down?") 
+    $hero ("#(Uhh, great energy! Interesting if she Fucks just as vigorously?)// Wait, miss, this is all very exciting, but can we finish the foreplay and get down?") 
     $daphne("~64 00 1 smi// get Down to what, sir?") 
-    $hero ("Well, to this most... chpok-chpok, titi-Mitya?") 
-    $daphne("~64 w0 1 pur", "\"Chpok-chpok\", sir?") 
-    $hero ("I don't know how you girls called.// In General, what you do with the Professor and why he sent you here.") 
+    $hero ("Well you know... fucky-fucky, titty-licky?") 
+    $daphne("~64 w0 1 pur", "\"Fucky-fucky\", sir?") 
+    $hero ("I don't know what you girls call it.// What you do with Professor Snape and why he sent you here.") 
     $daphne("~64 w0 1 pou// I don't understand, sir.") 
-    $hero ("the great Sands of the desert!// #(She slowly moves his brains. Hope that moves his hips faster.)//" 
-        "I say, do what you usually do Hor... girls like you.") 
-    $daphne("~55 00 1 dis// what are you insinuating?!") 
-    $hero ("I'm referring to? Yeah I just say!...") 
-    $daphne("~37 s0 1 dis", "If you dare to hint at what some person with teachers, it's disgusting!") 
-    $hero ("#(er, Snape, is that a joke?)") 
-    $daphne("~37 s0 1 ope", "I shall send an owl to parents and report on the dirty you I'm doing here.", 
-        "And so they will inform about it to the Ministry, to be sure.") 
-    $hero (g4, "#(can't believe it!... Bloody Snape!!!)// Um, wait, miss, you misunderstood!") 
-    $daphne("~55 s0 1 dis// I got that right! And you won't have to sit in this chair!")
+    $hero ("By the great Sands of the desert!// #(Her brain moves a bit slowly. Hope her hips move faster.)//" 
+        "I mean, do what you usually do slu...girl") 
+    $daphne("~55 00 1 dis// What are you insinuating?!") 
+    $hero ("What? I am just going to say it!...") 
+    $daphne("~37 s0 1 dis", "If you dare to hint at me doing something with teachers, thats disgusting!") 
+    $hero ("#(er, Snape, is this a joke?)") 
+    $daphne("~37 s0 1 ope", "I will send an owl to my parents and report on the dirty things you are asking me.", 
+        "And they will inform the Ministry, I am sure.") 
+    $hero (g4, "#(I can't believe it!... Bloody Snape!!!)// Um, wait, miss, you misunderstand!") 
+    $daphne("~55 s0 1 dis// I got this right! And you won't stay in that chair for long!")
 
     $music()
     $screens.HideD3("bld1")
@@ -140,39 +140,39 @@ label daphne_pre_03: #Разборки со Снейпом после того, 
     $screens.Hide("snape_main")#.Pause(0.3)
 
     if not daytime:
-        $hero(m, "As you drink, buddy? Fit well, comfortable?// Then, tell me...")
+        $hero(m, "Enjoying your drink, buddy? Sitting comfortable?// Then, tell me...")
     $hero(g1, "What was that?!.. Answer me, in the name of the fucking desert!")
 
     $snape.State("doorleft")("~01").Visibility("body" if daytime else "head")
 
-    $snape("~05// what are You talking about, my friend?")
-    $hero("don't be sheep! I asked you a whore, your mother, and you tell me who sent you?")
+    $snape("~05// What are You talking about, my friend?")
+    $hero(Don't be stupid! I asked you for a whore, you fucker, and what did you send me?")
     $snape("~03// Well, technically she's a whore.")
-    $hero(m, "What does that even mean technically she's a whore?")
-    $snape("~13// Well, it has everything you need for whores. All right um, details. And what an expression!")
-    $hero("Yes, the expression was hard to miss.")
-    $snape("~20// I would gladly laid on the floor.")
-    $hero("I would have it with pleasure...",g4," Wait, so you haven't fucked her?!")
-    $snape("~02// what do you take me, my friend? Why would I offer you a used product?// Pureblood...")
-    $hero(g4, "About purebred I've had enough!")
-    $snape("~23// Thoroughbred untouched young sorceress who is just waiting for someone it has traveled.")
+    $hero(m, "What does that even mean...technically she's a whore?")
+    $snape("~13// Well, she has everything you need for whores. All the right..parts. And what energy!")
+    $hero("Yes, the energy was hard to miss.")
+    $snape("~20// I would gladly sleep with her.")
+    $hero("I would have enjoyed that as well...",g4," Wait, so you haven't fucked her?!")
+    $snape("~02// What do you take me for, my friend? Why would I offer you a used product?// Pureblood...")
+    $hero(g4, "Enough about bloody purebloods!")
+    $snape("~23// Thoroughbred untouched young sorceress who is just waiting for someone with experience.")
     $hero(m,"And you decided I was best suited for this role.")
-    $snape("~02// Well, you're pretty good with Hermione Granger. I was sure that you were not saved before and Daphne Greengrass.")
-    $hero("If you, my friend, at least warned me, I would maybe something came up.//"
-        "But now this young bitch will squeal parents and Ministerial inspection is the least that we are waiting for.//"
-        "I warn you, if I will make from this office, you will put after #(if I can't find a way to slip away before)")
-    $snape("~06// Not all so tragic, my friend. I talked with miss Greengrass, and she's not ready to announce anything to the parents.// Bye.")
-    $hero("the Word until is particularly encouraging, fucking sand...//"
+    $snape("~02// Well, you work pretty well with Hermione Granger. I was sure that Daphne Greengrass was not too much for you.")
+    $hero("If you, my friend, at least had warned me, I could maybe have come up with something.//"
+        "But now this young bitch will squeal to her parents and an Ministerial inspection is the least we can expect.//"
+        "I warn you, if I they remove me from this office, you will follow soon after #(if I can't find a way to slip away before)")
+    $snape("~06// Overly dramatic, my friend. I talked with miss Greengrass, and she won't announce anything to her parents.// Bye.")
+    $hero("You haven't been that trustworthy so far, fucking sand...//"
         "I'm not asking how you did it. And yet, forgive my curiosity,...//"
-        "...if you get along so great with this bitch,...// why you still haven't fucked her?!")
-    $snape("~29// My friend. It's one thing to convince an arrogant bitch that the buzz around such a sensitive subject, as her innocence, not in its interests.//"
-        "And quite another to get in her pants.// ~23// I want to give this honor to you.")
+        "...if you get along so great with this bitch,...// why haven't you fucked her yet?!")
+    $snape("~29// My friend. It's one thing to convince an arrogant bitch that rumours around such a sensitive subject as her innocence, is not in her interest.//"
+        "And quite another to get in her pants.// ~23// I want to give that honor to you.")
     $hero("I'm Not going to meet her again!")
-    $snape("~29// I'm Afraid you have no choice.")
-    $hero("I see...// What I don't know?")
-    $snape("~10// don't want to pressure you, my friend.// So just let events take their course. Can all cost.//"
-        "But I'd already started thinking how to gain a charming girl of an ancient and noble family.//"
-        "~03// now if you'll excuse me, I must go.")
+    $snape("~29// I'm afraid you have no choice.")
+    $hero("I see...// What aren't you telling me?")
+    $snape("~10// I don't want to but more pressure on you, my friend.// So just let events take their course. It will pay off.//"
+        "But I would already start thinking about how to score a charming girl from an ancient and noble family.//"
+        "~03// Now if you'll excuse me, I must go.")
 
     $screens.Hide("snape_02", "bld1", d3 )
     $snape.Visibility(transition=d3)
