@@ -205,19 +205,19 @@ label bigletter(__pages): #Письмо родителей Дафны Дамбл
 
 label daphne_pre_04: #Письмо родителей Дафны Дамблдору
     call bigletter(["{size=-7}From: Olivia Greengrass\nTo: Professor Dumbledore\n\n{/size}"
-    "{size=-4}Professor Dumbledore!\n\nMy husband and I seriously concerned that our daughter is not getting enough attention at Hogwarts and still took the appropriate provisions.\n\n "
-    "Professor Severus Snape has informed us that you finally realized it and offered to give her private lessons.\n\n You prohibitively long time to make this, Professor!\n\n "
-    "Hope your belated action will have any effect...{/size}\n\n ",
-    "{size=-4}...As you know, in the Ministry the next scheduled meeting regarding the allocation of funds magic schools.\n\n "
-    "We inform you that if you do not made sufficient progress, Daphne will be transferred to Durmstang - in the Academy, where they know how to appreciate a true pureblood mages.\n\n "
-    "We in this case will make every effort to Hogwarts received the minimum funding.{/size}\n\n "
+    "{size=-4}Professor Dumbledore!\n\nMy husband and I are seriously concerned that our daughter is not getting enough attention at Hogwarts. Especially considering her linage. \n\n "
+    "Professor Severus Snape has informed us that you finally realized this and offered to give her private lessons.\n\n You took a long time to take this step, Professor!\n\n "
+    "We hope your belated action will have enough of an effect...{/size}\n\n ",
+    "{size=-4}...As you know, in the Ministry the next scheduled meeting regarding the allocation of funds for magic schools.\n\n "
+    "Just to let you know that if you do not make sufficient progress, Daphne will be transferred to Durmstrang Academy - where they know how to appreciate a true pureblood mage.\n\n "
+    "Should this happen we will make every effort for Hogwarts to receive minimum funding.{/size}\n\n "
     "{size=-3}Without much hope for your success,\nOlivia Greengrass.{/size}"])
 
     $hero(g4, "Great Sands!..",
-        m,"Felt handwriting fellas Snape, and I'm not sure that I like it.//"
-        "The proper position?! If it is I will be restored to its position, it's not like her mom!//"
-        "What now? All the time to shake, not to be less guarded, and she didn't Snitch parents...//"
-        "What to teach her, if I didn't know about it?! And most importantly: how to make keep your mouth shut?")
+        m,"Snape is sending letters on my behalf and I'm not sure that I like it.//"
+        "Sufficient progress?! Pretty sure we don't expect the same results, a good fuck and not good grades!//"
+        "She had more then enough time to snitch to her parents and didn't do it...thats lucky at least//"
+        "How am I going to teach her, if I don't have any school knowledge?! And most importantly: how do I keep her mouth shut?")
 
     $event.Finalize()
 
@@ -228,24 +228,24 @@ label daphne_pre_06: #Выписка из личного дела Дафны, п
     $music("Daphne Privacy")
 
     call bigletter(["{size=-7}From: Severus Snape\nTo: Professor Dumbledore\n\n{/size}"
-    "{size=+2}Extract from dossier Daphne Greengrass\n\n{/size}"
+    "{size=+2}Extract from the Daphne Greengrass file\n\n{/size}"
     "{size=-4}Height: 5' 8\", Weight: 53 kg breast Size: 34B\n\n"
     "Orientation: Presumably heterosexual.\n\n"
     "A virgin: No evidence to the contrary.\n\n"
-    "Fingering: Yes? (the evidence is indirect: classmate, who happened to be nearby, heard her moans of lockers in the shower)\n\n"
-    "Watching porn: Yes? (indirect proof: left to the porn magazine disappeared from the living room of Slytherin, in the living room except Greengrass nobody came)\n\n"
-    "Voyeurism: Yes? (the evidence is indirect: one was caught near the hole, which classmate has done in the men's shower room, but was caught peeping was not){/size}",
+    "Fingering: Yes? (Indirect evidence: classmate, who happened to be nearby, heard her moans in the lockerroom showers)\n\n"
+    "Watching porn: Yes? (Indirect evidence: a porn magazine disappeared from the Slytherin living room, only Greengrass' room wasn't checked)\n\n"
+    "Voyeurism: Yes? (Indirect evidence: she was caught near a peephole into the men's shower room, but was not peeping at the time){/size}",
     "{size=-4}Beliefs and fears:\n\n" 
-    "* the inferiority complex that her Breasts are too small\n"
-    "* believes that it is possible to sleep only with purebred tall, masculine, etc.\n"
-    "* afraid he will not be able to satisfy purebred tall, masculine, etc.\n"
-    "* complex about his little (missing?) sexual experience\n\n"
-    "Deviation: Not found{/size}\n\n "
+    "* Has an inferiority complex that her breasts are too small\n"
+    "* Believes that she will only sleep with a pureblood wizard, tall, masculine, etc.\n"
+    "* Afraid she will not be able to satisfy a tall masculine pureblood wizard.\n"
+    "* Insecure about her minor (nonexistant?) sexual experience\n\n"
+    "Perversions: None found{/size}\n\n "
     "{size=-3}Success, my friend!\nSeverus Snape.{/size}\n\n"
-    "{size=-4}P. S. Miss Greengrass received a farewell letter from his parents. I think that would be correct, my friend, if you don't provoke her, and she will come to you on the first lesson.{/size}"])
+    "{size=-4}P. S. Miss Greengrass received a farewell letter from her parents. I think it would be best, my friend, if you don't provoke her, and she will come to you for the first lesson.{/size}"])
 
-    $hero(m,"Well and files. He what her thesis was going to write? And using the word \"no evidence\", \"not detected\", \"the evidence is indirect\"...//"
-        "No wonder he has nothing left...// Hmm, how would I prepare for her arrival?")
+    $hero(m,"Pretty good info. Using words like \"evidence\"...Is he going to write a crimenovel? //"
+        "No wonder he is tired all the time...// Hmm, how should I prepare for her arrival?")
 
     call music_block
     $event.Finalize()
