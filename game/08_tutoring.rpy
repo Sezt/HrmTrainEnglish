@@ -82,8 +82,8 @@ label tutoring:
         her "Ok..."
         $herView.hideQQ()
         $herView.showQQ( "body_11.png", pos )
-        her "I'm not quite sure how to spell \"patiskor Walde\" may work well against the Peruvian manticores..."
-        her "Indeed, in this case should ideally fit \"Gailey sekundum\", but in the publication \"Ekstsilius prohorosa \" 1831 states otherwise ..."
+        her "I'm not quite sure how the spell \"patiskor Walde\" would work against the Peruvian manticore..."
+        her "Indeed, this case would ideally fit \"Gailey sekundum\", but in the publication \"Ekstsilius prohorosa \" 1831 states otherwise ..."
         $herView.hideQQ()
         $herView.showQQ( "body_06.png", pos )
         her "Could you tell what my mistake is?"                                                                                                                                                                                  #HERMIONE
@@ -103,7 +103,7 @@ label tutoring:
         $herView.showQQ( "body_01.png", pos )
         her "Of course, sir."
         $herView.showQQ( "body_14.png", pos )
-        her "Peruvian Manticore - Manticore living in the area of Peru, wingspan..."
+        her "Peruvian Manticore - Manticore living in the country of Peru, wingspan..."
         her "*Pssssssssssssssss*"
         her "*psssssssssssssss*"
         m "..."
@@ -120,7 +120,7 @@ label tutoring:
         m "What did you say, Miss Granger ?!"
         $herView.hideQQ()
         $herView.showQQ( "body_13.png", pos )
-        her "Um ... the first time a detailed study of their member associations Malburzhskoy magicians - Istafar Arius..."
+        her "Um ... the first time a detailed study of their member association Malburzhskoy magician - Istafar Arius..."
         $herView.hideQQ()
         $herView.showQQ( "body_11.png", pos )
         her "I said something wrong ..?"
@@ -148,19 +148,19 @@ label tutoring:
         her "Ok."
         $herView.hideQQ()
         $herView.showQQ( "body_207.png", pos )
-        m "Now imagine that your... Mantihole."
+        m "Now imagine your... Mantihole."
         $herView.hideQQ()
         $herView.showQQ( "body_16.png", pos )
         her "Manticore..."
         m "I know. It was another test. Focus on the Finch and that creature."
         $herView.hideQQ()
         $herView.showQQ( "body_207.png", pos )
-        m "In all the universe there are only these two creatures..."
-        m "Nothing more..."
+        m "In the entire universe there is only these two creatures..."
+        m "Nothing else..."
         $herView.hideQQ()
         $herView.showQQ( "body_208.png", pos )
         her "..."
-        m "They take up all your mind..."
+        m "They fill your entire mind..."
         her "..."
         $herView.hideQQ()
         m "And now..."
@@ -201,7 +201,7 @@ label tutoring:
                 $herView.showQQ( "body_18.png", pos )
                 her "..?!"
                 g4 "Breaks its carcass into small pieces and starts to devour her insides!"
-                g4 "Manticore eyes are looking at the small bird with a look of despair, fear and silent prayers."
+                g4 "The manticore eyes are looking at the small bird with a look of despair, fear and silent prayers."
                 g4 "But the little monster just continues to devour her insides, making disgusting sucking sounds ..."
                 m "{size=-4}(Damn, it seems I got a gorgeous hard-on.){/size}"
                 $herView.hideQQ()
@@ -210,7 +210,7 @@ label tutoring:
                 her "What a..."
                 m "This is the answer to your question, young lady."
                 m "Now leave me."
-                m "I need to, uh ... Clean the pipe."
+                m "I need to, uh ... clean the pipe."
                 $herView.hideQQ()
                 $herView.showQQ( "body_12.png", pos )
                 her "But..."
@@ -264,7 +264,7 @@ label tutoring:
                 $herView.hideQQ()
                 $herView.showQQ( "body_76.png", pos )
                 her "Professor ?!..."
-                m "Share your feelings during meditation it is an important part of training."
+                m "Share your feelings during meditation, it is an important part of training."
                 $herView.hideQQ()
                 $herView.showQ( "body_29.png", pos )
                 her "..."
