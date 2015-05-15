@@ -146,7 +146,7 @@ label daphne_pre_03: #Разборки со Снейпом после того, 
     $snape.State("doorleft")("~01").Visibility("body" if daytime else "head")
 
     $snape("~05// What are You talking about, my friend?")
-    $hero(Don't be stupid! I asked you for a whore, you fucker, and what did you send me?")
+    $hero("Don't be stupid! I asked you for a whore, you fucker, and what did you send me?")
     $snape("~03// Well, technically she's a whore.")
     $hero(m, "What does that even mean...technically she's a whore?")
     $snape("~13// Well, she has everything you need for whores. All the right..parts. And what energy!")
@@ -187,43 +187,43 @@ label daphne_pre_05: #Разборки со Снейпом после письм
     $screens.Hide("snape_main")#.Pause(0.3)
 
     if not daytime:
-        $hero(m, "I did Not expect from you, buddy...")
+        $hero(m, "I did Not expect this from you, buddy...")
     $hero(m, "You set me up!")
 
     $snape.State("doorleft")("~01").Visibility("body" if daytime else "head")
 
     $snape("~05// Calm down, my friend, calm down. It was the only possible solution.")
     $hero("Oh, really?")
-    $snape("~03// of Course. These Greengrassi, these snobs... They were ready to take the girl from Hogwarts.")
-    $hero("Excellent! It solves all problems.")
-    $snape("~01// You think, what is the probability that she will spin a about you what was and what was not, her closed door.// And how they will be pissed. And so regard them. Oh... this can write a book.// And while she's here...")
-    $hero("That's it, she's here and can now see me every day.// She was humming as overheated kettle! Think, you'll forget all about it?")
-    $snape("~10// I Think you've lost your touch, my friend.// It is not what she CAN see you, and the fact that it is OBLIGED to come to you, because she told her old men.//~20// Capture opportunities?//"
-        "Until the holidays she's all yours, you're being given another chance.// And I believe that you will take advantage of this chance by 100%%.")
-    $hero("You're a damn hypocrite Severus Snape!// I have to puff to invent, how to fuck two girls, and you'll be entertained with whores.")
+    $snape("~03// Of Course. Those Greengrass snobs...they are ready to take the girl out of Hogwarts.")
+    $hero("Excellent! That solves all our problems.")
+    $snape("~01// I think that is a very good chance that she will tell her parents a story about how you found your way to her room.// And they will be pissed. Think about that. Oh... this could be a good book.// But while she is here...")
+    $hero("Correct, she's here and can now see me every day.// She was ready to explode! You think she will forget all about it?")
+    $snape("~10// I think you've lost your touch, my friend.// It is not that she CAN see you, and more the fact that she is REQUIRED to come to you, when you tell her to.//~20// Training opportunity?//"
+        "Until the holidays she's all yours, you have been given another chance.// And I believe that you will take full advantage of this chance.")
+    $hero("You're a damn bastard Severus Snape!// I have to work my ass off to fuck two girls, and you are swimming in easy sluts.")
     $snape("~02// Yes, we each have a destiny, my friend.")
-    $hero(g4, "Oh, you!.. Aren't you all doing this?")
-    $snape("~09// I just tried to fulfill your desire.// If you followed our original plan and just trained miss Granger, none of this would have happened.//"
+    $hero(g4, "Screw you!.. you are controlling all of this.")
+    $snape("~09// I am just trying to fulfill your desires.// If you followed our original plan and just trained miss Granger, none of this would have happened.//"
         "~06// But you wanted more, my friend and I did everything in my power.")
-    $hero(m,"was In your power to send me an ordinary slut!")
-    $snape("~05// the next day the whole Hogwarts discussed what the Director knew him.//"
-        "~06// These whores when their mouth is not busy with useful work, and only do what they talk, and gossip spreads faster than the spell of hiccups.//"
-        "~13// But if you'll get miss Greengrass, you can tear it like a slut, and outside your office all will be quiet, grandly and nobly.//"
-        "~22// That girl is too obsessed with his blue blood to admit what gives.")
-    $hero("\"If\" the key word here, buddy. But if it fails? You, incidentally, have not coped with it.")
-    $snape("~23// Hm... My friend, I don't refuse to help you. If you need anything...")
-    $hero(m,"Yeah, I need something. Tell me about it what you know!")
-    $snape("~03// This is so boring. How about I send you an owl with the extracts from my file on her.// I was, seriously when planning to fill up.//"
-        "~04// And yet, I think you need to read clever books, to learn to treat girls this kind.// Again, there is a special potion...")
-    $hero("Potion?! But from this point on more in detail...")
-    $snape("~06// All in clever books, my friend, everything in them.")
+    $hero(m,"It was in your power to send me an ordinary slut!")
+    $snape("~05// The next day every student in Hogwarts would talk about the Headmaster abusing his position.//"
+        "~06// When these sluts are not busy using their mouths for useful jobs, they gossip and this will spread faster than the hiccups spell.//"
+        "~13// But if you convert miss Greengrass, you can wreak her like a slut, and outside your office she will be quiet, arrogant and noble.//"
+        "~22// That girl is too obsessed with her blue blood and reputation to reveal anything.")
+    $hero("\"If\" is the key word here, buddy. But if it fails? How would you help me then?")
+    $snape("~23// Hm... My friend, I don't mind helping you. If you need anything...")
+    $hero(m,"Yeah, I need something. Tell me everything you know about her!")
+    $snape("~03// That would be boring. How about I send you an owl with a copy of my file on her.// I take things serious when planning for sluts.//"
+        "~04// But also, I think you need to read some advanced books about how to treat girls of her kind.// Again, there is also a special potion...")
+    $hero("Potion?! I will need more info about that...")
+    $snape("~06// All the info needs to be found in books, my friend.")
 
     if not daytime:
-        $snape("let's not ruin such a wonderful moment and just have a drink.")
-        "> You are trying to extract from Snape, something else, but he just gushes liquor cups - looks like the students it seriously got."
-        "> In the end, he starts screaming that all he need is cigarettes and alcohol. You could hardly pacify and sent to bed."
+        $snape("Let's not ruin such a wonderful moment and just have a drink.")
+        "> You are trying to learn more from Snape, but he just downs liquor in large amounts - looks like the students seriously got to him."
+        "> In the end, he starts screaming that all he need is cigarettes and alcohol. You could barely pacify him and send him to bed."
     else:
-        $snape("I after 5 minutes starts potions in Gryffindor, so I forced you to leave, my friend.")
+        $snape("I have a Gryffindor potionclass in 5 minutes, so I need to leave, my friend.")
 
 
 
@@ -516,7 +516,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
     label daphne_pre_menu(sayText=daphne_pre_menu_text):
     $item=None
     menu:
-        "- To give her a parting gift-":
+        "- Give her a parting gift-":
             python:
                 choose = RunMenu()
                 for o in hero.Items():
@@ -533,7 +533,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
     label daphne_pre_finish_menu:
     $music()
     if item==None:
-        $daphne("~55 01 1 pri// #Promised a gift and where is he? Miser...") #Почему-то не срабатывает рот? проверить
+        $daphne("~55 01 1 pri// #Promised a gift and where is it? Miser...") #Почему-то не срабатывает рот? проверить
         $daphne.liking-=5
     $screens.HideD3("bld1")
     $daphne.Visibility(transition=d3).chibi.Trans("goout door").Hide(d3)    
