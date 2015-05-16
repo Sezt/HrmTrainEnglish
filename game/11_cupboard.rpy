@@ -48,9 +48,9 @@ label cupboard:
                 with d3
                 ">[item._description]"
                 if item.Name=="perfume":
-                    "> Have you tried to smell this perfume when received, and found them disgusting."
-                    "> But maybe you are wrong? You shrieked out of the bubble..."
-                    "> What a mess! Your first impression was correct..."
+                    "> You tried to smell this perfume when received it and found it disgusting."
+                    "> But maybe you where wrong? You smell the bottle..."
+                    "> What the hell! Your first impression was correct..."
                     $hero.SetValue("perfumeused", time.stamp)
                 hide screen gift
                 with d3
@@ -61,15 +61,15 @@ label cupboard:
                 menu:
                     "Enable TURBO mode" if turbo==1: 
                         $turbo=2
-                        "TURBO mode is enabled. Now your actions will bring you twice as much money and points the faculty slitherine.\n the Chance to read additional chapters twice."                    
+                        "TURBO mode is enabled. Your actions will now give you twice as much money and points for the Slytherin house.\n Also twice the chance to read additional chapters."                    
                     "Disable TURBO mode" if turbo==2: 
                         $turbo=1
-                        "TURBO mode is off. Now your actions will bring you the usual amount of money and points the faculty slitherine.\n The chance to read additional chapters standard."                    
+                        "TURBO mode is off. Your actions will now give you the usual amount of money and points for the Slytherin house.\n Also the normal chance to read additional chapters."                    
                     "CHEAT: +100 points for Slytherin":
                         hide screen points
                         $slytherin+=100
                         show screen points
-                    "CHEAT: Hermione no longer angry at you":
+                    "CHEAT: Hermione is no longer angry at you":
                         hide screen points
                         $hermi.liking=0
                         show screen points
@@ -78,8 +78,8 @@ label cupboard:
                         hide screen points
                         $gold+=100
                         show screen points
-                    "Passage":
-                        "Passage and answers frequently asked questions can be found {a=http://wtrus.ixbb.ru/viewtopic.php?id=19}HERE{/a}. "
+                    "Walkthrough":
+                        "Walkthrough and answers to frequently asked questions can be found {a=http://wtrus.ixbb.ru/viewtopic.php?id=19}HERE{/a}."
 
                     "-Never mind-":
                         jump cupboard
