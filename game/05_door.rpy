@@ -95,8 +95,8 @@ label door:
             else:
                 jump hermione_approaching
                
-        "{color=#858585}- Позвать Снейпа -{/color}" if this.Has("snape_summon") and snape_busy:#hanging_with_snape
-            ">Профессор Снейп недоступен."
+        "{color=#858585}-Summon Snape-{/color}" if this.Has("snape_summon") and snape_busy:#hanging_with_snape
+            ">Professor Snape is busy."
             if daytime:
                 jump day_main_menu
             else: 
@@ -106,12 +106,12 @@ label door:
             play music "music/Dark Fog.mp3" fadein 1 fadeout 1 # SNAPE'S THEME
             jump summon_snape
 
-        "{color=#858585}- Summon Daphne -{/color}" if this.Has("daphne_pre_finish") and (not time.IsAllStartedAgo(daphne._visitInterval, points={"daphne_private","daphne_public"})):
+        "{color=#858585}-Summon Daphne-{/color}" if this.Has("daphne_pre_finish") and (not time.IsAllStartedAgo(daphne._visitInterval, points={"daphne_private","daphne_public"})):
             $screens.ShowD3("bld1")
             if daphne._visitInterval>1:
-                "> You have an agreement with Hermione - you can't call her more than once every [daphne._visitInterval] hours."
+                ">You have an agreement with Hermione - you can't call Daphne more than once every [daphne._visitInterval] hours."
             else:
-                $Say(["Daphne now in class.", "Daphne is asleep."][daytime])
+                $Say(["Daphne is in class.", "Daphne is asleep."][daytime])
                 pass
             $screens.HideD3("bld1")
             if daytime:
