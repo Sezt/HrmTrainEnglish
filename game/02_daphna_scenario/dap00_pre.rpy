@@ -265,7 +265,7 @@ label daphne_pre_07: #Разговор с Гермионой о Дафне. В �
         $hermi.liking-=30
     else:
         $hero("Miss Granger, hold on. Please remember that Daphne is Slytherin, and by providing this information you are helping Gryffindor.//"
-            "Especially if she has any dark secrets, then you would have to tell me. And I guess she would have to be "punished".") 
+            "Especially if she has any dark secrets, then you would have to tell me. And I guess she would have to be punished.") 
         $hermi("~body_29.png// Still, sir, it's...")
         if end.IsEnding(const_ENDING_STRONG_GIRL):
             $music("Supergirl")
@@ -334,7 +334,7 @@ label daphne_pre_07: #Разговор с Гермионой о Дафне. В �
                         $hero ("Miss Granger! She's not my sweetheart.")
                         $hermi("~body_120.png// Well, your bitch then.")
                         $hero ("She's not...")
-                        $hermi("Maybe not yet. Isn't that the goal.")
+                        $hermi("Maybe not yet. Isn't that the goal?")
                         $hero ("Miss! You forget your place! Any more info...")
                         $hermi("~body_103.png// As you wish, sir. Now, this... person has no friends except a single cow.")
                         $hero ("A cow?")
@@ -406,7 +406,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
     $daphne_pre_menu_text=None # текст, который будет говорить джин в конце
 #    label daphne_pre_finish_menu:
     if event._finishCount==0: # Первый раз
-        $hero (m, "#(Well, \"Miss Blue Blood\"...our first meeting and conversations with Severus and Hermione gave me a few ideas.)") 
+        $hero (m, "#(Well, \"Miss Blue Blood\"...our first meeting and my conversations with Severus and Hermione gave me a few ideas.)") 
         $daphne("~55 00 1 ope// My parents sent me an owl about what you had planned for me.// So I decided to stay at Hogwarts.") 
         $hero (m, "#(Yes, dear, I have a lot of plans for your future.)") 
         $daphne("~55 00 1 pur// Frankly, I'm not that thrilled with this idea...// ...// Sir?...") 
@@ -426,12 +426,12 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
         $daphne("~64 00 1 neu// Yes sir, that's right. I do have great taste, inherited from a long line of pureblood witches.//"
             "~64 00 1 def// If I had the chance, I could show everybody what a real stylish witch is all about!") 
         $hero ("You can have that opportunity, miss.") 
-        $daphne("~46 w0 1 smi// Where?") 
+        $daphne("~46 w0 1 smi// How?") 
         $hero ("You're a cheerleader, as far as I know.// Cheerleader uniforms at Hogwarts imply a lot of personality and you can wear that.// I'm ready to play the role of a grateful audience.")
         $daphne("~64 w0 1 ehh// So, sir, you want me to...") 
         $hero ("Yes, you come here in your cheerleader uniform. Bravo, miss Greengrass! I knew you would catch on fast, but didn't think so fast.")
         $daphne("~64 w0 1 dis// Thank you, sir. But wouldn't it be a bit strange, if I came to class in that outfit. That's, um... a bit too carefree.") 
-        $hero ("Miss Greengrass, you might be right that is a bit too bold for you to wear it in front of the entire Hogwarts. But you could start with wearing it when you visit your Headmaster?")
+        $hero ("Miss Greengrass, you might be right that is a bit too bold for you to wear it in front of the entire school. But you could start with wearing it when you visit your Headmaster?")
         $daphne("~64 00 1 ope// I'm not sure...") 
         $hero ("I'm excited...Miss!.. your objections are overruled. Next time I expect you in that uniform.")
 
@@ -441,74 +441,74 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
         $event.Finalize()
 
     elif event._finishCount==1: # Second time
-        $hero (m, "Wonderful, miss Greengrass. You look simply stunning.// When you look at any men will rise... um. The mood..") 
-        $daphne("~55 00 1 neu// You confuse me, Professor. And I'm hardly happy about the fact that men have something there rises.//~26 00 pou 1// I knew that if I come to you in this form, then everything will begin!") 
-        $hero ("Hmm. I'm sorry that I expressed delight about your appearance, miss.// You're probably right and I shouldn't distinguish you and make you compliments.") 
-        $daphne("~55 n0 1 ehh// No sir, that's not what I meant. Just...// ~55 s0 1 dis// do I care if some Mudbloods something there...") 
-        $hero ("\"Up\"? You wanted to say, miss?") 
+        $hero (m, "Wonderful, miss Greengrass. You look simply stunning.// I am sure any man's...mood will rise when they see you like this.") 
+        $daphne("~55 00 1 neu// Please, Professor, I'm hardly happy about the fact that men get excited.//~26 00 pou 1// I knew that if I came to you in this uniform, it would become weird!") 
+        $hero ("Hmm. I'm sorry that I expressed delight about your appearance, miss.// You're probably right and I shouldn't distinguish and compliment you.") 
+        $daphne("~55 n0 1 ehh// No sir, that's not what I meant. Just...// ~55 s0 1 dis// I would care if some Mudbloods got...") 
+        $hero ("\"Aroused\"? Is that what you wanted to say, miss?") 
         $daphne("~55 n2 2 ehh// Um... Well, yeah...") 
-        $hero ("But if it occurs at the thoroughbred is quite another thing, miss.") 
-        $daphne("~37 n0 2 neu// Sir, our conversation goes in a strange direction!// If you do not stop, I will leave immediately.") 
-        $hero ("you don't stop that, miss?") 
-        $daphne("~46 01 2 pou// 't Pay me so much attention.") 
-        $hero ("nevertheless, you come in uniform.") 
-        $daphne("~46 01 2 ope// But not about you I said!") 
-        $hero ("#(why still, the witch!)// Of course, miss, please forgive me.// I promise to continue to pay attention to exactly what any Mudblood.") 
-        $daphne("~73 00 2 ope// no, sir, you got it all wrong!") 
-        $hero(".......?// Well, miss, it seems that today is not a good day to practice. Perhaps a great gift to lift your spirits.") 
+        $hero ("But if it was a pureblood it would be quite another thing, right?.") 
+        $daphne("~37 n0 2 neu// Sir, our conversation moves in a weird direction!// Please stop this or I will leave immediately.") 
+        $hero ("What should I stop with, miss?") 
+        $daphne("~46 01 2 pou// Paying this much attention to my outfit.") 
+        $hero ("Well, you arrived in that uniform.") 
+        $daphne("~46 01 2 ope// But you told me to!") 
+        $hero ("#(Feisty little witch!)// Of course, miss, please forgive me.// I promise to pay more attention to what that Mudblood girl is wearing.") 
+        $daphne("~73 00 2 ope// No, sir, you got it all wrong!") 
+        $hero(".......?// Well, miss, it seems that today is not a good day to start tutoring. Perhaps a gift would lift your mood.") 
         $event.Finalize()
 
     elif event._finishCount==2: # the Third time
 #        $daphne.ItemsCustomize(delete={"hair"})
 #        $daphne.ItemsCustomize(update={"hair"})
-        $hero (m, "When you are in this form, miss Greengrass, I see you have a great body. ")
-        $daphne("~55 00 1 pri// Sir, you are again!...") 
-        $hero ("I was thinking, why don't you speak to miss Hogwarts?") 
+        $hero (m, "When you are wearing that uniform, miss Greengrass, it is easy to see that you have a great body. ")
+        $daphne("~55 00 1 pri// Sir, you are starting with this again!...") 
+        $hero ("I was thinking, why don't you enter the Miss Hogwarts competition?") 
         $daphne("~64 w0 ehh 1// Um... This is... this is very sudden, sir. You really think I could?..") 
-        $hero ("I Certainly would. And what, if not win the contest will lift you to the top?")
+        $hero ("I certainly think so. And if you win it will no doubt elevate your status to the top of Hogwarts.")
         $daphne("~64 w0 1 smo// Oh!..") 
-        $hero("you Have an excellent chance. Especially if you will strive the Director of Hogwarts.") 
-        $daphne("~55 00 1 neu// Sir! I don't need it, I – blooded sorceress in Merlin knows what generation.// And I have to get everything just so, without any sort of protection!") 
-        $hero ("Well, girl, no need to be resent.// Of course, you deserve to be Queen, and I without a moment's hesitation would have given you first place right now.//"
-            "But you do realize how much around will be base-born, half-breeds and Frank Sagrada.// And they will all be jealous of you. And WE can't let you lose.")
+        $hero("You have an excellent chance. Especially if you follow the instructions of the Headmaster.") 
+        $daphne("~55 00 1 neu// Sir! I don't need your help, I am a pureblooded sorceress directly descended from Merlin.// I would get everything right, without any sort of insider help!") 
+        $hero ("Easy, girl, no need to be worked up.// Of course, you deserve to win, and I would without a moment's hesitation give you first place right now.//"
+            "But you do realize that many of the contestants will be mudbloods, half-breeds and other freaks.// And they will all be jealous of you. WE can't let you lose.")
         $daphne("~64 00 1 neu// We?") 
-        $hero ("We are the wizards who are in certain positions. The loss will harm all of US. You do realize that?") 
-        $daphne("~46 neu 01 1// Hmm, I never thought about it...") 
-        $hero ("you should be, miss... If you are ready to teach a lesson to all nedovrsenom...") 
-        $daphne("~26 n0 1 smo// Oh, sir, it is my greatest desire! Show them their place. To show who's really who. All of these girls...//"
-            "~26 n0 1 wo// I have so many years at Hogwarts and what? They still couldn't see who you are dealing with!") 
-        $hero  ("Well, miss Greengrass, I like your fighting spirit. And I want to support him a little gift.") 
+        $hero ("The wizards in high-ranked positions. Your loss would harm all of US. You do realize that?") 
+        $daphne("~46 neu 01 1// Hmm, I never thought about that...") 
+        $hero ("You should, miss...you could teach them all a lesson...") 
+        $daphne("~26 n0 1 smo// Oh, sir, that is my greatest dream! Show them their place. To show them who's really the best. All of these girls...//"
+            "~26 n0 1 wo// I have so many years at Hogwarts and what? They still can't see who they are dealing with!") 
+        $hero  ("Well, miss Greengrass, I like your fighting spirit. And I want to support you with a little gift.") 
         $daphne("~55 00 1 def")
         $event.Finalize()
 
     elif event._finishCount==3: # Chetvertyy and last time
-        $hero (m, "Well, miss, I told you for the contest.//"
-            "Right now the lists are hung on Hogwarts. And the owl with a note about this event and the list of participants already flies in the Daily prophet.") 
-        $daphne("~55 w0 1 ang// Oh, sir, everything is so fast... I'm actually not sure... I'm still...//~55 01 1 dis// This needs to be undone!") 
-        $hero ("And what will it look like?//"
-            "Yesterday, you are ready today and go back on their word. Turns out Daphne Greengrass folded before Mudbloods?//"
-            "However, if this is really what you want, I'll cancel it.") 
-        $daphne("~55 01 pou 1// N-no, sir, this is wrong. But I don't know what to do...// ~64 00 1 ehh// You... you really do that for me?") 
-        $hero ("of Course, miss Greengrass, if you will do what I say, you have nothing to worry about.// You'll even get the pleasure.")
-        $daphne("~64 00 1 dis/ Pleasure, sir?//"
-            "~64 s0 1 dis// don't know what can be fun when some half-breeds judging you as breeding bitches... er... cow.") 
-        $hero ("Believe me, miss, with some training you would like to be bitches... and cows... we have to stand on the podium, Yes.") 
-        $daphne("~26 w0 1 dis// TRAINING, SIR?!!!")
-        $hero(g4, "Who said \"dog training\"?")
+        $hero (m, "Well, miss, I told you about the competition.//"
+            "The competitor list has been hung up all around school. And the owl with a note about the event and the current list of participants has already been sent The Daily Prophet.") 
+        $daphne("~55 w0 1 ang// Oh, sir, everything is moving so fast...actually I'm not sure... I'm still...//~55 01 1 dis// I need to pull out!") 
+        $hero ("What will that look like?//"
+            "Yesterday you where are ready and to go back on your word today. Turns out Daphne Greengrass is afraid of Mudbloods?//"
+            "However, if that is really what you want, I'll cancel it.") 
+        $daphne("~55 01 pou 1// N-no, sir, this is wrong. But I don't know what to do...// ~64 00 1 ehh// Would...would you really help me?") 
+        $hero ("Of Course, miss Greengrass, if you do what I say, you have nothing to worry about.// It would be my pleasure to help you have fun.")
+        $daphne("~64 00 1 dis/ Fun, sir?//"
+            "~64 s0 1 dis// I am not sure whats so fun about being judged by half-breeds ranking you like a breeding bitch...er... cow.") 
+        $hero ("Believe me, miss, with some disciplining you would be the best bitch...or cow...to stand on that podium.") 
+        $daphne("~26 w0 1 dis// DISCIPLINING, SIR?!!!")
+        $hero(g4, "Who said \"disciplining\"?")
         $daphne("You just said!")
         $hero(m, "Oh, no, of course not, miss. I wanted to say \"training\",.//"
-            "And who can come to mind to train such a pureblood witch like you?")
-        $daphne("~46 00 1 pou// That's it! If someone tried, he would have immediately realized that Greengrassi not trainable!")
-        $hero("no, No, miss, we will have regular classes. Well, almost normal, given your amazingness, of course.//" 
-            "And I'm sure in the end you get as much pleasure as never received. #(Hehe)") 
-        $daphne("~55 00 1 smi// Oh, you think when I take the position that we were talking about, so I'll like it?") 
-        $hero (g9, "I assure you, miss.") 
-        $daphne("~55 00 1 smo// Then, sir, I'm ready to start. To get him to take.") 
-        $hero (m,"Excellent, miss Greengrass, and still rest today. I'll call you so we can start our play.// And I think you deserve a gift.") 
+            "And not anybody could train a pureblood witch such as you?")
+        $daphne("~46 00 1 pou// That's right! If someone tried, they would immediately realize that you can't train a Greengrass!")
+        $hero("No, you are right, miss, we will have normal classes. Well, almost normal, given your amazingness, of course.//" 
+            "And I'm sure in the end you would had as much fun as you ever had. #(Hehe)") 
+        $daphne("~55 00 1 smi// Oh, you think when I finally take your help, like we have been talking about, that I will like it?") 
+        $hero (g9, "I assure you that you will, miss.") 
+        $daphne("~55 00 1 smo// Then, sir, I'm ready to start. To improve my position.") 
+        $hero (m,"Excellent, miss Greengrass, take the rest of they day of. I'll call you when I am ready to start.// And I think you deserve a gift.") 
 
         $screens.Show(d3, "blktone", "notes")
         $ renpy.play('sounds/win2.mp3') 
-        ">Now you can call Daphne Greengrass in the Cabinet."
+        ">Now you can call Daphne Greengrass to your office."
         $screens.HideD3("blktone")
 
         $event.Finalize()
@@ -516,7 +516,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
     label daphne_pre_menu(sayText=daphne_pre_menu_text):
     $item=None
     menu:
-        "- Give her a parting gift-":
+        "- Give her a parting gift -":
             python:
                 choose = RunMenu()
                 for o in hero.Items():
@@ -533,7 +533,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
     label daphne_pre_finish_menu:
     $music()
     if item==None:
-        $daphne("~55 01 1 pri// #Promised a gift and where is it? Miser...") #Почему-то не срабатывает рот? проверить
+        $daphne("~55 01 1 pri// # He promised me a gift and where is it? Cheapskate...") #Почему-то не срабатывает рот? проверить
         $daphne.liking-=5
     $screens.HideD3("bld1")
     $daphne.Visibility(transition=d3).chibi.Trans("goout door").Hide(d3)    
