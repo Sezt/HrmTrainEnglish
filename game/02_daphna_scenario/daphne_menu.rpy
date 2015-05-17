@@ -20,7 +20,7 @@ label daphne_approaching(isKnocking=False):
         $hero ("Yes, girl?")
         $daphne("~55 00 1 dis// What you talking about?...")
         $hero("?!")
-        $daphne("~55 s0 1 dis// what rats poisoned?!// I can't single second here to stay!")
+        $daphne("~55 s0 1 dis// That rat poison?!// I can't stay a single second longer!")
         $daphne.liking-=5
         $daphne.Visibility(transition=d3).chibi.Trans("goout door").Hide(d3)    
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -39,10 +39,10 @@ label daphne_approaching(isKnocking=False):
     python:
         for t in [
             (0, ["~55 00 1 def// Yes, Professor?"]),
-            (-2, ["~55 00 1 neu// >looks Like Daphne is still a little upset you..."]),
-            (-9, ["~55 00 1 pri// >You upset Daphne."]),
-            (-19, ["~37 00 1 pri// >Daphne really upset you."]),
-            (-39, ["~26 00 1 dis// >Daphne gets mad at you."]),
+            (-2, ["~55 00 1 neu// >Looks Like Daphne is still a little upset with you..."]),
+            (-9, ["~55 00 1 pri// >Daphne is upset with you."]),
+            (-19, ["~37 00 1 pri// >Daphne is really upset with you."]),
+            (-39, ["~26 00 1 dis// >Daphne is mad at you."]),
             (-49, ["~26 00 1 dis// >Daphne is very mad at you."]),
             (-59, ["~26 s0 1 dis// >Daphne is angry with you."]),
             (-100, ["~26 s0 1 dis// >Daphne hates you."])
@@ -70,11 +70,11 @@ label daphne_approaching(isKnocking=False):
                 python:
                         for t in [
                         (-2, "~55 00 1 neu// I'm sorry, Professor, maybe another time..."),
-                        (-9, "~55 00 1 pri// I don't want today...\nMay be a couple of days..."),
+                        (-9, "~55 00 1 pri// I don't want to today...\nMaybe in a couple of days..."),
                         (-19, "~37 00 1 pri// No, thanks...."),
                         (-29, "~26 00 1 dis// After what you did?\nI don't think so..."),
-                        (-39, "~26 00 1 dis// are You serious!?"),
-                        (-100, "~26 s0 1 dis// This is a corny joke?!\nAfter what you did, I don't want to repeat it!")
+                        (-39, "~26 00 1 dis// Are You serious!?"),
+                        (-100, "~26 s0 1 dis// Is this a joke?!\nAfter what you did, I don't want to repeat that!")
                         ]:
                             (_val, _text)=t
                             if daphne.liking>=_val:
@@ -97,10 +97,10 @@ label daphne_approaching(isKnocking=False):
                         "\"(Yes, lets do it.)\"":
                             if this(choose.choice)._finishCount>=3:
                                 pause 1.0
-                                skaz "Sorry to interrupt the most interesting place? "
-                                skaz "Us too. But this storyline so far finished only up to this point..."
-                                skaz "(however, you have access to the other storylines)."
-                                skaz "Leave your questions, thanks and wishes on our {a=http://wtrus.ixbb.ru/viewtopic.php?id=9}FORUM{/a}. \Ptak you stimulate us and the continuation will appear faster. :)"
+                                skaz "Sorry to interrupt at the most interesting place? "
+                                skaz "But this storyline so only finished up to this point..."
+                                skaz "(However, you still have access to the other storylines)."
+                                skaz "Leave your questions, thanks and wishes on our {a=http://wtrus.ixbb.ru/viewtopic.php?id=9}FORUM{/a}. \P Your comments will stinmulate us and the story will continue so much faster. :)"
                                 jump daphne_main_menu_requests 
 
                             call expression this(choose.choice).Name
@@ -170,7 +170,7 @@ label daphne_approaching(isKnocking=False):
 
        
         
-        "- Ask people to leave -":
+        "- Ask her to leave -":
 #                        if daytime:
 #                            play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
 #                        else:
@@ -215,27 +215,27 @@ label daphne_chat:
         $daphne("~55 00 1 def")
         if daphne.whoring in {0,1,2}:
             $daphne([
-            "~46 00 1 ope// Lugradio - fight!// That should be a commandment for each real wizard!",
-            "~37 00 1 pri// Today, the Mudblood Granger again received the highest score. Where to watch the Ministry?!//"
-                "~37 01 1 pri// So soon among certified wizards won't be a pureblood.",
-            "~55 00 1 smi// Today \"Thoroughbred news\" has published a list of pureblood Wizarding England. Greengrassi - in the first dozen!//"
-                "~55 00 1 gri// You there too - on the penultimate line.",
-            "~55 00 1 ehh// my Mom says that I will be able to discover their real talents, only if I get the right position. You think so too?",
-            "~55 00 1 pou// My owl Puhle you drink too much bird feed and are now unable to fly anywhere.//"
-                "~55 00 1 smi// But I will never change to another.//"
-                "~55 c0 1 smo// It is also very pureblood!"
+            "~46 00 1 ope// Fight the Mudbloods!// That should be a commandment for each true wizard!",
+            "~37 00 1 pri// Today, that Mudblood Granger again received the highest score. Where is the Ministry when you need them?!//"
+                "~37 01 1 pri// Soon there won't be a pureblood anomg certified wizards.",
+            "~55 00 1 smi// Today \"Pureblood Post\" has published a list of pureblood Wizards in England. Greengrass are in the top 10!//"
+                "~55 00 1 gri// You where listed as well - second to last.",
+            "~55 00 1 ehh// My mother says that I will only be able to discover my real talents, if I get to the right position. Do you agree?",
+            "~55 00 1 pou// My owl Puglia ate too much food and is now unable to fly anywhere.//"
+                "~55 00 1 smi// But I would never replace her.//"
+                "~55 c0 1 smo// She is also a true pureblood!"
             ][Rand(5)-1])
         elif daphne.whoring in {3,4,5}:
             $daphne([
-            "~64 00 1 dis// the Contest is approaching, and I felt really bad. Sometimes I want to drink, to relax a little...//"
-                "~55 01 2 ehh// Oh, sorry, Professor, snapped. I'm not that mean!",
-            "~64 00 1 def// Today, some half-breed spoke to me.//~64 00 1 dis// I even thought that he was trying me to glue.//"
-                "~55 00 1 pri// what an ego some!",
-            "~55 00 1 def// This Ghost - PEPs, you know it, today in confidence told me that too, from some ancient kind.//"
-                "And I imagine he was very convincing.//~55 00 1 neu// Strange - he usually doesn't act.",
-            "~37 00 1 pur// I hope that with your help, Professor, I morning the nose is all that base-born, half-blood, and of course, mugatu.",
-            "~55 00 1 def// Today was a match and I did a dance cheer me with its elegance.//"
-                "~37 n2 2 def// Some guys were staring at me...// ~37 00 2 pou// But doesn't do any good, sir!"
+            "~64 00 1 dis// The competition is approaching and the stress is getting to me. I could us a to drink sometimes, to relax a little...//"
+                "~55 01 2 ehh// Oh, sorry, Professor, that slipped out. I didn't mean it!",
+            "~64 00 1 def// Today, some half-breed boy spoke to me.//~64 00 1 dis// I even thought that he was trying to get close to me.//"
+                "~55 00 1 pri// He doesn't know his place!",
+            "~55 00 1 def// This Ghost - Myrtle, you know her, told me today in confidence that you come very from a ancient linage as well.//"
+                "And she was very convincing.//~55 00 1 neu// Strange, she usually doesn't talk to me.",
+            "~37 00 1 pur// I hope that with your help, Professor, I can put all these muggles, half-bloods, and of course, mudbloods in their place.",
+            "~55 00 1 def// There was a match today and my cheerleading was more then elegant.//"
+                "~37 n2 2 def// Some guys were staring at me...// ~37 00 2 pou// Not sure I approve of that, sir!"
             ][Rand(5)-1])
 
 
