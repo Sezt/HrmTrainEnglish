@@ -3723,17 +3723,17 @@ label test:
     $ dermo = "ch_sna defend"
     
     show screen credits_chibi
-    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.4 (Russian Edition)-{/color}{/size}\n\n\n\
-    {color=#e5e297}-\{translation Witch Trainer back to English\}-{/color}\n\
+    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.4 (Russian Edition - English Version)-{/color}{/size}\n\n\n\
+    {color=#e5e297}-\{English Witch Trainer Translation:\}-{/color}\n\
     {color=#fff}\
-    Khan32{/a},\n\
+    {a=http://wtrus.ixbb.ru/profile.php?id=3}Khan{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=307}Sezt{/a},\n\
     \n\n\
-    {color=#e5e297}-\{Programming of new events:\}-{/color}\n\
+    {color=#e5e297}-\{New Event Programming:\}-{/color}\n\
     {color=#fff}\
     {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=14141420}Ave_Fletch{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=68}Eskelsama{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=4}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\
     \
     \n\n\
-    {color=#e5e297}-\{The lyrics of new events:\}-{/color}\n\
+    {color=#e5e297}-\{New Event Text:\}-{/color}\n\
     {color=#fff}\
     {a=http://wtrus.ixbb.ru/profile.php?id=4}Nyarkohotep{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\
     \n\n\
@@ -3741,15 +3741,15 @@ label test:
     {color=#fff}\
     {a=http://wtrus.ixbb.ru/profile.php?id=3}Khan{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=2}Skazochnik{/a}\n\
     \n\n\
-    {color=#e5e297}-\{Arts:\}-{/color}\n\
+    {color=#e5e297}-\{New Art:\}-{/color}\n\
     {color=#fff}\
     Oh Zar, Zio, {a=http://wtrus.ixbb.ru/profile.php?id=83}Grendidg{/a}\n\
     \n\n\
-    {color=#e5e297}-\{Verification of translation and additions to the event}-{/color}\n\
+    {color=#e5e297}-\{Proofreading Translation and New Events}-{/color}\n\
     {color=#fff}\
     JJ, TG{/a}\n\
     \n\n\
-    {size=-5}{color=#e5e297}-\{{Beta testing English version:\}-{/color}\n\
+    {size=-5}{color=#e5e297}-\{{Beta testing English Version:\}-{/color}\n\
     {color=#fff}\
     megablue5, K. Yeezus{/color}{/size}\n\
     \n\n\n\
