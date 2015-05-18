@@ -626,7 +626,7 @@ label new_request_05:
                         her_head_main "....................."
                         jump connection_of_rapes_02  
         
-    elif hermi.whoring >= 21: # LEVEL 05 # Hermione is more then willing. <=================================================================================== SECOND EVENT.
+    elif hermi.whoring >= 15: # LEVEL 05 # Hermione is more then willing. <=================================================================================== SECOND EVENT.
 #       $ new_request_05_02 = True # HEARTS.
         hide screen bld1
         with d3
