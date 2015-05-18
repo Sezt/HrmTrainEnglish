@@ -668,7 +668,7 @@ label new_request_05:
                         m "Ohh how wonderful, miss Granger. Nothing between my fingers and your soft skin."
                         $her_head_state = 34
                         her_head_main "I am happy that you like it, sir"
-                        pass
+                        jump fingering_start_01
                     "-Give her butt a slap-":
                         ">You lift her skirt to make room for a good slap<"
                         m "Ohh Miss Granger, I love it. You seem to have left your panties at home"
@@ -689,7 +689,7 @@ label new_request_05:
                         menu:
                             "\"Just checking the firmness...very nice, miss\"":
                                 her_head_main "Oh alright..."
-                                pass
+                                jump fingering_start_01
                             "-Give her butt another slap-":
                                 $ renpy.play('sounds/slap_02.mp3') #SLAP!
                                 show screen white
@@ -703,7 +703,7 @@ label new_request_05:
                                 her_head_main "It does hurt a bit more without panties"
                                 her_head_main "But in a slightly good way."
                                 m "Enough slapping for now"
-                                jump fingering_behind_01
+                                jump fingering_start_01
                                 
             "\"No. Facing me is fine, miss Granger.\"":
                 $her_head_state = 01
@@ -739,9 +739,9 @@ label new_request_05:
                 pause
                 show screen groping_02
                 with d7
-                jump fingering_start_01
+                jump fingering_start_02
                 
-                        
+                label fingering_start_01:        
                 pause
                 show screen groping_02
                 with d7
@@ -765,7 +765,7 @@ label new_request_05:
                 m "Let's double the normal fee and see where that takes us"
                 $her_head_state = 15
                 her_head_main "That sounds fair...mmmh"
-                label fingering_start_01:
+                label fingering_start_02:
                 ">You continue to play with Hermione's ass..."
                 her_head_main "................"
                 menu:
