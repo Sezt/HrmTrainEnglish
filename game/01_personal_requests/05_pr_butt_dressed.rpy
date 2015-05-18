@@ -630,7 +630,7 @@ label new_request_05:
 #       $ new_request_05_02 = True # HEARTS.
         hide screen bld1
         with d3
-        m "Come over here, girl. I have a special surprise planned for you today."
+        m "Come over here, girl. I have a special surprise planned for your butt today."
         $her_head_state = 18
         her_head_main "Oh you have. Alright then."
         hide screen bld1
@@ -644,7 +644,7 @@ label new_request_05:
         with Dissolve(1)
         pause.5
         $her_head_state = 17
-        her_head_main "Do you want me to turn around then, sir?"
+        her_head_main "Do you want me to turn around, sir?"
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
         menu:
             m "Hm..."
@@ -702,7 +702,7 @@ label new_request_05:
                                 $her_head_state = 01
                                 her_head_main "It does hurt a bit more without panties"
                                 her_head_main "But in a slightly good way."
-                                m "Enough slapping for now"
+                                m "Let's pause the slapping. I need to touch that fine ass."
                                 jump fingering_start_01
                                 
             "\"No. Facing me is fine, miss Granger.\"":
@@ -770,26 +770,44 @@ label new_request_05:
                 her_head_main "................"
                 menu:
                     "-Massage her ass and play with her butt-hole-":
-                        ">You slowly slide one of your hands under the fabric of the girl's panties..."
-                        $her_head_state = 17
-                        her_head_main "Professor... What are you...?"
-                        m "It's alright, just think about those 15 points your house is about to receive..."
-                        her_head_main "As you say..."
-                        menu:
-                            "-Prod her pussy with one of your fingers-":
-                                show screen blkfade
-                                with d3
-                                ">You slide one of your fingers down and place it against the girl's little slit..."
-                                $her_head_state = 18
-                                her_head_main "Professor?" 
-                                menu:
-                                    "-Force your finger into her pussy!-":
-                                        ">You force one of your fingers into her little pussy..."
-                                        ">It's very tight and warm..."
-                                        ">it is quite wet as well...  Seems like Hermione's taking pleasure in this..."
-                                        jump screams_of_pleasure
-                                    "-Let the girl go...-":
-                                        pass
+                        ">You slowly spread her cheeks to take a closer look at her tiny butt-hole."
+                        $her_head_state = 39
+                        her_head_main "Professor...don't...that's embarrasing!"
+                        m "Just making sure eveything is in good order, miss"
+                        m "Let me just try to push my little finger in and you can tell me how that feels."
+                        $her_head_state = 34
+                        her_head_main "MMmmh...it's going in...slight pressure...warm...pretty nice, sir"
+                        m"You have a very nice little hole, miss, but it's not used to visitors it seems."
+                        $her_head_state = 25
+                        her_head_main "Ahhh...no, I haven't had a lot of experience with this."
+                        m "No vorries, dear, that is why I am here to guide you."
+                        m "But before we move futher down this rabbithole I just want to check if I have some Anal Lube."
+                        if hero.Items.Any("anal_lube"):
+            	            $hero.Items.AddItem("anal_lube",-1)
+                            m "We are in luck, miss, a whole jar just for your hole."
+                            $her_head_state = 22
+                            her_head_main "Profesor! My tiny hole would never fit the entire jar!"
+                            m "Hehehe, easy miss, it's just for lubrication of a finger...or two."
+                            jump fingering_transition_01
+                        else:
+                            m "It does not seem like I have any left"
+                            m "I will have to order some when we are done for the day, sorry"
+                            jump fingering_end_bad
+                            
+                        "-Prod her pussy with one of your fingers-":
+                            show screen blkfade
+                            with d3
+                            ">You slide one of your fingers down and place it against the girl's little slit..."
+                            $her_head_state = 18
+                            her_head_main "Professor?" 
+                            menu:
+                                "-Force your finger into her pussy!-":
+                                    ">You force one of your fingers into her little pussy..."
+                                    ">It's very tight and warm..."
+                                    ">it is quite wet as well...  Seems like Hermione's taking pleasure in this..."
+                                    jump screams_of_pleasure
+                                "-Let the girl go...-":
+                                    pass
                             "-Prod her butt-hole instead-":
                                 show screen blkfade
                                 with d3
@@ -807,11 +825,13 @@ label new_request_05:
                                         pass
                             "-Stop pushing your luck. Dismiss the girl-":
                                 pass
-                    "-No. That's enough for today. Dismiss her-":
-                        pass
-            
-  
-  
+                    
+label fingering_transition_01:  
+    m "Let's remove your skirt and I think it would help if you bend over a bit"
+    
+    
+label fingering_bad_end:
+    ">You let go of her ass<"
   
     
         
