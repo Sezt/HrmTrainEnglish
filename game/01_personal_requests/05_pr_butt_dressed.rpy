@@ -722,11 +722,11 @@ label new_request_05:
                 $her_head_state = 35
                 her_head_main "Yes sir, it does make a lot of things easier..."
                 m "Excellent!"
-                "<You massage her ass and slowly grasp her butt more firmly >"
+                ">You massage her ass and slowly grasp her butt more firmly<"
                 her_head_main "Hmmm...yes...."
                 her_head_main "..................."
                 her_head_main "Ohh I almost forgot...you mentioned something about a surprise..."
-                "<You squeeze her cheeks and move a finger around her tiny hole>"
+                ">You squeeze her cheeks and move a finger around her tiny hole<"
                 m "Ahh yes. I have been thinking about doubling your fee for this service."
                 $her_head_state = 03
                 her_head_main "Mmmmh....."
@@ -751,13 +751,13 @@ label new_request_05:
                 $her_head_state = 35
                 m "Ahh yes, of course, I almost forgot all about it..."
                 m "Your lovely naked bum distracted me a bit."
-                "<You grab both buttcheeks a bit firmer and continue the massage>"
+                ">You grab both buttcheeks a bit firmer and continue the massage<"
                 $her_head_state = 38
                 her_head_main "uhh Professor, that is pretty distracting as well"
                 her_head_main "Not that you need to stop..."
                 $her_head_state = 01
                 m "I was thinking that we could move on to a more advanced curriculum."
-                "<You run a finger down between her cheeks and circle her tiny hole>"
+                ">You run a finger down between her cheeks and circle her tiny hole<"
                 $her_head_state = 03
                 her_head_main "Ohh that is new"
                 $her_head_state = 15
@@ -765,7 +765,7 @@ label new_request_05:
                 m "Let's double the normal fee and see where that takes us"
                 $her_head_state = 15
                 her_head_main "That sounds fair...mmmh"
-                label fingering_start_01
+                label fingering_start_01:
                 ">You continue to play with Hermione's ass..."
                 her_head_main "................"
                 menu:
