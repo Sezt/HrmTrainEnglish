@@ -626,7 +626,190 @@ label new_request_05:
                         her_head_main "....................."
                         jump connection_of_rapes_02  
         
-  
+      elif hermi.whoring >= 21: # LEVEL 05 # Hermione is more then willing. <=================================================================================== SECOND EVENT.
+#        $ new_request_05_02 = True # HEARTS.
+        hide screen bld1
+        with d3
+        m "Come over here, girl. I have a special surprise planned for you today."
+        $her_head_state = 18
+        her_head_main "Oh you have. Alright then."
+        hide screen bld1
+        with d3
+        $ walk_xpos=400 #Animation of walking chibi. (From)
+        $ walk_xpos2=280 #Coordinates of it's movement. (To)
+        $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
+        show screen hermione_walk_01 
+        pause 1
+        show screen blkfade
+        with Dissolve(1)
+        pause.5
+        $her_head_state = 17
+        her_head_main "Do you want me to turn around then, sir?"
+        play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
+        menu:
+            m "Hm..."
+            "\"Yes. Turn around for me.\"":
+                her_head_main "As you wish, sir..."
+                hide screen hermione_walk_01
+                hide screen genie
+                show screen ctc
+                show screen no_groping_022
+                with d1
+                hide screen blkfade
+                with d5
+                pause
+                $her_head_state = 35
+                her_head_main "You may notice that I have a surprise for you as well..."
+                m "Ohh I love surprises, Miss Granger, even more so when said with such a teasing tone."
+                menu:
+                    m "Well, lets see..."
+                    "-Give her butt a squeeze-":
+                        ">Moving your hands up her thighs ending on her bare bottom<"
+                        m "Ohh how wonderful, miss Granger. Nothing between my fingers and your soft skin."
+                        $her_head_state = 34
+                        her_head_main "I am happy that you like it, sir"
+                        pass
+                    "-Give her butt a slap-":
+                        ">You lift her skirt to make room for a good slap<"
+                        m "Ohh Miss Granger, I love it. You seem to have left your panties at home"
+                        $her_head_state = 34
+                        her_head_main "Well yes, they are somewhat in the way these days"
+                        m "I couldn't agree more. Your fine behind shouldn't be hindered in any way"
+                        m "It should make this more enjoyable as well"
+                        $ renpy.play('sounds/slap_02.mp3') #SLAP!
+                        show screen white
+                        with hpunch
+                        pause.08
+                        hide screen white
+                        show screen bld1
+                        $her_head_state = 15
+                        her_head_main "Uhh..."
+                        $her_head_state = 39
+                        her_head_main "What are you up to, sir?"
+                        menu:
+                            "\"Just checking the firmness...very nice, miss\"":
+                                her_head_main "Oh alright..."
+                                pass
+                            "-Give her butt another slap-":
+                                $ renpy.play('sounds/slap_02.mp3') #SLAP!
+                                show screen white
+                                with hpunch
+                                pause.08
+                                hide screen white
+                                show screen bld1
+                                $her_head_state = 15
+                                her_head_main "Mmmmhh..."
+                                $her_head_state = 01
+                                her_head_main "It does hurt a bit more without panties"
+                                her_head_main "But in a slightly good way."
+                                m "Enough slapping for now"
+                                jump fingering_behind_01
+                                
+            "\"No. Facing me is fine, miss Granger.\"":
+                $her_head_state = 01
+                her_head_main "As you wish, sir..."
+                hide screen hermione_walk_01
+                hide screen genie
+                show screen ctc
+                show screen no_groping_01
+                with d1
+                hide screen blkfade
+                with d5
+                pause
+                show screen groping_01
+                with d7
+                m "Ohh how lovely, miss Granger. No panties to hinder our progress!"
+                $her_head_state = 35
+                her_head_main "Yes sir, it does make a lot of things easier..."
+                m "Excellent!"
+                "<You massage her ass and slowly grasp her butt more firmly >"
+                her_head_main "Hmmm...yes...."
+                her_head_main "..................."
+                her_head_main "Ohh I almost forgot...you mentioned something about a surprise..."
+                "<You squeeze her cheeks and move a finger around her tiny hole>"
+                m "Ahh yes. I have been thinking about doubling your fee for this service."
+                $her_head_state = 03
+                her_head_main "Mmmmh....."
+                $her_head_state = 35
+                her_head_main "Well...there must be ahhh reason for your generosity..."
+                m "Just to open up some further options when exploring these sensations..."
+                her_head_main "That does sound fair enough...ahhgreed..."
+                m "Alright. Please turn around so I can get a better look at your lovely naked bottom, miss."
+                her_head_main "Ohh yes, sure..."
+                pause
+                show screen groping_02
+                with d7
+                jump fingering_start_01
+                
+                        
+                pause
+                show screen groping_02
+                with d7
+                her_head_main "..................."
+                m "Is something on your mind, miss granger."
+                her_head_main "Oh, just thinking about the surprise you mentioned..."
+                $her_head_state = 35
+                m "Ahh yes, of course, I almost forgot all about it..."
+                m "Your lovely naked bum distracted me a bit."
+                "<You grab both buttcheeks a bit firmer and continue the massage>"
+                $her_head_state = 38
+                her_head_main "uhh Professor, that is pretty distracting as well"
+                her_head_main "Not that you need to stop..."
+                $her_head_state = 01
+                m "I was thinking that we could move on to a more advanced curriculum."
+                "<You run a finger down between her cheeks and circle her tiny hole>"
+                $her_head_state = 03
+                her_head_main "Ohh that is new"
+                $her_head_state = 15
+                her_head_main "Mmmm...If the price is right I am willing to explore some new knowledge, sir."
+                m "Let's double the normal fee and see where that takes us"
+                $her_head_state = 15
+                her_head_main "That sounds fair...mmmh"
+                label fingering_start_01
+                ">You continue to play with Hermione's ass..."
+                her_head_main "................"
+                menu:
+                    "-Massage her ass and play with her butt-hole-":
+                        ">You slowly slide one of your hands under the fabric of the girl's panties..."
+                        $her_head_state = 17
+                        her_head_main "Professor... What are you...?"
+                        m "It's alright, just think about those 15 points your house is about to receive..."
+                        her_head_main "As you say..."
+                        menu:
+                            "-Prod her pussy with one of your fingers-":
+                                show screen blkfade
+                                with d3
+                                ">You slide one of your fingers down and place it against the girl's little slit..."
+                                $her_head_state = 18
+                                her_head_main "Professor?" 
+                                menu:
+                                    "-Force your finger into her pussy!-":
+                                        ">You force one of your fingers into her little pussy..."
+                                        ">It's very tight and warm..."
+                                        ">it is quite wet as well...  Seems like Hermione's taking pleasure in this..."
+                                        jump screams_of_pleasure
+                                    "-Let the girl go...-":
+                                        pass
+                            "-Prod her butt-hole instead-":
+                                show screen blkfade
+                                with d3
+                                ">You place your one of your thumbs against the girl's little butt-hole..."
+                                her_head_main "Professor? What are planning on doing?"
+                                menu:
+                                    "-Force your thumb into her butt-hole-":
+                                        ">You force one of your thumbs into her little butt-hole..."
+                                        with hpunch
+                                        $her_head_state = 36
+                                        her_head_main "ah... your finger is up my..."
+                                        ">It's very tight and warm inside..."
+                                        jump screams_of_pleasure
+                                    "-Let the girl go...-":
+                                        pass
+                            "-Stop pushing your luck. Dismiss the girl-":
+                                pass
+                    "-No. That's enough for today. Dismiss her-":
+                        pass
+            
   
   
   
