@@ -406,7 +406,7 @@ label new_request_05:
                         jump connection_of_rapes
     
         
-    elif hermi.whoring >= 6: # LEVEL 04 # Hermione is hesitant. <=================================================================================== SECOND EVENT.
+    elif hermi.whoring >= 6 and hermi.whoring <= 14: # LEVEL 04 # Hermione is hesitant. <=================================================================================== SECOND EVENT.
 #        $ new_request_05_02 = True # HEARTS.
         hide screen bld1
         with d3
