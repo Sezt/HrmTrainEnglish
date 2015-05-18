@@ -653,7 +653,7 @@ label new_request_05:
                 hide screen hermione_walk_01
                 hide screen genie
                 show screen ctc
-                show screen no_groping_022
+                show screen no_groping_02
                 with d1
                 hide screen blkfade
                 with d5
