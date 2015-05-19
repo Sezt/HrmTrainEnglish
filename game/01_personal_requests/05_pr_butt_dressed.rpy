@@ -844,13 +844,14 @@ label new_request_05:
             
             m "Let's remove your skirt and I think it would help if you bend over a bit"
             pause
-             $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
+            $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
             $ genie_chibi_ypos = 10
             $ g_c_u_pic = "fingering_slow"
             show screen chair_02
             show screen g_c_u
             
             m "test break"
+            jump ending_of_screams_of_pleasure
     
         label fingering_end_short:
             jump ending_of_screams_of_pleasure
