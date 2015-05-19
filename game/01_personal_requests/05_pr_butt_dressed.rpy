@@ -813,7 +813,7 @@ label new_request_05:
                         menu:
                             "-Look for some lubricant-":
                                 m "Let me see if I have any lubricant left over"
-                                if hero.Items.Any("anal_lube"):
+                                if 1<=hero.Items.count("anal_lube"):
                                     $hero.Items.AddItem("anal_lube",-1)
                                     m "Tadaa, I guess your ass will thank me in the morning."
                                     $her_head_state = 22
