@@ -859,6 +859,8 @@ label new_request_05:
             m "Work in progress"
             menu:
                 "-End 4 star butt test-":
+                    hide screen chair_02
+                    hide screen g_c_u
                     jump ending_of_screams_of_pleasure
     
         label fingering_end_short:
