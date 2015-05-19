@@ -770,6 +770,8 @@ label new_request_05:
                 her_head_main "................"
                 menu:
                     "-Massage her ass and play with her butt-hole-":
+                        show screen blkfade
+                        with d3
                         ">You slowly spread her cheeks to take a closer look at her tiny butt-hole."
                         $her_head_state = 39
                         her_head_main "Professor...don't...that's embarrasing!"
@@ -795,36 +797,15 @@ label new_request_05:
                             jump fingering_end_bad
                             
                     "-Prod her pussy with one of your fingers-":
-                            show screen blkfade
-                            with d3
-                            ">You slide one of your fingers down and place it against the girl's little slit..."
-                            $her_head_state = 18
-                            her_head_main "Professor?" 
-                            menu:
-                                "-Force your finger into her pussy!-":
-                                    ">You force one of your fingers into her little pussy..."
-                                    ">It's very tight and warm..."
-                                    ">it is quite wet as well...  Seems like Hermione's taking pleasure in this..."
-                                    jump screams_of_pleasure
-                                "-Let the girl go...-":
-                                    jump fingering_transition_01
-                            "-Prod her butt-hole instead-":
-                                show screen blkfade
-                                with d3
-                                ">You place your one of your thumbs against the girl's little butt-hole..."
-                                her_head_main "Professor? What are planning on doing?"
-                                menu:
-                                    "-Force your thumb into her butt-hole-":
-                                        ">You force one of your thumbs into her little butt-hole..."
-                                        with hpunch
-                                        $her_head_state = 36
-                                        her_head_main "ah... your finger is up my..."
-                                        ">It's very tight and warm inside..."
-                                        jump screams_of_pleasure
-                                    "-Let the girl go...-":
-                                        pass
-                            "-Stop pushing your luck. Dismiss the girl-":
-                            jump fingering_transition_01
+                        show screen blkfade
+                        with d3
+                        ">You slide one of your fingers down and place it against the girl's little slit..."
+                        $her_head_state = 18
+                        her_head_main "Professor?" 
+                            
+                    "-Change your mind. Dismiss the girl-":
+                        m "I have changed my mind. I am not in the mood. Let's try the move advanced stuff another day." 
+                        jump ending_of_screams_of_pleasure
                     
 label fingering_transition_01:  
     m "Let's remove your skirt and I think it would help if you bend over a bit"
