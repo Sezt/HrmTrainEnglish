@@ -845,8 +845,8 @@ label new_request_05:
             m "Take of your skirt, miss."
             m "And I think it might be more comfortable if you bend over a bit"
             $her_head_state = 17
-            $ pos = POS_370
-            $herView.showQQ( "body_10.png", pos )
+            # $ pos = POS_370
+            # $herView.showQQ( "body_10.png", pos ) # Need a bottomless body
             her_head_main "Is this alright, sir"
             show screen blkfade
             with Dissolve(1)
