@@ -781,7 +781,7 @@ label new_request_05:
                         $her_head_state = 25
                         her_head_main "Ahhh...no, I haven't had a lot of experience with this."
                         m "No vorries, dear, that is why I am here to guide you."
-                        m "But before we move futher down this rabbithole I just want to check if I have some Anal Lube."
+                        m "But before we move futher down this rabbithole, I just want to check if I have some lube."
                         if hero.Items.Any("lubricant"):
                             $hero.Items.AddItem("lubricant",-1)
                             m "We are in luck, miss, a whole jar just for your hole."
@@ -834,8 +834,8 @@ label new_request_05:
                                 jump fingering_end_short #Work in progress
                             
                     "-Change your mind. Dismiss the girl-":
-                        m "I have changed my mind. I am not in the mood. Let's try the move advanced stuff another day." 
-                        m "So they payout would also be the normal fee"
+                        m "I have changed my mind. I am not in the mood. Let's try the more advanced stuff another day." 
+                        m "So your payout wwill also be the normal fee"
                         $her_head_state = 04
                         her_head_main "Hmmph, your call I guess."
                         jump fingering_end_short
@@ -850,15 +850,16 @@ label new_request_05:
             hide screen genie
             hide screen blkfade
             with Dissolve(1)
-            pause.5
             $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
             $ genie_chibi_ypos = 10
             $ g_c_u_pic = "fingering_slow"
             show screen chair_02
             show screen g_c_u
             
-            m "test break"
-            jump ending_of_screams_of_pleasure
+            m "Work in progress"
+            menu:
+                "-End 4 star butt test"
+                    jump ending_of_screams_of_pleasure
     
         label fingering_end_short:
             jump ending_of_screams_of_pleasure
