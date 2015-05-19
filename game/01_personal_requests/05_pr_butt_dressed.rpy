@@ -794,7 +794,7 @@ label new_request_05:
                             m "I will have to order some when we are done for the day, sorry"
                             jump fingering_end_bad
                             
-                        "-Prod her pussy with one of your fingers-":
+                    "-Prod her pussy with one of your fingers-":
                             show screen blkfade
                             with d3
                             ">You slide one of your fingers down and place it against the girl's little slit..."
@@ -807,7 +807,7 @@ label new_request_05:
                                     ">it is quite wet as well...  Seems like Hermione's taking pleasure in this..."
                                     jump screams_of_pleasure
                                 "-Let the girl go...-":
-                                    pass
+                                    jump fingering_transition_01
                             "-Prod her butt-hole instead-":
                                 show screen blkfade
                                 with d3
@@ -824,7 +824,7 @@ label new_request_05:
                                     "-Let the girl go...-":
                                         pass
                             "-Stop pushing your luck. Dismiss the girl-":
-                                pass
+                            jump fingering_transition_01
                     
 label fingering_transition_01:  
     m "Let's remove your skirt and I think it would help if you bend over a bit"
