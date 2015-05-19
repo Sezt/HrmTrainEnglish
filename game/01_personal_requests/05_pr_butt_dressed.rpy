@@ -863,11 +863,13 @@ label new_request_05:
             ">You grab her butt and massage her with a very firm grib<"
             $her_head_state = 06
             her_head_main "Ahhhh...thank you sir..."
+            hide screen genie
             hide screen g_c_u
             $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
             $ genie_chibi_ypos = 10
             $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
-                        
+            
+            m "Test test"
             m "Work in progress"
             menu:
                 "-End 4 star butt test-":
