@@ -2144,13 +2144,13 @@ image groping_01: #Genie groping Hermione under her skirt. Hermione is facing Ge
 
 image fingering_slow: #Slow fingering
     "03_hp/08_animation_02/30_fingering_01.png"
-    pause.1
+    pause.100
     "03_hp/08_animation_02/30_fingering_02.png"
-    pause.1
+    pause.1000
     "03_hp/08_animation_02/30_fingering_01.png"
     repeat
 
-image fingering_medium: #Slow fingering
+image fingering_medium: #Medium fingering
     "03_hp/08_animation_02/30_fingering_01.png"
     pause.2
     "03_hp/08_animation_02/30_fingering_02.png"
@@ -2158,7 +2158,7 @@ image fingering_medium: #Slow fingering
     "03_hp/08_animation_02/30_fingering_01.png"
     repeat
 
-image fingering_fast: #Slow fingering
+image fingering_fast: #Fast fingering
     "03_hp/08_animation_02/30_fingering_01.png"
     pause.4
     "03_hp/08_animation_02/30_fingering_02.png"
