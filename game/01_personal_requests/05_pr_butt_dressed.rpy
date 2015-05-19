@@ -849,7 +849,7 @@ label new_request_05:
             m "Let's remove your skirt and I think it would help if you bend over a bit"
     
     
-        label fingering_end_bad:
+        label fingering_end_short:
             jump ending_of_screams_of_pleasure
       
     
