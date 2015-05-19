@@ -770,8 +770,6 @@ label new_request_05:
                 her_head_main "................"
                 menu:
                     "-Play gently with her little star-":
-                        show screen blkfade
-                        with d3
                         ">You slowly spread her cheeks to take a closer look at her tiny butt-hole."
                         $her_head_state = 39
                         her_head_main "Professor...don't...that's embarrasing!"
@@ -800,8 +798,6 @@ label new_request_05:
                             jump fingering_end_short
                             
                     "-Finger her butt-":
-                        show screen blkfade
-                        with d3
                         ">You grab her cheeks and press a thumb into her ass."
                         $her_head_state = 28
                         her_head_main "Ahhh...that hurts...?"
@@ -847,7 +843,10 @@ label new_request_05:
         label fingering_transition_01:
             
             m "Let's remove your skirt and I think it would help if you bend over a bit"
-    
+            pause
+            show screen fingering_slow
+            with d7
+            m "test"
     
         label fingering_end_short:
             jump ending_of_screams_of_pleasure
@@ -1041,4 +1040,10 @@ label screams_of_pleasure:
     m "Well, in that case..."
     jump ending_of_screams_of_pleasure
 
+    image fingering_slow: #Slow fingering
+        "03_hp/08_animation_02/30_fingering_01.png"
+        pause.10
+        "03_hp/08_animation_02/30_fingering_02.png"
+        pause.10
+        repeat
     
