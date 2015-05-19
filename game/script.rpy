@@ -2144,9 +2144,10 @@ image groping_01: #Genie groping Hermione under her skirt. Hermione is facing Ge
 
 image fingering_slow: #Slow fingering
     "03_hp/08_animation_02/30_fingering_01.png"
-    pause.10
+    pause.2
     "03_hp/08_animation_02/30_fingering_02.png"
-    pause.10
+    pause.2
+    "03_hp/08_animation_02/30_fingering_01.png"
     repeat
 
 image groping_02: #Genie groping Hermione under her skirt. Hermione's behind is facing Genie.
