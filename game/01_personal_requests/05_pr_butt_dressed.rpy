@@ -822,20 +822,20 @@ label new_request_05:
                                     jump fingering_transition_01
                                 else:
                                     m "It seems I am all out, miss"
-                                        menu:
-                                            "-Enough for today-":
-                                                m "I will order some when I get the chance"
-                                                m "You did well but not enough to earn a pay increase. Maybe next time."
-                                                $her_head_state = 25
-                                                her_head_main "It's not my fault you didn't have any lubricant..."
-                                                m "I will make it up to you another time, don't worry"
-                                                Jump fingering_end_short
-                                            "-Press on-":
-                                                jump fingering_rough_01
+                                    menu:
+                                        "-Enough for today-":
+                                            m "I will order some when I get the chance"
+                                            m "You did well but not enough to earn a pay increase. Maybe next time."
+                                            $her_head_state = 25
+                                            her_head_main "It's not my fault you didn't have any lubricant..."
+                                            m "I will make it up to you another time, don't worry"
+                                            Jump fingering_end_short
+                                        "-Press on-":
+                                            jump fingering_rough_01
                             
                             "-Continue as is-":
                                 label fingering_rough_01:
-                        
+                                Jump fingering_end_short #Work in progress
                             
                     "-Change your mind. Dismiss the girl-":
                         m "I have changed my mind. I am not in the mood. Let's try the move advanced stuff another day." 
