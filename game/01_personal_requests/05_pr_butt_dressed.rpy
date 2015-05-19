@@ -769,7 +769,7 @@ label new_request_05:
                 ">You continue to play with Hermione's ass..."
                 her_head_main "................"
                 menu:
-                    "-Massage her ass and play with her butt-hole-":
+                    "-Play gently with her little star-":
                         show screen blkfade
                         with d3
                         ">You slowly spread her cheeks to take a closer look at her tiny butt-hole."
@@ -793,27 +793,65 @@ label new_request_05:
                             jump fingering_transition_01
                         else:
                             m "It does not seem like I have any left"
-                            m "I will have to order some when we are done for the day, sorry"
-                            jump fingering_end_bad
+                            m "I will have to order some later, sorry"
+                            $her_head_state = 04
+                            her_head_main "It's alright Profesor, I will even be happy with my normal fee today."
+                            m "You are a good girl, Miss Granger"
+                            jump fingering_end_short
                             
-                    "-Prod her pussy with one of your fingers-":
+                    "-Finger her butt-":
                         show screen blkfade
                         with d3
-                        ">You slide one of your fingers down and place it against the girl's little slit..."
-                        $her_head_state = 18
-                        her_head_main "Professor?" 
+                        ">You grab her cheeks and press a thumb into her ass."
+                        $her_head_state = 28
+                        her_head_main "Ahhh...that hurts...?"
+                        her_head_main "Ughh, I don't think... ?"
+                        ">It is warm inside, very tight and a bit dry<"
+                        m "I am just going to use one finger for now"
+                        m "You need to relax a bit, miss, the more relaxed you are the easier it gets"
+                        her_head_main "But the pain is a bit much, sir..."
+                        menu:
+                            "-Look for some lubricant-":
+                                m "Let me see if I have any lubricant left over"
+                                if hero.Items.Any("anal_lube"):
+                                    $hero.Items.AddItem("anal_lube",-1)
+                                    m "Tadaa, I guess your ass will thank me in the morning."
+                                    $her_head_state = 22
+                                    her_head_main "Profesor! Not funny!"
+                                    m "Hehehe, just a little joke, That should make moving on a lot smoother."
+                                    jump fingering_transition_01
+                                else:
+                                    m "It seems I am all out, miss"
+                                        menu:
+                                            "-Enough for today-":
+                                                m "I will order some when I get the chance"
+                                                m "You did well but not enough to earn a pay increase. Maybe next time."
+                                                $her_head_state = 25
+                                                her_head_main "It's not my fault you didn't have any lubricant..."
+                                                m "I will make it up to you another time, don't worry"
+                                                Jump fingering_end_short
+                                            "-Press on-":
+                                                jump fingering_rough_01
+                            
+                            "-Continue as is-":
+                                label fingering_rough_01:
+                        
                             
                     "-Change your mind. Dismiss the girl-":
                         m "I have changed my mind. I am not in the mood. Let's try the move advanced stuff another day." 
-                        jump ending_of_screams_of_pleasure
+                        m "So they payout would also be the normal fee"
+                        $her_head_state = 04
+                        her_head_main "Hmmph, your call I guess."
+                        jump fingering_end_short
                     
-label fingering_transition_01:  
-    m "Let's remove your skirt and I think it would help if you bend over a bit"
+        label fingering_transition_01:
+            
+            m "Let's remove your skirt and I think it would help if you bend over a bit"
     
     
-label fingering_bad_end:
-    ">You let go of her ass<"
-  
+        label fingering_end_bad:
+            jump ending_of_screams_of_pleasure
+      
     
         
 label ending_of_screams_of_pleasure:
