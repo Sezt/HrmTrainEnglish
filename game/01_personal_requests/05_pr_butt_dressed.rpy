@@ -798,7 +798,7 @@ label new_request_05:
                             jump fingering_end_short
                             
                     "-Finger her butt-":
-                        ">You grab her cheeks and press a thumb into her ass."
+                        ">You grab her butt and press a thumb into her ass."
                         $her_head_state = 28
                         her_head_main "Ahhh...that hurts...?"
                         her_head_main "Ughh, I don't think... ?"
@@ -809,7 +809,7 @@ label new_request_05:
                         menu:
                             "-Look for some lubricant-":
                                 m "Let me see if I have any lubricant left over"
-                                if hero.Items.any("lubricant"):
+                                if hero.Items.Any("lubricant"):
                                     $hero.Items.AddItem("lubricant",-1)
                                     m "Tadaa, I guess your ass will thank me in the morning."
                                     $her_head_state = 22
@@ -835,14 +835,17 @@ label new_request_05:
                             
                     "-Change your mind. Dismiss the girl-":
                         m "I have changed my mind. I am not in the mood. Let's try the more advanced stuff another day." 
-                        m "So your payout wwill also be the normal fee"
+                        m "So your payout will also be the normal fee"
                         $her_head_state = 04
                         her_head_main "Hmmph, your call I guess."
                         jump fingering_end_short
                     
         label fingering_transition_01:
             
-            m "Let's remove your skirt and I think it would help if you bend over a bit"
+            m "Take of your skirt, miss."
+            m "And I think it might be more comfortable if you bend over a bit"
+            $her_head_state = 17
+            her_head_main "Is this alright, sir"
             show screen blkfade
             with Dissolve(1)
             pause.5
@@ -850,12 +853,21 @@ label new_request_05:
             hide screen genie
             $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
             $ genie_chibi_ypos = 10
-            $ g_c_u_pic = "fingering_slow"
+            $ g_c_u_pic = "03_hp/08_animation_02/30_fingering_01.png" 
             show screen chair_02
             show screen g_c_u
             hide screen blkfade
             with Dissolve(1)
             
+            m "Very nice view, miss"
+            ">You grab her butt and massage her with a very firm grib<"
+            $her_head_state = 06
+            her_head_main "Ahhhh...thank you sir..."
+            hide screen g_c_u
+            $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
+            $ genie_chibi_ypos = 10
+            $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
+                        
             m "Work in progress"
             menu:
                 "-End 4 star butt test-":
