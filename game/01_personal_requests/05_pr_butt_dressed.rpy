@@ -858,7 +858,7 @@ label new_request_05:
             
             m "Work in progress"
             menu:
-                "-End 4 star butt test"
+                "-End 4 star butt test-":
                     jump ending_of_screams_of_pleasure
     
         label fingering_end_short:
