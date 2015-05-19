@@ -2158,7 +2158,7 @@ image fingering_medium: #Slow fingering
     "03_hp/08_animation_02/30_fingering_01.png"
     repeat
 
- image fingering_fast: #Slow fingering
+image fingering_fast: #Slow fingering
     "03_hp/08_animation_02/30_fingering_01.png"
     pause.4
     "03_hp/08_animation_02/30_fingering_02.png"
