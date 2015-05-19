@@ -848,13 +848,13 @@ label new_request_05:
             pause.5
             hide screen groping_02
             hide screen genie
-            hide screen blkfade
-            with Dissolve(1)
             $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
             $ genie_chibi_ypos = 10
             $ g_c_u_pic = "fingering_slow"
             show screen chair_02
             show screen g_c_u
+            hide screen blkfade
+            with Dissolve(1)
             
             m "Work in progress"
             menu:
