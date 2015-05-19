@@ -845,6 +845,8 @@ label new_request_05:
             m "Take of your skirt, miss."
             m "And I think it might be more comfortable if you bend over a bit"
             $her_head_state = 17
+            $ pos = POS_370
+            $herView.showQQ( "body_10.png", pos )
             her_head_main "Is this alright, sir"
             show screen blkfade
             with Dissolve(1)
@@ -1074,10 +1076,4 @@ label screams_of_pleasure:
     m "Well, in that case..."
     jump ending_of_screams_of_pleasure
 
-    image fingering_slow: #Slow fingering
-        "03_hp/08_animation_02/30_fingering_01.png"
-        pause.10
-        "03_hp/08_animation_02/30_fingering_02.png"
-        pause.10
-        repeat
     
