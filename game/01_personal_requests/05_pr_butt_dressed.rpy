@@ -784,8 +784,8 @@ label new_request_05:
                         her_head_main "Ahhh...no, I haven't had a lot of experience with this."
                         m "No vorries, dear, that is why I am here to guide you."
                         m "But before we move futher down this rabbithole I just want to check if I have some Anal Lube."
-                        if hero.Items.Any("anal_lube"):
-                            $hero.Items.AddItem("anal_lube",-1)
+                        if hero.Items.Any("lubricant"):
+                            $hero.Items.AddItem("lubricant",-1)
                             m "We are in luck, miss, a whole jar just for your hole."
                             $her_head_state = 22
                             her_head_main "Profesor! My tiny hole would never fit the entire jar!"
@@ -813,8 +813,8 @@ label new_request_05:
                         menu:
                             "-Look for some lubricant-":
                                 m "Let me see if I have any lubricant left over"
-                                if 1<=hero.Items.count("anal_lube"):
-                                    $hero.Items.AddItem("anal_lube",-1)
+                                if hero.Items.any("lubricant"):
+                                    $hero.Items.AddItem("lubricant",-1)
                                     m "Tadaa, I guess your ass will thank me in the morning."
                                     $her_head_state = 22
                                     her_head_main "Profesor! Not funny!"
