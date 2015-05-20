@@ -949,7 +949,11 @@ label new_request_05:
             menu:
                 "-Move a hand to her pussy-":
                     ">You move you right hand to her tiny pussy<"
-                    m "Let's start with with a little warmup."
+                    m "Let's shift the focus to your lovely pussy for a moment."
+                    $her_head_state = 26
+                    her_head_main "Sir! No need to commentate that...it's embarrassing."
+                    m "Well miss, no reason that you can't enjoy this."
+                    ">You start massage her lips and clit<"
                     show screen blkfade
                     with Dissolve(1)
                     hide screen genie
@@ -960,13 +964,21 @@ label new_request_05:
                     show screen g_c_u
                     hide screen blkfade
                     with Dissolve(1)
+                    $her_head_state = 26
+                    her_head_main "Mmmmmh....well...ok"
                     
                     m "Work in progress. Test stop."
-                    
-                    jump fingering_end_shot
+                    $ fingeringpayment +=15
+                    jump fingering_end_short
     
                 "-Lube her up and finger her ass-":
-                    m "Work in progress"
+                    m "Lets apply some of this lube"
+                    $her_head_state = 35
+                    her_head_main "Slippery...warm..."
+                    m "Should make this easier"
+                    ">You push your index finger into her wet hole<"
+                    her_head_main "Ahhhh...yes...that was a lot smoother then expected."
+                    m "Very smooth indeed, miss, let's speed up a bit"
                     show screen blkfade
                     with Dissolve(1)
                     hide screen genie
@@ -977,9 +989,12 @@ label new_request_05:
                     show screen g_c_u
                     hide screen blkfade
                     with Dissolve(1)
+                    $her_head_state = 35
+                    her_head_main "Ahhhlright, sir...mmmmh"
                     
                     m "Work in progress. Test stop."
-                    jump fingering_end_shot
+                    $ fingeringpayment +=15
+                    jump fingering_end_short
 
         
 label ending_of_screams_of_pleasure:
@@ -1011,6 +1026,7 @@ label fingering_end_short:
     if fingeringpayment >=15:
         $ gryffindor += fingeringpayment
         m "[fingeringpayment] points for Gryffindor!"
+        stop music fadeout 1.0
     else:
         $ gryffindor +=15
         m "The \"Gryffindor\" gets 15 points!"
