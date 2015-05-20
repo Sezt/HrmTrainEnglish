@@ -996,7 +996,7 @@ label fingering_end_short:
     hide screen blkfade
     with d3
 
-    if fingeringpayment == 30:
+    if fingeringpayment >=15:
         $ gryffindor +=['fingeringpayment']
         m "['fingeringpayment'] points for Gryffindor!"
     else:
