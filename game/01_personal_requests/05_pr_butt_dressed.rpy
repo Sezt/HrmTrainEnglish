@@ -846,7 +846,7 @@ label new_request_05:
                                 m "Hmm"
                                 menu:
                                     "-Pay her and let her go-":
-                                        >You slide your finger out of her ass<
+                                        ">You slide your finger out of her ass<"
                                         $her_head_state = 05
                                         her_head_main "Ahh..."
                                         m "Alright, miss, we learned something today...you have earned your points"
