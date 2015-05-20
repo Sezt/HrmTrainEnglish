@@ -997,8 +997,8 @@ label fingering_end_short:
     with d3
 
     if fingeringpayment >=15:
-        $ gryffindor +=['fingeringpayment']
-        m "['fingeringpayment'] points for Gryffindor!"
+        $ gryffindor +='fingeringpayment'
+        m "'fingeringpayment' points for Gryffindor!"
     else:
         $ gryffindor +=15
         m "The \"Gryffindor\" gets 15 points!"
