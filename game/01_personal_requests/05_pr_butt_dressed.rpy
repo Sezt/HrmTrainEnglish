@@ -768,7 +768,7 @@ label new_request_05:
                 label fingering_start_02:
                 ">You continue to play with Hermione's ass..."
                 her_head_main "................"
-                fingeringpayment = 15
+                $ fingeringpayment = 15
                 menu:
                     "-Play gently with her little star-":
                         ">You slowly spread her cheeks to take a closer look at her tiny butt-hole."
@@ -851,7 +851,7 @@ label new_request_05:
                                         her_head_main "Ahh..."
                                         m "Alright, miss, we learned something today...you have earned your points"
                                         her_head_main "I am going to be sore after this"
-                                        fingeringpayment += 15
+                                        $ fingeringpayment += 15
                                         jump fingering_end_short
                                             
                                     "-Offer to pay more-"
@@ -901,7 +901,7 @@ label new_request_05:
                                         her_head_main "Sir...Yes..."
                                         m "You earned you fee, miss, we learned a lot today"
                                         
-                                        fingeringpayment += 30
+                                        $ fingeringpayment += 30
                                         jump fingering_end_short
                             
                     "-Change your mind. Dismiss the girl-":
@@ -940,10 +940,10 @@ label new_request_05:
             her_head_main "I...ahhhm...sir"
             m "Lovely!"
             menu:
-                "-Move a hand to her pussy -"
+                "-Move a hand to her pussy-":
                     jump ending_of_screams_of_pleasure
     
-                "-Lube her up and finger her ass-"
+                "-Lube her up and finger her ass-":
                     jump ending_of_screams_of_pleasure
                     
             show screen blkfade
@@ -980,7 +980,7 @@ label ending_of_screams_of_pleasure:
     ">You let go of her ass..."
     m "This will do for now."
     
-label ending_fingering_short    
+label ending_fingering_short:    
     hide screen blktone8
     hide screen ctc
     hide screen bld1
