@@ -826,6 +826,8 @@ label new_request_05:
                                             $her_head_state = 25
                                             her_head_main "It's not my fault you didn't have any lubricant..."
                                             m "I will make it up to you another time, don't worry"
+                                            show screen blkfade
+                                            with Dissolve(1)
                                             jump fingering_end_short
                                         "-Press on-":
                                             jump fingering_rough_01
@@ -852,6 +854,8 @@ label new_request_05:
                                         m "Alright, miss, we learned something today...you have earned your points"
                                         her_head_main "I am going to be sore after this"
                                         $ fingeringpayment += 15
+                                        show screen blkfade
+                                        with Dissolve(1)
                                         jump fingering_end_short
                                             
                                     "-Offer to pay more-":
@@ -900,8 +904,9 @@ label new_request_05:
                                         $her_head_state = 17
                                         her_head_main "Sir...Yes..."
                                         m "You earned you fee, miss, we learned a lot today"
-                                        
                                         $ fingeringpayment += 30
+                                        show screen blkfade
+                                        with Dissolve(1)
                                         jump fingering_end_short
                             
                     "-Change your mind. Dismiss the girl-":
@@ -909,6 +914,8 @@ label new_request_05:
                         m "So your payout will also be the normal fee"
                         $her_head_state = 04
                         her_head_main "Hmmph, your call I guess."
+                        show screen blkfade
+                        with Dissolve(1)
                         jump fingering_end_short
                     
         label fingering_transition_01:
