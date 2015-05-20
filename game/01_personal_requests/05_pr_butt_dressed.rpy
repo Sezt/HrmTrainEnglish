@@ -964,7 +964,7 @@ label new_request_05:
                     show screen g_c_u
                     hide screen blkfade
                     with Dissolve(1)
-                    $her_head_state = 26
+                    $her_head_state = 35
                     her_head_main "Mmmmmh....well...ok"
                     
                     m "Work in progress. Test stop."
@@ -974,9 +974,9 @@ label new_request_05:
                 "-Lube her up and finger her ass-":
                     m "Lets apply some of this lube"
                     $her_head_state = 35
-                    her_head_main "Slippery...warm..."
+                    her_head_main "Sticky...warm..."
                     m "Should make this easier"
-                    ">You push your index finger into her wet hole<"
+                    ">You push your index finger into her lubed hole<"
                     her_head_main "Ahhhh...yes...that was a lot smoother then expected."
                     m "Very smooth indeed, miss, let's speed up a bit"
                     show screen blkfade
