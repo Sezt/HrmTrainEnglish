@@ -841,7 +841,7 @@ label new_request_05:
                         jump fingering_end_short
                     
         label fingering_transition_01:
-            
+            $SetHearts(4)    
             m "Take of your skirt, miss."
             m "And I think it might be more comfortable if you bend over a bit"
             $her_head_state = 17
