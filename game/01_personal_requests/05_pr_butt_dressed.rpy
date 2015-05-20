@@ -948,34 +948,39 @@ label new_request_05:
             m "Lovely!"
             menu:
                 "-Move a hand to her pussy-":
-                    jump ending_of_screams_of_pleasure
+                    ">You move you right hand to her tiny pussy<"
+                    m "Let's start with with a little warmup."
+                    show screen blkfade
+                    with Dissolve(1)
+                    hide screen genie
+                    hide screen g_c_u
+                    $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
+                    $ genie_chibi_ypos = 10
+                    $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
+                    show screen g_c_u
+                    hide screen blkfade
+                    with Dissolve(1)
+                    
+                    m "Work in progress. Test stop."
+                    
+                    jump fingering_end_shot
     
                 "-Lube her up and finger her ass-":
-                    jump ending_of_screams_of_pleasure
-                    
-            show screen blkfade
-            with Dissolve(1)
-            hide screen genie
-            hide screen g_c_u
-            $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
-            $ genie_chibi_ypos = 10
-            $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
-            show screen g_c_u
-            hide screen blkfade
-            with Dissolve(1)
-            
-            m "Test test"
-            m "Work in progress"
-            menu:
-                "-End 4 star butt test-":
-                    hide screen chair_02
+                    m "Work in progress"
+                    show screen blkfade
+                    with Dissolve(1)
+                    hide screen genie
                     hide screen g_c_u
-                    jump ending_of_screams_of_pleasure
-    
-        label fingering_end_short:
-            jump ending_of_screams_of_pleasure
-      
-    
+                    $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
+                    $ genie_chibi_ypos = 10
+                    $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
+                    show screen g_c_u
+                    hide screen blkfade
+                    with Dissolve(1)
+                    
+                    m "Work in progress. Test stop."
+                    jump fingering_end_shot
+
         
 label ending_of_screams_of_pleasure:
     if hermi.whoring <= 5:
