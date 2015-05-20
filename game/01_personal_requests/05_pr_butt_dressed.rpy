@@ -768,6 +768,7 @@ label new_request_05:
                 label fingering_start_02:
                 ">You continue to play with Hermione's ass..."
                 her_head_main "................"
+                fingeringpayment = 15
                 menu:
                     "-Play gently with her little star-":
                         ">You slowly spread her cheeks to take a closer look at her tiny butt-hole."
@@ -831,7 +832,77 @@ label new_request_05:
                             
                             "-Continue as is-":
                                 label fingering_rough_01:
-                                jump fingering_end_short #Work in progress
+                                m "No pain no gain is a saying here, right?"
+                                ">You start fingering her ass<"
+                                $her_head_state = 40
+                                her_head_main "Please sir, you are hurting me..."
+                                m "It will get better, miss, just try to relax and think of your house and the points you are earning."
+                                her_head_main "Argghh..."
+                                $her_head_state = 10
+                                her_head_main "..............."
+                                $her_head_state = 11
+                                her_head_main "I am not sure...this is worth the points..."
+                                her_head_main "I won't be able to sit down tomorrow..."
+                                m "Hmm"
+                                menu:
+                                    "-Pay her and let her go-"
+                                        >You slide your finger out of her ass<
+                                        $her_head_state = 05
+                                        her_head_main "Ahh..."
+                                        m "Alright, miss, we learned something today...you have earned your points"
+                                        her_head_main "I am going to be sore after this"
+                                        fingeringpayment += 15
+                                        jump fingering_end_short
+                                            
+                                    "-Offer to pay more-"
+                                        m "How about if I add another 15 points to your fee, miss"
+                                        $her_head_state = 11
+                                        her_head_main "Ahh...well..it might make it more bearable, sir."
+                                        m "Deal."
+                                        ">You speed up a bit<"
+                                        $her_head_state = 10
+                                        her_head_main "..........oouchhh....mmmh"
+                                        m "You doing well, miss. You should be proud of yourself."
+                                        her_head_main "mmmm...not sure I should, sir..."
+                                        her_head_main "Not sure I will get used to this"
+                                        m "Does it only hurt or is there someting else as well?"
+                                        $her_head_state = 11
+                                        her_head_main "Hmmm...it...the pain is sharp, sir, but there is also a slight tingle...aahh"
+                                        her_head_main "It feels abit like when you spank me, sir..mmmm"
+                                        $her_head_state = 15
+                                        her_head_main "Mmmm...it starts to...be less...uuhnpleasant..."
+                                        m "Good girl, focus on that fealing..."
+                                        $her_head_state = 17
+                                        her_head_main "Mmmm.....yes sir......mmmmm"
+                                        her_head_main ".....yes......mmmmm"
+                                        her_head_main ".............."
+                                        $her_head_state = 35
+                                        her_head_main "Ahhh...yes...that's....{image=textheart.png}"
+                                        m "You seem to be enjoying it, miss?"
+                                        $her_head_state = 38
+                                        her_head_main "I...I do..not..."
+                                        m "Well no need to go on then?"
+                                        $her_head_state = 34
+                                        her_head_main "Do..not...stop...sir"
+                                        her_head_main "Do..not..mmmmm "
+                                        $her_head_state = 37
+                                        her_head_main "Mmmmmm....I think...am...ahh{image=textheart.png}"
+                                        her_head_main "Ahhh....ahh{image=textheart.png}..."
+                                        ">You start circling you finger<"
+                                        $her_head_state = 37
+                                        her_head_main "Mmmmmm....I think...am...ahh{image=textheart.png}"
+                                        her_head_main "Ahhh....ahh{image=textheart.png}...sir?"
+                                        $her_head_state = 38
+                                        her_head_main ".......ahhmmmmmm...{image=textheart.png}."
+                                        her_head_main "....ahh{image=textheart.png}..."
+                                        m "Good work, Miss Granger"
+                                        m "You seem to be responsive to the right input"
+                                        $her_head_state = 17
+                                        her_head_main "Sir...Yes..."
+                                        m "You earned you fee, miss, we learned a lot today"
+                                        
+                                        fingeringpayment += 30
+                                        jump fingering_end_short
                             
                     "-Change your mind. Dismiss the girl-":
                         m "I have changed my mind. I am not in the mood. Let's try the more advanced stuff another day." 
@@ -844,10 +915,8 @@ label new_request_05:
             $SetHearts(4)    
             m "Take of your skirt, miss."
             m "And I think it might be more comfortable if you bend over a bit"
-            $her_head_state = 17
             # $ pos = POS_370
-            # $herView.showQQ( "body_10.png", pos ) # Need a bottomless body
-            her_head_main "Is this alright, sir"
+            # $herView.showQQ( "body_10.png", pos ) 
             show screen blkfade
             with Dissolve(1)
             pause.5
@@ -860,11 +929,23 @@ label new_request_05:
             show screen g_c_u
             hide screen blkfade
             with Dissolve(1)
-            
+            $her_head_state = 17
+            her_head_main "Is this alright, sir"
             m "Very nice view, miss"
-            ">You grab her butt and massage her with a very firm grib<"
+            ">You grab her butt and massage it with a very firm grib<"
             $her_head_state = 06
             her_head_main "Ahhhh...thank you sir..."
+            m "Are you ready for us to enter...the next step"
+            $her_head_state = 34
+            her_head_main "I...ahhhm...sir"
+            m "Lovely!"
+            menu:
+                "-Move a hand to her pussy -"
+                    jump ending_of_screams_of_pleasure
+    
+                "-Lube her up and finger her ass-"
+                    jump ending_of_screams_of_pleasure
+                    
             show screen blkfade
             with Dissolve(1)
             hide screen genie
@@ -899,11 +980,14 @@ label ending_of_screams_of_pleasure:
     ">You let go of her ass..."
     m "This will do for now."
     
+label ending_fingering_short    
     hide screen blktone8
     hide screen ctc
     hide screen bld1
     hide screen groping_01
     hide screen groping_02
+    hide screen chair_02
+    hide screen g_c_u
     show screen hermione_02
     show screen genie
     with d1
@@ -911,12 +995,16 @@ label ending_of_screams_of_pleasure:
     hide screen blkfade
     with d3
 
-    $ gryffindor +=15
-    m "The \"Gryffindors\" get 15 points!"
+    if fingeringpayment
+        $ gryffindor +=[fingeringpayment]
+        m "[fingeringpayment] points for Gryffindor!"
+    else
+        $ gryffindor +=15
+        m "The \"Gryffindors\" get 15 points!"
     
 #    $ request_05_points += 1
    
-   
+    
     $ hermione_chibi_xpos = 400 #Near the desk.
     show screen hermione_02 #Hermione stands still.
     show screen bld1
