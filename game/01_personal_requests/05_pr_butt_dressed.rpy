@@ -845,7 +845,7 @@ label new_request_05:
                                 her_head_main "I won't be able to sit down tomorrow..."
                                 m "Hmm"
                                 menu:
-                                    "-Pay her and let her go-"
+                                    "-Pay her and let her go-":
                                         >You slide your finger out of her ass<
                                         $her_head_state = 05
                                         her_head_main "Ahh..."
@@ -854,7 +854,7 @@ label new_request_05:
                                         $ fingeringpayment += 15
                                         jump fingering_end_short
                                             
-                                    "-Offer to pay more-"
+                                    "-Offer to pay more-":
                                         m "How about if I add another 15 points to your fee, miss"
                                         $her_head_state = 11
                                         her_head_main "Ahh...well..it might make it more bearable, sir."
@@ -995,10 +995,10 @@ label ending_fingering_short:
     hide screen blkfade
     with d3
 
-    if fingeringpayment
+    if fingeringpayment:
         $ gryffindor +=[fingeringpayment]
         m "[fingeringpayment] points for Gryffindor!"
-    else
+    else:
         $ gryffindor +=15
         m "The \"Gryffindors\" get 15 points!"
     
