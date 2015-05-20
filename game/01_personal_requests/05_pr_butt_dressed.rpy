@@ -980,7 +980,8 @@ label ending_of_screams_of_pleasure:
     ">You let go of her ass..."
     m "This will do for now."
     
-label ending_fingering_short:    
+    $ fingeringpayment = 15
+label fingering_end_short:    
     hide screen blktone8
     hide screen ctc
     hide screen bld1
@@ -995,12 +996,12 @@ label ending_fingering_short:
     hide screen blkfade
     with d3
 
-    if fingeringpayment:
-        $ gryffindor +=[fingeringpayment]
-        m "[fingeringpayment] points for Gryffindor!"
+    if fingeringpayment == 30:
+        $ gryffindor +=['fingeringpayment']
+        m "['fingeringpayment'] points for Gryffindor!"
     else:
         $ gryffindor +=15
-        m "The \"Gryffindors\" get 15 points!"
+        m "The \"Gryffindor\" gets 15 points!"
     
 #    $ request_05_points += 1
    
