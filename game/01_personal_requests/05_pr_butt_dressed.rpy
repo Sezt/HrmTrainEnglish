@@ -664,13 +664,13 @@ label new_request_05:
                 menu:
                     m "Well, lets see..."
                     "-Give her butt a squeeze-":
-                        ">Moving your hands up her thighs ending on her bare bottom<"
+                        ">Moving your hands up her thighs ending on her bare bottom"
                         m "Ohh how wonderful, miss Granger. Nothing between my fingers and your soft skin."
                         $her_head_state = 34
                         her_head_main "I am happy that you like it, sir"
                         jump fingering_start_01
                     "-Give her butt a slap-":
-                        ">You lift her skirt to make room for a good slap<"
+                        ">You lift her skirt to make room for a good slap"
                         m "Ohh Miss Granger, I love it. You seem to have left your panties at home"
                         $her_head_state = 34
                         her_head_main "Well yes, they are somewhat in the way these days"
@@ -722,11 +722,11 @@ label new_request_05:
                 $her_head_state = 35
                 her_head_main "Yes sir, it does make a lot of things easier..."
                 m "Excellent!"
-                ">You massage her ass and slowly grasp her butt more firmly<"
+                ">You massage her ass and slowly grasp her butt more firmly"
                 her_head_main "Hmmm...yes...."
                 her_head_main "..................."
                 her_head_main "Ohh I almost forgot...you mentioned something about a surprise..."
-                ">You squeeze her cheeks and move a finger around her tiny hole<"
+                ">You squeeze her cheeks and move a finger around her tiny hole"
                 m "Ahh yes. I have been thinking about doubling your fee for this service."
                 $her_head_state = 03
                 her_head_main "Mmmmh....."
@@ -751,13 +751,13 @@ label new_request_05:
                 $her_head_state = 35
                 m "Ahh yes, of course, I almost forgot all about it..."
                 m "Your lovely naked bum distracted me a bit."
-                ">You grab both buttcheeks a bit firmer and continue the massage<"
+                ">You grab both buttcheeks a bit firmer and continue the massage"
                 $her_head_state = 38
                 her_head_main "uhh Professor, that is pretty distracting as well"
                 her_head_main "Not that you need to stop..."
                 $her_head_state = 01
                 m "I was thinking that we could move on to a more advanced curriculum."
-                ">You run a finger down between her cheeks and circle her tiny hole<"
+                ">You run a finger down between her cheeks and circle her tiny hole"
                 $her_head_state = 03
                 her_head_main "Ohh that is new"
                 $her_head_state = 15
@@ -803,7 +803,7 @@ label new_request_05:
                         $her_head_state = 28
                         her_head_main "Ahhh...that hurts...?"
                         her_head_main "Ughh, I don't think... ?"
-                        ">It is warm inside, very tight and a bit dry<"
+                        ">It is warm inside, very tight and a bit dry"
                         m "I am just going to use one finger for now"
                         m "You need to relax a bit, miss, the more relaxed you are the easier it gets"
                         her_head_main "But the pain is a bit much, sir..."
@@ -835,7 +835,7 @@ label new_request_05:
                             "-Continue as is-":
                                 label fingering_rough_01:
                                 m "No pain no gain is a saying here, right?"
-                                ">You start fingering her ass<"
+                                ">You start fingering her ass"
                                 $her_head_state = 40
                                 her_head_main "Please sir, you are hurting me..."
                                 m "It will get better, miss, just try to relax and think of your house and the points you are earning."
@@ -848,7 +848,7 @@ label new_request_05:
                                 m "Hmm"
                                 menu:
                                     "-Pay her and let her go-":
-                                        ">You slide your finger out of her ass<"
+                                        ">You slide your finger out of her ass"
                                         $her_head_state = 05
                                         her_head_main "Ahh..."
                                         m "Alright, miss, we learned something today...you have earned your points"
@@ -863,7 +863,7 @@ label new_request_05:
                                         $her_head_state = 11
                                         her_head_main "Ahh...well..it might make it more bearable, sir."
                                         m "Deal."
-                                        ">You speed up a bit<"
+                                        ">You speed up a bit"
                                         $her_head_state = 10
                                         her_head_main "..........oouchhh....mmmh"
                                         m "You doing well, miss. You should be proud of yourself."
@@ -892,7 +892,7 @@ label new_request_05:
                                         $her_head_state = 37
                                         her_head_main "Mmmmmm....I think...am...ahh{image=textheart.png}"
                                         her_head_main "Ahhh....ahh{image=textheart.png}..."
-                                        ">You start circling you finger<"
+                                        ">You start circling you finger"
                                         $her_head_state = 37
                                         her_head_main "Mmmmmm....I think...am...ahh{image=textheart.png}"
                                         her_head_main "Ahhh....ahh{image=textheart.png}...sir?"
@@ -931,7 +931,7 @@ label new_request_05:
             hide screen genie
             $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
             $ genie_chibi_ypos = 10
-            $ g_c_u_pic = "03_hp/08_animation_02/30_fingering_01.png" 
+            $ g_c_u_pic = "03_hp/08_animation_02/30_fingering_01.png"  
             show screen chair_02
             show screen g_c_u
             hide screen blkfade
@@ -939,7 +939,7 @@ label new_request_05:
             $her_head_state = 17
             her_head_main "Is this alright, sir"
             m "Very nice view, miss"
-            ">You grab her butt and massage it with a very firm grib<"
+            ">You grab her butt and massage it with a very firm grib"
             $her_head_state = 06
             her_head_main "Ahhhh...thank you sir..."
             m "Are you ready for us to enter...the next step"
@@ -948,12 +948,12 @@ label new_request_05:
             m "Lovely!"
             menu:
                 "-Move a hand to her pussy-":
-                    ">You move you right hand to her tiny pussy<"
+                    ">You move you right hand to her tiny pussy"
                     m "Let's shift the focus to your lovely pussy for a moment."
                     $her_head_state = 26
                     her_head_main "Sir! No need to commentate that...it's embarrassing."
                     m "Well miss, no reason that you can't enjoy this."
-                    ">You start massage her lips and clit<"
+                    ">You start massage her lips and clit"
                     show screen blkfade
                     with Dissolve(1)
                     hide screen genie
@@ -966,17 +966,45 @@ label new_request_05:
                     with Dissolve(1)
                     $her_head_state = 35
                     her_head_main "Mmmmmh....well...ok"
-                    
-                    m "Work in progress. Test stop."
-                    $ fingeringpayment +=15
-                    jump fingering_end_short
+                    $her_head_state = 06
+                    her_head_main "Ahhhh.........."
+                    m "Are you enjoying yourself, miss?"
+                    $her_head_state = 05
+                    her_head_main "As you said, sir,  no reason not to enjoy ahhht least part of my work for Griffindor..."
+                    m "Right you are, miss."
+                    $her_head_state = 06
+                    her_head_main "Ahhh...ahh....{image=textheart.png}"
+                    $her_head_state = 05
+                    her_head_main "You...you could...enter, sir?"
+                    m "You don't have to say that again, miss Granger."
+                    ">You slide a finger into her slit"
+                    ">It is very warm and wet"
+                    $her_head_state = 06
+                    her_head_main "Ahhhhhhh {image=textheart.png}..."
+                    her_head_main "Mmmm...ahhh......"
+                    m "Let me just lube up a couple of fingers for the grand finale, miss"
+                    $her_head_state = 07
+                    her_head_main "But sir...ahhh...what?..."
+                    m "You hit it on the head, miss, we are missing your butt."
+                    $her_head_state = 01
+                    her_head_main ".............right.."
+                    menu:
+                        "-Switch to her butt-":
+                            jump fingering_end_medium
+                        "-Go for both holes-":
+                            ">You lube up her hole and you fingers"
+                            $her_head_state = 17
+                            her_head_main "Uhhhh...Sticky....nice.."
+                            m "Ready for this?"
+                            jump fingering_end_long
     
-                "-Lube her up and finger her ass-":
+                "-Lube up and finger her ass-":
+                    label fingering_end_medium:
                     m "Lets apply some of this lube"
                     $her_head_state = 35
-                    her_head_main "Sticky...warm..."
+                    her_head_main "Sticky....."
                     m "Should make this easier"
-                    ">You push your index finger into her lubed hole<"
+                    ">You push your lubed index finger into her tiny hole"
                     her_head_main "Ahhhh...yes...that was a lot smoother then expected."
                     m "Very smooth indeed, miss, let's speed up a bit"
                     show screen blkfade
@@ -985,18 +1013,76 @@ label new_request_05:
                     hide screen g_c_u
                     $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
                     $ genie_chibi_ypos = 10
-                    $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
+                    $ g_c_u_pic = "fingering_medium" #Having issues with the pause function. Too fast.
                     show screen g_c_u
                     hide screen blkfade
                     with Dissolve(1)
                     $her_head_state = 35
                     her_head_main "Ahhhlright, sir...mmmmh"
-                    
-                    m "Work in progress. Test stop."
-                    $ fingeringpayment +=15
-                    jump fingering_end_short
+                    her_head_main "Ahhh...{image=textheart.png}..."
+                    m "How does it feel, miss?"
+                    $her_head_state = 17
+                    her_head_main "It's different, sir....pleasant...warm..."
+                    m "I knew you would like this"
+                    $her_head_state = 13
+                    her_head_main "For my house,sir...I can live with this...aaaahhh"
+                    m "Good...now just this last thing we need to try"
+                    jump fingering_end_long
 
-        
+            label fingering_end_long:
+                $her_head_state = 05
+                her_head_main "What?"
+                m "Well miss, it would be a shame to discriminate between holes.."
+                m "When I am able work with both at the same time"
+                $her_head_state = 07
+                her_head_main "Sir!...Uhm..."
+                $her_head_state = 06
+                her_head_main "Well...we have come this far...mmmm.."
+                her_head_main "Would be ahhh shame to stop before reaching the goal..."
+                m "Ohh yes, miss, you got the idea now!"
+                ">You slip fingers into both holes"
+                $her_head_state = 07
+                her_head_main "Ahhhh...ahhh...{image=textheart.png}...yees"
+                m "Good..good.."
+                show screen blkfade
+                with Dissolve(1)
+                hide screen genie
+                hide screen g_c_u
+                $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
+                $ genie_chibi_ypos = 10
+                $ g_c_u_pic = "fingering_fast" #Having issues with the pause function. Too fast.
+                show screen g_c_u
+                hide screen blkfade
+                with Dissolve(1)
+                $her_head_state = 38
+                her_head_main "Mmmmmahhhh...sir..aaaaahhh"
+                her_head_main "Ahhhhh....yes....{image=textheart.png}"
+                m "Yes indeed, miss Granger"
+                $her_head_state = 37
+                her_head_main "Sir...I...I...ahhhmm..."
+                her_head_main "Ohhhh....yeees....yesss..."
+                ">Her holes twitch and her legs shake"
+                #Insert her_cum ani
+                $her_head_state = 36
+                her_head_main "...................."
+                her_head_main "..............."
+                her_head_main "........yes"
+                m "Lovely miss, a great succes it seems"
+                $her_head_state = 34
+                her_head_main "I...I think so, sir...."
+                m "Good work...my turn to need a towel this time"
+                $her_head_state = 25
+                her_head_main "Sir!...but...I am sorry."
+                m "No problem, miss, it is all part of the job"
+                m "You should almost pay me for this"
+                $her_head_state = 26
+                her_head_main "But...we had a deal!"
+                m "Just joking miss, it was very informative"
+                $her_head_state = 17
+                her_head_main "Ohh...."
+                $ fingeringpayment += 15
+                jump fingering_end_short    
+                
 label ending_of_screams_of_pleasure:
     if hermi.whoring <= 5:
         $ hermi.whoring +=1
