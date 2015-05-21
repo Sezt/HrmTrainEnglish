@@ -75,7 +75,7 @@ label new_personal_request:
 #                        jump new_request_05
 #                    "Favour: \"Butt molester\" {image=heart_03.png}" if new_request_05_03 and imagination >= 2: 
 #                        jump new_request_05
-                    "Favour: [this.new_request_05._caption] {image=heart_0[this.new_request_05._heartCount].png}" if imagination >= 2:
+                    "Favour: [this.new_request_05._caption] {image=heart_4[this.new_request_05._heartCount].png}" if imagination >= 2:
                         jump new_request_05
                         
                     ### LEVEL 03 ### IMAGINATION == 3
