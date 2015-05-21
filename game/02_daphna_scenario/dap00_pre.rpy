@@ -279,7 +279,7 @@ label daphne_pre_07: #Разговор с Гермионой о Дафне. В �
             $hero  (g9, "Ha! Is that all? Why all the fuss.") 
             $hermi("~body_195.png// For each of her visits.") 
             $hero (g4, "What? For each?... but what if she... uh...") 
-            $hermi("~body_83.png// If she won't visit, sir? Well, that is not my problem. And also 10% of your income.") 
+            $hermi("~body_83.png// If she won't visit, sir? Well, that is not my problem. And also ten persent of your income.") 
             $hero (g4, "By the Great Sands! Why do you need money, girl? You're here on a full scholarship!") 
             $hermi("~body_111.png// A girl can have some personal desires, right?") 
             $hero (m, "Miss Granger, lately you are behaving...") 
