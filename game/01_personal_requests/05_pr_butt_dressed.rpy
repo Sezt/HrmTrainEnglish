@@ -960,7 +960,7 @@ label new_request_05:
                     hide screen g_c_u
                     $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
                     $ genie_chibi_ypos = 10
-                    $ g_c_u_pic = "fingering_slow" #Having issues with the pause function. Too fast.
+                    $ g_c_u_pic = "fingering_slow"
                     show screen g_c_u
                     hide screen blkfade
                     with Dissolve(1)
@@ -1013,7 +1013,7 @@ label new_request_05:
                     hide screen g_c_u
                     $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
                     $ genie_chibi_ypos = 10
-                    $ g_c_u_pic = "fingering_medium" #Having issues with the pause function. Too fast.
+                    $ g_c_u_pic = "fingering_medium"
                     show screen g_c_u
                     hide screen blkfade
                     with Dissolve(1)
@@ -1062,7 +1062,16 @@ label new_request_05:
                 her_head_main "Sir...I...I...ahhhmm..."
                 her_head_main "Ohhhh....yeees....yesss..."
                 ">Her holes twitch and her legs shake"
-                #Insert her_cum ani
+                show screen blkfade
+                with Dissolve(1)
+                hide screen genie
+                hide screen g_c_u
+                $ genie_chibi_xpos = -210 #-185 behind the desk. (Also 5 is something).
+                $ genie_chibi_ypos = 10
+                $ g_c_u_pic = "fingering_cum"
+                show screen g_c_u
+                hide screen blkfade
+                with Dissolve(1)
                 $her_head_state = 36
                 her_head_main "...................."
                 her_head_main "..............."
