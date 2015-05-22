@@ -64,68 +64,68 @@ label your_whore:
     
 #    if queen_whore_ending: #Students talking. Ending "Queen whore".
     if end.IsEnding(const_ENDING_STRONG_GIRL): #Students talking. Ending "Prostitute".
-        mal "Dude, heard a new rumour? Hermione was now to take money."
-        mal2 "Well, after she alone has earned all the points of the faculty..."
-        fem "...earned all points of the faculty?"
+        mal "Dude, heard the new rumour? Hermione is now accepting money."
+        mal2 "Well, after she alone earned all those points for her house..."
+        fem "...earned all those points for her house?"
         mal "Oh, it's you... "
-        fem "You guys again about this prostitute Hermione? Do not around normal girls?"
-        fem "That girl jerking dicks, sucks for everyone, but now made from this business, but you're only about it and say it! "
-        mal2 "And you know, after she single-handedly won the faculty, she can afford and not a business!" 
-        mal2 "And who will blame? Not only I."
-        mal "And not me, dude!"
-        fem "Yes you absolutely crazy! Worship a cheap slut!"
-        mal "Not so cheap."
+        fem "You guys again with this rumour about Hermione being a prostitute? The girl is just a slut?"
+        fem "That girl jerks dicks, sucks everyone, but making it into a business!. I am sure you would like that! "
+        mal2 "You know, after she single-handedly won the housecup, she can not afford to not make it a business!" 
+        mal2 "And who would blame her? Not me."
+        mal "Me neither, dude!"
+        fem "Yes, you are absolutely crazy! Worshipping a cheap slut!"
+        mal "Not that cheap."
         fem "What?"
-        mal "Not so cheap, I say."
-        fem "Oh, I'm sorry, I didn't know how much it substitutes the front."
-        mal "And that so? I'm afraid that for you and half will not give?"
+        mal "I said, not that cheap."
+        fem "Oh, I'm sorry, I didn't know the price of a slut like her."
+        mal "Yeah? I'm afraid that you would only get half her value?"
         fem "Fuck you! {size=-2}(*Offended*){/size}"
-        mal2 "And then, just so you know, it does not necessarily takes the money."
-        mal2 "If you bring points to Gryffindor, you can..."
-        fem "Wow! Yes it is just mother Teresa!"
+        mal2 "Just so you know, she does not necessarily take money."
+        mal2 "If you earn points for Gryffindor, you can..."
+        fem "Wow! She is a regular Mother Teresa!"
         mal "And you're just jealous of her!"
-        fem "Head out okay? So I was jealous to the prostitute?"
-        fem "Who do you take me for??!"
+        fem "Are you out of your mind? I am jealous of a prostitute?"
+        fem "What do you take me for??!"
         mal2 "Just jealous!"
-        mal2 " And when you know how long it takes per night - all will be mad."
-        fem "Really need..."
-        mal2 "Well, no need, no need."
+        mal2 "And when you learn how much she earns per night - you will be really mad."
+        fem "What the f..."
+        mal2 "Alright, alright...nevermind..."
         fem "..."
         mal2 "..."
-        mal "I go, dude, I need to pee. {size=-2}(*Leaves*){/size}"
+        mal "Be right back, dude, I need to pee. {size=-2}(*Leaves*){/size}"
         fem "{size=-2}(following) {/size}Thanks for telling me!"
         mal2 "..."
         fem "..."
         mal2 "..."
-        fem "...And, after all, how much?"
-        fem "Not that I was much interested, simply..."
-        fem "It's fun to learn... {size=-2}(sarcastically){/size} how much is 'Miss Popularity'."
+        fem "...alright, how much?"
+        fem "Not that I am that interested, but..."
+        fem "It's would be fun to know... {size=-2}(sarcastically){/size} how much 'Miss Popularity' is worth."
         mal2 "I heard about 3 thousand."
-        fem "Crazy?! My ancestors together for a month do not earn so much!"
-        mal2 "Well, your ancestors together for a month, and she is alone for the night. And willing enough."
-        fem "{size=-2}(*shakes his head*){/size} Still don't believe!"
+        fem "That's crazy?! My parents didn't earn that much in a month!"
+        mal2 "Well, your parents never sold those services. She is all yours for the night. And very willing."
+        fem "{size=-2}(*shakes her head*){/size} Still can't believe it!"
         fem "I can understand 500 coins, well, a thousand, if a girl is very, very good..."
         mal2 "As good as you?"
         fem "What?"
-        mal2 "I have a thousand... And I think you are very good."
+        mal2 "I have a thousand... And I think you might be very good."
         fem "{size=-2}(*confused*) {/size}What are you talking about?!"
-        mal2 "I think you're so good that he is ready to give you money right now and meet you after the ball."
-        mal2 "And if you're me down, I'm burning just blow it all."
+        mal2 "I think you're so good that I am ready to give you the money right now and meet you after the ball."
+        mal2 "If you want we can even just blow this place and get down to it now."
         mal2 "Here's the money..."
-        fem "{size=-2}(*sighs*) {/size} Why are you guys such uncouth?"
-        fem "Maybe I would agree, about bet you all romantic and beautiful!"
-        fem "And you immediately try to buy me as some Hermione!"
-        mal2 "Well then, let's just... {size=-2}(*going to remove notes*){/size}"
+        fem "{size=-2}(*sighs*) {/size} Why are you guys such swine?"
+        fem "Maybe I would have agreed, if you had asked in a romantic and beautiful way!"
+        fem "But you immediately try to buy me like I am the same as Hermione!"
+        mal2 "Well then, I will just... {size=-2}(*reaches to take back the money*){/size}"
         fem "No-no {size=-2} (*snatches the money*) {/size}... "
-        fem "I mean, I, of course, and so will go with you, just because you're a cool guy."
-        fem "And the money... just buy something on them. This same gift to me, right?"
-        mal2 "sure. {size=-2} (*pretty smiles*) {/size}Then wait for you at the exit after the ball."
+        fem "I mean, of course, I will go with you, just because you're a cool guy."
+        fem "And the money... I will buy something nice with it. It is the same as you giving me a gift, right?"
+        mal2 "Sure. {size=-2} (*pretty smile*) {/size} Then I will wait for you at the exit after the ball."
         ">Student slaps her ass and goes."
         fem "Tsk!......"
         fem "..........."
         fem "...3 thousands per night, crazy..." 
         fem "What a whore!..."
-        fem "Oh, guys, why did you conveniently ignored the normal girls?!"
+        fem "Why do guys always ignore the normal girls?!"
 
 
 #    if public_whore_ending: #Students talking. Ending "Public whore".
@@ -282,29 +282,29 @@ label your_whore:
     g4 "Let's make what quick?"
     $herViewHead.showQ( "body_164.png", posHead )
     if end.IsEnding(const_ENDING_STRONG_GIRL): 
-        her2 "I still owe you for the dress, it is true, sir?"
+        her2 "I still owe you for the dress, right, sir?"
     else:
         her2 "You want me to thank you for the dress now, don't you, sir?"
     $herViewHead.hideQ()
     m "The dress? No, no that's not why I am here."
     $herViewHead.showQ( "body_165.png", posHead )
     if end.IsEnding(const_ENDING_STRONG_GIRL): 
-        her2 "All right, sir, I really owe You. "
-        her2 "I can give money, or You prefer...?"
+        her2 "It is all right, sir, I really owe You. "
+        her2 "I can pay you the cost back, or if you prefer...?"
     else:
         her "It is fine, sir. I do not mind."
     $herViewHead.hideQ()
     m "Listen to me, girl! I am not who you think--"
     $herViewHead.showQ( "body_167.png", posHead )
     if end.IsEnding(const_ENDING_STRONG_GIRL): 
-        her2 "I realized, any money, service for service. \n I Think that is correct, sir."
+        her2 "I realized that everything has a price, something for something. \n I Think that is the way it is, sir."
     else:
         her2 "Please, sir, let me suck on your cock a little."
     $herViewHead.hideQ()
     g4 "Gh--!!!"
     $herViewHead.showQ( "body_167.png", posHead )
     if end.IsEnding(const_ENDING_STRONG_GIRL): 
-        her2 "You will not regret it. I will serve you at the highest level."
+        her2 "You will not regret it. I will make sure you are paid in full."
     else:
         her2 "Just a little will do. Please. I'm begging you..."
     $herViewHead.hideQ()
@@ -753,8 +753,8 @@ label your_whore:
         $herViewHead.showQ( "body_161.png", posHead )
         her "The coronation! I must go now!"
         if end.IsEnding(const_ENDING_STRONG_GIRL): 
-            her2 "Professor, I have to pay you for what you have allowed me to lead the organization of this ball."
-            her2 "So what I'll do something that you enjoy..."
+            her2 "Professor, I have to pay you back for allowing me to lead the organization of this ball."
+            her2 "So I'll do something that you enjoy..."
         $herViewHead.hideQ()
         $ renpy.play('sounds/run_03.mp3')    #<--------------------Sound of running off.
         pause 3
@@ -1132,7 +1132,7 @@ label your_whore:
         show screen bld1
         with d3
         mal "(huh?)"
-        mal "(What's that stuff on her forehead you wager?)"
+        mal "(What's that stuff on her forehead you think?)"
         mal2 "(Sweat...?)"
         mal "(Hm... Probably..)"
         hide screen blktone
@@ -1476,10 +1476,10 @@ label your_whore:
         $herViewHead.showQ( "body_165.png", posHead )
         her "Professor Dumbledore..."
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her2 "Did you like it? It was worthy of a return gift?"
+            her2 "Did you like it? Was it a worthy repayment for your gift?"
             $herViewHead.hideQ()
-            g4 "Well, bitch!"
-            her2 "I have you to thank?"
+            g4 "Wow, little bitch!"
+            her2 "I have you to thank."
         else:
             her2 "There was something you wanted to discuss with me?"
             $herViewHead.hideQ()
@@ -1522,7 +1522,7 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d7   
         if end.IsEnding(const_ENDING_STRONG_GIRL):  
-            her "Strange... Why do you have such a stone riser?"
+            her "Strange... your hard-on seems to disagree?"
             her "I think everything went pretty well..."
         else:                                                                   #<---- SCREEN
             her "I thought it went rather well..."
@@ -1587,7 +1587,7 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "Ah! Maybe..."
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "You want it?..."
+            her "You want me to?..."
         $ end_u_2_pic =  "03_hp/17_ending/124.png" #<---- SCREEN
         show screen end_u_2                                               #<---- SCREEN
         with d5                                                                         #<---- SCREEN
@@ -1669,7 +1669,7 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Well, if you tell them, they will retreat, sir?... Or... Ah! you want to share me with assholes?"
+            her "Well, you could tell them to fuck off, sir?... Or... Ah! Do you want to share me with those assholes?"
         else:
             her "What?!"
         
@@ -1704,27 +1704,27 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d7                                     #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Professor, do you really want to, I did it with them?!!!"
-            m "And why not, a whore?"
-            m "It's happened to you? Suddenly become so shy..."
+            her "Professor, do you really want to do it with them?!!!"
+            m "Why not, whore?"
+            m "What happened to you? Suddenly become so shy..."
             $ end_u_2_pic =  "03_hp/17_ending/130.png" #<---- SCREEN
             show screen end_u_2                                             #<---- SCREEN
             with d5                                                                        #<---- SCREEN
-            her "Don't you see that this is a \"Slitherine\"?!"
-            m "and what?"
-            her "You know that our faculties... it's a long story."
+            her "Don't you see that those are \"Slytherin\"?!"
+            m "So?"
+            her "You know that our houses... it's a long story."
             m "em..."
-            m "Well, you will be a good bridge between \"slitherine\" and \"Gryffindor\"!"
+            m "Well, you will be a good bridge between \"Slytherin\" and \"Gryffindor\"!"
             $ end_u_1_pic =  "03_hp/17_ending/129.png" #<---- SCREEN
             show screen end_u_1                                             #<---- SCREEN
             with d7                                                                        #<---- SCREEN
-            her "Sir, if you think I don't care... I was hoping you feel about... I thought..."
-            m "What did you think? You fucking whore, only pretend to be shy! Here and show them what a whore!"
+            her "Sir, if you think I don't care... I was hoping you would feel... I thought..."
+            m "What did you think? You fucking whore, pretending to be shy! Show them what a whore you are!"
             $ end_u_2_pic =  "03_hp/17_ending/130.png" #<---- SCREEN
             show screen end_u_2                                             #<---- SCREEN
             with d5
             her "..."                                                                        #<---- SCREEN
-            her "I understand, sir, what do you want..."
+            her "I understand, sir, if that is what you want..."
 
         else:
             her "Professor!!!?"
@@ -1798,8 +1798,8 @@ label your_whore:
             her "......"
             her "............"
             her "..................."
-            her "Well, of course, it was for you, boys. You should've seen what I whore."
-            sly2 "Oh, how you talk! We all saw, a slut, even as saw!"
+            her "Of course, it was for you, boys. You needed to see what a whore I am."
+            sly2 "Oh, keep talking! We all saw what a slut you are!"
         else:
             her "Sir! Stop fucking me!"
             m "Huh? You mean, like this?"
@@ -1836,18 +1836,18 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Oh, what... Ah... beautiful babies!"
-            sly1 "What other 'kids', you stupid bitch?"
-            sly2 "No offense, bro, but I think it says about your... {size=-2}(*laughs*){/size}."
-            sly1 "Go fuck!"
+            her "Oh, what... Ah...cute little thing!"
+            sly1 "What are you talking about, you stupid bitch?"
+            sly2 "No offense, bro, but I think she is talking about your... {size=-2}(*laughs*){/size}."
+            sly1 "Go fuck yourself!"
         else:
             her "What?! What are you doing?!"
         $ end_u_2_pic =  "03_hp/17_ending/137.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Well, go ahead, boys. You were taught to use them? Mommy is waiting."
-            sly2 "Even as poolthese, bitch, now you will see!"
+            her "Well, go ahead, boys. Where taught how to use them? I am waiting."
+            sly2 "Damn you, bitch, you will see!"
         else:
             her "Put your filthy dicks away immediately!"
         with hpunch
@@ -1860,7 +1860,7 @@ label your_whore:
         if end.IsEnding(const_ENDING_STRONG_GIRL):
             $ end_u_1_pic =  "03_hp/17_ending/136.png" #<---- SCREEN
             show screen end_u_1                                             #<---- SCREEN
-            her "Let the guys do not disappoint me!"
+            her "Let's go guys, do not disappoint me!"
             her "Professor! I..."
         else:
             her "Professor!"
@@ -1887,7 +1887,7 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Well, guys, don't stop. Give mom a real orgasm."
+            her "Well, guys, don't stop. Give me a real orgasm."
         else:
             her "Stop it! Stop spitting in my face, you bastards!"
             sly1 "Make us, whore!"
@@ -1918,9 +1918,9 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Great two point, guy. ohh.... I liked it! Let's do it again!"
+            her "Great, two points, boy. Ohh.... I liked it! Let's do it again!"
             sly1 "Shut up, you cunt!"
-            her "If close, how do you then get in there?"
+            her "How about you get in there?"
         else:
             her "That's was an accident!"
             sly1 "Was it? Let's see."
@@ -1958,7 +1958,7 @@ label your_whore:
 
         if end.IsEnding(const_ENDING_STRONG_GIRL):
             her "Boy, you're my hero. Come on, don't stop!"
-            sly1 "Bitch, you'll shut up ever?! You got your barking!"
+            sly1 "Bitch, don't you shut up ever?! You got what you wanted!"
         else:
             her "That's because I didn't expect it... That's just a reflex!"
             sly1 "That's one hot reflex!"
@@ -1969,31 +1969,31 @@ label your_whore:
         pause.3
         her "Ah... Ah-aha..."
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "The boys, well, recensies... rather, mommy'm tired of waiting!..."
+            her "Well boys...I am tired of waiting!..."
         else:
             her "You will pay for this, you spineless slytheri--"
             sly1 "Shut it, mudblood!"
         if end.IsEnding(const_ENDING_STRONG_GIRL):
             $ end_u_2_pic =  "03_hp/17_ending/142.png" #<---- SCREEN
             show screen end_u_2                                             #<---- SCREEN
-            her "The boys were in such a hurry for a hot Blowjob. And... Ah... they are not afraid that mommy they simply bite?"            
-            sly2 "What you are, slut?! You... you would not dare!"
-            her "I'm waiting for you, my sweet."            
-            sly1 "Damn, this bitch at all! And what -- what now, sir?"
-            m "Look, it's already beyond, Hermione."
-            her "Professor, you are not here? Or you suddenly appeared?"
-            her "These boys I do not like. But I'll blow them if I will pay."
-            m "Will pay? You want glasses to the faculty?"
-            her "{size=-2}(*giggles*) {/size}I want them to give me their wallets with all that there is. "
-            her "Otherwise they will just stand there and poddrachivat, watching you fuck me."
-            sly1 "Ha, take that cheap! I've never been there more than 10 coins. {size=-2}(*throws wallet*){/size}"
-            sly2 "You well, I've got a check with the money for all the holidays!"
-            sly2 "I've accumulated on a new model of brooms... screw this!"
-            her "{size=-2}(*giggles*) {/size}Ahhh... don't fuss sweet. But... Ah! or all of you or none of you."
-            sly1 "The guys that you don't understand?! This opportunity is a once in a life! And that money is garbage!"
-            sly2 "I'm going to repeat it, when you come to me to beg. {size=-2}(*throws wallet*){/size}"
-            "> Throw everything wallets"
-            her "{size=-2}(*giggles*) {/size}Well, now, boys, you even skirt was straight. Who was the first?"
+            her "You boys were in such a hurry for a hot Blowjob. And... Ah... are you afraid that I will bite?"            
+            sly2 "What the...slut! You... you would not dare!"
+            her "I'm waiting for you, dear."            
+            sly1 "Damn, this bitch is crazy! And what -- what now, sir?"
+            m "This is going to far, Hermione."
+            her "Professor, are you still here? Or did you come back for more?"
+            her "I dont't like these boys. But I'll blow them for the right price."
+            m "Price? You want points for your house?"
+            her "{size=-2}(*giggles*) {/size}I want them to give me their wallets with everything in them. "
+            her "Otherwise they can just stand there and twiddle their dicks, while you fuck me."
+            sly1 "Ha, that's cheap! I've never more then than 10 coins on me. {size=-2}(*throws wallet*){/size}"
+            sly2 "Damn, I've only get a check with my allowance for the rest of the holidays!"
+            sly2 "I was saving up for the new broom model... screw this!"
+            her "{size=-2}(*giggles*) {/size}Ahhh...don't you worry, dear. But... Ah! It is all of you or none of you."
+            sly1 "Guys don't you understand?! This is a once in a lifetime opportunity! You can't put a money value on that!"
+            sly2 "I am going to remember this the next time you want to borrow some. {size=-2}(*throws wallet*){/size}"
+            "> Everyone throws their wallets"
+            her "{size=-2}(*giggles*) {/size}Well, now, boys, you seem to be ready. Who was first?"
 
         $ end_u_1_pic =  "03_hp/17_ending/143.png" #<---- SCREEN
         show screen end_u_1                                                #<---- SCREEN
@@ -2062,10 +2062,10 @@ label your_whore:
         her "Gu-aha..."
 
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "This boy - value, sir. I'm afraid he disappoints girls. "
-            her "Sir, please recommend him some treatment, he'll listen to you."
-            sly1 "{size=-2}(*suffocating*) {/size}Shut up, fucking a beast!!!! Bitch, I will kill you now! I !..."
-            her "I've heard that sometimes it can be cured, sir. True."
+            her "This boy didn't impress, sir. I'm afraid he is going to disappoint a lot of girls. "
+            her "Sir, could you recommend some treatment to him, he'll listen to you."
+            sly1 "{size=-2}(*gasp*) {/size}Shut up, fucking bitch!!!! Bitch, I will kill you! I !..."
+            her "I've heard that sometimes it can be cured, sir."
         else:
             her "Is this all you got? Pathetic!"
             sly2 "Oh... Shut up whore... You sucked me dry..."
@@ -2075,7 +2075,7 @@ label your_whore:
         her "Come on! Who's next?!"
         sly2 "Me! I'm next!"
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            sly2 "Let's see what you say!"
+            sly2 "Let's see what you got!"
         $ end_u_1_pic =  "03_hp/17_ending/148.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with hpunch                                                                       #<---- SCREEN
@@ -2140,12 +2140,12 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d5
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "You were a little better... G-HHA... If you are his friend,... learn first to fuck."
-            sly1 "I you're going to beat!!!!"
-            sly2 "{size=-2}(*condescending smirks*) {/size}Come on. Better fuck her again."
-            sly1 "Because of this fucking whore, I now do not arise... that is such a whore I have more and will not rise. Hammer it yourself, if not disdain."
-            her "You like, sir?"
-            her "Boys, don't stay, who's next?"
+            her "You were a little better... G-HHA... If you are his friend... you could teach him to fuck."
+            sly1 "I am going show you!!!!"
+            sly2 "{size=-2}(*condescending smirk*) {/size}Come on. Better fuck her again."
+            sly1 "I have lost my hard-on because of this fucking whore...I could show her...if only it would rise. Fuck it...fucking bitch."
+            her "You like this, sir?"
+            her "Boys, don't stop, who's next?"
         else:
             her "Next! Come on! Is this all you got?"
         sly1 "I'm next, mudblood!"
@@ -2153,7 +2153,7 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Oh, I like this name almost as much as 'whore'."
+            her "Oh, I like that name almost as much as 'whore'."
         else:
             her "{size=-5}Ah... Don't call me that, you bastard...{/size}{image=textheart.png}"
 
@@ -2164,8 +2164,8 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "I will say, my sweet, but first you must give me pleasure."
-            sly1 "I you're gonna get screwed so that you have the brains out of your ears will come out!"
+            her "I will thank you, dear, but first you must pleasure me."
+            sly1 "I am going to fuck your brains out, little slut!"
         else:
             her "Fuck you!"
         
@@ -2203,7 +2203,7 @@ label your_whore:
         with d5  
 
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her "Нwell a little, C'mon... Ah-ha... Not asrames in front of friends."
+            her "Not that bad, C'mon... Ah-ha... dont't be shy in front of your friends."
         else:
             her "You worthless...\"slythe-"
         $ end_u_1_pic =  "03_hp/17_ending/155.png" #<---- SCREEN
@@ -2486,29 +2486,29 @@ label your_whore:
             stop music fadeout 2.0
             play music "music/Reamonn-Supergirl.mp3" fadein 1 fadeout 1 
             $ renpy.music.set_volume(0.3) #.....установить громкость музыки на 30% 
-            sly1 "And anyway, fucking've used the whore."
-            sly2 "Hmm, I think we've used? I'm not sure..."
+            sly1 "Anyway, we fucking used that whore."
+            sly2 "Hmm, you think we used her? I'm not sure..."
             sly1 "What are you talking about, bro?"
-            sly2 "I have the feeling that this is it, we were screwed for our money!"
-            sly1 "Oh well, what are you. We will now be able to fuck her every day!"
-            sly2 "Mean to pay the fuckin money to give her pleasure and to listen to it while making fun of you?"
-            sly2 "Come on, bro! As I pass."
-            sly1 "But in the end we were humping her like a whore and she loved it!"
-            sly2 "So who has left? It with all our attendants and flew into multiorgasm."
-            sly2 "We once pulled... Some not even put."
-            sly1 "Bro, you have not understood the topic!"
-            sly1 "Imagine the faces of griffindore, when we'll tell you how I was humping their star, as the last wh...."
-            sly2 "I will take good care to the breeze. And what you all want."
+            sly2 "I have the feeling that she fucked us, we were screwed out of our money!"
+            sly1 "Oh well, what more do you want. We will now be able to fuck her every day!"
+            sly2 "You mean to pay her money to give her pleasure and to listen to her making fun of you?"
+            sly2 "Come on, bro! It was not that bad."
+            sly1 "In the end we were humping her like a whore and she loved it!"
+            sly2 "So whats the problem then? We all get our rocks of and fucked her into a multiorgasm."
+            sly2 "Well some got of more then others."
+            sly1 "Bro, you are not understading what I am saying!"
+            sly1 "Imagine the faces of Griffindors, when I tell them how I was humping their star pupil, like the wh...."
+            sly2 "I wouldn't go telling everyone about it. It might not end up as you expect."
             sly1 "...?!"
-            sly2 "If you hear our girls, you will have to make friends with the right hand until graduation."
-            sly1 "The girls something to do with it?"
-            sly2 "{size=-2}(*mimics the female voice*){/size}\"Ah, those goats...\""
-            sly2 "\"They gave Gryffindors whore all, they had only one Blowjob!\"" 
-            sly2 "Good advertising Hermione turned out, don't you think? And I think these jealous bitches will forgive you this?"
+            sly2 "If our girls hear about it, you will have to make friends with your right hand until graduation."
+            sly1 "What have the girls got to do with this?"
+            sly2 "{size=-2}(*mimics a female voice*){/size}\"Ah, those goats...\""
+            sly2 "\"They gave that Gryffindor whore all they had and only got one blowjob!\"" 
+            sly2 "Hermione might even advertise about it, don't you think? And you think those jealous bitches will forgive you for this?"
             sly1 "Come on, bro..."
-            sly2 "I rather underestimate... do as You wish, and I am immediately roll up to her and ask her to silent."
+            sly2 "I'd rather underestimate... do what you want. I am going to talk to her immediately and ask her to be silent."
             sly1 "Wh-at?"
-            sly2 "You may have to apologize and to bring more money. I hope for the night and you will diprete that it's not such a big fee..."
+            sly2 "You may have to apologize and bring her more money. I hope she is available for the night and that her fee is not too large..."
             "> Students already far away, and their voices become silent."
 
         $herViewHead.showQ( "body_176.png", posHead )
@@ -2524,43 +2524,43 @@ label your_whore:
         m "Come on, girl. Pull yourself together!"
         $herViewHead.showQ( "body_178.png", posHead )
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her2 "Excuse me, sir. I tried not to be fucking a whore in front of these monsters, even though I knew that you like that I was just a whore."
-            her2 "But, apparently, against nature not to go and everything turned out as you like."
-            her2 "I happened to please you, sir?"
+            her2 "Excuse me, sir. I tried not to be a whore in front of those monsters, even though I know that you like that I am a whore."
+            her2 "But, apparently, it is hard to turn against your nature. Everything turned out alright."
+            her2 "Did it happen to please you, sir?"
             $herViewHead.hideQ()
             m "What do you mean?"
             $herViewHead.showQ( "body_178.png", posHead )
-            her "Sir, now I don't owe you anything?"
+            her "Sir, now I shouldn't owe you anything?"
             $herViewHead.hideQ()
-            m "Should?"
+            m "Owe?"
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "I owes you nothing nor dress, nor for what became the organizer of the ball or something else?"
+            her2 "I owe you nothing for the dres, for becoming the ball organizer or anything?"
             $herViewHead.hideQ()
-            m "What a stupid thing to say. I'm here totally different cause."
+            m "What a stupid thing to say. I'm have a totally different reason to be here."
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "It's not nonsense, sir! I want to be sure that now I am with you fully paid."
-            ">  Raises lying on the floor wallets \n two fingers and put them in the ballot box."
+            her2 "It's not stupid, sir! I want to be sure that my debt to you is fully paid."
+            "> Picks up the wallets from the floor \n with two fingers and put them in the ballot box."
             $herViewHead.hideQ()
-            m "Hmm... okay, well, you're completely paid. But I'm here..."
+            m "Hmm... okay, well, you're debt is fully paid. But I'm here..."
             $herViewHead.showQ( "body_179.png", posHead )
-            her2 "That's fine, sir. Because now I am free. So that all, sir."
+            her2 "That's great, sir. Because now I am free. So will that be all, sir."
             $herViewHead.hideQ()
-            m "That 'all'?"
+            m "Be all?"
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "Yesterday I was sent to the Ministry of Magic report about what is happening at Hogwarts. "
+            her2 "Yesterday I sent a report to the Ministry of Magic about what is happening at Hogwarts. "
             $herViewHead.hideQ()
             m "I'm sorry, what did you do?"
             $herViewHead.showQ( "body_178.png", posHead )
             her2 "I wrote and sent a full report about what is happening at Hogwarts."
-            her2 "All these sexual services, payment for glasses, teachers, fucking students..."
+            her2 "All these sexual services, payment for points, teachers fucking students..."
             her2 "There are witnesses who will testify. There are records, documents."
             $herViewHead.hideQ()
-            m "You wanted me to take revenge, girl? I do not care. I'm here to tell you that I'm leaving..."
+            m "You want to take revenge, girl? I do not care. I'm here to tell you that I'm leaving..."
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "Yes? However, it doesn't matter, because Your name I in the report was not made."
-            her2 "So, in the worst case, you could draw for negligence."
+            her2 "Ohh? However, it doesn't matter, because I didn't add your name to the report."
+            her2 "So, in the worst case, you could plead for negligence."
             $herViewHead.hideQ()
-            m "Then... don't understand, why did you do that?"
+            m "Then... I don't understand, why did you do that?"
             $herViewHead.showQ( "body_179.png", posHead )
             her2 "Well, sir, you once I have made it clear that my problems will never be yours. I thought for a moment and drew conclusions."
             her2 "You think, said that going?"

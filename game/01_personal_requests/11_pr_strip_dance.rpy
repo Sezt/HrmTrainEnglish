@@ -236,10 +236,10 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
                 
         menu:
             "\"Who cares about your reputation?\"":
-                m "Who cares about your reputation? Continue to undress!"
+                m "Who cares about your reputation? Continue to strip!"
                 $ end.SetEndingValue(const_ENDING_STRONG_GIRL,1)
-            "There is no one there":
-                m "Well, there is no one there and your reputation is not endangered."        
+            "It is only us here":
+                m "Well, we are the only ones here, your reputation is safe."        
 
 
         show screen blkfade 
