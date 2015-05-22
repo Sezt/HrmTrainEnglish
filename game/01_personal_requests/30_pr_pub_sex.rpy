@@ -187,8 +187,8 @@ label new_request_30_complete: # <==============================================
 
 #        label test:
         menu:
-            "Disassembled itself":
-                m "Well, you adult girl, or do you need a nanny who will take care of your reputation?"
+            "Handle it":
+                m "Well, you are an adult, miss, or do you need a grown-up to fix your reputation?"
                 $ end.SetEndingValue(const_ENDING_STRONG_GIRL,3)
             "Just be careful":
                 m "Just be careful."
