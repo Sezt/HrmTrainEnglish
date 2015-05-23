@@ -99,7 +99,7 @@ label your_whore:
         mal2 "..."
         fem "...alright, how much?"
         fem "Not that I am that interested, but..."
-        fem "It's would be fun to know... {size=-2}(sarcastically){/size} how much 'Miss Popularity' is worth."
+        fem "It would be fun to know... {size=-2}(sarcastically){/size} how much 'Miss Popularity' is worth."
         mal2 "I heard about 3 thousand."
         fem "That's crazy?! My parents didn't earn that much in a month!"
         mal2 "Well, your parents never sold those services. She is all yours for the night. And very willing."
@@ -2562,69 +2562,69 @@ label your_whore:
             $herViewHead.hideQ()
             m "Then... I don't understand, why did you do that?"
             $herViewHead.showQ( "body_179.png", posHead )
-            her2 "Well, sir, you once I have made it clear that my problems will never be yours. I thought for a moment and drew conclusions."
-            her2 "You think, said that going?"
-            her2 "I don't ask much, sir, but everything happened like you leave and I stay and all my problems remain with me."
-            her2 "And, so, I'm not vain prepared."
+            her2 "Well, sir, I made it clear that my problems would never be yours. I thought about it and come to this conclusion."
+            her2 "You mentioned that you are leaving?"
+            her2 "I don't ask much, sir, but with everything happening, like you leaving and me staying. My problems remain with me."
+            her2 "So I am not prepared for nothing."
             $herViewHead.hideQ()
-            m "It's all your fault, girl. If you have not begun to bare on the stage, showing how love can be public, none of this would have happened!"
+            m "It's all your fault, girl. If you hadn't exposed yourself on the stage, getting fucked in public, none of this would have happened!"
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "I had to give you all the debts. And I knew what you're going to love."
+            her2 "I had to repay all my debts. And I knew what you're where going to love that."
             $herViewHead.showQ( "body_181.png", posHead )
-            her2 "But in General - Yes, I began to tear the roof. Although, it is strange, after all that I've done on stage - I was followed by applause."
+            her2 "But, yes, I began to tear the roof down. Although, it is strange, after all I did on stage - I was followed by applause."
             $herViewHead.showQ( "body_179.png", posHead )
-            her2 "And after that you're allowed to make guys - I can per person stop feeling."
-            her2 "I don't know, did I have something to fix, as long as I have something thought."
+            her2 "And after that you allowed those guys to join us - I can still taste each of them."
+            her2 "I am not sure I did anything wrong, as fars as i can see."
             $herViewHead.hideQ()
-            m "Hey, Hey, don't tell me not to connect! If you what happened, I blame you and only you!"
-            m "Don't be deeply hidden in you whore, you wouldn't get pleasure from it."
-            m "And originally the whole idea of points for the service... how could a normal girl to do this?"
+            m "Hey, Hey, don't tell me it is my fault! If you don't like what happened, blame yourself and only you!"
+            m "If you are not a whore deep down, you wouldn't get so much pleasure from it."
+            m "And originally the whole idea of points for services... would a normal girl to do that?"
             $herViewHead.showQ( "body_168.png", posHead )
-            her2 "{size=-2}(*laughs*){/size} Sir, I'm not going you to blame, you don't have to defend themselves."
+            her2 "{size=-2}(*laughs*){/size} Sir, I'm not going to blame you, you don't have to be defensive."
             $herViewHead.showQ( "body_179.png", posHead )
-            her2 "I'm so grateful that you have opened in me another, the real me."
-            her2 "And the fact that you are only interested in the sensations in the penis, and don't care what will happen to me..."
-            her2 "Well, I'm a strong girl and can take care of itself."
+            her2 "I'm so grateful that you have found another side of me, the real me."
+            her2 "And the fact that you are only interested in your own pleasure, and don't care what will happen to me..."
+            her2 "Well, I'm a strong girl and can take care of myself."
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "Go, Professor. You said that you have time."
+            her2 "Go, Professor. You said that you had to leave."
 
             $herViewHead.hideQ()
-            m "Uh... Wait, but how sideways Ministerial checking to your problems?"
+            m "Uh... Wait, how about the Ministery coming to check on the problems?"
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "This is the easiest way to move from the category of whores that fuck with all, in the discharge of whores that decide with whom to sleep."
+            her2 "This is the easiest way to move from a common whore that gets fucked by all, to a whore that decides who fucks her."
             her2 "After THIS shake-up Hogwarts will try to forget how it all began."
             $herViewHead.hideQ()
-            m "Do you think you will test change local orders? Naive Chukchi girl...(kek)"
+            m "Do you think you be able to change how things are run? Naive little girl..."
             $herViewHead.showQ( "body_178.png", posHead )
-            her2 "Nothing of the kind, sir. Think of Hogwarts just going to throw some particularly stupid professors."
-            her2 "All for a couple of months to fade, and then again will be easier."
+            her2 "Nothing like that, sir. I think Hogwarts will expel some of the worst and particularly stupid professors."
+            her2 "After a couple of months it will fade away, and then everything will go back to almost normal."
             $herViewHead.showQ( "body_179.png", posHead )
-            her2 "And so I'm not hyping this story, I would prefer to buy. "
+            her2 "So I'm not going to tell this part of the story, I would prefer to bribe them  . "
             $herViewHead.showQ( "body_168.png", posHead )
-            her2 "I'm wondering, what would this require..."
+            her2 "I wonder, what that would require..."
             $herViewHead.hideQ()
-            m "This is a very cynical...."
+            m "That is a very cynical...."
             $herViewHead.showQ( "body_179.png", posHead )
             her2 "Yes, sir. I am grateful that you introduced me to this way of life."
-            her2 "This helps to really look at things and to achieve what I want."
-            her2 "For example, when I realized that the collection of information is hampered by the simple lack of money, then began to earn money by prostitution."
+            her2 "That helps to really look at things and to achieve what I want."
+            her2 "For example, when I realized that the collection of information is hampered by the simple lack of money, then I began to earn money by prostitution."
             $herViewHead.hideQ()
             m "I... heard about it."
             $herViewHead.showQ( "body_181.png", posHead )
-            her2 "And I realized that I really like. You really made me a first-class whore, Professor."
+            her2 "And I realized that I really like it. You really made me a first-class whore, Professor."
             $herViewHead.showQ( "body_168.png", posHead )
-            her2 "so{size=-2}(*хихикает*){/size} at one profession I have. And I am quite calm and for myself and for future faculty."
+            her2 "So {size=-2}(*giggles*){/size} thats my profession. And I am quite calm and secure about the future for myself and the house."
             $herViewHead.hideQ()
-            m "The faculty?"
+            m "The house?"
             $herViewHead.showQ( "body_179.png", posHead )
-            her2 "You know, sir, all that I did, I did for the faculty. And 'Go, Gryffindor!' for me is not just empty words."
+            her2 "You know, sir, all that I did, I did for the house. And 'Go, Gryffindor!' are not just empty words to me."
             $herViewHead.showQ( "body_168.png", posHead )
-            her2 "And now... I'm the Queen of the ball. And I want to dance. And so you have been chattering too much."
+            her2 "And now... I'm the Queen of the ball. And I want to dance. We have already wasted a lot of the evening talking."
             $herViewHead.hideQ()
             m "I'm leaving..."
             $herViewHead.showQ( "body_179.png", posHead )
             #$ h_body = "03_hp/13_hermione_main/body_176.png" # HERMIONE
-            her "Счастливого пути, сэр..."
+            her "Farewell, sir..."
             $MusicStop()
         else:
             her "I... I... What?"
@@ -2677,8 +2677,8 @@ label your_whore:
         m "Hm..."
 
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            m "Said some shit about me and ran off to dance..."    
-            m "Happy that he had discovered in her a whore, and in the same accuses."    
+            m "...running off to dance..."    
+            m "Happy that she has discovered her inner whore, and fucking everyone else over."    
             m "Women..."    
 
 
