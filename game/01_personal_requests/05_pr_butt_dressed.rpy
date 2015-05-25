@@ -701,7 +701,7 @@ label new_request_05:
                                 her_head_main "Mmmmhh..."
                                 $her_head_state = 01
                                 her_head_main "It does hurt a bit more without panties"
-                                her_head_main "But in a slightly good way."
+                                her_head_main "But in a slightly good way"
                                 m "Let's pause the slapping. I need to touch that fine ass."
                                 jump fingering_start_01
                                 
@@ -781,20 +781,20 @@ label new_request_05:
                         m"You have a very nice little hole, miss, but it's not used to visitors it seems."
                         $her_head_state = 25
                         her_head_main "Ahhh...no, I haven't had a lot of experience with this."
-                        m "No vorries, dear, that is why I am here to guide you."
-                        m "But before we move futher down this rabbithole, I just want to check if I have some lube."
+                        m "No worries, dear, that is why I am here to guide you."
+                        m "But before we go further down this rabbithole, I just want to check if I have some lube."
                         if hero.Items.Any("lubricant"):
                             $hero.Items.AddItem("lubricant",-1)
                             m "We are in luck, miss, a whole jar just for your hole."
                             $her_head_state = 22
-                            her_head_main "Profesor! My tiny hole would never fit the entire jar!"
-                            m "Hehehe, easy miss, it's just for lubrication of a finger...or two."
+                            her_head_main "Professor! My tiny hole would never fit the entire jar!"
+                            m "Hehehe, easy miss, it's just for lubricating a finger...or two."
                             jump fingering_transition_01
                         else:
                             m "It does not seem like I have any left"
                             m "I will have to order some later, sorry"
                             $her_head_state = 04
-                            her_head_main "It's alright Profesor, I will even be happy with my normal fee today."
+                            her_head_main "It's alright Professor, I will even be happy with my normal fee today."
                             m "You are a good girl, Miss Granger"
                             jump fingering_end_short
                             
@@ -814,8 +814,8 @@ label new_request_05:
                                     $hero.Items.AddItem("lubricant",-1)
                                     m "Tadaa, I guess your ass will thank me in the morning."
                                     $her_head_state = 22
-                                    her_head_main "Profesor! Not funny!"
-                                    m "Hehehe, just a little joke, That should make moving on a lot smoother."
+                                    her_head_main "Professor! Not funny!"
+                                    m "Hehehe, just a little joke. That should make moving on a lot smoother."
                                     jump fingering_transition_01
                                 else:
                                     m "It seems I am all out, miss"
@@ -834,7 +834,7 @@ label new_request_05:
                             
                             "-Continue as is-":
                                 label fingering_rough_01:
-                                m "No pain no gain is a saying here, right?"
+                                m "No pain, no gain is a saying here, right?"
                                 ">You start fingering her ass"
                                 $her_head_state = 40
                                 her_head_main "Please sir, you are hurting me..."
@@ -872,9 +872,9 @@ label new_request_05:
                                         m "Does it only hurt or is there someting else as well?"
                                         $her_head_state = 11
                                         her_head_main "Hmmm...it...the pain is sharp, sir, but there is also a slight tingle...aahh"
-                                        her_head_main "It feels abit like when you spank me, sir..mmmm"
+                                        her_head_main "It feels a bit like when you spank me, sir..mmmm"
                                         $her_head_state = 15
-                                        her_head_main "Mmmm...it starts to...be less...uuhnpleasant..."
+                                        her_head_main "Mmmm...it's starting to...be less...uuhnpleasant..."
                                         m "Good girl, focus on that fealing..."
                                         $her_head_state = 17
                                         her_head_main "Mmmm.....yes sir......mmmmm"
@@ -884,15 +884,15 @@ label new_request_05:
                                         her_head_main "Ahhh...yes...that's....{image=textheart.png}"
                                         m "You seem to be enjoying it, miss?"
                                         $her_head_state = 38
-                                        her_head_main "I...I do..not..."
+                                        her_head_main "I...I do...not..."
                                         m "Well no need to go on then?"
                                         $her_head_state = 34
-                                        her_head_main "Do..not...stop...sir"
-                                        her_head_main "Do..not..mmmmm "
+                                        her_head_main "Do...not...stop...sir"
+                                        her_head_main "Do...not...mmmmm "
                                         $her_head_state = 37
                                         her_head_main "Mmmmmm....I think...am...ahh{image=textheart.png}"
                                         her_head_main "Ahhh....ahh{image=textheart.png}..."
-                                        ">You start circling you finger"
+                                        ">You start circling your finger"
                                         $her_head_state = 37
                                         her_head_main "Mmmmmm....I think...am...ahh{image=textheart.png}"
                                         her_head_main "Ahhh....ahh{image=textheart.png}...sir?"
@@ -903,7 +903,7 @@ label new_request_05:
                                         m "You seem to be responsive to the right input"
                                         $her_head_state = 17
                                         her_head_main "Sir...Yes..."
-                                        m "You earned you fee, miss, we learned a lot today"
+                                        m "You earned your fee, miss, we learned a lot today"
                                         $ fingeringpayment += 30
                                         show screen blkfade
                                         with Dissolve(1)
@@ -937,9 +937,9 @@ label new_request_05:
             hide screen blkfade
             with Dissolve(1)
             $her_head_state = 17
-            her_head_main "Is this alright, sir"
+            her_head_main "Is this all right, sir"
             m "Very nice view, miss"
-            ">You grab her butt and massage it with a very firm grib"
+            ">You grab her butt and massage it with a very firm grip"
             $her_head_state = 06
             her_head_main "Ahhhh...thank you sir..."
             m "Are you ready for us to enter...the next step"
@@ -951,8 +951,8 @@ label new_request_05:
                     ">You move you right hand to her tiny pussy"
                     m "Let's shift the focus to your lovely pussy for a moment."
                     $her_head_state = 26
-                    her_head_main "Sir! No need to commentate that...it's embarrassing."
-                    m "Well miss, no reason that you can't enjoy this."
+                    her_head_main "Sir! No need for such comments...it's embarrassing."
+                    m "Well, miss, no reason that you can't enjoy this."
                     ">You start massage her lips and clit"
                     show screen blkfade
                     with Dissolve(1)
@@ -970,7 +970,7 @@ label new_request_05:
                     her_head_main "Ahhhh.........."
                     m "Are you enjoying yourself, miss?"
                     $her_head_state = 05
-                    her_head_main "As you said, sir,  no reason not to enjoy ahhht least part of my work for Griffindor..."
+                    her_head_main "As you said, sir, no reason not to enjoy ahhht least part of my work for Gryffindor..."
                     m "Right you are, miss."
                     $her_head_state = 06
                     her_head_main "Ahhh...ahh....{image=textheart.png}"
@@ -992,9 +992,9 @@ label new_request_05:
                         "-Switch to her butt-":
                             jump fingering_end_medium
                         "-Go for both holes-":
-                            ">You lube up her hole and you fingers"
+                            ">You lube up her hole and your fingers"
                             $her_head_state = 17
-                            her_head_main "Uhhhh...Sticky....nice.."
+                            her_head_main "Uhhhh...Sticky....nice..."
                             m "Ready for this?"
                             jump fingering_end_long
     
@@ -1037,13 +1037,13 @@ label new_request_05:
                 $her_head_state = 07
                 her_head_main "Sir!...Uhm..."
                 $her_head_state = 06
-                her_head_main "Well...we have come this far...mmmm.."
+                her_head_main "Well...we have come this far...mmmm..."
                 her_head_main "Would be ahhh shame to stop before reaching the goal..."
                 m "Ohh yes, miss, you got the idea now!"
                 ">You slip fingers into both holes"
                 $her_head_state = 07
                 her_head_main "Ahhhh...ahhh...{image=textheart.png}...yees"
-                m "Good..good.."
+                m "Good...good..."
                 show screen blkfade
                 with Dissolve(1)
                 hide screen genie
