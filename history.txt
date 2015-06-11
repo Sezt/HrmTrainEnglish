@@ -1,68 +1,85 @@
 ﻿1.4
-* New: Added a part of the storyline with a new character (a half dozen events of different duration, a new character, chibis)
-* New: Gifts, chat with a new character.
-* New: the Music for a new character.
-* New: a New item in  Dahrs Magazine
-* New: Changed the display of statistics (statistics can be displayed several characters)
-* Fix: Removed not used music, pictures (archive volume decreased by approx. 10%)
+* New: Добавлена часть сюжетной ветки с новым персонажем (полтора десятка ивентов разной продолжительности, новый персонаж, чибики)
+* New: Подарки, чат с новым персонажем.
+* New: Музыкальные темы для нового персонажа.
+* New: Новый предмет в приблудах Дахра
+* New: Изменено отображение статистики (может отображаться статистика нескольких персонажей)
+* Fix: Убраны не используемые музыкальные композиции, картинки (объем архива игры уменьшился на ок. 10%)
+* Fix: Обширная корректура текста (ивенты с Гермионой)
+
+1.3.1
+* New: Добавлен ивент, анонсирующий нового персонажа
+* New: Усовершенствована работа с отображением персонажа, уменьшение количества миганий при перерисовке
+* New: После окончания диалога со Снейпом, последний уходит сам (не нужно дополнительно нажимать кнопку)
+* Fix: Критическая ошибка при дарении лубриканта
+* Fix: Критическая ошибка на финальном ивенте при получении Гермионой короны
+* Fix: Критическая ошибка при попытке загрузить предметы из предыдущей игры
+* Fix: Ошибка в арте. На волосах Гермионы артефакт в виде обруча 
+* Fix: "Золото" заменено на "галеоны"
+* Fix: Голова Снейпа не исчезала в конце диалога после ночи джинна с учебниками
+* Fix: При дарении юбки Гермионе количество юбок у джина не уменьшалось 
+
 1.3
-* New: Added new events at high levels of depravity in several private services (events on the 4th star) 
-* New: Added quest learning Genie
-* New: Rewritten module working with displaying characters
-* New: Written module working with objects and collections of objects
-* New: Developed a mechanism for the purchase of items: up to 3 items at a time, quick delivery
-* New: Number of sacred scrolls increased to 45
-* New: When reading books reduced CLICKS(Fuck you cookieclicker)
-* New: Added button "Continue reading"
-* New: Introduced a new book that improve reading skills
-* New: Dashboard indicators introduced depravity and mood Hermione
-* New: <enu cheats added a new item "Hermione's not mad at you" (approx. most console cheats, described for older versions stopped working)
-* Fix: Corrected a software mechanism of counting the number of starts event
-* Fix: Updated the mechanism of counting stars
-* Fix: Found and fixed two dozen different kinds of bugs, some inherited from old English version
-* Add:Some bags.kek
+* New: Добавлены новые ивенты на высоких уровнях развращенности в нескольких приватных услугах (ивенты на 4-ю звездочку) 
+* New: Добавлен большой квест обучения джинна
+* New: Переписан модуль, работающий с отображением персонажей
+* New: Написан модуль, работающий с предметами и коллекциями предметов
+* New: Развит механизм покупки предметов: до 3-х предметов за один раз, функция быстрой доставки
+* New: Количество священных свитков увеличено до 45-ти
+* New: При чтении книг уменьшено прокликивание 
+* New: Добавлена кнопка "Продолжить чтение"
+* New: Введена новая книга, повышающая навык скорочтения
+* New: В информационную панель введены индикаторы развращенности и настроения Гермионы
+* New: В меню читов добавлен новый пункт "Гермиона не злится на вас" (прим. большинство консольных читов, описанных для старых версий перестали работать)
+* Fix: Откорректирован программный механизм подсчета количества запусков ивента
+* Fix: Обновлен механизм подсчета звездочек
+* Fix: Найдено и поправлено десятка два багов разного рода, некоторые достались в наследство еще от старой английской версии
 
-1.2.2 d
-* New: Ability to jump from the beginning of the game immediately on the 5th day (the morning after the duel)
-* New: Added code that allows you to do without modifying the core RenPy (in the previous version of two core file has been modified)
-* Fix: crash when some levels of depravity: by putting on a skirt, receiving training log and. etc.
-* Fix: a Message about reading the books at the end of the event, "Show them to me" 
-* Fix: Gift anal tube for low depravity improved attitude
-* Fix: it was Impossible to remove clothing (for example, short skirt)
-* Fix: Hermione double-escaped (stage care played twice), if you select "No sexism" 
-* Fix: the Gift of lubricate caused an invalid file name 
-* Fix: the Message "you already have this BOOK" when I try to buy a skirt/stockings
-* Fix: For "Touch me" was given double points
-* Fix: In some cases, the event report Hermione was not marked as completed and then repeated every day
-* New: Add new bugs.KEK
 
-1.2.2 c
-* Fixed bug of previous versions - if you remain in the moment have already read one Chapter of the book and you can read additional bonus, when you read this save will fail in the number of read heads.
-* Fixed bug: fire on the Snape scene Striptease
-* The merger of different versions; there is one place was lost condition of occurrence of the 3rd ending. Restored.
-* Significantly edited the text of the book, "My dear Waifu"
-* Numerous minor edits on the text: the book, the message in the mail, labels in the store, items, chatter, events, finals, titles...
-* Made access to Cheatham menu: add gold, add glasses, turbo mode
-* Added a link to the passage from the menu
-* Added version history 
+1.2.2d
+* New: Возможность перепрыгивания с начала игры сразу на 5-й день (утро после дуэли)
+* New: Добавлен программный код, позволяющий обходиться без модификации ядра RenPy (в предыдущей версии два файла ядра были модифицированы)
+* Fix: Вылет программы при некоторых уровнях развращенности: при одевании юбки, получении обучающего журнала и.т.п.
+* Fix: Сообщение о чтении книг в конце ивента "Покажи мне их"  
+* Fix: Подарок анальной пробки при малой развращенности улучшал отношение
+* Fix: Невозможно было снять одежду (например, короткую юбку)
+* Fix: Гермиона дважды уходила (сцена ухода проигрывается дважды), если выбрать "Нет сексизму"  
+* Fix: Подарок лубриката вызвал ошибку - неверное имя файла  
+* Fix: Cообщение "у вас уже есть эта КНИГА" при попытке повторно купить юбку/чулки
+* Fix: За услугу "Потрогай меня" давалось удвоенное количество очков
+* Fix: В некоторых случаях событие отчета Гермионы не помечалось, как завершенное и затем повторялось каждый день
+
+
+1.2.2с
+* Исправлен баг предыдущих версий - если сохраниться в момент когда уже прочел одну главу книги и можно бонусом прочесть дополнительную, при чтении этого сейва произойдет сбой в количестве прочитанных глав.
+* Исправлен баг: огонь на Снейпе в сцене стриптиза
+* В результате слияния версий разных разарботчиков одном месте было потеряно условие наступления 3-й концовки. Восстановлено.
+* Существенно отредактирован текст книги "Моя дорогая Вайфу"
+* Многочисленные мелкие правки по тексту: книги, сообщения в почте, надписи в магазине, предметы, болтовня, ивенты, финал, титры...
+* Сделан доступ к читам из меню: добавить золото, добавить очки, турбо-режим
+* Добавлена ссылка на прохождение из меню
+* Добавлена история версий 
 
 1.2.2
-* Fixed a few bugs (the loss due to errors in the variable name, the fire on Hermione, etc)
-* Completely rewritten the code for the book. From store preblud before reading. Added message "This book is too difficult for you" when you try to read a book on the training of skills, if the previous level is not trenirovok. Before stupidly didn't read that was confusing. 
-* The code for clear sequence of events (from the beginning now before the last event)
-* Edited the texts of the books (except Waifu)
-* Edited text events (fixed typos, googletranslate)
-* Edited text of a talk with Hermione and Snape (fixed typos, googletranslate)
+* Починено несколько багов (вываливание из-за ошибки в названии переменной, огонь на Гермионе и пр.)
+* Полностью переписан код, отвечающий за книги. От магазина приблуд до прочтения. Добавлено сообщение "Эта книга слишком сложна для вас" при попытке читать книгу по тренировке навыков, если предыдущий уровень не оттренирован. Раньше тупо не читалось, что сбивало с толку. 
+* В коде прописан четкий порядок следования ивентов (от начала теперь уже до последнего ивента)
+* Отредактированы тексты книг (кроме Вайфу)
+* Отредактирован текст ивентов (исправлены опечатки, гуглтранслейт)
+* Отредактирован текст болтовни с Гермионой и Снейпом (исправлены опечатки, гуглтранслейт)
 
 1.2.1
-* Fixed error when trying to view the arts upon completion of the game
-* The code calling the events partially converted (use classes instead of a large number of check boxes)
+* Исправлен баг - ошибка при попытке просмотра артов по завершению игры
+* Код вызывающий ивенты частично переделан (используются классы вместо большого количества флажков)
 
 1.2
-* Graphics made through classes
-* Added 3rd ending
+* Графика сделана через классы
+* Добавлена 3-я концовка
 
 1.1
-* Added event training
-* Added the ability to jump duel
-* Added tooltip for a Dahr's voucher
+* Добавлен ивент обучения
+* Добавлена возможность перепрыгнуть дуэль
+* Добавлена подсказка на получение ваучера Дахра
+
+1.0.1
+* Перевод на русский
