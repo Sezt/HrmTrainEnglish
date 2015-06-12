@@ -1,40 +1,40 @@
 ﻿1.4
-* New: Добавлена часть сюжетной ветки с новым персонажем (полтора десятка ивентов разной продолжительности, новый персонаж, чибики)
-* New: Подарки, чат с новым персонажем.
-* New: Музыкальные темы для нового персонажа.
-* New: Новый предмет в приблудах Дахра
-* New: Изменено отображение статистики (может отображаться статистика нескольких персонажей)
-* Fix: Убраны не используемые музыкальные композиции, картинки (объем архива игры уменьшился на ок. 10%)
-* Fix: Обширная корректура текста (ивенты с Гермионой)
+* New: Added first parts of the new character storyline (a half dozen events of different lenghts, new character chibi).
+* New: Gifts and chats with the new character.
+* New: Musical theme for the new character.
+* New: New entry in Dahr prelude.
+* New: New Hermione 4 star event
+* New: Changed statistics (Statistics can be displayed for several characters).
+* Fix: Removed unused music tracks and pictures (Game size decreased by approx. 10%).
+* Fix: Extensive proofreading and translation corrections (Hermione events).
 
 1.3.1
-* New: Добавлен ивент, анонсирующий нового персонажа
-* New: Усовершенствована работа с отображением персонажа, уменьшение количества миганий при перерисовке
-* New: После окончания диалога со Снейпом, последний уходит сам (не нужно дополнительно нажимать кнопку)
-* Fix: Критическая ошибка при дарении лубриканта
-* Fix: Критическая ошибка на финальном ивенте при получении Гермионой короны
-* Fix: Критическая ошибка при попытке загрузить предметы из предыдущей игры
-* Fix: Ошибка в арте. На волосах Гермионы артефакт в виде обруча 
-* Fix: "Золото" заменено на "галеоны"
-* Fix: Голова Снейпа не исчезала в конце диалога после ночи джинна с учебниками
-* Fix: При дарении юбки Гермионе количество юбок у джина не уменьшалось 
+* New: Added event announcing a new character.
+* New: Improved display of characters, reducing the number of flashes.
+* New: After dialogue with Snape completes he leaves on his own (no input needed)
+* Fix: A critical error when donating lubricant.
+* Fix: A critical error during the final event when preparing to crown Hermione.
+* Fix: Fatal error when trying to download items from the previous versions of the game.
+* Fix: An art error. Hermione's hair hoop artifact.
+* Fix: "Gold" is replaced by "Galleon".
+* Fix: Snape's head not disappearing at the end a night of gin and textbooks.
+* Fix: Donating the skirt to Hermione not working as intended. 
 
 1.3
-* New: Добавлены новые ивенты на высоких уровнях развращенности в нескольких приватных услугах (ивенты на 4-ю звездочку) 
-* New: Добавлен большой квест обучения джинна
-* New: Переписан модуль, работающий с отображением персонажей
-* New: Написан модуль, работающий с предметами и коллекциями предметов
-* New: Развит механизм покупки предметов: до 3-х предметов за один раз, функция быстрой доставки
-* New: Количество священных свитков увеличено до 45-ти
-* New: При чтении книг уменьшено прокликивание 
-* New: Добавлена кнопка "Продолжить чтение"
-* New: Введена новая книга, повышающая навык скорочтения
-* New: В информационную панель введены индикаторы развращенности и настроения Гермионы
-* New: В меню читов добавлен новый пункт "Гермиона не злится на вас" (прим. большинство консольных читов, описанных для старых версий перестали работать)
-* Fix: Откорректирован программный механизм подсчета количества запусков ивента
-* Fix: Обновлен механизм подсчета звездочек
-* Fix: Найдено и поправлено десятка два багов разного рода, некоторые достались в наследство еще от старой английской версии
-
+* New: Added new game events at high levels of corruption for some private services (4 star events). 
+* New: Added a large Genie training quest.
+* New: Rewrite character display module.
+* New: Rewrite object and object collection module.
+* New: Added a mechanism for the purchase of up to 3 items at a time with a quick delivery option.
+* New: Number of sacred scrolls has been increased to 45.
+* New: Reduced time spent reading books. 
+* New: Added a button "Continue reading".
+* New: A new book, which increases the speed reading skill.
+* New: Added UI indicators for Hermione's corruption and mood.
+* New: The cheats menu added a new item, "She is no longer mad at you".
+* Fix: Corrected event start count mechanism.
+* Fix: Updated star count mechanism.
+* Fix: Found and corrected a couple of dozen different bugs, some inherited from the old English version.
 
 1.2.2d
 * New: Возможность перепрыгивания с начала игры сразу на 5-й день (утро после дуэли)
