@@ -239,7 +239,7 @@ label reading_book_xx:
 label chap_finished_xx:
     if event.Name=="book_05":
         $event.IncValue("status", 1)  #+=1
-        $renpy.say("Глава [event._status]", 
+        $renpy.say("Chapter [event._status]", 
         [
          "Galadriel - a gentle and gracious elven princess is introduced into the story.",
          "Galadriel's father - King Methis and his childhood friend Mofothelis are introduced into the story.",
@@ -267,7 +267,7 @@ label chap_finished_xx:
 
     if event.Name=="book_05_b":
         $event.IncValue("status", 1)  #+=1
-        $renpy.say("Глава [event._status]",
+        $renpy.say("Chapter [event._status]",
         [   
          "Galadriel has been pregnant for several months now. To the princess' own surprise her popularity grows seemingly in direct correlation to the size of her belly.",
          "Although Galadriel maintains the appearance of an obedient whore, in truth she contemplates her escape from the brothel",
@@ -295,7 +295,7 @@ label chap_finished_xx:
 
     if event.Name=="book_06":
         $event.IncValue("status", 1)  #+=1
-        $renpy.say("Глава [event._status]", 
+        $renpy.say("Chapter [event._status]", 
         [
         "A family of noble northmen is introduced into the story.",
         "The royal family and the king are introduced into the story.",

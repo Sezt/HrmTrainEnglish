@@ -385,7 +385,7 @@ label date_with_snape_08:
     m "But won't a reform like that attract unnecessary attention towards us?"
     $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
-    sna "Да. Ты как обычно прав."
+    sna "Oh."
     sna "Yes. You are right of course."
     sna "I am getting greedy..."
     $ s_sprite = "03_hp/10_snape_main/snape_28.png"                                         # SNAPE

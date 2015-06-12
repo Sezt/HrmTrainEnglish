@@ -97,7 +97,7 @@ label new_request_04:
                 her_head_main "Professor, you're hurting them..."
                 m "Be quiet girl..."
                 $her_head_state = 12
-                her_head_main "Ау.............."
+                her_head_main "Hey.............."
                 ">You squeeze her ample tits with all your strength."
                 $her_head_state = 10
                 her_head_main "Ah! It hurts!"

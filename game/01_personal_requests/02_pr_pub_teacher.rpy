@@ -334,8 +334,8 @@ label new_request_02_c_complete:  ### FLIRTING WITH TEACHERS COMPLETE ###
                                     show screen blktone8
                                     with d5
                                     $her_head_state = 12
-                                    her_head_main "Вот...."
-                                    m "Хм..."
+                                    her_head_main "Here...."
+                                    m "Hm..."
                                     hide screen blktone8 
                                     with d5
                                     $herView.data().saveState()

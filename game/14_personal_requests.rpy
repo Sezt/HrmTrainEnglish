@@ -1055,7 +1055,7 @@ label new_request_28: #LV.7 (Whoring = 18 - 20)
         her "Oh..."
         "Hermione reluctantly agrees"
     elif request_28_points == 1: #Two stars.
-        her "Если так нужно..."
+        her "If you must..."
         "Hermione agrees."
     elif request_28_points == 2: #Three stars.
         her "of course, professor."

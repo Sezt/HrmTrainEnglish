@@ -468,7 +468,7 @@ label new_request_12: #LV.4 (Whoring = 9 - 11)
             elif hermi.whoring >= 15: # LEVEL 06 and higher # <=================================================================================== THIRD EVENT. 
                 $herView.hideQQ()
                 $herView.showQ( "182.png", pos )
-                her "Ах!!!"
+                her "Ah!!!"
                 $herView.hideQQ()
                 $herView.showQ( "185.png", pos )
                 her "Sir, why did you do that?"
