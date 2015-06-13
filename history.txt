@@ -37,49 +37,49 @@
 * Fix: Found and corrected a couple of dozen different bugs, some inherited from the old English version.
 
 1.2.2d
-* New: Возможность перепрыгивания с начала игры сразу на 5-й день (утро после дуэли)
-* New: Добавлен программный код, позволяющий обходиться без модификации ядра RenPy (в предыдущей версии два файла ядра были модифицированы)
-* Fix: Вылет программы при некоторых уровнях развращенности: при одевании юбки, получении обучающего журнала и.т.п.
-* Fix: Сообщение о чтении книг в конце ивента "Покажи мне их"  
-* Fix: Подарок анальной пробки при малой развращенности улучшал отношение
-* Fix: Невозможно было снять одежду (например, короткую юбку)
-* Fix: Гермиона дважды уходила (сцена ухода проигрывается дважды), если выбрать "Нет сексизму"  
-* Fix: Подарок лубриката вызвал ошибку - неверное имя файла  
-* Fix: Cообщение "у вас уже есть эта КНИГА" при попытке повторно купить юбку/чулки
-* Fix: За услугу "Потрогай меня" давалось удвоенное количество очков
-* Fix: В некоторых случаях событие отчета Гермионы не помечалось, как завершенное и затем повторялось каждый день
-
+* New: Ability to jump from the start of the game to the 5th day (Morning after the duel).
+* New: Added code that eliminates the need for modification of the RenPy kernel (Previous versions had a modified kernel).
+* Fix: Corrected some levels of depravity: receiving training tips when equiping skirt.
+* Fix: Report on reading books at the end of Event "Show them to me"  
+* Fix: Gift anal plug with a small depravity to improve relations
+* Fix: It was impossible to take off her clothes (for example, the short skirt)
+* Fix: Hermione leaving scene is played twice, if you select "No sex"  
+* Fix: Lubricant gift caused the error - wrong filename  
+* Fix: Message "you already have this book," when you try to buy the skirt / stockings
+* Fix: For the service "Touch me", doubled the amount of points needed.
+* Fix: In some cases, Hermione's event report not marked as completed and then repeated every day
 
 1.2.2с
-* Исправлен баг предыдущих версий - если сохраниться в момент когда уже прочел одну главу книги и можно бонусом прочесть дополнительную, при чтении этого сейва произойдет сбой в количестве прочитанных глав.
-* Исправлен баг: огонь на Снейпе в сцене стриптиза
-* В результате слияния версий разных разарботчиков одном месте было потеряно условие наступления 3-й концовки. Восстановлено.
-* Существенно отредактирован текст книги "Моя дорогая Вайфу"
-* Многочисленные мелкие правки по тексту: книги, сообщения в почте, надписи в магазине, предметы, болтовня, ивенты, финал, титры...
-* Сделан доступ к читам из меню: добавить золото, добавить очки, турбо-режим
-* Добавлена ссылка на прохождение из меню
-* Добавлена история версий 
+* Fix: Previous version bugs - If you read a bonus chapter in a book it fails to save the number of read chapters.
+* Fix: Fireplace floated ontop of Snape at the striptease scene.
+* Fix: As a result of the merger of the different versions, one precondition for the third ending was missing.
+* Significantly edited the text of the book "My dear waifu".
+* Numerous minor changes in text: books, mail messages, in-store text, objects, chats, events, finale, credits ...
+* Added access to the cheats menu: add gold, add points, turbo mode
+* Added a link to the walkthrough from the menu
+* Added version history 
 
 1.2.2
-* Починено несколько багов (вываливание из-за ошибки в названии переменной, огонь на Гермионе и пр.)
-* Полностью переписан код, отвечающий за книги. От магазина приблуд до прочтения. Добавлено сообщение "Эта книга слишком сложна для вас" при попытке читать книгу по тренировке навыков, если предыдущий уровень не оттренирован. Раньше тупо не читалось, что сбивало с толку. 
-* В коде прописан четкий порядок следования ивентов (от начала теперь уже до последнего ивента)
-* Отредактированы тексты книг (кроме Вайфу)
-* Отредактирован текст ивентов (исправлены опечатки, гуглтранслейт)
-* Отредактирован текст болтовни с Гермионой и Снейпом (исправлены опечатки, гуглтранслейт)
+* Fix:A few bugs (Error in the title variable, fire ontop of characters and so on).
+* Completely rewritten book code. Everyting from the store to reading. 
+* Added a message "This book is too difficult for you", when you try to read a book above your training level.
+* Corrected code for clear Ranking events (From the beginning to the last event)
+* Edited book texts (except Waifu)
+* Edited the event texts (corrected typos, google translate)
+* Edited the talk events with Hermione and Snape (corrected typos, google translate)
 
 1.2.1
-* Исправлен баг - ошибка при попытке просмотра артов по завершению игры
-* Код вызывающий ивенты частично переделан (используются классы вместо большого количества флажков)
+* Fix: An error when trying to view artifacts to complete the game
+* Event game code partially converted (Use classes instead of a large number of flags)
 
 1.2
-* Графика сделана через классы
-* Добавлена 3-я концовка
+* Graphics code converted to classes
+* Added third ending
 
 1.1
-* Добавлен ивент обучения
-* Добавлена возможность перепрыгнуть дуэль
-* Добавлена подсказка на получение ваучера Дахра
+* Added Training Event
+* Added ability to skip duel
+* Added a hint to get the Dahr voucher
 
 1.0.1
-* Перевод на русский
+* Translated into Russian
