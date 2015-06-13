@@ -84,6 +84,29 @@ label desk:
             $ desk_examined = True
             m "Seems like an ordinary enough desk..."
             m "Somewhat cluttered."
+
+#===TG MODS START===
+
+            m "Hm............ There's a calendar?"
+            $ renpy.say(m, "And if I'm reading it right.....\n\nIt's........... \"%s %d, %s\"?" % (month_info[cal_month][5], cal_day, week_info[day_of_date((cal_month, cal_day))][1]))
+            m "Whatever that means......"
+            m "But, by the looks of it someone's been doodling notes on it."
+            m "Could be worth studying it a little...."
+
+            # Let's say Dumblegenie learns of the Hogsmeade dates from Dumbledore previously marking them down on the
+            # in the calendar.
+            $ known_dates['hogsmeade_weekends'] = True
+
+            # Further, let's then allow those dates to show up by adding them to the places they need to go.
+            $ dates_list = important_dates['hogsmeade_weekends']
+            $ add_cal_notes(dates_list, 'hogsmeade_weekends')
+
+            show screen cal_button_flash
+            pause(1.5)
+            hide screen cal_button_flash
+
+#===TG MODS STOP===
+
             jump day_main_menu
         "-Do paperwork-" if finished_report < 6 and not got_paycheck and not day == 1 and work_unlock2:
             jump paperwork
