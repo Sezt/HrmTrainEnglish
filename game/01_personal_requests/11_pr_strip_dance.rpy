@@ -77,7 +77,7 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
         #$ hermione_chibi_ypos = 240 #Default: 250
         show screen clothed_dance #Hermione stands still.
         with fade
-        m "Хм..."
+        m "Hm..."
         $her_head_state = 12
         her_head_main "{size=-5}(...........................................){/size}"
         $her_head_state = 4

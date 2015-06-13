@@ -894,7 +894,7 @@ label new_request_25: #LV.7 (Whoring = 18 - 20)
                 menu:
                     "- Give extra points -":
                         m "ok..."
-                        her "Тогда ладно..."
+                        her "okay then..."
                         ">Hermione does not touch your face."
                         $ gryffindor +=30
                         "Gryffindor gets 30 points."
@@ -1030,7 +1030,7 @@ label new_request_27_complete:
     "Hermione returns to training."
     m "How was your day, Miss Granger?"
     if request_27_points == 0: #One star.
-        her "Эм... Lvl.1."
+        her "Em... Lvl.1."
     elif request_27_points == 1: #Two stars.
         her "Something else about LVL 2"
     elif request_27_points == 2: #Three stars.

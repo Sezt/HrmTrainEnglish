@@ -214,6 +214,6 @@ init -999 python:
             if (__entry.GetValue("members")!=None):
                 if ("daphne" in __entry.GetValue("members")) and (subkey=="finishCount") and (newvalue>(0 if oldvalue==None else oldvalue)):
                     if hermi._pointsPerDaphneVisit>0:
-                        Say("По вашему соглашению с Гермионой Гриффиндор получает 10 очков")
+                        Say("In your agreement with Hermione Gryffindor gets 10 points")
                         renpy.store.gryffindor+=10
 

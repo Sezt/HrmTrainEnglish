@@ -259,9 +259,9 @@ label new_request_05:
                     m "Hm..."
                     "\"I have my reasons...\"":
                         $her_head_state = 12
-                        her_head_main "Oх..."
+                        her_head_main "Oh..."
                         $her_head_state = 25
-                        her_head_main "Хм..."
+                        her_head_main "Hm..."
                     "\"In the name of science of course!\"":
                         $her_head_state = 3
                         her_head_main "really?!"

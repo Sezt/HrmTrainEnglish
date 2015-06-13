@@ -1077,7 +1077,7 @@ label new_request_22: #LV.6 (Whoring = 15 - 17)
                 her "I think so..."
                 her "You always cum so much, sir..."
                 $herViewHead.hideQ()
-                m "Heh... And who's fault is tat??"
+                m "Heh... And who's fault is that??"
                 $herViewHead.showQ( "body_123.png", posHead )
                 her "............." #Smile.
                 her "Can I get paid now?"

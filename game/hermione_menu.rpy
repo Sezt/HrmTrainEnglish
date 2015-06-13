@@ -733,7 +733,7 @@ label chit_chat_hermione:
             $herView.hideshowQQ( "body_14.png", pos )
             her "It's been getting so cold lately..."
             $herView.hideshowQQ( "body_06.png", pos )
-            her "Я надеюсь, что скоро выпадет снег..."
+            her "I hope that soon the snow falls..."
         
         elif one_of_ten == 4:
             $herView.hideshowQQ( "body_127.png", pos )
