@@ -12,7 +12,7 @@ label new_request_03: #(Whoring = 3 - 5)
         "\"(Yes, let's do it!)\"":
             pass
         "\"(Not right now.)\"":
-            $event.NotFinished()
+            $wtevent.NotFinished()
             jump new_personal_request
     $herView.showQQ( None, pos )
     #show screen hermione_main
@@ -169,7 +169,7 @@ label new_request_03: #(Whoring = 3 - 5)
     else:
         play music "music/Music for Manatees.mp3" fadein 1 fadeout 1 # NIGHT MUSIC
     ### END OF BLOCK ###
-    $event.Finalize()
+    $wtevent.Finalize()
     jump day_main_menu
     
     
@@ -346,7 +346,7 @@ label new_request_03_complete: # WHORING LEVEL 02 <=================
     else:
         $SetHearts(4, this.new_request_03)
 
-    $event.Finalize()    
+    $wtevent.Finalize()    
     return 
     
     

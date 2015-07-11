@@ -1,4 +1,16 @@
-﻿1.4
+﻿1.5
+* New: Added a block of events the editorial office of the newspaper, enabling you to earn galleani new way and to give Hermione some new instructions.
+* New: New event Daphne and expansion of old ones.
+* New: New options in the main menu : Forum & Extra->From developers.
+* New: New system wardrobe Hermione, different clothes.
+* New: the Development of earning money with the help of reports - blending in the new regime.
+* New: add a calendar system.
+* New: New scrolls in the game (46-68). Comments on new and old scrolls.
+* New: In the list of developers now appears the girl, her image can be seen in the item Extras->From developers. ;-)
+* New: In connection with the protest of Hermione and her women's associations have been deleted all events from Zhou Chang.
+* Fix: Various small do not join.
+
+1.4
 * New: Added first parts of the new character storyline (a half dozen events of different lenghts, new character chibi).
 * New: Gifts and chats with the new character.
 * New: Musical theme for the new character.

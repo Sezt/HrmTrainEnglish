@@ -16,7 +16,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             with d3
             pass
         "\"(Not now.)\"":
-            $event.NotFinished()
+            $wtevent.NotFinished()
             jump new_personal_request
     
     if hermi.whoring <=5:
@@ -154,6 +154,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
         #$ only_upper = True #No lower body displayed. 
         
         # add tits pose!
+        call wrd_dress_undress_shirts
+        $ herView.data().addItem( 'item_tits' )
         call addTitsPose
     
         $herView.showQQ( "body_81.png", pos )
@@ -209,6 +211,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             $herView.hideQQ()
             
             # add tits pose!
+            call wrd_dress_undress_shirts
+            $ herView.data().addItem( 'item_tits' )
             call addTitsPose
 
             $herView.showQQ( "body_81.png", pos )
@@ -367,6 +371,8 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
             
 
             # add tits pose!
+            call wrd_dress_undress_shirts
+            $ herView.data().addItem( 'item_tits' )
             call addTitsPose
             
             $herView.showQQ( "body_84.png", pos )
@@ -1090,6 +1096,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
     
     # remove pose here, because sometimes we need to keep added items even here ( like sperm )
     $herView.data().delPose()
+    $herView.data().loadState()
 
     $ pos = POS_370
     $herView.showQQ( "body_29.png", pos )
@@ -1164,7 +1171,7 @@ label new_request_08: #LV.3 (Whoring = 6 - 8)
     # load from pose with tits and that sperm!
     $herView.data().loadState()
     
-    $event.Finalize()    
+    $wtevent.Finalize()    
     jump finish_daytime_event
 
 
@@ -1190,7 +1197,21 @@ label addAfterSperm:
     # del pose and add aftersperm
     $herView.data().delPose()
     #$herView.data().addItemKey( 'sperm_after', CharacterExItem( herView.mMiscFolder, 'sperm_00_after.png', G_Z_FACE + 1 ) )
-    $herView.data().addItem( 'item_sperm_dried' )
+    call wrd_dress_change_silent
+    if wrd_skimpyshirt == 1 :
+        $herView.data().addItem( 'item_sperm_dried_up_mini' )
+    elif wrd_shirt_cheerleader == 1 :
+        pass
+    else :
+        $herView.data().addItem( 'item_sperm_dried_up' )
+        
+    if wrd_xxsmallskirt == 1 :
+        $herView.data().addItem( 'item_sperm_dried_down_mini' )
+    elif wrd_xxxsmallskirt == 1 or wrd_skirt_cheerleader == 1:
+        pass
+    else :
+        $herView.data().addItem( 'item_sperm_dried_down' )
+
     return
     
 label loadState_and_could_not_flirt:

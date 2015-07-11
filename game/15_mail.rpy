@@ -1,8 +1,7 @@
 label mail:
 
     $ this.RunStep("MAIL")    
-
-    if finished_report >= 1:
+    if got_paycheck == True and finished_report >= 1 and letter_from_ficbook_fun == False:
         $ letters -= 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
         $ got_paycheck = False #When TRUE the paycheck is in the mail. Can't do paper work.
         hide screen owl
@@ -29,7 +28,127 @@ label mail:
         if (hermi._incomePercent>0):
             $dgold=dgold*hermi._incomePercent//100
             $gold-=dgold
-            "> According to your agreement with Hermione[dgold] galleons ([hermi._incomePercent]%%) transferred to her account"
+            "> Согласно вашему соглашению с Гермионой [dgold] галеонов ([hermi._incomePercent]%%) перечисляются на ее счет"
+        call screen main_menu_01
+        
+    ###"УЛУЧШЕННЫЕ" ОТЧЕТЫ###
+    if got_paycheck == True and finished_report >= 1 and letter_from_ficbook_fun == True:
+        $ one_of_ten = renpy.random.randint(1, 6)
+        $ letters -= 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
+        $ got_paycheck = False #When TRUE the paycheck is in the mail. Can't do paper work.
+        hide screen owl
+        show screen owl_02
+        ">Вы читаете свои сообщения."
+        
+        
+        
+        $dgold=([80, 140, 180, 220, 300, 400][finished_report-1])*turbo
+        
+        if one_of_ten == 1:
+            play sound "sounds/money.mp3"  #Quiet...
+            $ letter_text = "{size=-7}ОТ:Министерства Магии\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-2}Благодарим Вас за отчеты, присланные на этой неделе.\n Ваша оплата:{/size} \n{size=+4}[dgold] галеонов.{/size}\n\n\n{size=-3}-С уважением-{/size}"
+            show screen bld1
+            show screen letter
+            show screen ctc
+            pause
+            hide screen letter
+            hide screen bld1
+            hide screen ctc
+        
+        if one_of_ten == 2:
+            play sound "sounds/money.mp3"  #Quiet...
+            $ letter_text = "{size=-7}ОТ:Джоданны Кроулинг\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-4}Дорогой Альбус,\nмы всем офисом благодарим Вас за новую главу! Позвольте передать вам {size=-2}[dgold] галеонов.{/size} и наше искреннее восхищение.{/size}\n\n\n{size=-6}-С уважением-{/size}"
+            show screen bld1
+            show screen letter
+            show screen ctc
+            pause
+            hide screen letter
+            hide screen bld1
+            hide screen ctc
+            
+        if one_of_ten == 3:
+            play sound "sounds/money.mp3"  #Quiet...
+            $ letter_text = "{size=-7}ОТ:Джоданны Кроулинг\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-4}Дорогой Альбус,\nна правах человека, ведущего связь с Вами, могу ли я узнать, будут ли Педреро и Хуанито вместе? Отправляю вам {size=-2}[dgold]галеонов{/size} и скромную надежду на ответ.{/size}\n\n\n{size=-6}-С уважением-{/size}"
+            show screen bld1
+            show screen letter
+            show screen ctc
+            g9 "Хороший писатель никогда не раскрывает сюжетных поворотов!"
+            m "..."
+            m "Я и вправду сказал это?"
+            hide screen letter
+            hide screen bld1
+            hide screen ctc
+            
+        if one_of_ten == 4:
+            $ letter_text = "{size=-7}ОТ:Джоданны Кроулинг\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-3}Дорогой Альбус,\nновые главы вышли великолепными, особенно когда...{/size}"
+            show screen bld1
+            show screen letter
+            show screen ctc
+            pause
+            hide screen letter
+            hide screen bld1
+            hide screen ctc
+            g1 "..."
+            g1 "..."
+            g1 "Fuck, no."
+            m "Я ничего не хочу об этом знать."
+            play sound "sounds/money.mp3"  #Quiet...
+            g9 "Ну, по крайней мере, в конверте лежали мои [dgold]галеонов."
+            
+        if one_of_ten == 5:
+            $ letter_text = "{size=-7}ОТ:Джоданны Кроулинг\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-4}Дорогой Альбус,\nна правах главы Вашего фан-клуба, позвольте пригласить Вас на пенную вечеренку, адрес и время написаны на приглашении. Мы ждем вас с нетерпением!{/size}"
+            show screen bld1
+            show screen letter
+            show screen ctc
+            pause
+            hide screen letter
+            hide screen bld1
+            hide screen ctc
+            g9 "Вечеринка, полная фанаток-извращенок? Впишите меня!"
+            m "Ах, ну да... \"Будь хорошим джином, Джинни и сиди взаперти весь день, как осел.\""
+            m "Черт."
+            play sound "sounds/money.mp3"  #Quiet...
+            g4 "Зачем мне [dgold]галеонов, если я не могу их как следует потратить?!"
+            
+        if one_of_ten == 6:
+            $ letter_text = "{size=-7}ОТ:XXX\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-2}У МЕНЯ БРАТ УМЕР ИЗ-ЗА ТАКИХ ИСТОРИЙ, ГОРИ В АДУ, ГРЯЗНЫЙ ИЗВРАЩЕНЕЦ!!!{/size}"
+            show screen bld1
+            show screen letter
+            show screen ctc
+            pause
+            hide screen letter
+            hide screen bld1
+            hide screen ctc
+            m "..."
+            g9 "О, монетки!"
+            play sound "sounds/money.mp3"  #Quiet...
+            "> Получено [dgold] галеонов"
+            m "..."
+            m "Смертные."
+                
+    #Слишком большое письмо      
+    #   if one_of_ten == 7:
+    #       $ letter_text = "{size=-7}ОТ:Джоданны Кроулинг\nКому: Альбусу Дамблдору\n\n\n{/size}{size=-4}Дорогой Альбус,\nсегодня мне приснился странный сон. Я была обычным маглом, писателем. И писала истории о мальчике-котором-выжил. И когда издатель запретил мне убить Поттера в последнем бою, я проснулась в холодном поту. Странный сон, правда?{/size}"
+            
+    #    if one_of_ten == 8:
+    #        $ letter_text =
+            
+    #    if one_of_ten == 9:
+    #        $ letter_text =
+            
+    #    if one_of_ten == 10:
+    #        $ letter_text =
+            
+        
+        $ gold += dgold
+            
+
+        $ finished_report = 0
+
+        if (hermi._incomePercent>0):
+            $dgold=dgold*hermi._incomePercent//100
+            $gold-=dgold
+            "> Согласно вашему соглашению с Гермионой [dgold] галеонов ([hermi._incomePercent]%%) перечисляются на ее счет"
         call screen main_menu_01
     
     
@@ -120,16 +239,97 @@ if work_unlock: # Send a letter that will unlock an ability to write reports
     hide screen ctc
     hide screen bld1
     with Dissolve(.3)
-    m "Payments? Hm..."
+    m "Оплата? Хм..."
     show screen blktone8
     with d3
     $ renpy.play('sounds/win2.mp3')   #Not loud.
-    ">From now on you can do paperwork at your desk in order to earn additional gold..."
+    ">Теперь вы можете писать отчеты в Министерство магии, чтобы заработать золото..."
     hide screen blktone8
     with d3
     call screen main_menu_01
+    
+###Mail about improved "reports"###
+if total_report >= 10 and letter_from_ficbook_fun == False:
+    $ letters -= 1
+    $ letter_from_ficbook_fun = True
+    hide screen owl
+    show screen owl_02
+    $ letter_text = "{size=-7}От: Жодана Кроулинг\nКому: Профессору Альбусу Дамблдору\n\n{/size}{size=-4}Дорогой Альбус Дамблдор.\nВ связи с открывшимся в Вас новым даром, Комитет Образования решил удвоить финансирование вашей отчетности.\nЖдем от вас больше захватывающих отчетов, в особенности про потомственного волшебника Педреро.\n\n{size=-3}С уважением,\nваша преданная фанатка и секретарь Комитета Образования,\nЖодана Кроулинг.{/size}"
+    label letter_funletter:
+    show screen bld1
+    show screen letter
+    show screen ctc
+    with Dissolve(.3)
+    pause
+    menu:
+        "- Закончить чтение -":
+            pass    
+        "- Продолжить чтение -":
+            jump letter_work
+    hide screen letter
+    hide screen bld1
+    hide screen ctc
+    with Dissolve(.3)
+    m "..."
+    m "Это определенно самый странный мир из увиденных мною."
+    show screen blktone8
+    with d3
+    $ renpy.play('sounds/win2.mp3')   #Not loud.
+    ">Теперь вы получаете в два раза больше денег за... \nОтчеты."
+    ">Оно того стоит?"
+    m "Деньги не пахнут."
+    hide screen blktone8
+    with d3
+    call screen main_menu_01
+    
+### DR'S NEWSPAPER ooo ###
 
+if day > 20 and nsp_pre_jobs_max >= 4 and nsp_pre_letter == 1:
+    jump newsp_pre_letter
 
+if nsp_newspaper_published_mail == True:
+    jump newsp_letter
+    
+if nsp_letter_1 == 1:
+    jump nsp_text_letter_1
+    
+if nsp_letter_2 == 1:
+    jump nsp_text_letter_2
+    
+if nsp_letter_3 == 1:
+    jump nsp_text_letter_3
+    
+if nsp_letter_4 == 1:
+    jump nsp_text_letter_4
+    
+if nsp_letter_5 == 1:
+    jump nsp_text_letter_5
+    
+if nsp_letter_6 == 1:
+    jump nsp_text_letter_6
+    
+if nsp_letter_7 == 1:
+    jump nsp_text_letter_7
+    
+if nsp_letter_8 == 1:
+    jump nsp_text_letter_8
+   
+if nsp_letter_9 == 1:
+    jump nsp_text_letter_9
+    
+if nsp_letter_10 == 1:
+    jump nsp_text_letter_10
+    
+if nsp_letter_11 == 1:
+    jump nsp_text_letter_11
+    
+if nsp_letter_12 == 1:
+    jump nsp_text_letter_12
+    
+if nsp_letter_13 == 1:
+    jump nsp_text_letter_13
+
+###    
     
 label mail_02: #Packages only. <=====================================================================### PACKAGES ###=================================================== 
 
@@ -178,6 +378,7 @@ label mail_02: #Packages only. <================================================
         call screen main_menu_01
 
 
+$letters=0 # иначе если человек накопит кучу непрочитанных писем, то пападем по следующей метке с пустым параметром и будет критическая ошибка
 
 label bigletter(__pages): #Письмо родителей Дафны Дамблдору
     $screens.Hide("owl").Show("owl_02")
@@ -200,6 +401,25 @@ label bigletter(__pages): #Письмо родителей Дафны Дамбл
     $screens.Hide("letterbig", "ctc", d3, "bld1")
     return
 
+label bigtext(__pages): #То же, что и bigletter , но не вычетает единичку из писем
+    $screens.Hide("owl").Show("owl_02")
+
+    $__pageIndex=0
+    label letterbig_newpage:
+    $screens.Show("letterbig", par1=__pages[__pageIndex])
+    $screens.Show("ctc", d3, "bld1").Pause()
+
+    menu:
+        "<<< Вернуться " if __pageIndex>0:
+            $__pageIndex-=1                
+            jump letterbig_newpage
+        " Продолжить >>>" if __pageIndex<len(__pages)-1:
+            $__pageIndex+=1
+            jump letterbig_newpage
+        "- Завершить -":
+            pass    
+    $screens.Hide("letterbig", "ctc", d3, "bld1")
+    return
 
 
 
@@ -219,7 +439,7 @@ label daphne_pre_04: #Письмо родителей Дафны Дамблдо�
         "She had more then enough time to snitch to her parents and didn't do it...thats lucky at least//"
         "How am I going to teach her, if I don't have any school knowledge?! And most importantly: how do I keep her mouth shut?")
 
-    $event.Finalize()
+    $wtevent.Finalize()
 
     call screen main_menu_01
 
@@ -248,7 +468,7 @@ label daphne_pre_06: #Выписка из личного дела Дафны, п
         "No wonder he is tired all the time...// Hmm, how should I prepare for her arrival?")
 
     call music_block
-    $event.Finalize()
+    $wtevent.Finalize()
 
     call screen main_menu_01
 

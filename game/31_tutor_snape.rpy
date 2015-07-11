@@ -288,6 +288,7 @@ label snape_tutor_2:
     m "I'll try and work something out."
     "Quest updated: You need to get textbooks"
     sna "Well, good luck."
+    $screens.Hide("snape_main")
     $ teacher_jinn_quest = 3
     $ snape_busy = True
     hide screen snape_02 #Snape stands still.

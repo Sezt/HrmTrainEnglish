@@ -49,7 +49,7 @@ init python:
 
             if escLabel!=None:
                 if escText==None:
-                    escText="- Never mind -"
+                    escText="- Ничего -"
                 self.AddItem(escText, escLabel, "")
             renpy.call_screen(RunMenu.screen)
           

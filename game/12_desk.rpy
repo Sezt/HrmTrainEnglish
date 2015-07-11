@@ -10,23 +10,116 @@ label menu_reading_book:
     $ choose.Show("books_list")
 
     label menu_reading_book_2:
-        $ the_gift = event._img#"03_hp/18_store/08.png" # Copper book of spirit.
+        $ the_gift = wtevent._img#"03_hp/18_store/08.png" # Copper book of spirit.
         show screen gift
         with d3
 
-        "\"[event._caption]\"" "[event._description]"#" Вы хотите прочитать ее?"
+        "\"[wtevent._caption]\"" "[wtevent._description]"#" Вы хотите прочитать ее?"
         menu:
             "- Read book-":
 # Проверяем, что освоены предыдущие ступени навыка:
-                if event.GetValue("block")=="books_edu":
-                    if event.prevInList.GetValue("block")!=event.GetValue("block") or event.prevInList.IsDone():
+### DR'S NEWSPAPER ooo ###
+                if wtevent.GetValue("block")=="books_newsp":
+                    if wtevent.Name=="nsp_newsp_book_p02a" and nsp_genie_writer < 1:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p02b" and nsp_genie_writer < 2:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p03a" and nsp_genie_writer < 3:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p03b" and nsp_genie_writer < 4:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p04" and nsp_genie_writer < 5:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p05a" and nsp_genie_writer < 6:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p05b" and nsp_genie_writer < 7:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p06a" and nsp_genie_writer < 8:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    if wtevent.Name=="nsp_newsp_book_p06b" and nsp_genie_writer < 9:
+                        m "Эта книга пока слишком сложна для меня."
+                        hide screen gift
+                        jump books_list
+                    
+                if wtevent.GetValue("block")=="books_newsp2":
+                    if wtevent.Name == "nsp_newsp_book_typo1" and (nsp_genie_typographic < 0 or nsp_genie_typographic_exp < 2):
+                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_typo2" and (nsp_genie_typographic < 1 or nsp_genie_typographic_exp < 2):
+                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_typo3" and (nsp_genie_typographic < 2 or nsp_genie_typographic_exp < 2):
+                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_typo4" and (nsp_genie_typographic < 3 or nsp_genie_typographic_exp < 2):
+                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_typo5" and (nsp_genie_typographic < 4 or nsp_genie_typographic_exp < 2):
+                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_typo6" and (nsp_genie_typographic < 5 or nsp_genie_typographic_exp < 2):
+                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        hide screen gift
+                        jump books_list
+                        
+                if wtevent.GetValue("block")=="books_newsp2":
+                    if wtevent.Name == "nsp_newsp_book_photo2" and (nsp_genie_photocamera < 1 or nsp_genie_photocamera_exp < 3):
+                        m "Слишком мало опыта, нужно провести не менее трех фотосессий с фотоаппаратом предыдущего типа."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_photo3" and (nsp_genie_photocamera < 2 or nsp_genie_photocamera_exp < 3):
+                        m "Слишком мало опыта, нужно провести не менее трех фотосессий с фотоаппаратом предыдущего типа."
+                        hide screen gift
+                        jump books_list
+
+                    if wtevent.Name == "nsp_newsp_book_photo4" and (nsp_genie_photocamera < 3 or nsp_genie_photocamera_exp < 3):
+                        m "Слишком мало опыта, нужно провести не менее трех фотосессий с фотоаппаратом предыдущего типа."
+                        hide screen gift
+                        jump books_list
+                        
+                    if wtevent.Name == "nsp_newsp_book_video" and (nsp_genie_photocamera < 4 or nsp_genie_sphere_ruby_level_eff < 1 or nsp_genie_sphere_diamond_level_eff < 1 or nsp_genie_sphere_sapphire_level_eff < 3):
+                        m "Для освоения навыков из этой книги вам понадобится владение всеми видами фотоаппаратов, хрустальный шар, сапфир 3 уровня, рубин и алмаз."
+                        hide screen gift
+                        jump books_list
+                        
+############
+
+                if wtevent.GetValue("block")=="books_edu":
+                    if wtevent.prevInList.GetValue("block")!=wtevent.GetValue("block") or wtevent.prevInList.IsDone():
                         jump reading_book_xx
                     else:
                         m "This book is still too hard for me."
                         hide screen gift
                         jump books_list
                 else:
-                    if event.Name=="book_05_b" and not this.book_05.IsDone():
+                    if wtevent.Name=="book_05_b" and not this.book_05.IsDone():
                         m "There are strange people who begin the book with the second part. But I'm not one of those."
                         jump expression _label
                     else:
@@ -36,14 +129,14 @@ label menu_reading_book:
                 jump expression _label #books_on_improvement
 
     label reading_book_done:
-        $ the_gift = event._img#"03_hp/18_store/08.png" # Copper book of spirit.
+        $ the_gift = wtevent._img#"03_hp/18_store/08.png" # Copper book of spirit.
         show screen gift
         with d3
-        "\"[event._caption]\"" "[event._description]."
+        "\"[wtevent._caption]\"" "[wtevent._description]."
 
 
 # Отдельная обработка для Вайфу - ее нужно читать несколько раз                                
-        if event.Name=="book_07":
+        if wtevent.Name=="book_07":
             if waifu_book_completed:
                 m "I do not think re-reading this book will give me anything."
                 hide screen gift
@@ -65,12 +158,12 @@ label menu_reading_book:
                     jump reading_book_xx
         else:
             m "I've already finished it. "
-            if event._block=="books_edu" and event._conclusion!="":
-                m "It gave me a new skill: [event._conclusion]"
+            if wtevent._block=="books_edu" and wtevent._conclusion!="":
+                m "Она дала мне новый навык: [wtevent._conclusion]"
             else:
-                m "[event._conclusion]"
+                m "[wtevent._conclusion]"
 
-            if event.Name=="book_04":
+            if wtevent.Name=="book_04":
                 g4 "I have mastered the control over my spirit. Now I shall always complete an additional chapter when doing paperwork."
                 g9 "My spirit is my bitch"
 
@@ -79,8 +172,71 @@ label menu_reading_book:
 
 label desk:
     $ menu_x = 0.5 
+    $ nsp_genie_sphere_video_txt = ""
+
     menu:
-        "-Examine the desk-" if not desk_examined:
+### DR'S NEWSPAPER ooo ###
+
+        "- Искать приложение к каталогу -" if nsp_pre_snape == 5 and nsp_pre_dahre == 0:
+            $ nsp_pre_dahre = 1
+            m "Вы обнаружили дополнительный каталог книг для печатного дела."
+            jump day_main_menu
+            
+        "- Искать другие приложения к каталогу -" if nsp_newspaper_menu == 4:
+            $ nsp_newspaper_menu = 5
+            m "Вы обнаружили дополнительный каталог дополнительных средств для печатного дела."
+            jump day_main_menu
+            
+        "- Попытаться починить хрустальный шар -" if nsp_newspaper_menu >= 9 and nsp_newspaper_menu < 15:
+            
+            if nsp_newspaper_menu == 9 :
+                ">Вы внимательно осмотрели шар со всех сторон. На вид он кажется сделан из тусклого стекла, которое почти не пропускаяет свет."
+                ">Никаких подсказок. В такой ситуации можно прибегнуть к внутреннему зрению джина."
+                ">На это ушло много времени, но вам удалось обнаружить особую магическую ауру шара."
+            elif nsp_newspaper_menu == 10 :
+                ">После долгой медитации вы обнаружили, что аура шара чужда этому месту. возможно даже..."
+                ">Нет, лучше это все-таки проверить."
+            elif nsp_newspaper_menu == 11 :
+                ">Новое исследование подтвердило вашу догадку. Этот предмет не из мира Хогвартса."
+            elif nsp_newspaper_menu == 12 :
+                ">Потраченное время все-таки принесло плоды. Вам удалось уловить отблески солнца, играющие на бескрайних песках."
+                ">Сухость воздуха и остроту колючек. Чары и месть, отвагу и честь..."
+                ">Этот хрустальный шар был сделан в мире Аграбы, в вашем родном мире !"
+                ">Вот почему он работает не как шар для предсказаний ! В Аграбе правила магии совсем иные !"
+                ">Теперь нет сомнений, что вы сможете его починить."
+            elif nsp_newspaper_menu == 13 :
+                ">Вы потратили много времени на попытки призвать свою космическую силу."
+                $hero (g4,"Ыыыыыыыть.")
+                $hero (g4,"Аргх!")
+                $hero (g4,"Ааааать.")
+                $hero (g4,"Ух.")
+                ">И так в течение нескольких часов..."
+                ">Безрезультатно."
+            elif nsp_newspaper_menu == 14 :
+                $hero (m,"Почему же все бесполезно ?")
+                $hero ("Конечно я никогда не был по-настоящему {size=+4}всесильным{/size}, но это уже слишком.")
+                $hero ("А ведь что-то могло бы задать моей магии необходимый импульс.")
+                $hero (g6,"Хм.")
+                $hero (g6,"Раньше лучшим стимулом было выполнение какого-нибудь желания.")
+                $hero (g7,"Итак, Джин, сконцентрируйся. Снейп желает фотографии из самых укромных мест, и единственное средство - работающий шар.")
+                $hero (g4,"Ну же ! Напрягись ! Ыыыыыы.")
+                ">Кажется, у вас начало получаться !"
+                $hero (g4,"Аргх !")
+                $hero (g8,"Фу-ух !")
+                ">На столе перед вами лежит целый хрстальный шар. Слабое свечение исходит изнутри"
+                ">Теперь вы способны легко понять, как он устроен, и составляете небольшую инструкцию."
+                $hero (m,"Наконец-то !")
+                $ nsp_genie_sphere = True
+                
+            $ nsp_newspaper_menu += 1
+            
+            if daytime:
+                jump night_start
+            else: 
+                jump day_start  
+
+###
+        "- Осмотреть -" if not desk_examined:
             $ desk_examined = True
             m "Seems like an ordinary enough desk..."
             m "Somewhat cluttered."
@@ -108,7 +264,75 @@ label desk:
 #===TG MODS STOP===
 
             jump day_main_menu
-        "-Do paperwork-" if finished_report < 6 and not got_paycheck and not day == 1 and work_unlock2:
+
+## DR'S DEBUG TEST           
+        "- Тест 1 -" if False :
+            $ menu_x = 0.2 #Menu is moved to the left side.
+            $ pos = POS_410
+                
+            $ hermi.whoring = 24
+            
+            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+            $ hermione_chibi_xpos = 400 #Near the desk.
+            $ hermione_chibi_ypos = 250 #Добавил, т.к. без этого иногда падает игра.
+            show screen hermione_02 #Hermione stands still.
+            show screen bld1
+            with d3
+            
+            $ nsp_germiona_kviddich_1_statimg = "New"
+            $ nsp_germiona_kviddich_1_photo = "dis"
+            $ nsp_event_kviddich_1 = 0
+            $ cur_level = 1
+            call wrd_dress_change_silent
+            call nsp_event_kviddich_1
+            jump hermione_goout
+            
+        "- Тест 2 -" if False :
+        
+            $ menu_x = 0.2 #Menu is moved to the left side.
+            $ pos = POS_410
+                
+            $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+            $ hermione_chibi_xpos = 400 #Near the desk.
+            $ hermione_chibi_ypos = 250 #Добавил, т.к. без этого иногда падает игра.
+            show screen hermione_02 #Hermione stands still.
+            show screen bld1
+            with d3
+            $ hermi.whoring = 24
+            jump hermione_approaching
+#            jump hermione_goout            
+            
+        "- Тест 3 -" if False :
+
+            $ hermi.whoring = 24
+            $ cataloug_found = True
+            call the_oddities
+            jump desk
+            
+        "- Тест 4 -" if False :
+
+            $ hermi.whoring = 24
+            $ cataloug_found = True
+            call daphne_main_menu
+            jump desk
+            
+### DR'S NEWSPAPER ooo ###
+
+        "- Писать статьи для газеты -" if nsp_newspaper_articles < 8 and nsp_newspaper_menu > 0 and nsp_newspaper_ready == False and nsp_newspaper_published == False:
+            jump nsp_articles_work
+        "{color=#858585}- Писать статьи для газеты -{/color}" if nsp_newspaper_articles >= 8 and nsp_newspaper_menu > 0 and nsp_newspaper_published == False:
+            m "Я уже приготовил достаточно материала, газета готова к публикации."
+            jump desk
+        "{color=#858585}- Писать статьи для газеты -{/color}" if nsp_newspaper_ready == True and nsp_newspaper_menu > 0 and nsp_newspaper_published == False:
+            m "Я уже приготовил достаточно материала, газета готова к публикации."
+            jump desk
+        "{color=#858585}- Писать статьи для газеты -{/color}" if nsp_newspaper_menu > 0 and nsp_newspaper_published == True:
+            m "Газета была недавно опубликована. Перед продолжением работы нужно прочитать отзыв из министерства."
+            jump desk
+            
+###   
+            
+        "- Делать бумажную работу -" if finished_report < 6 and not got_paycheck and not day == 1 and work_unlock2:
             jump paperwork
         "{color=#858585}-Do paperwork-{/color}" if finished_report >= 6 and not got_paycheck:
             m "I have already completed six reports this week."
@@ -121,7 +345,22 @@ label desk:
             label books_list:
                 $choose=None
                 menu:
-                    "-Educational books-":
+### DR'S NEWSPAPER ooo ###
+
+                    "- Книги о газетном деле -" if nsp_pre_dahre >= 1:
+                        label books_on_newspaper:
+                            $_label="books_on_newspaper"
+                            $_block="books_newsp"
+                            jump menu_reading_book
+                            
+                    "- Мануалы инструментов для газетного дела -" if nsp_newspaper_menu >= 5:
+                        label manuals_on_newspaper:
+                            $_label="manuals_on_newspaper"
+                            $_block="books_newsp2"
+                            jump menu_reading_book
+                            
+###
+                    "- Обучающие книги -":
                         label books_on_improvement:
                             $_label="books_on_improvement"
                             $_block="books_edu"
@@ -137,7 +376,7 @@ label desk:
                         jump desk
 
         "- Continue reading -" if currentBook!=None:
-            $event=this(currentBook)
+            $wtevent=this(currentBook)
             jump reading_book_xx 
           
         
@@ -168,13 +407,123 @@ label desk:
         "-Go to sleep-" if not daytime and not day == 1:
             jump day_start
             
+### DR'S NEWSPAPER ooo ###
 
-        "-Never mind-":
+        "- Газета -" if nsp_newspaper_menu >= 2 and cataloug_found: 
+            label nsp_newspaper_list:
+                $choose=None
+                menu:
+
+                    "- Публикация газеты -" if nsp_newspaper_ready == True:
+                        label nsp_newspaper_publication:
+
+                            $choose=None
+                            menu:
+
+                                "- Да -":
+                                    $ nsp_newspaper_ready = False 
+                                    $ nsp_newspaper_qual = (10 * (1 + nsp_genie_writer) * (1 + nsp_genie_typographic)) + (5 * nsp_genie_photocamera)
+                                    $ nsp_newspaper_qual_last = nsp_newspaper_qual
+                                    $ nsp_newspaper_cur_money = int((nsp_newspaper_qual + (nsp_newspaper_bonus_point/10) ) * (0.7 + (one_of_ten * 0.06) ))
+                                    
+                                    $ nsp_newspaper_published = True
+                                    $ nsp_genie_typographic_exp += 1
+                                    
+                                    ">Вы поставили на свежий выпуск газеты магический штамп и лист исчез с тихим шуршанием, чтобы спустя мгновение возникнуть на стенде главного холла вместо прежнего."
+                                    
+                                    $ nsp_newspaper_bonus_point_last = nsp_newspaper_bonus_point
+                                    $ nsp_newspaper_bonus_text = "нет"
+                                    $ nsp_newspaper_bonus_point = 0
+                                    
+                                    if nsp_newspaper_menu == 7 :
+                                        $ nsp_newspaper_menu = 8
+                                    
+                                    call screen main_menu_01
+                            
+                                "- Ничего -":
+                                    jump desk
+                                    
+                    "{color=#858585}- Публикация газеты -{/color}" if nsp_newspaper_ready == False:
+                         ">Недостаточно материала, нужно написать больше статей."
+                         jump desk
+                
+                    "- Параметры газеты -" if nsp_newspaper_menu >= 4:
+                        jump newsp_stats_00
+
+
+                    "- Ничего -":
+                        jump desk
+                        
+        "- Хрустальный шар -" if nsp_genie_sphere :
+                
+            $choose=None
+            if nsp_genie_sphere_video :
+                $ nsp_genie_sphere_video_txt = "\nВозможен перенос видео в газету"
+            else :
+                $ nsp_genie_sphere_video_txt = ""
+
+            menu:
+            
+                "Уровень владения: [nsp_genie_sphere_level]\nСила сапфира [nsp_genie_sphere_sapphire_level_eff]\nСила рубина [nsp_genie_sphere_ruby_level_eff]\nСила алмаза [nsp_genie_sphere_diamond_level_eff][nsp_genie_sphere_video_txt]"
+                
+                "- Инструкции -":
+                
+                    call bigtext(["Инструкция к Хрустальному Шару.\n\nШар позволяет получать изображение на расстоянии. К сожалению, для вызова и поддержания данной магии необходимо "
+                    "специальное простое заклинание со стороны другого волшебника. Иначе говоря, подсмотреть за кем-то вряд ли получится.\n\nКроме того, нужны три фокусных камня: сапфир, рубин и алмаз.\n\n"
+                    "Сапфир отвечает за интенсивность связи. В зависимости от уровня он обеспечивает: 1 - разговор, 2 - слышимость звуков вокруг другого, 3 - изображение головы, 4 - изображение тела, 5 - полную картину.\n\n",
+                    "Рубин отвечает за время четкого фокуса (влияет на возможности любой записи изображения): 1 - 30 секунд в день, 2 - 1 минута, 3 - 2 минуты, "
+                    "4 - 5 минут, 5 - 10 минут.\n\nАлмаз отвечает за дальность действия шара: 1 - только комната, 2 - главное здание Хогвартса, 3 - основная территория Хогвартса, "
+                    "4 - все окрестности Хогвартса (Запретный лес, Хогсмид), 5 - неограничено.\n\nКроме того, недостаточный навык владения шаром будет ограничивать силу камня.\n\n",
+                    "Навык будет постепенно расти за счет любого применения шара. Если параметры шара не позволяют проводить съемку, то после журналистского задания будет получена "
+                    "только статья, которая принесет намного меньше популярности.\n\n"
+                    "Для начала нужно купить любой сапфир и поговорить с Гермионой. В дальнейшем понадобятся сапфир не ниже 3 уровня, рубин и алмаз. Фотоъемка в студии не использует "
+                    "шар. После приобретения рубина, алмаза, сапфира 3 уровня и наилучшего фотоаппарата появится новая возможность, не забудьте внимательно изучить доступные книги в инструментах для газеты.\n\n"])
+
+                    jump desk
+                
+                "- Ничего -":
+                    jump desk
+
+###
+        "- Ничего -":
             call screen main_menu_01
             
             
 
-        
+ #===TG MODS START===
+
+        "-Исследовать календарь-" if desk_examined and not day == 1:
+            menu:
+                # This is when playing an old game, and the above event didn't happen (since the mod wasn't installed,
+                # and the desk is now set to (forever) examined.)
+                #
+                # I might later turn this into a general function to refresh the calendar. Possibly allow purging of
+                # data to make a clean slate. Possibly only to correct things.
+                #
+                # I'll do that kind of thing later, once more has been implemented.
+                "-Перепроверить даты-" if desk_examined and not known_dates['hogsmeade_weekends']:
+                    m "Перелистывая страницы........"
+                    m "Кто-то.... явно любит все эти \"Хогсмид по выходным\"."
+                    m "Кто-то пьянчуга, судя по ним."
+                    $ known_dates['hogsmeade_weekends'] = True
+                    $ dates_list = important_dates['hogsmeade_weekends']
+                    $ add_cal_notes(dates_list, 'hogsmeade_weekends')
+                    show screen cal_button_flash
+                    pause(1.5)
+                    hide screen cal_button_flash
+                    if daytime:
+                        jump day_main_menu
+                    else:
+                        jump night_main_menu
+
+                "-Ничего-":
+                    if daytime:
+                        jump day_main_menu
+                    else:
+                        jump night_main_menu
+
+#===TG MODS STOP===
+    
   
             
             
@@ -215,18 +564,34 @@ label reading_book_xx:
 
 
     if raining:
-        ">You are reading a book [event._caption], listening to the rain drumming on the roof of your tower."
+        ">Вы читаете книгу [wtevent._caption], слушая дождь, барабанящий по крыше вашей башни."
     else:
-        ">You are reading a book [event._caption]..."
+        ">Вы читаете книгу [wtevent._caption]..."
    
     call chap_finished_xx
     
     call chapter_check_book_xx #Checks if the chapter just finished was the last one.
     
-    
+#Проверка на концентрацию
+    if concentration>0:
+        if concentration == 1:
+            $ concentraton_check = renpy.random.randint(1, 6) #Copper book.
+            if concentraton_check == 1:
+                call concetrationg_reading
+        if concentration == 2:
+            $ concentraton_check = renpy.random.randint(1, 4) #Bronze book.
+            if concentraton_check == 1:
+                call concetrationg_reading
+        if concentration == 3:
+            $ concentraton_check = renpy.random.randint(1, 2) #Silver book.
+            if concentraton_check == 1:
+                call concetrationg_reading
+        if concentration == 4:                                                               #Golden book.
+            call concetrationg_reading
+        
 #===### SPEED READING FOR DUMMIES BONUS CHECK ###
     if s_reading_lvl>0:
-        $ speed_dummies = Rand([60,30,20][s_reading_lvl-1]//turbo)  # Массив содержит размер интервала для расчета вероятности. Первая книга 10/60 шансов прочитать доп. главу, вторая 10/30, 3-я 10/20 . В режиме турбо интервал уменьшается вдвое
+        $ speed_dummies = Rand([60,30,10][s_reading_lvl-1]//turbo)  # Массив содержит размер интервала для расчета вероятности. Первая книга 10/60 шансов прочитать доп. главу, вторая 10/30, 3-я 10/20 . В режиме турбо интервал уменьшается вдвое
         if speed_dummies <= 10: #Success.
             ">Using speed reading techniques, you rationally use your time and continue to read."
             call chap_finished_xx
@@ -246,7 +611,7 @@ label reading_book_xx:
 #            ">There are still a few chapters."
 
     ">There are still some chapters left."       
-    $currentBook=event.Name
+    $currentBook=wtevent.Name
 
     if fire_in_fireplace:
         hide screen reading_near_fire
@@ -258,11 +623,16 @@ label reading_book_xx:
     else: 
         jump day_start
         
-######    
+###### Concentration reading
+label concetrationg_reading:
+    ">Во время чтения вы идеально сконцентрированы, что позволяет вам прочитать дополнительную главу."
+    call chap_finished_xx
+    call chapter_check_book_xx
+    return
 label chap_finished_xx:
-    if event.Name=="book_05":
-        $event.IncValue("status", 1)  #+=1
-        $renpy.say("Chapter [event._status]", 
+    if wtevent.Name=="book_05":
+        $wtevent.IncValue("status", 1)  #+=1
+        $renpy.say("Глава [wtevent._status]", 
         [
          "Galadriel - a gentle and gracious elven princess is introduced into the story.",
          "Galadriel's father - King Methis and his childhood friend Mofothelis are introduced into the story.",
@@ -284,13 +654,13 @@ label chap_finished_xx:
          "Galadriel gains popularity quickly. Humans, Dark Elves and even the occasional dwarf - she spreads her legs for everyone.",
          "The fame of the young and beautiful elven whore spreads. Galadriel accepts her new life in the brothel.",
          "Suddenly and abruptly everything changes. Galadriel finds out that she is pregnant. -End of book one-"
-        ][event._status-1]
+        ][wtevent._status-1]
         )
 
 
-    if event.Name=="book_05_b":
-        $event.IncValue("status", 1)  #+=1
-        $renpy.say("Chapter [event._status]",
+    if wtevent.Name=="book_05_b":
+        $wtevent.IncValue("status", 1)  #+=1
+        $renpy.say("Глава [wtevent._status]",
         [   
          "Galadriel has been pregnant for several months now. To the princess' own surprise her popularity grows seemingly in direct correlation to the size of her belly.",
          "Although Galadriel maintains the appearance of an obedient whore, in truth she contemplates her escape from the brothel",
@@ -313,12 +683,12 @@ label chap_finished_xx:
          "It takes the elven princess several minutes to realize that she was never pregnant. The entire adventure was nothing but a dream.",
          "Galadriel rushes to her father's chambers and embraces him. The girl is relived to have her old life \"back\". She happy agrees to marry chancellor Mofothelis.",
          "{size=-1}Galadriel is at the altar. She is content and happy. Suddenly she notices something that fills her heart with horror. There is a scar on her hand. The mark of a dog's bite. -The End-{/size}"
-        ][event._status-1]
+        ][wtevent._status-1]
         )
 
-    if event.Name=="book_06":
-        $event.IncValue("status", 1)  #+=1
-        $renpy.say("Chapter [event._status]", 
+    if wtevent.Name=="book_06":
+        $wtevent.IncValue("status", 1)  #+=1
+        $renpy.say("Глава [wtevent._status]", 
         [
         "A family of noble northmen is introduced into the story.",
         "The royal family and the king are introduced into the story.",
@@ -340,26 +710,74 @@ label chap_finished_xx:
         "The character you were rooting for falls in love with a pretty girl.",
         "he character you were rooting for gets brutally murdered. His girl gets raped and then murdered as well.",
         "A new race of half-frozen undead monsters is introduced into the story. To be continued..."
-        ][event._status-1]
+        ][wtevent._status-1]
         )
 
-    if event.Name=="book_07":
+    if wtevent.Name=="book_07":
         $ book_07_units +=1
-        $event._status=book_07_units
+        $wtevent._status=book_07_units
         call waifu
-        
+
+### DR'S NEWSPAPER ooo ###
+    if wtevent.Name=="nsp_newsp_book_pre":
+        $wtevent.IncValue("status", 1)  #+=1
+        $renpy.say("Глава [wtevent._status]", 
+        [
+        "Во вводной главе говорится об истории появления и развития газет в мире магов.",
+        "Вы изучаете основы написания газетных статей.",
+        "Вы изучаете основы написания газетных статей.",
+        "Вы изучаете основы написания газетных статей.",
+        "Вы изучаете основы редактирования газет.",
+        "Вы изучаете основы редактирования газет.",
+        "Вы изучаете основы оформления газет.",
+        "Вы изучаете основы оформления газет.",
+        "Вы изучаете основы оформления газет.",
+        "В заключительной главе приводится краткий перечень советов начинающему редактору.",
+        ][wtevent._status-1]
+        )
+
+    if wtevent.Name in ["nsp_newsp_book_p01", "nsp_newsp_book_p02a", "nsp_newsp_book_p02b", "nsp_newsp_book_p03a", "nsp_newsp_book_p03b"]:
+        $wtevent.IncValue("status", 1)  #+=1
+            
+    if wtevent.Name in ["nsp_newsp_book_p04", "nsp_newsp_book_p05a", "nsp_newsp_book_p05b", "nsp_newsp_book_p06a", "nsp_newsp_book_p06b"]:
+        $wtevent.IncValue("status", 1)  #+=1
+
+    if wtevent.Name in ["nsp_newsp_book_typo1", "nsp_newsp_book_typo2", "nsp_newsp_book_typo3", "nsp_newsp_book_typo4", "nsp_newsp_book_typo5", "nsp_newsp_book_typo6"]:
+        $wtevent.IncValue("status", 1)  #+=1
+            
+    if wtevent.Name in ["nsp_newsp_book_photo1", "nsp_newsp_book_photo2", "nsp_newsp_book_photo3", "nsp_newsp_book_photo4"]:
+        $wtevent.IncValue("status", 1)  #+=1
+            
+    if wtevent.Name=="nsp_newsp_book_video":
+        $wtevent.IncValue("status", 1)  #+=1
+        $renpy.say("Глава [wtevent._status]", 
+        [
+        "Во вводной главе говорится об истории появления и развития прорицательства в мире магов. И только в конце вы сообразили, что это вообще вас не касается.",
+        "Вы изучаете принципы компоновки видеокадра.",
+        "Вы изучаете художественные правила видеомонтажа.",
+        "Глава содержит в себе биографию автора. Безобразие.",
+        "Вы изучаете заклинания для переноса информации из шара на бумагу.",
+        "Вы продолжаете изучать заклинания для переноса информации из шара на бумагу.",
+        "Внезапно, целая глава посвящена философским мыслям автора о жизни. Пожалуй, эти страницы стоит приберечь для борьбы с бессонницей.",
+        "Вы продолжаете изучать заклинания для переноса информации из шара на бумагу. Кажется, начинает понемногу получаться.",
+        "Вы завершаете изучать заклинания для переноса информации из шара на бумагу. Остается прочитать заключительную главу.",
+        "Ну разумеется, в последней главе находится фотография автора и его благодарности жене, детям, домашним животным и маглам по соседству.",
+        ][wtevent._status-1]
+        )
+
+###        
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
     hide screen notes
     show screen notes
-    if event._block=="books_edu": 
-#        $event._status=this.GetCall(event.Name).SetValue("status", event._status+1)  #event.SetValue("status", event._status+1)  #+=1
-        $event.IncValue("status", 1)    
-    ">You've completed \"chapter [event._status]\" of the book."
+    if wtevent._block=="books_edu": 
+#        $wtevent._status=this.GetCall(wtevent.Name).SetValue("status", wtevent._status+1)  #wtevent.SetValue("status", wtevent._status+1)  #+=1
+        $wtevent.IncValue("status", 1)    
+    ">Вы закончили \"главу [wtevent._status]\" этой книги."
     return
     
 ###
 label chapter_check_book_xx: #Checks if the chapter just finished was the last one.
-    if (event.IsDone() and event.Name!="book_07") or (event.Name=="book_07" and book_07_units == 20):#book_xx_units == 10:
+    if (wtevent.IsDone() and wtevent.Name!="book_07") or (wtevent.Name=="book_07" and book_07_units == 20):#book_xx_units == 10:
         if fire_in_fireplace:
             show screen done_reading_02  
             hide screen reading_near_fire
@@ -373,12 +791,12 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
         ">This was the last chapter. You have finished this book."
         $currentBook=None
 
-        if event.Name=="book_06":
+        if wtevent.Name=="book_06":
             g4 "What kind of garbage! I hate the person who wrote it!"
             m "However, all the rape led me to a couple of ideas..."
 
 
-        if event.Name=="book_07":
+        if wtevent.Name=="book_07":
             if complited_leena_already and complited_shea_already and complited_stevens_already and victoria >= 1 and shea >= 1 and leena >= 1: #Harem ending. The DAHR's ticket.
                 m "Wow! What a great book! That was intense!"
                 
@@ -437,24 +855,47 @@ label chapter_check_book_xx: #Checks if the chapter just finished was the last o
         $ renpy.play('sounds/win_04.mp3')   #Not loud.
         hide screen notes
         show screen notes
-        if event._conclusion!="":
-            if event._block=="books_edu":
-                m "New skill: [event._conclusion]"
+        if wtevent._conclusion!="":
+            if wtevent._block=="books_edu":
+                m "Новый навык: [wtevent._conclusion]"
             else:
-                m "[event._conclusion]"
+                m "[wtevent._conclusion]"
 
 # Изменения навыка по завершению книги (кроме Вайфу - book_07 в ней навык меняется отдельно)
 # Можно было сделать через событие, но тогда получится более громоздко. Так что пока так:
-        if event.Name in ["book_01", "book_02", "book_03", "book_04"]:
+        if wtevent.Name in ["book_01", "book_02", "book_03", "book_04"]:
             $ concentration += 1
-        if event.Name in ["book_05", "book_05_b", "book_06"]:     
+        if wtevent.Name in ["book_05", "book_05_b", "book_06"]:     
             $ imagination +=1
-        if event.Name in ["book_08", "book_09", "book_10"]:
+        if wtevent.Name in ["book_08", "book_09", "book_10"]:
             $ s_reading_lvl +=1
-        if event.Name in ["book_12", "book_13", "book_14", "book_15"]:
+        if wtevent.Name in ["book_12", "book_13", "book_14", "book_15"]:
             $ speedwriting += 1
 
-        
+### DR'S NEWSPAPER ooo ###
+
+        if wtevent.Name=="nsp_newsp_book_pre" and nsp_newspaper_menu == 0:
+            $ nsp_newspaper_menu = 1
+            
+        if wtevent.Name in ["nsp_newsp_book_p01", "nsp_newsp_book_p02a", "nsp_newsp_book_p02b", "nsp_newsp_book_p03a", "nsp_newsp_book_p03b"]:
+            $ nsp_genie_writer += 1
+            
+        if wtevent.Name in ["nsp_newsp_book_p04", "nsp_newsp_book_p05a", "nsp_newsp_book_p05b", "nsp_newsp_book_p06a", "nsp_newsp_book_p06b"]:
+            $ nsp_genie_writer += 1
+
+        if wtevent.Name in ["nsp_newsp_book_typo1", "nsp_newsp_book_typo2", "nsp_newsp_book_typo3", "nsp_newsp_book_typo4", "nsp_newsp_book_typo5", "nsp_newsp_book_typo6"]:
+            $ nsp_genie_typographic += 1
+            $ nsp_genie_typographic_exp = 0
+            
+        if wtevent.Name in ["nsp_newsp_book_photo1", "nsp_newsp_book_photo2", "nsp_newsp_book_photo3", "nsp_newsp_book_photo4"]:
+            $ nsp_genie_photocamera += 1
+            $ nsp_genie_photocamera_exp = 0
+            
+        if wtevent.Name == "nsp_newsp_book_video" :
+            $ nsp_genie_sphere_video = True
+            
+###
+            
         if fire_in_fireplace:
             hide screen reading_near_fire
         else:
@@ -591,6 +1032,7 @@ label report_chapters_check:
         ">You've completed a report."
         $ report_chapters = 0
         $ finished_report += 1
+        $ total_report += 1
     return
 ### FULL MOON BONUS ###
 label f_moon_bonus:
@@ -616,6 +1058,8 @@ label concentration_label:
     $ report_chapters += 1
     ">You maintain perfect concentration during your work.\n>And finish another chapter of the report.\n>You finished [report_chapters] chapters so far."
     return
+
+    
 ### SPEEDWRITING
 label speedwriting_label:
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
@@ -624,7 +1068,142 @@ label speedwriting_label:
     $ report_chapters += 1
     ">You use your speedwriting skills.\n>And finish another chapter of the report.\n>You finished [report_chapters] chapters so far."
     return
+
+### DR'S NEWSPAPER ooo ###
+
+label nsp_articles_work:
+    stop music fadeout 1.0
+    if daytime:
+        play bg_sounds "sounds/day.mp3" fadeout 1.0 fadein 1.0 #Quiet...
+    else: 
+        play bg_sounds "sounds/night.mp3" fadeout 1.0 fadein 1.0 #Quiet...
     
+    if raining:
+        play weather "sounds/rain.mp3" fadeout 1.0 fadein 1.0 #Quiet...
+        stop bg_sounds 
+    
+    
+    hide screen genie
+    show screen paperwork
+    with Dissolve(0.3)
+    ">Вы пишете статьи для газеты."
+    
+    call nsp_finished_working_chapter #Chapter finished. $ report_chapters += 1
+    
+    call nsp_report_chapters_check #Checks whether or not the completed chapter was the final one.
+        
+    if daytime: # Makes sure that check happens only at nighttime. 
+        pass
+    else:
+        if wather_generator >= 31 and wather_generator <= 40: # FULL MOON
+            call nsp_f_moon_bonus
+        if wather_generator >= 51 and wather_generator <= 60: # FULL MOON
+            call nsp_f_moon_bonus
+           
+    call nsp_report_chapters_check #Checks whether or not the completed chapter was the final one.
+    
+    ### CONCENTRATION CHECK ###========================================================================
+    if concentration == 1:
+        $ concentraton_check = renpy.random.randint(1, 6) #Copper book.
+        if concentraton_check == 1:
+            call nsp_concentration_label
+    if concentration == 2:
+        $ concentraton_check = renpy.random.randint(1, 4) #Bronze book.
+        if concentraton_check == 1:
+            call nsp_concentration_label
+    if concentration == 3:
+        $ concentraton_check = renpy.random.randint(1, 2) #Silver book.
+        if concentraton_check == 1:
+            call nsp_concentration_label
+    if concentration == 4:                                                               #Golden book.
+        call nsp_concentration_label
+#    if concentration == 5:
+#        $ concentraton_check = renpy.random.randint(1, 2) #Platinum book.
+#        if concentraton_check == 1:
+#            call nsp_concentration_label
+#    if concentration == 6:
+#            call nsp_concentration_label
+    ###==============================================================================================
+    
+    call nsp_report_chapters_check #Checks whether or not the completed chapter was the final one.
+    
+    ### SPEEDWRITING CHECK ###========================================================================
+    if speedwriting == 1:
+        $ speedwriting_check = renpy.random.randint(1, 6) #"\"Speedwriting for dummies.\"" # 1/10 chance
+        if speedwriting_check == 1:
+            call nsp_speedwriting_label
+    if speedwriting == 2:
+        $ speedwriting_check = renpy.random.randint(1, 4) #"\"Speedwriting for beginners.\"" # 1/8 chance of it to pop up.
+        if speedwriting_check == 1:
+            call nsp_speedwriting_label
+    if speedwriting == 3:
+        $ speedwriting_check = renpy.random.randint(1, 2) #"\"Speedwriting for intermediate.\"" # 1/6 chance of it to pop up.
+        if speedwriting_check == 1:
+            call nsp_speedwriting_label
+    if speedwriting == 4:
+            call nsp_speedwriting_label
+#    if speedwriting == 5:
+#        $ speedwriting_check = renpy.random.randint(1, 2) #"\"Speedwriting for experts.\"" # 1/2 chance of it to pop up.
+#        if speedwriting_check == 1:
+#            call nsp_speedwriting_label
+#    if speedwriting == 6:
+#        call nsp_speedwriting_label #""\"Speedwriting for maniacs.\"" # 1 (sure) chance of it to pop up.
+    
+    call nsp_report_chapters_check #Checks whether or not the completed chapter was the final one.
+            
+
+    show screen genie
+    hide screen paperwork
+    
+    
+    
+    if daytime:
+        jump night_start
+    else: 
+        jump day_start    
+###
+
+### 
+label nsp_report_chapters_check:
+    if nsp_newspaper_articles >= 8:
+        ">Вы закончили статью."
+        $ nsp_newspaper_articles = 0
+        $ nsp_newspaper_ready = True
+        if nsp_newspaper_menu == 1:
+            $ nsp_newspaper_menu = 2
+    return
+### FULL MOON BONUS ###
+label nsp_f_moon_bonus:
+    $ renpy.play('sounds/win_04.mp3')   #Not loud.
+    hide screen notes
+    show screen notes
+    $ nsp_newspaper_articles += 1
+    ">Полнолуние сделало вас более продуктивным.\n>Вы закончили [nsp_newspaper_articles]-ю статью."
+    return
+###
+label nsp_finished_working_chapter:
+    $ nsp_newspaper_articles += 1
+    $ renpy.play('sounds/win_04.mp3')   #Not loud.
+    hide screen notes
+    show screen notes
+    ">Вы закончили [nsp_newspaper_articles]-ю статью."
+    return
+### CONCENTRATION
+label nsp_concentration_label:
+    $ renpy.play('sounds/win_04.mp3')   #Not loud.
+    hide screen notes
+    show screen notes
+    $ nsp_newspaper_articles += 1
+    ">Во время работы вы идеально сконцентрированы.\n>И заканчиваете дополнительную статью.\n>Вы закончили [nsp_newspaper_articles]-ю статью."
+    return
+### SPEEDWRITING
+label nsp_speedwriting_label:
+    $ renpy.play('sounds/win_04.mp3')   #Not loud.
+    hide screen notes
+    show screen notes
+    $ nsp_newspaper_articles += 1
+    ">Вы используете свой навык скорописания.\n>И заканчиваете дополнительную статью.\n>Вы закончили [nsp_newspaper_articles]-ю статью."
+    return
     
 ### READING GALADRIEL BOOKS IN PROPER ORDER ###
 label gal_proper:

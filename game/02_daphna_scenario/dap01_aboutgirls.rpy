@@ -1,11 +1,13 @@
-################
-### LEVEL 01 ###                
-###################REQUEST_01 JUST STAND THERE.
-label dap_request_01: #LV.1 (Whoring = 0 - 2)
+################################
+########### LEVEL 01 ############
+################################
+##### REQUEST_01  About Girls #####
+################################
+label dap_request_01: #LV.1 (Whoring = 0 - 4)
 
     $music("Daphne Theme")
 
-    if IsRunNumber(1):
+if IsRunNumber(1):
 #    if daphne.whoring<3:
         $hero("Alright, miss, tell me a bit about the girls around you. We need to understand who you are dealing with.")
         $daphne("~55 00 1 neu// Well, in General most of them are pretty uninteresting.// Why would I pay attention to all these upstarts?!")
@@ -25,65 +27,76 @@ label dap_request_01: #LV.1 (Whoring = 0 - 2)
         $hero("I propose that you try to be are a bit more flexible, miss.// Now concentrate on your simple task and learn about your competitors.")
         $daphne("~46 00 1 pou// Hmm... I'll try, Professor.")
         $hero("Excellent. Report back tonight.")
-    elif IsRunNumberOrMore(2):
-        $hero("So, miss Greengrass. Today you should study your competitors again.")
-        $daphne("~64 00 1 neu// Again, sir?")
-        $hero("Well, unless you already know all about them...")
-        $daphne("~55 00 1 neu// Not yet, sir.")
-        $hero("Then go ahead, will be waiting for your report in the evening.")
-    return
+elif IsRunNumberOrMore(2):
+    if IsRunNumber(5) or IsRunNumber(6) or IsRunNumber(7):
+        pause 1.0
+        felix "К большому сожалению, данная сюжетная линия пока дописана только до этого момента..."
+        felix "{size=-3}(Но, вам остаются доступны другие сюжетные линии){/size}"
+        felix "Оставьте ваши вопросы, благодарности и пожелания на нашем {a=http://wtrus.ixbb.ru/viewtopic.php?id=9}ФОРУМЕ{/a}."
+        felix "Так вы простимулируете нас, и продолжение появится быстрее. :)"
+        call daphne_main_menu_requests
+    else:
+        $hero("Так, мисс Гринграсс. Давайте-ка вы сегодня снова займетесь изучением ваших конкуренток.")
+        $daphne("~64 00 1 neu// Опять, сэр?")
+        $hero("Ну, если вы уже все о них знаете...")
+        $daphne("~55 00 1 neu// Пока не все, сэр.")
+        $hero("Тогда вперед, жду вас вечером с отчетом.")
+return
 
 
 
 label dap_request_01_complete:
-    if event._finishCount>3: # Заглушка, нужно будет снять когда будут написаны последующие ивенты
-        return event.Finalize()
     $daphne.Visibility()
     $daphne.chibi.State("door", speed="go").Trans(d4, "blink").Trans("go center", "blink") # Если делать dissolve в движении, то сбивается счетчик времени. Лучше выполнить появление чибика стоя, затем уже двигать его 
     pause.5
     $screens.ShowD3("bld1")
 
-    $daphne.State(pos="door").Visibility("body+")("~55 00 1 smi// Good evening, Professor Dumbledore.") 
+    $daphne.State(pos="door").Visibility("body+")("~55 00 1 smi// Добрый вечер, профессор Дамблдор.") 
+
 
     $music("Daphne Theme")
 
     if IsRunNumber(1):
-        $hero("Alright, miss Greengrass, did you succed?")
-        $daphne("~55 00 1 neu// Well, I watched Jessie. She seems pretty easy to figure out.")
-        $hero ("And?")
-        $daphne("~55 00 1 pur// That's all, sir.")
-        $hero("And how will it help your situation and let you rise above Jessie, miss? Did you learn anything that could affect her popularity?")
-        $daphne("~55 00 1 pou// Not really, no. But the reason I chose her was because she is very popular.//"
-            "~55 01 1 pou// Besides, she bragged that she can charm any guy, so I wanted to learn how...//"
-            "~37 00 1 pou// Professor, please don't think that I would require any such info!//"
-            "I'm better than that! You gave me a job and I thought it was what you where looking for.")
-        $hero("I heard that you where better than that, miss.// You belive the job is done then?")
-        $daphne("~73 00 1 pou// I think so.")
-        $hero("Alright, I am willing to let it slide, because I believe in you.// Since you are a sorceress from an ancient family.// I'm sure you'll do better next time.")
-        $daphne("~73 00 1 smo// Thank you, sir, I'll try harder!")
+        $hero("Итак, мисс Гринграсс, каковы успехи?")
+        $daphne("~55 00 1 neu// Ну, я наблюдала за Джесси. Похоже, она не слишком прилежно учится.")
+        $hero("И?")
+        $daphne("~55 00 1 pur// Это пока все, сэр.")
+        $hero("И как это поможет вам завоевать положение и подняться выше Джесси, мисс? Хотите сказать, что ее плохая учеба влияет на ее популярность?")
+        $daphne("~55 00 1 pou// В общем-то, нет. Я потому и выбрала ее, что она довольно популярна.//"
+            "~55 01 1 pou// К тому же она хвалилась, что может окрутить любого парня, вот я и решила...//"
+            "~37 00 1 pou// Профессор, только не подумайте, что мне надо кого-то там окручивать!//"
+            "Я выше этого! Просто вы дали задание и мне показалось, что она подойдет.")
+        $hero("Я уже слышал, что вы выше этого, мисс.// Но получается, что задание вы сегодня не выполнили.")
+        $daphne("~73 00 1 pou// Похоже, что так.")
+        $hero("И тем не менее, я готов вас простимулировать, потому что верю в вас.// В конце концов вы волшебница древнего рода.// Уверен, в следующий раз у вас получится лучше.")
+        $daphne("~73 00 1 smo// Спасибо, сэр, я буду очень стараться!")
+        $daphne.whoring += 1
+        $wtevent.Finalize("daphne_pre_menu")
     elif IsRunNumber(2):
-        $daphne("~55 00 1 neu// Today, Professor Dumbledore, I decided to approach the issue systematically.")
-        $hero("Oh yeah?")
-        $daphne("~46 00 1 neu// Yes, sir. I think I'm beginning to understand why some girls are more popular than others.")
-        $hero("#(I have a slut theory as well.)// Go head miss, I am listening.")
-        $daphne("I have one more thing to check, sir, Before I will be able to tell you.//" 
-            "~46 00 1 pou// And today I studied Melissa as she was flirting with some guys.")
-        $hero("Really?")
-        $daphne("~37 00 1 pur// Disgusting, sir. How can she do it – some of them where half-breeds and even mudbloods!")
-        $hero("Can't be!")
-        $daphne("Yes, sir, I am sorry to say.")
-        $hero("What happened?")
-        $daphne("~37 00 1 pri// Guys circled around her, sir!//"
-            "~37 00 1 dis// And you know what, I think some of them where even willing to go along with her flirtations.")
-        $hero("That is a surprise!")
-        $daphne("~37 00 1 pri// I was shocked too, sir!// I never paid attention to stuff like that, never thought about it.//"
-            "~37 n0 1 pou// I was sure that the purity of my blood would open all doors and that sort of flirting wouldn't be necessary.//"
-            "~37 n2 1 pou// But for some reason today I was standing alone and the guys flew around this girl, like flies on...")
-        $hero("honey?")
-        $daphne("~37 00 1 pou// I wanted to use a stronger word, sir. But let's go with honey...")
-        $hero("And now what, miss?")
-        $daphne("~37 00 1 neu// I need time to figure it all out, sir.")
-        $hero("Well, miss Greengrass, it looks like you are moving in the right direction. I think you should be rewarded.")
+        $daphne("~55 00 1 neu// Сегодня, профессор Дамблдор, я решила подойти к вопросу системно.")
+        $hero("Вот как?")
+        $daphne("~46 00 1 neu// Да, сэр. Мне кажется, я начинаю понимать, почему одни девчонки популярнее других.")
+        $hero("#(Тоже мне бином Ньютона.)// Слушаю вас, мисс.")
+        $daphne("Мне надо еще кое-что проверить, сэр, в следующий раз я смогу рассказать вам.//" 
+            "~46 00 1 pou// А сегодня я присматривалась к Мелиссе, она заигрывала с парнями.")
+        $hero("И как вам это?")
+        $daphne("~37 00 1 pur// Отвратительно, сэр. Как она может это делать – среди них были не только полукровки, но и мугродье!")
+        $hero("Не может быть!")
+        $daphne("Да, сэр, представьте себе.")
+        $hero("И что же?")
+        $daphne("~37 00 1 pri// Парни вились вокруг нее, сэр!//"
+            "~37 00 1 dis// И знаете, мне показалось, что некоторые были не прочь зайти с ней дальше заигрываний.")
+        $hero("Вот это неожиданность!")
+        $daphne("~37 00 1 pri// Я тоже была шокирована, сэр!// Я никогда не обращала на это внимания, никогда об этом не задумывалась.//"
+            "~37 n0 1 pou// Я была уверена, что чистая кровь откроет любые двери и всякие заигрывания никому не нужны.//"
+            "~37 n2 1 pou// Но почему-то сегодня вокруг меня не было ни одного парня, а к этой девице они летели, как мухи на...")
+        $hero("На мед?")
+        $daphne("~37 00 1 pou// Я хотела употребить более сильное слово, сэр. Но пусть будет «мед»...")
+        $hero("И что же теперь, мисс?")
+        $daphne("~37 00 1 neu// Мне нужно время, чтобы во всем этом разобраться, сэр.")
+        $hero("Хорошо, мисс Гринграсс, похоже, вы движетесь в верном направлении. Думаю, стоит вас наградить.")
+        $daphne.whoring += 1
+        $wtevent.Finalize("daphne_pre_menu")
     elif IsRunNumber(3):
         $daphne("I think I understand, sir.")
         $hero("Huh?")
@@ -117,10 +130,30 @@ label dap_request_01_complete:
         $daphne("~55 neu 01 1// Cunning, ambition, resourcefulness, sir.")
         $hero("Have you demonstrated these qualities to achieve victory in the competition (especially regarding men)?")
         $daphne("~55 01 1 pou// .........................")
-        $hero("You should go and have a think about if you are worthy of this great ancestor!//" 
-            "However, because you worked so hard, I think it would be wrong to let you leave without a gift.")
+        $hero("Идите, девушка, и подумайте, достойны ли вы своего великого предка!//" 
+            "Впрочем, поскольку вы усердно работали, думаю, будет неправильно оставить вас совсем без подарка.")
+        $daphne.whoring += 1
+        $wtevent.Finalize("daphne_pre_menu")
+    elif IsRunNumber(4):
+        $daphne("Эм....// Сэр...")
+        $hero("Да мисс Гринграсс....// вы готовы мне что-то рассказать?")
+        $daphne("..........//~55 00 1 ope// Вы оказались правы, профессор.//~37 n0 1 pou// Парням совсем наплевать на то, какая у меня кровь....//~37 00 2 dis//  ...Почему профессор?!//~37 02 2 dis//  ...Почему мой флирт, им важнее?!")
+        $hero("Хм.....// Я так понял, вы пытались заигрывать с парнями мисс Гринграсс?")
+        $daphne("~73 01 1 ang// Э-э... Я не хотела...// Просто....// Ну.... мне нужно было еще раз все проверить.")
+        $hero("Мисс Гринграсс...// А вы бы не могли по конкретнее мне рассказать, с кем из парней вы флиртовали?")
+        $daphne("~37 00 2 dis// Эм....// Нет профессор...// Я не стану делиться этим с вами, сэр...")
+        $hero("...Почему же?")
+        $daphne("~73 02 3 ang// Это очень низко...//  #(До сих пор не могу поверить что я решилась на это)")
+        $hero("Низко?// Вы уже научились решаться на то, о чем раньше не могли даже думать.// По моему это достойно похвалы....// Как считаете?")
+        $daphne("~55 00 1 ope// Эм... Я не знаю, сэр.//~46 00 1 neu//  Мне все еще не по себе от этого.")
+        $hero(g9, "#(Ты у меня и не такое будешь вытворять, когда я закончу с тобой)")
+        $daphne("~46 00 1 neu// Что вы сказали, сэр?")
+        $hero(m, "Эм.... Я подумал, что на сегодня с вас достаточно того, что вы сделали.")
+        $daphne("~37 00 1 dis// #(Черт... Лучше не напоминайте мне об этом)")
+        $hero("На сегодня вы можете быть свободны, мисс Гринграсс.")
+        $daphne("~46 00 1 neu// ...Хорошо, профессор.")
+        $hero("И да... мисс Гринграсс, я думаю вы заслужили поощрение сегодня.")
+        $daphne.whoring += 1
+        $wtevent.Finalize("daphne_pre_menu")
 
-    if daphne.whoring<=2:
-        $daphne.whoring=event._finishCount+1
-    call daphne_pre_menu
-    return event.Finalize()
+    return

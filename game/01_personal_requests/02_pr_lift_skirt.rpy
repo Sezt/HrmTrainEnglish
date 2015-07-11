@@ -8,7 +8,7 @@ label new_request_02: #SHOW ME YOUR Трусики
         "\"(Yes, let's do it!)\"":
             pass
         "\"(Not right now.)\"":
-            $event.NotFinished()
+            $wtevent.NotFinished()
             jump new_personal_request
     $herView.showQQ( "body_01.png", pos )
     her "So, what will it be sir?"
@@ -82,12 +82,12 @@ label new_request_02: #SHOW ME YOUR Трусики
 
         
         
-
+    $herView.data().saveState()
     # save previous state and add pose
     # add pose with lifted skirt
     if hermi.whoring<13:
-        $herView.data().saveState()
-        #$herView.data().addPose( CharacterExItemSkirtLifted( herView.mPoseFolder, 'pose_skirt_up.png', G_Z_POSE ) )
+        #$herView.data().saveState()
+        call wrd_dress_undress_skirts
         $herView.data().addItem( 'item_pose_lifted_skirt' )
         $ pos = POS_120
     
@@ -271,9 +271,10 @@ label new_request_02: #SHOW ME YOUR Трусики
 #                        g4 "!!?"
                         hide screen bld1
 
+                                            
                         $herView.data().delPanties()
 #                        $herView.data().saveState()
-                        #$herView.data().addPose( CharacterExItemSkirtLifted( herView.mPoseFolder, 'pose_skirt_up.png', G_Z_POSE ) )
+                        call wrd_dress_undress_skirts
                         $herView.data().addItem( 'item_pose_lifted_skirt' )
                         $ pos = POS_120
 
@@ -438,7 +439,7 @@ label new_request_02: #SHOW ME YOUR Трусики
         $ hermi.whoring +=1
 #    $ request_02 += 1
 
-    $event.Finalize()    
+    $wtevent.Finalize()    
     if daytime:
         $ hermione_takes_classes = True
         jump day_main_menu

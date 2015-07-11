@@ -43,7 +43,7 @@ label daphne_pre_01: #Снейп обещает, что пришлет шлюх�
     "> You decide to trust Snape and wait two days."
     "> The rest of the evening you listen to the cries of Severus\n about the plight of the teachers and\n fantasize about the promised whore."
 
-    $event.Finalize("day_start")
+    $wtevent.Finalize("day_start")
 #    jump day_start
 
 
@@ -133,7 +133,7 @@ label daphne_pre_02: #LV.1 (Whoring = 0 - 2)
 
     $hero("...................................")
 
-    return event.Finalize()
+    return wtevent.Finalize()
 
 label daphne_pre_03: #Разборки со Снейпом после того, как шлюха оказалась не шлюхой
 
@@ -178,7 +178,7 @@ label daphne_pre_03: #Разборки со Снейпом после того, 
     $snape.Visibility(transition=d3)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 
-    $event.Finalize("night_start" if daytime else "day_start")
+    $wtevent.Finalize("night_start" if daytime else "day_start")
 
 
 
@@ -231,11 +231,11 @@ label daphne_pre_05: #Разборки со Снейпом после письм
     $snape.Visibility(transition=d3)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 
-    $event.Finalize("night_start" if daytime else "day_start")
+    $wtevent.Finalize("night_start" if daytime else "day_start")
 
 
 label daphne_pre_07: #Разговор с Гермионой о Дафне. В зависимости от ветки и развращенности реакция. 
-# После того, как будет получена информация о выпивке Дафны ивент заканчивается. А так с интервалом в 2 дня при попытке поговорить возобновляется.
+# После того, как будет получена информация о выпивке Дафны ивент заканчивается. А так с интервалом в 3 дня при попытке поговорить возобновляется.
     
     $hermi.State("door").Visibility("body+")
     $music("music/Chipper Doodle v2.mp3") # fadein 1 fadeout 1 # HERMIONE'S THEME.
@@ -361,7 +361,7 @@ label daphne_pre_07: #Разговор с Гермионой о Дафне. В �
                             "~body_103.png// Ah! Her owl Puglia only eats live food and swallows it whole. Don't know if you found that interesting...")
                         $hero ("Hmm... Thank you, miss Granger.")
                         $hermi("~body_50.png// Hope you got what you wanted, sir. And now I have to go.")
-                        $event.Finalize()
+                        $wtevent.Finalize()
 
                     "\"No!\"":
                         label daphne_pre_06_Cancel:
@@ -380,7 +380,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock!*"
     $daphne.Visibility()
-    if IsNextRun(): # Начиная со второго посещения Дафна в форме чирлидера
+    if IsNextRun(): # Начиная со второго посещения, Дафна в форме чирлидера
         $daphne.ItemSetsCustomize({"body","cheer_start_clothes"},True)
         $daphne.ItemsCustomize(update={"combi:cheer_topbase", "skirt:cheer_long"}).chibi.State(appearance="b")
 
@@ -405,7 +405,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
 
     $daphne_pre_menu_text=None # текст, который будет говорить джин в конце
 #    label daphne_pre_finish_menu:
-    if event._finishCount==0: # Первый раз
+    if wtevent._finishCount==0: # Первый раз
         $hero (m, "#(Well, \"Miss Blue Blood\"...our first meeting and my conversations with Severus and Hermione gave me a few ideas.)") 
         $daphne("~55 00 1 ope// My parents sent me an owl about what you had planned for me.// So I decided to stay at Hogwarts.") 
         $hero (m, "#(Yes, dear, I have a lot of plans for your future.)") 
@@ -438,9 +438,9 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
         $daphne("~55 00 1 def// But you never finished talking about why you are unsure about teaching me, sir.") 
         $hero (m, "Next time, miss. I will be waiting for your visit in two days.// Finally I have a little present for you.") 
         $daphne("~55 00 1 def// .........") 
-        $event.Finalize()
+        $wtevent.Finalize()
 
-    elif event._finishCount==1: # Second time
+    elif wtevent._finishCount==1: # Второй раз
         $hero (m, "Wonderful, miss Greengrass. You look simply stunning.// I am sure any man's...mood will rise when they see you like this.") 
         $daphne("~55 00 1 neu// Please, Professor, I'm hardly happy about the fact that men get excited.//~26 00 pou 1// I knew that if I came to you in this uniform, it would become weird!") 
         $hero ("Hmm. I'm sorry that I expressed delight about your appearance, miss.// You're probably right and I shouldn't distinguish and compliment you.") 
@@ -458,7 +458,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
         $hero(".......?// Well, miss, it seems that today is not a good day to start tutoring. Perhaps a gift would lift your mood.") 
         $event.Finalize()
 
-    elif event._finishCount==2: # the Third time
+    elif wtevent._finishCount==2: # Третий раз
 #        $daphne.ItemsCustomize(delete={"hair"})
 #        $daphne.ItemsCustomize(update={"hair"})
         $hero (m, "When you are wearing that uniform, miss Greengrass, it is easy to see that you have a great body. ")
@@ -479,9 +479,9 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
             "~26 n0 1 wo// I have so many years at Hogwarts and what? They still can't see who they are dealing with!") 
         $hero  ("Well, miss Greengrass, I like your fighting spirit. And I want to support you with a little gift.") 
         $daphne("~55 00 1 def")
-        $event.Finalize()
+        $wtevent.Finalize()
 
-    elif event._finishCount==3: # Chetvertyy and last time
+    elif wtevent._finishCount==3: # Четверты и последний раз
         $hero (m, "Well, miss, I told you about the competition.//"
             "The competitor list has been hung up all around school. And the owl with a note about the event and the current list of participants has already been sent The Daily Prophet.") 
         $daphne("~55 w0 1 ang// Oh, sir, everything is moving so fast...actually I'm not sure... I'm still...//~55 01 1 dis// I need to pull out!") 
@@ -511,7 +511,7 @@ label daphne_pre_finish: #LV.1 (Whoring = 0 - 2)
         ">Now you can call Daphne Greengrass to your office."
         $screens.HideD3("blktone")
 
-        $event.Finalize()
+        $wtevent.Finalize()
 
     label daphne_pre_menu(sayText=daphne_pre_menu_text):
     $item=None

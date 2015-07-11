@@ -14,7 +14,7 @@ label new_request_12: #LV.4 (Whoring = 9 - 11)
             with d3
             pass
         "\"(Not right now.)\"":
-            $event.NotFinished()
+            $wtevent.NotFinished()
             jump new_personal_request
     
     if hermi.whoring <=8:
@@ -111,6 +111,8 @@ label new_request_12: #LV.4 (Whoring = 9 - 11)
     $herView.hideQQ()
     #$ only_upper = True #No lower body displayed. 
     #$herView.data().addPose( CharacterExItemPoseShowTits( herView.mPoseFolder, 'pose_dress_up.png', G_Z_POSE ) )
+    call wrd_dress_undress_shirts
+    $ herView.data().addItem( 'item_tits' )
     $herView.data().addItem( 'item_pose_show_tits' )
     $herView.showQQ( "body_82.png", pos )
     pause
@@ -576,6 +578,7 @@ label new_request_12: #LV.4 (Whoring = 9 - 11)
                 jump no_smacking_tits #Jumps to usual tits molesting scene.
 
     
+    call wrd_dress_change_silent
     hide screen h_c_u
     hide screen g_c_u
     hide screen g_c_c_u # Genie's sperm. Universal.
@@ -590,7 +593,7 @@ label new_request_12: #LV.4 (Whoring = 9 - 11)
     pause.1
     hide screen blkfade
     with d3
-    if event.Name=="new_request_04":
+    if wtevent.Name=="new_request_04":
         jump new_request_04_finish
 
     $ gryffindor += current_payout #35
@@ -638,7 +641,7 @@ label new_request_12: #LV.4 (Whoring = 9 - 11)
     $ herView.data().loadState()
     call music_block
 
-    $event.Finalize()    
+    $wtevent.Finalize()    
 
     if daytime:
         $ hermione_takes_classes = True

@@ -536,6 +536,33 @@ screen hermione_run: #Hermione running. facing right. (Leaving tower).
     tag hermione
     add "ch_hem run_f" at custom_walk_02(walk_xpos, walk_xpos2)
     
+### DR'S Newspaper ooo ###
+
+screen nsp_hermione_business :
+    tag hermione
+    add "03_hp/animation/nsp_business.png" at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
+    zorder 2
+    
+screen nsp_hermione_cheerleader_gryffindor :
+    tag hermione
+    add "03_hp/08_animation_02/nsp01_cheerleader_01.png" at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
+    zorder 2
+    
+screen nsp_hermione_cheerleader_gryffindor_dance1 :
+    tag hermione
+    add "nsp_cheerleader_dance1_ani" at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
+    zorder 2
+    
+screen nsp_hermione_cheerleader_gryffindor_dance2 :
+    tag hermione
+    add "nsp_cheerleader_dance2_ani" at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
+    zorder 2
+    
+screen nsp_hermione_panic :
+    tag hermione
+    add "nsp_hermiona_panic_ani" at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
+    zorder 2
+    
 ### GENIE CHIBI ###
 
 screen genie_walk: #Default Genie walk animation. 
@@ -596,9 +623,9 @@ screen points: #House points screen.
         spacing 10 xpos 37 ypos 11
         text "{size=-5}[ravenclaw]{/size}" 
     
-    hbox: ### DAYS COUNTER ###
-        spacing 10 xpos 630 ypos 10
-        text "{size=-3}[day]{/size}" 
+#    hbox: ### DAYS COUNTER ###
+#        spacing 10 xpos 630 ypos 10
+#        text "{size=-3}[day]{/size}" 
     
 #===TG MODS START===
 
@@ -1036,6 +1063,22 @@ screen l_head: #Screen that shows a full sprite of HERMIONE.
     if l_tears:
         add "03_hp/22_lola/tears.png" xpos lx ypos ly
     
+### HERMIONA ###
+
+screen l_hermiona: #Screen that shows a full sprite of HERMIONE.
+    tag body
+    zorder 8
+
+    add "00_ex_characters/00_hermione/graphics/hair/hair_normal_1.png" xpos hx ypos hy 
+    add "00_ex_characters/00_hermione/graphics/body/head.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/hair/hair_normal_2.png" xpos hx ypos hy    
+    add "00_ex_characters/00_hermione/graphics/body/body.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/body/legs_universal.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/body/hands_universal.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/body/tits_no.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/clothes/stockings/tights.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/clothes/skirts/skirt_business1.png" xpos hx ypos hy
+    add "00_ex_characters/00_hermione/graphics/clothes/shirts/blouse_business2.png" xpos hx ypos hy
     
     
     

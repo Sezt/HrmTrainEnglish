@@ -187,6 +187,7 @@ $ Hermione_here = False
 $ day_of_week = 0 #Counts days of the week. Everyday +1. When day_of_week = 7 resets to zero.
 $ report_chapters = 0 #Shows how many chapters of a current report has been completed so far. Resets to zero when report is finished.
 $ finished_report = 0 #Shows amount of completed reports.
+$ total_report = 0
 
 $ got_mail = False #Turns true is you have WORK mail waiting. Owl will be displayed.
 $ got_package = False #Turns TRUE when package from the "Muggle Oddities" catalog has arrived.
@@ -195,8 +196,177 @@ $ mail_from_her = False #Turns TRUE when there is a mail from Hermione. Basicall
 $ letter_text = []
 $ letters = 0 #Shows how many letters are waiting to be read. +1 every new letter arrives. -1 Every time you read one letter.
 
+### DR'S newspaper ooo ###
+
+$ nsp_genie_typographic = 0 # Джин: Тип типографского набора, в начале - 0. Отсюда же Качество печати для Газеты
+$ nsp_genie_typographic_exp = 0 # Растет при каждой публикации на 1, для покупки набора след уровня нужно не менее 2 публикаций с прошлым. При этом счетчик сбрасывается.
+$ nsp_genie_writer = 0 # Джин: Навык писателя статей, в начале - 0. Отсюда же Мастерство написания для Газеты.
+$ nsp_genie_photocamera = 0 # Джин: Тип используемого фотоаппарата, в начале - 0. Отсюда же украшения газеты.
+$ nsp_genie_photocamera_exp = 3 # Растет при каждом ивенте на 1, для покупки фотоаппарата (кроме 1-го) след уровня нужно не менее 3 ивентов с прошлым. При этом счетчик сбрасывается. Для покупки первого аппарата опыт уже как бы есть.
+$ nsp_genie_sphere = False # Джин: Наличие хрустального шара.
+$ nsp_genie_sphere_level = 0 # Джин: Навык владения хрустальным шаром.
+$ nsp_genie_sphere_level_exp = 0 # Джин: Опыт владения хрустальным шаром.
+$ nsp_genie_sphere_ruby_level = 0 # Джин: Уровень рубина для шара
+$ nsp_genie_sphere_diamond_level = 0 # Джин: Уровень алмаза для шара
+$ nsp_genie_sphere_sapphire_level = 0 # Джин: Уровень сапфира для шара
+$ nsp_genie_sphere_video = False # Джин: Наличие навыка переноса видео в газету
+
+$ nsp_genie_sphere_diamond_req = 0
+
+$ nsp_genie_sphere_ruby_level_eff = 0
+$ nsp_genie_sphere_diamond_level_eff = 0
+$ nsp_genie_sphere_sapphire_level_eff = 0
+
+$ nsp_germiona_mediawhoring = 0 # Гермиона: Медиа-развращенность
+$ nsp_germiona_impudence = 0 # Гермиона: Наглость
+$ nsp_germiona_artistry = 0 # Гермиона: Артистичность
+
+$ nsp_newspaper_bonus_text = "нет" # Газета: Текст, описание бонусного контента
+$ nsp_newspaper_bonus_point = 0 # Газета: Баллы за бонусный контент
+$ nsp_newspaper_bonus_base = 0 # Газета: Базовый бонус эвента
+$ nsp_newspaper_bonus_text_base = 0 # Газета: Базовый текст эвента
+$ nsp_newspaper_bonus_point_last = 0
+$ nsp_newspaper_qual_last = 0
+$ nsp_newspaper_last_money = 0 # Газета: Оценка публики, равна деньгам за предыдущий выпуск
+
+$ nsp_newspaper_qual = 10 # Газета: Качество текущего выпуска
+$ nsp_newspaper_cur_money = 10 # Газета: Оплата текущего выпуска
+$ nsp_newspaper_published = False # Газета была опубликована
+$ nsp_newspaper_published_mail = False # Письмо о награде за газету пришло
+
+$ nsp_newspaper_articles = 0 # Газета: Количество написанных статей. Когда количество достигает 8, газету можно публиковать и счетчик сбрасывается.
+$ nsp_newspaper_ready = False # Газета: Готовность.
+
+$ nsp_pre_jobs_max = 0 # Подсчет максимального числа отчетов, которые были отосланы. Если число больше или равно 4, то приходит письмо о газете.
+
+$ nsp_germiona_menu_rights = 1 # Гермиона: Доступность раздела "Права и дискриминация"
+$ nsp_germiona_menu_magls = 1 # Гермиона: Доступность раздела "О жизни маглов публично"
+$ nsp_germiona_menu_kviddich = 1  # Гермиона: Доступность раздела "О квиддиче"
+$ nsp_germiona_menu_sex = 1  # Гермиона: Доступность раздела "О Сексе"
+$ nsp_germiona_menu_maniac = 1  # Гермиона: Доступность раздела "Маньяк"
+$ nsp_germiona_menu_nude = 1  # Гермиона: Доступность раздела "Голый репортер в маске"
+$ nsp_germiona_menu_forest = 1  # Гермиона: Доступность раздела "Запретный лес"
+$ nsp_germiona_menu_studio = 1  # Гермиона: Доступность раздела "Студия у Джина"
+
+### Events flags
+$ nsp_event_rights_1 = 0
+$ nsp_event_rights_2 = 0
+$ nsp_event_rights_3 = 0
+$ nsp_event_rights_4 = 0
+$ nsp_event_rights_5 = 0
+
+$ nsp_event_magls_1 = 0
+$ nsp_event_magls_2 = 0
+$ nsp_event_magls_3 = 0
+$ nsp_event_magls_4 = 0
+$ nsp_event_magls_5 = 0
+
+$ nsp_event_kviddich_1 = 0
+$ nsp_event_kviddich_2 = 0
+$ nsp_event_kviddich_3 = 0
+$ nsp_event_kviddich_4 = 0
+$ nsp_event_kviddich_5 = 0
+$ nsp_event_kviddich_6 = 0
+
+$ nsp_event_sex_1 = 0
+$ nsp_event_sex_2 = 0
+$ nsp_event_sex_3 = 0
+$ nsp_event_sex_4 = 0
+$ nsp_event_sex_5 = 0
+
+$ nsp_event_maniac_1 = 0
+$ nsp_event_maniac_2 = 0
+$ nsp_event_maniac_3 = 0
+
+$ nsp_event_nude_1 = 0
+$ nsp_event_nude_2 = 0
+$ nsp_event_nude_3 = 0
+$ nsp_event_nude_4 = 0
+$ nsp_event_nude_5 = 0
+
+$ nsp_event_forest_1 = 0
+$ nsp_event_forest_2 = 0
+
+$ nsp_event_studio_1 = 0
+$ nsp_event_studio_2 = 0
+$ nsp_event_studio_3 = 0
+$ nsp_event_studio_4 = 0
+$ nsp_event_studio_5 = 0
+$ nsp_event_studio_6 = 0
+
+### Letters flags
+
+$ nsp_day = 0
+$ nsp_day_letter7 = 0
+
+$ nsp_letter_1 = 0
+$ nsp_letter_2 = 0
+$ nsp_letter_3 = 0
+$ nsp_letter_4 = 0
+$ nsp_letter_5 = 0
+$ nsp_letter_6 = 0
+$ nsp_letter_7 = 0
+$ nsp_letter_8 = 0
+$ nsp_letter_9 = 0
+$ nsp_letter_10 = 0
+$ nsp_letter_11 = 0
+$ nsp_letter_12 = 0
+$ nsp_letter_13 = 0
+
+$ nsp_pre_letter = 0 # Газета: Письмо о газете. 0 - не было, 1 - есть, 2 - уже прочитано.
+$ nsp_pre_snape = 0 # Газета: Разговоры со снейпом о газете, номер текущего этапа.
+$ nsp_pre_dahre = 0 # Газета: Доступность учебных книг о газете в каталоге Дахры.
+$ nsp_newspaper_menu = 0 # Газета: Уровень разблокировки газетных меню.
+
+$ hermione_out_halfday = 0
+
+###
+
+### DR'S wardrobe ###
+
+$ wrd_new_items = 0
+
+$ wrd_tits = 0
+$ wrd_tits_no = 1
+
+# SKIRTS
+$ wrd_skirt = 1
+$ wrd_shortskirt = 0
+$ wrd_xshortskirt = 0
+$ wrd_xxshortskirt = 0
+$ wrd_xsmallskirt = 0
+$ wrd_xxsmallskirt = 0
+$ wrd_xxxsmallskirt = 0
+$ wrd_skirt_cheerleader = 0
+$ wrd_skirt_business = 0
+
+# SHIRTS
+$ wrd_standart01 = 1
+$ wrd_standart02 = 0
+$ wrd_standart03 = 0
+$ wrd_standart04 = 0
+$ wrd_standart05 = 0
+$ wrd_skimpyshirt = 0
+$ wrd_shirt_cheerleader = 0
+$ wrd_shirt_business = 0
+
+# OTHER
+$ wrd_badge_01 = 0
+
+# STOCKINGS
+$ wrd_nets = 0
+$ wrd_tights = 0
+
+# RENT
+
+$ wrd_rent_happy_schoolgirl = 0
+$ wrd_rent_playful_schoolgirl = 0
+$ wrd_rent_cheerleader = 0
+$ wrd_rent_business = 0
+
 ### GETTING LETTERS ###
 $ letter_from_hermione_02 = False #Turns true when you get second letter from Hermione.
+$ letter_from_ficbook_fun = False
 
 ###SNAPE STATS###
 $ snape_busy = False #When True, you can't summon Snape.
@@ -258,6 +428,7 @@ $ tutoring_offer_made = False #If you offered her to tutor her (In event_12). Af
 
 $ phoenix_is_feed = False #When True the graphic of bird food being displayed on top of the phoenix food can.
 $ fire_in_fireplace = False #When True there is a fire going in the fireplace.
+$ hat_act = False
 
 #$ summoning_hermione_unlocked = False #Unlocks after event_14. Adds "Summon Hermione" button to the door.
 #$ tutoring_hermione_unlocked = False #Unlocks after event_14.
@@ -380,6 +551,7 @@ $ cupboard_examined = False
 $ bird_examined = False
 $ door_examined = False
 $ fireplace_examined = False
+$ hat_examined = False
 
 if this.event_05._finish2==4: 
     $ day = 4 # Если в начале новой игры выбрано перепрыгнуть на утро после дуэли т.е. event_05._finish2=4, установить день = 4
@@ -388,23 +560,13 @@ if this.event_05._finish2==4:
     $ bird_examined = True
     $ door_examined = True
     $ fireplace_examined = True
+    $ hat_examined = True
     $ rum_times = 4
+$ report_talk = False    
+call wrd_dress_change_silent
 
-#===TG MODS START===
 
-    # Since we're skipping, let's do the stuff we normally do at the start...
-    # The stuff when the desk is first examined:
-    $ known_dates['hogsmeade_weekends'] = True
-    $ dates_list = important_dates['hogsmeade_weekends']
-    $ add_cal_notes(dates_list, 'hogsmeade_weekends')
-
-    python:
-
-        # Incrementing the day 4 times:
-        for x in range(4):
-            increment_cal_date()
-
-#===TG MODS STOP===
+call wrd_dress_change_silent
 
 # QUESTS #==============================================================================================================================================
 $ zyablik_switch = 0
@@ -521,14 +683,17 @@ $ hermione_sleeping = False
 $ hermione_takes_classes = False
 $ snape_busy = False
 $ fire_in_fireplace = False
+$ hat_act = False
 hide screen fireplace_fire
 
 ### EVENTS RELATED FLAGS ###
 $ days_without_an_event +=1
 
+if letters < 0 : # На случай всяких неожиданностей
+    $ letters = 0
 
 ### PAPERWORK (MONEY-MAKING) RELATED FLAGS ###
-if day_of_week == 7: #Counts days of the week. Everyday +1. When day_of_week = 7 resets to zero.
+if day_of_week >= 7: #Counts days of the week. Everyday +1. When day_of_week = 7 resets to zero.
     $ day_of_week = 0
     if finished_report >= 1:
         $ got_paycheck = True #When TRUE the paycheck is in the mail. Can't do paper work.
@@ -540,7 +705,26 @@ $ day_of_week += 1
 # Ежеденевные изменения для всех персонажей
 $hermi.liking+=1
 $daphne.liking+=1
+
+### DR'S newspaper ooo ###
+#">>>[nsp_newspaper_articles] [nsp_newspaper_ready] [nsp_newspaper_published] [nsp_newspaper_published_mail]"
+
+if nsp_pre_jobs_max < finished_report:
+    $ nsp_pre_jobs_max = finished_report
     
+if nsp_newspaper_menu >= 6 :
+    $ nsp_day += 1
+    $ nsp_day_letter7 += 1
+    
+if nsp_letter_7 == 3:
+    $ nsp_letter_7 = 0
+
+# На случай бага-пересечения с другим письмом.
+if nsp_letter_7 == 2:
+    $ nsp_letter_7 = 0
+    
+if nsp_letter_7 == 1:
+    $ nsp_letter_7 = 2
 
 ### MUGGLE ODDITIES RELATED FLAGS ### VERSION TWO. This one randomizes delivery waiting days.
 if order_placed: #TRUE when and order has been placed on an item.
@@ -552,6 +736,7 @@ if order_placed: #TRUE when and order has been placed on an item.
 
 
 scene black
+
 $ raining = False #No rain before the weather has been chosen at the beginning of every day.
 hide screen new_window #Hiding clear sky bg.
 hide screen cloud #THE CLOUD.
@@ -607,7 +792,7 @@ hide screen with_snape #Genie hangs out with Snape in front of the fireplace.
 hide screen with_snape_animated #Genie hangs out with Snape in front of the fireplace.
 if package_is_here:
     hide screen package
-    
+
 
 show screen door   
 show screen cupboard
@@ -620,6 +805,7 @@ show screen candle_02
 
 
 ### DAY MAIL ###
+
 if day == 2:
     $ letter_from_hermione_02 = True #Turns true when you get second letter from Hermione.
     $ letters += 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
@@ -627,12 +813,52 @@ if day == 2:
 if day == 12: # LETTER THAT UNLOCKS PAPERWORK BUTTON.
     $ work_unlock = True # Send a letter that will unlock an ability to write reports.
     $ letters += 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
+
+### DR'S NEWSPAPER ooo ###
+
+if day > 20 and nsp_pre_jobs_max >= 4 and nsp_pre_letter < 1:
+    $ nsp_pre_letter = 1
+    $ letters += 1
+
+if nsp_newspaper_published_mail == False and nsp_newspaper_published == True :
+    $ nsp_newspaper_published_mail = True
+    $ letters += 1
     
+if nsp_day == 10:
+    $ nsp_letter_1 = 1
+    $ letters += 1
+    
+# DR'S PUB DISABLE    
+#if nsp_day == 40:
+#    $ nsp_letter_2 = 1
+#    $ letters += 1
+    
+#if nsp_day >= 20 and nsp_letter_9 == 0 and nsp_event_forest_1 >= 1:
+#    $ nsp_letter_9 = 1
+#    $ letters += 1
+
+#if nsp_day_letter7 == 7 and nsp_letter_7 == 0 and nsp_event_rights_3 < 5 :
+#    if one_of_ten <= 7:
+#        $ nsp_letter_7 = 1
+#        $ letters += 1 
+#    $ nsp_day_letter7 = 0
+    
+if letters <= 0 : # Чинит отчеты и публикации газеты в случае потери писем.
+    $ nsp_newspaper_published = False
+    $ nsp_newspaper_published_mail = False 
+    $ got_paycheck = False
+    
+
+###
+
 if package_is_here:
     play sound "sounds/owl.mp3"  #Quiet...
     show screen package
 show screen genie
 
+if total_report >= 10 and letter_from_ficbook_fun == False:
+    $letters+=1
+    
 if this.IsStep("MAIL"):
     $letters+=1
 if got_mail or mail_from_her or letters >= 1:
@@ -657,15 +883,42 @@ $ day +=1
 $ increment_cal_date()
 
 #===TG MODS STOP===
+    
+# RENT RESET
+    
+if wrd_rent_happy_schoolgirl == 1 :
+    ">С мягким шелестом форма веселой школьницы рассыпалась в пыль."
+    
+if wrd_rent_playful_schoolgirl == 1 :
+    ">С мягким шелестом форма игривой школьницы рассыпалась в пыль."
+    
+if wrd_rent_cheerleader == 1 :
+    ">С мягким шелестом форма болельщицы Гриффиндора рассыпалась в пыль."
+    
+if wrd_rent_business == 1 :
+    ">С мягким шелестом одежда бизнес-леди рассыпалась в пыль."    
+    
+$ wrd_rent_happy_schoolgirl = 0
+$ wrd_rent_playful_schoolgirl = 0
+$ wrd_rent_cheerleader = 0
+$ wrd_rent_business = 0
+
+###
 
 ### DAY EVENTS ###<============================================================================================================================================================
 
-$ this.RunStep("DAY")
+### DR'S Newspaper ooo ###
+if nsp_newspaper_menu == 8 :
+    jump nsp_snape_dialog3
 
+$ hermione_out_halfday -= 1
 
-
-
+if hermione_out_halfday <= 0 :
+    $ hermione_out_halfday = 0
+    $ this.RunStep("DAY")
     
+    
+###
     
     
 
@@ -677,7 +930,7 @@ if phoenix_is_feed:
     
     
 
-if day == 1 and daytime and bird_examined and desk_examined and cupboard_examined and door_examined and fireplace_examined:
+if day == 1 and daytime and bird_examined and desk_examined and cupboard_examined and door_examined and fireplace_examined and hat_examined:
     show screen bld1
     with d3
     m "It's getting darker already..."
@@ -693,12 +946,6 @@ call screen main_menu_01
 
 
 
-    
-
-
-
-
-
 
 ####NIGHT STARTS HERE###<<<<<<<<<<<-----------------------------------------------------------------------------------------------------###
 ###=====================================================================================================================================###
@@ -706,7 +953,7 @@ label night_start:
     play music "music/Music for Manatees.mp3" fadein 1 fadeout 1 # NIGHT MUSIC
     
 
-    
+
     
     
 $ daytime = False  
@@ -715,6 +962,7 @@ $ hermione_takes_classes = False
 $ chitchated_with_snape = False #Prevents you from chitchating more then once a day. Turns back to False every night and every day.
 $ chitchated_with_her = False #Prevents you from chitchatting with Hermione more then once per time of day. Turns back to False every night. (And every day).
 $ gifted = False #Prevents you from giving Hermione a several gifts in a row. Turns back to False every night and every morning.
+$ hat_act = False
 
 stop bg_sounds #Stops playing the fire SFX.
 stop weather #Stops playing the rain SFX.
@@ -816,13 +1064,23 @@ if teacher_jinn_quest == 5:
 if study_book_quest_counter == 3 and teacher_jinn_quest == 5:
     jump event_16
 
+if total_report == 5 and report_talk == False:
+    $ report_talk = True
+    jump bad_reports
+
 
 
 ### NIGHT REQUESTS ###
 
+### DR'S Newspaper ooo ###
 
-$ this.RunStep("NIGHT")
+$ hermione_out_halfday -= 1
 
+if hermione_out_halfday <= 0 :
+    $ hermione_out_halfday = 0
+    $ this.RunStep("NIGHT")
+
+###
 
 
 

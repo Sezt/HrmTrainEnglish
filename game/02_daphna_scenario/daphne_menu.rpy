@@ -13,44 +13,30 @@ label daphne_approaching(isKnocking=False):
 #    $daphne.LoadDefItemSets()
 
 #    if this.IsStep("DAPHENTER"):
-    if hero._perfumeused==time.stamp:
-        $daphne.chibi.State("center").Trans(d4, "blink")
-        $daphne.Visibility("body+", False)
-        $daphne("~55 01 1 dis// Sir... Ahhm... Sorry, but...")
-        $hero ("Yes, girl?")
-        $daphne("~55 00 1 dis// What you talking about?...")
-        $hero("?!")
-        $daphne("~55 s0 1 dis// That rat poison?!// I can't stay a single second longer!")
-        $daphne.liking-=5
-        $daphne.Visibility(transition=d3).chibi.Trans("goout door").Hide(d3)    
-        $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-        pause.5
-        call music_block
-# Завершение ивента, который исполнялся 
-        jump expression ["day_main_menu", "night_main_menu"][1-daytime]   
-
-
     $this.RunStep("DAPHENTER")  
 
     $daphne.chibi.State("center").Trans(d4, "blink")
+
+
     $daphne.Visibility("body+", False)
 
-
+    $felixblock = False
+    
     python:
         for t in [
-            (0, ["~55 00 1 def// Yes, Professor?"]),
-            (-2, ["~55 00 1 neu// >Looks Like Daphne is still a little upset with you..."]),
-            (-9, ["~55 00 1 pri// >Daphne is upset with you."]),
-            (-19, ["~37 00 1 pri// >Daphne is really upset with you."]),
-            (-39, ["~26 00 1 dis// >Daphne is mad at you."]),
-            (-49, ["~26 00 1 dis// >Daphne is very mad at you."]),
-            (-59, ["~26 s0 1 dis// >Daphne is angry with you."]),
-            (-100, ["~26 s0 1 dis// >Daphne hates you."])
+            (0, ["daphne:> ~55 00 1 def// Да, профессор?"]),
+            (-2, [">Похоже, Дафна по-прежнему немного расстроена вами..."]),
+            (-9, [">Вы расстроили Дафну."]),
+            (-19, [">Дафна очень расстроена вами."]),
+            (-39, [">Дафна злится на вас."]),
+            (-49, [">Дафна очень злится на вас."]),
+            (-59, [">Дафна гневается на вас."]),
+            (-100, [">Дафна ненавидит вас."])
             ]:
             (_val, _texts)=t
             if daphne.liking>=_val:
                 for s in _texts:
-                    daphne(s)
+                    Say(s)
                 break
 
     
@@ -62,19 +48,19 @@ label daphne_approaching(isKnocking=False):
             if daphne.liking >= -7:
                 jump daphne_chat
             else:
-                $daphne("~37 00 1 pri// I have nothing to say to you...")    
+                $daphne("Мне нечего сказать вам...")    
                 jump daphne_main_menu
 
         "- Training -" if this.daphne_pre_finish.IsFinished():#buying_favors_from_hermione_unlocked:
             if daphne.liking<0:
                 python:
                         for t in [
-                        (-2, "~55 00 1 neu// I'm sorry, Professor, maybe another time..."),
-                        (-9, "~55 00 1 pri// I don't want to today...\nMaybe in a couple of days..."),
-                        (-19, "~37 00 1 pri// No, thanks...."),
-                        (-29, "~26 00 1 dis// After what you did?\nI don't think so..."),
-                        (-39, "~26 00 1 dis// Are You serious!?"),
-                        (-100, "~26 s0 1 dis// Is this a joke?!\nAfter what you did, I don't want to repeat that!")
+                        (-2, "Мне жаль, профессор, может быть в другой раз..."),
+                        (-9, "Мне не хочется сегодня...\nМожет быть через пару дней..."),
+                        (-19, "Нет, спасибо...."),
+                        (-29, "После того, что вы сделали?\nЯ так не думаю..."),
+                        (-39, "Вы серьезно!?"),
+                        (-100, "Это какая-то ваша пошлая шутка?!\nПосле того, что вы сделали, я не хочу повторять это!")
                         ]:
                             (_val, _text)=t
                             if daphne.liking>=_val:
@@ -97,17 +83,18 @@ label daphne_approaching(isKnocking=False):
                         "\"(Yes, lets do it.)\"":
                             if this(choose.choice)._finishCount>=3:
                                 pause 1.0
-                                skaz "Sorry to interrupt at the most interesting place? "
-                                skaz "But this storyline so only finished up to this point..."
-                                skaz "(However, you still have access to the other storylines)."
-                                skaz "Leave your questions, thanks and wishes on our {a=http://wtrus.ixbb.ru/viewtopic.php?id=9}FORUM{/a}. \P Your comments will stinmulate us and the story will continue so much faster. :)"
+                                skaz "Жаль прерываться на самом интересном месте?"
+                                skaz "Нам тоже. Но данная сюжетная линия пока дописана только до этой точки..."
+                                skaz "{size=-3}(впрочем, вам доступны другие сюжетные линии){/size}"
+                                skaz "Оставьте ваши вопросы, благодарности и пожелания на нашем {a=http://wtrus.ixbb.ru/viewtopic.php?id=9}ФОРУМЕ{/a}."
+                                skaz "Так вы простимулируете нас и продолжение появится быстрее. :)"
                                 jump daphne_main_menu_requests 
 
                             call expression this(choose.choice).Name
                         "\"(Not now.)\"":
                             jump daphne_main_menu_requests 
                     
-                    if not event.Name in {"dap_request_01"}: # Дневные задания или задания на которых не обещается подрок
+                    if not wtevent.Name in {"dap_request_01", "IsRunNumber(4)"}: # Дневные задания или задания на которых не обещается подрок
                         call daphne_pre_menu(_return) # Вызов меню подарков
                     else:
                         $screens.HideD3("bld1")
@@ -116,10 +103,10 @@ label daphne_approaching(isKnocking=False):
                         pause.5
                         call music_block
 # Завершение ивента, который исполнялся 
-                    if event._scenario==None: 
-                        $event.Finalize("day_main_menu" if daytime else "night_main_menu")    
+                    if wtevent._scenario==None: 
+                        $wtevent.Finalize("day_main_menu" if daytime else "night_main_menu")    
                     else:
-                        $event.Finalize("night_start" if daytime else "day_start")    
+                        $wtevent.Finalize("night_start" if daytime else "day_start")    
 
 
                      
@@ -213,7 +200,7 @@ label daphne_chat:
         $ this.RunStep("DAPHNECHAT")
     else:
         $daphne("~55 00 1 def")
-        if daphne.whoring in {0,1,2}:
+        if daphne.whoring in {0,1,2,3,4,5,6}: 
             $daphne([
             "~46 00 1 ope// Fight the Mudbloods!// That should be a commandment for each true wizard!",
             "~37 00 1 pri// Today, that Mudblood Granger again received the highest score. Where is the Ministry when you need them?!//"
@@ -225,7 +212,7 @@ label daphne_chat:
                 "~55 00 1 smi// But I would never replace her.//"
                 "~55 c0 1 smo// She is also a true pureblood!"
             ][Rand(5)-1])
-        elif daphne.whoring in {3,4,5}:
+        elif daphne.whoring in {7,8,9,10,11,12}:
             $daphne([
             "~64 00 1 dis// The competition is approaching and the stress is getting to me. I could us a to drink sometimes, to relax a little...//"
                 "~55 01 2 ehh// Oh, sorry, Professor, that slipped out. I didn't mean it!",
@@ -238,6 +225,7 @@ label daphne_chat:
                 "~37 n2 2 def// Some guys were staring at me...// ~37 00 2 pou// Not sure I approve of that, sir!"
             ][Rand(5)-1])
 
+# Добавить новую ветку разговоров # Придумывать надо
 
     jump daphne_main_menu
 

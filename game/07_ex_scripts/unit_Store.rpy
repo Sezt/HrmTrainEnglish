@@ -183,11 +183,11 @@ init -999 python:
     def InitEntriesFields():
         if hasattr(renpy.store,"elog"): # Если уже инициализирован elog
 #            this.InitStart()
-            if hasattr(renpy.store,"event"):
-                if renpy.store.event!=None: # Состояние переменной объекта event после чтения сохранения может отличаться от полей объекта this.GetCall(event.Name). 
+            if hasattr(renpy.store,"wtevent"):
+                if renpy.store.wtevent!=None: # Состояние переменной объекта wtevent после чтения сохранения может отличаться от полей объекта this.GetCall(wtevent.Name). 
                     for e in this.List: # Нужно сопоставить их, иначе присвоение полей одного из объектов непредсказуемо влияет на поля другого
-                        if e.Name==renpy.store.event.Name:
-                            renpy.store.event=this.GetCall(renpy.store.event.Name)
+                        if e.Name==renpy.store.wtevent.Name:
+                            renpy.store.wtevent=this.GetCall(renpy.store.wtevent.Name)
                             break
 
             for o in entries:   # Если значение не заполнено (т.е. разрабдотчик ввел новое или новый объект появился) - заполнить значениями по умолчанию
@@ -214,6 +214,6 @@ init -999 python:
             if (__entry.GetValue("members")!=None):
                 if ("daphne" in __entry.GetValue("members")) and (subkey=="finishCount") and (newvalue>(0 if oldvalue==None else oldvalue)):
                     if hermi._pointsPerDaphneVisit>0:
-                        Say("In your agreement with Hermione Gryffindor gets 10 points")
+                        Say("По вашему соглашению с Гермионой Гриффиндор получает 10 очков")
                         renpy.store.gryffindor+=10
 

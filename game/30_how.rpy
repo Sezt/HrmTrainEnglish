@@ -325,25 +325,136 @@ label faq2:
             a1 "And of course patreon and hentaiunited community. You guys are awesome."
             a1 "Thank you for being so supportive and for financing the development of this game. You guys made this world a bit better place."
             jump faq2
-        "Is it OK to hack and translate this game?":
+        "Будет ли продолжение этой игры?":
+            a1 "Как я уже говорил, я не стою на месте."
+            a1 "И уже начал разработку нового проекта. {size=-4}(\"Тренер Принцессы Золотое Издание\"){/size}"
             a1 "..."
             a1 "..."
-            a5 "no."
-            define nyor = Character('Khan32', color="#9F42AB")
-            nyor "Strange question, do not you?"
-            nyor "And this is after I messed around all day to bring the game back to English!"
-            nyor "Agrh!"
-            nyor "In general, the fellow that looked."
-            nyor "minute of Fame."
-            nyor " translation by Khan32"
-            nyor "Game made for you: Eskelsama, Dmitry Shumov ,Skazochnik, Nyarkohotep, alex 666p, Khan32"
-            nyor "Sorry if someone forgot :3!"
-            nyor "Do not forget to use a napkin, guys, bye bye!"
+            a1 "Но если тебе понравилась конкретно эта часть, ты можешь найти группу программистов-энтузиастов занимающихся модифицированием..."
+            a1 "А возможно и продолжением клиента."
+            a6 "И хоть я и против этого..."
+            a2 "Но от них не избавиться."
+        "Можно взломать и перевести эту игру?":
             a1 "..."
+            a1 "..."
+            a5 "Нет."
+            define nyor = Character('Nyarkohotep', color="#9F42AB")
+            nyor "Странный вопрос, не находишь?"
+            nyor "И это после того, как я полтора гребанных часа возился, чтобы перевести никому не нужные FAQ и обучалки!"
+            nyor "Агрх!"
+            nyor "А вообще, молодец, что заглянул."
+            nyor "Минута славы."
+            nyor "Перевод для вас пилили \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=14141420}Ave_Fletch{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=15155170}Discordnk90{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=8041771}maniac4a{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=4472572}Rio-Violente{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=16957111}MrFrost1991{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=18304384}babaylolxz{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=15179745}Khan32{/a}, \
+            {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=11908608}sn0rk95{/a}, \
+            и любимец публики {a=http://pornolab.net/forum/profile.php?mode=viewprofile&u=16733487}Nyarkohotep{/a}."
+            nyor "Извините, если кого-то забыли :3!"
+            nyor "Не забывайте пользоваться салфетками, ребята, пока-пока!"
+            a1 "..."
+            a5 "А спросить моего разрешения на перевод, не нужно?"
+            felix "Ты вроде как ушел..."
+            a1 "..."
+            a6 "Это ничего не меняет..."
+            felix "Да конечно..."
             jump faq2
 
-        "Nevermind. Let me out of here!":
+        "Неважно. Выпусти меня отсюда!":
             return
 
     
     return
+
+
+########################
+# From developers
+
+label devel:
+
+    $ end_u_1_pic =  "title3.jpg" #<---- SCREEN
+    show screen end_u_1                                             #<---- SCREEN
+    play music "music/GrapeSodaIsFuckingRawbyjrayteam6.mp3" fadein 1 fadeout 1
+    
+    dr "Итак, вы уже обратили внимание, что это не оригинальная игра Акабура..."
+    menu :
+        "Что ???" :
+            dr "(facepalm)"
+            dr "Я так и знал, что нужно давать больше информации общественности..."
+        
+        "Это же шутка ?" :
+            dr "..........."  
+        
+        "А разве ты не Акабур ?" :
+            dr "В рот мне ноги..."
+            
+    dr "{size=+3}Т.е. вы все по-прежнему считаете, что игру для вас продолжает улучшать Акабур ?{/size}"
+    dr "И это после того, как он сообщил, что считает ее законченной ?"
+    dr "После того, как он решил никогда ее не переводить на русский ?"
+    dr "После того, как я написал всю эту гору кода, не говоря уж об остальной команде разработчиков, переводчиков и художников, месяцами бесплатно трудящихся для вас ?"
+    dr "{size=+4}Аргх...{/size}"
+    dr "......."
+    dr "Простите, наболело."
+    
+    dr "Итак, для вас трудились :"
+    dr "Главный координатор (встречайте стоя !): {color=4F4F4F}Хан ( Khan ){/color}"
+    dr "Главный разработчик : {color=00FF00}Дрон (dron12355){/color}"
+    dr "Разработка и ивенты Дафны : {color=7789CA}Феликс{/color}"
+    dr "Поддержка игры (на плаву) : {color=0000FF}Сказочник{/color}"
+    dr "Перевод на английский язык : {color=0089BE}Хан и Sezt{/color}"
+    dr "Разработка и обучающие ивенты : {color=FF0000}Nyarkohopter{/color}"
+    dr "Чибики Дафны : {color=2F2F2F}Grending{/color}"
+    dr "Дафна : {color=6F6F6F}Zio Dyne{/color}"    
+    
+    dr "Список особых благодарностей :"
+    dr "{color=0F0F0F}Евгений aka Afar{/color} - за великолепный кодинг и неоценимый вклад в развитие проекта !"
+    
+    $ hx = 370
+    $ hy = 0
+    $ h_red_angry = True
+    $ h_angry = False
+    $ h_smile = False
+    
+    dr "И несравненная Гермиона Грейнджер в роли офисной шл..."
+    show screen l_hermiona
+    her "Что-о-о-о ???"
+    hide screen l_hermiona
+
+    dr "Прости, в роли секретут..."
+    $ h_red_angry = False
+    $ h_angry = True
+    $ h_smile = False
+    show screen l_hermiona
+    her "А на тебя давно в последний раз подавали в суд\n за половую дискриминацию ?"
+    hide screen l_hermiona
+    dr "Бхм. И наша главная офис-леди - мисс Грейнджер."
+    $ h_red_angry = False
+    $ h_angry = False
+    $ h_smile = True
+    show screen l_hermiona    
+    her "Так то лучше !"
+    her "Всем до встречи в игре."
+    hide screen l_hermiona 
+    dr "Недотрога..."
+    dr "Ушла наконец."
+    
+    dr "Итак, приятной игры, друзья !"
+    
+    dr "А если хотите пообщаться с людьми, которые продолжают совершенствование и расширение игры, милости просим."
+    dr "{a=http://wtrus.ixbb.ru}НАШ ФОРУМ ТУТ{/a}"
+
+
+return
+
+label forum:
+
+    $ end_u_1_pic =  "title3.jpg" #<---- SCREEN
+    show screen end_u_1                                             #<---- SCREEN
+    
+    dr "Итак, перед вами модификация игры, которая развивается независимой (от Акабура) командой разработчиков. Добро пожаловать на {a=http://wtrus.ixbb.ru}НАШ ФОРУМ{/a}."
+
+return

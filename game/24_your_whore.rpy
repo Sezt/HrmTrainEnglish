@@ -504,7 +504,6 @@ label your_whore:
         her "You were supposed to treat me \"right\", sir..."
         her "And what did you do instead?"
         m "*Khem!* Let me repeat my previous statement:..."
-        m "{size=+7}\"huh?\"{/size}"
         $ end_u_1_pic =  "03_hp/17_ending/94.png" #<---- SCREEN
         show screen end_u_1                                           #<---- SCREEN
         with d7                                                                       #<---- SCREEN
@@ -2524,9 +2523,10 @@ label your_whore:
         m "Come on, girl. Pull yourself together!"
         $herViewHead.showQ( "body_178.png", posHead )
         if end.IsEnding(const_ENDING_STRONG_GIRL):
-            her2 "Excuse me, sir. I tried not to be a whore in front of those monsters, even though I know that you like that I am a whore."
+            $music("Supergirl")
             her2 "But, apparently, it is hard to turn against your nature. Everything turned out alright."
             her2 "Did it happen to please you, sir?"
+            her2 "Мне ведь получилось вам угодить, сэр?"
             $herViewHead.hideQ()
             m "What do you mean?"
             $herViewHead.showQ( "body_178.png", posHead )
@@ -2625,7 +2625,7 @@ label your_whore:
             $herViewHead.showQ( "body_179.png", posHead )
             #$ h_body = "03_hp/13_hermione_main/body_176.png" # HERMIONE
             her "Farewell, sir..."
-            $MusicStop()
+            $music()
         else:
             her "I... I... What?"
             her "I don't understand... I..."
@@ -3723,7 +3723,7 @@ label test:
     $ dermo = "ch_sna defend"
     
     show screen credits_chibi
-    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.4 (Russian Edition - English Version)-{/color}{/size}\n\n\n\
+    centered "{cps=20}{size=+5}{color=#ea91b0}-Witch trainer 1.5 (Russian Edition - English Version)-{/color}{/size}\n\n\n\
     {color=#e5e297}-\{English Witch Trainer Translation:\}-{/color}\n\
     {color=#fff}\
     {a=http://wtrus.ixbb.ru/profile.php?id=3}Khan{/a}, {a=http://wtrus.ixbb.ru/profile.php?id=307}Sezt{/a},\n\
@@ -3751,7 +3751,11 @@ label test:
     \n\n\
     {size=-5}{color=#e5e297}-\{{Beta testing English Version:\}-{/color}\n\
     {color=#fff}\
-    megablue5, K. Yeezus{/color}{/size}\n\
+    Vitamin05, Тохрин, Suhi, Lrm, Sora015, Bananamantana, Ignes, Appo, BAPK, Kril', Xeron, Vadim, Melem, Димитрий {/color}{/size}\n\ 
+    \n\n\
+    {size=-7}{color=#e5e297}-\{На ранних этапах игры участие также принимали:\}-{/color}\n\
+    {color=#fff}\
+    appo, Dimon_Tools, illidan, darg55, Fuhrick, Y-ART, Zilot{/color}{/size}\n\
     \n\n\n\
     "
 
@@ -3805,6 +3809,9 @@ label test:
     {color=#e5e297}\"Hitman\" {/color}{color=#cbcbcb}by  Kevin MacLeod.{/color}\n\
     {color=#e5e297}\"Music for Manatees\" {/color}{color=#cbcbcb}by  Kevin MacLeod.{/color}\n\
     {color=#e5e297}\"Plaint\" {/color}{color=#cbcbcb}by  Kevin MacLeod.{/color}\n\
+    {color=#e5e297}\"Supergirl\" {/color}{color=#cbcbcb}by  Reamonn.{/color}\n\
+    {color=#e5e297}\"Lullaby\" {/color}{color=#cbcbcb}by  Cure.{/color}\n\
+    {color=#e5e297}\"Symphony\" {/color}{color=#cbcbcb}by  Bitter Sweet.{/color}\n\
     {color=#e5e297}\"Under-the-Radar\" {/color}{color=#cbcbcb}by  PhobyAk.{/color}{/cps}"
  
     
@@ -3841,7 +3848,7 @@ label test:
     \
     {size=-1}{color=#e5e297}-\"AGENT\" pledges-{/size}\n\
     {color=#cbcbcb}Cameron MacDowell, Zarsher, Guynonymous, Nerzha, Silvanus2004, Xipomus, Carpy Rex, Adler, Deitan-Baruch St-Amand, Martin Neal, wetrx, mark howard, \
-Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexandre Rouleau, thomas taylor, Alexander, Redmoonx22, Valdee, Alexander Lykke Landkildehus, Lucas Ferrari, Dom, derek zhang,Charlatan, Preston C T, waylan, Forrest, Loopy, JohnnyBB, Phantom Void, Kyaa, Stephen Richardson, mark herzog, will newton, Sascha Klug, Joshua McDonald, Undying S, John Cawley III, KitsuneEyes, Slingthatcat, Kieran James, Homod saleh al-shammri, randomuser89, Paul Keating, Antonio B, Marko, Tobias, Akhil Chokshi, Smiling_Jack, Clif Morgan, Derek Heynsbergen, Jack Cartwright, Damien Zaid, callmemusashi Mozambiqued, Nemesis Valentine Vanyar, Stalker, Jason, 4nubis, Curtis, Michael Simon, AB, The Wanderer (Mark Hawker), paul, JEB, Voe, Aselobar, Elgrangato82, froste, YllegaL, Bisongun, Skye Tomlinson, Parad0x, Eric Chen, Destiny, Podchamawa Petrovitch, Will, lc, Sathyan Mathai, Lisandro Gil, bill tedd, Tommy Turner, Marcel Kral, Oric13, Ren Ashjiro, anthony donihee, Honey Withers, Christopher, TofuCats, Drake King, Bookfisher Herring, Dustpan, dusty parrott, Bjorn, Robert Jolly, wilson yang, Tudor G, Arzaz, Etienne Ngo, xazathothx, Robert L Schliff, RO, DavidB, Daedilus, david green, Matt, Ketil, ALEXANDER KOVALEV, Oa, John, PG, largo_leet, David, Artemsgvozdem, heyPert.{/color}{/size}\n\n{/cps}"\
+Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexandre Rouleau, thomas taylor, Alexander, Redmoonx22, Valdee, Alexander Lykke Landkildehus, Lucas Ferrari, Dom, derek zhang,Charlatan, Preston C T, waylan, Forrest, Loopy, JohnnyBB, Phantom Void, Kyaa, Stephen Richardson, mark herzog, will newton, Sascha Klug, Joshua McDonald, Undying S, John Cawley III, KitsuneEyes, Slingthatcat, Kieran James, Homod saleh al-shammri, randomuser89, Paul Keating, Antonio B, Marko, Tobias, Akhil Chokshi, Smiling_Jack, Clif Morgan, Derek Heynsbergen, Jack Cartwright, Damien Zaid, callmemusashi Mozambiqued, Nemesis Valentine Vanyar, Stalker, Jason, 4nubis, Curtis, Michael Simon, AB, The Wanderer (Mark Hawker), paul, JEB, Voe, Aselobar, Elgrangato82, froste, YllegaL, Bisongun, Skye Tomlinson, Parad0x, Eric Chen, Destiny, Podchamawa Petrovitch, Will, lc, Sathyan Mathai, Lisandro Gil, bill tedd, Tommy Turner, Marcel Kral, Oric13, Ren Ashjiro, anthony donihee, Honey Withers, Christopher, TofuCats, Drake King, Bookfisher Herring, Dustpan, dusty parrott, Bjorn, Robert Jolly, wilson yang, Tudor G, Arzaz, Etienne Ngo, xazathothx, Robert L Schliff, RO, DavidB, Daedilus, david green, Matt, Ketil, ALEXANDER KOVALEV, Oa, John, PG, largo_leet, David, Artemsgvozdem, heyPert.{/color}{/size}\n\n{/cps}"
          
          
     nvl clear
@@ -3853,6 +3860,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     {size=-4}{color=#cbcbcb}Adam, Alvin, AmateurArtist98, Anders Sandahl, Naqqash Chaudhry, Andre, Andrew E., Bayushi, Ben Belcastro, Brandon Louie, Brandon Robinet, Brian Wilson, Carmen Williams, Chad Bennett, Dan George, Darklogic, Darknezzz, Dave Shevlin, David Crosby, David Sparkes, Douglas Jones, Draconic Paragon, DragonTamer, Ervin, Francis Dixson, Fredinator, Gene Boglin, George Craig, Greg, Guillaume Mroz, Gustaf Johansson, Hirin, Ian Lindop, IanDasein, Inge, Izzy Sabur, JBTClown, JP, Jack, Jacob Kain, Jan Hanenkamp, Jan M., Jan, Johannes Uwer, John Turner, Joshua Baadsgaard, KiSwordsman, Krux2022, L, Legio 20th, Marconi Ribeiro, Mike, Marius L, Mathias Frandsen, Matthew Marqueta, Max, Michael Webb, Miha Antauer, Mikhail V. Platonov, Mitch, Mountainj6, MrDurper, Sean Hill, Sam, Muirewedd, Neogeta, Nick Foronda, Nick, Noah Gerhards, Oren Barzilai, Pashike, Peeves, Phil Fairbanks, Philip G Honore, Riu Bas, Robert, Reinis Aleksejevs, Rougespartan181, Robert Lesundak, SO, SYH, Sacs, Sapherin, Sayyid, Sean, Shawn MacInnis, Simanith, Soda Zero, Speculations, Stephen Evans, Stonedrake, TRONboy, Tamenund Jones, Tintron, Victor Jd, Vincent McCool, Vitaliy Kasianenko, Vorcai0, Wolfcub, X.p., X39, Yan Luong, Zaker, chippy, joesco726, kurorol2, lambroll, ljennia, matthew lampell, moonwalkin, nh, raaq, six2make4, zack, Andry Sidorov.{/color}{/size}\n\n\
     \
     {size=-1}{color=#e5e297}-\"SUPPORTER\" pledges-{/size}\n\
+    {size=-4}{color=#cbcbcb}AS84, Aaron Gregory, Gianfranco Calzoni, Aarvil Kemph, Aestus, Alex Martin, Andrea, Andreas, Andrew, Antilles, Antonboeg, Aran, Armando Soto, Azuliar, Batman, Balint Sule, Ben Rog-Wilhelm, Benjamin Cathey, Beth, Brad Hingston, Brandon Grant, Brendan, Brian Borden, Bru, Canyon, Capperroff, Chaintan, Christian Wong, Colton Clayton, Corey S., D, Damian Paradis, Daniel Chai, Daniel Geach, Daniel, Danny Mullay, Darpy, Dave doedry, David Leitner, Dax, Doctor Worm, Dragonman, Edd Holmes, Erebe, Eric Speaker, Fattycakes, FearTheDee, FeyOne, Filip Jaromin, Florian Eberle, FooldiverDX, Fortifel, Frank Bull, G V, Gaetano, Gary Tinsley, Gerald, Gerald, Gerhalt, Gregoire Fauconnier, Gregory, Happy Days, Hellomellowyellow, Hurf durf, Ian Sayer, Ilya, Ivan Nadasaki, J Solomon, Jack Simons, Jack Trebles, James Brown, James Do, Jan-Kristoffer Brekke, Jayro Zipzapili, Jesse Doerksen, Jim, John Jon'zz, John Smith, Jonas Högman, Jose Gonzalez, Joshua West, Julian Silva, KC maps, Kabuto, Kasper Nohr, Kenny Bailey, Kevin McKie, Kuroguma, Lanthanio, Louie Castro, MaiconMM, Majinken, Malcom Reynolds, Marc Voigt, Marcel Muller, Marius Thomassen, MarkAurel, Martin Ax, Matri, Matt, Matthew Lam, Max Robitzsch, MeХмonkeys, MercuryTwins, Messor Marra, Michael Troseth, Michael, Michael, Michael, Mike Bow, Mike Jones, Mike Moperz, Mikhail, N0body, NalfeinDoUrden, Nate A, Nicholas Alan McGuire, Nikuss, Nils Harder, Nitrat, Nordicberserk, Notsutos, Oberon, Onyxdime, Oxion1988, Ozzy, Paradosi, Pasi Huttunen, Patrick Gill, Paul Coad, patrick welsh, Paul, Pshenitsyn, PeeM, Peter Nikolas, Peter Ryskin, Pitt85, Preator, Pulimanne, Randall Lively, Richard Dumont, Richard Heying, Richard Soderberg, Riley Heffernan, Robert Bodo, Robert Davis, Rodrigo Rosado, Ronald, Roy Zimmermann, Ryan Bossard, Ryan Calhoun, Salvadore Broadfoot, Scott Barrie, Sebastien Elie, Sebastien Jalbert, SgtAfro, Shadefalcon, Stefano Sottocorna, SilverAxe, Sixxiie, Sky Valverde, Sodajuice, Steffen Sloth, TK, TP Samblanet, Taylor Patton, Taylor, Tenebrys Hentai Flash Games, Matthew Pruter, John Stanko, craig chadwick, TheOriginalJ, Thomas, Timeyy, Tony Li, TonyNinja, Tracy Scops, Travis Haapala, TrikJoker, Tyler Jones, Tyson, Urza Viderico, VC, Vasder, Vay Jay, Victor Sarosi, Warren P Nelson, Wayne Chattillon, William Farris, William Golding, Wlodzimierz Donatowicz, Xaljio, Xisis, brett, bronzeRanger, clerk4470, ghosti1, gillen, ismael torres, jaron uecker, levi tibbals, oakland, otakuguy01, rip_cpu, severin, sirpoffalot, teh_cabbage, tenko, trajor white, wilhelm, winsloven, Arkadii Terentiev, xxx, DAHR.{/color}{/size}\n\n\
     \
     {color=#e5e297}{size=-4}-\{Thank you, Joseph Antoni, for organizing all these 750+ names for me.\}-{/size}{/color}{/cps}"
               
@@ -4027,7 +4035,6 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         
     
     else: # PERSONAL WHORE ENDING 
-
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
         
         $ walk_xpos=610 #Animation of walking chibi. (From)
@@ -4108,7 +4115,6 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
      
         show screen bld1
         with d3
-
         # add shock screen!
         #$herViewHead.data().addPose( CharacterExItem( herViewHead.mPoseFolder, 'hermione_bw_final_shock.png', G_Z_FACE + 1 ) )
         $herViewHead.data().addItem( 'item_pose_final_shock' )
@@ -4156,6 +4162,8 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
 
         # show tits!
         #$herView.data().addPose( CharacterExItemPoseShowTits( herView.mPoseFolder, 'pose_dress_up.png', G_Z_POSE ) )
+        call wrd_dress_undress_shirts
+        $ herView.data().addItem( 'item_tits' )
         $herView.data().addItem( 'item_pose_show_tits' )
 
         $herView.showQ( "body_81.png", pos )
@@ -4177,6 +4185,8 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         # Pussy!
         $herView.data().hideItemKey( 'panties' )
         #$herView.data().addPose( CharacterExItemSkirtLifted( herView.mPoseFolder, 'pose_skirt_up.png', G_Z_POSE ) )
+        call wrd_dress_change_silent
+        call wrd_dress_undress_skirts
         $herView.data().addItem( 'item_pose_lifted_skirt' )
         $herView.showQQ( "body_61.png", pos )
         show screen ctc
@@ -4192,6 +4202,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         with d5      
         $herView.data().delPose()
         $herView.data().showItemKey( 'panties' )                                                                                                                                                                                                               #HERMIONE
+        call wrd_dress_change_silent
         $herView.showQ( "body_86.png", pos )
         with d5                                                                                                                                                                                                                       #HERMIONE
         with hpunch
@@ -4234,16 +4245,16 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     $ persistent.gold = persistent.gold + gold
 
 #label test2:
-#    $hermi.Items.AddItem("miniskirt")
+#    $hermi.Items.AddItem("xxxsmallskirt")
 #    $hero.Items.AddItem("wine",2)
     python:
         persistent.itemSet=dict() 
 
-        if hermi.Items.Any("miniskirt"):
-            persistent.itemSet.update({"miniskirt": hermi.Items.Count("miniskirt")})
+        if hermi.Items.Any("xxxsmallskirt"):
+            persistent.itemSet.update({"xxxsmallskirt": hermi.Items.Count("xxxsmallskirt")})
  
         for o in hero.Items():
-            if o.Name not in {"nets", "badge_01", "ball_dress"}:
+            if o.Name not in {"nets", "badge_01", "ball_dress", "shortskirt", "xshortskirt", "xxshortskirt", "xsmallskirt", "xxsmallskirt", "skirt_cheerleader", "skimpyshirt", "skirt_business", "shirt_cheerleader", "shirt_business", "tights" }:
                 persistent.itemSet.update({o.Name: hero.Items.Count(o.Name)})       
 
 

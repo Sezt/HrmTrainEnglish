@@ -2485,7 +2485,7 @@ label event_15: # Hermione comes and asks to buy a favour from her.
         "\"I'm busy. Come back later.\"":
             her "But..."
             her "Well, alright..."
-            $event.NotFinished()
+            $wtevent.NotFinished()
             return
         "\"Yes, come in.\"":
             pass
@@ -2899,6 +2899,12 @@ label event_15: # Hermione comes and asks to buy a favour from her.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
     $ event15_happened = True #Turns TRUE after event_15
     $this.event_15.Finalize()
+    
+    if daytime:
+        $ hermione_takes_classes = True
+    else:
+        $ hermione_sleeping = True
+    
     return
 
 
@@ -3323,6 +3329,108 @@ label event_16: #Учебники доставлены
         jump day_start
 
 
+label bad_reports:              
+    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
+    $ snapes_speed = 02.0 #The speed of moving the walking animation across the screen.
+    $ walk_xpos=470 #Animation of walking chibi. (From)
+    $ walk_xpos2=360 #Coordinates of it's movement. (To)
+    show screen snape_walk_01 
+    with d3
+    pause 1.5
+    $ s_sprite = "03_hp/10_snape_main/snape_04.png"  
+    show screen snape_02 #Snape stands still.#SNAPE
+    show screen bld1                                                                         #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Добрый вечер, Джинни."
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Ты не занят?"
+    m "Как будто я могу чем-то занят, кроме чтения глупых книжек и клепания отчетов в министерство."
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_03.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "\"Клепание отчетов\"? Серьезно? И что ты туда пишешь?"
+    m "Хм, ну..."
+    m "..."
+    m "А действительно, что я там пишу..?"
+    sna "Ты уже не помнишь?"
+    m "Если честно, я просто беру в руку перо и отключаюсь на полдня."
+    m "А когда просыпаюсь, то нахожу парочку написанных страниц."
+    sna "Серьезно?"
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_08.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Тебе никогда не было интересно, что ты пишешь, находясь в бессознательном состоянии и отправляешь парням, которые могут упечь нас с тобой за решетку?"
+    m "..."
+    m "Упс."
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_07.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Дело в том, что, возможно, на перо наложено заклятие легилименции."
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "И тогда у нас с тобой большие неприятности."
+    m "А что делает эта лега..."
+    m "Легулиме..."
+    g1 "{size=+5}ЧЕРТ ВОЗЬМИ, КТО ВЫДУМЫВАЛ ВСЕ ЭТИ НАЗВАНИЯ?!!{/size}"
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_04.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Кто знает? Это искусство очень древнее, так что, я думаю, что ее так назвал какой-нибудь могущественный маг..."
+    g9"... или женщина, пишущая глупые книжки для подростков." #jinnie
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "..." #sna
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_09.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "В общем, если рассказывать вкратце, то легилименция позволяет магу читать чужие мысли и воспоминания."
+    g9 "Звучит круто."
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_05.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Да, но если твои мысли читают шишки из министерства, то удивительно что мы с тобой еще не оказались в Азкабане."
+    m "..."
+    m "Что не говори, а все эти названия выдумывал явно не великий волшебник."
+    m "Если ты так волнуешься, то мы можем прочесть парочку страниц."
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_29.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna" И почему у меня на этот счет такое плохое предчувствие..?" #sna
+    hide screen snape_main                                                                                                                   #SNAPE
+    with d3                                                                                                                                                  #SNAPE
+    $ s_sprite = "03_hp/10_snape_main/snape_06.png"                                                                            #SNAPE
+    show screen snape_main                                                                                                                  #SNAPE
+    with d3
+    sna "Ладно, давай."
+    m "Так, посмотрим..."
+    m "А! Вот, пара страниц, которые я забыл отправить."
+    sna "Что ж, валяй."
+    $ letter_text = "{size=-4}Аграба!.. Торговец, \nТоржествуя,\nУж ослика торопит в путь;\nЕго глаза, барыш почуя,\nБоятся лишний раз моргнуть;\nПески великие вздымая,\nБежит принцесса удалая;\nНо вот, за нею по пятам - \nИ Джинн, Джафар, Бхагаватам!\n... Они её в углу поймали...{/size}"
 
     
 

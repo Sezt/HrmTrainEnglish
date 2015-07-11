@@ -8,7 +8,7 @@ label new_request_04:
         "\"(Yes, let's do it!)\"":
             pass
         "\"(Not right now.)\"":
-            $event.NotFinished()
+            $wtevent.NotFinished()
             jump new_personal_request
     
     
@@ -454,7 +454,7 @@ label new_request_04:
 
     $SetHearts(GetStage(hermi.whoring, 3, 4, 3))
 
-    $event.Finalize()    
+    $wtevent.Finalize()    
 
     if daytime:
         $ hermione_takes_classes = True
