@@ -655,8 +655,8 @@ label ending_of_screams_of_pleasure:
     with d3
 
     $ gryffindor +=15
-        m "\"Gryffindor\" gets 15 points!"
-    
+    m "\"Gryffindor\" gets 15 points!"
+        
 #    $ request_05_points += 1
    
    
