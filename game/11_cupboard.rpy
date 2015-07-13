@@ -78,13 +78,13 @@ label cupboard:
                         hide screen points
                         $daphne.liking=0
                         show screen points
-                        "Запрос выполнен"
-#                    "ЧИТ: Дафна становиться более распутной":
+                        "Р—Р°РїСЂРѕСЃ РІС‹РїРѕР»РЅРµРЅ"
+#                    "Р§РРў: Р”Р°С„РЅР° СЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ Р±РѕР»РµРµ СЂР°СЃРїСѓС‚РЅРѕР№":
 #                        hide screen points
 #                        $daphne.whoring+=1
 #                        show screen points
-#                        "Готово"
-                    "ЧИТ: +100 галеонов":
+#                        "Р“РѕС‚РѕРІРѕ"
+                    "Р§РРў: +100 РіР°Р»РµРѕРЅРѕРІ":
                         hide screen points
                         $gold+=100
                         show screen points
@@ -111,17 +111,17 @@ label cupboard:
                 $_scrollSection=2
                 jump sc_col
 
-        "- Священные свитки. Часть IV -" if not day == 1 and cataloug_found:
+        "- РЎРІСЏС‰РµРЅРЅС‹Рµ СЃРІРёС‚РєРё. Р§Р°СЃС‚СЊ IV -" if not day == 1 and cataloug_found:
             label sc_col_men_4:
                 $_scrollSection=3
                 jump sc_col
 
-        "- Священные свитки. Часть V -" if not day == 1 and cataloug_found:
+        "- РЎРІСЏС‰РµРЅРЅС‹Рµ СЃРІРёС‚РєРё. Р§Р°СЃС‚СЊ V -" if not day == 1 and cataloug_found:
             label sc_col_men_5:
                 $_scrollSection=4
                 jump sc_col_part
 
-#        "- Священные свитки. Часть VI -" if not day == 1 and cataloug_found:
+#        "- РЎРІСЏС‰РµРЅРЅС‹Рµ СЃРІРёС‚РєРё. Р§Р°СЃС‚СЊ VI -" if not day == 1 and cataloug_found:
 #            label sc_col_men_6:
 #                $_scrollSection=5
 #                jump sc_col
@@ -133,7 +133,7 @@ label cupboard:
                         _itemCount=hero.Items.Count("scroll")
                         for i in range(_scrollSection*15, _scrollSection*15+15):
                             if i<_itemCount:
-                                choose.AddItem("- C."+str(i+1)+": Священный свиток #"+str(i+1)+" -", "menu_cupboard_scroll_show" , i)
+                                choose.AddItem("- C."+str(i+1)+": РЎРІСЏС‰РµРЅРЅС‹Р№ СЃРІРёС‚РѕРє #"+str(i+1)+" -", "menu_cupboard_scroll_show" , i)
                     $ choose.Show("cupboard")
                     
                 label sc_col_part:
@@ -142,7 +142,7 @@ label cupboard:
                         _itemCount=hero.Items.Count("scroll")
                         for i in range(_scrollSection*15, _scrollSection*15+8):
                             if i<_itemCount:
-                                choose.AddItem("- C."+str(i+1)+": Священный свиток #"+str(i+1)+" -", "menu_cupboard_scroll_show" , i)
+                                choose.AddItem("- C."+str(i+1)+": РЎРІСЏС‰РµРЅРЅС‹Р№ СЃРІРёС‚РѕРє #"+str(i+1)+" -", "menu_cupboard_scroll_show" , i)
                     $ choose.Show("cupboard")
 
 

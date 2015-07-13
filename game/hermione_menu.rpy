@@ -134,12 +134,6 @@ label hermione_approaching:
             
                 jump wrd_menu
 
-                    "-Put the long skirt on-" if herView.data().checkItemKeyStyle( G_N_SKIRT, 'short' ) and hermi.Items.Any("miniskirt"): #legs_02 and gave_miniskirt: #Turns True when Hermione has the miniskirt.
-                        jump mini_off #28_gifts.rpy
-                
-
-                    "-Never mind-":
-                        jump hermione_main_menu
             else:
                 python:
                     for t in [
