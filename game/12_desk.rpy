@@ -21,91 +21,91 @@ label menu_reading_book:
 ### DR'S NEWSPAPER ooo ###
                 if wtevent.GetValue("block")=="books_newsp":
                     if wtevent.Name=="nsp_newsp_book_p02a" and nsp_genie_writer < 1:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p02b" and nsp_genie_writer < 2:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p03a" and nsp_genie_writer < 3:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p03b" and nsp_genie_writer < 4:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p04" and nsp_genie_writer < 5:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p05a" and nsp_genie_writer < 6:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p05b" and nsp_genie_writer < 7:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p06a" and nsp_genie_writer < 8:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     if wtevent.Name=="nsp_newsp_book_p06b" and nsp_genie_writer < 9:
-                        m "Эта книга пока слишком сложна для меня."
+                        m "This book is too difficult for me."
                         hide screen gift
                         jump books_list
                     
                 if wtevent.GetValue("block")=="books_newsp2":
                     if wtevent.Name == "nsp_newsp_book_typo1" and (nsp_genie_typographic < 0 or nsp_genie_typographic_exp < 2):
-                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        m "Lacking experience. It is necessary to publish at least two typographical sets of the previous level."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_typo2" and (nsp_genie_typographic < 1 or nsp_genie_typographic_exp < 2):
-                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        m "Lacking experience. It is necessary to publish at least two typographical sets of the previous level."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_typo3" and (nsp_genie_typographic < 2 or nsp_genie_typographic_exp < 2):
-                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        m "Lacking experience. It is necessary to publish at least two typographical sets of the previous level."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_typo4" and (nsp_genie_typographic < 3 or nsp_genie_typographic_exp < 2):
-                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        m "Lacking experience. It is necessary to publish at least two typographical sets of the previous level."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_typo5" and (nsp_genie_typographic < 4 or nsp_genie_typographic_exp < 2):
-                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        m "Lacking experience. It is necessary to publish at least two typographical sets of the previous level."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_typo6" and (nsp_genie_typographic < 5 or nsp_genie_typographic_exp < 2):
-                        m "Слишком мало опыта, нужно не менее двух публикаций с типографическим набором предыдущего уровня."
+                        m "Lacking experience. It is necessary to publish at least two typographical sets of the previous level."
                         hide screen gift
                         jump books_list
                         
                 if wtevent.GetValue("block")=="books_newsp2":
                     if wtevent.Name == "nsp_newsp_book_photo2" and (nsp_genie_photocamera < 1 or nsp_genie_photocamera_exp < 3):
-                        m "Слишком мало опыта, нужно провести не менее трех фотосессий с фотоаппаратом предыдущего типа."
+                        m "Lacking experience. You need at least three shoots with a camera of the previous type."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_photo3" and (nsp_genie_photocamera < 2 or nsp_genie_photocamera_exp < 3):
-                        m "Слишком мало опыта, нужно провести не менее трех фотосессий с фотоаппаратом предыдущего типа."
+                        m "Lacking experience. You need at least three shoots with a camera of the previous type."
                         hide screen gift
                         jump books_list
 
                     if wtevent.Name == "nsp_newsp_book_photo4" and (nsp_genie_photocamera < 3 or nsp_genie_photocamera_exp < 3):
-                        m "Слишком мало опыта, нужно провести не менее трех фотосессий с фотоаппаратом предыдущего типа."
+                        m "Lacking experience. You need at least three shoots with a camera of the previous type."
                         hide screen gift
                         jump books_list
                         
                     if wtevent.Name == "nsp_newsp_book_video" and (nsp_genie_photocamera < 4 or nsp_genie_sphere_ruby_level_eff < 1 or nsp_genie_sphere_diamond_level_eff < 1 or nsp_genie_sphere_sapphire_level_eff < 3):
-                        m "Для освоения навыков из этой книги вам понадобится владение всеми видами фотоаппаратов, хрустальный шар, сапфир 3 уровня, рубин и алмаз."
+                        m "To develop skills in this book, you will need knowledge of all kinds of cameras, a crystal ball, level 3 sapphire, ruby and diamond."
                         hide screen gift
                         jump books_list
                         
@@ -177,17 +177,17 @@ label desk:
     menu:
 ### DR'S NEWSPAPER ooo ###
 
-        "- Искать приложение к каталогу -" if nsp_pre_snape == 5 and nsp_pre_dahre == 0:
+        "- Find an directory application -" if nsp_pre_snape == 5 and nsp_pre_dahre == 0:
             $ nsp_pre_dahre = 1
-            m "Вы обнаружили дополнительный каталог книг для печатного дела."
+            m "You found an additional catalog of books for the printing business."
             jump day_main_menu
             
-        "- Искать другие приложения к каталогу -" if nsp_newspaper_menu == 4:
+        "- Search for other applications for the directory -" if nsp_newspaper_menu == 4:
             $ nsp_newspaper_menu = 5
-            m "Вы обнаружили дополнительный каталог дополнительных средств для печатного дела."
+            m "You found an additional directory of printing funding."
             jump day_main_menu
             
-        "- Попытаться починить хрустальный шар -" if nsp_newspaper_menu >= 9 and nsp_newspaper_menu < 15:
+        "- Try to fix the crystal ball -" if nsp_newspaper_menu >= 9 and nsp_newspaper_menu < 15:
             
             if nsp_newspaper_menu == 9 :
                 ">Вы внимательно осмотрели шар со всех сторон. На вид он кажется сделан из тусклого стекла, которое почти не пропускаяет свет."
@@ -409,18 +409,18 @@ label desk:
             
 ### DR'S NEWSPAPER ooo ###
 
-        "- Газета -" if nsp_newspaper_menu >= 2 and cataloug_found: 
+        "- Newspaper -" if nsp_newspaper_menu >= 2 and cataloug_found: 
             label nsp_newspaper_list:
                 $choose=None
                 menu:
 
-                    "- Публикация газеты -" if nsp_newspaper_ready == True:
+                    "- Publish newspaper -" if nsp_newspaper_ready == True:
                         label nsp_newspaper_publication:
 
                             $choose=None
                             menu:
 
-                                "- Да -":
+                                "- Yes -":
                                     $ nsp_newspaper_ready = False 
                                     $ nsp_newspaper_qual = (10 * (1 + nsp_genie_writer) * (1 + nsp_genie_typographic)) + (5 * nsp_genie_photocamera)
                                     $ nsp_newspaper_qual_last = nsp_newspaper_qual
@@ -440,21 +440,21 @@ label desk:
                                     
                                     call screen main_menu_01
                             
-                                "- Ничего -":
+                                "- Nevermind -":
                                     jump desk
                                     
-                    "{color=#858585}- Публикация газеты -{/color}" if nsp_newspaper_ready == False:
-                         ">Недостаточно материала, нужно написать больше статей."
+                    "{color=#858585}- Publish newspaper -{/color}" if nsp_newspaper_ready == False:
+                         ">Not enough material to publish an article."
                          jump desk
                 
-                    "- Параметры газеты -" if nsp_newspaper_menu >= 4:
+                    "- Newspaper options -" if nsp_newspaper_menu >= 4:
                         jump newsp_stats_00
 
 
-                    "- Ничего -":
+                    "- Nevermind -":
                         jump desk
                         
-        "- Хрустальный шар -" if nsp_genie_sphere :
+        "- Crystal Ball -" if nsp_genie_sphere :
                 
             $choose=None
             if nsp_genie_sphere_video :
@@ -492,7 +492,7 @@ label desk:
 
  #===TG MODS START===
 
-        "-Исследовать календарь-" if desk_examined and not day == 1:
+        "- Study calendar -" if desk_examined and not day == 1:
             menu:
                 # This is when playing an old game, and the above event didn't happen (since the mod wasn't installed,
                 # and the desk is now set to (forever) examined.)
